@@ -127,6 +127,28 @@ jobs:
           assert fresh['old_12_ERA5_provider_raw_SHA_HOLDS_UNCHANGED'] is True
           print('RSDS eight original GPS field-study macro ecology SHA-locked unchanged, all source holds preserved')
           PY
+      - name: Verify source-equal eight original GPS study macro weighting and hold-proof conclusions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_source_equal_eight_study_macro_v1.py' -v
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from scripts.source_equal_rsds_eight_study_temporal_solar_v1 import run
+          p=Path('research/RSDS_EIGHT_STUDY_SOURCE_EQUAL_MACRO_SENSITIVITY_FIRST_RESULT_20261026.json')
+          previous=json.loads(p.read_text(encoding='utf-8'))
+          current=run()
+          assert previous==current, 'Previously pinned eight original study weighting sensitivity changed'
+          q=current['source_equal_axes']['night_day_q']
+          assert q['original_studies_with_supported_axis']==7
+          assert q['original_source_taxon_rows_with_supported_axis']==11
+          assert q['supported_original_source_signs']=={'positive':4,'negative':3,'exact_zero':0}
+          assert current['source_equal_axes']['joint_circular_covariance']['source_resampling_interval_available'] is False
+          assert current['old_external_shortwave_direction_nonreplication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          assert current['old_12_ERA5_provider_source_SHA_HOLDS_UNCHANGED']
+          print('RSDS original source DOI-equal macro estimand and all older source HOLDS unchanged')
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
