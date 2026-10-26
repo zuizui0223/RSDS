@@ -1,0 +1,64 @@
+{
+  "version": "RSDS_SAME_TAG_CONTEXT_PAIR_V1",
+  "date": "2026-10-26",
+  "stage": "POST_FIRST_RESULTS_DESCRIPTIVE_SENSITIVITY",
+  "question": "For the SAME original tagged animal, does the signed ERA5 shortwave anomaly association with night/day observed GPS displacement and cos/sin Sun-relative travel differ between the two q-coverage-ranked original grid×year contexts?",
+  "source_contract": "research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_CONTRACT.json",
+  "first_frozen_result": "research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_FIRST_RESULTS_20261026.json",
+  "source_frame": [
+    {
+      "region": "Utah",
+      "doi": "10.5441/001/1.711",
+      "taxa": [
+        "Antilocapra americana",
+        "Cervus elaphus",
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ]
+    },
+    {
+      "region": "Wyoming",
+      "doi": "10.5441/001/1.703",
+      "taxa": [
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ]
+    }
+  ],
+  "guardrails": [
+    "Original Movebank provider UUID, bytes and MD5 and every original taxon q/daylength mean/count must replay BEFORE ANY fresh ERA5 request.",
+    "Original first v0 source gridyear/animal/day selection and 1h apparent solar-clock thresholds remain unchanged; no sign-selected new context.",
+    "For each original selected context, match first v0 q-qualified animal and day counts, original solar steps, original ERA5 provider SHA256, original source mean slopes and source animals.",
+    "If original ERA5 provider response SHA differs from frozen first v0 result, return WEATHER_VERSION_HOLD; no biological paired effect computed or weather model adjusted.",
+    "Pair individual identities only in ephemeral analysis RAM and WITHIN the same original study and taxon. Never publish tag IDs, coordinates, exact observations or per-tag slopes.",
+    "Both context ranks are assigned by original q sampling support: rank2 MINUS rank1; neither high-minus-low radiation nor chronologically before-after.",
+    "No source substitutions, unsupported-to-zero recoding, source-level p-values from pseudo-independent GPS steps, historical result modification or reclassification of old external nonreplication."
+  ],
+  "estimands": {
+    "axes": [
+      "sun_cos",
+      "sun_sin",
+      "q"
+    ],
+    "source_unit": "one original published study; native taxon is a within-study group; paired original tagged individual is the unit for context differences",
+    "per_axis": "Original v0 individual slope context 2 minus context 1; require >=5 original tagged animals with defined slopes in both contexts, otherwise UNAVAILABLE.",
+    "joint": "Original tagged animals with sun_cos, sun_sin, q slopes in both contexts; optionally Spearman delta_q vs delta_sun_cos/sin when n>=5 and nondegenerate.",
+    "source_animal_bootstrap": "2000 deterministic paired original individual resamples, 2.5/97.5 percentile, source-conditional descriptive not general world",
+    "statuses": [
+      "PAIRED_ESTIMABLE",
+      "INSUFFICIENT_PAIRED_ANIMALS",
+      "MISSING_CONTEXT",
+      "ERA5_VERSION_HOLD",
+      "ORIGINAL_REPLAY_HOLD",
+      "SOURCE_HOLD"
+    ]
+  },
+  "external_nonreplication_immutable": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "interpretations": [
+    "An aggregate context slope sign reversal is not a repeated individual's slope reversal without paired evidence.",
+    "Context is selected on GPS sampling, not randomly assigned climate or solar irradiance.",
+    "Same tagged animals may have different season, route, collar duty cycle and microhabitat between two selected gridyears; causal ecology is not identified.",
+    "A failed source weather SHA replay means weather version changed or serialized provider response changed; never silently substitute new exposure.",
+    "This is post-result sensitivity, not confirmatory evidence of new global climate-dependent movement behavior."
+  ]
+}
