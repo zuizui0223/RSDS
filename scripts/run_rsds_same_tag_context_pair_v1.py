@@ -80,7 +80,7 @@ def ranked_spearman(a, b):
             while j < len(vec) and vec[order[j]] == vec[order[i]]:
                 j += 1
             for k in order[i:j]:
-                ranked[order[k]] = (i + j + 1) / 2
+                ranked[k] = (i + j + 1) / 2
             i = j
         return ranked
     aa, bb = ranks(a), ranks(b)
