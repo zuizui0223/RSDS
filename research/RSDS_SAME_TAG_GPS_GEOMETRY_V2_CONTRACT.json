@@ -1,0 +1,60 @@
+{
+  "version": "RSDS_SAME_TAG_GPS_GEOMETRY_V2",
+  "date": "2026-10-26",
+  "route_stage": "POST_ERA5_JSON_VERSION_HOLD_NEW_ORIGINAL_GPS_ONLY_ECOLOGICAL_ROUTE",
+  "scientific_question": "Within the same original tagged animal, do temporal day/night GPS displacement and the geographical/solar-relative components of actual GPS travel differ between two supported site/year observation contexts? Which part is a route-bearing marginal rather than a joint Sun-moving direction relation?",
+  "parent": {
+    "original_tagged_source_daylight": "research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_FIRST_RESULTS_20261026.json",
+    "weather_identity_hold": "research/RSDS_SAME_TAG_CONTEXT_PAIR_V1_FIRST_RESULT_20261026.json",
+    "old_external_radiation": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+    "policy": "Never reinterpret the 12/12 ERA5 SHA holds; no ERA5 is requested or used in this new GPS/astronomical route."
+  },
+  "source_original_frames": [
+    {
+      "region": "Utah",
+      "doi": "10.5441/001/1.711",
+      "taxa": [
+        "Antilocapra americana",
+        "Cervus elaphus",
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ]
+    },
+    {
+      "region": "Wyoming",
+      "doi": "10.5441/001/1.703",
+      "taxa": [
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ]
+    }
+  ],
+  "source_preflight": "Verify provider original bitstream UUID, bytes and MD5. Before any new angle outcomes, replay ALL the original native taxa night/day GPS q and within-individual/year q~daylength source means and individual counts to 1e-12. Keep all native source holds.",
+  "sampling": {
+    "time_selection": "Original published one-fix-per-UTC-hour by timestamp only; original 0.5–2h valid straight-line GPS step, 0<speed<=60km/h, step endpoints and midpoint same solar date/daypart.",
+    "original_animal_q_days": "Within original individual-year, >=10 days with >=3 DAY and >=3 NIGHT original GPS steps; daily q=log1p(median night GPS km/h) minus log1p(median day GPS km/h).",
+    "candidate_context": "1degree grid latitude/longitude × calendar year chosen from mean GPS segment midpoint of qualified original source q days; animal provides >=8 original q days within context; candidate context requires >=5 such distinct original animals and >=40 original q days.",
+    "two_context_selection": "Evaluate ALL count-qualified original q contexts before viewing a new solar heading. Choose the distinct pair that maximizes number of ORIGINAL tagged animals with >=8 q days in both; tie-break by sum of minimum individual q-day counts across shared tags, total q days, then lexicographic private context key. Never select by direction, q magnitude, radiance or weather.",
+    "context_order": "Rank 1/2 deterministic by descending q support number of distinct animals, descending q days, tie lexicographic. rank2-minus-rank1 is not before-after time, high-low irradiation or habitat intervention.",
+    "heading_days": "Only original q-qualified animal-days with >=3 Sun-geometry-qualified daylight moving steps, solar altitude >=10 degrees at both original GPS interval endpoints and midpoint, displacement >=0.1km, time gap .5–2 hours, no interpolation.",
+    "tag_eligibility": "At least 8 qualified q-days each with >=3 original solar/daylight moving intervals on each of the two selected contexts; at least two distinct 1h apparent solar clock blocks across all qualified steps.",
+    "individual_observables": [
+      "mean daily q on the SAME original qualifying day subset",
+      "mean per-day cos(B-SunAzimuth) and sin(B-SunAzimuth)",
+      "source geographical heading–solar marginal cos baseline equal-day sampling",
+      "joint circular component raw cos minus geographical marginal",
+      "mean geometric Sun altitude, mean apparent solar hour and mean modeled daylength on these q-days"
+    ],
+    "within_source_paired_estimate": "Same private original source tagged animal present and qualified in BOTH coverage-selected contexts. Compute per-tag rank2-minus-rank1 differences in q, raw cos/sin, marginal cos, joint covariance, solar elevation, apparent solar hour and daylength. Require >=5 paired source tags for group mean and 2000 fixed-seed original-tag bootstrap 95%. Do not treat different animals as paired or multiple gridyears as ecosystem replications.",
+    "inference": "Use original tagged animal as the paired unit, one study DOI as ecosystem/source unit, source/native-taxon group summaries, full null/unsupported and source attrition. Without adequate cross-context overlap return PAIRED_TAG_UNAVAILABLE, never ecological zero.",
+    "ethics": "Never publish original GPS file, exact coordinates, calendar/UTC timestamps, tag IDs, grid center identities, individual or animal-date coefficients. Publish source DOI, taxon, original support counts, grouped signed effects and privacy preserving aggregates only."
+  },
+  "interpretation_limits": [
+    "This route does not test shortwave radiant response; older ERA5 source version hold is preserved.",
+    "Sun position is deterministic from time and geography; raw solar-relative cosine can vary with geographic movement corridors without solar guidance.",
+    "Two selected contexts may differ in year, region, tag deployment, movement route and season; a paired difference does not establish causal environmental plasticity.",
+    "Same-tag cross-context difference in q is GPS step night/day displacement contrast, not true latent activity budget.",
+    "Preselecting by animal repeated q-day support is not random global population sampling or independent confirmation.",
+    "Do not claim climate mediation from Sun elevation or clock timing descriptive differences."
+  ]
+}
