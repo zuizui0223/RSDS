@@ -1,0 +1,52 @@
+name: RSDS research provenance and ecological tests
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
+      - 'odsp/**'
+      - 'research/**'
+      - 'provenance/**'
+      - 'docs/RSDS_ECOLOGICAL_SYNTHESIS_20261026.md'
+      - '.github/workflows/rsds-science-ci.yml'
+permissions:
+  contents: read
+jobs:
+  original_research_integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify complete RSDS original ODSP blob identity and immutable heldout result
+        run: python -m scripts.verify_rsds_migration
+      - name: Execute original source-specific model-free ecology tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_solar_irradiance_direction_macro_gradient_v0.py' -v
+          python -m unittest discover -s tests -p 'test_solar_radiation_two_24_cohort_diagnostic_v0.py' -v
+          python -m unittest discover -s tests -p 'test_global_solar_azimuth_macro_v0.py' -v
+          python -m unittest discover -s tests -p 'test_solar_azimuth_weather_study_blocks_v0.py' -v
+          python -m unittest discover -s tests -p 'test_solar_wind_irradiance_shared_gps_v0.py' -v
+          python -m unittest discover -s tests -p 'test_movebank_solar_movement_20261019.py' -v
+          python -m unittest discover -s tests -p 'test_solar_season_macroclimate_20261019.py' -v
+      - name: Verify noncausal/negative result is not selectively removed
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('research/SOLAR_RADIATION_TWO_24_SOURCE_NONREPLICATION_DIAGNOSTIC_FIRST_RESULT_20261025.json')
+          d = json.loads(p.read_text(encoding='utf-8'))
+          assert d['all_48_previously_frozen_source_studies_included'] == 48
+          assert d['prior_frozen_external_replication_decision_UNCHANGED'] == 'NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          assert len(d['all_original_studies_anonymized_source_descriptions']) == 48
+          assert sum(x['source_mean_rad_slope_per_100W'] is None for x in d['all_original_studies_anonymized_source_descriptions']) == 28
+          print('48 original source studies; 20 valid slopes; 28 null holds; historic verdict intact')
+          PY
