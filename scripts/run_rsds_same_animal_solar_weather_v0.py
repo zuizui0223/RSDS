@@ -171,8 +171,9 @@ def selected_daylight_bearings(animals, selected):
         context.append(c)
         for r in rows:
             lookups[(r["animal"], r["date"])].append(c)
+    active_animals = {key[0] for key in lookups}
     for animal, fixes in animals.items():
-        if not any(k[0] == animal for k in lookups):
+        if animal not in active_animals:
             continue
         obs = sorted(fixes.values())
         for a, b in zip(obs, obs[1:]):
