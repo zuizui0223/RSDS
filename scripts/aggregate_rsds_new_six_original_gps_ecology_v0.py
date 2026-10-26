@@ -6,17 +6,46 @@ are descriptive, not a world-wide probability sample or a climate mechanism.
 """
 from __future__ import annotations
 import argparse
+import hashlib
 import json
 import math
 from collections import Counter
 from pathlib import Path
 
-from scripts.run_rsds_new_six_original_gps_ecology_v0 import (
-    CONTRACT, MANIFEST, NEGATIVE, load_frozen
-)
-
+# Aggregation intentionally requires NO numpy or GPS/astronomy code. It reads
+# only the six group-only JSON artifacts and source-only frozen metadata.
 ROOT = Path(__file__).resolve().parents[1]
+CONTRACT = ROOT / "research/RSDS_NEW_SIX_ORIGINAL_GPS_V0_CONTRACT.json"
+MANIFEST = ROOT / "research/RSDS_NEW_SIX_ORIGINAL_GPS_SOURCE_METADATA_V0_20261026.json"
+SHA_RECEIPT = ROOT / "research/RSDS_NEW_SIX_ORIGINAL_GPS_SOURCE_METADATA_BLOB_V0.json"
+NEGATIVE = "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
 OUTPUT = ROOT / "research/RSDS_NEW_SIX_ORIGINAL_GPS_ECOLOGY_FIRST_RESULT_20261026.json"
+
+
+def load_frozen():
+    contract = json.loads(CONTRACT.read_text(encoding="utf-8"))
+    receipt = json.loads(SHA_RECEIPT.read_text(encoding="utf-8"))
+    raw = MANIFEST.read_bytes()
+    sha = hashlib.sha1(("blob " + str(len(raw)) + "\0").encode("ascii") + raw).hexdigest()
+    if (sha != receipt.get("original_metadata_git_blob_sha")
+            or receipt.get("original_six_source_metadata_commit_phase") != "BEFORE_NEW_GPS_EVENTS_OPENED"):
+        raise ValueError("Source-only original GPS file snapshot SHA is not frozen")
+    manifest = json.loads(raw.decode("utf-8"))
+    sources = contract["original_fixed_sources"]
+    entries = manifest["source_entries"]
+    if (contract["version"] != "RSDS_NEW_SIX_ORIGINAL_PUBLIC_GPS_JOINT_TEMPORAL_DIRECTION_V0"
+            or contract["frozen_prior_source_shortwave_nonreplication"] != NEGATIVE
+            or manifest["version"] != "RSDS_NEW_SIX_ORIGINAL_GPS_FILE_METADATA_V0"
+            or len(sources) != 6 or len(entries) != 6
+            or manifest["original_animal_GPS_rows_read_by_preflight"] != 0):
+        raise ValueError("Six original source studies altered or the pre-event frame was lost")
+    for s, e in zip(sources, entries):
+        if (s["id"] != e["package_uuid"] or
+                [s["doi"]] != e["original_dois"] or
+                [s["taxon"]] != e["original_species_labels"] or
+                [s["study_id"]] != e["source_study_ids"]):
+            raise ValueError("Original study source metadata identity is not frozen")
+    return sources, entries
 
 
 def supported(value, point_key, interval_key):
