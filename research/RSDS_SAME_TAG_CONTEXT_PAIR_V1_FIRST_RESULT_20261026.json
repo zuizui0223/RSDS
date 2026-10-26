@@ -1,0 +1,191 @@
+{
+  "all_native_source_taxon_results": [
+    {
+      "original_contexts": [
+        {
+          "ERA5_source_original_hours": 8760,
+          "ERA5_source_raw_SHA256_replayed": false,
+          "original_qualified_q_animals": 55,
+          "original_qualified_q_days": 6879,
+          "original_selection_rank": 1,
+          "status": "ERA5_VERSION_HOLD"
+        },
+        {
+          "ERA5_source_original_hours": 8784,
+          "ERA5_source_raw_SHA256_replayed": false,
+          "original_qualified_q_animals": 51,
+          "original_qualified_q_days": 4860,
+          "original_selection_rank": 2,
+          "status": "ERA5_VERSION_HOLD"
+        }
+      ],
+      "original_native_q_replay_before_ERA5": true,
+      "original_region": "Utah",
+      "paired_same_tag_effect": null,
+      "selected_contexts_exact_original_replay": false,
+      "source_doi": "10.5441/001/1.711",
+      "status": "PAIRED_UNAVAILABLE_CONTEXT_OR_WEATHER_HOLD",
+      "taxon": "Antilocapra americana"
+    },
+    {
+      "original_contexts": [
+        {
+          "ERA5_source_original_hours": 8784,
+          "ERA5_source_raw_SHA256_replayed": false,
+          "original_qualified_q_animals": 91,
+          "original_qualified_q_days": 8697,
+          "original_selection_rank": 1,
+          "status": "ERA5_VERSION_HOLD"
+        },
+        {
+          "ERA5_source_original_hours": 8760,
+          "ERA5_source_raw_SHA256_replayed": false,
+          "original_qualified_q_animals": 77,
+          "original_qualified_q_days": 7208,
+          "original_selection_rank": 2,
+          "status": "ERA5_VERSION_HOLD"
+        }
+      ],
+      "original_native_q_replay_before_ERA5": true,
+      "original_region": "Utah",
+      "paired_same_tag_effect": null,
+      "selected_contexts_exact_original_replay": false,
+      "source_doi": "10.5441/001/1.711",
+      "status": "PAIRED_UNAVAILABLE_CONTEXT_OR_WEATHER_HOLD",
+      "taxon": "Cervus elaphus"
+    },
+    {
+      "original_contexts": [
+        {
+          "ERA5_source_original_hours": 8760,
+          "ERA5_source_raw_SHA256_replayed": false,
+          "original_qualified_q_animals": 165,
+          "original_qualified_q_days": 16812,
+          "original_selection_rank": 1,
+          "status": "ERA5_VERSION_HOLD"
+        },
+        {
+          "ERA5_source_original_hours": 8784,
+          "ERA5_source_raw_SHA256_replayed": false,
+          "original_qualified_q_animals": 158,
+          "original_qualified_q_days": 16591,
+          "original_selection_rank": 2,
+          "status": "ERA5_VERSION_HOLD"
+        }
+      ],
+      "original_native_q_replay_before_ERA5": true,
+      "original_region": "Utah",
+      "paired_same_tag_effect": null,
+      "selected_contexts_exact_original_replay": false,
+      "source_doi": "10.5441/001/1.711",
+      "status": "PAIRED_UNAVAILABLE_CONTEXT_OR_WEATHER_HOLD",
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "original_contexts": [
+        {
+          "ERA5_source_original_hours": 8784,
+          "ERA5_source_raw_SHA256_replayed": false,
+          "original_qualified_q_animals": 75,
+          "original_qualified_q_days": 7429,
+          "original_selection_rank": 1,
+          "status": "ERA5_VERSION_HOLD"
+        },
+        {
+          "ERA5_source_original_hours": 8760,
+          "ERA5_source_raw_SHA256_replayed": false,
+          "original_qualified_q_animals": 48,
+          "original_qualified_q_days": 4703,
+          "original_selection_rank": 2,
+          "status": "ERA5_VERSION_HOLD"
+        }
+      ],
+      "original_native_q_replay_before_ERA5": true,
+      "original_region": "Utah",
+      "paired_same_tag_effect": null,
+      "selected_contexts_exact_original_replay": false,
+      "source_doi": "10.5441/001/1.711",
+      "status": "PAIRED_UNAVAILABLE_CONTEXT_OR_WEATHER_HOLD",
+      "taxon": "Ovis canadensis"
+    },
+    {
+      "original_contexts": [
+        {
+          "ERA5_source_original_hours": 8784,
+          "ERA5_source_raw_SHA256_replayed": false,
+          "original_qualified_q_animals": 72,
+          "original_qualified_q_days": 5737,
+          "original_selection_rank": 1,
+          "status": "ERA5_VERSION_HOLD"
+        },
+        {
+          "ERA5_source_original_hours": 8760,
+          "ERA5_source_raw_SHA256_replayed": false,
+          "original_qualified_q_animals": 53,
+          "original_qualified_q_days": 4745,
+          "original_selection_rank": 2,
+          "status": "ERA5_VERSION_HOLD"
+        }
+      ],
+      "original_native_q_replay_before_ERA5": true,
+      "original_region": "Wyoming",
+      "paired_same_tag_effect": null,
+      "selected_contexts_exact_original_replay": false,
+      "source_doi": "10.5441/001/1.703",
+      "status": "PAIRED_UNAVAILABLE_CONTEXT_OR_WEATHER_HOLD",
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "original_contexts": [
+        {
+          "ERA5_source_original_hours": 8784,
+          "ERA5_source_raw_SHA256_replayed": false,
+          "original_qualified_q_animals": 23,
+          "original_qualified_q_days": 2575,
+          "original_selection_rank": 1,
+          "status": "ERA5_VERSION_HOLD"
+        },
+        {
+          "ERA5_source_original_hours": 8760,
+          "ERA5_source_raw_SHA256_replayed": false,
+          "original_qualified_q_animals": 22,
+          "original_qualified_q_days": 1824,
+          "original_selection_rank": 2,
+          "status": "ERA5_VERSION_HOLD"
+        }
+      ],
+      "original_native_q_replay_before_ERA5": true,
+      "original_region": "Wyoming",
+      "paired_same_tag_effect": null,
+      "selected_contexts_exact_original_replay": false,
+      "source_doi": "10.5441/001/1.703",
+      "status": "PAIRED_UNAVAILABLE_CONTEXT_OR_WEATHER_HOLD",
+      "taxon": "Ovis canadensis"
+    }
+  ],
+  "analysis_stage": "POST_SOURCE_RESULT_PAIRED_TAG_CONTEXT_SENSITIVITY",
+  "claim_ceiling": [
+    "Difference is rank2-minus-rank1 ORIGINAL q-support-ranked gridyear context, not brighter-versus-darker, early-versus-late, or randomly assigned environment.",
+    "Same tagged animal in two contexts is not a controlled field experiment and cannot establish sunlight, wind or daylength causality.",
+    "Across-source taxon comparisons may share landscape, monitoring schemes and calibration.",
+    "No per-individual original identities, exact source-grid coordinate, original GPS fix or event timestamps are distributed.",
+    "Source weather SHA holds are not ecological zeros. Any archived first v0 source weather change is retained and not silently substituted.",
+    "Original v0 original results and previously preregistered external negative radiation nonreplication are unchanged."
+  ],
+  "date": "2026-10-26",
+  "heldout_negative_radiation_nonreplication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "native_study_taxon_rows": 6,
+  "number_of_source_taxa_with_estimate_by_axis": {
+    "q": 0,
+    "sun_cos": 0,
+    "sun_sin": 0
+  },
+  "source_first_result": "RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_FIRST_RESULTS_20261026",
+  "source_original_states": {
+    "Utah": "SOURCE_PAIRED_CONTEXT_REASSESSMENT_COMPLETE",
+    "Wyoming": "SOURCE_PAIRED_CONTEXT_REASSESSMENT_COMPLETE"
+  },
+  "source_original_studies": 2,
+  "source_taxa_with_two_comparable_original_contexts": 0,
+  "version": "RSDS_SAME_TAG_CONTEXT_PAIR_V1_FIRST_RESULT"
+}
