@@ -32,7 +32,7 @@ class SixFrozenPublicSourceMetadataTests(unittest.TestCase):
                    return_value=[f]):
             r=one_source(s,registry[s["id"]])
         self.assertEqual(r["source_metadata_status"], "ORIGINAL_FILE_METADATA_ADMISSIBLE")
-        self.assertEqual(r["original_animal_GPS_rows_read_by_this_preflight"],0)
+        self.assertEqual(r["animal_event_rows_opened_by_this_preflight"],0)
         self.assertEqual(r["original_file"]["bitstream_uuid"],"original-record")
 
     def test_ambiguous_original_source_is_not_rescued(self):
