@@ -156,8 +156,8 @@ def main():
         "taxon": result["native_taxon"], "source_status": result["source_status"],
         "q_tag_support": result.get("original_GPS_q_source_support",{}).get("q_eligible_tagged_animals"),
         "sun_tag_support": result.get("original_solar_heading_support",{}).get("supported_animals"),
-        "paired_tag_support": (result["all_outcome_axes"]["same_tag_two_contexts"] or {})
-                              .get("paired_context_effect",{}).get("same_original_tagged_animals_all_axes")
+        "paired_tag_support": ((result["all_outcome_axes"]["same_tag_two_contexts"] or {})
+                              .get("paired_context_effect") or {}).get("same_original_tagged_animals_all_axes")
     }, sort_keys=True), flush=True)
 
 
