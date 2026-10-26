@@ -66,7 +66,7 @@ def summarize_axis(studies, var, i):
     frame = []
     for source in studies:
         vals = [row[VARIABLES[var]]["mean"] for row in source["original_native_taxa"]
-                if row[var]["mean"] is not None]
+                if row[VARIABLES[var]]["mean"] is not None]
         if len(vals) != source["original_taxa_supported_per_axis"][var]:
             raise ValueError("Source supported/unknown effect count changed")
         record = {"study_doi":source["study_doi"],
