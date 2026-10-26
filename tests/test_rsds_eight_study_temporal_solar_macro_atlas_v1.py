@@ -60,7 +60,7 @@ class OriginalEightStudyMacroEcologyTests(unittest.TestCase):
         d=self.o["all_sources_including_egret_original_metadata_HOLD"]
         self.assertEqual(len({x["source_study_doi"] for x in d}),8)
         self.assertTrue(self.o["source_equal_unit_not_12_independent_ecosystems"])
-        self.assertEqual(len({x["taxon"] for x in d}),9)
+        self.assertEqual(len({x["taxon"] for x in d}),10)
         self.assertEqual(self.o["old_48_radiation_study_external_negative_direction_test_UNCHANGED"],
                          NEGATIVE)
 
