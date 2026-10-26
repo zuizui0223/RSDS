@@ -24,7 +24,7 @@ def aggregate(utah, wyoming):
     if any(x.get("region") != region or x.get("version") != contract["version"]
            for region, x in sample.items()):
         raise ValueError("Wrong source tagged-animal identity")
-    expected = {s["study"]: s for s in contract["source_frame"]}
+    expected = {s["region"]: s for s in contract["source_frame"]}
     if set(expected) != set(sample):
         raise ValueError("Missing original published study")
     rows = []
