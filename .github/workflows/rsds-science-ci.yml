@@ -82,6 +82,27 @@ jobs:
           assert new['frozen_external_radiation_nonreplication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
           print('RSDS source original same-animal q×Sun×ERA5 first receipts immutable')
           PY
+      - name: Verify source-original 269 paired-tag GPS time and Sun-direction geometry v2
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_same_tag_gps_geometry_v2.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_same_tag_gps_geometry_aggregate_v2.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_same_tag_gps_geometry_ecology_synthesis_v2.py' -v
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from scripts.summarize_rsds_same_tag_gps_geometry_v2 import run
+          p = Path('research/RSDS_SAME_TAG_GPS_GEOMETRY_V2_ECOLOGY_SYNTHESIS_20261026.json')
+          old = json.loads(p.read_text(encoding='utf-8'))
+          new = run()
+          assert old == new, 'RSDS original tagged GPS ecological first interpretation changed'
+          assert new['study_units'] == 2 and new['study_taxon_rows'] == 6
+          assert new['summed_source_paired_tag_counts_NOT_independent_biomes'] == 269
+          assert new['each_axis_nominal_tag_bootstrap95_classification_counts']['joint_circular'] == {'INCLUDES_ZERO':6}
+          assert new['earlier_weather_version_holds_preserved'] == 12
+          print('RSDS source-original 269 tagged GPS time and solar geometry first ecological receipt locked')
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
