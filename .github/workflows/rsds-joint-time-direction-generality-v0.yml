@@ -1,0 +1,56 @@
+name: RSDS original-GPS joint time-direction generality v0
+on:
+  push:
+    branches:
+      - science/joint-temporal-direction-generality-v0
+    paths:
+      - 'scripts/analyze_rsds_cross_axis_generality_v0.py'
+      - 'tests/test_rsds_cross_axis_generality_v0.py'
+      - 'research/RSDS_CROSS_AXIS_GENERALITY_V0_CONTRACT.json'
+      - 'docs/RSDS_JOINT_SOLAR_TEMPORAL_MOVEMENT_MACROECOLOGY_20261026.md'
+      - '.github/workflows/rsds-joint-time-direction-generality-v0.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_source_cross_axis_ecology:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/joint-temporal-direction-generality-v0
+          persist-credentials: true
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify RSDS 390 exact original research files and immutable external nonreplication
+        run: python -m scripts.verify_rsds_migration
+      - name: Test new native source DOI × taxonomy join, sign support, missingness and decomposition
+        run: python -m unittest discover -s tests -p 'test_rsds_cross_axis_generality_v0.py' -v
+      - name: Run previous 48-study irradiance and source-repeatability known-truth checks
+        run: |
+          python -m unittest discover -s tests -p 'test_solar_irradiance_direction_macro_gradient_v0.py' -v
+          python -m unittest discover -s tests -p 'test_global_solar_azimuth_macro_v0.py' -v
+      - name: Generate original-source empirical cross-axis ecological atlas
+        run: |
+          python -m scripts.analyze_rsds_cross_axis_generality_v0 --out research/RSDS_CROSS_AXIS_GENERALITY_FIRST_RESULT_20261026.json
+          python -m json.tool research/RSDS_CROSS_AXIS_GENERALITY_FIRST_RESULT_20261026.json > /dev/null
+      - name: Artifact preserves all source taxa and environmental source holds
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-cross-axis-source-original-time-direction-macro-v0
+          path: research/RSDS_CROSS_AXIS_GENERALITY_FIRST_RESULT_20261026.json
+          if-no-files-found: error
+      - name: Commit non-sensitive scientific first result without editing earlier receipts
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_CROSS_AXIS_GENERALITY_FIRST_RESULT_20261026.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: frozen posthoc GPS temporal vs solar-direction original-source atlas"
+            git push origin HEAD:science/joint-temporal-direction-generality-v0
+          fi

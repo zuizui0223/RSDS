@@ -1,0 +1,402 @@
+{
+  "claim_ceiling": [
+    "This is a cross-axis source-study match of different GPS observational estimands and subsets. It does not establish within-animal temporal and direction niche statistical independence.",
+    "Original q is NIGHT minus DAY log1p observed GPS step speed, NOT latent occupation time or nightly activity proportion.",
+    "Sun-relative raw cos is direction relative to instant solar azimuth, not solar-compass use; solar clock-adjusted covariance is a separate estimand.",
+    "Cross-regional raw direction sign changes can arise from differing source geographic heading marginals or migration corridors, not radiation selection.",
+    "Both daylight and azimuth associations are noncausal; original animal bootstraps quantify conditional source uncertainty, not global biological population generality.",
+    "Weather-conditional daylight slopes are post-outcome sensitivities, can use different individual/month support, and have archived ERA5 response-version replay discrepancy. Do not interpret differences as mediation.",
+    "Zero common spatial 1-degree cell-month support for Wyoming two-taxon comparison: repeated source-level q rank is not sympatric competition.",
+    "Radiation's external predeclared negative-direction replication failure remains intact; the atlas cannot overwrite it.",
+    "No original animal identifier, exact GPS time or coordinate or precise original flight track is imported/exported in this comparison.",
+    "Camera detection records require instrument uptime and observation bias models, and are not treated as true individual latent temporal niche in this GPS atlas."
+  ],
+  "date": "2026-10-26",
+  "independent_study_cross_regional_taxon_pairs": [
+    {
+      "both_positive_daylength_CIs": true,
+      "both_raw_direction_CIs_have_opposite_signs": true,
+      "daylength_slope_difference_Utah_minus_Wyoming": 8.116670792660506e-05,
+      "limitation": "Source/taxon contrasts cannot separate field ecosystem, latitude, migration route, individual GPS eligibility, or telemetry protocol; CIs are original-animal descriptive.",
+      "night_day_q_difference_mule_minus_bighorn": null,
+      "night_day_q_mule_minus_bighorn_Utah": 0.043911917039462275,
+      "night_day_q_mule_minus_bighorn_Wyoming": 0.015512570171693864,
+      "original_studies": 2,
+      "raw_sunward_mean_difference_Utah_minus_Wyoming": 0.07215108160078103,
+      "regions": [
+        "Utah",
+        "Wyoming"
+      ],
+      "signed_raw_solar_direction_point_estimate_agrees": false,
+      "solar_joint_component_difference": 0.02626485785952687,
+      "solar_marginal_component_difference": 0.04588622374125416,
+      "taxon": "Odocoileus hemionus",
+      "two_regions_daylength_observed_signs": [
+        "POSITIVE_SOURCE_ANIMAL_BOOTSTRAP",
+        "POSITIVE_SOURCE_ANIMAL_BOOTSTRAP"
+      ],
+      "two_regions_raw_solar_direction_signs": [
+        "POSITIVE_SOURCE_ANIMAL_BOOTSTRAP",
+        "NEGATIVE_SOURCE_ANIMAL_BOOTSTRAP"
+      ]
+    },
+    {
+      "both_positive_daylength_CIs": false,
+      "both_raw_direction_CIs_have_opposite_signs": false,
+      "daylength_slope_difference_Utah_minus_Wyoming": -0.0036290927388742127,
+      "limitation": "Source/taxon contrasts cannot separate field ecosystem, latitude, migration route, individual GPS eligibility, or telemetry protocol; CIs are original-animal descriptive.",
+      "night_day_q_difference_mule_minus_bighorn": null,
+      "night_day_q_mule_minus_bighorn_Utah": 0.043911917039462275,
+      "night_day_q_mule_minus_bighorn_Wyoming": 0.015512570171693864,
+      "original_studies": 2,
+      "raw_sunward_mean_difference_Utah_minus_Wyoming": 0.02605842895480501,
+      "regions": [
+        "Utah",
+        "Wyoming"
+      ],
+      "signed_raw_solar_direction_point_estimate_agrees": false,
+      "solar_joint_component_difference": 0.011561030163827729,
+      "solar_marginal_component_difference": 0.014497398790977282,
+      "taxon": "Ovis canadensis",
+      "two_regions_daylength_observed_signs": [
+        "UNRESOLVED_SIGN",
+        "UNRESOLVED_SIGN"
+      ],
+      "two_regions_raw_solar_direction_signs": [
+        "POSITIVE_SOURCE_ANIMAL_BOOTSTRAP",
+        "UNRESOLVED_SIGN"
+      ]
+    }
+  ],
+  "joint_time_direction_source_taxon_atlas": [
+    {
+      "adjusted_ci": [
+        -0.005514997813696584,
+        0.0028786659562592192
+      ],
+      "adjusted_n_animals": 213,
+      "adjusted_sign": "UNRESOLVED_SIGN",
+      "clock_ci": [
+        -0.0008722267903001921,
+        0.00030775528461031237
+      ],
+      "cross_axis_inferential_unit": "SOURCE_TAXON_OBSERVATIONAL_SUMMARY",
+      "daylength_ci": [
+        0.0015727083739978875,
+        0.008013235182086414
+      ],
+      "daylength_given_era5_Tmax_and_30day_water_proxy": -0.0011007073756315435,
+      "daylength_n_animals": 213,
+      "daylength_sign": "POSITIVE_SOURCE_ANIMAL_BOOTSTRAP",
+      "daylength_slope_per_hour": 0.004899934756973461,
+      "mean_sunward_cosine": -0.0045108595737969135,
+      "night_day_q": -0.1171668232141959,
+      "original_source_alias": "Utah_UDWR",
+      "q_n_animals": 215,
+      "solar_clock_sign": "UNRESOLVED_SIGN",
+      "solar_geographic_marginal": -0.006939007178872865,
+      "solar_heading_joint_component": 0.0024281476050759514,
+      "solar_raw_sign": "UNRESOLVED_SIGN",
+      "source_doi": "10.5441/001/1.711",
+      "source_region": "Utah",
+      "sunward_ci": [
+        -0.013941606694393162,
+        0.005461565735967214
+      ],
+      "sunward_n_animals": 212,
+      "taxon": "Antilocapra americana",
+      "within_solar_clock_covariance": -0.0002549540114085214
+    },
+    {
+      "adjusted_ci": [
+        -0.0022406531305327374,
+        0.007464605873422531
+      ],
+      "adjusted_n_animals": 331,
+      "adjusted_sign": "UNRESOLVED_SIGN",
+      "clock_ci": [
+        -0.002423910854428869,
+        -0.0006615691414126823
+      ],
+      "cross_axis_inferential_unit": "SOURCE_TAXON_OBSERVATIONAL_SUMMARY",
+      "daylength_ci": [
+        0.007155956289142913,
+        0.011945928671224418
+      ],
+      "daylength_given_era5_Tmax_and_30day_water_proxy": 0.0024080584415621673,
+      "daylength_n_animals": 332,
+      "daylength_sign": "POSITIVE_SOURCE_ANIMAL_BOOTSTRAP",
+      "daylength_slope_per_hour": 0.009598574984599324,
+      "mean_sunward_cosine": -0.03099213867498672,
+      "night_day_q": -0.031888720397475416,
+      "original_source_alias": "Utah_UDWR",
+      "q_n_animals": 337,
+      "solar_clock_sign": "NEGATIVE_SOURCE_ANIMAL_BOOTSTRAP",
+      "solar_geographic_marginal": -0.002053385493203542,
+      "solar_heading_joint_component": -0.02893875318178318,
+      "solar_raw_sign": "NEGATIVE_SOURCE_ANIMAL_BOOTSTRAP",
+      "source_doi": "10.5441/001/1.711",
+      "source_region": "Utah",
+      "sunward_ci": [
+        -0.04497547498668726,
+        -0.017385473445674107
+      ],
+      "sunward_n_animals": 327,
+      "taxon": "Cervus elaphus",
+      "within_solar_clock_covariance": -0.001506218645192935
+    },
+    {
+      "adjusted_ci": [
+        -0.0024892553930810322,
+        -0.00010739921964072783
+      ],
+      "adjusted_n_animals": 1653,
+      "adjusted_sign": "NEGATIVE_SOURCE_ANIMAL_BOOTSTRAP",
+      "clock_ci": [
+        -7.121368217237803e-05,
+        0.0006231680219465845
+      ],
+      "cross_axis_inferential_unit": "SOURCE_TAXON_OBSERVATIONAL_SUMMARY",
+      "daylength_ci": [
+        0.004388078182072968,
+        0.006920966097037151
+      ],
+      "daylength_given_era5_Tmax_and_30day_water_proxy": -0.001340468719760979,
+      "daylength_n_animals": 1683,
+      "daylength_sign": "POSITIVE_SOURCE_ANIMAL_BOOTSTRAP",
+      "daylength_slope_per_hour": 0.005619415769068772,
+      "mean_sunward_cosine": 0.023393157844424365,
+      "night_day_q": -0.02184895488685285,
+      "original_source_alias": "Utah_UDWR",
+      "q_n_animals": 1723,
+      "solar_clock_sign": "UNRESOLVED_SIGN",
+      "solar_geographic_marginal": 0.0030487191608487008,
+      "solar_heading_joint_component": 0.020344438683575664,
+      "solar_raw_sign": "POSITIVE_SOURCE_ANIMAL_BOOTSTRAP",
+      "source_doi": "10.5441/001/1.711",
+      "source_region": "Utah",
+      "sunward_ci": [
+        0.016263503507486673,
+        0.03067344984180173
+      ],
+      "sunward_n_animals": 1652,
+      "taxon": "Odocoileus hemionus",
+      "within_solar_clock_covariance": 0.0003054651155448492
+    },
+    {
+      "adjusted_ci": [
+        0.002853788289044954,
+        0.005660031772393433
+      ],
+      "adjusted_n_animals": 117,
+      "adjusted_sign": "POSITIVE_SOURCE_ANIMAL_BOOTSTRAP",
+      "clock_ci": [
+        -0.002771839363489578,
+        0.0012359982771934662
+      ],
+      "cross_axis_inferential_unit": "SOURCE_TAXON_OBSERVATIONAL_SUMMARY",
+      "daylength_ci": [
+        0.004101632821224659,
+        0.006972859886325625
+      ],
+      "daylength_given_era5_Tmax_and_30day_water_proxy": 0.004237831338383433,
+      "daylength_n_animals": 118,
+      "daylength_sign": "POSITIVE_SOURCE_ANIMAL_BOOTSTRAP",
+      "daylength_slope_per_hour": 0.005538249061142167,
+      "mean_sunward_cosine": -0.04875792375635666,
+      "night_day_q": -0.0044624294869207584,
+      "original_source_alias": "Wyoming_2019_2020",
+      "q_n_animals": 119,
+      "solar_clock_sign": "UNRESOLVED_SIGN",
+      "solar_geographic_marginal": -0.04283750458040546,
+      "solar_heading_joint_component": -0.005920419175951203,
+      "solar_raw_sign": "NEGATIVE_SOURCE_ANIMAL_BOOTSTRAP",
+      "source_doi": "10.5441/001/1.703",
+      "source_region": "Wyoming",
+      "sunward_ci": [
+        -0.0688249761970045,
+        -0.03128410920046904
+      ],
+      "sunward_n_animals": 110,
+      "taxon": "Odocoileus hemionus",
+      "within_solar_clock_covariance": -0.0007429639431657286
+    },
+    {
+      "adjusted_ci": [
+        -0.0027074528948027943,
+        0.0061060846747362715
+      ],
+      "adjusted_n_animals": 337,
+      "adjusted_sign": "UNRESOLVED_SIGN",
+      "clock_ci": [
+        -0.0008786370745782811,
+        0.00030588306695740876
+      ],
+      "cross_axis_inferential_unit": "SOURCE_TAXON_OBSERVATIONAL_SUMMARY",
+      "daylength_ci": [
+        -0.006502919223183204,
+        0.0006123921190547578
+      ],
+      "daylength_given_era5_Tmax_and_30day_water_proxy": 0.0014656573824715182,
+      "daylength_n_animals": 339,
+      "daylength_sign": "UNRESOLVED_SIGN",
+      "daylength_slope_per_hour": -0.003411758739636626,
+      "mean_sunward_cosine": 0.020777764359222645,
+      "night_day_q": -0.06576087192631512,
+      "original_source_alias": "Utah_UDWR",
+      "q_n_animals": 343,
+      "solar_clock_sign": "UNRESOLVED_SIGN",
+      "solar_geographic_marginal": 0.013720976426090926,
+      "solar_heading_joint_component": 0.0070567879331317205,
+      "solar_raw_sign": "POSITIVE_SOURCE_ANIMAL_BOOTSTRAP",
+      "source_doi": "10.5441/001/1.711",
+      "source_region": "Utah",
+      "sunward_ci": [
+        0.01258211959761602,
+        0.028674137620671666
+      ],
+      "sunward_n_animals": 341,
+      "taxon": "Ovis canadensis",
+      "within_solar_clock_covariance": -0.0002888713162055318
+    },
+    {
+      "adjusted_ci": [
+        -0.006481799838295373,
+        0.009908898285322744
+      ],
+      "adjusted_n_animals": 41,
+      "adjusted_sign": "UNRESOLVED_SIGN",
+      "clock_ci": [
+        -0.0014527412908141347,
+        0.0010196173644198689
+      ],
+      "cross_axis_inferential_unit": "SOURCE_TAXON_OBSERVATIONAL_SUMMARY",
+      "daylength_ci": [
+        -0.005847345967794438,
+        0.010985829877007601
+      ],
+      "daylength_given_era5_Tmax_and_30day_water_proxy": -0.0005158669191396834,
+      "daylength_n_animals": 41,
+      "daylength_sign": "UNRESOLVED_SIGN",
+      "daylength_slope_per_hour": 0.00021733399923758685,
+      "mean_sunward_cosine": -0.005280664595582365,
+      "night_day_q": -0.01997499965861462,
+      "original_source_alias": "Wyoming_2019_2020",
+      "q_n_animals": 41,
+      "solar_clock_sign": "UNRESOLVED_SIGN",
+      "solar_geographic_marginal": -0.0007764223648863569,
+      "solar_heading_joint_component": -0.004504242230696008,
+      "solar_raw_sign": "UNRESOLVED_SIGN",
+      "source_doi": "10.5441/001/1.703",
+      "source_region": "Wyoming",
+      "sunward_ci": [
+        -0.03861666245298831,
+        0.02440226934920781
+      ],
+      "sunward_n_animals": 41,
+      "taxon": "Ovis canadensis",
+      "within_solar_clock_covariance": -0.0001791409751044888
+    }
+  ],
+  "nine_taxon_solar_heading_repeatability": {
+    "comparisons": [
+      {
+        "joint_circular_covariance_source_signs_agree": true,
+        "raw_source_signs_agree": true,
+        "solar_clock_covariance_source_signs_agree": false,
+        "taxon": "Cervus elaphus",
+        "two_distinct_archive_ids": true
+      },
+      {
+        "joint_circular_covariance_source_signs_agree": false,
+        "raw_source_signs_agree": false,
+        "solar_clock_covariance_source_signs_agree": false,
+        "taxon": "Odocoileus hemionus",
+        "two_distinct_archive_ids": true
+      },
+      {
+        "joint_circular_covariance_source_signs_agree": false,
+        "raw_source_signs_agree": false,
+        "solar_clock_covariance_source_signs_agree": true,
+        "taxon": "Ovis canadensis",
+        "two_distinct_archive_ids": true
+      },
+      {
+        "joint_circular_covariance_source_signs_agree": false,
+        "raw_source_signs_agree": false,
+        "solar_clock_covariance_source_signs_agree": true,
+        "taxon": "Loxodonta africana",
+        "two_distinct_archive_ids": true
+      },
+      {
+        "joint_circular_covariance_source_signs_agree": true,
+        "raw_source_signs_agree": true,
+        "solar_clock_covariance_source_signs_agree": true,
+        "taxon": "Lynx rufus",
+        "two_distinct_archive_ids": true
+      },
+      {
+        "joint_circular_covariance_source_signs_agree": false,
+        "raw_source_signs_agree": true,
+        "solar_clock_covariance_source_signs_agree": true,
+        "taxon": "Ovis aries",
+        "two_distinct_archive_ids": true
+      },
+      {
+        "joint_circular_covariance_source_signs_agree": true,
+        "raw_source_signs_agree": true,
+        "solar_clock_covariance_source_signs_agree": false,
+        "taxon": "Vulpes vulpes",
+        "two_distinct_archive_ids": true
+      },
+      {
+        "joint_circular_covariance_source_signs_agree": false,
+        "raw_source_signs_agree": true,
+        "solar_clock_covariance_source_signs_agree": false,
+        "taxon": "Grus vipio",
+        "two_distinct_archive_ids": true
+      },
+      {
+        "joint_circular_covariance_source_signs_agree": true,
+        "raw_source_signs_agree": true,
+        "solar_clock_covariance_source_signs_agree": false,
+        "taxon": "Branta leucopsis",
+        "two_distinct_archive_ids": true
+      }
+    ],
+    "n_taxa_with_exactly_two_archived_sources": 9,
+    "nonclaim": "Two original source archives per taxon, possibly overlapping biological populations, are not a world-random taxonomic replication sample. Small clock effects and sign changes alone are not validated clock mechanisms.",
+    "opposite_joint_circular_covariance_sign": 5,
+    "opposite_raw_cosine_sign": 3,
+    "same_joint_circular_covariance_sign": 4,
+    "same_raw_cosine_sign": 6,
+    "same_within_solar_clock_covariance_sign": 4
+  },
+  "objective": "Identify source-level temporal niche repeatability and direction niche nonrepeatability without treating study/taxon/animal GPS estimates as identical or independently sampled world biomes.",
+  "source_provenance_git_blob_sha": {
+    "research/GLOBAL_SOLAR_AZIMUTH_COMBINED_V2_ALL_ORIGINAL_SOURCE_TAXON_MATRIX_20261025.csv": "bee8741c0c4e8a27e53693b79224f3c6aa803c57",
+    "research/GLOBAL_SOLAR_AZIMUTH_COMBINED_V2_MACRO_SUMMARY_20261025.json": "7d71eec3a29bff6c64053b1728d18377bf6596f7",
+    "research/MOVEBANK_SOLAR_MOVEMENT_EXTENSION_V0_RESULT_20261019.json": "5ff33d4ef96040c8849979d0104c28d77a13ae6b",
+    "research/MOVEBANK_SOLAR_MOVEMENT_V0_RESULT_20261019.json": "49dddcfa95e06a4a41d0212fc05df29499088d3f",
+    "research/SOLAR_AZIMUTH_24_SOURCE_MULTI_POPULATION_ERA5_V0_FIRST_ALL_RESULTS_20261025.json": "a7473137e627f5b10d5c0d63b4087d08b8529ddc",
+    "research/SOLAR_RADIATION_EXTERNAL_24_SOURCE_FIRST_ALL_RESULTS_20261025.json": "fe48a1c6fb39f894236ae43764400995fb1348a4",
+    "research/SOLAR_RADIATION_TWO_24_SOURCE_NONREPLICATION_DIAGNOSTIC_FIRST_RESULT_20261025.json": "0523b3dd8581fe6b5f9ee3f08bdcbb28ce57fd69",
+    "research/solar_ecological_calendar_cross_source_20261025/source_level_daily_climate_daylight.csv": "2d3ecef512c656992e6a9efa65c24132382409f6"
+  },
+  "status": "POST_OUTCOME_ORIGINAL_SOURCE_OBSERVATIONAL_CROSS_AXIS_ATLAS",
+  "sunlight_weather_temporal_observation_overlap": {
+    "earlier_study_source_mean_slope": -0.019658718057344777,
+    "external_study_source_mean_slope": -0.0033607359100145946,
+    "fixed_diel_daylength_comparator_study_DOIs": 2,
+    "fixed_seasonal_photoperiod_source_studies": 11,
+    "interpretation": "The 48-source radiation sample does not supply the same-source identifiable temporal daylength niche estimates. A joint individual-level irradiation × temporal allocation effect cannot be inferred by cross-joining unrelated source studies.",
+    "preregistered_heldout_decision_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+    "radiation_estimable_shortwave_slopes": 20,
+    "radiation_original_source_archives": 48,
+    "radiation_undefined_source_slopes_NOT_ZERO": 28,
+    "shared_DOIs_with_any_seasonal_branch_archive": 2,
+    "shared_DOIs_with_diel_daylength_studies": 0,
+    "shared_DOIs_with_estimable_seasonal_branch_effect": 0
+  },
+  "version": "rsds-astronomical-environmental-temporal-direction-macro-ecology-v0"
+}
