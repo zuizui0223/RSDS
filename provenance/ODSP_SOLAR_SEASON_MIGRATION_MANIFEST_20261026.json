@@ -1,0 +1,2360 @@
+{
+  "title": "Complete domain migration of solar, radiation, clock-time and seasonal ecological research from ODSP to RSDS",
+  "migration_date": "2026-10-26",
+  "source_repository": "zuizui0223/odsp",
+  "source_commit": "d58fb759416fc458f69ef61ea79b7b1d4164f2c5",
+  "source_branch": "ecology/solar-irradiance-direction-macro-gradient-v0",
+  "target_repository": "zuizui0223/RSDS",
+  "target_branch": "research/odsp-solar-season-migration-20261026",
+  "scope": "All identified ecological positive/null/negative result documents, scripts, tests, original public source-derived data, Movebank catalogues and historical workflow files; not unrelated ODSP generic prediction engine",
+  "text_items": 390,
+  "source_text_bytes": 4620492,
+  "files": [
+    {
+      "source": ".github/workflows/duck-gps-identifiability-audit-20261019.yml",
+      "target": "archive/odsp_workflows/duck-gps-identifiability-audit-20261019.yml",
+      "blob_sha": "39283dd163b0ff167039016108fba7c353008022",
+      "bytes": 1815
+    },
+    {
+      "source": ".github/workflows/duck-gps-reported-speed-two-part-20261019.yml",
+      "target": "archive/odsp_workflows/duck-gps-reported-speed-two-part-20261019.yml",
+      "blob_sha": "daaa402fb9a3bed271470462f616fcdddc51fa9d",
+      "bytes": 1913
+    },
+    {
+      "source": ".github/workflows/duck2025-gps-solar-matched-groundspeed-v0.yml",
+      "target": "archive/odsp_workflows/duck2025-gps-solar-matched-groundspeed-v0.yml",
+      "blob_sha": "4382610bd24b3937ac4be7e5906d18981a523bf3",
+      "bytes": 2347
+    },
+    {
+      "source": ".github/workflows/duck2025-gps-source-daylength-preflight-v0.yml",
+      "target": "archive/odsp_workflows/duck2025-gps-source-daylength-preflight-v0.yml",
+      "blob_sha": "6cca7c2fae0320974e5508cd5dd65529730782db",
+      "bytes": 2262
+    },
+    {
+      "source": ".github/workflows/global-equinoctial-era5-source-20261019.yml",
+      "target": "archive/odsp_workflows/global-equinoctial-era5-source-20261019.yml",
+      "blob_sha": "962c4d37f98c3b83f98d3e8ef357746cfcf5015c",
+      "bytes": 1569
+    },
+    {
+      "source": ".github/workflows/global-fixed-21site-era5-season-history-v0.yml",
+      "target": "archive/odsp_workflows/global-fixed-21site-era5-season-history-v0.yml",
+      "blob_sha": "c400a2e3af8e0eaa33b421bd8f6810b5a317831b",
+      "bytes": 1598
+    },
+    {
+      "source": ".github/workflows/global-solar-all259-source-header-v0.yml",
+      "target": "archive/odsp_workflows/global-solar-all259-source-header-v0.yml",
+      "blob_sha": "81672c75937f44ac990db6d54ddf27d8b93c1b69",
+      "bytes": 1471
+    },
+    {
+      "source": ".github/workflows/global-solar-azimuth-full-source-preflight-v0.yml",
+      "target": "archive/odsp_workflows/global-solar-azimuth-full-source-preflight-v0.yml",
+      "blob_sha": "5e92e89f5d335d0cfcb26a12cdc2a1e334ff2e69",
+      "bytes": 1474
+    },
+    {
+      "source": ".github/workflows/global-solar-azimuth-macro-v0.yml",
+      "target": "archive/odsp_workflows/global-solar-azimuth-macro-v0.yml",
+      "blob_sha": "c3f14f646feb9465e68026ed5b0e6f0919821ad5",
+      "bytes": 3740
+    },
+    {
+      "source": ".github/workflows/global-solar-azimuth-new-original-v1.yml",
+      "target": "archive/odsp_workflows/global-solar-azimuth-new-original-v1.yml",
+      "blob_sha": "755f26a55d4e606bb07fa6ed9aa1c97f57342976",
+      "bytes": 1934
+    },
+    {
+      "source": ".github/workflows/global-solar-azimuth-new-source-sample-v1.yml",
+      "target": "archive/odsp_workflows/global-solar-azimuth-new-source-sample-v1.yml",
+      "blob_sha": "53528ff6cf099b020e1c2cfcd5459b08bc3d0bf5",
+      "bytes": 1462
+    },
+    {
+      "source": ".github/workflows/global-solar-azimuth-southern-v0.yml",
+      "target": "archive/odsp_workflows/global-solar-azimuth-southern-v0.yml",
+      "blob_sha": "ecd9df44e3c4a4e336fac8473b9b98b09d0285bb",
+      "bytes": 1526
+    },
+    {
+      "source": ".github/workflows/global-solar-multispecies-shared-cell-v0.yml",
+      "target": "archive/odsp_workflows/global-solar-multispecies-shared-cell-v0.yml",
+      "blob_sha": "d7abfabcc189264963ddbfb669076c06c73b99ee",
+      "bytes": 1788
+    },
+    {
+      "source": ".github/workflows/global-solar-new24-original-gps-ecology-v2.yml",
+      "target": "archive/odsp_workflows/global-solar-new24-original-gps-ecology-v2.yml",
+      "blob_sha": "c0052123b47edeb73349648864cacd54c62a6b12",
+      "bytes": 1916
+    },
+    {
+      "source": ".github/workflows/global-solar-new24-original-source-preflight-v2.yml",
+      "target": "archive/odsp_workflows/global-solar-new24-original-source-preflight-v2.yml",
+      "blob_sha": "f4bf3697f73a0a340507bbfc82611e6d04966655",
+      "bytes": 1463
+    },
+    {
+      "source": ".github/workflows/global-solar-shared-cell-source-serial-replay-v1.yml",
+      "target": "archive/odsp_workflows/global-solar-shared-cell-source-serial-replay-v1.yml",
+      "blob_sha": "5b0003aeeee9d820197124ad4c24128b5bce84c6",
+      "bytes": 1668
+    },
+    {
+      "source": ".github/workflows/ireland-observed-solar-daylength-v0.yml",
+      "target": "archive/odsp_workflows/ireland-observed-solar-daylength-v0.yml",
+      "blob_sha": "ac2107e1a39225d2f884f5b1383387d6ff059744",
+      "bytes": 2003
+    },
+    {
+      "source": ".github/workflows/kays-2020-seasonal-source-schema-gate-v0.yml",
+      "target": "archive/odsp_workflows/kays-2020-seasonal-source-schema-gate-v0.yml",
+      "blob_sha": "4a18d969b957de197fc64f36f0819d1b199183c1",
+      "bytes": 1204
+    },
+    {
+      "source": ".github/workflows/movebank-elephant-hourly-20261019.yml",
+      "target": "archive/odsp_workflows/movebank-elephant-hourly-20261019.yml",
+      "blob_sha": "b854a3c662601a3640666b34647cce971c6e8664",
+      "bytes": 1298
+    },
+    {
+      "source": ".github/workflows/movebank-elephant-zip-schema-20261019.yml",
+      "target": "archive/odsp_workflows/movebank-elephant-zip-schema-20261019.yml",
+      "blob_sha": "f0e0097c35c3d9605e9490a872fb434f7aff11cd",
+      "bytes": 717
+    },
+    {
+      "source": ".github/workflows/movebank-jackal-hourly-20261019.yml",
+      "target": "archive/odsp_workflows/movebank-jackal-hourly-20261019.yml",
+      "blob_sha": "00a4170306ca1b89bc00f25c5f558dc9ac27daac",
+      "bytes": 1253
+    },
+    {
+      "source": ".github/workflows/movebank-kruger-elephant-20261019.yml",
+      "target": "archive/odsp_workflows/movebank-kruger-elephant-20261019.yml",
+      "blob_sha": "7318bed55815c1e69de510ae9635ee91700fff38",
+      "bytes": 1400
+    },
+    {
+      "source": ".github/workflows/movebank-kruger-thermal-solar-20261019.yml",
+      "target": "archive/odsp_workflows/movebank-kruger-thermal-solar-20261019.yml",
+      "blob_sha": "e08c9bbab82b9e9384ead9bbbe6b43f7875457b9",
+      "bytes": 1423
+    },
+    {
+      "source": ".github/workflows/movebank-native-ecology-20261019.yml",
+      "target": "archive/odsp_workflows/movebank-native-ecology-20261019.yml",
+      "blob_sha": "bc9573660994961823636ac18f16f16a4d79528b",
+      "bytes": 2316
+    },
+    {
+      "source": ".github/workflows/movebank-regional-climate-link-20261019.yml",
+      "target": "archive/odsp_workflows/movebank-regional-climate-link-20261019.yml",
+      "blob_sha": "9f414ebf473e990f08c36b6ab66bb4b6c0ce0d2e",
+      "bytes": 1428
+    },
+    {
+      "source": ".github/workflows/movebank-solar-movement-20261019.yml",
+      "target": "archive/odsp_workflows/movebank-solar-movement-20261019.yml",
+      "blob_sha": "63e1d1531ce6490752a9c1e26f0c10cca072cf0d",
+      "bytes": 1529
+    },
+    {
+      "source": ".github/workflows/movebank-solar-movement-extension-20261019.yml",
+      "target": "archive/odsp_workflows/movebank-solar-movement-extension-20261019.yml",
+      "blob_sha": "91fa2bf4cb98440d41002e8a0e7a03614b98fe6a",
+      "bytes": 1509
+    },
+    {
+      "source": ".github/workflows/movebank-southern-solar-mammal-20261019.yml",
+      "target": "archive/odsp_workflows/movebank-southern-solar-mammal-20261019.yml",
+      "blob_sha": "93d56822d60c78e7cd51e23057d3f8b86a5d6ea3",
+      "bytes": 1407
+    },
+    {
+      "source": ".github/workflows/movebank-two-study-calendar-coupling-20261025.yml",
+      "target": "archive/odsp_workflows/movebank-two-study-calendar-coupling-20261025.yml",
+      "blob_sha": "20219285a1d0d59695febc4fc83d29b7593781ac",
+      "bytes": 1593
+    },
+    {
+      "source": ".github/workflows/movebank-utah-calendar-conditioned-20261022.yml",
+      "target": "archive/odsp_workflows/movebank-utah-calendar-conditioned-20261022.yml",
+      "blob_sha": "6644c337b23a0bfe2f49b69aa9c75bb23f154e3c",
+      "bytes": 1427
+    },
+    {
+      "source": ".github/workflows/movebank-utah-diel-photoperiod-20261019.yml",
+      "target": "archive/odsp_workflows/movebank-utah-diel-photoperiod-20261019.yml",
+      "blob_sha": "d7758d35110d48b752ed43c8843e5a0596cd45dd",
+      "bytes": 1357
+    },
+    {
+      "source": ".github/workflows/movebank-utah-ERA5-ecology-20261019.yml",
+      "target": "archive/odsp_workflows/movebank-utah-ERA5-ecology-20261019.yml",
+      "blob_sha": "51425ba6a2d5adc0e7aecf91860471b92bccaa10",
+      "bytes": 1406
+    },
+    {
+      "source": ".github/workflows/movebank-utah-four-taxa-daily-climate-20261023.yml",
+      "target": "archive/odsp_workflows/movebank-utah-four-taxa-daily-climate-20261023.yml",
+      "blob_sha": "fb444ddea876821f4f79c0f0a22b92f0bc20dd93",
+      "bytes": 1525
+    },
+    {
+      "source": ".github/workflows/movebank-utah-four-taxa-solar-20261019.yml",
+      "target": "archive/odsp_workflows/movebank-utah-four-taxa-solar-20261019.yml",
+      "blob_sha": "22ac53e63901d049a2ebc3f02ea62478a5a1a0f1",
+      "bytes": 1448
+    },
+    {
+      "source": ".github/workflows/movebank-utah-spatial-block-20261019.yml",
+      "target": "archive/odsp_workflows/movebank-utah-spatial-block-20261019.yml",
+      "blob_sha": "8bf566461200ec50324163756f88ba4cff252344",
+      "bytes": 1391
+    },
+    {
+      "source": ".github/workflows/movebank-wyoming-daily-climate-20261023.yml",
+      "target": "archive/odsp_workflows/movebank-wyoming-daily-climate-20261023.yml",
+      "blob_sha": "052b3bb79f06f1d9dcc14d08eadbf990830952e9",
+      "bytes": 1467
+    },
+    {
+      "source": ".github/workflows/movebank-wyoming-individual-ERA5-20261023.yml",
+      "target": "archive/odsp_workflows/movebank-wyoming-individual-ERA5-20261023.yml",
+      "blob_sha": "dd19a792413bb72ce18c5fc25f034015995e1994",
+      "bytes": 1481
+    },
+    {
+      "source": ".github/workflows/movebank-wyoming-two-ungulates-20261022.yml",
+      "target": "archive/odsp_workflows/movebank-wyoming-two-ungulates-20261022.yml",
+      "blob_sha": "0ae29cf310a50aa2111272aeaa7db383e019b20a",
+      "bytes": 1416
+    },
+    {
+      "source": ".github/workflows/n2-bat-movebank-probe.yml",
+      "target": "archive/odsp_workflows/n2-bat-movebank-probe.yml",
+      "blob_sha": "ad57f7ad3dbd0fedcdf193b9c081b0a43b199377",
+      "bytes": 4444
+    },
+    {
+      "source": ".github/workflows/n2-serengeti-temporal-partition.yml",
+      "target": "archive/odsp_workflows/n2-serengeti-temporal-partition.yml",
+      "blob_sha": "8151c760c24e08f7367163c6aadfa24b6f865ec3",
+      "bytes": 1859
+    },
+    {
+      "source": ".github/workflows/n2-serengeti-terminal-closeout.yml",
+      "target": "archive/odsp_workflows/n2-serengeti-terminal-closeout.yml",
+      "blob_sha": "ebae7cd50c60966f60446d0313acb76e53372877",
+      "bytes": 3222
+    },
+    {
+      "source": ".github/workflows/n2-serengeti-terminal-recovery.yml",
+      "target": "archive/odsp_workflows/n2-serengeti-terminal-recovery.yml",
+      "blob_sha": "7066a3c0992914c59d5b8310497a685a6fda8ec1",
+      "bytes": 3939
+    },
+    {
+      "source": ".github/workflows/serengeti-era5-environment-v0.yml",
+      "target": "archive/odsp_workflows/serengeti-era5-environment-v0.yml",
+      "blob_sha": "c9b683849f5f32145bad5b31d0aa783eae9803a3",
+      "bytes": 1435
+    },
+    {
+      "source": ".github/workflows/serengeti-mod13q1-source-qa-probe-v0.yml",
+      "target": "archive/odsp_workflows/serengeti-mod13q1-source-qa-probe-v0.yml",
+      "blob_sha": "5aabac8a709a98699236ea3dde9819ee5ffd5bda",
+      "bytes": 2106
+    },
+    {
+      "source": ".github/workflows/serengeti-modis-container-token-v1.yml",
+      "target": "archive/odsp_workflows/serengeti-modis-container-token-v1.yml",
+      "blob_sha": "e6e4f6dd65db53ae33685924ff24f168f391e8da",
+      "bytes": 1690
+    },
+    {
+      "source": ".github/workflows/serengeti-ndvi-relative-rank-v0.yml",
+      "target": "archive/odsp_workflows/serengeti-ndvi-relative-rank-v0.yml",
+      "blob_sha": "1943e36433a68c4f28330c9f86953225ada8fea3",
+      "bytes": 3946
+    },
+    {
+      "source": ".github/workflows/serengeti-photo-era5-yearcycle-alignment-v0.yml",
+      "target": "archive/odsp_workflows/serengeti-photo-era5-yearcycle-alignment-v0.yml",
+      "blob_sha": "8fc2046bbfad77979855432210679a0fa548682b",
+      "bytes": 3271
+    },
+    {
+      "source": ".github/workflows/serengeti-photo-timing-station-mix-v0.yml",
+      "target": "archive/odsp_workflows/serengeti-photo-timing-station-mix-v0.yml",
+      "blob_sha": "ad66071b93a911eada03e5f7a6838d9b77da08ab",
+      "bytes": 2596
+    },
+    {
+      "source": ".github/workflows/serengeti-regional-ndvi-2010-13-v0.yml",
+      "target": "archive/odsp_workflows/serengeti-regional-ndvi-2010-13-v0.yml",
+      "blob_sha": "a26e02beb2636e4d66e286e189a95b8249cabd88",
+      "bytes": 1645
+    },
+    {
+      "source": ".github/workflows/serengeti-same-camera-trophic-photo-v0.yml",
+      "target": "archive/odsp_workflows/serengeti-same-camera-trophic-photo-v0.yml",
+      "blob_sha": "2109edfe6a909f377b71d961e74f555a250aafa5",
+      "bytes": 2658
+    },
+    {
+      "source": ".github/workflows/serengeti-solar-season-recorded-v0.yml",
+      "target": "archive/odsp_workflows/serengeti-solar-season-recorded-v0.yml",
+      "blob_sha": "214f2a8dd6f8ebf97c521a34cf7d74b43e0483c4",
+      "bytes": 2546
+    },
+    {
+      "source": ".github/workflows/serengeti-solstice-mirror-source-only-v0.yml",
+      "target": "archive/odsp_workflows/serengeti-solstice-mirror-source-only-v0.yml",
+      "blob_sha": "20d31d793b6ffc0af8799dc366707b7066a89360",
+      "bytes": 1842
+    },
+    {
+      "source": ".github/workflows/serengeti-source-camera-ndvi-photo-v0.yml",
+      "target": "archive/odsp_workflows/serengeti-source-camera-ndvi-photo-v0.yml",
+      "blob_sha": "4aea7363dfdec2055f50e54f53493e7b4f4d8e38",
+      "bytes": 3423
+    },
+    {
+      "source": ".github/workflows/solar-external-original24-source-preflight-v0.yml",
+      "target": "archive/odsp_workflows/solar-external-original24-source-preflight-v0.yml",
+      "blob_sha": "3539ee8050023f964a7e1f127e6f0e66db006df2",
+      "bytes": 1578
+    },
+    {
+      "source": ".github/workflows/solar-irradiance-direction-macro-gradient-v0.yml",
+      "target": "archive/odsp_workflows/solar-irradiance-direction-macro-gradient-v0.yml",
+      "blob_sha": "8abde3219aa7ffd5f1a36bbc4b04d6d79be10bc8",
+      "bytes": 1702
+    },
+    {
+      "source": ".github/workflows/solar-radiation-external24-original-gps-v0.yml",
+      "target": "archive/odsp_workflows/solar-radiation-external24-original-gps-v0.yml",
+      "blob_sha": "2194eccc1b656fc3d5d37517f4aa3df250f84119",
+      "bytes": 1929
+    },
+    {
+      "source": ".github/workflows/solar-radiation-external24-source-decision-v0.yml",
+      "target": "archive/odsp_workflows/solar-radiation-external24-source-decision-v0.yml",
+      "blob_sha": "e372236e2e9db04c7b4445bd1a7b63cb441fb3ad",
+      "bytes": 1765
+    },
+    {
+      "source": ".github/workflows/solar-radiation-two-cohort-diagnostic-v0.yml",
+      "target": "archive/odsp_workflows/solar-radiation-two-cohort-diagnostic-v0.yml",
+      "blob_sha": "e28553ec6167e36e9178847cb4c2fada8cadd2c2",
+      "bytes": 1626
+    },
+    {
+      "source": ".github/workflows/solar-season-macroclimate-20261019.yml",
+      "target": "archive/odsp_workflows/solar-season-macroclimate-20261019.yml",
+      "blob_sha": "39739d146f2df59d5987f0b14c63ff80de391506",
+      "bytes": 2194
+    },
+    {
+      "source": ".github/workflows/solar-weather-population-24-sources-v0.yml",
+      "target": "archive/odsp_workflows/solar-weather-population-24-sources-v0.yml",
+      "blob_sha": "b4f08789acdaed74642aef585823da841aab814c",
+      "bytes": 1932
+    },
+    {
+      "source": ".github/workflows/solar-weather-study-block-synthesis-v0.yml",
+      "target": "archive/odsp_workflows/solar-weather-study-block-synthesis-v0.yml",
+      "blob_sha": "c915762b5cb78677194010d27f739c7caab5fb1c",
+      "bytes": 1616
+    },
+    {
+      "source": ".github/workflows/solar-wind-irradiance-original-shared-v0.yml",
+      "target": "archive/odsp_workflows/solar-wind-irradiance-original-shared-v0.yml",
+      "blob_sha": "86f7d2406868f15ec226f7946a52916e9207010e",
+      "bytes": 1810
+    },
+    {
+      "source": ".github/workflows/utah-multispecies-source-schema-20261019.yml",
+      "target": "archive/odsp_workflows/utah-multispecies-source-schema-20261019.yml",
+      "blob_sha": "4740ccaa2b4cd3a2af80a4181cead5343ea5cce5",
+      "bytes": 691
+    },
+    {
+      "source": "docs/database_seasonal_ecology_programme_20261019.md",
+      "target": "docs/database_seasonal_ecology_programme_20261019.md",
+      "blob_sha": "e15302c290f8b515ce2c8c42552c2da7abd3b99e",
+      "bytes": 29541
+    },
+    {
+      "source": "docs/duck_gps_identifiability_and_next_ecology_20261019.md",
+      "target": "docs/duck_gps_identifiability_and_next_ecology_20261019.md",
+      "blob_sha": "723bafdaa1aa991c3cdbf0fecdbee0eb0da6c2b1",
+      "bytes": 9354
+    },
+    {
+      "source": "docs/duck_gps_reported_speed_occurrence_and_magnitude_20261019.md",
+      "target": "docs/duck_gps_reported_speed_occurrence_and_magnitude_20261019.md",
+      "blob_sha": "90791109ffecd3539f238cd6d22b942e5e9170a5",
+      "bytes": 8688
+    },
+    {
+      "source": "docs/duck2025_gps_independent_solar_speed_ecological_result_20261018.md",
+      "target": "docs/duck2025_gps_independent_solar_speed_ecological_result_20261018.md",
+      "blob_sha": "597f60df007530cd92661da5de074db24726d120",
+      "bytes": 10316
+    },
+    {
+      "source": "docs/global_equinoctial_ERA5_21land_sites_2018_2020_ecological_results.md",
+      "target": "docs/global_equinoctial_ERA5_21land_sites_2018_2020_ecological_results.md",
+      "blob_sha": "a2202fb24fad07640a69bfebc096cf8407ed3755",
+      "bytes": 10657
+    },
+    {
+      "source": "docs/global_fixed_21sites_ERA5_multiday_environment_history_20261019.md",
+      "target": "docs/global_fixed_21sites_ERA5_multiday_environment_history_20261019.md",
+      "blob_sha": "0389a00a18031c69cb2b0e0132e92d10ddea91ec",
+      "bytes": 10379
+    },
+    {
+      "source": "docs/global_solar_azimuth_first_original_GPS_results_20261025.md",
+      "target": "docs/global_solar_azimuth_first_original_GPS_results_20261025.md",
+      "blob_sha": "05738179579ee4d1fd14b20e136fa66ad878b2af",
+      "bytes": 7525
+    },
+    {
+      "source": "docs/global_solar_azimuth_macroecology_20261025.md",
+      "target": "docs/global_solar_azimuth_macroecology_20261025.md",
+      "blob_sha": "c1e37c9c2035eefd87f458197dc4deab493fbbd9",
+      "bytes": 7913
+    },
+    {
+      "source": "docs/global_solar_azimuth_new_independent_12_source_original_results_20261025.md",
+      "target": "docs/global_solar_azimuth_new_independent_12_source_original_results_20261025.md",
+      "blob_sha": "7db081bd0db63f6a454ce87611282bfced9afb4b",
+      "bytes": 6659
+    },
+    {
+      "source": "docs/kruger_thermal_gradient_matched_solar_ecological_results_20261019.md",
+      "target": "docs/kruger_thermal_gradient_matched_solar_ecological_results_20261019.md",
+      "blob_sha": "fe12c6f9b41377ae95fd69bc4b7cd3b46d89183c",
+      "bytes": 8563
+    },
+    {
+      "source": "docs/movebank_first_biological_seasonal_gps_results_20261019.md",
+      "target": "docs/movebank_first_biological_seasonal_gps_results_20261019.md",
+      "blob_sha": "32ba4e6ac94fe87a910afa43fd462740a5319400",
+      "bytes": 6808
+    },
+    {
+      "source": "docs/movebank_gps_regional_era5_joint_ecological_result_20261019.md",
+      "target": "docs/movebank_gps_regional_era5_joint_ecological_result_20261019.md",
+      "blob_sha": "a1700f103ea5dc82e7600e60656bafe112bf4749",
+      "bytes": 9504
+    },
+    {
+      "source": "docs/movebank_original_observation_coverage_20261019.md",
+      "target": "docs/movebank_original_observation_coverage_20261019.md",
+      "blob_sha": "c144ca62cea3f60bb5e1598802e304ca8d6fdb82",
+      "bytes": 4697
+    },
+    {
+      "source": "docs/movebank_six_source_seasonal_ecological_synthesis_20261019.md",
+      "target": "docs/movebank_six_source_seasonal_ecological_synthesis_20261019.md",
+      "blob_sha": "1e3a22c6b485909d59a5f5a5bd2ecc0942b0426b",
+      "bytes": 7067
+    },
+    {
+      "source": "docs/n2_serengeti_temporal_terminal_result_2026-09-04.md",
+      "target": "docs/n2_serengeti_temporal_terminal_result_2026-09-04.md",
+      "blob_sha": "0e4bf0557ee652af921c2b053e2c3240b60dac98",
+      "bytes": 4579
+    },
+    {
+      "source": "docs/odsp_ungulates_two_independent_source_20261022.md",
+      "target": "docs/odsp_ungulates_two_independent_source_20261022.md",
+      "blob_sha": "0bb46ae6e49eb8e3b3a15d964c6642c81f0e2991",
+      "bytes": 6900
+    },
+    {
+      "source": "docs/same_daylength_day_night_displacement_signatures_20261019.md",
+      "target": "docs/same_daylength_day_night_displacement_signatures_20261019.md",
+      "blob_sha": "47f2ac9cb17f001060819aa7a4fb782da4808c9b",
+      "bytes": 9763
+    },
+    {
+      "source": "docs/serengeti_actual_solar_photo_era5_cycle_joint_result_20261015.md",
+      "target": "docs/serengeti_actual_solar_photo_era5_cycle_joint_result_20261015.md",
+      "blob_sha": "6b274d7c04bc6bc90bab414ee172708dc3f460b2",
+      "bytes": 9223
+    },
+    {
+      "source": "docs/serengeti_era5_equal_daylength_environment_20261015.md",
+      "target": "docs/serengeti_era5_equal_daylength_environment_20261015.md",
+      "blob_sha": "a70d1ee8a81fbe30aa82fc5c2ded1b8ca9485a56",
+      "bytes": 6576
+    },
+    {
+      "source": "docs/serengeti_nasa_modis_ndvi_equal_daylength_real_source_result_20261015.md",
+      "target": "docs/serengeti_nasa_modis_ndvi_equal_daylength_real_source_result_20261015.md",
+      "blob_sha": "36313702669ce6918c32648841fda92e1eabfc49",
+      "bytes": 8069
+    },
+    {
+      "source": "docs/serengeti_ndvi_level_vs_rank_photo_ecology_20261016.md",
+      "target": "docs/serengeti_ndvi_level_vs_rank_photo_ecology_20261016.md",
+      "blob_sha": "f0ee23e147f631c571cd967c3fad8c3c73bbf53c",
+      "bytes": 10911
+    },
+    {
+      "source": "docs/serengeti_original_camera_modis_ndvi_photo_link_20261015.md",
+      "target": "docs/serengeti_original_camera_modis_ndvi_photo_link_20261015.md",
+      "blob_sha": "be5e0e3d016805779b57910db64cd4906ba5e184",
+      "bytes": 10350
+    },
+    {
+      "source": "docs/serengeti_trophic_same_camera_photo_night_ecology_20261015.md",
+      "target": "docs/serengeti_trophic_same_camera_photo_night_ecology_20261015.md",
+      "blob_sha": "cbf38ae814b8120a22b60570e327a6b146579eb0",
+      "bytes": 12663
+    },
+    {
+      "source": "docs/serengeti_within_photo_time_versus_station_mix_ecology_20261015.md",
+      "target": "docs/serengeti_within_photo_time_versus_station_mix_ecology_20261015.md",
+      "blob_sha": "b6a7b88be6cac963be0491c00bbca85b5de44751",
+      "bytes": 13347
+    },
+    {
+      "source": "docs/solar_azimuth_global_24_study_ERA5_ecological_results_20261025.md",
+      "target": "docs/solar_azimuth_global_24_study_ERA5_ecological_results_20261025.md",
+      "blob_sha": "2f68b0473e5fcc99b241a84ee834ca651df41715",
+      "bytes": 10979
+    },
+    {
+      "source": "docs/solar_calendar_multispecies_ecological_results_20261019.md",
+      "target": "docs/solar_calendar_multispecies_ecological_results_20261019.md",
+      "blob_sha": "6985942cc64c37fc189780e668edba3f295730d1",
+      "bytes": 18285
+    },
+    {
+      "source": "docs/solar_irradiance_direction_macroecology_20261026.md",
+      "target": "docs/solar_irradiance_direction_macroecology_20261026.md",
+      "blob_sha": "6f7de5b2c23bc81f89aae9dbfe0547855536d47d",
+      "bytes": 6296
+    },
+    {
+      "source": "docs/solar_radiation_two_24_source_nonreplication_ecology_20261025.md",
+      "target": "docs/solar_radiation_two_24_source_nonreplication_ecology_20261025.md",
+      "blob_sha": "adb593ee34309718fa49537ea45db7c24fc5d167",
+      "bytes": 8782
+    },
+    {
+      "source": "docs/solar_season_macroclimate_database_pilot_20261019.md",
+      "target": "docs/solar_season_macroclimate_database_pilot_20261019.md",
+      "blob_sha": "159c27d5627002c3357ff2f787fce0cd1ae567e7",
+      "bytes": 10581
+    },
+    {
+      "source": "docs/solar_seasonal_hysteresis_ecology_paper_protocol_20261015.md",
+      "target": "docs/solar_seasonal_hysteresis_ecology_paper_protocol_20261015.md",
+      "blob_sha": "e061133efaaf4acabdd686c86818761563f1109a",
+      "bytes": 15003
+    },
+    {
+      "source": "docs/solar_seasonal_real_exploratory_results_20261015.md",
+      "target": "docs/solar_seasonal_real_exploratory_results_20261015.md",
+      "blob_sha": "9a717e010ddbf6a0282d68225f80c3285fa557f2",
+      "bytes": 11292
+    },
+    {
+      "source": "docs/solar_wind_irradiance_original_GPS_ecological_results_20261025.md",
+      "target": "docs/solar_wind_irradiance_original_GPS_ecological_results_20261025.md",
+      "blob_sha": "99cd1c59b5fe4ee3c989e09048a78ae34237ddd2",
+      "bytes": 9436
+    },
+    {
+      "source": "docs/superpowers/plans/2026-10-19-seasonal-database-catalog.md",
+      "target": "docs/superpowers/plans/2026-10-19-seasonal-database-catalog.md",
+      "blob_sha": "1fd4a3c8c592ee5800ec14635e020450142af60c",
+      "bytes": 1984
+    },
+    {
+      "source": "docs/utah_four_ungulate_diel_ecological_results_20261019.md",
+      "target": "docs/utah_four_ungulate_diel_ecological_results_20261019.md",
+      "blob_sha": "468cfa410035e61588d908bed52a4433e9be65b4",
+      "bytes": 7173
+    },
+    {
+      "source": "docs/utah_four_ungulates_daylight_ecology_results_20261019.md",
+      "target": "docs/utah_four_ungulates_daylight_ecology_results_20261019.md",
+      "blob_sha": "af98611dc29575a9b7272e8a5178b2831995d08a",
+      "bytes": 8370
+    },
+    {
+      "source": "manuscript/ECOLOGICAL_CALENDARS_PUBLIC_DATABASE_COMPARATIVE_STUDY_v0.md",
+      "target": "manuscript/ECOLOGICAL_CALENDARS_PUBLIC_DATABASE_COMPARATIVE_STUDY_v0.md",
+      "blob_sha": "3858ff34c17677941f42ff5560c8c9c4716b2e73",
+      "bytes": 15832
+    },
+    {
+      "source": "manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_DRAFT_20261025.md",
+      "target": "manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_DRAFT_20261025.md",
+      "blob_sha": "7721740b753be8cd289af01354a9a2c80651aad4",
+      "bytes": 10847
+    },
+    {
+      "source": "manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_v1_20261025.md",
+      "target": "manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_v1_20261025.md",
+      "blob_sha": "dc6331e4f6333c874b3536c387e51da55065e736",
+      "bytes": 18698
+    },
+    {
+      "source": "manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_v2_20261025.md",
+      "target": "manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_v2_20261025.md",
+      "blob_sha": "661a1644274f0a9b2dc9bac23ba7c315b9e64ab9",
+      "bytes": 25875
+    },
+    {
+      "source": "manuscript/SOLAR_SEASONAL_HYSTERESIS_ECOLOGY_PAPER_v0.md",
+      "target": "manuscript/SOLAR_SEASONAL_HYSTERESIS_ECOLOGY_PAPER_v0.md",
+      "blob_sha": "e0ebf4812d300a597e7ccd6fa3da190c672c52bb",
+      "bytes": 55425
+    },
+    {
+      "source": "N2_SERENGETI_POST_TERMINAL_RUNNER_REPAIR.json",
+      "target": "N2_SERENGETI_POST_TERMINAL_RUNNER_REPAIR.json",
+      "blob_sha": "14cf4914d879df662c692b624192406fedce2973",
+      "bytes": 1968
+    },
+    {
+      "source": "N2_SERENGETI_RECOVERY_ATTEMPT2_FAILURE.json",
+      "target": "N2_SERENGETI_RECOVERY_ATTEMPT2_FAILURE.json",
+      "blob_sha": "20ca5f4f62b0aa83a8ad9ac2416e2e04ae81a471",
+      "bytes": 1367
+    },
+    {
+      "source": "N2_SERENGETI_TECHNICAL_RECOVERY_CONTRACT.json",
+      "target": "N2_SERENGETI_TECHNICAL_RECOVERY_CONTRACT.json",
+      "blob_sha": "193922a7cad71c5bfb3c9367518c3ee1091c3805",
+      "bytes": 3973
+    },
+    {
+      "source": "N2_SERENGETI_TEMPORAL_TERMINAL_DECISION.json",
+      "target": "N2_SERENGETI_TEMPORAL_TERMINAL_DECISION.json",
+      "blob_sha": "8f34be2c0080e9c5c8c7cfd8d16f87e61e652d50",
+      "bytes": 3465
+    },
+    {
+      "source": "N2_SERENGETI_TEMPORAL_TERMINAL_RECEIPT.json",
+      "target": "N2_SERENGETI_TEMPORAL_TERMINAL_RECEIPT.json",
+      "blob_sha": "4bc1e77db9724b08de32ebd1d29210333841ac1c",
+      "bytes": 981
+    },
+    {
+      "source": "N2_SERENGETI_TERMINAL_CLOSEOUT_CONTRACT.json",
+      "target": "N2_SERENGETI_TERMINAL_CLOSEOUT_CONTRACT.json",
+      "blob_sha": "2fca059f6ceb6b545f8201c427fae9d67d28b77f",
+      "bytes": 2192
+    },
+    {
+      "source": "odsp/crossfitted_transferability.py",
+      "target": "odsp/crossfitted_transferability.py",
+      "blob_sha": "675a17d91c8592f746301735ca6051e7b65afd29",
+      "bytes": 5043
+    },
+    {
+      "source": "odsp/grouped_transferability.py",
+      "target": "odsp/grouped_transferability.py",
+      "blob_sha": "93b555127ccd1534dc3e58ffb4e4986ae2cc1f66",
+      "bytes": 8146
+    },
+    {
+      "source": "odsp/niche_geometry.py",
+      "target": "odsp/niche_geometry.py",
+      "blob_sha": "8a0444438b32988f91880534907053314aada988",
+      "bytes": 13238
+    },
+    {
+      "source": "odsp/serengeti_terminal.py",
+      "target": "odsp/serengeti_terminal.py",
+      "blob_sha": "74b31e024c6a900a297bd475b8a4ec4940c4f873",
+      "bytes": 15742
+    },
+    {
+      "source": "odsp/temporal_crossfit.py",
+      "target": "odsp/temporal_crossfit.py",
+      "blob_sha": "627f4f8a5bedd992bc5848bd7eb529b2a193c568",
+      "bytes": 2195
+    },
+    {
+      "source": "odsp/temporal_information.py",
+      "target": "odsp/temporal_information.py",
+      "blob_sha": "dfb857d2310987e8a0647a98688f5d536f78ec73",
+      "bytes": 13266
+    },
+    {
+      "source": "odsp/temporal_partition.py",
+      "target": "odsp/temporal_partition.py",
+      "blob_sha": "be54701f43341322279fb12d662a8866a764a7b0",
+      "bytes": 12730
+    },
+    {
+      "source": "odsp/transferability.py",
+      "target": "odsp/transferability.py",
+      "blob_sha": "f906489c179103bf9c52953c67d6cdf80fc83211",
+      "bytes": 11882
+    },
+    {
+      "source": "research/DUCK_GPS_2025_SOLAR_MATCHED_SPEED_V0_CONTRACT.json",
+      "target": "research/DUCK_GPS_2025_SOLAR_MATCHED_SPEED_V0_CONTRACT.json",
+      "blob_sha": "997fb49c34c6bb81af678687d5ddde085d12dbc7",
+      "bytes": 6330
+    },
+    {
+      "source": "research/DUCK_GPS_2025_SOURCE_DAYLENGTH_PREFLIGHT_V0_CONTRACT.json",
+      "target": "research/DUCK_GPS_2025_SOURCE_DAYLENGTH_PREFLIGHT_V0_CONTRACT.json",
+      "blob_sha": "418ac8f078756e72c2f9ada3cde8b8264e07143d",
+      "bytes": 3763
+    },
+    {
+      "source": "research/DUCK_GPS_REPORTED_SPEED_TWO_PART_20261019.json",
+      "target": "research/DUCK_GPS_REPORTED_SPEED_TWO_PART_20261019.json",
+      "blob_sha": "179c19c2d1274c00aacce70ebb16e462a358ea3d",
+      "bytes": 3598
+    },
+    {
+      "source": "research/ETOSHA_COMMON_YEARS_GPS_V0_20261019.json",
+      "target": "research/ETOSHA_COMMON_YEARS_GPS_V0_20261019.json",
+      "blob_sha": "50d9b3a45ea20af51757ac4d3d1374b3f4be1568",
+      "bytes": 2248
+    },
+    {
+      "source": "research/ETOSHA_SHARED_CLIMATE_V0_20261019.json",
+      "target": "research/ETOSHA_SHARED_CLIMATE_V0_20261019.json",
+      "blob_sha": "8c4f3182d55a621e6469784d726385290fa581b1",
+      "bytes": 1781
+    },
+    {
+      "source": "research/ETOSHA_YEAR_STRATIFIED_ECOLOGY_V0_20261019.json",
+      "target": "research/ETOSHA_YEAR_STRATIFIED_ECOLOGY_V0_20261019.json",
+      "blob_sha": "b86e89156353fc40ea166be64d0b9a6679c58ac9",
+      "bytes": 3197
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_12_NEW_SOURCE_FIRST_ORIGINAL_GPS_RESULT_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_12_NEW_SOURCE_FIRST_ORIGINAL_GPS_RESULT_20261025.json",
+      "blob_sha": "d3a05ac1324fa8fc6cf738e1866704841f0b6d88",
+      "bytes": 41715
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_12_NEW_SOURCE_FROZEN_ORIGINAL_FILE_MANIFEST_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_12_NEW_SOURCE_FROZEN_ORIGINAL_FILE_MANIFEST_20261025.json",
+      "blob_sha": "ef157a25e96476ce4838f2eac6f758bf6e0a5b82",
+      "bytes": 14702
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_21_GROUP_EXACT_CIRCULAR_COMPONENT_DECOMPOSITION_20261025.csv",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_21_GROUP_EXACT_CIRCULAR_COMPONENT_DECOMPOSITION_20261025.csv",
+      "blob_sha": "704c0b07cd16533b97333cc7fb52e01296bbd6e0",
+      "bytes": 3916
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_24_SCHEMA_QUALIFIED_NEW_SOURCE_V2_CONTRACT.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_24_SCHEMA_QUALIFIED_NEW_SOURCE_V2_CONTRACT.json",
+      "blob_sha": "32b324999c69d177b83bc1ea83cdd50129ed1d11",
+      "bytes": 7319
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_259_ORIGINAL_SOURCE_METADATA_FIRST_RECEIPT_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_259_ORIGINAL_SOURCE_METADATA_FIRST_RECEIPT_20261025.json",
+      "blob_sha": "2898540f62018e4a6cc906c302bc0f42066726a0",
+      "bytes": 1877
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_259_SOURCE_PREFLIGHT_V0_CONTRACT.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_259_SOURCE_PREFLIGHT_V0_CONTRACT.json",
+      "blob_sha": "b703d2b51d773e12bd0d61050f8f7f604702d5be",
+      "bytes": 1707
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_ALL259_FIRST_GPS_HEADER_RESULT_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_ALL259_FIRST_GPS_HEADER_RESULT_20261025.json",
+      "blob_sha": "0f4c9288ed78d3383b82331a808501466e533bec",
+      "bytes": 1472
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_ALL259_ORIGINAL_CSV_HEADER_V0_CONTRACT.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_ALL259_ORIGINAL_CSV_HEADER_V0_CONTRACT.json",
+      "blob_sha": "2907a4c52c47617b5dddf4371310050db7cfafe4",
+      "bytes": 2283
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_CIRCULAR_DECOMPOSITION_FIRST_SUMMARY_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_CIRCULAR_DECOMPOSITION_FIRST_SUMMARY_20261025.json",
+      "blob_sha": "d1d9ba7e4bb92937d902735ca4f629983e4e2146",
+      "bytes": 2887
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_COMBINED_V2_ALL_ORIGINAL_SOURCE_TAXON_MATRIX_20261025.csv",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_COMBINED_V2_ALL_ORIGINAL_SOURCE_TAXON_MATRIX_20261025.csv",
+      "blob_sha": "bee8741c0c4e8a27e53693b79224f3c6aa803c57",
+      "bytes": 19322
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_COMBINED_V2_MACRO_SUMMARY_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_COMBINED_V2_MACRO_SUMMARY_20261025.json",
+      "blob_sha": "7d71eec3a29bff6c64053b1728d18377bf6596f7",
+      "bytes": 7396
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_INDEPENDENT_12SOURCE_V1_CONTRACT.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_INDEPENDENT_12SOURCE_V1_CONTRACT.json",
+      "blob_sha": "f7fb13427137297bb7b81774c0cc99d107067cc9",
+      "bytes": 3650
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_MACRO_V0_CONTRACT.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_MACRO_V0_CONTRACT.json",
+      "blob_sha": "ce239d881740f80be046a566f56e0364d904bb89",
+      "bytes": 5203
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_MULTI_SOURCE_SHARED_CELL_V0_CONTRACT.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_MULTI_SOURCE_SHARED_CELL_V0_CONTRACT.json",
+      "blob_sha": "b14e957ec2f9ab56bb3da70476b7ea69a72a3632",
+      "bytes": 2946
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_MULTI_SOURCE_SHARED_CELL_V0_FIRST_RESULT_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_MULTI_SOURCE_SHARED_CELL_V0_FIRST_RESULT_20261025.json",
+      "blob_sha": "05de2106f8c3feccb9a9ce81fc7ab450b75e41c1",
+      "bytes": 12645
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_MULTITAXON_SHARED_CELL_COMBINED_FROZEN_V0_V1_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_MULTITAXON_SHARED_CELL_COMBINED_FROZEN_V0_V1_20261025.json",
+      "blob_sha": "989fcb5503956a77f23eec81ccfce8a098f4a203",
+      "bytes": 20650
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_NEW24_ORIGINAL_GPS_FIRST_V2_RESULT_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_NEW24_ORIGINAL_GPS_FIRST_V2_RESULT_20261025.json",
+      "blob_sha": "eae522571b5902ee0ab901d6bbebbb46ece55d48",
+      "bytes": 110555
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_NEW24_PROVIDER_FROZEN_SOURCE_FILE_MANIFEST_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_NEW24_PROVIDER_FROZEN_SOURCE_FILE_MANIFEST_20261025.json",
+      "blob_sha": "1a3c891929e8631a256139046c043f48c157d12c",
+      "bytes": 24128
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_SHARED_CELL_SOURCE_REPLAY_V1_CONTRACT.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_SHARED_CELL_SOURCE_REPLAY_V1_CONTRACT.json",
+      "blob_sha": "0467acf0811dd14270755a86a2588f40acd61ad6",
+      "bytes": 1859
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_SHARED_CELL_SOURCE_SERIAL_REPLAY_V1_FIRST_RESULT_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_SHARED_CELL_SOURCE_SERIAL_REPLAY_V1_FIRST_RESULT_20261025.json",
+      "blob_sha": "43a3c0259edc040c447f5f7d722790186d2129eb",
+      "bytes": 13573
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_SOURCE_STUDY_OVERLAP_AUDIT_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_SOURCE_STUDY_OVERLAP_AUDIT_20261025.json",
+      "blob_sha": "6dfd79fb7d5c9f6b44154e7fa6e311739cd48adf",
+      "bytes": 2503
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_SOUTHERN_SOURCE_V0_CONTRACT.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_SOUTHERN_SOURCE_V0_CONTRACT.json",
+      "blob_sha": "5ce9b72dc8596b7abbf185d7d92f69ef882cb5b4",
+      "bytes": 2003
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_V0_13_COHORT_MACRO_SUMMARY_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_V0_13_COHORT_MACRO_SUMMARY_20261025.json",
+      "blob_sha": "f014abbcffc4f479bb3e69b35100eaaa903af9bb",
+      "bytes": 1304
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_V0_13_COHORT_PRIMARY_DATA_MATRIX_20261025.csv",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_V0_13_COHORT_PRIMARY_DATA_MATRIX_20261025.csv",
+      "blob_sha": "948f5f6039a740877aef4d2afcffcff017c12dc6",
+      "bytes": 4069
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_V0_FIRST_ORIGINAL_GPS_RESULT_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_V0_FIRST_ORIGINAL_GPS_RESULT_20261025.json",
+      "blob_sha": "2360699e7b26649edfb9d89daa660f510233e103",
+      "bytes": 16696
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_V0_FIRST_SOUTHERN_ORIGINAL_GPS_RESULT_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_V0_FIRST_SOUTHERN_ORIGINAL_GPS_RESULT_20261025.json",
+      "blob_sha": "4d8da5fb2f4cc91e150febfe7b5bfbebb240c6e4",
+      "bytes": 10520
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_V1_ALL_SOURCE_GROUP_MATRIX_20261025.csv",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_V1_ALL_SOURCE_GROUP_MATRIX_20261025.csv",
+      "blob_sha": "ac7e6a7c4b450bd8a96d482f0b0091c941b3eb9a",
+      "bytes": 7923
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_V1_COMBINED_SOURCE_SUMMARY_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_V1_COMBINED_SOURCE_SUMMARY_20261025.json",
+      "blob_sha": "855d84c478e2cb64ad8cda9cf25807d25005f25b",
+      "bytes": 1571
+    },
+    {
+      "source": "research/GLOBAL_SOLAR_AZIMUTH_WITHIN_TAXON_TWO_SOURCE_REPEATABILITY_AUDIT_20261025.json",
+      "target": "research/GLOBAL_SOLAR_AZIMUTH_WITHIN_TAXON_TWO_SOURCE_REPEATABILITY_AUDIT_20261025.json",
+      "blob_sha": "dfb3a3bd05d1879f0fc26744a3b640e6244dcea2",
+      "bytes": 10478
+    },
+    {
+      "source": "research/IRELAND_RECORDED_SOLAR_DAYLENGTH_V0_CONTRACT.json",
+      "target": "research/IRELAND_RECORDED_SOLAR_DAYLENGTH_V0_CONTRACT.json",
+      "blob_sha": "c315035cdf98797c36d29512ac87cb0024911212",
+      "bytes": 4246
+    },
+    {
+      "source": "research/MASOLELE_2026_WILDEBEEST_GPS_SOURCE_GATE_V0.json",
+      "target": "research/MASOLELE_2026_WILDEBEEST_GPS_SOURCE_GATE_V0.json",
+      "blob_sha": "a33693beef812de594316661f6ac65d30d7fe77b",
+      "bytes": 2189
+    },
+    {
+      "source": "research/MOVEBANK_ELEPHANT_HOURLY_V1_20261019.json",
+      "target": "research/MOVEBANK_ELEPHANT_HOURLY_V1_20261019.json",
+      "blob_sha": "8ea4bf924238e9a9a9204ee206a17f0339e69781",
+      "bytes": 1866
+    },
+    {
+      "source": "research/MOVEBANK_EXTENSION_THREE_ERA5_DATE_CONTEXT_V0_20261019.json",
+      "target": "research/MOVEBANK_EXTENSION_THREE_ERA5_DATE_CONTEXT_V0_20261019.json",
+      "blob_sha": "6eaaf3cf2f2a1758078b761196117d67b9f94d6c",
+      "bytes": 6160
+    },
+    {
+      "source": "research/MOVEBANK_JACKAL_HOURLY_SENSITIVITY_V1_20261019.json",
+      "target": "research/MOVEBANK_JACKAL_HOURLY_SENSITIVITY_V1_20261019.json",
+      "blob_sha": "c16371a7688022c05ab78987c0fdc6a61ea4cf60",
+      "bytes": 1400
+    },
+    {
+      "source": "research/MOVEBANK_KRUGER_ELEPHANT_INDEPENDENT_V0_20261019.json",
+      "target": "research/MOVEBANK_KRUGER_ELEPHANT_INDEPENDENT_V0_20261019.json",
+      "blob_sha": "9474a0001394c3818611a1de7e10b034695f0d22",
+      "bytes": 2734
+    },
+    {
+      "source": "research/MOVEBANK_KRUGER_THERMAL_DIEL_V0_20261019.json",
+      "target": "research/MOVEBANK_KRUGER_THERMAL_DIEL_V0_20261019.json",
+      "blob_sha": "ab514ec35b8e4aa6067df30a0913896b45593b98",
+      "bytes": 4516
+    },
+    {
+      "source": "research/MOVEBANK_NATIVE_OBSERVATION_PILOT_20261019.json",
+      "target": "research/MOVEBANK_NATIVE_OBSERVATION_PILOT_20261019.json",
+      "blob_sha": "1902d4e0c3897f8d156b53d77a6cd65c49e1acba",
+      "bytes": 1946
+    },
+    {
+      "source": "research/MOVEBANK_REGIONAL_ERA5_MOVEMENT_LINK_V0_20261019.json",
+      "target": "research/MOVEBANK_REGIONAL_ERA5_MOVEMENT_LINK_V0_20261019.json",
+      "blob_sha": "e7718d857d859b284eeb936f5cb1c73e94ecdc75",
+      "bytes": 2755
+    },
+    {
+      "source": "research/MOVEBANK_SOLAR_MOVEMENT_EXTENSION_V0_20261019.json",
+      "target": "research/MOVEBANK_SOLAR_MOVEMENT_EXTENSION_V0_20261019.json",
+      "blob_sha": "b7d4c2111a005dcf31ce2ff4f837d22384db8003",
+      "bytes": 3745
+    },
+    {
+      "source": "research/MOVEBANK_SOLAR_MOVEMENT_EXTENSION_V0_RESULT_20261019.json",
+      "target": "research/MOVEBANK_SOLAR_MOVEMENT_EXTENSION_V0_RESULT_20261019.json",
+      "blob_sha": "5ff33d4ef96040c8849979d0104c28d77a13ae6b",
+      "bytes": 3716
+    },
+    {
+      "source": "research/MOVEBANK_SOLAR_MOVEMENT_V0_20261019.json",
+      "target": "research/MOVEBANK_SOLAR_MOVEMENT_V0_20261019.json",
+      "blob_sha": "a0f923ac52420927dcae444e1554938f7391eb85",
+      "bytes": 2187
+    },
+    {
+      "source": "research/MOVEBANK_SOLAR_MOVEMENT_V0_RESULT_20261019.json",
+      "target": "research/MOVEBANK_SOLAR_MOVEMENT_V0_RESULT_20261019.json",
+      "blob_sha": "49dddcfa95e06a4a41d0212fc05df29499088d3f",
+      "bytes": 2825
+    },
+    {
+      "source": "research/MOVEBANK_SOUTHERN_SOLAR_MOVEMENT_V0_20261019.json",
+      "target": "research/MOVEBANK_SOUTHERN_SOLAR_MOVEMENT_V0_20261019.json",
+      "blob_sha": "cf2c12d24bb273ace3bfb9b967d38d423b4a8892",
+      "bytes": 4657
+    },
+    {
+      "source": "research/MOVEBANK_UTAH_CALENDAR_CONDITIONED_V0_20261022.json",
+      "target": "research/MOVEBANK_UTAH_CALENDAR_CONDITIONED_V0_20261022.json",
+      "blob_sha": "ea317f5881d839c0b7e9f0f649267dd25659164b",
+      "bytes": 5386
+    },
+    {
+      "source": "research/MOVEBANK_UTAH_DIEL_PHOTOPERIOD_V0_20261019.json",
+      "target": "research/MOVEBANK_UTAH_DIEL_PHOTOPERIOD_V0_20261019.json",
+      "blob_sha": "ec76088251f0986947f3d5b2cf53a3abd29001f1",
+      "bytes": 2300
+    },
+    {
+      "source": "research/MOVEBANK_UTAH_DIEL_PHOTOPERIOD_VERIFIED_RESULT_V0_20261019.json",
+      "target": "research/MOVEBANK_UTAH_DIEL_PHOTOPERIOD_VERIFIED_RESULT_V0_20261019.json",
+      "blob_sha": "5870c6920d83258c5b62b36dc7d043802c494fef",
+      "bytes": 5820
+    },
+    {
+      "source": "research/MOVEBANK_UTAH_FOUR_TAXA_SOLAR_V0_20261019.json",
+      "target": "research/MOVEBANK_UTAH_FOUR_TAXA_SOLAR_V0_20261019.json",
+      "blob_sha": "8aacca02f01bf2a675a95184d25ff9af49a6b374",
+      "bytes": 4195
+    },
+    {
+      "source": "research/MOVEBANK_UTAH_SHARED_CELL_ERA5_V0_20261019.json",
+      "target": "research/MOVEBANK_UTAH_SHARED_CELL_ERA5_V0_20261019.json",
+      "blob_sha": "c1687f4e651152a8648f7dce0d9c608fe60b9fa0",
+      "bytes": 3547
+    },
+    {
+      "source": "research/MOVEBANK_UTAH_SHARED_SPATIAL_BLOCK_V0_20261019.json",
+      "target": "research/MOVEBANK_UTAH_SHARED_SPATIAL_BLOCK_V0_20261019.json",
+      "blob_sha": "aa4b86647ecd94af25f32fcacf83e6133470076d",
+      "bytes": 3697
+    },
+    {
+      "source": "research/MOVEBANK_WYOMING_TWO_UNGULATES_SOURCE_V0_20261022.json",
+      "target": "research/MOVEBANK_WYOMING_TWO_UNGULATES_SOURCE_V0_20261022.json",
+      "blob_sha": "713dca2d8321fc0efbe46f36d87f6749d02b4228",
+      "bytes": 4038
+    },
+    {
+      "source": "research/ODSP_TWO_STUDY_ECOLOGICAL_CALENDAR_COUPLING_V0_20261025.json",
+      "target": "research/ODSP_TWO_STUDY_ECOLOGICAL_CALENDAR_COUPLING_V0_20261025.json",
+      "blob_sha": "a5b93a277e2e2937767cfcf182ae95237a49eb3b",
+      "bytes": 4823
+    },
+    {
+      "source": "research/seasonal_database_catalog/2026-10-19/camtrap/gbif_camtrap_dp_catalog.csv",
+      "target": "research/seasonal_database_catalog/2026-10-19/camtrap/gbif_camtrap_dp_catalog.csv",
+      "blob_sha": "5ff649fbd2a934695b115a97de9c7da9a2fc7382",
+      "bytes": 13689
+    },
+    {
+      "source": "research/seasonal_database_catalog/2026-10-19/camtrap/gbif_camtrap_dp_manifest.json",
+      "target": "research/seasonal_database_catalog/2026-10-19/camtrap/gbif_camtrap_dp_manifest.json",
+      "blob_sha": "ce67ac8d979a6d810c085fa2de2e0072a3492d8d",
+      "bytes": 57891
+    },
+    {
+      "source": "research/seasonal_database_catalog/2026-10-19/camtrap/gbif_camtrap_dp_search_full.json",
+      "target": "research/seasonal_database_catalog/2026-10-19/camtrap/gbif_camtrap_dp_search_full.json",
+      "blob_sha": "766bcc3dd7a14377023c28b082b63c0658fa5272",
+      "bytes": 58974
+    },
+    {
+      "source": "research/seasonal_database_catalog/2026-10-19/camtrap/nphk1_deployment_screen.json",
+      "target": "research/seasonal_database_catalog/2026-10-19/camtrap/nphk1_deployment_screen.json",
+      "blob_sha": "39fe6e355ad1e2ec8577f0ac0543a11971eb9a61",
+      "bytes": 1133
+    },
+    {
+      "source": "research/seasonal_database_catalog/2026-10-19/camtrap/README.md",
+      "target": "research/seasonal_database_catalog/2026-10-19/camtrap/README.md",
+      "blob_sha": "d5c901ea5af318049a13456ab6abecd7dce50858",
+      "bytes": 5554
+    },
+    {
+      "source": "research/seasonal_database_catalog/2026-10-19/movebank/catalog.csv",
+      "target": "research/seasonal_database_catalog/2026-10-19/movebank/catalog.csv",
+      "blob_sha": "5a87ca69de27d99116b7e7f414a59937bd9a2e3d",
+      "bytes": 231596
+    },
+    {
+      "source": "research/seasonal_database_catalog/2026-10-19/movebank/catalog.json",
+      "target": "research/seasonal_database_catalog/2026-10-19/movebank/catalog.json",
+      "blob_sha": "9822ec80ed98cab1e3d17a853d0ce5e63e47298c",
+      "bytes": 462860
+    },
+    {
+      "source": "research/seasonal_database_catalog/2026-10-19/movebank/manifest.json",
+      "target": "research/seasonal_database_catalog/2026-10-19/movebank/manifest.json",
+      "blob_sha": "f8772fb003a0c60f8bb80c8674936327e641457c",
+      "bytes": 3259
+    },
+    {
+      "source": "research/seasonal_database_catalog/2026-10-19/movebank/README.md",
+      "target": "research/seasonal_database_catalog/2026-10-19/movebank/README.md",
+      "blob_sha": "efd7fde580706d7f6c42f7d3022f6e5178b24e20",
+      "bytes": 3141
+    },
+    {
+      "source": "research/seasonal_database_catalog/README.md",
+      "target": "research/seasonal_database_catalog/README.md",
+      "blob_sha": "f010142f3cf61a4f78822e709a163aa770296acd",
+      "bytes": 2437
+    },
+    {
+      "source": "research/SERENGETI_ERA5_EQUAL_PHOTOPERIOD_ENVIRONMENT_V0_CONTRACT.json",
+      "target": "research/SERENGETI_ERA5_EQUAL_PHOTOPERIOD_ENVIRONMENT_V0_CONTRACT.json",
+      "blob_sha": "4e7e121409982ba930bae712b4abd95920e7dfa4",
+      "bytes": 4194
+    },
+    {
+      "source": "research/SERENGETI_MOD13Q1_PUBLIC_TOKEN_V1_SOURCE_ACCESS_CONTRACT.json",
+      "target": "research/SERENGETI_MOD13Q1_PUBLIC_TOKEN_V1_SOURCE_ACCESS_CONTRACT.json",
+      "blob_sha": "eab4d18e576f6635035fca0af64a6bbaf8995538",
+      "bytes": 2630
+    },
+    {
+      "source": "research/SERENGETI_MOD13Q1_QA_SOURCE_PROBE_V0_CONTRACT.json",
+      "target": "research/SERENGETI_MOD13Q1_QA_SOURCE_PROBE_V0_CONTRACT.json",
+      "blob_sha": "a178ddb40969e4ca9af9916d075276607307e4d3",
+      "bytes": 2997
+    },
+    {
+      "source": "research/SERENGETI_MODIS_RELATIVE_GREENNESS_V0_CONTRACT.json",
+      "target": "research/SERENGETI_MODIS_RELATIVE_GREENNESS_V0_CONTRACT.json",
+      "blob_sha": "6437d35877f0076c9f6d5f4ab06706496e490fe8",
+      "bytes": 6287
+    },
+    {
+      "source": "research/SERENGETI_REGIONAL_MOD13Q1_NDVI_2010_2013_SEASON_MIRROR_V0_CONTRACT.json",
+      "target": "research/SERENGETI_REGIONAL_MOD13Q1_NDVI_2010_2013_SEASON_MIRROR_V0_CONTRACT.json",
+      "blob_sha": "94002873a1fe17df73845299bd0320357ad02f79",
+      "bytes": 3670
+    },
+    {
+      "source": "research/SERENGETI_SAME_STATION_TROPHIC_PHOTO_TIME_V0_CONTRACT.json",
+      "target": "research/SERENGETI_SAME_STATION_TROPHIC_PHOTO_TIME_V0_CONTRACT.json",
+      "blob_sha": "54ea245311a0cddeef9fb858c52d07b399bd069b",
+      "bytes": 5562
+    },
+    {
+      "source": "research/SERENGETI_SITE_DATE_PHOTO_ERA5_ALIGNMENT_V0_CONTRACT.json",
+      "target": "research/SERENGETI_SITE_DATE_PHOTO_ERA5_ALIGNMENT_V0_CONTRACT.json",
+      "blob_sha": "79969d9ad9b60aed775af4f51054ab7274b91f84",
+      "bytes": 4704
+    },
+    {
+      "source": "research/SERENGETI_SITE_MODIS_NDVI_PHOTO_REWEIGHT_V0_CONTRACT.json",
+      "target": "research/SERENGETI_SITE_MODIS_NDVI_PHOTO_REWEIGHT_V0_CONTRACT.json",
+      "blob_sha": "cc9994655dafea978fdfb5b780d3f07e3b044bd9",
+      "bytes": 6589
+    },
+    {
+      "source": "research/SERENGETI_SOLAR_SEASON_RECORDED_EVENT_V0_CONTRACT.json",
+      "target": "research/SERENGETI_SOLAR_SEASON_RECORDED_EVENT_V0_CONTRACT.json",
+      "blob_sha": "4de897c6a4662f8724506d95e332a4d5331682ab",
+      "bytes": 4839
+    },
+    {
+      "source": "research/SERENGETI_WITHIN_STATION_VERSUS_SPATIAL_MIX_V0_CONTRACT.json",
+      "target": "research/SERENGETI_WITHIN_STATION_VERSUS_SPATIAL_MIX_V0_CONTRACT.json",
+      "blob_sha": "78ffc01b8511ac79a8d0cfd7521b59112da45dc4",
+      "bytes": 5642
+    },
+    {
+      "source": "research/SOLAR_AZIMUTH_24_SOURCE_MULTI_POPULATION_ERA5_V0_CONTRACT.json",
+      "target": "research/SOLAR_AZIMUTH_24_SOURCE_MULTI_POPULATION_ERA5_V0_CONTRACT.json",
+      "blob_sha": "c7296a7316b2bf51eeeb30381fb5b7f1e94dd7e0",
+      "bytes": 7812
+    },
+    {
+      "source": "research/SOLAR_AZIMUTH_24_SOURCE_MULTI_POPULATION_ERA5_V0_FIRST_ALL_RESULTS_20261025.json",
+      "target": "research/SOLAR_AZIMUTH_24_SOURCE_MULTI_POPULATION_ERA5_V0_FIRST_ALL_RESULTS_20261025.json",
+      "blob_sha": "a7473137e627f5b10d5c0d63b4087d08b8529ddc",
+      "bytes": 205065
+    },
+    {
+      "source": "research/SOLAR_AZIMUTH_24_SOURCE_WEATHER_SOURCE_BLOCK_MACRO_FIRST_RESULT_20261025.json",
+      "target": "research/SOLAR_AZIMUTH_24_SOURCE_WEATHER_SOURCE_BLOCK_MACRO_FIRST_RESULT_20261025.json",
+      "blob_sha": "5f0e067b4f248068cf6d0741059c76d2e66909e2",
+      "bytes": 53965
+    },
+    {
+      "source": "research/SOLAR_AZIMUTH_24_SOURCE_WEATHER_STUDY_BLOCK_SYNTHESIS_V0_CONTRACT.json",
+      "target": "research/SOLAR_AZIMUTH_24_SOURCE_WEATHER_STUDY_BLOCK_SYNTHESIS_V0_CONTRACT.json",
+      "blob_sha": "6bb0817467a500e4edfefa830e03adbe17a213fe",
+      "bytes": 3390
+    },
+    {
+      "source": "research/solar_ecological_calendar_cross_source_20261025/ERA5_SOURCE_REPLAY_HOLD_20261025.json",
+      "target": "research/solar_ecological_calendar_cross_source_20261025/ERA5_SOURCE_REPLAY_HOLD_20261025.json",
+      "blob_sha": "43fc905ae60728cdcf7fcf0cb7c3bf38a6eb3462",
+      "bytes": 2819
+    },
+    {
+      "source": "research/solar_ecological_calendar_cross_source_20261025/provenance.json",
+      "target": "research/solar_ecological_calendar_cross_source_20261025/provenance.json",
+      "blob_sha": "eba3a1afe29994526249ba53598bbddfa1942716",
+      "bytes": 977
+    },
+    {
+      "source": "research/solar_ecological_calendar_cross_source_20261025/README.md",
+      "target": "research/solar_ecological_calendar_cross_source_20261025/README.md",
+      "blob_sha": "db57fd32239e7e699f084a2bd2defbfca9ee11f6",
+      "bytes": 7498
+    },
+    {
+      "source": "research/solar_ecological_calendar_cross_source_20261025/source_level_daily_climate_daylight.csv",
+      "target": "research/solar_ecological_calendar_cross_source_20261025/source_level_daily_climate_daylight.csv",
+      "blob_sha": "2d3ecef512c656992e6a9efa65c24132382409f6",
+      "bytes": 1621
+    },
+    {
+      "source": "research/solar_external_24_original_first_20261025/first_shard_0.json",
+      "target": "research/solar_external_24_original_first_20261025/first_shard_0.json",
+      "blob_sha": "66904b2791c6e3a83bf4df4c447c972f1a13aff8",
+      "bytes": 18751
+    },
+    {
+      "source": "research/solar_external_24_original_first_20261025/first_shard_1.json",
+      "target": "research/solar_external_24_original_first_20261025/first_shard_1.json",
+      "blob_sha": "f04509e2c6afc797f245af912e45c7c15f176604",
+      "bytes": 32472
+    },
+    {
+      "source": "research/solar_external_24_original_first_20261025/first_shard_2.json",
+      "target": "research/solar_external_24_original_first_20261025/first_shard_2.json",
+      "blob_sha": "006c8082b81e061c8cf998e68604d0282c6d1d41",
+      "bytes": 21798
+    },
+    {
+      "source": "research/solar_external_24_original_first_20261025/first_shard_3.json",
+      "target": "research/solar_external_24_original_first_20261025/first_shard_3.json",
+      "blob_sha": "d360939739db6f662d55b2616f8574ba1a2e6ab3",
+      "bytes": 43733
+    },
+    {
+      "source": "research/solar_external_24_original_first_20261025/first_shard_4.json",
+      "target": "research/solar_external_24_original_first_20261025/first_shard_4.json",
+      "blob_sha": "d42135a2cd64ef64b8c4847560e381132d2079f9",
+      "bytes": 28001
+    },
+    {
+      "source": "research/solar_external_24_original_first_20261025/first_shard_5.json",
+      "target": "research/solar_external_24_original_first_20261025/first_shard_5.json",
+      "blob_sha": "c5be8aa413fe22d8da9244def332bae4836af8ca",
+      "bytes": 51639
+    },
+    {
+      "source": "research/solar_global_equinoctial_pilot_20261019/era5_15_30_day_history_contract_v0.json",
+      "target": "research/solar_global_equinoctial_pilot_20261019/era5_15_30_day_history_contract_v0.json",
+      "blob_sha": "7e9a74b58ca6260765eb691c4cbcd4cd532271a0",
+      "bytes": 5960
+    },
+    {
+      "source": "research/solar_global_equinoctial_pilot_20261019/era5_northern_30day_six_original_batches_v0.json",
+      "target": "research/solar_global_equinoctial_pilot_20261019/era5_northern_30day_six_original_batches_v0.json",
+      "blob_sha": "4bd7d6c895ccc5ed26f589a82b7b7aaaab13ff78",
+      "bytes": 362881
+    },
+    {
+      "source": "research/solar_global_equinoctial_pilot_20261019/era5_northern_6batches_original_source.json",
+      "target": "research/solar_global_equinoctial_pilot_20261019/era5_northern_6batches_original_source.json",
+      "blob_sha": "192c429a712543ce7757c308c992598b5430031e",
+      "bytes": 78036
+    },
+    {
+      "source": "research/solar_global_equinoctial_pilot_20261019/era5_southern_30day_six_original_batches_v0.json",
+      "target": "research/solar_global_equinoctial_pilot_20261019/era5_southern_30day_six_original_batches_v0.json",
+      "blob_sha": "9a9562105f9f7a1725f8395d6587236909136cc4",
+      "bytes": 147698
+    },
+    {
+      "source": "research/solar_global_equinoctial_pilot_20261019/era5_southern_6batches_original_source.json",
+      "target": "research/solar_global_equinoctial_pilot_20261019/era5_southern_6batches_original_source.json",
+      "blob_sha": "b12a223d4a0677861ba7dc119ce00453c515fbef",
+      "bytes": 32728
+    },
+    {
+      "source": "research/solar_global_equinoctial_pilot_20261019/original_21_land_grid_sites.csv",
+      "target": "research/solar_global_equinoctial_pilot_20261019/original_21_land_grid_sites.csv",
+      "blob_sha": "91bec54438339b7c82d28005a1c6aaaf97ec43b5",
+      "bytes": 879
+    },
+    {
+      "source": "research/solar_global_equinoctial_pilot_20261019/original_local_protocol_20261019.json",
+      "target": "research/solar_global_equinoctial_pilot_20261019/original_local_protocol_20261019.json",
+      "blob_sha": "157d5da34b2ee1bcf5d1250166cad4c14892bc29",
+      "bytes": 2724
+    },
+    {
+      "source": "research/SOLAR_IRRADIANCE_DIRECTION_MACRO_GRADIENT_V0_CONTRACT.json",
+      "target": "research/SOLAR_IRRADIANCE_DIRECTION_MACRO_GRADIENT_V0_CONTRACT.json",
+      "blob_sha": "2e691395f6f3eb6a059ae0bb005be626e54f8154",
+      "bytes": 3263
+    },
+    {
+      "source": "research/SOLAR_RADIATION_EXTERNAL_24_ORIGINAL_SOURCE_V0_CONTRACT.json",
+      "target": "research/SOLAR_RADIATION_EXTERNAL_24_ORIGINAL_SOURCE_V0_CONTRACT.json",
+      "blob_sha": "e510428e5f2744ea8ddf0f04af03df68a166f96c",
+      "bytes": 10823
+    },
+    {
+      "source": "research/SOLAR_RADIATION_EXTERNAL_24_PROVIDER_FROZEN_SOURCE_MANIFEST_20261025.json",
+      "target": "research/SOLAR_RADIATION_EXTERNAL_24_PROVIDER_FROZEN_SOURCE_MANIFEST_20261025.json",
+      "blob_sha": "af23d1447fda98eca89cbd60d55d689aa03aa742",
+      "bytes": 25513
+    },
+    {
+      "source": "research/SOLAR_RADIATION_EXTERNAL_24_SOURCE_FIRST_ALL_RESULTS_20261025.json",
+      "target": "research/SOLAR_RADIATION_EXTERNAL_24_SOURCE_FIRST_ALL_RESULTS_20261025.json",
+      "blob_sha": "fe48a1c6fb39f894236ae43764400995fb1348a4",
+      "bytes": 193453
+    },
+    {
+      "source": "research/SOLAR_RADIATION_EXTERNAL_24_STUDY_SIGNED_TEST_FIRST_RESULT_20261025.json",
+      "target": "research/SOLAR_RADIATION_EXTERNAL_24_STUDY_SIGNED_TEST_FIRST_RESULT_20261025.json",
+      "blob_sha": "d76018c809c1725bf8b4d0df5c3ea2416bf38523",
+      "bytes": 16201
+    },
+    {
+      "source": "research/SOLAR_RADIATION_TWO_24_SOURCE_NONREPLICATION_DIAGNOSTIC_FIRST_RESULT_20261025.json",
+      "target": "research/SOLAR_RADIATION_TWO_24_SOURCE_NONREPLICATION_DIAGNOSTIC_FIRST_RESULT_20261025.json",
+      "blob_sha": "0523b3dd8581fe6b5f9ee3f08bdcbb28ce57fd69",
+      "bytes": 33253
+    },
+    {
+      "source": "research/SOLAR_RADIATION_TWO_24_SOURCE_NONREPLICATION_DIAGNOSTIC_V0_CONTRACT.json",
+      "target": "research/SOLAR_RADIATION_TWO_24_SOURCE_NONREPLICATION_DIAGNOSTIC_V0_CONTRACT.json",
+      "blob_sha": "dbbc1b36753effc1b6aaa231240c26a82cde4fdf",
+      "bytes": 6183
+    },
+    {
+      "source": "research/SOLAR_SEASON_MACROCLIMATE_PILOT_20261019.json",
+      "target": "research/SOLAR_SEASON_MACROCLIMATE_PILOT_20261019.json",
+      "blob_sha": "1bfa66189ec08afde939b950ab40156d4e09038b",
+      "bytes": 6068
+    },
+    {
+      "source": "research/solar_seasonal_hysteresis_source_feasibility_v0.json",
+      "target": "research/solar_seasonal_hysteresis_source_feasibility_v0.json",
+      "blob_sha": "58a7ce404f2ecdd95142f8ef46a29d01f95ef664",
+      "bytes": 23640
+    },
+    {
+      "source": "research/solar_weather_population_24_source_20261025/first_original_source_shard_0.json",
+      "target": "research/solar_weather_population_24_source_20261025/first_original_source_shard_0.json",
+      "blob_sha": "920b163e1cf33affa92a7feecc513c23578fd3dd",
+      "bytes": 40986
+    },
+    {
+      "source": "research/solar_weather_population_24_source_20261025/first_original_source_shard_1.json",
+      "target": "research/solar_weather_population_24_source_20261025/first_original_source_shard_1.json",
+      "blob_sha": "357a2b041b1f0d927d0c98c4ca9c8c260e9f4883",
+      "bytes": 30140
+    },
+    {
+      "source": "research/solar_weather_population_24_source_20261025/first_original_source_shard_2.json",
+      "target": "research/solar_weather_population_24_source_20261025/first_original_source_shard_2.json",
+      "blob_sha": "55aa751b8fd836873180d12f0359e50d33de5569",
+      "bytes": 27313
+    },
+    {
+      "source": "research/solar_weather_population_24_source_20261025/first_original_source_shard_3.json",
+      "target": "research/solar_weather_population_24_source_20261025/first_original_source_shard_3.json",
+      "blob_sha": "bbd76bf42892bd4ce96a017c61936ffad2ab6021",
+      "bytes": 23303
+    },
+    {
+      "source": "research/solar_weather_population_24_source_20261025/first_original_source_shard_4.json",
+      "target": "research/solar_weather_population_24_source_20261025/first_original_source_shard_4.json",
+      "blob_sha": "ecccbcc00ff4436338af07fd8deb5b59dc5ef238",
+      "bytes": 25566
+    },
+    {
+      "source": "research/solar_weather_population_24_source_20261025/first_original_source_shard_5.json",
+      "target": "research/solar_weather_population_24_source_20261025/first_original_source_shard_5.json",
+      "blob_sha": "82e369c16029b94e12d95322aabb5b803747ead0",
+      "bytes": 61378
+    },
+    {
+      "source": "research/SOLAR_WIND_IRRADIANCE_FOUR_PAIR_ORIGINAL_GPS_ERA5_V0_MATRIX_20261025.csv",
+      "target": "research/SOLAR_WIND_IRRADIANCE_FOUR_PAIR_ORIGINAL_GPS_ERA5_V0_MATRIX_20261025.csv",
+      "blob_sha": "b4e5a1084d5e6c48d2dd032607ed2b828fd673e5",
+      "bytes": 1608
+    },
+    {
+      "source": "research/SOLAR_WIND_IRRADIANCE_GEESE_FIRST_ORIGINAL_ERA5_RESULT_20261025.json",
+      "target": "research/SOLAR_WIND_IRRADIANCE_GEESE_FIRST_ORIGINAL_ERA5_RESULT_20261025.json",
+      "blob_sha": "ece3ade5480cd234b3176aa01e029c5af0224437",
+      "bytes": 12562
+    },
+    {
+      "source": "research/SOLAR_WIND_IRRADIANCE_SHARED_GPS_V0_CONTRACT.json",
+      "target": "research/SOLAR_WIND_IRRADIANCE_SHARED_GPS_V0_CONTRACT.json",
+      "blob_sha": "2c76061f5b4c4db1ec5b96837c9fcc7158ceb8aa",
+      "bytes": 6369
+    },
+    {
+      "source": "research/SOLAR_WIND_IRRADIANCE_V0_COMBINED_FIRST_RESULT_SUMMARY_20261025.json",
+      "target": "research/SOLAR_WIND_IRRADIANCE_V0_COMBINED_FIRST_RESULT_SUMMARY_20261025.json",
+      "blob_sha": "127be2450ee311ace1178ed3aaa1502753ad222c",
+      "bytes": 4699
+    },
+    {
+      "source": "research/SOLAR_WIND_IRRADIANCE_VULTURE_FIRST_ORIGINAL_ERA5_RESULT_20261025.json",
+      "target": "research/SOLAR_WIND_IRRADIANCE_VULTURE_FIRST_ORIGINAL_ERA5_RESULT_20261025.json",
+      "blob_sha": "f0b6ca9cffed68e5ec1bd2f648eaf053cfe766ff",
+      "bytes": 6143
+    },
+    {
+      "source": "research/utah_four_taxa_diel_20261019/era5_calendar_adjusted_associations.csv",
+      "target": "research/utah_four_taxa_diel_20261019/era5_calendar_adjusted_associations.csv",
+      "blob_sha": "8bb484df30a94e13e70bbfc136ff73bc4423844d",
+      "bytes": 4002
+    },
+    {
+      "source": "research/utah_four_taxa_diel_20261019/era5_calendar_adjusted_README.md",
+      "target": "research/utah_four_taxa_diel_20261019/era5_calendar_adjusted_README.md",
+      "blob_sha": "25bb322e39657d0931ba5868737d785e56e89fa8",
+      "bytes": 7002
+    },
+    {
+      "source": "research/utah_four_taxa_diel_20261019/era5_marginal_climate_associations.csv",
+      "target": "research/utah_four_taxa_diel_20261019/era5_marginal_climate_associations.csv",
+      "blob_sha": "f07a804605cfcc1c1c2262eb3a00d7b0fac6e944",
+      "bytes": 1591
+    },
+    {
+      "source": "research/utah_four_taxa_diel_20261019/era5_marginal_ecology_README.md",
+      "target": "research/utah_four_taxa_diel_20261019/era5_marginal_ecology_README.md",
+      "blob_sha": "7b422f1b2465c36ac47e1c454ac7341d946cfd1f",
+      "bytes": 5084
+    },
+    {
+      "source": "research/utah_four_taxa_diel_20261019/provenance.json",
+      "target": "research/utah_four_taxa_diel_20261019/provenance.json",
+      "blob_sha": "c4b661237da21391c1fd6ea8f9a21fe8b9197786",
+      "bytes": 1915
+    },
+    {
+      "source": "research/utah_four_taxa_diel_20261019/README.md",
+      "target": "research/utah_four_taxa_diel_20261019/README.md",
+      "blob_sha": "448b776ae2bb4b4703ef5b8d0b12568588efe4cb",
+      "bytes": 9124
+    },
+    {
+      "source": "research/utah_four_taxa_diel_20261019/shared_gridmonth_species_contrasts.csv",
+      "target": "research/utah_four_taxa_diel_20261019/shared_gridmonth_species_contrasts.csv",
+      "blob_sha": "3c586f04565e5ea03344b115b539b715fdc41f6f",
+      "bytes": 647
+    },
+    {
+      "source": "research/utah_four_taxa_diel_20261019/spatial_block_day_night_components.csv",
+      "target": "research/utah_four_taxa_diel_20261019/spatial_block_day_night_components.csv",
+      "blob_sha": "5a0f8c21fcf4af19fa9b822581051ee8160ed13d",
+      "bytes": 1869
+    },
+    {
+      "source": "research/utah_four_taxa_diel_20261019/taxon_daylength_summary.csv",
+      "target": "research/utah_four_taxa_diel_20261019/taxon_daylength_summary.csv",
+      "blob_sha": "10bfb0f75d49161272fb52efa07169e24965d870",
+      "bytes": 1281
+    },
+    {
+      "source": "research/UTAH_FOUR_TAXON_DAILY_CLIMATE_DAYLIGHT_V1_20261023.json",
+      "target": "research/UTAH_FOUR_TAXON_DAILY_CLIMATE_DAYLIGHT_V1_20261023.json",
+      "blob_sha": "b62ffc022c416390282a16120c6a6234560ff211",
+      "bytes": 4804
+    },
+    {
+      "source": "research/WYOMING_DAILY_ERA5_DAYLIGHT_V1_20261023.json",
+      "target": "research/WYOMING_DAILY_ERA5_DAYLIGHT_V1_20261023.json",
+      "blob_sha": "5a282ab86faaecff4207ea0773519339c3265342",
+      "bytes": 4566
+    },
+    {
+      "source": "research/WYOMING_INDIVIDUAL_ERA5_DAYLIGHT_V0_20261023.json",
+      "target": "research/WYOMING_INDIVIDUAL_ERA5_DAYLIGHT_V0_20261023.json",
+      "blob_sha": "79b0d8615d0b21e5f9bf21bf36fafc2da38fcdc4",
+      "bytes": 5510
+    },
+    {
+      "source": "research/wyoming_two_ungulates_20261022/daily_ERA5_daylight_ecology_20261023.md",
+      "target": "research/wyoming_two_ungulates_20261022/daily_ERA5_daylight_ecology_20261023.md",
+      "blob_sha": "10dbd3fe25d06439804b0840cbc9f86e3c568c83",
+      "bytes": 5398
+    },
+    {
+      "source": "research/wyoming_two_ungulates_20261022/README.md",
+      "target": "research/wyoming_two_ungulates_20261022/README.md",
+      "blob_sha": "1e39d148c5e9b36433f0447dec89422b6267dbfa",
+      "bytes": 6811
+    },
+    {
+      "source": "research/wyoming_two_ungulates_20261022/two_source_mule_bighorn_diel_solar_comparison.csv",
+      "target": "research/wyoming_two_ungulates_20261022/two_source_mule_bighorn_diel_solar_comparison.csv",
+      "blob_sha": "761b95a591ac094b5d6c6713a36099e552ceb3cf",
+      "bytes": 944
+    },
+    {
+      "source": "research/wyoming_two_ungulates_20261022/wyoming_daily_era5_original_result.json",
+      "target": "research/wyoming_two_ungulates_20261022/wyoming_daily_era5_original_result.json",
+      "blob_sha": "104b2d62e6aacf7ccfc41d5a6d866832caaadab6",
+      "bytes": 5760
+    },
+    {
+      "source": "research/wyoming_two_ungulates_20261022/wyoming_individual_era5_daylight_associations.csv",
+      "target": "research/wyoming_two_ungulates_20261022/wyoming_individual_era5_daylight_associations.csv",
+      "blob_sha": "de2e6c2c675496dbde4134b9ecaa02643a06dfd8",
+      "bytes": 2662
+    },
+    {
+      "source": "research/wyoming_two_ungulates_20261022/wyoming_original_result.json",
+      "target": "research/wyoming_two_ungulates_20261022/wyoming_original_result.json",
+      "blob_sha": "b9428dd18f2556e1bed245894546d6399da045dc",
+      "bytes": 4400
+    },
+    {
+      "source": "scripts/analyze_fixed_21site_era5_15_30day_history_v0.py",
+      "target": "scripts/analyze_fixed_21site_era5_15_30day_history_v0.py",
+      "blob_sha": "24271b0d0731544d5130d75e0db306a04372c9a8",
+      "bytes": 15506
+    },
+    {
+      "source": "scripts/analyze_fixed_21site_global_equinoctial_era5_20261019.py",
+      "target": "scripts/analyze_fixed_21site_global_equinoctial_era5_20261019.py",
+      "blob_sha": "9404b60f06566877fed6f6af353d4821444cb09b",
+      "bytes": 9530
+    },
+    {
+      "source": "scripts/analyze_original_solar_radiation_two_cohorts_diagnostic_v0.py",
+      "target": "scripts/analyze_original_solar_radiation_two_cohorts_diagnostic_v0.py",
+      "blob_sha": "168ede9954e4a7608daa8fac971c071e12ce2624",
+      "bytes": 14127
+    },
+    {
+      "source": "scripts/analyze_solar_azimuth_24_source_weather_study_blocks_v0.py",
+      "target": "scripts/analyze_solar_azimuth_24_source_weather_study_blocks_v0.py",
+      "blob_sha": "7efc07ead7c7b9d7d7fa7f253ca89534ffbc38d7",
+      "bytes": 10440
+    },
+    {
+      "source": "scripts/analyze_solar_irradiance_direction_macro_gradient_v0.py",
+      "target": "scripts/analyze_solar_irradiance_direction_macro_gradient_v0.py",
+      "blob_sha": "4be8ed72dbb452eb6124f8865ec098c8a94f11ea",
+      "bytes": 13205
+    },
+    {
+      "source": "scripts/assess_serengeti_solstice_mirror_effort_v0.py",
+      "target": "scripts/assess_serengeti_solstice_mirror_effort_v0.py",
+      "blob_sha": "56ed368f4b409e6933ac3aaab813f4fe733813ba",
+      "bytes": 6343
+    },
+    {
+      "source": "scripts/audit_2025_seven_duck_gps_daylength_source_v0.py",
+      "target": "scripts/audit_2025_seven_duck_gps_daylength_source_v0.py",
+      "blob_sha": "e5b970870273ba3f572ba751a34bb11f6555cb98",
+      "bytes": 11026
+    },
+    {
+      "source": "scripts/audit_duck_gps_identifiability_20261019.py",
+      "target": "scripts/audit_duck_gps_identifiability_20261019.py",
+      "blob_sha": "6e7a6089f1c111e86ce75a6aeb7c39e0e5450a3b",
+      "bytes": 11471
+    },
+    {
+      "source": "scripts/audit_ireland_solar_daylength_recorded_v0.py",
+      "target": "scripts/audit_ireland_solar_daylength_recorded_v0.py",
+      "blob_sha": "9f8bacbe9a8140929c48bc210714c6044c8d3def",
+      "bytes": 10749
+    },
+    {
+      "source": "scripts/audit_kays_2020_seasonal_zip_schema_v0.py",
+      "target": "scripts/audit_kays_2020_seasonal_zip_schema_v0.py",
+      "blob_sha": "3d314971aa03adf329f2c392aabd268e0c2468f0",
+      "bytes": 7393
+    },
+    {
+      "source": "scripts/collect_movebank_seasonal_catalog.py",
+      "target": "scripts/collect_movebank_seasonal_catalog.py",
+      "blob_sha": "9221e2f91ada481c639813b7dbab1a24da07924d",
+      "bytes": 10584
+    },
+    {
+      "source": "scripts/duck_gps_reported_speed_two_part_20261019.py",
+      "target": "scripts/duck_gps_reported_speed_two_part_20261019.py",
+      "blob_sha": "8d3d7598804043d2b36a5a6433a0b83aa5c685c9",
+      "bytes": 9848
+    },
+    {
+      "source": "scripts/etosha_shared_climate_20261019.py",
+      "target": "scripts/etosha_shared_climate_20261019.py",
+      "blob_sha": "ccb044bfcbdc22fac738beeba89f7c987234357c",
+      "bytes": 6444
+    },
+    {
+      "source": "scripts/etosha_shared_years_gps_20261019.py",
+      "target": "scripts/etosha_shared_years_gps_20261019.py",
+      "blob_sha": "96e6716dae77d6b901a989edfba94ebb1516680c",
+      "bytes": 4467
+    },
+    {
+      "source": "scripts/etosha_yearly_ecology_20261019.py",
+      "target": "scripts/etosha_yearly_ecology_20261019.py",
+      "blob_sha": "22e6da9bb0894442e96df8c0d687f56f45a45164",
+      "bytes": 9672
+    },
+    {
+      "source": "scripts/evaluate_external_solar_radiation_24_source_study_blocks_v0.py",
+      "target": "scripts/evaluate_external_solar_radiation_24_source_study_blocks_v0.py",
+      "blob_sha": "daa95bb2a7383ed4f35fbf1770f24762afbeef66",
+      "bytes": 7433
+    },
+    {
+      "source": "scripts/global_solar_azimuth_12_new_original_events_v1.py",
+      "target": "scripts/global_solar_azimuth_12_new_original_events_v1.py",
+      "blob_sha": "f38aced7467e051ffab24ae7e1cc4fb49843c2b3",
+      "bytes": 12297
+    },
+    {
+      "source": "scripts/global_solar_azimuth_24_source_only_v2.py",
+      "target": "scripts/global_solar_azimuth_24_source_only_v2.py",
+      "blob_sha": "ccf62c851f0627c2b555bceb6b5654b32dc5735e",
+      "bytes": 4676
+    },
+    {
+      "source": "scripts/global_solar_azimuth_259_original_source_metadata_v0.py",
+      "target": "scripts/global_solar_azimuth_259_original_source_metadata_v0.py",
+      "blob_sha": "9b55692f27611d03524ff8c5af9a56521b0bec00",
+      "bytes": 5210
+    },
+    {
+      "source": "scripts/global_solar_azimuth_all259_original_headers_v0.py",
+      "target": "scripts/global_solar_azimuth_all259_original_headers_v0.py",
+      "blob_sha": "c2386e70751e86389a6a224da30d399836cf6926",
+      "bytes": 7409
+    },
+    {
+      "source": "scripts/global_solar_azimuth_multitaxon_shared_cells_v0.py",
+      "target": "scripts/global_solar_azimuth_multitaxon_shared_cells_v0.py",
+      "blob_sha": "a9effeb4c52c85e01c5cb7e5e56402f15b4a24b3",
+      "bytes": 8966
+    },
+    {
+      "source": "scripts/global_solar_azimuth_new_registry_sample_v1.py",
+      "target": "scripts/global_solar_azimuth_new_registry_sample_v1.py",
+      "blob_sha": "c2cbbc052a36601d6aa6870fab687edce1237b3c",
+      "bytes": 6887
+    },
+    {
+      "source": "scripts/global_solar_azimuth_new24_original_events_v2.py",
+      "target": "scripts/global_solar_azimuth_new24_original_events_v2.py",
+      "blob_sha": "f54d7e112f29c84d13a9955939fc6fda26ea1cd8",
+      "bytes": 3986
+    },
+    {
+      "source": "scripts/global_solar_azimuth_shared_cell_source_replay_v1.py",
+      "target": "scripts/global_solar_azimuth_shared_cell_source_replay_v1.py",
+      "blob_sha": "ea6e317014f24d138be5ad0b10497e122895c3a6",
+      "bytes": 3774
+    },
+    {
+      "source": "scripts/movebank_ecological_calendar_coupling_20261025.py",
+      "target": "scripts/movebank_ecological_calendar_coupling_20261025.py",
+      "blob_sha": "dcb9ec03de5dcaaaf977e4f32a3e32e9045068d6",
+      "bytes": 14398
+    },
+    {
+      "source": "scripts/movebank_elephant_hourly_20261019.py",
+      "target": "scripts/movebank_elephant_hourly_20261019.py",
+      "blob_sha": "8c712245860f9838b5a7e23d362623a19c604a39",
+      "bytes": 3767
+    },
+    {
+      "source": "scripts/movebank_elephant_zip_schema_20261019.py",
+      "target": "scripts/movebank_elephant_zip_schema_20261019.py",
+      "blob_sha": "146064e9377211c4f1794214be46c03303c14dac",
+      "bytes": 1863
+    },
+    {
+      "source": "scripts/movebank_extended_three_regional_era5_20261019.py",
+      "target": "scripts/movebank_extended_three_regional_era5_20261019.py",
+      "blob_sha": "8c7993f78847779fd911d10b6f9ff720929e4039",
+      "bytes": 9275
+    },
+    {
+      "source": "scripts/movebank_jackal_hourly_20261019.py",
+      "target": "scripts/movebank_jackal_hourly_20261019.py",
+      "blob_sha": "0946bfda363839255a63dceaeef4b525f34dfe79",
+      "bytes": 2407
+    },
+    {
+      "source": "scripts/movebank_kruger_elephant_source_20261019.py",
+      "target": "scripts/movebank_kruger_elephant_source_20261019.py",
+      "blob_sha": "bc9157db673b1d47ef3096e5752da2aae4584d42",
+      "bytes": 3416
+    },
+    {
+      "source": "scripts/movebank_kruger_thermal_solar_20261019.py",
+      "target": "scripts/movebank_kruger_thermal_solar_20261019.py",
+      "blob_sha": "5b05b9efc533771a6ed7f9cfe5f6f18944e303ba",
+      "bytes": 11112
+    },
+    {
+      "source": "scripts/movebank_native_ecology_20261019.py",
+      "target": "scripts/movebank_native_ecology_20261019.py",
+      "blob_sha": "243524a44d66b9aaf934ececcad5d070314dc724",
+      "bytes": 10943
+    },
+    {
+      "source": "scripts/movebank_regional_climate_link_20261019.py",
+      "target": "scripts/movebank_regional_climate_link_20261019.py",
+      "blob_sha": "d8309837214e024105129b81e2670d6b33699b99",
+      "bytes": 10630
+    },
+    {
+      "source": "scripts/movebank_solar_movement_20261019.py",
+      "target": "scripts/movebank_solar_movement_20261019.py",
+      "blob_sha": "7e02edd1e806a9adcdbc60b6a3943bca721d4145",
+      "bytes": 8146
+    },
+    {
+      "source": "scripts/movebank_solar_movement_extension_20261019.py",
+      "target": "scripts/movebank_solar_movement_extension_20261019.py",
+      "blob_sha": "fefcbb823c1713aaf06ea69bd4a9ef9fe5a1db41",
+      "bytes": 2515
+    },
+    {
+      "source": "scripts/movebank_southern_solar_mammal_20261019.py",
+      "target": "scripts/movebank_southern_solar_mammal_20261019.py",
+      "blob_sha": "ce7934e3aba686a55f4992eb16d7f0f9b693de60",
+      "bytes": 9904
+    },
+    {
+      "source": "scripts/movebank_utah_calendar_condition_20261022.py",
+      "target": "scripts/movebank_utah_calendar_condition_20261022.py",
+      "blob_sha": "0f964c9c393697ef1a5ce3b3909b8b05151593c0",
+      "bytes": 12059
+    },
+    {
+      "source": "scripts/movebank_utah_diel_photoperiod_20261019.py",
+      "target": "scripts/movebank_utah_diel_photoperiod_20261019.py",
+      "blob_sha": "95500d57e74d1ab463f0fec9b98b0daa26bdc371",
+      "bytes": 7195
+    },
+    {
+      "source": "scripts/movebank_utah_era5_climate_20261019.py",
+      "target": "scripts/movebank_utah_era5_climate_20261019.py",
+      "blob_sha": "2e59ea99e4f0c6da5ef8f13691b1312200278e85",
+      "bytes": 11276
+    },
+    {
+      "source": "scripts/movebank_utah_four_daily_climate_20261023.py",
+      "target": "scripts/movebank_utah_four_daily_climate_20261023.py",
+      "blob_sha": "d9264a2992f9c96a715073b19d2d7d8d656a5ca7",
+      "bytes": 5925
+    },
+    {
+      "source": "scripts/movebank_utah_four_taxa_solar_20261019.py",
+      "target": "scripts/movebank_utah_four_taxa_solar_20261019.py",
+      "blob_sha": "230227b47a2d105309c6a1c23d5daed6cafeb018",
+      "bytes": 7400
+    },
+    {
+      "source": "scripts/movebank_utah_shared_spatial_20261019.py",
+      "target": "scripts/movebank_utah_shared_spatial_20261019.py",
+      "blob_sha": "6c560097ccb6ccb7e44e8400c03afddee3c847c9",
+      "bytes": 9012
+    },
+    {
+      "source": "scripts/movebank_wyoming_daily_climate_20261023.py",
+      "target": "scripts/movebank_wyoming_daily_climate_20261023.py",
+      "blob_sha": "d9d886cb469fe8f69cb61ec7df7f4d00b03b08c0",
+      "bytes": 10382
+    },
+    {
+      "source": "scripts/movebank_wyoming_individual_era5_20261023.py",
+      "target": "scripts/movebank_wyoming_individual_era5_20261023.py",
+      "blob_sha": "d98b7c8aed8dd8cc603dd6516e44efc671008556",
+      "bytes": 11130
+    },
+    {
+      "source": "scripts/movebank_wyoming_two_ungulates_20261022.py",
+      "target": "scripts/movebank_wyoming_two_ungulates_20261022.py",
+      "blob_sha": "16464986f0ab817456e865a10ef66f7629bd22df",
+      "bytes": 7340
+    },
+    {
+      "source": "scripts/n2_bat_movebank_probe.py",
+      "target": "scripts/n2_bat_movebank_probe.py",
+      "blob_sha": "7039c8a66e0afc5d3ec4b535ce4eab950e1ddca6",
+      "bytes": 9320
+    },
+    {
+      "source": "scripts/preflight_masolele2026_wildebeest_gps_header_v0.py",
+      "target": "scripts/preflight_masolele2026_wildebeest_gps_header_v0.py",
+      "blob_sha": "7c15b529f52286bc0c34c3533cda6a34773db8db",
+      "bytes": 3529
+    },
+    {
+      "source": "scripts/preflight_solar_external_original_24_sources_v0.py",
+      "target": "scripts/preflight_solar_external_original_24_sources_v0.py",
+      "blob_sha": "8eb51da3017a7a8afabec920185d5a96f47904d6",
+      "bytes": 7514
+    },
+    {
+      "source": "scripts/probe_serengeti_mod13q1_ndvi_cog_v0.py",
+      "target": "scripts/probe_serengeti_mod13q1_ndvi_cog_v0.py",
+      "blob_sha": "ed80b67600f3cafd13b044f748e7264c902baab9",
+      "bytes": 7261
+    },
+    {
+      "source": "scripts/run_2025_seven_duck_gps_solar_matched_speed_v0.py",
+      "target": "scripts/run_2025_seven_duck_gps_solar_matched_speed_v0.py",
+      "blob_sha": "bd583f6cfb8aa1c053cc7615de38e5374d8a66f6",
+      "bytes": 14161
+    },
+    {
+      "source": "scripts/run_global_solar_azimuth_macro_v0.py",
+      "target": "scripts/run_global_solar_azimuth_macro_v0.py",
+      "blob_sha": "03e07a1e14cd87b9b29ccc087405d50a4ead81bb",
+      "bytes": 11265
+    },
+    {
+      "source": "scripts/run_global_solar_azimuth_southern_v0.py",
+      "target": "scripts/run_global_solar_azimuth_southern_v0.py",
+      "blob_sha": "3164664b9b302b4bf38574d6e517429842f76c6c",
+      "bytes": 6614
+    },
+    {
+      "source": "scripts/run_n2_serengeti_temporal_partition.py",
+      "target": "scripts/run_n2_serengeti_temporal_partition.py",
+      "blob_sha": "a1fd02062a2269728d4bbea120932411e88f533b",
+      "bytes": 15313
+    },
+    {
+      "source": "scripts/run_serengeti_camera_ndvi_photo_assoc_v0.py",
+      "target": "scripts/run_serengeti_camera_ndvi_photo_assoc_v0.py",
+      "blob_sha": "b8203259c94052b8c1ca366ea0f7997e53ff8f3e",
+      "bytes": 16060
+    },
+    {
+      "source": "scripts/run_serengeti_era5_environment_v0.py",
+      "target": "scripts/run_serengeti_era5_environment_v0.py",
+      "blob_sha": "2e4ecf119804ff5818a00eb28f26d0e518d461cd",
+      "bytes": 8593
+    },
+    {
+      "source": "scripts/run_serengeti_modis_relative_greenness_photo_v0.py",
+      "target": "scripts/run_serengeti_modis_relative_greenness_photo_v0.py",
+      "blob_sha": "48ff3941ff2fa7b12f85fc02ceeef3b5233c2870",
+      "bytes": 16831
+    },
+    {
+      "source": "scripts/run_serengeti_photo_site_timing_mix_v0.py",
+      "target": "scripts/run_serengeti_photo_site_timing_mix_v0.py",
+      "blob_sha": "b76bca19f4266c358797edce530726935a3c8ad2",
+      "bytes": 11534
+    },
+    {
+      "source": "scripts/run_serengeti_photo_weather_cycle_alignment_v0.py",
+      "target": "scripts/run_serengeti_photo_weather_cycle_alignment_v0.py",
+      "blob_sha": "75d1c058346f76cd05516a66b6a300532cff61af",
+      "bytes": 12192
+    },
+    {
+      "source": "scripts/run_serengeti_regional_modis_container_token_v1.py",
+      "target": "scripts/run_serengeti_regional_modis_container_token_v1.py",
+      "blob_sha": "28a68becc5d94d62849e25f1e62ebf517c8090f9",
+      "bytes": 6555
+    },
+    {
+      "source": "scripts/run_serengeti_regional_ndvi_mirror_2010_2013_v0.py",
+      "target": "scripts/run_serengeti_regional_ndvi_mirror_2010_2013_v0.py",
+      "blob_sha": "79aed75b38503e61d695566772b22c3941a85a0d",
+      "bytes": 10562
+    },
+    {
+      "source": "scripts/run_serengeti_same_station_trophic_photo_time_v0.py",
+      "target": "scripts/run_serengeti_same_station_trophic_photo_time_v0.py",
+      "blob_sha": "a6acd81867a45aed56eb012024a9bab416bd743f",
+      "bytes": 10360
+    },
+    {
+      "source": "scripts/run_serengeti_source_recorded_solar_season_v0.py",
+      "target": "scripts/run_serengeti_source_recorded_solar_season_v0.py",
+      "blob_sha": "80c1b2f98e1d16b0d9c978462b072349f499a623",
+      "bytes": 15054
+    },
+    {
+      "source": "scripts/run_solar_azimuth_24_source_population_weather_v0.py",
+      "target": "scripts/run_solar_azimuth_24_source_population_weather_v0.py",
+      "blob_sha": "0e24d62cae64c7193479296775f458c60cb153f0",
+      "bytes": 19462
+    },
+    {
+      "source": "scripts/run_solar_radiation_external_24_sources_v0.py",
+      "target": "scripts/run_solar_radiation_external_24_sources_v0.py",
+      "blob_sha": "52fe47515d9f48f4e185ac3fa46d1af03570376e",
+      "bytes": 10832
+    },
+    {
+      "source": "scripts/run_solar_wind_irradiance_shared_gps_v0.py",
+      "target": "scripts/run_solar_wind_irradiance_shared_gps_v0.py",
+      "blob_sha": "39348e818dc68aed5f0478acaad984ef60544bff",
+      "bytes": 15956
+    },
+    {
+      "source": "scripts/solar_azimuth_era5_wind_v0.py",
+      "target": "scripts/solar_azimuth_era5_wind_v0.py",
+      "blob_sha": "1c4c00efc78bcc8d233027161e56ba2df2362812",
+      "bytes": 5463
+    },
+    {
+      "source": "scripts/solar_azimuth_macro_v0.py",
+      "target": "scripts/solar_azimuth_macro_v0.py",
+      "blob_sha": "99e7c1d7163d9a5abc1946a21fec38c8bd2d2e33",
+      "bytes": 10438
+    },
+    {
+      "source": "scripts/solar_season_macroclimate_20261019.py",
+      "target": "scripts/solar_season_macroclimate_20261019.py",
+      "blob_sha": "d1ae08b04dfe3467f62a497163ce12154af0bc03",
+      "bytes": 14052
+    },
+    {
+      "source": "scripts/utah_multispecies_source_schema_20261019.py",
+      "target": "scripts/utah_multispecies_source_schema_20261019.py",
+      "blob_sha": "16f2eed14a89a52e76b9c357212b33e9e332296f",
+      "bytes": 1665
+    },
+    {
+      "source": "scripts/validate_n2_serengeti_terminal_result.py",
+      "target": "scripts/validate_n2_serengeti_terminal_result.py",
+      "blob_sha": "da26553b849a8435b699e4f5603d55ccefb8eea3",
+      "bytes": 2401
+    },
+    {
+      "source": "tests/test_2025_seven_duck_gps_solar_speed_v0.py",
+      "target": "tests/test_2025_seven_duck_gps_solar_speed_v0.py",
+      "blob_sha": "2c4f2ecc4f6987a891f949c87a02544420251f67",
+      "bytes": 3610
+    },
+    {
+      "source": "tests/test_2025_seven_duck_gps_source_v0.py",
+      "target": "tests/test_2025_seven_duck_gps_source_v0.py",
+      "blob_sha": "a8e28822e3d0e4e2d62a560f1588154bebb13b89",
+      "bytes": 3009
+    },
+    {
+      "source": "tests/test_duck_gps_identifiability_audit_20261019.py",
+      "target": "tests/test_duck_gps_identifiability_audit_20261019.py",
+      "blob_sha": "67e8a9fcf96a093f52bb8590592d203f94ad07c6",
+      "bytes": 1848
+    },
+    {
+      "source": "tests/test_duck_gps_reported_speed_two_part_20261019.py",
+      "target": "tests/test_duck_gps_reported_speed_two_part_20261019.py",
+      "blob_sha": "46a479c2e5b65c4ecf78f7d1915e00f4f52e7c0f",
+      "bytes": 2432
+    },
+    {
+      "source": "tests/test_fixed_21site_era5_15_30day_history_v0.py",
+      "target": "tests/test_fixed_21site_era5_15_30day_history_v0.py",
+      "blob_sha": "84d289a2d0e5e827f096074677478cb040a1448d",
+      "bytes": 4994
+    },
+    {
+      "source": "tests/test_fixed_21site_global_equinoctial_era5_20261019.py",
+      "target": "tests/test_fixed_21site_global_equinoctial_era5_20261019.py",
+      "blob_sha": "c4f95f177a5a14733bcbe421877ff1d5526c7f4e",
+      "bytes": 3573
+    },
+    {
+      "source": "tests/test_global_solar_azimuth_24_source_only_v2.py",
+      "target": "tests/test_global_solar_azimuth_24_source_only_v2.py",
+      "blob_sha": "1d920b4a87673a07bd56f04f96230d34e7dfabe2",
+      "bytes": 2023
+    },
+    {
+      "source": "tests/test_global_solar_azimuth_all259_original_headers_v0.py",
+      "target": "tests/test_global_solar_azimuth_all259_original_headers_v0.py",
+      "blob_sha": "c9a645773b5b78290aa335b654bbe051dfda90b8",
+      "bytes": 3401
+    },
+    {
+      "source": "tests/test_global_solar_azimuth_macro_v0.py",
+      "target": "tests/test_global_solar_azimuth_macro_v0.py",
+      "blob_sha": "d3a7790f7d46cc6b0165ee0b7a1f69cb67c6c216",
+      "bytes": 5904
+    },
+    {
+      "source": "tests/test_global_solar_azimuth_multitaxon_shared_cells_v0.py",
+      "target": "tests/test_global_solar_azimuth_multitaxon_shared_cells_v0.py",
+      "blob_sha": "2455f4d8e2fce6854ff99707a26e0cf1dc943484",
+      "bytes": 2839
+    },
+    {
+      "source": "tests/test_global_solar_azimuth_new_original_events_v1.py",
+      "target": "tests/test_global_solar_azimuth_new_original_events_v1.py",
+      "blob_sha": "b14ed14c3e9cd9c5478f03476090183f98446b77",
+      "bytes": 3855
+    },
+    {
+      "source": "tests/test_global_solar_azimuth_new_registry_sample_v1.py",
+      "target": "tests/test_global_solar_azimuth_new_registry_sample_v1.py",
+      "blob_sha": "fa764f918fcaaa524a09f3f35393fe08a46187e2",
+      "bytes": 2963
+    },
+    {
+      "source": "tests/test_global_solar_azimuth_new24_original_events_v2.py",
+      "target": "tests/test_global_solar_azimuth_new24_original_events_v2.py",
+      "blob_sha": "9e92d18421c59f3e69befab319ace77df976725b",
+      "bytes": 2104
+    },
+    {
+      "source": "tests/test_global_solar_azimuth_original_source_metadata_v0.py",
+      "target": "tests/test_global_solar_azimuth_original_source_metadata_v0.py",
+      "blob_sha": "e92f178a06a4e48aaf9233384d65ecb156f66950",
+      "bytes": 2271
+    },
+    {
+      "source": "tests/test_global_solar_azimuth_shared_cell_source_replay_v1.py",
+      "target": "tests/test_global_solar_azimuth_shared_cell_source_replay_v1.py",
+      "blob_sha": "054402d2f64ecff99476c8d09ffba634df089ee0",
+      "bytes": 1662
+    },
+    {
+      "source": "tests/test_global_solar_azimuth_southern_v0.py",
+      "target": "tests/test_global_solar_azimuth_southern_v0.py",
+      "blob_sha": "b8c536625707e1fbcb61a3831965a8c27ea94701",
+      "bytes": 1814
+    },
+    {
+      "source": "tests/test_ireland_solar_photo_record_v0.py",
+      "target": "tests/test_ireland_solar_photo_record_v0.py",
+      "blob_sha": "5d66ca65802059adb6465f2fd7732ebc74dc6f99",
+      "bytes": 2100
+    },
+    {
+      "source": "tests/test_movebank_ecological_calendar_coupling_20261025.py",
+      "target": "tests/test_movebank_ecological_calendar_coupling_20261025.py",
+      "blob_sha": "a8f774a961cc5ea757b1ed49159aae110902226a",
+      "bytes": 2160
+    },
+    {
+      "source": "tests/test_movebank_elephant_hourly_20261019.py",
+      "target": "tests/test_movebank_elephant_hourly_20261019.py",
+      "blob_sha": "d212d2163873174cb76560237f3e1d5ad8151ff0",
+      "bytes": 1415
+    },
+    {
+      "source": "tests/test_movebank_jackal_hourly_20261019.py",
+      "target": "tests/test_movebank_jackal_hourly_20261019.py",
+      "blob_sha": "c9336769deddf4daa8000eb9c31cf1b73f9d3ea0",
+      "bytes": 823
+    },
+    {
+      "source": "tests/test_movebank_kruger_elephant_source_20261019.py",
+      "target": "tests/test_movebank_kruger_elephant_source_20261019.py",
+      "blob_sha": "d52eecb29c01a636269be17b20c650549e9ef2dc",
+      "bytes": 1667
+    },
+    {
+      "source": "tests/test_movebank_kruger_thermal_solar_20261019.py",
+      "target": "tests/test_movebank_kruger_thermal_solar_20261019.py",
+      "blob_sha": "29a9dc06044b7d1cec8b14d16cc3a9ea43e60ee5",
+      "bytes": 1544
+    },
+    {
+      "source": "tests/test_movebank_native_ecology_20261019.py",
+      "target": "tests/test_movebank_native_ecology_20261019.py",
+      "blob_sha": "e9ed19c5d42685ec67c2ddf3450913aa63671cec",
+      "bytes": 3214
+    },
+    {
+      "source": "tests/test_movebank_regional_climate_link_20261019.py",
+      "target": "tests/test_movebank_regional_climate_link_20261019.py",
+      "blob_sha": "986d8dfa12e2dde399b9f602db13db0c093b4f80",
+      "bytes": 1614
+    },
+    {
+      "source": "tests/test_movebank_seasonal_catalog.py",
+      "target": "tests/test_movebank_seasonal_catalog.py",
+      "blob_sha": "f02402c65e5a51233006bf5c46f7249c78e7907c",
+      "bytes": 7232
+    },
+    {
+      "source": "tests/test_movebank_solar_movement_20261019.py",
+      "target": "tests/test_movebank_solar_movement_20261019.py",
+      "blob_sha": "1a069bf2fb913e52124db1a12166d7f305efe892",
+      "bytes": 1062
+    },
+    {
+      "source": "tests/test_movebank_southern_solar_mammal_20261019.py",
+      "target": "tests/test_movebank_southern_solar_mammal_20261019.py",
+      "blob_sha": "c0f872aea0f4b3e4839e3ef744e2ac1adba20281",
+      "bytes": 3828
+    },
+    {
+      "source": "tests/test_movebank_utah_calendar_condition_20261022.py",
+      "target": "tests/test_movebank_utah_calendar_condition_20261022.py",
+      "blob_sha": "d6aad7ae91d297c8cac48f9413a57308cba71299",
+      "bytes": 2632
+    },
+    {
+      "source": "tests/test_movebank_utah_diel_photoperiod_20261019.py",
+      "target": "tests/test_movebank_utah_diel_photoperiod_20261019.py",
+      "blob_sha": "ca14a443c54626a98eb61b8d0cbfe95a983a0f44",
+      "bytes": 1287
+    },
+    {
+      "source": "tests/test_movebank_utah_era5_climate_20261019.py",
+      "target": "tests/test_movebank_utah_era5_climate_20261019.py",
+      "blob_sha": "9b8e046c42621bf32c98ad483618c735ef4007d5",
+      "bytes": 2028
+    },
+    {
+      "source": "tests/test_movebank_utah_four_daily_climate_20261023.py",
+      "target": "tests/test_movebank_utah_four_daily_climate_20261023.py",
+      "blob_sha": "65377d3d175480ba030f6d124afe892421d65962",
+      "bytes": 1658
+    },
+    {
+      "source": "tests/test_movebank_utah_four_taxa_solar_20261019.py",
+      "target": "tests/test_movebank_utah_four_taxa_solar_20261019.py",
+      "blob_sha": "4fb95f1ede95359bd4f1ee57433b6b7ca8f29038",
+      "bytes": 2820
+    },
+    {
+      "source": "tests/test_movebank_utah_shared_spatial_20261019.py",
+      "target": "tests/test_movebank_utah_shared_spatial_20261019.py",
+      "blob_sha": "71b59474e4adb7bab9422a06988ef24b415f905d",
+      "bytes": 2177
+    },
+    {
+      "source": "tests/test_movebank_wyoming_daily_climate_20261023.py",
+      "target": "tests/test_movebank_wyoming_daily_climate_20261023.py",
+      "blob_sha": "59ee2f19eaa87845538ada94963d24243a771443",
+      "bytes": 2377
+    },
+    {
+      "source": "tests/test_movebank_wyoming_individual_era5_20261023.py",
+      "target": "tests/test_movebank_wyoming_individual_era5_20261023.py",
+      "blob_sha": "cdcab2bdf889e523e037abe956d7d6560370b6da",
+      "bytes": 2821
+    },
+    {
+      "source": "tests/test_movebank_wyoming_two_ungulates_20261022.py",
+      "target": "tests/test_movebank_wyoming_two_ungulates_20261022.py",
+      "blob_sha": "548267286e31aeb9198a6bcdaf076881e7833329",
+      "bytes": 3083
+    },
+    {
+      "source": "tests/test_n2_bat_movebank_probe.py",
+      "target": "tests/test_n2_bat_movebank_probe.py",
+      "blob_sha": "0311523a613b5832960b76a6796646e8201e0f14",
+      "bytes": 5569
+    },
+    {
+      "source": "tests/test_serengeti_camera_ndvi_photo_assoc_v0.py",
+      "target": "tests/test_serengeti_camera_ndvi_photo_assoc_v0.py",
+      "blob_sha": "98fb2d02ab61e0a893d7cad6db16f47cad1b177a",
+      "bytes": 3356
+    },
+    {
+      "source": "tests/test_serengeti_crossfit_equivalence.py",
+      "target": "tests/test_serengeti_crossfit_equivalence.py",
+      "blob_sha": "138ae524b1a636c06832220f3437f9e7c60f31ab",
+      "bytes": 2888
+    },
+    {
+      "source": "tests/test_serengeti_era5_environment_v0.py",
+      "target": "tests/test_serengeti_era5_environment_v0.py",
+      "blob_sha": "cf40b359838c2c950c2409983324830a35ded445",
+      "bytes": 2818
+    },
+    {
+      "source": "tests/test_serengeti_mod13q1_ndvi_source_probe_v0.py",
+      "target": "tests/test_serengeti_mod13q1_ndvi_source_probe_v0.py",
+      "blob_sha": "1ee77f8fc6d2c01d12e6ceaf6e53b2e59a66e0c8",
+      "bytes": 3344
+    },
+    {
+      "source": "tests/test_serengeti_modis_container_token_v1.py",
+      "target": "tests/test_serengeti_modis_container_token_v1.py",
+      "blob_sha": "6c63c9b3d1882d57ce0cac1b58f6b7ed7d616869",
+      "bytes": 2309
+    },
+    {
+      "source": "tests/test_serengeti_modis_relative_greenness_v0.py",
+      "target": "tests/test_serengeti_modis_relative_greenness_v0.py",
+      "blob_sha": "beeb4d3d4d30640c64ea2859fc85b94b4cb03859",
+      "bytes": 3397
+    },
+    {
+      "source": "tests/test_serengeti_photo_era5_cycle_alignment_v0.py",
+      "target": "tests/test_serengeti_photo_era5_cycle_alignment_v0.py",
+      "blob_sha": "5d5ee20e3017ae424468027faf04f5ae0064d732",
+      "bytes": 3142
+    },
+    {
+      "source": "tests/test_serengeti_photo_site_timing_mix_v0.py",
+      "target": "tests/test_serengeti_photo_site_timing_mix_v0.py",
+      "blob_sha": "350d7fb2fce07e478c52001718501482516e2b81",
+      "bytes": 4074
+    },
+    {
+      "source": "tests/test_serengeti_post_terminal_runner_repair.py",
+      "target": "tests/test_serengeti_post_terminal_runner_repair.py",
+      "blob_sha": "59532c7eb132a64888f40410c439a48556956266",
+      "bytes": 1869
+    },
+    {
+      "source": "tests/test_serengeti_receipt_cli.py",
+      "target": "tests/test_serengeti_receipt_cli.py",
+      "blob_sha": "e0f18a2917702cb7534263da3c1caa4095f7bdef",
+      "bytes": 3102
+    },
+    {
+      "source": "tests/test_serengeti_recovery_attempt2.py",
+      "target": "tests/test_serengeti_recovery_attempt2.py",
+      "blob_sha": "ec27a641c8f9e4f87d7daec0da47760ea6372ca1",
+      "bytes": 1210
+    },
+    {
+      "source": "tests/test_serengeti_regional_modis_mirror_v0.py",
+      "target": "tests/test_serengeti_regional_modis_mirror_v0.py",
+      "blob_sha": "12848e972bc389deef57377c6ab6e5773675ff9f",
+      "bytes": 4430
+    },
+    {
+      "source": "tests/test_serengeti_same_station_trophic_photo_time_v0.py",
+      "target": "tests/test_serengeti_same_station_trophic_photo_time_v0.py",
+      "blob_sha": "1882d4e024dffb9788066b415051e70f09170612",
+      "bytes": 3952
+    },
+    {
+      "source": "tests/test_serengeti_solstice_mirror_effort_v0.py",
+      "target": "tests/test_serengeti_solstice_mirror_effort_v0.py",
+      "blob_sha": "2522ee70f6022e332257ec006e0b68f3e23ca33b",
+      "bytes": 1583
+    },
+    {
+      "source": "tests/test_serengeti_source_recorded_solar_season_v0.py",
+      "target": "tests/test_serengeti_source_recorded_solar_season_v0.py",
+      "blob_sha": "e38f8c3ab8cdb80de56bb3f30db3e3aeb5577728",
+      "bytes": 3177
+    },
+    {
+      "source": "tests/test_serengeti_technical_recovery_contract.py",
+      "target": "tests/test_serengeti_technical_recovery_contract.py",
+      "blob_sha": "04f8af5e4781b123b976ba179f3cab4a8a3fb297",
+      "bytes": 3040
+    },
+    {
+      "source": "tests/test_serengeti_temporal_partition_script.py",
+      "target": "tests/test_serengeti_temporal_partition_script.py",
+      "blob_sha": "c981ec8c24174467c754e92a430c51e81cd0f0ee",
+      "bytes": 2479
+    },
+    {
+      "source": "tests/test_serengeti_terminal_closeout_contract.py",
+      "target": "tests/test_serengeti_terminal_closeout_contract.py",
+      "blob_sha": "20dfb78a3624d730defbb6527b25722bc5a3b3d1",
+      "bytes": 1814
+    },
+    {
+      "source": "tests/test_serengeti_terminal_record.py",
+      "target": "tests/test_serengeti_terminal_record.py",
+      "blob_sha": "05c3b914a3c93ae17acf463029aa13dd2201ee21",
+      "bytes": 4578
+    },
+    {
+      "source": "tests/test_serengeti_terminal.py",
+      "target": "tests/test_serengeti_terminal.py",
+      "blob_sha": "1fbcdf878e880fc4a3324adcc2bb91fb065d8801",
+      "bytes": 7082
+    },
+    {
+      "source": "tests/test_solar_azimuth_24_source_population_weather_v0.py",
+      "target": "tests/test_solar_azimuth_24_source_population_weather_v0.py",
+      "blob_sha": "d778d28305580c61fe4baf7861e97391942d03f0",
+      "bytes": 6371
+    },
+    {
+      "source": "tests/test_solar_azimuth_weather_study_blocks_v0.py",
+      "target": "tests/test_solar_azimuth_weather_study_blocks_v0.py",
+      "blob_sha": "d4fcb873bee4a9760d86a9789461450813aa3d85",
+      "bytes": 4702
+    },
+    {
+      "source": "tests/test_solar_external_original_24_source_preflight_v0.py",
+      "target": "tests/test_solar_external_original_24_source_preflight_v0.py",
+      "blob_sha": "ebc9689ea1c25d7b706fe8555436a050363267a6",
+      "bytes": 1920
+    },
+    {
+      "source": "tests/test_solar_irradiance_direction_macro_gradient_v0.py",
+      "target": "tests/test_solar_irradiance_direction_macro_gradient_v0.py",
+      "blob_sha": "ccb8f4526bcf98e2e4a2c2aa6dcbbbbe02c4fe35",
+      "bytes": 5060
+    },
+    {
+      "source": "tests/test_solar_radiation_external_24_sources_v0.py",
+      "target": "tests/test_solar_radiation_external_24_sources_v0.py",
+      "blob_sha": "cf8fce8ad645aeb4390d0e6ff71c57957f4c07e4",
+      "bytes": 3836
+    },
+    {
+      "source": "tests/test_solar_radiation_external_24_study_block_decision_v0.py",
+      "target": "tests/test_solar_radiation_external_24_study_block_decision_v0.py",
+      "blob_sha": "ed24dcb114dd1a4d432ab70282a4ad6c60e64a28",
+      "bytes": 3697
+    },
+    {
+      "source": "tests/test_solar_radiation_two_24_cohort_diagnostic_v0.py",
+      "target": "tests/test_solar_radiation_two_24_cohort_diagnostic_v0.py",
+      "blob_sha": "8b349a0b391f0ea51e37d9b7cfcabecd8064b63a",
+      "bytes": 4430
+    },
+    {
+      "source": "tests/test_solar_season_macroclimate_20261019.py",
+      "target": "tests/test_solar_season_macroclimate_20261019.py",
+      "blob_sha": "04a0b54eb98c7eb3b1f8ca26915e88b777da12da",
+      "bytes": 3323
+    },
+    {
+      "source": "tests/test_solar_seasonal_hysteresis_source_audit_v0.py",
+      "target": "tests/test_solar_seasonal_hysteresis_source_audit_v0.py",
+      "blob_sha": "d81c100afd4cc69e0339776ac8d51f2fb2313d45",
+      "bytes": 5044
+    },
+    {
+      "source": "tests/test_solar_wind_irradiance_shared_gps_v0.py",
+      "target": "tests/test_solar_wind_irradiance_shared_gps_v0.py",
+      "blob_sha": "ea00efa9bf110caed9344d5a03766d89b5081433",
+      "bytes": 5554
+    }
+  ],
+  "nontransferred_binary": [
+    "research/seasonal_database_catalog/2026-10-19/movebank/raw_pages.tar.gz (raw retrieved catalogue pages; materialized semantic catalogue csv/json and provider manifest are transferred)"
+  ],
+  "data_policy": "Original tagged animal raw GPS is not transferred or republished; retained source-derived summaries and provider source manifests only",
+  "identity_check": "Each transferred target Git blob must equal the source blob SHA listed here; if any mismatch or missing file, migration is not complete",
+  "historical_workflows": "Original ODSP GitHub Actions workflows moved under archive/odsp_workflows, not active RSDS workflows"
+}
