@@ -1,0 +1,59 @@
+name: RSDS original tagged GPS time and Sun-heading ecological interpretation v2
+on:
+  push:
+    branches:
+      - science/same-tag-geometry-time-v2
+    paths:
+      - 'scripts/summarize_rsds_same_tag_gps_geometry_v2.py'
+      - 'tests/test_rsds_same_tag_gps_geometry_ecology_synthesis_v2.py'
+      - '.github/workflows/rsds-geometry-v2-ecology-synthesis.yml'
+      - 'docs/RSDS_SAME_TAG_GPS_GEOMETRY_ECOLOGY_20261026.md'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  confirm_original_source_claims:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/same-tag-geometry-time-v2
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install minimal legacy original GPS numerical dependencies
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Reverify 390 original ODSP domain files and negative source outcome
+        run: python -m scripts.verify_rsds_migration
+      - name: Validate frozen GPS-only first results and full original six-taxonomy frame
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_same_tag_gps_geometry_v2.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_same_tag_gps_geometry_aggregate_v2.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_same_tag_gps_geometry_ecology_synthesis_v2.py' -v
+      - name: Recompute descriptive original GPS q and Sun-relative direction contrasts
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.summarize_rsds_same_tag_gps_geometry_v2 --out research/RSDS_SAME_TAG_GPS_GEOMETRY_V2_ECOLOGY_SYNTHESIS_20261026.json
+          python -m json.tool research/RSDS_SAME_TAG_GPS_GEOMETRY_V2_ECOLOGY_SYNTHESIS_20261026.json > /dev/null
+      - name: Retain source-study level ecological summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-gps-time-direction-geometry-ecology-synthesis-v2
+          path: research/RSDS_SAME_TAG_GPS_GEOMETRY_V2_ECOLOGY_SYNTHESIS_20261026.json
+          if-no-files-found: error
+      - name: Commit audit-grade ecological interpretation, do not rewrite first source output
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_SAME_TAG_GPS_GEOMETRY_V2_ECOLOGY_SYNTHESIS_20261026.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: preserve original 2-study 6-taxon same-tag GPS geometry interpretation"
+            git push origin HEAD:science/same-tag-geometry-time-v2
+          fi
