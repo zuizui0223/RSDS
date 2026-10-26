@@ -1,0 +1,184 @@
+{
+  "version": "RSDS_NEW_SIX_ORIGINAL_GPS_FILE_METADATA_V0",
+  "freeze_date": "2026-10-26",
+  "fixed_source_studies": 6,
+  "source_metadata_admissible": 5,
+  "source_metadata_HOLD": 1,
+  "original_animal_GPS_rows_read_by_preflight": 0,
+  "source_entries": [
+    {
+      "package_uuid": "dd064947-25b7-46a2-8976-adfc488750bc",
+      "original_dois": [
+        "10.5441/001/1.671"
+      ],
+      "source_study_ids": [
+        "5852420130"
+      ],
+      "original_species_labels": [
+        "Meleagris gallopavo"
+      ],
+      "original_licenses": [
+        "CC0 1.0 Universal"
+      ],
+      "registry_reported_animals": 339,
+      "registry_reported_locations": 796409,
+      "source_recruitment_region_hint": "southeastern United States",
+      "locomotor_guild_hint": "terrestrial bird",
+      "animal_event_rows_opened_by_this_preflight": 0,
+      "source_metadata_status": "ORIGINAL_FILE_METADATA_ADMISSIBLE",
+      "original_file": {
+        "bitstream_uuid": "acbbe8b9-418b-491a-83b3-6daa7672a99d",
+        "filename": "GPS tracking of wild turkeys in the southeastern US.csv",
+        "bytes": 127814839,
+        "checksum": {
+          "checkSumAlgorithm": "MD5",
+          "value": "69dc67ecb93dcda369492394d705557c"
+        }
+      }
+    },
+    {
+      "package_uuid": "ed70c4c7-6017-45c1-90b7-5fff24ea7d85",
+      "original_dois": [
+        "10.5441/001/1.323"
+      ],
+      "source_study_ids": [
+        "5175345606"
+      ],
+      "original_species_labels": [
+        "Lynx rufus"
+      ],
+      "original_licenses": [
+        "CC0 1.0 Universal"
+      ],
+      "registry_reported_animals": 38,
+      "registry_reported_locations": 647712,
+      "source_recruitment_region_hint": "central California",
+      "locomotor_guild_hint": "terrestrial carnivore",
+      "animal_event_rows_opened_by_this_preflight": 0,
+      "source_metadata_status": "ORIGINAL_FILE_METADATA_ADMISSIBLE",
+      "original_file": {
+        "bitstream_uuid": "cc9dacfb-a862-4bfe-a37f-196e44aa882b",
+        "filename": "Bobcat habitat connectivity study in central California-gps.csv",
+        "bytes": 158850785,
+        "checksum": {
+          "checkSumAlgorithm": "MD5",
+          "value": "1c509cca3383a7c26c7457c838fe3a8a"
+        }
+      }
+    },
+    {
+      "package_uuid": "86f58f48-90be-4241-b895-6af3e7952dde",
+      "original_dois": [
+        "10.5441/001/1.304"
+      ],
+      "source_study_ids": [
+        "3179890710"
+      ],
+      "original_species_labels": [
+        "Vulpes vulpes"
+      ],
+      "original_licenses": [
+        "CC0 1.0 Universal"
+      ],
+      "registry_reported_animals": 35,
+      "registry_reported_locations": 146072,
+      "source_recruitment_region_hint": "United Kingdom",
+      "locomotor_guild_hint": "terrestrial carnivore",
+      "animal_event_rows_opened_by_this_preflight": 0,
+      "source_metadata_status": "ORIGINAL_FILE_METADATA_ADMISSIBLE",
+      "original_file": {
+        "bitstream_uuid": "47d876a1-a81a-4cd7-8c5e-809ccd56195a",
+        "filename": "Red Fox (Vulpes vulpes) in UK wet grasslands.csv",
+        "bytes": 31767499,
+        "checksum": {
+          "checkSumAlgorithm": "MD5",
+          "value": "5a997cd23c18f8cc9435636b5376b3ec"
+        }
+      }
+    },
+    {
+      "package_uuid": "bc7febf2-d956-409b-944a-0764ae558a51",
+      "original_dois": [
+        "10.5441/001/1.644"
+      ],
+      "source_study_ids": [
+        "2728151646"
+      ],
+      "original_species_labels": [
+        "Prionailurus viverrinus"
+      ],
+      "original_licenses": [
+        "CC0 1.0 Universal"
+      ],
+      "registry_reported_animals": 13,
+      "registry_reported_locations": 56939,
+      "source_recruitment_region_hint": "Thailand",
+      "locomotor_guild_hint": "terrestrial semi-aquatic carnivore",
+      "animal_event_rows_opened_by_this_preflight": 0,
+      "source_metadata_status": "ORIGINAL_FILE_METADATA_ADMISSIBLE",
+      "original_file": {
+        "bitstream_uuid": "72848cb5-606f-4350-8e70-0ed4c9e89624",
+        "filename": "Fishing cat (Prionairulus viverrinus) study in Khao Sam Roi Yot, Thailand-gps.csv",
+        "bytes": 16873978,
+        "checksum": {
+          "checkSumAlgorithm": "MD5",
+          "value": "ba02babf7cc626d71e5cab16f10ba4e7"
+        }
+      }
+    },
+    {
+      "package_uuid": "f577908f-52ae-46a1-986a-1862336cee91",
+      "original_dois": [
+        "10.5441/001/1.641"
+      ],
+      "source_study_ids": [
+        "247850178"
+      ],
+      "original_species_labels": [
+        "Ardea alba"
+      ],
+      "original_licenses": [
+        "CC0 1.0 Universal"
+      ],
+      "registry_reported_animals": 22,
+      "registry_reported_locations": 1707886,
+      "source_recruitment_region_hint": "California",
+      "locomotor_guild_hint": "wading bird",
+      "animal_event_rows_opened_by_this_preflight": 0,
+      "source_metadata_status": "SOURCE_METADATA_HOLD",
+      "original_file": null,
+      "metadata_hold_reason": "ORIGINAL_FILE_ABSENT_OR_OVER_FROZEN_200MB_BUDGET"
+    },
+    {
+      "package_uuid": "bea69b8a-f800-4e74-adc9-04a3ffa12823",
+      "original_dois": [
+        "10.5441/001/1.740"
+      ],
+      "source_study_ids": [
+        "5502199539"
+      ],
+      "original_species_labels": [
+        "Phascolarctos cinereus"
+      ],
+      "original_licenses": [
+        "Attribution 4.0 International"
+      ],
+      "registry_reported_animals": 44,
+      "registry_reported_locations": 163653,
+      "source_recruitment_region_hint": "Australia",
+      "locomotor_guild_hint": "arboreal marsupial",
+      "animal_event_rows_opened_by_this_preflight": 0,
+      "source_metadata_status": "ORIGINAL_FILE_METADATA_ADMISSIBLE",
+      "original_file": {
+        "bitstream_uuid": "4eb0d813-19ba-47b4-87ad-5600d8dda7bd",
+        "filename": "Translocate or manage onsite_ Similar welfare outcomes for koalas during plantation harvest.csv",
+        "bytes": 35409291,
+        "checksum": {
+          "checkSumAlgorithm": "MD5",
+          "value": "e4b7618dcbe2ab7ab2e08f25cb43b3c9"
+        }
+      }
+    }
+  ],
+  "no_source_replacement_or_effect_selection": true
+}
