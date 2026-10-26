@@ -87,6 +87,19 @@ RSDSの既存2原Movebank調査（Utah/Wyoming 6分類群行）を、**新たな
 
 [原8研究の計算可能JSON](../research/RSDS_8_STUDY_TIME_SOLAR_HEADING_MACRO_ATLAS_V1_20261026.json) ／ [生態学的な詳細](RSDS_EIGHT_STUDY_TEMPORAL_DIRECTION_MACROECOLOGY_20261026.md) ／ [英語論文の骨組み](../manuscript/RSDS_EIGHT_STUDY_TIME_SOLAR_MOVEMENT_MACROECOLOGY_v1_20261026.md) ／ [固定原ソース台帳](../research/RSDS_NEW_SIX_ORIGINAL_GPS_SOURCE_METADATA_V0_20261026.json)。
 
+## I. 生態学の一般性は推論単位で変わる：原研究均等と分類群行均等の感度（2026-10-26）
+
+8原GPS調査の12 study×taxon行には、Utahの4分類群とWyomingの2分類群が含まれる。これらを12の独立世界標本として平均してはいけないため、**元研究内の分類群を均等平均してから、研究DOIに1票ずつ重みを付ける**事後感度解析をRSDSで実行した。
+
+- q=log1p(NIGHTの元GPS最短移動速度)−log1p(DAYの元GPS最短移動速度)の元study×taxon行均等平均は **+0.00480**（11推定可能行）。
+- 元の研究DOIを独立単位にした原study均等平均は **+0.03464**（7推定可能研究、ダイサギ1源ファイルHOLD）。元研究ごとに平均したq符号は**正4・負3**。元study均等の記述的study bootstrap95%区間は**−0.03414〜+0.10346**でゼロを含み、全球平均の因果推定や優勢な夜行性という結論ではない。
+- 同じstudy均等のq~日長平均傾きは−0.00705/h（study bootstrap−0.02238〜+0.00528）、太陽相対生cos平均−0.00357（study bootstrap−0.01449〜+0.00769）。これらの区間もゼロを含む。
+- 旧6分類群のjoint circular covarianceはタグ個体bootstrapが未保存の**点推定のみ**であることを保持し、追加のソース抽出ブートストラップ区間を元タグの不確実性に読み替えない。
+
+**結論:** 生物の時間利用に関する「全体平均」は生態学的な独立単位の設定で大きく変化し、観測原GPS点や元study内の分類群数で重みづけされた見かけの普遍性に注意が必要。8研究が無作為世界標本であるとも、種内の原因・環境要因を識別できたとも言えない。
+
+[新しい固定JSON](../research/RSDS_EIGHT_STUDY_SOURCE_EQUAL_MACRO_SENSITIVITY_FIRST_RESULT_20261026.json) ／ [source-equal計算](../scripts/source_equal_rsds_eight_study_temporal_solar_v1.py) ／ [解釈](RSDS_EIGHT_STUDY_SOURCE_EQUAL_MACRO_SENSITIVITY_20261026.md)。
+
 ## 再現可能性と論文発展
 
 - [全球太陽方向の研究草稿v2](../manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_v2_20261025.md)
