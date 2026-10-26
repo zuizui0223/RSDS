@@ -65,7 +65,7 @@ def summarize_axis(studies, var, i):
     grouped = []
     frame = []
     for source in studies:
-        vals = [row[var]["mean"] for row in source["original_native_taxa"]
+        vals = [row[VARIABLES[var]]["mean"] for row in source["original_native_taxa"]
                 if row[var]["mean"] is not None]
         if len(vals) != source["original_taxa_supported_per_axis"][var]:
             raise ValueError("Source supported/unknown effect count changed")
