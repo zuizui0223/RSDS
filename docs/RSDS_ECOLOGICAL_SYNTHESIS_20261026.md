@@ -60,6 +60,19 @@ RSDSでUtah DOI 10.5441/001/1.711とWyoming DOI 10.5441/001/1.703の学名・元
 
 [元Utah/Wyoming 2ソース・6分類群の全FIRST結果](../research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_FIRST_RESULTS_20261026.json) ／ [元個体重複を調整した6群比較と欠測・逆符号](../research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_ECOLOGICAL_SYNTHESIS_20261026.json) ／ [計測法と結果](RSDS_SAME_ANIMAL_SOLAR_IRRADIANCE_MOVEMENT_PROTOCOL_20261026.md) ／ [新しい英語論文草稿](../manuscript/RSDS_SAME_ANIMAL_IRRADIANCE_TIME_DIRECTION_v0_20261026.md)。
 
+## G. 同じ標識個体で時間と方向のコンテキスト差を分離（原GPS・気象なし、2026-10-26）
+
+ERA5原JSON再取得の**12/12バージョン不一致**で止まった放射×個体内差とは**別ルート**として、Utah（4分類群）・Wyoming（2分類群）の公表元Movebank GPSを再度MD5・元のq／日長係数まで検証し、**同じ元タグ個体が再観測された2つのGPS観測コンテキスト**を比較した。元GPSの適格日・元タグ重複数が最大になるように2つの1°×年コンテキストを選び、方位の正負や気象値によって選択していない。
+
+- **2原調査・6調査×分類群・延べ269元タグペア**ですべて比較成立。ただし2つの独立地域研究であり、269の独立集団／生態系ではない。
+- 観測GPS夜−昼ログ最短変位速度差qの同一タグコンテキスト差は、**5/6群**の元タグbootstrap95%区間がゼロを含まない（正2、負3）。Utahの4分類群内でもq差の符号が異なった。Wyomingミュールジカは未確定。
+- 太陽相対移動の生cos(B−A)差は**2/6群**で区間がゼロを含まない。一方、元移動地理方位と太陽方位の**marginal組成差**もその2群で区間がゼロを含まない。**方向×太陽方位のjoint covariance差は6/6群で元タグbootstrap区間がゼロを含む。** この結果は、生の太陽方向変化を太陽コンパス応答と直接同一視できないことを明示する。joint効果が厳密なゼロという同等性証明ではない。
+- 同じ種のビッグホーンでは、qの順位2−順位1差がUtah −0.02979、Wyoming −0.01120と両調査で負だった。ただし順位は**元GPS個体と日数の支持順位**であり、日射量・季節・温度などの共通の増加勾配ではないため、同じ環境応答が外部再現したことを意味しない。
+
+**解釈の上限：** qは実活動時間の割合ではなく観測GPS最短移動速度の夜−昼差。qの昼夜ステップと太陽相対方位の昼間ステップは、同じ元タグ・元適格日を使うが、必ずしも**同一GPS区間・同一微小生息環境**にはならない。すべて事後的な探索的区間であり多重比較未補正、元研究2件から世界共通の種系統パラメータは推論できない。旧48原日射研究の外部負方向再現不成立とERA5 JSON版差による12コンテキストのHOLDはいずれも変更しない。
+
+[詳細な生態学的考察](RSDS_SAME_TAG_GPS_GEOMETRY_ECOLOGY_20261026.md) ／ [元GPSの実測結果](../research/RSDS_SAME_TAG_GPS_GEOMETRY_V2_FIRST_RESULT_20261026.json) ／ [SHA固定の新解釈データ](../research/RSDS_SAME_TAG_GPS_GEOMETRY_V2_ECOLOGY_SYNTHESIS_20261026.json) ／ [英語論文草稿](../manuscript/RSDS_SAME_TAG_GPS_TEMPORAL_SOLAR_GEOMETRY_v2_20261026.md)。
+
 ## 再現可能性と論文発展
 
 - [全球太陽方向の研究草稿v2](../manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_v2_20261025.md)
