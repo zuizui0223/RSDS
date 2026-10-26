@@ -1,0 +1,823 @@
+{
+  "date": "2026-10-26",
+  "each_axis_nominal_tag_bootstrap95_classification_counts": {
+    "apparent_solar_hour": {
+      "INCLUDES_ZERO": 1,
+      "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL": 5
+    },
+    "daylength_hours": {
+      "INCLUDES_ZERO": 3,
+      "NEGATIVE_UNADJUSTED_SOURCE_TAG_INTERVAL": 1,
+      "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL": 2
+    },
+    "geographic_marginal": {
+      "INCLUDES_ZERO": 4,
+      "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL": 2
+    },
+    "joint_circular": {
+      "INCLUDES_ZERO": 6
+    },
+    "q": {
+      "INCLUDES_ZERO": 1,
+      "NEGATIVE_UNADJUSTED_SOURCE_TAG_INTERVAL": 3,
+      "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL": 2
+    },
+    "sun_altitude": {
+      "INCLUDES_ZERO": 2,
+      "NEGATIVE_UNADJUSTED_SOURCE_TAG_INTERVAL": 2,
+      "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL": 2
+    },
+    "sun_cos": {
+      "INCLUDES_ZERO": 4,
+      "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL": 2
+    },
+    "sun_sin": {
+      "INCLUDES_ZERO": 3,
+      "NEGATIVE_UNADJUSTED_SOURCE_TAG_INTERVAL": 1,
+      "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL": 2
+    }
+  },
+  "earlier_weather_response_comparison_supported_taxa": 0,
+  "earlier_weather_version_holds_preserved": 12,
+  "interpretation_ceiling": [
+    "New paired original GPS ecological responses involve exactly the same tagged animal in two coverage-selected field-site/year contexts, not experimental adaptation or photic treatment.",
+    "Day/night q is log1p observed nighttime GPS displacement minus daytime GPS displacement, not total nocturnal activity share, duration or time budget.",
+    "An original animal with q-qualified nights is paired with SUN-QUALIFIED DAYTIME directional steps on eligible days; individual-night vs daylight heading responses need not be the same GPS steps.",
+    "Original q on qualified day covers all valid source-day intervals, possibly outside the single one-degree geographic grid used to qualify daytime direction segments; site specificity is not perfect.",
+    "Raw cosine Sun-relative bearing has an exact geographic heading marginal plus joint circular component decomposition; a nonsignificant joint coefficient DOES NOT mean the geographic marginal caused all raw variation.",
+    "All nominal original tag-resampled 95 percent intervals cover separate source/taxon/axes without multiple comparison adjustment or source/biome population sampling confidence.",
+    "The two source-context ranks reflect original GPS q-day and shared tag support, not chronological order, temperature, radiation exposure level, or randomized ecological treatment.",
+    "The old 12 ERA5 source JSON SHA replay holds are unchanged; no new weather measurement has entered this GPS-only analysis.",
+    "The original separately preregistered 48-study solar-radiation negative-direction replication failure remains untouched.",
+    "No precise original animal identities, raw GPS coordinates, exact dates/times or individual measurements have been published."
+  ],
+  "old_external_shortwave_nonreplication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "original_source_data_git_blobs_checked": {
+    "research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_FIRST_RESULTS_20261026.json": "d8d84ca3583cc26ff373fd929f3f98156ca9b0cb",
+    "research/RSDS_SAME_TAG_CONTEXT_PAIR_V1_FIRST_RESULT_20261026.json": "60f30797fd240e9b773777b2b53de943e5d8627c",
+    "research/RSDS_SAME_TAG_GPS_GEOMETRY_V2_FIRST_RESULT_20261026.json": "1ec684797f0b7aae0ec441163e1bbeec48d3bd61"
+  },
+  "repeated_native_taxa_with_two_original_studies": [
+    {
+      "no_common_high_low_environmental_exposure_assigned": true,
+      "q_coverage_rank2_minus_rank1_in_each_original_study": {
+        "Utah": -0.011106288085716448,
+        "Utah_interval_classification": "NEGATIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+        "Wyoming": 0.0032894622387091717,
+        "Wyoming_interval_classification": "INCLUDES_ZERO"
+      },
+      "source_study_count": 2,
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "no_common_high_low_environmental_exposure_assigned": true,
+      "q_coverage_rank2_minus_rank1_in_each_original_study": {
+        "Utah": -0.02979419171930651,
+        "Utah_interval_classification": "NEGATIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+        "Wyoming": -0.011200213694510438,
+        "Wyoming_interval_classification": "NEGATIVE_UNADJUSTED_SOURCE_TAG_INTERVAL"
+      },
+      "source_study_count": 2,
+      "taxon": "Ovis canadensis"
+    }
+  ],
+  "source_taxon_ecological_results": [
+    {
+      "original_paired_tagged_animals": 33,
+      "q_coverage_selected_original_contexts": 2,
+      "region": "Utah",
+      "results": {
+        "apparent_solar_hour": {
+          "context2_minus_context1_mean": 0.08121784693735402,
+          "descriptive_tag_bootstrap95": [
+            0.04634831598230053,
+            0.1144285229141977
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 33,
+          "signed_tag_changes": {
+            "negative": 7,
+            "positive": 26
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "daylength_hours": {
+          "context2_minus_context1_mean": 0.055033985458909675,
+          "descriptive_tag_bootstrap95": [
+            -0.01438437440800838,
+            0.11613910356544666
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 33,
+          "signed_tag_changes": {
+            "negative": 12,
+            "positive": 21
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "geographic_marginal": {
+          "context2_minus_context1_mean": 0.021130202100640805,
+          "descriptive_tag_bootstrap95": [
+            0.004680749300464075,
+            0.03672618466192556
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 33,
+          "signed_tag_changes": {
+            "negative": 10,
+            "positive": 23
+          },
+          "within_same_tag_sign_flips": 16
+        },
+        "joint_circular": {
+          "context2_minus_context1_mean": 0.004183942196881277,
+          "descriptive_tag_bootstrap95": [
+            -0.007498416281881482,
+            0.015738554813366546
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 33,
+          "signed_tag_changes": {
+            "negative": 16,
+            "positive": 17
+          },
+          "within_same_tag_sign_flips": 13
+        },
+        "q": {
+          "context2_minus_context1_mean": 0.017483280233448473,
+          "descriptive_tag_bootstrap95": [
+            0.009217753142294692,
+            0.025496398737365412
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 33,
+          "signed_tag_changes": {
+            "negative": 9,
+            "positive": 24
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "sun_altitude": {
+          "context2_minus_context1_mean": 0.25683590756672114,
+          "descriptive_tag_bootstrap95": [
+            -0.14378967346833177,
+            0.6209026732411611
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 33,
+          "signed_tag_changes": {
+            "negative": 11,
+            "positive": 22
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "sun_cos": {
+          "context2_minus_context1_mean": 0.025314144297522084,
+          "descriptive_tag_bootstrap95": [
+            0.004670717858609988,
+            0.04471499234332743
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 33,
+          "signed_tag_changes": {
+            "negative": 11,
+            "positive": 22
+          },
+          "within_same_tag_sign_flips": 14
+        },
+        "sun_sin": {
+          "context2_minus_context1_mean": 0.053480475552539666,
+          "descriptive_tag_bootstrap95": [
+            0.029753418522166505,
+            0.07763345345656057
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 33,
+          "signed_tag_changes": {
+            "negative": 5,
+            "positive": 28
+          },
+          "within_same_tag_sign_flips": 15
+        }
+      },
+      "same_tag_rank_rho_delta_q_vs_delta_joint_solar_circular": 0.12533422459893048,
+      "same_tag_rank_rho_delta_q_vs_delta_raw_sun_cos": 0.07185828877005347,
+      "taxon": "Antilocapra americana"
+    },
+    {
+      "original_paired_tagged_animals": 50,
+      "q_coverage_selected_original_contexts": 2,
+      "region": "Utah",
+      "results": {
+        "apparent_solar_hour": {
+          "context2_minus_context1_mean": 0.09950896663187539,
+          "descriptive_tag_bootstrap95": [
+            0.01877623168571162,
+            0.18299315291324925
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 50,
+          "signed_tag_changes": {
+            "negative": 22,
+            "positive": 28
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "daylength_hours": {
+          "context2_minus_context1_mean": 0.3081919316010468,
+          "descriptive_tag_bootstrap95": [
+            0.17349375903413047,
+            0.47332587497736067
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 50,
+          "signed_tag_changes": {
+            "negative": 11,
+            "positive": 39
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "geographic_marginal": {
+          "context2_minus_context1_mean": -0.011173447842748565,
+          "descriptive_tag_bootstrap95": [
+            -0.030057315724481698,
+            0.007438442059182176
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 50,
+          "signed_tag_changes": {
+            "negative": 29,
+            "positive": 21
+          },
+          "within_same_tag_sign_flips": 22
+        },
+        "joint_circular": {
+          "context2_minus_context1_mean": 0.009400165435575935,
+          "descriptive_tag_bootstrap95": [
+            -0.013425171305983741,
+            0.029919376289327004
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 50,
+          "signed_tag_changes": {
+            "negative": 23,
+            "positive": 27
+          },
+          "within_same_tag_sign_flips": 6
+        },
+        "q": {
+          "context2_minus_context1_mean": 0.01318226731671587,
+          "descriptive_tag_bootstrap95": [
+            0.005256757873758821,
+            0.02131446279778307
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 50,
+          "signed_tag_changes": {
+            "negative": 17,
+            "positive": 33
+          },
+          "within_same_tag_sign_flips": 1
+        },
+        "sun_altitude": {
+          "context2_minus_context1_mean": 1.647909173324919,
+          "descriptive_tag_bootstrap95": [
+            0.9229220348799769,
+            2.422289520901051
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 50,
+          "signed_tag_changes": {
+            "negative": 9,
+            "positive": 41
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "sun_cos": {
+          "context2_minus_context1_mean": -0.0017732824071726308,
+          "descriptive_tag_bootstrap95": [
+            -0.03194197066488265,
+            0.028620882711697875
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 50,
+          "signed_tag_changes": {
+            "negative": 24,
+            "positive": 26
+          },
+          "within_same_tag_sign_flips": 9
+        },
+        "sun_sin": {
+          "context2_minus_context1_mean": -0.04270022416148721,
+          "descriptive_tag_bootstrap95": [
+            -0.07719983748256996,
+            -0.008327914477208704
+          ],
+          "interval_classification": "NEGATIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 50,
+          "signed_tag_changes": {
+            "negative": 35,
+            "positive": 15
+          },
+          "within_same_tag_sign_flips": 13
+        }
+      },
+      "same_tag_rank_rho_delta_q_vs_delta_joint_solar_circular": -0.27202881152460984,
+      "same_tag_rank_rho_delta_q_vs_delta_raw_sun_cos": -0.2686674669867947,
+      "taxon": "Cervus elaphus"
+    },
+    {
+      "original_paired_tagged_animals": 101,
+      "q_coverage_selected_original_contexts": 2,
+      "region": "Utah",
+      "results": {
+        "apparent_solar_hour": {
+          "context2_minus_context1_mean": -0.02763618408037583,
+          "descriptive_tag_bootstrap95": [
+            -0.09401895818677175,
+            0.03778289134686098
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 101,
+          "signed_tag_changes": {
+            "negative": 51,
+            "positive": 50
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "daylength_hours": {
+          "context2_minus_context1_mean": -0.18787288003989502,
+          "descriptive_tag_bootstrap95": [
+            -0.28450613490968046,
+            -0.09543083723642413
+          ],
+          "interval_classification": "NEGATIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 101,
+          "signed_tag_changes": {
+            "negative": 70,
+            "positive": 31
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "geographic_marginal": {
+          "context2_minus_context1_mean": 0.00787781250800514,
+          "descriptive_tag_bootstrap95": [
+            -0.007812051251154124,
+            0.025377656352387697
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 101,
+          "signed_tag_changes": {
+            "negative": 46,
+            "positive": 55
+          },
+          "within_same_tag_sign_flips": 36
+        },
+        "joint_circular": {
+          "context2_minus_context1_mean": 0.01586665460245523,
+          "descriptive_tag_bootstrap95": [
+            -0.007156869509995223,
+            0.039252983025665315
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 101,
+          "signed_tag_changes": {
+            "negative": 47,
+            "positive": 54
+          },
+          "within_same_tag_sign_flips": 35
+        },
+        "q": {
+          "context2_minus_context1_mean": -0.011106288085716448,
+          "descriptive_tag_bootstrap95": [
+            -0.019927084831885628,
+            -0.0028442397957514627
+          ],
+          "interval_classification": "NEGATIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 101,
+          "signed_tag_changes": {
+            "negative": 59,
+            "positive": 42
+          },
+          "within_same_tag_sign_flips": 12
+        },
+        "sun_altitude": {
+          "context2_minus_context1_mean": -1.7589233692073893,
+          "descriptive_tag_bootstrap95": [
+            -2.2787256292071123,
+            -1.2533832765270965
+          ],
+          "interval_classification": "NEGATIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 101,
+          "signed_tag_changes": {
+            "negative": 80,
+            "positive": 21
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "sun_cos": {
+          "context2_minus_context1_mean": 0.02374446711046037,
+          "descriptive_tag_bootstrap95": [
+            -0.00318484197491824,
+            0.05235358937571183
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 101,
+          "signed_tag_changes": {
+            "negative": 44,
+            "positive": 57
+          },
+          "within_same_tag_sign_flips": 24
+        },
+        "sun_sin": {
+          "context2_minus_context1_mean": 0.03666320837637737,
+          "descriptive_tag_bootstrap95": [
+            0.005041530981189828,
+            0.06725309934537949
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 101,
+          "signed_tag_changes": {
+            "negative": 42,
+            "positive": 59
+          },
+          "within_same_tag_sign_flips": 31
+        }
+      },
+      "same_tag_rank_rho_delta_q_vs_delta_joint_solar_circular": 0.05701256268236856,
+      "same_tag_rank_rho_delta_q_vs_delta_raw_sun_cos": -0.16211509676818153,
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "original_paired_tagged_animals": 27,
+      "q_coverage_selected_original_contexts": 2,
+      "region": "Utah",
+      "results": {
+        "apparent_solar_hour": {
+          "context2_minus_context1_mean": 0.07669814213789124,
+          "descriptive_tag_bootstrap95": [
+            0.013547934158000477,
+            0.14058235923176124
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 27,
+          "signed_tag_changes": {
+            "negative": 8,
+            "positive": 19
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "daylength_hours": {
+          "context2_minus_context1_mean": -0.16533071749342587,
+          "descriptive_tag_bootstrap95": [
+            -0.3508192260962418,
+            0.009309714488336228
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 27,
+          "signed_tag_changes": {
+            "negative": 18,
+            "positive": 9
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "geographic_marginal": {
+          "context2_minus_context1_mean": 0.03133322669773244,
+          "descriptive_tag_bootstrap95": [
+            0.005095267183656974,
+            0.05605864937128814
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 27,
+          "signed_tag_changes": {
+            "negative": 7,
+            "positive": 20
+          },
+          "within_same_tag_sign_flips": 12
+        },
+        "joint_circular": {
+          "context2_minus_context1_mean": 0.027166265884525795,
+          "descriptive_tag_bootstrap95": [
+            -0.00106688317500587,
+            0.05761693161497389
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 27,
+          "signed_tag_changes": {
+            "negative": 9,
+            "positive": 18
+          },
+          "within_same_tag_sign_flips": 12
+        },
+        "q": {
+          "context2_minus_context1_mean": -0.02979419171930651,
+          "descriptive_tag_bootstrap95": [
+            -0.044833697516382796,
+            -0.016307089216648467
+          ],
+          "interval_classification": "NEGATIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 27,
+          "signed_tag_changes": {
+            "negative": 23,
+            "positive": 4
+          },
+          "within_same_tag_sign_flips": 1
+        },
+        "sun_altitude": {
+          "context2_minus_context1_mean": -1.2876964240742879,
+          "descriptive_tag_bootstrap95": [
+            -2.442931703119668,
+            -0.022406059843970847
+          ],
+          "interval_classification": "NEGATIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 27,
+          "signed_tag_changes": {
+            "negative": 21,
+            "positive": 6
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "sun_cos": {
+          "context2_minus_context1_mean": 0.05849949258225824,
+          "descriptive_tag_bootstrap95": [
+            0.01766025564638064,
+            0.10047898935383524
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 27,
+          "signed_tag_changes": {
+            "negative": 8,
+            "positive": 19
+          },
+          "within_same_tag_sign_flips": 12
+        },
+        "sun_sin": {
+          "context2_minus_context1_mean": -0.029581409599501715,
+          "descriptive_tag_bootstrap95": [
+            -0.08586118905460365,
+            0.021619389890442365
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 27,
+          "signed_tag_changes": {
+            "negative": 12,
+            "positive": 15
+          },
+          "within_same_tag_sign_flips": 14
+        }
+      },
+      "same_tag_rank_rho_delta_q_vs_delta_joint_solar_circular": -0.051892551892551896,
+      "same_tag_rank_rho_delta_q_vs_delta_raw_sun_cos": -0.045177045177045176,
+      "taxon": "Ovis canadensis"
+    },
+    {
+      "original_paired_tagged_animals": 37,
+      "q_coverage_selected_original_contexts": 2,
+      "region": "Wyoming",
+      "results": {
+        "apparent_solar_hour": {
+          "context2_minus_context1_mean": 0.17911198951196422,
+          "descriptive_tag_bootstrap95": [
+            0.05389909245443714,
+            0.2915374881710167
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 37,
+          "signed_tag_changes": {
+            "negative": 9,
+            "positive": 28
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "daylength_hours": {
+          "context2_minus_context1_mean": 0.06424920882108355,
+          "descriptive_tag_bootstrap95": [
+            -0.1068179982954037,
+            0.2409839574452454
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 37,
+          "signed_tag_changes": {
+            "negative": 11,
+            "positive": 26
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "geographic_marginal": {
+          "context2_minus_context1_mean": 0.002111876089324791,
+          "descriptive_tag_bootstrap95": [
+            -0.0257362837931355,
+            0.030945559003707657
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 37,
+          "signed_tag_changes": {
+            "negative": 22,
+            "positive": 15
+          },
+          "within_same_tag_sign_flips": 7
+        },
+        "joint_circular": {
+          "context2_minus_context1_mean": 0.0012549518165889712,
+          "descriptive_tag_bootstrap95": [
+            -0.020214602618288273,
+            0.024095002811178375
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 37,
+          "signed_tag_changes": {
+            "negative": 21,
+            "positive": 16
+          },
+          "within_same_tag_sign_flips": 14
+        },
+        "q": {
+          "context2_minus_context1_mean": 0.0032894622387091717,
+          "descriptive_tag_bootstrap95": [
+            -0.002247610384600838,
+            0.009032062506552115
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 37,
+          "signed_tag_changes": {
+            "negative": 18,
+            "positive": 19
+          },
+          "within_same_tag_sign_flips": 11
+        },
+        "sun_altitude": {
+          "context2_minus_context1_mean": 0.7347758546234647,
+          "descriptive_tag_bootstrap95": [
+            -0.43469419612875326,
+            1.8987788673691202
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 37,
+          "signed_tag_changes": {
+            "negative": 14,
+            "positive": 23
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "sun_cos": {
+          "context2_minus_context1_mean": 0.0033668279059137613,
+          "descriptive_tag_bootstrap95": [
+            -0.03299572213130848,
+            0.04812332720615915
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 37,
+          "signed_tag_changes": {
+            "negative": 21,
+            "positive": 16
+          },
+          "within_same_tag_sign_flips": 11
+        },
+        "sun_sin": {
+          "context2_minus_context1_mean": 0.023220288360701166,
+          "descriptive_tag_bootstrap95": [
+            -0.014573072000855057,
+            0.059733880190989394
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 37,
+          "signed_tag_changes": {
+            "negative": 13,
+            "positive": 24
+          },
+          "within_same_tag_sign_flips": 12
+        }
+      },
+      "same_tag_rank_rho_delta_q_vs_delta_joint_solar_circular": -0.046467520151730675,
+      "same_tag_rank_rho_delta_q_vs_delta_raw_sun_cos": 0.1512565196775723,
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "original_paired_tagged_animals": 21,
+      "q_coverage_selected_original_contexts": 2,
+      "region": "Wyoming",
+      "results": {
+        "apparent_solar_hour": {
+          "context2_minus_context1_mean": 0.24993261850665513,
+          "descriptive_tag_bootstrap95": [
+            0.15885353146052272,
+            0.35067057018066483
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 21,
+          "signed_tag_changes": {
+            "negative": 1,
+            "positive": 20
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "daylength_hours": {
+          "context2_minus_context1_mean": 1.5591141701585123,
+          "descriptive_tag_bootstrap95": [
+            1.2723441556956985,
+            1.8885685554807508
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 21,
+          "signed_tag_changes": {
+            "negative": 0,
+            "positive": 21
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "geographic_marginal": {
+          "context2_minus_context1_mean": 0.0070604343449258275,
+          "descriptive_tag_bootstrap95": [
+            -0.03394976830418857,
+            0.05074636534689377
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 21,
+          "signed_tag_changes": {
+            "negative": 11,
+            "positive": 10
+          },
+          "within_same_tag_sign_flips": 7
+        },
+        "joint_circular": {
+          "context2_minus_context1_mean": -0.02228206575662535,
+          "descriptive_tag_bootstrap95": [
+            -0.05391677338754284,
+            0.011824820126583698
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 21,
+          "signed_tag_changes": {
+            "negative": 11,
+            "positive": 10
+          },
+          "within_same_tag_sign_flips": 11
+        },
+        "q": {
+          "context2_minus_context1_mean": -0.011200213694510438,
+          "descriptive_tag_bootstrap95": [
+            -0.016639392475610797,
+            -0.005486376384289348
+          ],
+          "interval_classification": "NEGATIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 21,
+          "signed_tag_changes": {
+            "negative": 18,
+            "positive": 3
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "sun_altitude": {
+          "context2_minus_context1_mean": 8.759839298146314,
+          "descriptive_tag_bootstrap95": [
+            6.952954822553256,
+            10.814603979333949
+          ],
+          "interval_classification": "POSITIVE_UNADJUSTED_SOURCE_TAG_INTERVAL",
+          "paired_tag_count": 21,
+          "signed_tag_changes": {
+            "negative": 0,
+            "positive": 21
+          },
+          "within_same_tag_sign_flips": 0
+        },
+        "sun_cos": {
+          "context2_minus_context1_mean": -0.015221631411699525,
+          "descriptive_tag_bootstrap95": [
+            -0.08211840757293601,
+            0.05035821472704208
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 21,
+          "signed_tag_changes": {
+            "negative": 9,
+            "positive": 12
+          },
+          "within_same_tag_sign_flips": 11
+        },
+        "sun_sin": {
+          "context2_minus_context1_mean": -0.0029224292659153473,
+          "descriptive_tag_bootstrap95": [
+            -0.049753742686084866,
+            0.046932536960687686
+          ],
+          "interval_classification": "INCLUDES_ZERO",
+          "paired_tag_count": 21,
+          "signed_tag_changes": {
+            "negative": 11,
+            "positive": 10
+          },
+          "within_same_tag_sign_flips": 7
+        }
+      },
+      "same_tag_rank_rho_delta_q_vs_delta_joint_solar_circular": 0.16233766233766234,
+      "same_tag_rank_rho_delta_q_vs_delta_raw_sun_cos": 0.06103896103896104,
+      "taxon": "Ovis canadensis"
+    }
+  ],
+  "status": "SOURCE_ORIGINAL_PAIR_SUPPORT_CONFIRMED_NONCAUSAL",
+  "study_taxon_rows": 6,
+  "study_units": 2,
+  "summed_source_paired_tag_counts_NOT_independent_biomes": 269,
+  "version": "RSDS_ORIGINAL_GPS_TIME_AND_SOLAR_HEADING_V2_POSTHOC_INTERPRETATION"
+}

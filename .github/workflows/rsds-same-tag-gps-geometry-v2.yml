@@ -1,0 +1,99 @@
+name: RSDS original tagged-animal GPS time and solar geometry v2
+on:
+  push:
+    branches:
+      - science/same-tag-geometry-time-v2
+    paths:
+      - 'scripts/run_rsds_same_tag_gps_geometry_v2.py'
+      - 'scripts/aggregate_rsds_same_tag_gps_geometry_v2.py'
+      - 'tests/test_rsds_same_tag_gps_geometry_v2.py'
+      - 'tests/test_rsds_same_tag_gps_geometry_aggregate_v2.py'
+      - 'research/RSDS_SAME_TAG_GPS_GEOMETRY_V2_CONTRACT.json'
+      - '.github/workflows/rsds-same-tag-gps-geometry-v2.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_data_known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/same-tag-geometry-time-v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install minimal prior astronomy/native source package requirement
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Verify old original source outcomes and weather nonreplication remain unchanged
+        run: python -m scripts.verify_rsds_migration
+      - name: Known truth of GPS-only original q, solar geometry decomposition and paired tagging
+        run: |
+          python -m unittest discover -s tests -p 'test_rsds_same_tag_gps_geometry_v2.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_same_tag_gps_geometry_aggregate_v2.py' -v
+  source_original_GPS_pair:
+    needs: original_data_known_truth
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    strategy:
+      fail-fast: false
+      matrix:
+        region: [Utah, Wyoming]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/same-tag-geometry-time-v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install previous native GPS astronomy support
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Run ORIGINAL Movebank MD5 replay and same-tag q/heading marginal/covariance by maximally overlapping GPS-coverage contexts
+        run: |
+          python -m scripts.run_rsds_same_tag_gps_geometry_v2 --region ${{ matrix.region }} --out outputs/rsds_original_geom_v2
+      - name: Preserve original source group outcomes only, no individual records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-geometry-${{ matrix.region }}-v2
+          path: outputs/rsds_original_geom_v2/source_*.json
+          if-no-files-found: warn
+  original_GPS_cross_study_synthesis:
+    needs: source_original_GPS_pair
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/same-tag-geometry-time-v2
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install source original astronomy support
+        run: python -m pip install 'numpy>=1.24,<3'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-geometry-*-v2
+          merge-multiple: true
+          path: outputs/rsds_original_geom_v2
+      - name: Preserve all original 2 source x 6 taxon rows, including unsupported paired tags
+        run: |
+          python -m scripts.aggregate_rsds_same_tag_gps_geometry_v2 --input outputs/rsds_original_geom_v2 --out research/RSDS_SAME_TAG_GPS_GEOMETRY_V2_FIRST_RESULT_20261026.json
+          python -m json.tool research/RSDS_SAME_TAG_GPS_GEOMETRY_V2_FIRST_RESULT_20261026.json > /dev/null
+      - name: Public original-source group result without individual GPS
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-tagged-GPS-time-sun-geometry-v2
+          path: research/RSDS_SAME_TAG_GPS_GEOMETRY_V2_FIRST_RESULT_20261026.json
+          if-no-files-found: error
+      - name: Commit first scientific source result but never mutate prior source conclusions
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_SAME_TAG_GPS_GEOMETRY_V2_FIRST_RESULT_20261026.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: same tagged-animal within-context GPS daypart and Sun-relative geometry v2"
+            git push origin HEAD:science/same-tag-geometry-time-v2
+          fi

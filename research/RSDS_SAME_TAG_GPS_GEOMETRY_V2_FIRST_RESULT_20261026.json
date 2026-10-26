@@ -1,0 +1,853 @@
+{
+  "all_original_source_taxon_results": [
+    {
+      "all_contexts_selected_by_original_q_coverage": true,
+      "new_context_status": "PAIRED_TAG_ESTIMABLE",
+      "original_context_coverage": {
+        "all_original_q_gridyears": 22,
+        "eligible_context_pairs": 120,
+        "eligible_q_coverage_gridyears": 16,
+        "original_q_tags_in_both_selected_contexts": 33,
+        "selected_context_qualified_q_animals": [
+          55,
+          33
+        ],
+        "selected_context_qualified_q_days": [
+          6879,
+          4282
+        ]
+      },
+      "region": "Utah",
+      "source_doi": "10.5441/001/1.711",
+      "source_geometry_paired": {
+        "original_private_animal_ids_exported": false,
+        "same_original_tagged_animals_all_axes": 33,
+        "source_effects": {
+          "apparent_solar_hour": {
+            "common_original_tagged_animals": 33,
+            "negative_tag_deltas": 7,
+            "paired_tag_bootstrap95": [
+              0.04634831598230053,
+              0.1144285229141977
+            ],
+            "positive_tag_deltas": 26,
+            "rank2_minus_rank1_tag_mean": 0.08121784693735402,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "daylength_hours": {
+            "common_original_tagged_animals": 33,
+            "negative_tag_deltas": 12,
+            "paired_tag_bootstrap95": [
+              -0.01438437440800838,
+              0.11613910356544666
+            ],
+            "positive_tag_deltas": 21,
+            "rank2_minus_rank1_tag_mean": 0.055033985458909675,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "geographic_marginal": {
+            "common_original_tagged_animals": 33,
+            "negative_tag_deltas": 10,
+            "paired_tag_bootstrap95": [
+              0.004680749300464075,
+              0.03672618466192556
+            ],
+            "positive_tag_deltas": 23,
+            "rank2_minus_rank1_tag_mean": 0.021130202100640805,
+            "sign_flip_within_same_tag": 16,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "joint_circular": {
+            "common_original_tagged_animals": 33,
+            "negative_tag_deltas": 16,
+            "paired_tag_bootstrap95": [
+              -0.007498416281881482,
+              0.015738554813366546
+            ],
+            "positive_tag_deltas": 17,
+            "rank2_minus_rank1_tag_mean": 0.004183942196881277,
+            "sign_flip_within_same_tag": 13,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "q": {
+            "common_original_tagged_animals": 33,
+            "negative_tag_deltas": 9,
+            "paired_tag_bootstrap95": [
+              0.009217753142294692,
+              0.025496398737365412
+            ],
+            "positive_tag_deltas": 24,
+            "rank2_minus_rank1_tag_mean": 0.017483280233448473,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_altitude": {
+            "common_original_tagged_animals": 33,
+            "negative_tag_deltas": 11,
+            "paired_tag_bootstrap95": [
+              -0.14378967346833177,
+              0.6209026732411611
+            ],
+            "positive_tag_deltas": 22,
+            "rank2_minus_rank1_tag_mean": 0.25683590756672114,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_cos": {
+            "common_original_tagged_animals": 33,
+            "negative_tag_deltas": 11,
+            "paired_tag_bootstrap95": [
+              0.004670717858609988,
+              0.04471499234332743
+            ],
+            "positive_tag_deltas": 22,
+            "rank2_minus_rank1_tag_mean": 0.025314144297522084,
+            "sign_flip_within_same_tag": 14,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_sin": {
+            "common_original_tagged_animals": 33,
+            "negative_tag_deltas": 5,
+            "paired_tag_bootstrap95": [
+              0.029753418522166505,
+              0.07763345345656057
+            ],
+            "positive_tag_deltas": 28,
+            "rank2_minus_rank1_tag_mean": 0.053480475552539666,
+            "sign_flip_within_same_tag": 15,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          }
+        },
+        "within_tag_rho_delta_q_vs_delta_joint_circular": 0.12533422459893048,
+        "within_tag_rho_delta_q_vs_delta_raw_sun_cos": 0.07185828877005347
+      },
+      "source_original_q_daylight_exact_replay": true,
+      "taxon": "Antilocapra americana"
+    },
+    {
+      "all_contexts_selected_by_original_q_coverage": true,
+      "new_context_status": "PAIRED_TAG_ESTIMABLE",
+      "original_context_coverage": {
+        "all_original_q_gridyears": 30,
+        "eligible_context_pairs": 190,
+        "eligible_q_coverage_gridyears": 20,
+        "original_q_tags_in_both_selected_contexts": 56,
+        "selected_context_qualified_q_animals": [
+          91,
+          77
+        ],
+        "selected_context_qualified_q_days": [
+          8697,
+          7208
+        ]
+      },
+      "region": "Utah",
+      "source_doi": "10.5441/001/1.711",
+      "source_geometry_paired": {
+        "original_private_animal_ids_exported": false,
+        "same_original_tagged_animals_all_axes": 50,
+        "source_effects": {
+          "apparent_solar_hour": {
+            "common_original_tagged_animals": 50,
+            "negative_tag_deltas": 22,
+            "paired_tag_bootstrap95": [
+              0.01877623168571162,
+              0.18299315291324925
+            ],
+            "positive_tag_deltas": 28,
+            "rank2_minus_rank1_tag_mean": 0.09950896663187539,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "daylength_hours": {
+            "common_original_tagged_animals": 50,
+            "negative_tag_deltas": 11,
+            "paired_tag_bootstrap95": [
+              0.17349375903413047,
+              0.47332587497736067
+            ],
+            "positive_tag_deltas": 39,
+            "rank2_minus_rank1_tag_mean": 0.3081919316010468,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "geographic_marginal": {
+            "common_original_tagged_animals": 50,
+            "negative_tag_deltas": 29,
+            "paired_tag_bootstrap95": [
+              -0.030057315724481698,
+              0.007438442059182176
+            ],
+            "positive_tag_deltas": 21,
+            "rank2_minus_rank1_tag_mean": -0.011173447842748565,
+            "sign_flip_within_same_tag": 22,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "joint_circular": {
+            "common_original_tagged_animals": 50,
+            "negative_tag_deltas": 23,
+            "paired_tag_bootstrap95": [
+              -0.013425171305983741,
+              0.029919376289327004
+            ],
+            "positive_tag_deltas": 27,
+            "rank2_minus_rank1_tag_mean": 0.009400165435575935,
+            "sign_flip_within_same_tag": 6,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "q": {
+            "common_original_tagged_animals": 50,
+            "negative_tag_deltas": 17,
+            "paired_tag_bootstrap95": [
+              0.005256757873758821,
+              0.02131446279778307
+            ],
+            "positive_tag_deltas": 33,
+            "rank2_minus_rank1_tag_mean": 0.01318226731671587,
+            "sign_flip_within_same_tag": 1,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_altitude": {
+            "common_original_tagged_animals": 50,
+            "negative_tag_deltas": 9,
+            "paired_tag_bootstrap95": [
+              0.9229220348799769,
+              2.422289520901051
+            ],
+            "positive_tag_deltas": 41,
+            "rank2_minus_rank1_tag_mean": 1.647909173324919,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_cos": {
+            "common_original_tagged_animals": 50,
+            "negative_tag_deltas": 24,
+            "paired_tag_bootstrap95": [
+              -0.03194197066488265,
+              0.028620882711697875
+            ],
+            "positive_tag_deltas": 26,
+            "rank2_minus_rank1_tag_mean": -0.0017732824071726308,
+            "sign_flip_within_same_tag": 9,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_sin": {
+            "common_original_tagged_animals": 50,
+            "negative_tag_deltas": 35,
+            "paired_tag_bootstrap95": [
+              -0.07719983748256996,
+              -0.008327914477208704
+            ],
+            "positive_tag_deltas": 15,
+            "rank2_minus_rank1_tag_mean": -0.04270022416148721,
+            "sign_flip_within_same_tag": 13,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          }
+        },
+        "within_tag_rho_delta_q_vs_delta_joint_circular": -0.27202881152460984,
+        "within_tag_rho_delta_q_vs_delta_raw_sun_cos": -0.2686674669867947
+      },
+      "source_original_q_daylight_exact_replay": true,
+      "taxon": "Cervus elaphus"
+    },
+    {
+      "all_contexts_selected_by_original_q_coverage": true,
+      "new_context_status": "PAIRED_TAG_ESTIMABLE",
+      "original_context_coverage": {
+        "all_original_q_gridyears": 42,
+        "eligible_context_pairs": 666,
+        "eligible_q_coverage_gridyears": 37,
+        "original_q_tags_in_both_selected_contexts": 116,
+        "selected_context_qualified_q_animals": [
+          165,
+          158
+        ],
+        "selected_context_qualified_q_days": [
+          16812,
+          16591
+        ]
+      },
+      "region": "Utah",
+      "source_doi": "10.5441/001/1.711",
+      "source_geometry_paired": {
+        "original_private_animal_ids_exported": false,
+        "same_original_tagged_animals_all_axes": 101,
+        "source_effects": {
+          "apparent_solar_hour": {
+            "common_original_tagged_animals": 101,
+            "negative_tag_deltas": 51,
+            "paired_tag_bootstrap95": [
+              -0.09401895818677175,
+              0.03778289134686098
+            ],
+            "positive_tag_deltas": 50,
+            "rank2_minus_rank1_tag_mean": -0.02763618408037583,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "daylength_hours": {
+            "common_original_tagged_animals": 101,
+            "negative_tag_deltas": 70,
+            "paired_tag_bootstrap95": [
+              -0.28450613490968046,
+              -0.09543083723642413
+            ],
+            "positive_tag_deltas": 31,
+            "rank2_minus_rank1_tag_mean": -0.18787288003989502,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "geographic_marginal": {
+            "common_original_tagged_animals": 101,
+            "negative_tag_deltas": 46,
+            "paired_tag_bootstrap95": [
+              -0.007812051251154124,
+              0.025377656352387697
+            ],
+            "positive_tag_deltas": 55,
+            "rank2_minus_rank1_tag_mean": 0.00787781250800514,
+            "sign_flip_within_same_tag": 36,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "joint_circular": {
+            "common_original_tagged_animals": 101,
+            "negative_tag_deltas": 47,
+            "paired_tag_bootstrap95": [
+              -0.007156869509995223,
+              0.039252983025665315
+            ],
+            "positive_tag_deltas": 54,
+            "rank2_minus_rank1_tag_mean": 0.01586665460245523,
+            "sign_flip_within_same_tag": 35,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "q": {
+            "common_original_tagged_animals": 101,
+            "negative_tag_deltas": 59,
+            "paired_tag_bootstrap95": [
+              -0.019927084831885628,
+              -0.0028442397957514627
+            ],
+            "positive_tag_deltas": 42,
+            "rank2_minus_rank1_tag_mean": -0.011106288085716448,
+            "sign_flip_within_same_tag": 12,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_altitude": {
+            "common_original_tagged_animals": 101,
+            "negative_tag_deltas": 80,
+            "paired_tag_bootstrap95": [
+              -2.2787256292071123,
+              -1.2533832765270965
+            ],
+            "positive_tag_deltas": 21,
+            "rank2_minus_rank1_tag_mean": -1.7589233692073893,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_cos": {
+            "common_original_tagged_animals": 101,
+            "negative_tag_deltas": 44,
+            "paired_tag_bootstrap95": [
+              -0.00318484197491824,
+              0.05235358937571183
+            ],
+            "positive_tag_deltas": 57,
+            "rank2_minus_rank1_tag_mean": 0.02374446711046037,
+            "sign_flip_within_same_tag": 24,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_sin": {
+            "common_original_tagged_animals": 101,
+            "negative_tag_deltas": 42,
+            "paired_tag_bootstrap95": [
+              0.005041530981189828,
+              0.06725309934537949
+            ],
+            "positive_tag_deltas": 59,
+            "rank2_minus_rank1_tag_mean": 0.03666320837637737,
+            "sign_flip_within_same_tag": 31,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          }
+        },
+        "within_tag_rho_delta_q_vs_delta_joint_circular": 0.05701256268236856,
+        "within_tag_rho_delta_q_vs_delta_raw_sun_cos": -0.16211509676818153
+      },
+      "source_original_q_daylight_exact_replay": true,
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "all_contexts_selected_by_original_q_coverage": true,
+      "new_context_status": "PAIRED_TAG_ESTIMABLE",
+      "original_context_coverage": {
+        "all_original_q_gridyears": 31,
+        "eligible_context_pairs": 210,
+        "eligible_q_coverage_gridyears": 21,
+        "original_q_tags_in_both_selected_contexts": 35,
+        "selected_context_qualified_q_animals": [
+          41,
+          35
+        ],
+        "selected_context_qualified_q_days": [
+          2875,
+          2506
+        ]
+      },
+      "region": "Utah",
+      "source_doi": "10.5441/001/1.711",
+      "source_geometry_paired": {
+        "original_private_animal_ids_exported": false,
+        "same_original_tagged_animals_all_axes": 27,
+        "source_effects": {
+          "apparent_solar_hour": {
+            "common_original_tagged_animals": 27,
+            "negative_tag_deltas": 8,
+            "paired_tag_bootstrap95": [
+              0.013547934158000477,
+              0.14058235923176124
+            ],
+            "positive_tag_deltas": 19,
+            "rank2_minus_rank1_tag_mean": 0.07669814213789124,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "daylength_hours": {
+            "common_original_tagged_animals": 27,
+            "negative_tag_deltas": 18,
+            "paired_tag_bootstrap95": [
+              -0.3508192260962418,
+              0.009309714488336228
+            ],
+            "positive_tag_deltas": 9,
+            "rank2_minus_rank1_tag_mean": -0.16533071749342587,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "geographic_marginal": {
+            "common_original_tagged_animals": 27,
+            "negative_tag_deltas": 7,
+            "paired_tag_bootstrap95": [
+              0.005095267183656974,
+              0.05605864937128814
+            ],
+            "positive_tag_deltas": 20,
+            "rank2_minus_rank1_tag_mean": 0.03133322669773244,
+            "sign_flip_within_same_tag": 12,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "joint_circular": {
+            "common_original_tagged_animals": 27,
+            "negative_tag_deltas": 9,
+            "paired_tag_bootstrap95": [
+              -0.00106688317500587,
+              0.05761693161497389
+            ],
+            "positive_tag_deltas": 18,
+            "rank2_minus_rank1_tag_mean": 0.027166265884525795,
+            "sign_flip_within_same_tag": 12,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "q": {
+            "common_original_tagged_animals": 27,
+            "negative_tag_deltas": 23,
+            "paired_tag_bootstrap95": [
+              -0.044833697516382796,
+              -0.016307089216648467
+            ],
+            "positive_tag_deltas": 4,
+            "rank2_minus_rank1_tag_mean": -0.02979419171930651,
+            "sign_flip_within_same_tag": 1,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_altitude": {
+            "common_original_tagged_animals": 27,
+            "negative_tag_deltas": 21,
+            "paired_tag_bootstrap95": [
+              -2.442931703119668,
+              -0.022406059843970847
+            ],
+            "positive_tag_deltas": 6,
+            "rank2_minus_rank1_tag_mean": -1.2876964240742879,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_cos": {
+            "common_original_tagged_animals": 27,
+            "negative_tag_deltas": 8,
+            "paired_tag_bootstrap95": [
+              0.01766025564638064,
+              0.10047898935383524
+            ],
+            "positive_tag_deltas": 19,
+            "rank2_minus_rank1_tag_mean": 0.05849949258225824,
+            "sign_flip_within_same_tag": 12,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_sin": {
+            "common_original_tagged_animals": 27,
+            "negative_tag_deltas": 12,
+            "paired_tag_bootstrap95": [
+              -0.08586118905460365,
+              0.021619389890442365
+            ],
+            "positive_tag_deltas": 15,
+            "rank2_minus_rank1_tag_mean": -0.029581409599501715,
+            "sign_flip_within_same_tag": 14,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          }
+        },
+        "within_tag_rho_delta_q_vs_delta_joint_circular": -0.051892551892551896,
+        "within_tag_rho_delta_q_vs_delta_raw_sun_cos": -0.045177045177045176
+      },
+      "source_original_q_daylight_exact_replay": true,
+      "taxon": "Ovis canadensis"
+    },
+    {
+      "all_contexts_selected_by_original_q_coverage": true,
+      "new_context_status": "PAIRED_TAG_ESTIMABLE",
+      "original_context_coverage": {
+        "all_original_q_gridyears": 8,
+        "eligible_context_pairs": 15,
+        "eligible_q_coverage_gridyears": 6,
+        "original_q_tags_in_both_selected_contexts": 39,
+        "selected_context_qualified_q_animals": [
+          72,
+          53
+        ],
+        "selected_context_qualified_q_days": [
+          5737,
+          4745
+        ]
+      },
+      "region": "Wyoming",
+      "source_doi": "10.5441/001/1.703",
+      "source_geometry_paired": {
+        "original_private_animal_ids_exported": false,
+        "same_original_tagged_animals_all_axes": 37,
+        "source_effects": {
+          "apparent_solar_hour": {
+            "common_original_tagged_animals": 37,
+            "negative_tag_deltas": 9,
+            "paired_tag_bootstrap95": [
+              0.05389909245443714,
+              0.2915374881710167
+            ],
+            "positive_tag_deltas": 28,
+            "rank2_minus_rank1_tag_mean": 0.17911198951196422,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "daylength_hours": {
+            "common_original_tagged_animals": 37,
+            "negative_tag_deltas": 11,
+            "paired_tag_bootstrap95": [
+              -0.1068179982954037,
+              0.2409839574452454
+            ],
+            "positive_tag_deltas": 26,
+            "rank2_minus_rank1_tag_mean": 0.06424920882108355,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "geographic_marginal": {
+            "common_original_tagged_animals": 37,
+            "negative_tag_deltas": 22,
+            "paired_tag_bootstrap95": [
+              -0.0257362837931355,
+              0.030945559003707657
+            ],
+            "positive_tag_deltas": 15,
+            "rank2_minus_rank1_tag_mean": 0.002111876089324791,
+            "sign_flip_within_same_tag": 7,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "joint_circular": {
+            "common_original_tagged_animals": 37,
+            "negative_tag_deltas": 21,
+            "paired_tag_bootstrap95": [
+              -0.020214602618288273,
+              0.024095002811178375
+            ],
+            "positive_tag_deltas": 16,
+            "rank2_minus_rank1_tag_mean": 0.0012549518165889712,
+            "sign_flip_within_same_tag": 14,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "q": {
+            "common_original_tagged_animals": 37,
+            "negative_tag_deltas": 18,
+            "paired_tag_bootstrap95": [
+              -0.002247610384600838,
+              0.009032062506552115
+            ],
+            "positive_tag_deltas": 19,
+            "rank2_minus_rank1_tag_mean": 0.0032894622387091717,
+            "sign_flip_within_same_tag": 11,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_altitude": {
+            "common_original_tagged_animals": 37,
+            "negative_tag_deltas": 14,
+            "paired_tag_bootstrap95": [
+              -0.43469419612875326,
+              1.8987788673691202
+            ],
+            "positive_tag_deltas": 23,
+            "rank2_minus_rank1_tag_mean": 0.7347758546234647,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_cos": {
+            "common_original_tagged_animals": 37,
+            "negative_tag_deltas": 21,
+            "paired_tag_bootstrap95": [
+              -0.03299572213130848,
+              0.04812332720615915
+            ],
+            "positive_tag_deltas": 16,
+            "rank2_minus_rank1_tag_mean": 0.0033668279059137613,
+            "sign_flip_within_same_tag": 11,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_sin": {
+            "common_original_tagged_animals": 37,
+            "negative_tag_deltas": 13,
+            "paired_tag_bootstrap95": [
+              -0.014573072000855057,
+              0.059733880190989394
+            ],
+            "positive_tag_deltas": 24,
+            "rank2_minus_rank1_tag_mean": 0.023220288360701166,
+            "sign_flip_within_same_tag": 12,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          }
+        },
+        "within_tag_rho_delta_q_vs_delta_joint_circular": -0.046467520151730675,
+        "within_tag_rho_delta_q_vs_delta_raw_sun_cos": 0.1512565196775723
+      },
+      "source_original_q_daylight_exact_replay": true,
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "all_contexts_selected_by_original_q_coverage": true,
+      "new_context_status": "PAIRED_TAG_ESTIMABLE",
+      "original_context_coverage": {
+        "all_original_q_gridyears": 4,
+        "eligible_context_pairs": 6,
+        "eligible_q_coverage_gridyears": 4,
+        "original_q_tags_in_both_selected_contexts": 22,
+        "selected_context_qualified_q_animals": [
+          23,
+          22
+        ],
+        "selected_context_qualified_q_days": [
+          2575,
+          1824
+        ]
+      },
+      "region": "Wyoming",
+      "source_doi": "10.5441/001/1.703",
+      "source_geometry_paired": {
+        "original_private_animal_ids_exported": false,
+        "same_original_tagged_animals_all_axes": 21,
+        "source_effects": {
+          "apparent_solar_hour": {
+            "common_original_tagged_animals": 21,
+            "negative_tag_deltas": 1,
+            "paired_tag_bootstrap95": [
+              0.15885353146052272,
+              0.35067057018066483
+            ],
+            "positive_tag_deltas": 20,
+            "rank2_minus_rank1_tag_mean": 0.24993261850665513,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "daylength_hours": {
+            "common_original_tagged_animals": 21,
+            "negative_tag_deltas": 0,
+            "paired_tag_bootstrap95": [
+              1.2723441556956985,
+              1.8885685554807508
+            ],
+            "positive_tag_deltas": 21,
+            "rank2_minus_rank1_tag_mean": 1.5591141701585123,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "geographic_marginal": {
+            "common_original_tagged_animals": 21,
+            "negative_tag_deltas": 11,
+            "paired_tag_bootstrap95": [
+              -0.03394976830418857,
+              0.05074636534689377
+            ],
+            "positive_tag_deltas": 10,
+            "rank2_minus_rank1_tag_mean": 0.0070604343449258275,
+            "sign_flip_within_same_tag": 7,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "joint_circular": {
+            "common_original_tagged_animals": 21,
+            "negative_tag_deltas": 11,
+            "paired_tag_bootstrap95": [
+              -0.05391677338754284,
+              0.011824820126583698
+            ],
+            "positive_tag_deltas": 10,
+            "rank2_minus_rank1_tag_mean": -0.02228206575662535,
+            "sign_flip_within_same_tag": 11,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "q": {
+            "common_original_tagged_animals": 21,
+            "negative_tag_deltas": 18,
+            "paired_tag_bootstrap95": [
+              -0.016639392475610797,
+              -0.005486376384289348
+            ],
+            "positive_tag_deltas": 3,
+            "rank2_minus_rank1_tag_mean": -0.011200213694510438,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_altitude": {
+            "common_original_tagged_animals": 21,
+            "negative_tag_deltas": 0,
+            "paired_tag_bootstrap95": [
+              6.952954822553256,
+              10.814603979333949
+            ],
+            "positive_tag_deltas": 21,
+            "rank2_minus_rank1_tag_mean": 8.759839298146314,
+            "sign_flip_within_same_tag": 0,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_cos": {
+            "common_original_tagged_animals": 21,
+            "negative_tag_deltas": 9,
+            "paired_tag_bootstrap95": [
+              -0.08211840757293601,
+              0.05035821472704208
+            ],
+            "positive_tag_deltas": 12,
+            "rank2_minus_rank1_tag_mean": -0.015221631411699525,
+            "sign_flip_within_same_tag": 11,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          },
+          "sun_sin": {
+            "common_original_tagged_animals": 21,
+            "negative_tag_deltas": 11,
+            "paired_tag_bootstrap95": [
+              -0.049753742686084866,
+              0.046932536960687686
+            ],
+            "positive_tag_deltas": 10,
+            "rank2_minus_rank1_tag_mean": -0.0029224292659153473,
+            "sign_flip_within_same_tag": 7,
+            "status": "PAIRED_TAG_ESTIMABLE"
+          }
+        },
+        "within_tag_rho_delta_q_vs_delta_joint_circular": 0.16233766233766234,
+        "within_tag_rho_delta_q_vs_delta_raw_sun_cos": 0.06103896103896104
+      },
+      "source_original_q_daylight_exact_replay": true,
+      "taxon": "Ovis canadensis"
+    }
+  ],
+  "date": "2026-10-26",
+  "external_48_original_source_shortwave_nonreplication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "no_ERA5_retrieved_or_reinterpreted": true,
+  "nonclaims": [
+    "Original q-coverage selected gridyear ranks are not treatment groups sorted by irradiance, latitude, solar season or movement sign.",
+    "Same tagged animal contrasts are observational differences between selected recorded GPS dates/sites, not causal Sun guidance or temporal niche plasticity.",
+    "Raw Sun-relative movement cosine may change purely from fixed compass bearing and different Sun positions. Geographic marginal and joint circular components are reported separately.",
+    "Annual/source q from tracked GPS speed is not true latent activity duration. Individual tags from a field study do not represent independent global ecosystems.",
+    "Old ERA5 JSON version holds and old external radiation nonreplication remain immutable. No radiation response inferred in this GPS-only route."
+  ],
+  "original_source_count": 2,
+  "original_source_states": {
+    "Utah": "ORIGINAL_SOURCE_GPS_GEOMETRY_COMPLETE",
+    "Wyoming": "ORIGINAL_SOURCE_GPS_GEOMETRY_COMPLETE"
+  },
+  "previous_raw_ERA5_SHA_HOLD_unchanged": true,
+  "source_taxa_with_paired_tag_estimates": 6,
+  "source_taxon_rows": 6,
+  "two_region_same_native_taxon_repeatability": [
+    {
+      "axes": {
+        "geographic_marginal": {
+          "Utah": 0.00787781250800514,
+          "Wyoming": 0.002111876089324791,
+          "between_study_difference": 0.005765936418680348,
+          "status": "TWO_SOURCE_DESCRIPTIVE"
+        },
+        "joint_circular": {
+          "Utah": 0.01586665460245523,
+          "Wyoming": 0.0012549518165889712,
+          "between_study_difference": 0.014611702785866258,
+          "status": "TWO_SOURCE_DESCRIPTIVE"
+        },
+        "q": {
+          "Utah": -0.011106288085716448,
+          "Wyoming": 0.0032894622387091717,
+          "between_study_difference": -0.01439575032442562,
+          "status": "TWO_SOURCE_DESCRIPTIVE"
+        },
+        "sun_cos": {
+          "Utah": 0.02374446711046037,
+          "Wyoming": 0.0033668279059137613,
+          "between_study_difference": 0.02037763920454661,
+          "status": "TWO_SOURCE_DESCRIPTIVE"
+        },
+        "sun_sin": {
+          "Utah": 0.03666320837637737,
+          "Wyoming": 0.023220288360701166,
+          "between_study_difference": 0.013442920015676204,
+          "status": "TWO_SOURCE_DESCRIPTIVE"
+        }
+      },
+      "original_studies": 2,
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "axes": {
+        "geographic_marginal": {
+          "Utah": 0.03133322669773244,
+          "Wyoming": 0.0070604343449258275,
+          "between_study_difference": 0.02427279235280661,
+          "status": "TWO_SOURCE_DESCRIPTIVE"
+        },
+        "joint_circular": {
+          "Utah": 0.027166265884525795,
+          "Wyoming": -0.02228206575662535,
+          "between_study_difference": 0.049448331641151144,
+          "status": "TWO_SOURCE_DESCRIPTIVE"
+        },
+        "q": {
+          "Utah": -0.02979419171930651,
+          "Wyoming": -0.011200213694510438,
+          "between_study_difference": -0.018593978024796072,
+          "status": "TWO_SOURCE_DESCRIPTIVE"
+        },
+        "sun_cos": {
+          "Utah": 0.05849949258225824,
+          "Wyoming": -0.015221631411699525,
+          "between_study_difference": 0.07372112399395776,
+          "status": "TWO_SOURCE_DESCRIPTIVE"
+        },
+        "sun_sin": {
+          "Utah": -0.029581409599501715,
+          "Wyoming": -0.0029224292659153473,
+          "between_study_difference": -0.02665898033358637,
+          "status": "TWO_SOURCE_DESCRIPTIVE"
+        }
+      },
+      "original_studies": 2,
+      "taxon": "Ovis canadensis"
+    }
+  ],
+  "version": "RSDS_SAME_TAG_GPS_GEOMETRY_V2_FIRST_RESULT"
+}
