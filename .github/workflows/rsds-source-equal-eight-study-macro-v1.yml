@@ -1,0 +1,47 @@
+name: RSDS original eight study source-equal temporal and solar macro sensitivity
+on:
+  push:
+    branches:
+      - science/source-equal-temporal-solar-macro-sensitivity-v1
+    paths:
+      - 'scripts/source_equal_rsds_eight_study_temporal_solar_v1.py'
+      - 'tests/test_rsds_source_equal_eight_study_macro_v1.py'
+      - 'research/RSDS_EIGHT_STUDY_SOURCE_EQUAL_MACRO_V1_CONTRACT.json'
+      - '.github/workflows/rsds-source-equal-eight-study-macro-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_study_equal_sensitivity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/source-equal-temporal-solar-macro-sensitivity-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test pinned original first result and source-equal ecological unit
+        run: python -m unittest discover -s tests -p 'test_rsds_source_equal_eight_study_macro_v1.py' -v
+      - name: Compute source-equal study weights without original animal GPS files
+        run: |
+          python -m scripts.source_equal_rsds_eight_study_temporal_solar_v1 --out research/RSDS_EIGHT_STUDY_SOURCE_EQUAL_MACRO_SENSITIVITY_FIRST_RESULT_20261026.json
+          python -m json.tool research/RSDS_EIGHT_STUDY_SOURCE_EQUAL_MACRO_SENSITIVITY_FIRST_RESULT_20261026.json > /dev/null
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-8-study-source-equal-macro-sensitivity-v1
+          path: research/RSDS_EIGHT_STUDY_SOURCE_EQUAL_MACRO_SENSITIVITY_FIRST_RESULT_20261026.json
+          if-no-files-found: error
+      - name: Commit only source-derived macro sensitivity, not raw source GPS
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_EIGHT_STUDY_SOURCE_EQUAL_MACRO_SENSITIVITY_FIRST_RESULT_20261026.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: original eight field-study equal weighting macro sensitivity, no taxon pseudoreplication"
+            git push origin HEAD:science/source-equal-temporal-solar-macro-sensitivity-v1
+          fi
