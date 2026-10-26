@@ -27,7 +27,7 @@ jobs:
       - name: Verify complete RSDS original ODSP blob identity and immutable heldout result
         run: python -m scripts.verify_rsds_migration
       - name: Install lightweight original seasonal climate numerical dependency
-        run: python -m pip install 'numpy>=1.24,<3' 'scipy>=1.11,<2'
+        run: python -m pip install 'numpy>=1.24,<3' 'scipy>=1.11,<2' 'scipy>=1.11,<2'
       - name: Execute original source-specific model-free ecology tests
         shell: bash
         run: |
