@@ -79,7 +79,9 @@
     "uncompressed_csv_size_cap_bytes": 300000000,
     "original_event_row_cap": 2000000,
     "provider_file_integrity": "Require byte identity, original checksum MD5/SHA256 and exact bitstream UUID as source-only preflight receipt; original data are only temporarily downloaded in CI and deleted.",
-    "privacy": "Never share original GPS tracks, tag identifiers, exact coordinates, timestamp events or individual coefficients; publish only study DOI, taxon, source coverage and original study/taxon/paired-tagged summary."
+    "privacy": "Never share original GPS tracks, tag identifiers, exact coordinates, timestamp events or individual coefficients; publish only study DOI, taxon, source coverage and original study/taxon/paired-tagged summary.",
+    "original_primary_file_name_resolution": "Before any animal GPS outcome, drop ORIGINAL reference-data and accelerometer acc*.csv/acc*.zip streams based only on filenames; preferentially accept the unique *-gps.csv tracking file when present; otherwise require one unambiguous primary CSV/ZIP/CSV.GZ. Keep source metadata HOLD on ambiguity or over-200MB and NEVER replace an eligible study with another.",
+    "original_source_file_cap_is_frozen_even_if_a_new_study_is_HOLD": true
   },
   "analysis": {
     "source_taxa": "Exact single original scientific name from the fixed Movebank catalog; no source replacement if header unqualified or data cadence weak.",
