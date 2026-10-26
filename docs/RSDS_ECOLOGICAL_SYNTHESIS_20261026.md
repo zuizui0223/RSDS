@@ -32,6 +32,19 @@
 - カメラ稼働時間・位置選択・検出感度 q と同じ原母集団の確保が不十分なため、真の動物活動量や時計記憶の進化に読み替えない。
 - 詳細：[元画像の季節分配](solar_seasonal_real_exploratory_results_20261015.md)、[撮影日とERA5の日周結合](serengeti_actual_solar_photo_era5_cycle_joint_result_20261015.md)、[撮影機と時刻構成の分離](serengeti_within_photo_time_versus_station_mix_ecology_20261015.md)。
 
+## E. 独立原調査での「時間ニッチは反復するが、生の太陽方向は変わる」対照（2026-10-26）
+
+RSDSでUtah DOI 10.5441/001/1.711とWyoming DOI 10.5441/001/1.703の学名・元調査DOIを厳密に結合し、原GPSの **6 study×taxon記述行**を実計算した。個体の昼夜GPS最短変位速度差 q に対する日長の年内傾きは、ミュールジカで **+0.005619（Utah）、+0.005538（Wyoming）**と双方正で、それぞれの原ソース個体bootstrap区間は0を含まない。しかし瞬間太陽方位に対する移動方位の**生cos平均**は **+0.023393** と **−0.048758**で、原ソース個体bootstrap区間は逆符号を支持する。この差 **+0.072151** は地理的方位marginal差 **+0.045886** と結合成分差 **+0.026265** の算術的和であり、太陽反応や気候媒介率を同定したものではない。
+
+ビッグホーンのq-日長係数は両原調査で不確実。夜−昼相対変位のミュールジカ＞ビッグホーンという順位は両調査で繰り返されたが、Wyomingには両種共通の適格1°セル×年月が**0**なので、同所競争やニッチ分割の再現性とは区別する。さらに、9学名×各2原GPSアーカイブの太陽相対方向の生符号一致は **6/9**、地理的方位を分離したjoint covariance符号一致は **4/9**。生の太陽相対方向がすべての地域で保たれるとは言えない。
+
+48原GPS日射研究のうち20のみ放射傾き推定可能。時間利用を推定したUtah/Wyomingの原2研究と48原日射研究で元DOIの共通性が**ゼロ**なので、いまの別研究間の集計値から個体内「日射が時間配分と方向を媒介する」という関係を作り出さない。新規の正面検証は**同じ個体・移動ステップで真太陽高度、細かい太陽時刻、風、放射、経路と昼夜配分を同時解析すること**である。
+
+- [中心質問と実証対照の研究ノート](RSDS_JOINT_SOLAR_TEMPORAL_MOVEMENT_MACROECOLOGY_20261026.md)
+- [統合研究の原稿草稿](../manuscript/RSDS_SOLAR_TIME_DIRECTION_MACROECOLOGY_v0_20261026.md)
+- [移転元SHA固定・再現計算した結果JSON](../research/RSDS_CROSS_AXIS_GENERALITY_FIRST_RESULT_20261026.json)
+- [RSDSの原データ固定スクリプト](../scripts/analyze_rsds_cross_axis_generality_v0.py)
+
 ## 再現可能性と論文発展
 
 - [全球太陽方向の研究草稿v2](../manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_v2_20261025.md)
