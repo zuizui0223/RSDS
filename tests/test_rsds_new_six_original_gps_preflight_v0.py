@@ -47,6 +47,19 @@ class SixFrozenPublicSourceMetadataTests(unittest.TestCase):
         self.assertEqual(r["original_data_file_candidates"],2)
         self.assertIsNone(r["original_file"])
 
+    def test_gps_file_priority_excludes_original_accelerometer_companions(self):
+        c, registry = validate_roster()
+        s = c["original_fixed_sources"][0]
+        gps={"bitstream_uuid":"gps-only","name":"Bobcat tracking-gps.csv",
+             "bytes":50_000,"checksum":{"checkSumAlgorithm":"MD5","value":"c"*32}}
+        acc={"bitstream_uuid":"acc-data","name":"Bobcat tracking-acc1of9.csv.zip",
+             "bytes":75_000,"checksum":{"checkSumAlgorithm":"MD5","value":"d"*32}}
+        with patch("scripts.preflight_rsds_new_six_original_gps_v0.original_files",
+                   return_value=[acc,gps]):
+            got=one_source(s,registry[s["id"]])
+        self.assertEqual(got["source_metadata_status"],"ORIGINAL_FILE_METADATA_ADMISSIBLE")
+        self.assertEqual(got["original_file"]["bitstream_uuid"],"gps-only")
+
     def test_too_large_or_missing_checksum_does_not_trigger_download(self):
         c, registry=validate_roster()
         s=c["original_fixed_sources"][0]
