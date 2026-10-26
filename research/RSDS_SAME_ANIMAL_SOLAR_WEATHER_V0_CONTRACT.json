@@ -1,0 +1,67 @@
+{
+  "version": "rsds-original-individual-temporal-heading-irradiance-v0",
+  "freeze_date": "2026-10-26",
+  "stage": "POST_PRIOR_OUTCOMES_NEW_SAME_INDIVIDUAL_OBSERVATIONAL_ROUTE",
+  "scientific_question": "Within the SAME tagged original animal, source gridyear and ORIGINAL GPS observation-days, are daytime Sun-relative travel cos/sin and observed night-minus-day GPS displacement associated with ERA5 shortwave anomalies after solar altitude, 1h apparent solar clock, season and wind/heat are modeled?",
+  "previous_primary": "RSDS_CROSS_AXIS_GENERALITY_FIRST_RESULT_20261026.json",
+  "source_sampling": "Use exactly original two published Utah and Wyoming studies already compared; no outcome-driven source replacements; all four Utah native taxa and both Wyoming taxa retained with SOURCE_HOLD and undefined effects.",
+  "original_sources": [
+    {
+      "region": "Utah",
+      "doi": "10.5441/001/1.711",
+      "original_contract": "research/MOVEBANK_UTAH_FOUR_TAXA_SOLAR_V0_20261019.json",
+      "original_reference": "research/MOVEBANK_UTAH_DIEL_PHOTOPERIOD_VERIFIED_RESULT_V0_20261019.json",
+      "native_taxa": [
+        "Antilocapra americana",
+        "Cervus elaphus",
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "expected_md5": "08200c9dbdf7989fb5a35467213b7e5a"
+    },
+    {
+      "region": "Wyoming",
+      "doi": "10.5441/001/1.703",
+      "original_contract": "research/MOVEBANK_WYOMING_TWO_UNGULATES_SOURCE_V0_20261022.json",
+      "original_reference": "research/wyoming_two_ungulates_20261022/wyoming_original_result.json",
+      "native_taxa": [
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "expected_md5": "bd1c02734b6de3ddc9207fc1251edd66"
+    }
+  ],
+  "freeze_protocol": {
+    "first_preweather_action": "Check source UUID/bitstream bytes/provider MD5 and replay exact original native taxon q and q-daylength source mean and admitted source-animal counts to tolerance 1e-12 BEFORE requesting any new hourly weather.",
+    "time_only_sampling": "Original one available GPS fix per UTC hour by timestamp closest to top-of-hour, original source 0.5-2h adjacent moving/displacement rate <=60km/h and valid daypart by beginning/end/midpoint, no interpolation.",
+    "q_day": "Original animal/day if >=3 accepted DAY and >=3 NIGHT intervals on same solar local date. q=log1p(median NIGHT GPS km/h)-log1p(median DAY GPS km/h). Retain only animal/year with >=10 q days as original.",
+    "gridyear_selection": "For each original native taxon, assign each q-admitted animal-day to 1degree lat/lon grid×original calendar year based on mean original valid segment latitude/longitude that date. Retain animal×gridyear only if >=8 q-days. Candidate requires >=5 distinct animals and >=40 original q-days; select highest two original taxon gridyears by (descending distinct animals, descending q-days, ascending gridkey), without inspecting q signs, solar direction or weather. Never replace a failed selected context.",
+    "weather": "Original Open-Meteo archive API explicit ERA5 UTC-hourly wind_speed_100m m/s, wind_direction_100m FROM degrees, shortwave_radiation W/m2, temperature_2m C; full one original source gridcenter year, >=90% selected original moving daylight intervals must link; preserve hourly raw provider response SHA256 but do not redistribute raw weather/individual GPS.",
+    "response_heading": "Original GPS daylight steps on admitted q days and in selected original 1degree context, accepted by solar_azimuth_macro_v0 directional_step: length >=0.1km, 0.5-2h, 0<speed<=60 km/h, endpoint/midpoint Sun altitude >=10deg, solar-day consistent. cos(B-SunAz), sin(B-SunAz); same tag and dates as temporal q but only moving daylight steps.",
+    "solar_geometry": "Use unrounded original GPS mid-event UTC and midpoint coordinate for solar altitude, solar azimuth, apparent solar hour, daylength; 1h apparent-solar-time bins within calendar year/month rather than previous 4h.",
+    "one_hour_clock_support": "Animal calendar-year/month x floor(apparent solar hour) block requires >=6 weather-linked moving daylight steps and >=3 solar dates. Animal >=40 retained daylight steps, >=6 dates, >=2 blocks, >=2 source months.",
+    "FWL_method": "Within animal x yearmonth x 1hour apparent solar-clock blocks demean ERA5 shortwave and responses. Partial linear residualize on geometric Sun altitude (scaled) and altitude squared, cos and sin solar azimuth, modeled daylight hours, temperature, 100m wind speed and cos(wind-flow-TO minus solar azimuth). Return 100x residual covariance / sum residual-shortwave^2 for directional cos and sin. Require residual shortwave SD>=20W/m2, >10 degrees of freedom, estimated nuisance rank >=3, response support and finite inputs.",
+    "joint_daily_q": "For the SAME source animal and source q days with >=3 of the weather-linked direction steps supported by the fine-clock fit, calculate mean residual ERA5 shortwave (from the same step-level FWL geometry+climate adjustment) and original daily q. Fit q vs this daily radiation residual, within animal calendar-month centered, adjusting daylength, daily mean 2m T and wind speed. >=20 paired days in >=2 source months; >=10W/m2 remaining residual R SD, q residual SD>=0.001. Animal-level slope per +100W/m2.",
+    "inferential_unit": "Within same original animal, average at most two chosen gridyear context coefficients in same taxon/source equally, then taxon/source mean per equal original animal. Require >=5 original animals for a descriptive group effect. Paired source-taxon direct q/radiation and heading/radiation coefficients require >=5 identical original tagged animals; no ID exposed.",
+    "uncertainty": "Fixed-seed 2000 nonparametric within-source tag bootstrap percentile intervals; descriptive only. Among paired tagged animals Spearman of q radiation coefficient vs signed solar-heading radiation coefficient reported only if >=5 and both varying; no iid GPS p values.",
+    "missingness": "Report every fixed study×taxon, all selected original gridyear context ranks, full source WEATHER_HOLD/WEAK_SUPPORT/NO_CONTEXT results. No source replacement or dropping negative/null results.",
+    "output": "Publish only original field-study DOI, taxon, coarse first/second context ordinal, animal/month/date/step counts, weather provider SHA, fitted source animal summaries and hold reasons. Do NOT write original gridcenter, individual IDs, per-tag slope, GPS fix coordinates, precise timestamps or individual tracks."
+  },
+  "predeclared_hypotheses_as_exploratory": [
+    "H_time_weather: same original animal q changes with shortwave anomalies beyond solar geometry and modeled climate.",
+    "H_direction_weather: same original animal solar-relative vector changes with shortwave anomalies, after geometry/clock+wind controls.",
+    "H_coupling: within original taxon/source the two radiation responses correlate across tagged animals.",
+    "H_region: effects on identical native taxa differ between original Utah and Wyoming field studies; no claim of independent climatic causal mediation."
+  ],
+  "limits": [
+    "Source-frozen AFTER previous daylength and raw sunward results; inference is exploratory not independent external confirmation.",
+    "ERA5 surface shortwave is not actual shade/body irradiance; 100m wind is not animal altitude wind.",
+    "Restricted source-GPS observation days, siteyear geographic composition, variable individual collar schedules can select subjects.",
+    "Sun angle and weather residualization does not identify causal sunlight or photoperiod responses.",
+    "Day/night speed displacement is not duration of latent activity, solar-heading daytime direction is not whole-body orientation.",
+    "Monthly within-individual contrasts can confound unmodeled migration, wind altitude, canopy, forage and breeding.",
+    "No bootstrap/sample-size p-value is world biome generalization."
+  ],
+  "immutable_frozen_external_nonreplication": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "previous_source_data": "Original provider bitstreams fetched temporarily and validated in CI; no raw GPS or independent user data redistributed."
+}
