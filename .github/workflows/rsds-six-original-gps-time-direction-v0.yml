@@ -1,0 +1,129 @@
+name: RSDS original six new study GPS time and Sun direction ecology
+on:
+  push:
+    branches:
+      - science/six-guild-original-gps-results-v0
+    paths:
+      - 'scripts/run_rsds_new_six_original_gps_ecology_v0.py'
+      - 'scripts/aggregate_rsds_new_six_original_gps_ecology_v0.py'
+      - 'tests/test_rsds_new_six_original_gps_ecology_v0.py'
+      - 'tests/test_rsds_new_six_original_gps_aggregate_v0.py'
+      - 'research/RSDS_NEW_SIX_ORIGINAL_GPS_SOURCE_METADATA_BLOB_V0.json'
+      - '.github/workflows/rsds-six-original-gps-time-direction-v0.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  prospectively_frozen_sources_and_known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/six-guild-original-gps-results-v0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install existing original GPS astronomy dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Retain historical RSDS source provenance and external irradiation nonreplication
+        run: python -m scripts.verify_rsds_migration
+      - name: Verify source-first all six DOI taxonomy original file SHA and null support
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_new_six_original_gps_preflight_v0.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_new_six_original_gps_ecology_v0.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_new_six_original_gps_aggregate_v0.py' -v
+          python - <<'PY'
+          from scripts.run_rsds_new_six_original_gps_ecology_v0 import load_frozen
+          sources, meta = load_frozen()
+          assert len(sources) == len(meta) == 6
+          assert sum(x['source_metadata_status']=='ORIGINAL_FILE_METADATA_ADMISSIBLE' for x in meta) == 5
+          assert sum(x['source_metadata_status']=='SOURCE_METADATA_HOLD' for x in meta) == 1
+          print('six preselected study sources: five fixed original GPS files plus one 200MB source metadata HOLD; no animal results opened')
+          PY
+  original_six_new_source_events:
+    needs: prospectively_frozen_sources_and_known_truth
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    strategy:
+      fail-fast: false
+      matrix:
+        index: [0, 1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/six-guild-original-gps-results-v0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install existing deterministic original GPS numerical helper
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Verify pre-event provider original file MD5 and compute first new same-tag temporal and Sun-heading ecological results
+        run: |
+          python -m scripts.run_rsds_new_six_original_gps_ecology_v0 --index ${{ matrix.index }} --out outputs/new_original_studies
+      - name: Upload group-only result; raw original GPS and tagged individual IDs never included
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-new-six-original-source-${{ matrix.index }}-v0
+          path: outputs/new_original_studies/original_independent_study_${{ matrix.index }}.json
+          if-no-files-found: warn
+  six_original_source_ecological_synthesis:
+    needs: original_six_new_source_events
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/six-guild-original-gps-results-v0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-new-six-original-source-*-v0
+          merge-multiple: true
+          path: outputs/new_original_studies
+      - name: Retain all six frozen original source records and all GPS q/angular and same-tag holds
+        run: |
+          python -m scripts.aggregate_rsds_new_six_original_gps_ecology_v0 --input outputs/new_original_studies --out research/RSDS_NEW_SIX_ORIGINAL_GPS_ECOLOGY_FIRST_RESULT_20261026.json
+          python -m json.tool research/RSDS_NEW_SIX_ORIGINAL_GPS_ECOLOGY_FIRST_RESULT_20261026.json > /dev/null
+      - name: Assert original private GPS and tagged individual records are absent
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_NEW_SIX_ORIGINAL_GPS_ECOLOGY_FIRST_RESULT_20261026.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['frozen_source_original_study_count']==6
+          assert len(d['six_full_source_study_taxon_results'])==6
+          def walk(x):
+              if isinstance(x,dict):
+                  for k,v in x.items():
+                      assert k not in {'animal_id','individual_id','timestamp','location-lat','location-long','original_gps_fixes','latitude','longitude','event-date'}
+                      walk(v)
+              elif isinstance(x,list):
+                  for v in x: walk(v)
+          walk(d)
+          print('six complete source-study results: no original GPS individual/location/time keys')
+          PY
+      - name: Commit auditable six source-group first results; no source file substitution
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_NEW_SIX_ORIGINAL_GPS_ECOLOGY_FIRST_RESULT_20261026.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: first six prospective original GPS source studies temporal and directional ecology"
+            git push origin HEAD:science/six-guild-original-gps-results-v0
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-six-study-independent-original-gps-source-first-result
+          path: research/RSDS_NEW_SIX_ORIGINAL_GPS_ECOLOGY_FIRST_RESULT_20261026.json
+          if-no-files-found: error

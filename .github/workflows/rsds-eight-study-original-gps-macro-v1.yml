@@ -1,0 +1,48 @@
+name: RSDS eight-study original GPS temporal and Sun heading macro synthesis
+on:
+  push:
+    branches:
+      - science/six-guild-original-gps-results-v0
+    paths:
+      - 'scripts/build_rsds_eight_study_temporal_solar_macro_atlas_v1.py'
+      - 'tests/test_rsds_eight_study_temporal_solar_macro_atlas_v1.py'
+      - '.github/workflows/rsds-eight-study-original-gps-macro-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_source_macro:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/six-guild-original-gps-results-v0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate original 390 ODSP migrated ecology source files and frozen radiation failure
+        run: python -m scripts.verify_rsds_migration
+      - name: Test original source four SHA-locked results and study/taxon macro denominators
+        run: python -m unittest discover -s tests -p 'test_rsds_eight_study_temporal_solar_macro_atlas_v1.py' -v
+      - name: Produce 8 original study 12 taxon original GPS macro ecological atlas
+        run: |
+          python -m scripts.build_rsds_eight_study_temporal_solar_macro_atlas_v1 --out research/RSDS_8_STUDY_TIME_SOLAR_HEADING_MACRO_ATLAS_V1_20261026.json
+          python -m json.tool research/RSDS_8_STUDY_TIME_SOLAR_HEADING_MACRO_ATLAS_V1_20261026.json > /dev/null
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-eight-study-twelve-taxon-original-gps-time-solar-macro
+          path: research/RSDS_8_STUDY_TIME_SOLAR_HEADING_MACRO_ATLAS_V1_20261026.json
+          if-no-files-found: error
+      - name: Commit group-only original GPS ecological macro analysis
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_8_STUDY_TIME_SOLAR_HEADING_MACRO_ATLAS_V1_20261026.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: eight original studies and 12 source taxon temporal solar heading macro atlas"
+            git push origin HEAD:science/six-guild-original-gps-results-v0
+          fi

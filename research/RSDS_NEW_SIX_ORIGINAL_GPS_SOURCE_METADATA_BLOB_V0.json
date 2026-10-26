@@ -1,0 +1,10 @@
+{
+  "version": "RSDS_SIX_SOURCE_METADATA_GIT_BLOB_SHA_V0",
+  "original_six_source_metadata_commit_phase": "BEFORE_NEW_GPS_EVENTS_OPENED",
+  "original_metadata_git_blob_sha": "64f2b86c78ba2d150b1f79ee6b6b4eb315e2a4d8",
+  "fixed_source_metadata_file": "research/RSDS_NEW_SIX_ORIGINAL_GPS_SOURCE_METADATA_V0_20261026.json",
+  "original_eligible_studies": 5,
+  "original_hold_studies": 1,
+  "frozen_date": "2026-10-26",
+  "original_movements_opened_before_freeze": 0
+}

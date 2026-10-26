@@ -1,0 +1,48 @@
+name: RSDS six new original Movebank study metadata preflight v0
+on:
+  push:
+    branches:
+      - science/independent-six-guild-source-gps-generality-v0
+    paths:
+      - 'scripts/preflight_rsds_new_six_original_gps_v0.py'
+      - 'tests/test_rsds_new_six_original_gps_preflight_v0.py'
+      - 'research/RSDS_NEW_SIX_ORIGINAL_GPS_V0_CONTRACT.json'
+      - '.github/workflows/rsds-six-source-metadata-preflight-v0.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  frozen_original_source_preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/independent-six-guild-source-gps-generality-v0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate fixed full-437 registry and six source DOI/study identities
+        run: python -m unittest discover -s tests -p 'test_rsds_new_six_original_gps_preflight_v0.py' -v
+      - name: Fetch ORIGINAL bundle file metadata only with provider UUID MD5 and strict holds
+        run: |
+          python -m scripts.preflight_rsds_new_six_original_gps_v0 --out research/RSDS_NEW_SIX_ORIGINAL_GPS_SOURCE_METADATA_V0_20261026.json
+          python -m json.tool research/RSDS_NEW_SIX_ORIGINAL_GPS_SOURCE_METADATA_V0_20261026.json > /dev/null
+      - name: Save original study metadata manifest before new telemetry outcome
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-six-original-gps-source-metadata-pre-event
+          path: research/RSDS_NEW_SIX_ORIGINAL_GPS_SOURCE_METADATA_V0_20261026.json
+          if-no-files-found: error
+      - name: Commit source-only frozen pre-event original-file receipt
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_NEW_SIX_ORIGINAL_GPS_SOURCE_METADATA_V0_20261026.json
+          if ! git diff --cached --quiet; then
+            git commit -m "source: lock six external original GPS files before viewing animal movement outcomes"
+            git push origin HEAD:science/independent-six-guild-source-gps-generality-v0
+          fi

@@ -1,0 +1,99 @@
+{
+  "version": "RSDS_NEW_SIX_ORIGINAL_PUBLIC_GPS_JOINT_TEMPORAL_DIRECTION_V0",
+  "freeze_date": "2026-10-26",
+  "stage": "FROZEN_BEFORE_OPENING_ANY_OF_THE_SIX_NEW_ANIMAL_GPS_EVENT_ROWS",
+  "source_frame": "research/seasonal_database_catalog/2026-10-19/movebank/catalog.json",
+  "research_question": "Does within-source animal day/night GPS displacement and Sun-relative vector composition show similarly structured source-level and paired-individual heterogeneity across new species, original studies and regions independent of the previous two ungulate field studies?",
+  "original_source_sampling": "Six registry-source GUIDs chosen on 2026-10-26 using source-level catalog species diversity, independent study IDs, GPS/GNSS-labelled metadata and >=10 reported animals and >=50k reported locations, geographically and guild dispersed. Deliberately purposive nonprobability sample, not selected on new temporal, heading, ERA5 or movement estimates.",
+  "source_limitations": "Original source study-ID uniqueness and no matching prior RSDS package UUID/DOI are necessary but are not proof of independent ecological populations; source metadata reported counts are not field-event eligibility.",
+  "original_fixed_sources": [
+    {
+      "id": "dd064947-25b7-46a2-8976-adfc488750bc",
+      "doi": "10.5441/001/1.671",
+      "taxon": "Meleagris gallopavo",
+      "study_id": "5852420130",
+      "reported_animals": 339,
+      "reported_fixes": 796409,
+      "region": "southeastern United States",
+      "guild": "terrestrial bird"
+    },
+    {
+      "id": "ed70c4c7-6017-45c1-90b7-5fff24ea7d85",
+      "doi": "10.5441/001/1.323",
+      "taxon": "Lynx rufus",
+      "study_id": "5175345606",
+      "reported_animals": 38,
+      "reported_fixes": 647712,
+      "region": "central California",
+      "guild": "terrestrial carnivore"
+    },
+    {
+      "id": "86f58f48-90be-4241-b895-6af3e7952dde",
+      "doi": "10.5441/001/1.304",
+      "taxon": "Vulpes vulpes",
+      "study_id": "3179890710",
+      "reported_animals": 35,
+      "reported_fixes": 146072,
+      "region": "United Kingdom",
+      "guild": "terrestrial carnivore"
+    },
+    {
+      "id": "bc7febf2-d956-409b-944a-0764ae558a51",
+      "doi": "10.5441/001/1.644",
+      "taxon": "Prionailurus viverrinus",
+      "study_id": "2728151646",
+      "reported_animals": 13,
+      "reported_fixes": 56939,
+      "region": "Thailand",
+      "guild": "terrestrial semi-aquatic carnivore"
+    },
+    {
+      "id": "f577908f-52ae-46a1-986a-1862336cee91",
+      "doi": "10.5441/001/1.641",
+      "taxon": "Ardea alba",
+      "study_id": "247850178",
+      "reported_animals": 22,
+      "reported_fixes": 1707886,
+      "region": "California",
+      "guild": "wading bird"
+    },
+    {
+      "id": "bea69b8a-f800-4e74-adc9-04a3ffa12823",
+      "doi": "10.5441/001/1.740",
+      "taxon": "Phascolarctos cinereus",
+      "study_id": "5502199539",
+      "reported_animals": 44,
+      "reported_fixes": 163653,
+      "region": "Australia",
+      "guild": "arboreal marsupial"
+    }
+  ],
+  "data_source_policy": {
+    "source_only_preflight": "For each listed source from the ORIGINAL bundle, list all provider file names, original source bitstream UUID, byte size and checksum without reading any animal GPS events. Freeze EXACT one original CSV/ZIP/CSV.GZ primary tracking data file per package if unambiguous; otherwise SOURCE_METADATA_HOLD. No substitutions.",
+    "accepted_data_formats": [
+      ".csv",
+      ".zip",
+      ".csv.gz"
+    ],
+    "original_source_size_cap_bytes": 200000000,
+    "uncompressed_csv_size_cap_bytes": 300000000,
+    "original_event_row_cap": 2000000,
+    "provider_file_integrity": "Require byte identity, original checksum MD5/SHA256 and exact bitstream UUID as source-only preflight receipt; original data are only temporarily downloaded in CI and deleted.",
+    "privacy": "Never share original GPS tracks, tag identifiers, exact coordinates, timestamp events or individual coefficients; publish only study DOI, taxon, source coverage and original study/taxon/paired-tagged summary.",
+    "original_primary_file_name_resolution": "Before any animal GPS outcome, drop ORIGINAL reference-data and accelerometer acc*.csv/acc*.zip streams based only on filenames; preferentially accept the unique *-gps.csv tracking file when present; otherwise require one unambiguous primary CSV/ZIP/CSV.GZ. Keep source metadata HOLD on ambiguity or over-200MB and NEVER replace an eligible study with another.",
+    "original_source_file_cap_is_frozen_even_if_a_new_study_is_HOLD": true
+  },
+  "analysis": {
+    "source_taxa": "Exact single original scientific name from the fixed Movebank catalog; no source replacement if header unqualified or data cadence weak.",
+    "observation": "Timestamp-only hour GPS fix selection, source-original adjacent 0.5–2h GPS step; speed <=60km/h, day/night endpoints and midpoint in same solar local date/daypart, minimum 3 DAY and 3 NIGHT accepted GPS steps per animal day, at least 10 such days per animal-calendar-year.",
+    "daynight_q": "Per original animal/year NIGHT−DAY log1p median observed step speed km/h; source animal mean and original-tag bootstrap 95% only >=5 supported tagged animals. This is not true time-in-activity.",
+    "daylength": "Within original animal-year OLS of daily q versus astronomic daylength, >=10 original source qualifying days and >=0.5 h support; source animal mean and interval >=5 animals.",
+    "solar_heading": "On original same timestamp-hour GPS sequence, original directional_step valid 0.5–2 hours, moving >=0.1 km, 100m max? previously <=60 km/h, sun elevation>=10deg at endpoints/midpoint. Estimate signed raw cos(B−A), sin(B−A), geographic heading marginal, joint circular covariance and conditioned solar-clock endpoint. Source animal weighting.",
+    "within_original_same_tag_context": "On original q-qualified same tagged animals, choose two observed 1°×year contexts with maximum original animal overlap (same source q-day eligibility as v2), blind to individual q magnitude or azimuth. In each context require >=8 q days with >=3 original solar-qualified daylight movement steps; same tag in both contexts. Compare rank2 minus rank1 of q, raw cos/sin, geographic marginal and joint covariance with 2000 paired original-tag bootstrap draws, require at least 5 tags.",
+    "status_policy": "Preserve ALL six fixed sources with provider file metadata HOLD, provider MD5 HOLD, row/cadence HOLD, taxon unsupported, no shared tags, and all signed/null estimates. Never select another source or loosen biological thresholds on output.",
+    "historical_controls": "Never revise 48-source radiation preregistered negative-direction nonreplication, old ERA5 12/12 provider JSON SHA mismatches, or prior first Utah/Wyoming GPS outcomes. This new route tests geographic/guild repeatability of GPS geometry and time only, not radiation exposure causation."
+  },
+  "descriptive_generalization_level": "Only source-conditionally observed animals from up to six purposively sampled original field studies. No phylogenetic/global random-effects mean or climate response identified.",
+  "frozen_prior_source_shortwave_nonreplication": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "analysis_separation": "Run source-only metadata first before original six GPS movements are opened; store a source-manifest and clear HOLD status for every candidate."
+}

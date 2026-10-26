@@ -1,0 +1,595 @@
+{
+  "all_sources_including_egret_original_metadata_HOLD": [
+    {
+      "daylength_slope": {
+        "animal_bootstrap95": [
+          0.0015727083739978875,
+          0.008013235182086414
+        ],
+        "mean": 0.004899934756973461,
+        "source_animals": 213,
+        "status": "POSITIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "q": {
+        "animal_bootstrap95": [
+          -0.12175099359970626,
+          -0.11258860955602955
+        ],
+        "mean": -0.1171668232141959,
+        "source_animals": 215,
+        "status": "NEGATIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "same_tag_contexts": {
+        "paired_source_tagged_animals": 33,
+        "status": "PAIRED_TAG_ESTIMABLE"
+      },
+      "source_frame": "PRE_EXISTING_TWO_ORIGINAL_STUDIES",
+      "source_region": "Utah",
+      "source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "source_study_doi": "10.5441/001/1.711",
+      "sun_joint": {
+        "animal_bootstrap95": null,
+        "mean": 0.0024281476050759514,
+        "source_animals": 212,
+        "status": "POINT_ONLY_NO_ORIGINAL_CI"
+      },
+      "sun_raw": {
+        "animal_bootstrap95": [
+          -0.013941606694393162,
+          0.005461565735967214
+        ],
+        "mean": -0.0045108595737969135,
+        "source_animals": 212,
+        "status": "INCLUDES_ZERO"
+      },
+      "taxon": "Antilocapra americana"
+    },
+    {
+      "daylength_slope": {
+        "animal_bootstrap95": [
+          0.007155956289142913,
+          0.011945928671224418
+        ],
+        "mean": 0.009598574984599324,
+        "source_animals": 332,
+        "status": "POSITIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "q": {
+        "animal_bootstrap95": [
+          -0.03576520611434819,
+          -0.02763130251964814
+        ],
+        "mean": -0.031888720397475416,
+        "source_animals": 337,
+        "status": "NEGATIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "same_tag_contexts": {
+        "paired_source_tagged_animals": 50,
+        "status": "PAIRED_TAG_ESTIMABLE"
+      },
+      "source_frame": "PRE_EXISTING_TWO_ORIGINAL_STUDIES",
+      "source_region": "Utah",
+      "source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "source_study_doi": "10.5441/001/1.711",
+      "sun_joint": {
+        "animal_bootstrap95": null,
+        "mean": -0.02893875318178318,
+        "source_animals": 327,
+        "status": "POINT_ONLY_NO_ORIGINAL_CI"
+      },
+      "sun_raw": {
+        "animal_bootstrap95": [
+          -0.04497547498668726,
+          -0.017385473445674107
+        ],
+        "mean": -0.03099213867498672,
+        "source_animals": 327,
+        "status": "NEGATIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "taxon": "Cervus elaphus"
+    },
+    {
+      "daylength_slope": {
+        "animal_bootstrap95": [
+          0.004388078182072968,
+          0.006920966097037151
+        ],
+        "mean": 0.005619415769068772,
+        "source_animals": 1683,
+        "status": "POSITIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "q": {
+        "animal_bootstrap95": [
+          -0.02321004124388584,
+          -0.02046763062163855
+        ],
+        "mean": -0.02184895488685285,
+        "source_animals": 1723,
+        "status": "NEGATIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "same_tag_contexts": {
+        "paired_source_tagged_animals": 101,
+        "status": "PAIRED_TAG_ESTIMABLE"
+      },
+      "source_frame": "PRE_EXISTING_TWO_ORIGINAL_STUDIES",
+      "source_region": "Utah",
+      "source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "source_study_doi": "10.5441/001/1.711",
+      "sun_joint": {
+        "animal_bootstrap95": null,
+        "mean": 0.020344438683575664,
+        "source_animals": 1652,
+        "status": "POINT_ONLY_NO_ORIGINAL_CI"
+      },
+      "sun_raw": {
+        "animal_bootstrap95": [
+          0.016263503507486673,
+          0.03067344984180173
+        ],
+        "mean": 0.023393157844424365,
+        "source_animals": 1652,
+        "status": "POSITIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "daylength_slope": {
+        "animal_bootstrap95": [
+          0.004101632821224659,
+          0.006972859886325625
+        ],
+        "mean": 0.005538249061142167,
+        "source_animals": 118,
+        "status": "POSITIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "q": {
+        "animal_bootstrap95": [
+          -0.005777731444226381,
+          -0.003089662007489691
+        ],
+        "mean": -0.0044624294869207584,
+        "source_animals": 119,
+        "status": "NEGATIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "same_tag_contexts": {
+        "paired_source_tagged_animals": 37,
+        "status": "PAIRED_TAG_ESTIMABLE"
+      },
+      "source_frame": "PRE_EXISTING_TWO_ORIGINAL_STUDIES",
+      "source_region": "Wyoming",
+      "source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "source_study_doi": "10.5441/001/1.703",
+      "sun_joint": {
+        "animal_bootstrap95": null,
+        "mean": -0.005920419175951203,
+        "source_animals": 110,
+        "status": "POINT_ONLY_NO_ORIGINAL_CI"
+      },
+      "sun_raw": {
+        "animal_bootstrap95": [
+          -0.0688249761970045,
+          -0.03128410920046904
+        ],
+        "mean": -0.04875792375635666,
+        "source_animals": 110,
+        "status": "NEGATIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "daylength_slope": {
+        "animal_bootstrap95": [
+          -0.006502919223183204,
+          0.0006123921190547578
+        ],
+        "mean": -0.003411758739636626,
+        "source_animals": 339,
+        "status": "INCLUDES_ZERO"
+      },
+      "q": {
+        "animal_bootstrap95": [
+          -0.06902186763881439,
+          -0.06272814999976593
+        ],
+        "mean": -0.06576087192631512,
+        "source_animals": 343,
+        "status": "NEGATIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "same_tag_contexts": {
+        "paired_source_tagged_animals": 27,
+        "status": "PAIRED_TAG_ESTIMABLE"
+      },
+      "source_frame": "PRE_EXISTING_TWO_ORIGINAL_STUDIES",
+      "source_region": "Utah",
+      "source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "source_study_doi": "10.5441/001/1.711",
+      "sun_joint": {
+        "animal_bootstrap95": null,
+        "mean": 0.0070567879331317205,
+        "source_animals": 341,
+        "status": "POINT_ONLY_NO_ORIGINAL_CI"
+      },
+      "sun_raw": {
+        "animal_bootstrap95": [
+          0.01258211959761602,
+          0.028674137620671666
+        ],
+        "mean": 0.020777764359222645,
+        "source_animals": 341,
+        "status": "POSITIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "taxon": "Ovis canadensis"
+    },
+    {
+      "daylength_slope": {
+        "animal_bootstrap95": [
+          -0.005847345967794438,
+          0.010985829877007601
+        ],
+        "mean": 0.00021733399923758685,
+        "source_animals": 41,
+        "status": "INCLUDES_ZERO"
+      },
+      "q": {
+        "animal_bootstrap95": [
+          -0.022469942801247658,
+          -0.017531021856795847
+        ],
+        "mean": -0.01997499965861462,
+        "source_animals": 41,
+        "status": "NEGATIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "same_tag_contexts": {
+        "paired_source_tagged_animals": 21,
+        "status": "PAIRED_TAG_ESTIMABLE"
+      },
+      "source_frame": "PRE_EXISTING_TWO_ORIGINAL_STUDIES",
+      "source_region": "Wyoming",
+      "source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "source_study_doi": "10.5441/001/1.703",
+      "sun_joint": {
+        "animal_bootstrap95": null,
+        "mean": -0.004504242230696008,
+        "source_animals": 41,
+        "status": "POINT_ONLY_NO_ORIGINAL_CI"
+      },
+      "sun_raw": {
+        "animal_bootstrap95": [
+          -0.03861666245298831,
+          0.02440226934920781
+        ],
+        "mean": -0.005280664595582365,
+        "source_animals": 41,
+        "status": "INCLUDES_ZERO"
+      },
+      "taxon": "Ovis canadensis"
+    },
+    {
+      "daylength_slope": {
+        "animal_bootstrap95": [
+          -0.0371904104945014,
+          -0.015330450535656421
+        ],
+        "mean": -0.026299888128490025,
+        "source_animals": 170,
+        "status": "NEGATIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "q": {
+        "animal_bootstrap95": [
+          -0.09668160894348057,
+          -0.08658081928483057
+        ],
+        "mean": -0.0915454462260995,
+        "source_animals": 186,
+        "status": "NEGATIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "same_tag_contexts": {
+        "paired_source_tagged_animals": 8,
+        "status": "PAIRED_TAG_ESTIMABLE"
+      },
+      "source_frame": "PROSPECTIVELY_FIXED_SIX_NEW_ORIGINAL_STUDIES",
+      "source_region": "southeastern United States",
+      "source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "source_study_doi": "10.5441/001/1.671",
+      "sun_joint": {
+        "animal_bootstrap95": [
+          -0.009262390521091205,
+          0.005231521694635456
+        ],
+        "mean": -0.0016490974609724746,
+        "source_animals": 271,
+        "status": "INCLUDES_ZERO"
+      },
+      "sun_raw": {
+        "animal_bootstrap95": [
+          -0.00996318958033778,
+          0.005626323187879962
+        ],
+        "mean": -0.0017346135789542544,
+        "source_animals": 271,
+        "status": "INCLUDES_ZERO"
+      },
+      "taxon": "Meleagris gallopavo"
+    },
+    {
+      "daylength_slope": {
+        "animal_bootstrap95": [
+          0.0015505906881394568,
+          0.023203120411592202
+        ],
+        "mean": 0.012819774445985886,
+        "source_animals": 31,
+        "status": "POSITIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "q": {
+        "animal_bootstrap95": [
+          0.0802823649591662,
+          0.13501424978082832
+        ],
+        "mean": 0.1085989197299469,
+        "source_animals": 35,
+        "status": "POSITIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "same_tag_contexts": {
+        "paired_source_tagged_animals": 6,
+        "status": "PAIRED_TAG_ESTIMABLE"
+      },
+      "source_frame": "PROSPECTIVELY_FIXED_SIX_NEW_ORIGINAL_STUDIES",
+      "source_region": "central California",
+      "source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "source_study_doi": "10.5441/001/1.323",
+      "sun_joint": {
+        "animal_bootstrap95": [
+          -0.031635160321857446,
+          0.008552885691947594
+        ],
+        "mean": -0.009913579816755752,
+        "source_animals": 31,
+        "status": "INCLUDES_ZERO"
+      },
+      "sun_raw": {
+        "animal_bootstrap95": [
+          -0.04661794461076853,
+          0.04022986625575563
+        ],
+        "mean": -0.003817222720199794,
+        "source_animals": 31,
+        "status": "INCLUDES_ZERO"
+      },
+      "taxon": "Lynx rufus"
+    },
+    {
+      "daylength_slope": {
+        "animal_bootstrap95": [
+          -0.03373129401476338,
+          0.027853192180006973
+        ],
+        "mean": 0.0009782924299143007,
+        "source_animals": 30,
+        "status": "INCLUDES_ZERO"
+      },
+      "q": {
+        "animal_bootstrap95": [
+          0.15580729672412016,
+          0.2216704016945587
+        ],
+        "mean": 0.18975378246072777,
+        "source_animals": 30,
+        "status": "POSITIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "same_tag_contexts": {
+        "paired_source_tagged_animals": 0,
+        "status": "PAIRED_TAG_UNAVAILABLE"
+      },
+      "source_frame": "PROSPECTIVELY_FIXED_SIX_NEW_ORIGINAL_STUDIES",
+      "source_region": "United Kingdom",
+      "source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "source_study_doi": "10.5441/001/1.304",
+      "sun_joint": {
+        "animal_bootstrap95": [
+          -0.042308784613291725,
+          0.032047142739643125
+        ],
+        "mean": -0.006869847971450719,
+        "source_animals": 21,
+        "status": "INCLUDES_ZERO"
+      },
+      "sun_raw": {
+        "animal_bootstrap95": [
+          -0.05022928078852822,
+          0.03406110989164624
+        ],
+        "mean": -0.010380763251403824,
+        "source_animals": 21,
+        "status": "INCLUDES_ZERO"
+      },
+      "taxon": "Vulpes vulpes"
+    },
+    {
+      "daylength_slope": {
+        "animal_bootstrap95": [
+          -0.0996110566303726,
+          0.018607794040063182
+        ],
+        "mean": -0.045389512719868505,
+        "source_animals": 7,
+        "status": "INCLUDES_ZERO"
+      },
+      "q": {
+        "animal_bootstrap95": [
+          0.07291184708669471,
+          0.13226846260959857
+        ],
+        "mean": 0.10097679331631548,
+        "source_animals": 9,
+        "status": "POSITIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "same_tag_contexts": {
+        "paired_source_tagged_animals": null,
+        "status": "PAIRED_TAG_UNAVAILABLE"
+      },
+      "source_frame": "PROSPECTIVELY_FIXED_SIX_NEW_ORIGINAL_STUDIES",
+      "source_region": "Thailand",
+      "source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "source_study_doi": "10.5441/001/1.644",
+      "sun_joint": {
+        "animal_bootstrap95": null,
+        "mean": null,
+        "source_animals": 3,
+        "status": "UNAVAILABLE"
+      },
+      "sun_raw": {
+        "animal_bootstrap95": null,
+        "mean": null,
+        "source_animals": 3,
+        "status": "UNAVAILABLE"
+      },
+      "taxon": "Prionailurus viverrinus"
+    },
+    {
+      "daylength_slope": {
+        "animal_bootstrap95": null,
+        "mean": null,
+        "source_animals": 0,
+        "status": "UNAVAILABLE"
+      },
+      "q": {
+        "animal_bootstrap95": null,
+        "mean": null,
+        "source_animals": 0,
+        "status": "UNAVAILABLE"
+      },
+      "same_tag_contexts": {
+        "paired_source_tagged_animals": null,
+        "status": "UNAVAILABLE"
+      },
+      "source_frame": "PROSPECTIVELY_FIXED_SIX_NEW_ORIGINAL_STUDIES",
+      "source_region": "California",
+      "source_status": "ORIGINAL_METADATA_HOLD",
+      "source_study_doi": "10.5441/001/1.641",
+      "sun_joint": {
+        "animal_bootstrap95": null,
+        "mean": null,
+        "source_animals": 0,
+        "status": "UNAVAILABLE"
+      },
+      "sun_raw": {
+        "animal_bootstrap95": null,
+        "mean": null,
+        "source_animals": 0,
+        "status": "UNAVAILABLE"
+      },
+      "taxon": "Ardea alba"
+    },
+    {
+      "daylength_slope": {
+        "animal_bootstrap95": [
+          -0.0007567041284794745,
+          0.0034703393302583157
+        ],
+        "mean": 0.001463872019545867,
+        "source_animals": 43,
+        "status": "INCLUDES_ZERO"
+      },
+      "q": {
+        "animal_bootstrap95": [
+          0.004205078288839237,
+          0.007975559125205612
+        ],
+        "mean": 0.00608386954491994,
+        "source_animals": 43,
+        "status": "POSITIVE_NOMINAL_SOURCE_TAG_INTERVAL"
+      },
+      "same_tag_contexts": {
+        "paired_source_tagged_animals": 5,
+        "status": "PAIRED_TAG_ESTIMABLE"
+      },
+      "source_frame": "PROSPECTIVELY_FIXED_SIX_NEW_ORIGINAL_STUDIES",
+      "source_region": "Australia",
+      "source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "source_study_doi": "10.5441/001/1.740",
+      "sun_joint": {
+        "animal_bootstrap95": [
+          -0.009044419994130136,
+          0.025255808977304672
+        ],
+        "mean": 0.008121543041063724,
+        "source_animals": 42,
+        "status": "INCLUDES_ZERO"
+      },
+      "sun_raw": {
+        "animal_bootstrap95": [
+          -0.00024800492660791054,
+          0.03871363092477592
+        ],
+        "mean": 0.019382823845136808,
+        "source_animals": 42,
+        "status": "INCLUDES_ZERO"
+      },
+      "taxon": "Phascolarctos cinereus"
+    }
+  ],
+  "date": "2026-10-26",
+  "interpretation_limits": [
+    "Even though 8 study DOIs are distinct, taxa share original field studies and ecological recruitment history; 12 study×taxon rows are not 12 independent ecosystem samples.",
+    "Six new studies were chosen purposively on metadata and guild diversity, not randomly or as a preregistered ecosystem-trait hypothesis. The 200MB egret original file HOLD stays in denominator.",
+    "q is nightly minus daytime log1p minimum observed straight-line GPS movement speed, not fraction or duration of latent activity.",
+    "A negative q is more DAY-displacement; positive q more NIGHT-displacement only under source GPS sampling. Tracking duty cycle and speed sampling can confound guild differences.",
+    "Photoperiod slopes are observational within-animal-year associations and can proxy resource, temperature, route and seasonal biology.",
+    "Raw Sun-relative cos can vary entirely due to geographical route heading marginal; joint circular covariance is a distinct estimator.",
+    "Old six joint heading covariance values do not have source animal-bootstrap intervals in the selected original cross-axis archive: keep POINT_ONLY, never infer zero-spanning uncertainty from new four source studies.",
+    "All four new supported source joint solar cosine bootstrap intervals span zero, not proof of no solar response.",
+    "Original same-tag context ranks select GPS observational support, not a repeated standardized ecological exposure or high/low irradiance.",
+    "Unestimated new source GPS sun direction for fishing cats, 200MB egret HOLD and original ERA5 version holds are NOT ecological zero.",
+    "Original tagged animal identities, locations, UTC event times, original restricted source bytes and per-animal original step effects are not published.",
+    "No causal sunlight/radiation/solar-compass use, ecological competition, guild adaptation or world-population generality has been identified."
+  ],
+  "observed_nominal_source_animal_bootstrap_sign_counts": {
+    "joint_heading_sun_covariance": {
+      "INCLUDES_ZERO": 4,
+      "POINT_ONLY_NO_ORIGINAL_CI": 6,
+      "UNAVAILABLE": 2
+    },
+    "mean_sun_relative_heading_cos": {
+      "INCLUDES_ZERO": 6,
+      "NEGATIVE_NOMINAL_SOURCE_TAG_INTERVAL": 2,
+      "POSITIVE_NOMINAL_SOURCE_TAG_INTERVAL": 2,
+      "UNAVAILABLE": 2
+    },
+    "night_day_q": {
+      "NEGATIVE_NOMINAL_SOURCE_TAG_INTERVAL": 7,
+      "POSITIVE_NOMINAL_SOURCE_TAG_INTERVAL": 4,
+      "UNAVAILABLE": 1
+    },
+    "q_association_with_daylength_per_hour": {
+      "INCLUDES_ZERO": 5,
+      "NEGATIVE_NOMINAL_SOURCE_TAG_INTERVAL": 1,
+      "POSITIVE_NOMINAL_SOURCE_TAG_INTERVAL": 5,
+      "UNAVAILABLE": 1
+    },
+    "same_original_tagged_context": {
+      "PAIRED_TAG_ESTIMABLE": 9,
+      "PAIRED_TAG_UNAVAILABLE": 2,
+      "UNAVAILABLE": 1
+    }
+  },
+  "old_12_ERA5_provider_raw_SHA_HOLDS_UNCHANGED": true,
+  "old_48_radiation_study_external_negative_direction_test_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "original_source_file_blob_receipts": {
+    "research/MOVEBANK_UTAH_DIEL_PHOTOPERIOD_VERIFIED_RESULT_V0_20261019.json": "5870c6920d83258c5b62b36dc7d043802c494fef",
+    "research/RSDS_CROSS_AXIS_GENERALITY_FIRST_RESULT_20261026.json": "951d27f4b772507b0c26af3118186639e1591bec",
+    "research/RSDS_NEW_SIX_ORIGINAL_GPS_ECOLOGY_FIRST_RESULT_20261026.json": "e2759ddb1120cbcd067dd5189775d685aea65a32",
+    "research/RSDS_SAME_TAG_GPS_GEOMETRY_V2_FIRST_RESULT_20261026.json": "1ec684797f0b7aae0ec441163e1bbeec48d3bd61",
+    "research/wyoming_two_ungulates_20261022/wyoming_original_result.json": "b9428dd18f2556e1bed245894546d6399da045dc"
+  },
+  "original_studies_with_admissible_q": 7,
+  "original_study_denominator": 8,
+  "source_equal_unit_not_12_independent_ecosystems": true,
+  "source_tag_context_pair_occurrences_NOT_global_biomes": 288,
+  "source_taxa_with_paired_original_tags": 9,
+  "source_taxa_with_q": 11,
+  "source_taxa_with_solar_raw": 10,
+  "source_taxon_rows": 12,
+  "stage": "POST_NEW_SIX_SOURCE_RESULTS_EXPLORATORY_ORIGINAL_STUDY_COMPARISON",
+  "version": "RSDS_8_ORIGINAL_GPS_STUDY_12_TAXON_TIME_SOLAR_ATLAS_V1"
+}
