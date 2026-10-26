@@ -95,7 +95,14 @@ def summarize_axis(studies, var, i):
         "equal_native_taxon_row_mean_NOT_INDEPENDENT_STUDIES":naive,
         "equal_source_minus_equal_taxon_row":actual-naive,
         "equal_source_95percentile_study_resampling_CONDITIONAL_NONPROBABILITY":
+            None if var == "joint_circular_covariance" else
             equal_source_bootstrap(src, seed=SEED + 19*i),
+        "source_resampling_interval_available":
+            var != "joint_circular_covariance",
+        "uncertainty_ceiling":
+            ("OLD_SIX_JOINT_ESTIMATES_ARE_POINT_ONLY_NO_TAG_INTERVAL"
+             if var == "joint_circular_covariance" else
+             "SOURCE_RESAMPLING_CONDITIONAL_ON_PURPOSIVELY_SELECTED_FIELD_STUDIES_ONLY"),
         "leave_one_original_study_out_equal_source_mean_range":[min(loo),max(loo)],
         "supported_original_source_signs":{
             "positive":sum(x>0 for x in src),
