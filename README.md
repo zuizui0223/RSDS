@@ -2,7 +2,7 @@
 
 **RSDSを生態学研究の一次保管先とする。** 旧ODSPから、公開原データに基づく太陽方位・日射・日周移動・季節的再配分・等日長比較・マクロ気候解析を引き継ぐ。一般的なODSP状態空間予測アルゴリズムは本研究の中心にしない。
 
-**2026-10-26移管：** [移転元の固定コミット](https://github.com/zuizui0223/odsp/commit/d58fb759416fc458c60cb153f0c5c9baf5c0b218752a5e15e) の太陽・季節生態学に関する結果、契約、スクリプト、テスト、草稿、台帳、歴史的CI仕様を保存する。[固定390ファイルの移管マニフェスト](provenance/ODSP_SOLAR_SEASON_MIGRATION_MANIFEST_20261026.json)と[移管照合記録](provenance/RSDS_TRANSFER_VERIFICATION_20261026.json)を参照。照合が全件成立するまで「完了」と見なさない。
+**2026-10-26移管：** [移転元の固定コミット](https://github.com/zuizui0223/odsp/commit/d58fb759416fc458f69ef61ea79b7b1d4164f2c5) の太陽・季節生態学に関する結果、契約、スクリプト、テスト、草稿、台帳、歴史的CI仕様を保存する。[固定390ファイルの移管マニフェスト](provenance/ODSP_SOLAR_SEASON_MIGRATION_MANIFEST_20261026.json)と[移管照合記録](provenance/RSDS_TRANSFER_VERIFICATION_20261026.json)を参照。照合が全件成立するまで「完了」と見なさない。
 
 ## 中心となる生態学的問い
 
