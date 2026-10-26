@@ -1,0 +1,117 @@
+name: RSDS original tagged animal Sun/daypart ERA5 v0
+on:
+  push:
+    branches: [science/original-individual-solar-weather-coupling-v0]
+    paths:
+      - research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_CONTRACT.json
+      - scripts/run_rsds_same_animal_solar_weather_v0.py
+      - tests/test_rsds_same_animal_solar_weather_v0.py
+      - .github/workflows/rsds-same-animal-solar-weather-v0.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original numerical LS dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Check immutable original-source records
+        run: python -m scripts.verify_rsds_migration
+      - name: Test original source admission, fixed q replay, geometry FWL and support holds
+        run: python -m unittest discover -s tests -p 'test_rsds_same_animal_solar_weather_v0.py' -v
+      - name: Test the frozen nonreplicated radiation comparison
+        run: python -m unittest discover -s tests -p 'test_rsds_cross_axis_generality_v0.py' -v
+  original_public_GPS:
+    needs: known_truth
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        source: [Utah, Wyoming]
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original numerical dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Download provider-original GPS under checksum and exactly replay old q before new ERA5
+        run: |
+          python -m scripts.run_rsds_same_animal_solar_weather_v0 \
+            --source ${{ matrix.source }} \
+            --out outputs/rsds_same_animal_${{ matrix.source }}
+      - name: Store only aggregated public first source ecological results
+        uses: actions/upload-artifact@v4
+        with:
+          name: original-GPS-weather-${{ matrix.source }}-v0
+          path: outputs/rsds_same_animal_${{ matrix.source }}/same_animal_original_*.json
+          if-no-files-found: error
+  source_first_combination:
+    needs: original_public_GPS
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/original-individual-solar-weather-coupling-v0
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: original-GPS-weather-*-v0
+          path: outputs/source_shards
+          merge-multiple: true
+      - name: Preserve all original source taxa including technical holds
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('outputs/source_shards')
+          paths=sorted(p.glob('same_animal_original_*.json'))
+          if len(paths)!=2:
+              raise ValueError('Both original GPS source study first reports required')
+          studies=[json.loads(q.read_text(encoding='utf-8')) for q in paths]
+          by={s['region']:s for s in studies}
+          if set(by)!={'Utah','Wyoming'}:
+              raise ValueError('Original study identity mismatch; no replacement')
+          expected={'Utah':['Antilocapra americana','Cervus elaphus','Odocoileus hemionus','Ovis canadensis'],
+                    'Wyoming':['Odocoileus hemionus','Ovis canadensis']}
+          for source, taxa in expected.items():
+              if by[source]['original_native_taxa']!=taxa or len(by[source]['taxon_results'])!=len(taxa):
+                  raise ValueError('Incomplete frozen original source taxa')
+          first={'version':'rsds-original-two-studies-same-animal-solar-weather-v0',
+                 'date':'2026-10-26','stage':'ORIGINAL_SOURCE_EXPLORATORY_FIRST_RUN',
+                 'fixed_original_study_count':2,'total_source_native_taxon_rows':6,
+                 'frozen_external_radiation_nonreplication_UNCHANGED':'NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE',
+                 'sources':[by['Utah'],by['Wyoming']],
+                 'claim_limit':'One source/group rather than thousands of independent biomes. Day-night minimum GPS step speeds and Sun-relative daylight GPS displacement respond observationally to modeled ERA5; neither a direct solar compass nor causal radiation exposure.'}
+          root=Path('research/rsds_same_animal_solar_weather_20261026')
+          root.mkdir(parents=True,exist_ok=True)
+          for v in studies:
+              (root/(v['region'].lower()+'_original_first_result.json')).write_text(
+                  json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+          Path('research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_FIRST_RESULTS_20261026.json').write_text(
+              json.dumps(first,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+          print('RSDS_SOURCE_FIRST',json.dumps({
+              'replay':{k:v['source_original_replayed_before_NEW_weather'] for k,v in by.items()},
+              'status':{k:v['status'] for k,v in by.items()},
+              'verified_weather_gridyears':{k:v.get('weather_verified_unique_original_gridyears',0) for k,v in by.items()}},
+              sort_keys=True),flush=True)
+          PY
+      - name: Commit first group-only results on ecological research branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_FIRST_RESULTS_20261026.json research/rsds_same_animal_solar_weather_20261026
+          if ! git diff --cached --quiet; then
+            git commit -m "results: first original tagged-animal solar time direction weather study"
+            git push origin HEAD:science/original-individual-solar-weather-coupling-v0
+          fi
