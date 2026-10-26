@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - research/odsp-solar-season-migration-20261026
     paths:
       - 'scripts/**'
       - 'tests/**'
