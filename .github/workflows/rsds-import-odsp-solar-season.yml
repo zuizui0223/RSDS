@@ -124,7 +124,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- docs manuscript research scripts tests odsp archive provenance README.md LICENSE .gitignore
+          git add -- docs manuscript research scripts tests odsp archive provenance README.md LICENSE .gitignore N2_SERENGETI_*.json
           if ! git diff --cached --quiet; then
             git commit -m "migration: preserve 390 ODSP solar/season ecology assets with exact original blob SHA receipt"
             git push origin HEAD:research/odsp-solar-season-migration-20261026
