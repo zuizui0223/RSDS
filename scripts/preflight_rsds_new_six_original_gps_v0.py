@@ -86,7 +86,17 @@ def one_source(s, provider):
                   if str(x.get("name") or "").lower().endswith(FORMATS)
                   and "reference-data" not in x["name"].lower()
                   and "__macosx" not in x["name"].lower()
-                  and not x["name"].rsplit("/",1)[-1].startswith("._")]
+                  and not x["name"].rsplit("/",1)[-1].startswith("._")
+                  and not any(part.startswith("acc") and
+                              (len(part)==3 or part[3].isdigit() or part[3] in (".","_"))
+                              for part in x["name"].lower().replace("_","-").split("-"))]
+        # Original source NAME only: a GPS CSV often coexists with
+        # accelerometer streams and should not be treated as ambiguity.
+        gps_named = [x for x in usable if "-gps.csv" in x["name"].lower()
+                     or "_gps.csv" in x["name"].lower()
+                     or "gps.csv.zip" in x["name"].lower()]
+        if len(gps_named) == 1:
+            usable = gps_named
         if len(usable) != 1:
             entry["metadata_hold_reason"] = "NO_UNAMBIGUOUS_SINGLE_PRIMARY_ORIGINAL_FILE"
             entry["original_data_file_candidates"] = len(usable)
