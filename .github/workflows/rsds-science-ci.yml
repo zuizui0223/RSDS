@@ -103,6 +103,30 @@ jobs:
           assert new['earlier_weather_version_holds_preserved'] == 12
           print('RSDS source-original 269 tagged GPS time and solar geometry first ecological receipt locked')
           PY
+      - name: Verify 8 original studies, 12 source taxa, frozen pre-event source MD5 and first macro results
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_new_six_original_gps_preflight_v0.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_new_six_original_gps_ecology_v0.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_new_six_original_gps_aggregate_v0.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_eight_study_temporal_solar_macro_atlas_v1.py' -v
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from scripts.build_rsds_eight_study_temporal_solar_macro_atlas_v1 import macro
+          p = Path('research/RSDS_8_STUDY_TIME_SOLAR_HEADING_MACRO_ATLAS_V1_20261026.json')
+          old = json.loads(p.read_text(encoding='utf-8'))
+          fresh = macro()
+          assert old == fresh, "Eight original study first-result macroecology was modified"
+          assert fresh['original_study_denominator']==8 and fresh['source_taxon_rows']==12
+          assert fresh['source_taxa_with_q']==11 and fresh['source_taxa_with_solar_raw']==10
+          assert fresh['source_taxa_with_paired_original_tags']==9
+          assert fresh['source_tag_context_pair_occurrences_NOT_global_biomes']==288
+          assert fresh['old_48_radiation_study_external_negative_direction_test_UNCHANGED'] == 'NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          assert fresh['old_12_ERA5_provider_raw_SHA_HOLDS_UNCHANGED'] is True
+          print('RSDS eight original GPS field-study macro ecology SHA-locked unchanged, all source holds preserved')
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
