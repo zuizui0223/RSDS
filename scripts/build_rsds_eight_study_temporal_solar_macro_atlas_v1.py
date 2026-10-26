@@ -61,6 +61,27 @@ def observed(value, interval, n, point_only=False):
     return {"status":status,"mean":value,"source_animals":n,"animal_bootstrap95":interval}
 
 
+def normalize_new_source_axis(axis):
+    """Unify labels without reclassifying any first-original source result.
+
+    Previous and newly frozen studies used different *names* for the same
+    nominal original-tag bootstrap interval signs. Recheck all point estimates
+    and intervals, and fail rather than silently disagree with first results.
+    """
+    names = {
+        "POSITIVE_NOMINAL_BOOTSTRAP": "POSITIVE_NOMINAL_SOURCE_TAG_INTERVAL",
+        "NEGATIVE_NOMINAL_BOOTSTRAP": "NEGATIVE_NOMINAL_SOURCE_TAG_INTERVAL",
+        "INCLUDES_ZERO": "INCLUDES_ZERO",
+        "UNAVAILABLE": "UNAVAILABLE",
+    }
+    if axis["status"] not in names:
+        raise ValueError("New source original bootstrapped axis status unknown")
+    rec = observed(axis["mean"], axis["bootstrap95"], axis["n_animals"])
+    if rec["status"] != names[axis["status"]]:
+        raise ValueError("New original source outcome inconsistent with its frozen sign interval")
+    return rec
+
+
 def macro(root=ROOT):
     root=Path(root).resolve()
     old,new,utah,wyoming,geo=(
@@ -119,10 +140,10 @@ def macro(root=ROOT):
             "taxon":s["native_taxon"],
             "source_frame":"PROSPECTIVELY_FIXED_SIX_NEW_ORIGINAL_STUDIES",
             "source_status":s["original_GPS_outcome_status"],
-            "q":s["source_q_night_minus_day"],
-            "daylength_slope":s["source_q_daylength_per_hour"],
-            "sun_raw":s["source_solar_relative_heading_cos"],
-            "sun_joint":s["source_joint_heading_sun_covariance"],
+            "q":normalize_new_source_axis(s["source_q_night_minus_day"]),
+            "daylength_slope":normalize_new_source_axis(s["source_q_daylength_per_hour"]),
+            "sun_raw":normalize_new_source_axis(s["source_solar_relative_heading_cos"]),
+            "sun_joint":normalize_new_source_axis(s["source_joint_heading_sun_covariance"]),
             "same_tag_contexts":{"status":axes["status"],
                 "paired_source_tagged_animals":axes["actual_paired_tagged_animal_support"]},
         })
