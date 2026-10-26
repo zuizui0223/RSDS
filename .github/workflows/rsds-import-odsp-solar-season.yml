@@ -1,0 +1,131 @@
+name: Import solar and seasonal ecology from pinned ODSP
+on:
+  push:
+    branches:
+      - research/odsp-solar-season-migration-20261026
+    paths:
+      - '.github/workflows/rsds-import-odsp-solar-season.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  migrate_and_verify_original_science:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/odsp-solar-season-migration-20261026
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Retrieve pinned original public ODSP research commit, no anonymous moving HEAD
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet --no-checkout https://github.com/zuizui0223/odsp.git "$RUNNER_TEMP/odsp-source"
+          git -C "$RUNNER_TEMP/odsp-source" checkout --quiet --detach d58fb759416fc458f69ef61ea79b7b1d4164f2c5
+          test "$(git -C "$RUNNER_TEMP/odsp-source" rev-parse HEAD)" = d58fb759416fc458f69ef61ea79b7b1d4164f2c5
+      - name: Copy all frozen solar/season study text assets with exact original Git-blob hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+          import shutil
+
+          target = Path.cwd().resolve()
+          source = (Path(os.environ["RUNNER_TEMP"]) / "odsp-source").resolve()
+          manifest_path = target / "provenance/ODSP_SOLAR_SEASON_MIGRATION_MANIFEST_20261026.json"
+          manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+          assert manifest["source_commit"] == "d58fb759416fc458f69ef61ea79b7b1d4164f2c5"
+          assert manifest["text_items"] == 390
+          assert len(manifest["files"]) == 390
+          assert len({x["source"] for x in manifest["files"]}) == 390
+          assert len({x["target"] for x in manifest["files"]}) == 390
+
+          def blob_sha(data: bytes) -> str:
+              return hashlib.sha1(("blob " + str(len(data)) + "\0").encode() + data).hexdigest()
+
+          records = []
+          for item in manifest["files"]:
+              a = (source / item["source"]).resolve()
+              b = (target / item["target"]).resolve()
+              if not a.is_relative_to(source) or not b.is_relative_to(target):
+                  raise ValueError("Unsafe source or destination path")
+              if not a.is_file() or not a.suffix.lower() in {
+                  ".py", ".json", ".csv", ".md", ".yml", ".yaml", ".toml", ".txt"
+              }:
+                  raise ValueError("Absent or unexpected research source file: " + item["source"])
+              raw = a.read_bytes()
+              if len(raw) != item["bytes"] or blob_sha(raw) != item["blob_sha"]:
+                  raise ValueError("Frozen original bytes and blob SHA disagree: " + item["source"])
+              b.parent.mkdir(parents=True, exist_ok=True)
+              b.write_bytes(raw)
+              if blob_sha(b.read_bytes()) != item["blob_sha"]:
+                  raise ValueError("RSDS file differs from original: " + item["target"])
+              records.append({"path": item["target"], "git_blob_sha": item["blob_sha"],
+                              "verified_bytes": item["bytes"], "status": "exact_match"})
+
+          assert len(records) == 390 and sum(r["verified_bytes"] for r in records) == manifest["source_text_bytes"]
+
+          # Original ODSP package init imported unrelated prediction models.
+          # RSDS retains only a minimal compatibility namespace for the native
+          # Serengeti temporal modules; the new ecology package is independent.
+          init = target / "odsp/__init__.py"
+          init.parent.mkdir(parents=True, exist_ok=True)
+          init.write_text('"""Compatibility module for original RSDS Serengeti temporal source scripts. Not the ODSP modeling SDK."""\n', encoding="utf-8")
+
+          # Preserve the original code-use license, not its unrelated citation title.
+          lic = (source / "LICENSE").read_bytes()
+          (target / "LICENSE").write_bytes(lic)
+          (target / ".gitignore").write_text(
+              "__pycache__/\n.pytest_cache/\noutputs/\nprivate_original_*\n"
+              "private_external_source_*\n*.pyc\n.venv/\n", encoding="utf-8"
+          )
+
+          receipt = {
+              "version": "rsds-odsp-solar-season-verified-transfer-v1",
+              "migration_date": "2026-10-26",
+              "origin": manifest["source_repository"],
+              "origin_commit": manifest["source_commit"],
+              "destination": manifest["target_repository"],
+              "expected_source_files": manifest["text_items"],
+              "exact_original_blob_sha_matches": len(records),
+              "exact_original_source_bytes": sum(r["verified_bytes"] for r in records),
+              "all_manifest_items_verified": True,
+              "historic_ODSP_workflows_inert_under_archive": True,
+              "original_animal_GPS_fixes_copied": False,
+              "omitted_binary": manifest["nontransferred_binary"],
+              "files": records
+          }
+          path = target / "provenance/RSDS_TRANSFER_VERIFICATION_20261026.json"
+          path.write_text(json.dumps(receipt, indent=2, ensure_ascii=False) + "\n",
+                          encoding="utf-8")
+          print("RSDS_FILE_TRANSFER_VERIFIED", len(records),
+                sum(r["verified_bytes"] for r in records), flush=True)
+          PY
+      - name: Scientific source-derived tests, including heldout failure unchanged
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_solar_irradiance_direction_macro_gradient_v0.py' -v
+          python -m unittest discover -s tests -p 'test_global_solar_azimuth_macro_v0.py' -v
+          python -m unittest discover -s tests -p 'test_solar_radiation_two_24_cohort_diagnostic_v0.py' -v
+          python -m unittest discover -s tests -p 'test_solar_azimuth_weather_study_blocks_v0.py' -v
+      - name: Publish verified original scientific corpus to the RSDS migration branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- docs manuscript research scripts tests odsp archive provenance README.md LICENSE .gitignore N2_SERENGETI_*.json
+          if ! git diff --cached --quiet; then
+            git commit -m "migration: preserve 390 ODSP solar/season ecology assets with exact original blob SHA receipt"
+            git push origin HEAD:research/odsp-solar-season-migration-20261026
+          fi
