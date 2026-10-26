@@ -37,6 +37,27 @@ The original source×taxon includes many tagged animals, but **only two regional
 
 Source q days, solar-bearing daylight moving steps, the 1° source-gridyear, and fine solar-clock blocks impose eligibility constraints and can yield "UNSUPPORTED" despite strong original overall source q. We retain every original native taxon with insufficient-source-weather/geometry/temporal supports and never assume an unestimated effect is ecological zero.
 
+## 初回原GPS実測結果 — 2026-10-26
+
+両ソースの原GPSプロバイダMD5と、元の全6分類群の q（夜−昼ログGPS速度）・日長傾き・適格動物数を、ERA5参照前に完全に再現した。元の1°×年グリッド候補から、動物数とq観測日だけで各分類群上位2コンテキストを選び、**12分類群×原環境コンテキスト、実質10個の異なるERA5元グリッド年**にリンクした。全選択元移動区間の時別ERA5結合率は100%であった。
+
+結果は以下の通り（+100 W/m²残差ERA5短波放射に対する観測的係数）。*同一元タグ個体・同一適格観測日*を使っても、qと方向はそれぞれ夜/昼速度と昼間の移動方位という異なるGPS区間の推定対象である。
+
+| ソース×分類群 | q・移動方向が両方推定可能な元タグ個体 | q×残差日射 | cos(B−A)×残差日射 | sin(B−A)×残差日射 |
+|---|---:|---:|---:|---:|
+| Utah プロングホーン | 99 | −0.00173 | +0.00807 | +0.00315 |
+| Utah ワピチ | 89 | +0.00309 | −0.00239 | +0.00467 |
+| Utah ミュールジカ | 84 | +0.00452 | −0.00320 | −0.00336 |
+| Utah ビッグホーン | 85 | −0.00283 | **+0.01686** | **+0.02917** |
+| Wyoming ミュールジカ | 54 | +0.00143 | −0.00737 | −0.00398 |
+| Wyoming ビッグホーン | 23 | +0.00183 | −0.00652 | −0.01509 |
+
+**支持範囲：** 全6ソース×分類群でq×残差日射の元タグbootstrap95%区間は0を含む。Utahビッグホーンの太陽方向cos係数は **+0.01686 [0.00636, 0.02647]**、sin係数は **+0.02917 [0.01765, 0.04126]** と双方正の記述的source-animal区間を示す。これは各原タグからのsample-conditionalな観測的結果で、家族内複数比較は未調整。Wyomingビッグホーンの元研究全体では両方向の95%区間が0を含み、地域効果の有意な差や同じ一般則の反証までは確定していない。
+
+**局所コンテキスト異質性：** Wyomingビッグホーンの2つの元グリッド年では太陽直交方向sinとの係数が **−0.06470 [−0.09735, −0.03217]** と **+0.03686 [+0.02385,+0.05022]** で反対方向だった。原個体の重複・年・移動経路・標高・採食条件がそろった完全なペア反事実比較ではないため、**日射反応が進化的に逆転した証拠**とは扱わない。
+
+この追加結果により、別々の既存研究集計を対応させるだけでは得られなかった**同一元個体・観測日・時別気象の複数軸実測データ構造**が成立した。一般化の次工程は、まず同じ元タグが2コンテキストの両方に十分存在する場合に限定した差の推定、次に全く別の原GPS調査への転移である。
+
 ### Original code and first outcomes
 
 - [Frozen scientific contract](../research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_CONTRACT.json)
