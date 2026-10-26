@@ -55,6 +55,33 @@ jobs:
           assert current["sunlight_weather_temporal_observation_overlap"]["shared_DOIs_with_diel_daylength_studies"] == 0
           print("RSDS original time/direction macro first receipt is unchanged")
           PY
+      - name: Verify RSDS new original same-animal solar time and weather source first result
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_same_animal_solar_weather_v0.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_same_animal_source_synthesis_v0.py' -v
+          python - <<'PY'
+          import json
+          from scripts.analyze_rsds_same_animal_source_results_v0 import (
+              ORIGINAL, PREVIOUS, RADIATION, OUTPUT, analyze
+          )
+          def load(p):
+              return json.loads(p.read_text(encoding='utf-8'))
+          first=load(ORIGINAL)
+          assert first['fixed_original_study_count']==2
+          assert first['total_source_native_taxon_rows']==6
+          assert all(r['source_original_replayed_before_NEW_weather'] for r in first['sources'])
+          new=analyze(first,load(PREVIOUS),load(RADIATION))
+          old=load(OUTPUT)
+          assert old==new, 'RSDS original first source ecology changed without a separate route'
+          assert all(
+              row['measured_source_axis_coefficients']['q_daypart_per100W']['sign_support']=='UNRESOLVED_SIGN'
+              for row in new['all_taxon_study_results']
+          )
+          assert new['frozen_external_radiation_nonreplication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          print('RSDS source original same-animal q×Sun×ERA5 first receipts immutable')
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
