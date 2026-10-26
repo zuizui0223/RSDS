@@ -1,0 +1,38 @@
+{
+  "version": "RSDS_ORIGINAL_STUDY_EQUAL_WEIGHT_MACRO_SENSITIVITY_V1",
+  "frozen_date": "2026-10-26",
+  "analysis_stage": "POSTHOC_SENSITIVITY_AFTER_FIRST_EIGHT_STUDY_ECOLOGICAL_RESULTS",
+  "original_input": "research/RSDS_8_STUDY_TIME_SOLAR_HEADING_MACRO_ATLAS_V1_20261026.json",
+  "original_git_blob_sha": "2c4670b54fa5b52737993ebf6babc3a7a58b166a",
+  "biological_question": "Does the macro descriptive mean and apparent night/day niche contrast change when multiple species sharing one original tracking field study are prevented from counting as independent source studies?",
+  "weights": {
+    "taxon_within_original_study": "one equal unit for each native taxon with an identifiable original outcome, no weighting by number of original GPS fixes or tags",
+    "original_study": "one equal weight for each DOI with at least one defined original outcome; missing egret retains a full study/hold row but not numeric zero",
+    "confidence": "5000 descriptive bootstrap draws resampling original study source equal means; conditional on nonrandom study sampling, not world confidence or p values",
+    "leave_one_source": "remove each original source study in turn from fixed defined study frame; report range of simple source-equal pooled means",
+    "alternative_naive": "equal study×taxon rows with defined effect, show how multi-species Utah/Wyoming oversampling alters pooled effect"
+  },
+  "endpoints": [
+    "original NIGHT-DAY log1p GPS step displacement speed q",
+    "within-animal-year q~astronomical daylength per hour",
+    "raw cos(GPS travel bearing-Sun azimuth) study mean",
+    "joint circular covariance study mean (POINT_ONLY for original Utah/Wyoming; refrain from claiming source uncertainty)"
+  ],
+  "sample_frame": {
+    "original_study_DOIs": 8,
+    "source_taxon_rows": 12,
+    "source_studies_with_q": 7,
+    "source_studies_with_sun_raw": 6,
+    "metadata_HOLD": 1
+  },
+  "limitations": [
+    "First q/night-day points and original source-taxon animal bootstrap uncertainty are source conditional; study-equal confidence is descriptive study-block resampling conditional on fixed, purposive nonrandom source sample.",
+    "Reweighting study-vs-taxon does not establish a biological population average or control for study-protocol or season differences.",
+    "Source mean among taxa is not independent taxon replicates, and the source counts may still overlap actual ecological populations between publications.",
+    "Source effects are not comparable to latent activity duration, solar compass or direct animal received shortwave irradiance.",
+    "Do not average over unavailable source values as zero. The six new source prior source-only egret metadata-HOLD is retained.",
+    "No source bootstrapped CI should be described as a global hypothesis test. Old joint circular covariance missing within-source intervals remains point-only.",
+    "Earlier externally nonreplicated 48-source negative sunlight-direction result and 12 ERA5 SHA version holds remain unchanged."
+  ],
+  "external_signed_radiation_prior": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
+}

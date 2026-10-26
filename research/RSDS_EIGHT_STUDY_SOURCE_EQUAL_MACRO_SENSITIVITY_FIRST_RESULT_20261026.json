@@ -1,0 +1,360 @@
+{
+  "analysis_stage": "POST_FIRST_RESULTS_SOURCE_GRAIN_DESCRIPTIVE_SENSITIVITY",
+  "date": "2026-10-26",
+  "fixed_original_source_sample_frame": {
+    "original_studies": 8,
+    "source_with_only_metadata_HOLD": [
+      "10.5441/001/1.641"
+    ],
+    "study_native_taxon_counts": {
+      "10.5441/001/1.304": 1,
+      "10.5441/001/1.323": 1,
+      "10.5441/001/1.641": 1,
+      "10.5441/001/1.644": 1,
+      "10.5441/001/1.671": 1,
+      "10.5441/001/1.703": 2,
+      "10.5441/001/1.711": 4,
+      "10.5441/001/1.740": 1
+    }
+  },
+  "old_12_ERA5_provider_source_SHA_HOLDS_UNCHANGED": true,
+  "old_external_shortwave_direction_nonreplication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "original_source_studies": 8,
+  "original_source_taxon_rows": 12,
+  "scientific_ceiling": [
+    "This route is a post-outcome change in descriptive sampling grain, not an independent new animal GPS field study.",
+    "Seven/eight original public studies were chosen purposively, not from a random population of world ecosystems. Study-bootstrap percentiles are study-resampling sensitivity only, not global 95% confidence intervals.",
+    "A shared original field study with multiple taxa contributes one equal original-study mean; even distinct study IDs can share actual ecological populations.",
+    "The nighttime/daytime q proxy estimates observed GPS step displacement speed, not true animal active time.",
+    "Changing study vs taxon weights does not causally establish species, guild, temperature, daylight adaptation or geographical heterogeneity mechanisms.",
+    "Joint circular covariance point-only old source estimates have no source-specific source-animal CI. Study-resampling of their point estimates does not create missing tag-level uncertainty.",
+    "All excluded source endpoints and egret size cap/source HOLD remain explicitly UNAVAILABLE, not ecological zeros.",
+    "Historical 48 original study signed radiation nonreplication and 12 ERA5 raw provider SHA holds are unchanged.",
+    "No original animal telemetry tracks, tag IDs, exact GPS positions/times or per-tag ecological slopes are redistributed."
+  ],
+  "source_equal_axes": {
+    "joint_circular_covariance": {
+      "equal_native_taxon_row_mean_NOT_INDEPENDENT_STUDIES": -0.001984502257476228,
+      "equal_source_95percentile_study_resampling_CONDITIONAL_NONPROBABILITY": null,
+      "equal_source_mean": -0.002550109608573131,
+      "equal_source_minus_equal_taxon_row": -0.0005656073510969034,
+      "first_original_study_QA": [
+        {
+          "study_doi": "10.5441/001/1.304",
+          "study_equal_taxon_mean": -0.006869847971450719,
+          "study_mean_sign": "negative",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.323",
+          "study_equal_taxon_mean": -0.009913579816755752,
+          "study_mean_sign": "negative",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.641",
+          "study_equal_taxon_mean": null,
+          "study_mean_sign": "UNAVAILABLE",
+          "taxa_with_defined_effect": 0,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.644",
+          "study_equal_taxon_mean": null,
+          "study_mean_sign": "UNAVAILABLE",
+          "taxa_with_defined_effect": 0,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.671",
+          "study_equal_taxon_mean": -0.0016490974609724746,
+          "study_mean_sign": "negative",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.703",
+          "study_equal_taxon_mean": -0.005212330703323605,
+          "study_mean_sign": "negative",
+          "taxa_with_defined_effect": 2,
+          "taxon_rows_in_original_study": 2
+        },
+        {
+          "study_doi": "10.5441/001/1.711",
+          "study_equal_taxon_mean": 0.00022265526000003906,
+          "study_mean_sign": "positive",
+          "taxa_with_defined_effect": 4,
+          "taxon_rows_in_original_study": 4
+        },
+        {
+          "study_doi": "10.5441/001/1.740",
+          "study_equal_taxon_mean": 0.008121543041063724,
+          "study_mean_sign": "positive",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        }
+      ],
+      "fixed_original_studies_in_denominator": 8,
+      "leave_one_original_study_out_equal_source_mean_range": [
+        -0.0046844401385005025,
+        -0.0010774155669366072
+      ],
+      "original_source_taxon_rows_with_supported_axis": 10,
+      "original_studies_with_supported_axis": 6,
+      "source_resampling_interval_available": false,
+      "supported_original_source_signs": {
+        "exact_zero": 0,
+        "negative": 4,
+        "positive": 2
+      },
+      "uncertainty_ceiling": "OLD_SIX_JOINT_ESTIMATES_ARE_POINT_ONLY_NO_TAG_INTERVAL"
+    },
+    "night_day_q": {
+      "equal_native_taxon_row_mean_NOT_INDEPENDENT_STUDIES": 0.004796829023221447,
+      "equal_source_95percentile_study_resampling_CONDITIONAL_NONPROBABILITY": [
+        -0.03413724757086294,
+        0.10346405651150109
+      ],
+      "equal_source_mean": 0.03464040880669044,
+      "equal_source_minus_equal_taxon_row": 0.029843579783468993,
+      "first_original_study_QA": [
+        {
+          "study_doi": "10.5441/001/1.304",
+          "study_equal_taxon_mean": 0.18975378246072777,
+          "study_mean_sign": "positive",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.323",
+          "study_equal_taxon_mean": 0.1085989197299469,
+          "study_mean_sign": "positive",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.641",
+          "study_equal_taxon_mean": null,
+          "study_mean_sign": "UNAVAILABLE",
+          "taxa_with_defined_effect": 0,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.644",
+          "study_equal_taxon_mean": 0.10097679331631548,
+          "study_mean_sign": "positive",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.671",
+          "study_equal_taxon_mean": -0.0915454462260995,
+          "study_mean_sign": "negative",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.703",
+          "study_equal_taxon_mean": -0.01221871457276769,
+          "study_mean_sign": "negative",
+          "taxa_with_defined_effect": 2,
+          "taxon_rows_in_original_study": 2
+        },
+        {
+          "study_doi": "10.5441/001/1.711",
+          "study_equal_taxon_mean": -0.05916634260620982,
+          "study_mean_sign": "negative",
+          "taxa_with_defined_effect": 4,
+          "taxon_rows_in_original_study": 4
+        },
+        {
+          "study_doi": "10.5441/001/1.740",
+          "study_equal_taxon_mean": 0.00608386954491994,
+          "study_mean_sign": "positive",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        }
+      ],
+      "fixed_original_studies_in_denominator": 8,
+      "leave_one_original_study_out_equal_source_mean_range": [
+        0.008788179864350884,
+        0.055671384645488764
+      ],
+      "original_source_taxon_rows_with_supported_axis": 11,
+      "original_studies_with_supported_axis": 7,
+      "source_resampling_interval_available": true,
+      "supported_original_source_signs": {
+        "exact_zero": 0,
+        "negative": 3,
+        "positive": 4
+      },
+      "uncertainty_ceiling": "SOURCE_RESAMPLING_CONDITIONAL_ON_PURPOSIVELY_SELECTED_FIELD_STUDIES_ONLY"
+    },
+    "q_daylength_per_hour": {
+      "equal_native_taxon_row_mean_NOT_INDEPENDENT_STUDIES": -0.003087792011047981,
+      "equal_source_95percentile_study_resampling_CONDITIONAL_NONPROBABILITY": [
+        -0.02238041295983056,
+        0.005275358509602449
+      ],
+      "equal_source_mean": -0.007053304104281624,
+      "equal_source_minus_equal_taxon_row": -0.003965512093233643,
+      "first_original_study_QA": [
+        {
+          "study_doi": "10.5441/001/1.304",
+          "study_equal_taxon_mean": 0.0009782924299143007,
+          "study_mean_sign": "positive",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.323",
+          "study_equal_taxon_mean": 0.012819774445985886,
+          "study_mean_sign": "positive",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.641",
+          "study_equal_taxon_mean": null,
+          "study_mean_sign": "UNAVAILABLE",
+          "taxa_with_defined_effect": 0,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.644",
+          "study_equal_taxon_mean": -0.045389512719868505,
+          "study_mean_sign": "negative",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.671",
+          "study_equal_taxon_mean": -0.026299888128490025,
+          "study_mean_sign": "negative",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.703",
+          "study_equal_taxon_mean": 0.002877791530189877,
+          "study_mean_sign": "positive",
+          "taxa_with_defined_effect": 2,
+          "taxon_rows_in_original_study": 2
+        },
+        {
+          "study_doi": "10.5441/001/1.711",
+          "study_equal_taxon_mean": 0.004176541692751233,
+          "study_mean_sign": "positive",
+          "taxa_with_defined_effect": 4,
+          "taxon_rows_in_original_study": 4
+        },
+        {
+          "study_doi": "10.5441/001/1.740",
+          "study_equal_taxon_mean": 0.001463872019545867,
+          "study_mean_sign": "positive",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        }
+      ],
+      "fixed_original_studies_in_denominator": 8,
+      "leave_one_original_study_out_equal_source_mean_range": [
+        -0.010365483862659543,
+        -0.0006639360016838102
+      ],
+      "original_source_taxon_rows_with_supported_axis": 11,
+      "original_studies_with_supported_axis": 7,
+      "source_resampling_interval_available": true,
+      "supported_original_source_signs": {
+        "exact_zero": 0,
+        "negative": 2,
+        "positive": 5
+      },
+      "uncertainty_ceiling": "SOURCE_RESAMPLING_CONDITIONAL_ON_PURPOSIVELY_SELECTED_FIELD_STUDIES_ONLY"
+    },
+    "raw_solar_relative_cos": {
+      "equal_native_taxon_row_mean_NOT_INDEPENDENT_STUDIES": -0.004192044010249672,
+      "equal_source_95percentile_study_resampling_CONDITIONAL_NONPROBABILITY": [
+        -0.014485915280850793,
+        0.007686244425420442
+      ],
+      "equal_source_mean": -0.003567014815445789,
+      "equal_source_minus_equal_taxon_row": 0.0006250291948038827,
+      "first_original_study_QA": [
+        {
+          "study_doi": "10.5441/001/1.304",
+          "study_equal_taxon_mean": -0.010380763251403824,
+          "study_mean_sign": "negative",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.323",
+          "study_equal_taxon_mean": -0.003817222720199794,
+          "study_mean_sign": "negative",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.641",
+          "study_equal_taxon_mean": null,
+          "study_mean_sign": "UNAVAILABLE",
+          "taxa_with_defined_effect": 0,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.644",
+          "study_equal_taxon_mean": null,
+          "study_mean_sign": "UNAVAILABLE",
+          "taxa_with_defined_effect": 0,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.671",
+          "study_equal_taxon_mean": -0.0017346135789542544,
+          "study_mean_sign": "negative",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        },
+        {
+          "study_doi": "10.5441/001/1.703",
+          "study_equal_taxon_mean": -0.027019294175969513,
+          "study_mean_sign": "negative",
+          "taxa_with_defined_effect": 2,
+          "taxon_rows_in_original_study": 2
+        },
+        {
+          "study_doi": "10.5441/001/1.711",
+          "study_equal_taxon_mean": 0.0021669809887158438,
+          "study_mean_sign": "positive",
+          "taxa_with_defined_effect": 4,
+          "taxon_rows_in_original_study": 4
+        },
+        {
+          "study_doi": "10.5441/001/1.740",
+          "study_equal_taxon_mean": 0.019382823845136808,
+          "study_mean_sign": "positive",
+          "taxa_with_defined_effect": 1,
+          "taxon_rows_in_original_study": 1
+        }
+      ],
+      "fixed_original_studies_in_denominator": 8,
+      "leave_one_original_study_out_equal_source_mean_range": [
+        -0.008156982547562308,
+        0.001123441056658956
+      ],
+      "original_source_taxon_rows_with_supported_axis": 10,
+      "original_studies_with_supported_axis": 6,
+      "source_resampling_interval_available": true,
+      "supported_original_source_signs": {
+        "exact_zero": 0,
+        "negative": 4,
+        "positive": 2
+      },
+      "uncertainty_ceiling": "SOURCE_RESAMPLING_CONDITIONAL_ON_PURPOSIVELY_SELECTED_FIELD_STUDIES_ONLY"
+    }
+  },
+  "source_equal_method": "one original study DOI = one unit, equal available native taxon means within each DOI; no GPS fix, animal tag or number-of-taxa weighting",
+  "version": "RSDS_EIGHT_STUDY_EQUAL_SOURCE_WEIGHT_ORIGINAL_GPS_SENSITIVITY_V1"
+}
