@@ -1,0 +1,88 @@
+{
+  "version": "RSDS_CROSS_AXIS_TEMPORAL_MOVEMENT_GENERALITY_V0",
+  "freeze_date": "2026-10-26",
+  "data_access_stage": "POST_OUTCOME_ORIGINAL_SOURCE_COMPARATIVE_ATLAS",
+  "research_goal": "Which solar/season-associated temporal movement contrasts repeat across source field studies and taxa, and which source-level Sun-relative movement bearings vary by geography, climate and sampling support?",
+  "hypothesis_family": {
+    "H1": "Ecological temporal allocation can recur across source field-study populations even where raw solar-relative movement bearing differs.",
+    "H2": "Raw solar-relative bearing can be partly determined by source geographic heading marginals, not a universally aligned solar compass.",
+    "H3": "Actual ERA5 irradiance×temporal-use association cannot be inferred without within-source observations across the same individual-time exposure frame.",
+    "H4": "Independent-source ecological generality must be evaluated separately for each temporal, movement, weather and detection endpoint, with nonreplicated/null/unsupported archives retained."
+  },
+  "immutable_odsp_source_commit": "d58fb759416fc458f69ef61ea79b7b1d4164f2c5",
+  "source_files": {
+    "original_time_gps_six_cohorts": "research/solar_ecological_calendar_cross_source_20261025/source_level_daily_climate_daylight.csv",
+    "original_solar_azimuth_all_taxa": "research/GLOBAL_SOLAR_AZIMUTH_COMBINED_V2_ALL_ORIGINAL_SOURCE_TAXON_MATRIX_20261025.csv",
+    "original_9_repeat_taxa": "research/GLOBAL_SOLAR_AZIMUTH_COMBINED_V2_MACRO_SUMMARY_20261025.json",
+    "earlier_24_irradiance": "research/SOLAR_AZIMUTH_24_SOURCE_MULTI_POPULATION_ERA5_V0_FIRST_ALL_RESULTS_20261025.json",
+    "external_24_irradiance": "research/SOLAR_RADIATION_EXTERNAL_24_SOURCE_FIRST_ALL_RESULTS_20261025.json",
+    "frozen_48_irradiance_nonrep": "research/SOLAR_RADIATION_TWO_24_SOURCE_NONREPLICATION_DIAGNOSTIC_FIRST_RESULT_20261025.json",
+    "source_seasonal_mirror_first": "research/MOVEBANK_SOLAR_MOVEMENT_V0_RESULT_20261019.json",
+    "source_seasonal_mirror_extended": "research/MOVEBANK_SOLAR_MOVEMENT_EXTENSION_V0_RESULT_20261019.json"
+  },
+  "immutable_frozen_data": "Verify all eight inputs against the original migration manifest per-file Git blob SHA before computing results. A mismatch fails closed.",
+  "primary_6_source_taxon_rows": {
+    "source_unit": "Original Movebank study DOI; for taxon-specific estimands study×native taxon, not independent world ecosystems.",
+    "identity_key": "Exact original DOI plus exact native scientific taxon string; never join by state, common name, geography or partial DOI.",
+    "studies": [
+      "10.5441/001/1.711 (Utah)",
+      "10.5441/001/1.703 (Wyoming)"
+    ],
+    "taxa": [
+      "Antilocapra americana",
+      "Cervus elaphus",
+      "Odocoileus hemionus",
+      "Ovis canadensis"
+    ],
+    "source_level_temporal_endpoint": "Within-animal-year slope of q=log1p(minimum GPS night-speed)-log1p(minimum GPS daytime speed), per modeled astronomical daylength hour; original source animal bootstrap intervals.",
+    "separate_source_level_movement_endpoint": "Equal original source animal mean cos(GPS displacement travel bearing minus instantaneous Sun azimuth), decomposed into geographic marginal and joint component. Original source animal bootstrap descriptive intervals.",
+    "unknown_or_nonidentical": "Daylength and bearing estimands do not necessarily use the same source animal or GPS intervals and are not a joint individual-level covariance.",
+    "pair_rule": "Only two taxa have two distinct original study DOI sources. Show both. Do not select by previous sign.",
+    "source_bootstrap_interpretation": "Original conditional individual sampling support. No formal world-taxonomy source p-value, and observational CIs must not be used as proof of biological equivalence."
+  },
+  "secondary_original_nine_taxa": {
+    "input": "Previously frozen nine taxa with exactly two distinct original GPS archive sources",
+    "source_unit": "same taxon×original study; 9 taxa but not 18 mutually independent ecosystems",
+    "estimands": [
+      "sign agreement of raw solar-relative alignment",
+      "sign agreement of joint circular covariance",
+      "sign agreement of within solar clock covariance"
+    ],
+    "policy": "All 9 preserved, not only taxa with sign changes; distinguish raw marginal geometry from joint covariance."
+  },
+  "cross_literature_source_nonoverlap": {
+    "radiation_frame": "24+24 fixed original archive sources with 10+10 estimable signed radiation slopes",
+    "negative_external_verdict_must_equal": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+    "missingness": "Retain all 28 source holds as UNDEFINED, never substitute zero or select favorable sources.",
+    "joint_axis_inference": "Only infer a joint radiation–temporal niche relationship if exactly matching original study DOI and individual-time support exists. If intersection is empty or unsupported, report NOT_IDENTIFIABLE."
+  },
+  "next_research_route": {
+    "independent_next_study_required": true,
+    "primary_scientific_estimand": "Within-source and within-individual association of both P(day/night displacement) and solar-relative travel vector with shortwave anomalies at matched true solar altitude, fine apparent solar time, geographic corridors and season.",
+    "radiation_residual": "R−E(R | true solar altitude, continuous apparent solar time, season/year, original local geography), using original hourly weather. This is conditional variation, not sunlight causality.",
+    "direction": "cos and sin of bearing−solar azimuth, plus step speed and route bearing marginal",
+    "biological_context": [
+      "source study",
+      "taxon",
+      "individual",
+      "source day/night and season",
+      "geographic habitat",
+      "wind flow TO and speed",
+      "ambient heat",
+      "water and greenness",
+      "movement guild"
+    ],
+    "requirements": [
+      "Pre-freeze source and original animal/time eligibility",
+      "Full source/provider MD5 replay before new weather",
+      "No outcome-selected source substitution",
+      "Source/group uncertainty, not GPS-fix iid tests",
+      "Area/population overlap audit",
+      "Report all null/undefined/negative outcomes",
+      "Camera photo-time bias q remains explicit"
+    ]
+  },
+  "privacy_and_rights": "Only group-derived summaries and original study DOI; never release raw GPS positions, individual identifiers, exact UTC observation times, full third-party original track or restricted source file.",
+  "previous_positive_and_negative_results_unchanged": true,
+  "scientific_reporting_level": "Exploratory posthoc original-source ecological decomposition, not preregistered cross-axis ecology or solar compass causation."
+}
