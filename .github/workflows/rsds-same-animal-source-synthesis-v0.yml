@@ -1,0 +1,42 @@
+name: RSDS first original same-animal ecological interpretation v0
+on:
+  push:
+    branches: [science/original-individual-solar-weather-coupling-v0]
+    paths:
+      - scripts/analyze_rsds_same_animal_source_results_v0.py
+      - tests/test_rsds_same_animal_source_synthesis_v0.py
+      - .github/workflows/rsds-same-animal-source-synthesis-v0.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  first_results_ecological_diagnostics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/original-individual-solar-weather-coupling-v0
+          persist-credentials: true
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify original upstream 390 source Git blobs
+        run: python -m scripts.verify_rsds_migration
+      - name: Unit-test fixed six original taxa, opposite context signs and nulls
+        run: python -m unittest discover -s tests -p 'test_rsds_same_animal_source_synthesis_v0.py' -v
+      - name: Derive full source-verified exploratory ecological comparison
+        run: |
+          python -m scripts.analyze_rsds_same_animal_source_results_v0 \
+            --output research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_ECOLOGICAL_SYNTHESIS_20261026.json
+          python -m json.tool research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_ECOLOGICAL_SYNTHESIS_20261026.json > /dev/null
+      - name: Commit stable non-sensitive first source ecological synthesis
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_ECOLOGICAL_SYNTHESIS_20261026.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: locked same-animal first source study ecology and negative/heterogeneous effects"
+            git push origin HEAD:science/original-individual-solar-weather-coupling-v0
+          fi

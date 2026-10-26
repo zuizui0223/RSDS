@@ -1,0 +1,550 @@
+{
+  "version": "rsds-same-tagged-animal-solar-weather-ecological-synthesis-v0",
+  "date": "2026-10-26",
+  "stage": "POST_FIRST_ORIGINAL_SOURCE_REPLAY_DESCRIPTIVE",
+  "original_studies": 2,
+  "native_taxon_study_rows": 6,
+  "first_original_full_source_state": {
+    "Utah": "SAME_ORIGINAL_ANIMAL_WEATHER_FRAME_COMPLETE",
+    "Wyoming": "SAME_ORIGINAL_ANIMAL_WEATHER_FRAME_COMPLETE"
+  },
+  "frozen_external_radiation_nonreplication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "all_taxon_study_results": [
+    {
+      "region": "Utah",
+      "source_doi": "10.5441/001/1.711",
+      "taxon": "Antilocapra americana",
+      "source_original_q_replayed": true,
+      "source_animal_days_selected_before_weather": 11739,
+      "weather_verified_contexts": 2,
+      "paired_source_individuals": 99,
+      "measured_source_axis_coefficients": {
+        "sun_cos_per100W": {
+          "source_mean": 0.008065346668979376,
+          "animal_bootstrap95": [
+            -0.001933218588924013,
+            0.018017230502317766
+          ],
+          "eligible_original_animals": 103,
+          "sign_support": "UNRESOLVED_SIGN"
+        },
+        "sun_sin_per100W": {
+          "source_mean": 0.0031542788594452853,
+          "animal_bootstrap95": [
+            -0.007136015020028096,
+            0.012579436439678971
+          ],
+          "eligible_original_animals": 103,
+          "sign_support": "UNRESOLVED_SIGN"
+        },
+        "q_daypart_per100W": {
+          "source_mean": -0.001728067618050531,
+          "animal_bootstrap95": [
+            -0.005365393290399942,
+            0.0020430590426238895
+          ],
+          "eligible_original_animals": 99,
+          "sign_support": "UNRESOLVED_SIGN"
+        }
+      },
+      "within_source_animal_rank_correlation_q_vs_solar_cos": 0.14272108843537412,
+      "within_source_animal_rank_correlation_q_vs_solar_sin": -0.1577612863327149,
+      "context_sign_sensitivity": {
+        "sun_cos_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 0,
+          "negative_excluding_zero": 0,
+          "both_directions_present_in_selected_contexts": false
+        },
+        "sun_sin_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 1,
+          "negative_excluding_zero": 0,
+          "both_directions_present_in_selected_contexts": false
+        },
+        "q_daypart_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 0,
+          "negative_excluding_zero": 1,
+          "both_directions_present_in_selected_contexts": false
+        }
+      },
+      "taxon_source_status": "POST_RESULT_ECOLOGICAL_SOURCE_EVALUATED",
+      "original_total_source_studies_represented_by_taxon_row": 1
+    },
+    {
+      "region": "Utah",
+      "source_doi": "10.5441/001/1.711",
+      "taxon": "Cervus elaphus",
+      "source_original_q_replayed": true,
+      "source_animal_days_selected_before_weather": 15905,
+      "weather_verified_contexts": 2,
+      "paired_source_individuals": 89,
+      "measured_source_axis_coefficients": {
+        "sun_cos_per100W": {
+          "source_mean": -0.0023937856473452987,
+          "animal_bootstrap95": [
+            -0.011192856276330463,
+            0.006488618251620141
+          ],
+          "eligible_original_animals": 102,
+          "sign_support": "UNRESOLVED_SIGN"
+        },
+        "sun_sin_per100W": {
+          "source_mean": 0.004666111473343252,
+          "animal_bootstrap95": [
+            -0.0038390582272832883,
+            0.013246639408945961
+          ],
+          "eligible_original_animals": 102,
+          "sign_support": "UNRESOLVED_SIGN"
+        },
+        "q_daypart_per100W": {
+          "source_mean": 0.003088026837106716,
+          "animal_bootstrap95": [
+            -0.000750329196267378,
+            0.0066254604195428125
+          ],
+          "eligible_original_animals": 89,
+          "sign_support": "UNRESOLVED_SIGN"
+        }
+      },
+      "within_source_animal_rank_correlation_q_vs_solar_cos": -0.06995233231188289,
+      "within_source_animal_rank_correlation_q_vs_solar_sin": -0.08319713993871299,
+      "context_sign_sensitivity": {
+        "sun_cos_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 0,
+          "negative_excluding_zero": 0,
+          "both_directions_present_in_selected_contexts": false
+        },
+        "sun_sin_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 0,
+          "negative_excluding_zero": 0,
+          "both_directions_present_in_selected_contexts": false
+        },
+        "q_daypart_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 1,
+          "negative_excluding_zero": 0,
+          "both_directions_present_in_selected_contexts": false
+        }
+      },
+      "taxon_source_status": "POST_RESULT_ECOLOGICAL_SOURCE_EVALUATED",
+      "original_total_source_studies_represented_by_taxon_row": 1
+    },
+    {
+      "region": "Utah",
+      "source_doi": "10.5441/001/1.711",
+      "taxon": "Odocoileus hemionus",
+      "source_original_q_replayed": true,
+      "source_animal_days_selected_before_weather": 33403,
+      "weather_verified_contexts": 2,
+      "paired_source_individuals": 84,
+      "measured_source_axis_coefficients": {
+        "sun_cos_per100W": {
+          "source_mean": -0.0032022728980871974,
+          "animal_bootstrap95": [
+            -0.012899870894328987,
+            0.006038384774627448
+          ],
+          "eligible_original_animals": 180,
+          "sign_support": "UNRESOLVED_SIGN"
+        },
+        "sun_sin_per100W": {
+          "source_mean": -0.0033568875059493855,
+          "animal_bootstrap95": [
+            -0.013023797843847879,
+            0.006373249372842119
+          ],
+          "eligible_original_animals": 180,
+          "sign_support": "UNRESOLVED_SIGN"
+        },
+        "q_daypart_per100W": {
+          "source_mean": 0.004516917076921016,
+          "animal_bootstrap95": [
+            -0.0007407240471032644,
+            0.010566174844356326
+          ],
+          "eligible_original_animals": 84,
+          "sign_support": "UNRESOLVED_SIGN"
+        }
+      },
+      "within_source_animal_rank_correlation_q_vs_solar_cos": 0.12549484149885087,
+      "within_source_animal_rank_correlation_q_vs_solar_sin": 0.10026425295386204,
+      "context_sign_sensitivity": {
+        "sun_cos_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 0,
+          "negative_excluding_zero": 0,
+          "both_directions_present_in_selected_contexts": false
+        },
+        "sun_sin_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 0,
+          "negative_excluding_zero": 1,
+          "both_directions_present_in_selected_contexts": false
+        },
+        "q_daypart_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 0,
+          "negative_excluding_zero": 0,
+          "both_directions_present_in_selected_contexts": false
+        }
+      },
+      "taxon_source_status": "POST_RESULT_ECOLOGICAL_SOURCE_EVALUATED",
+      "original_total_source_studies_represented_by_taxon_row": 1
+    },
+    {
+      "region": "Utah",
+      "source_doi": "10.5441/001/1.711",
+      "taxon": "Ovis canadensis",
+      "source_original_q_replayed": true,
+      "source_animal_days_selected_before_weather": 12132,
+      "weather_verified_contexts": 2,
+      "paired_source_individuals": 85,
+      "measured_source_axis_coefficients": {
+        "sun_cos_per100W": {
+          "source_mean": 0.01686335143164922,
+          "animal_bootstrap95": [
+            0.006363657575023014,
+            0.02646642486991709
+          ],
+          "eligible_original_animals": 117,
+          "sign_support": "POSITIVE_SOURCE_BOOTSTRAP"
+        },
+        "sun_sin_per100W": {
+          "source_mean": 0.0291680989526407,
+          "animal_bootstrap95": [
+            0.01765451910594145,
+            0.041262637210591764
+          ],
+          "eligible_original_animals": 117,
+          "sign_support": "POSITIVE_SOURCE_BOOTSTRAP"
+        },
+        "q_daypart_per100W": {
+          "source_mean": -0.0028311692842956054,
+          "animal_bootstrap95": [
+            -0.00752065434003011,
+            0.0013769788311604526
+          ],
+          "eligible_original_animals": 85,
+          "sign_support": "UNRESOLVED_SIGN"
+        }
+      },
+      "within_source_animal_rank_correlation_q_vs_solar_cos": -0.04625757279656048,
+      "within_source_animal_rank_correlation_q_vs_solar_sin": -0.1573578268516709,
+      "context_sign_sensitivity": {
+        "sun_cos_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 1,
+          "negative_excluding_zero": 0,
+          "both_directions_present_in_selected_contexts": false
+        },
+        "sun_sin_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 1,
+          "negative_excluding_zero": 0,
+          "both_directions_present_in_selected_contexts": false
+        },
+        "q_daypart_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 0,
+          "negative_excluding_zero": 0,
+          "both_directions_present_in_selected_contexts": false
+        }
+      },
+      "taxon_source_status": "POST_RESULT_ECOLOGICAL_SOURCE_EVALUATED",
+      "original_total_source_studies_represented_by_taxon_row": 1
+    },
+    {
+      "region": "Wyoming",
+      "source_doi": "10.5441/001/1.703",
+      "taxon": "Odocoileus hemionus",
+      "source_original_q_replayed": true,
+      "source_animal_days_selected_before_weather": 10482,
+      "weather_verified_contexts": 2,
+      "paired_source_individuals": 54,
+      "measured_source_axis_coefficients": {
+        "sun_cos_per100W": {
+          "source_mean": -0.007371432462198235,
+          "animal_bootstrap95": [
+            -0.023867572527332754,
+            0.010236362441839562
+          ],
+          "eligible_original_animals": 71,
+          "sign_support": "UNRESOLVED_SIGN"
+        },
+        "sun_sin_per100W": {
+          "source_mean": -0.003982224052378047,
+          "animal_bootstrap95": [
+            -0.022544182333251773,
+            0.013361561492395863
+          ],
+          "eligible_original_animals": 71,
+          "sign_support": "UNRESOLVED_SIGN"
+        },
+        "q_daypart_per100W": {
+          "source_mean": 0.0014326691238392112,
+          "animal_bootstrap95": [
+            -0.001712715349604295,
+            0.004435587102741311
+          ],
+          "eligible_original_animals": 54,
+          "sign_support": "UNRESOLVED_SIGN"
+        }
+      },
+      "within_source_animal_rank_correlation_q_vs_solar_cos": -0.35010482180293495,
+      "within_source_animal_rank_correlation_q_vs_solar_sin": -0.18406708595387838,
+      "context_sign_sensitivity": {
+        "sun_cos_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 0,
+          "negative_excluding_zero": 0,
+          "both_directions_present_in_selected_contexts": false
+        },
+        "sun_sin_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 0,
+          "negative_excluding_zero": 0,
+          "both_directions_present_in_selected_contexts": false
+        },
+        "q_daypart_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 0,
+          "negative_excluding_zero": 0,
+          "both_directions_present_in_selected_contexts": false
+        }
+      },
+      "taxon_source_status": "POST_RESULT_ECOLOGICAL_SOURCE_EVALUATED",
+      "original_total_source_studies_represented_by_taxon_row": 1
+    },
+    {
+      "region": "Wyoming",
+      "source_doi": "10.5441/001/1.703",
+      "taxon": "Ovis canadensis",
+      "source_original_q_replayed": true,
+      "source_animal_days_selected_before_weather": 4399,
+      "weather_verified_contexts": 2,
+      "paired_source_individuals": 23,
+      "measured_source_axis_coefficients": {
+        "sun_cos_per100W": {
+          "source_mean": -0.006520009192125117,
+          "animal_bootstrap95": [
+            -0.03230015412427198,
+            0.018927328719136428
+          ],
+          "eligible_original_animals": 23,
+          "sign_support": "UNRESOLVED_SIGN"
+        },
+        "sun_sin_per100W": {
+          "source_mean": -0.015089457766849841,
+          "animal_bootstrap95": [
+            -0.03296220783227557,
+            0.0032141633034368025
+          ],
+          "eligible_original_animals": 23,
+          "sign_support": "UNRESOLVED_SIGN"
+        },
+        "q_daypart_per100W": {
+          "source_mean": 0.0018305664536788784,
+          "animal_bootstrap95": [
+            -0.002104456043713631,
+            0.005452557889237066
+          ],
+          "eligible_original_animals": 23,
+          "sign_support": "UNRESOLVED_SIGN"
+        }
+      },
+      "within_source_animal_rank_correlation_q_vs_solar_cos": 0.3409090909090909,
+      "within_source_animal_rank_correlation_q_vs_solar_sin": -0.3043478260869565,
+      "context_sign_sensitivity": {
+        "sun_cos_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 0,
+          "negative_excluding_zero": 0,
+          "both_directions_present_in_selected_contexts": false
+        },
+        "sun_sin_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 1,
+          "negative_excluding_zero": 1,
+          "both_directions_present_in_selected_contexts": true
+        },
+        "q_daypart_per100W": {
+          "eligible_distinct_original_contexts": 2,
+          "positive_excluding_zero": 0,
+          "negative_excluding_zero": 0,
+          "both_directions_present_in_selected_contexts": false
+        }
+      },
+      "taxon_source_status": "POST_RESULT_ECOLOGICAL_SOURCE_EVALUATED",
+      "original_total_source_studies_represented_by_taxon_row": 1
+    }
+  ],
+  "two_study_native_taxon_comparisons": [
+    {
+      "taxon": "Odocoileus hemionus",
+      "two_original_source_studies": [
+        "10.5441/001/1.711",
+        "10.5441/001/1.703"
+      ],
+      "original_study_unit_replications": 2,
+      "weather_time_direction": {
+        "sun_cos_per100W": {
+          "Utah": {
+            "source_mean": -0.0032022728980871974,
+            "animal_bootstrap95": [
+              -0.012899870894328987,
+              0.006038384774627448
+            ],
+            "eligible_original_animals": 180,
+            "sign_support": "UNRESOLVED_SIGN"
+          },
+          "Wyoming": {
+            "source_mean": -0.007371432462198235,
+            "animal_bootstrap95": [
+              -0.023867572527332754,
+              0.010236362441839562
+            ],
+            "eligible_original_animals": 71,
+            "sign_support": "UNRESOLVED_SIGN"
+          },
+          "signed_point_difference_Utah_minus_Wyoming": 0.004169159564111038,
+          "both_groups_signed_in_same_direction": true
+        },
+        "sun_sin_per100W": {
+          "Utah": {
+            "source_mean": -0.0033568875059493855,
+            "animal_bootstrap95": [
+              -0.013023797843847879,
+              0.006373249372842119
+            ],
+            "eligible_original_animals": 180,
+            "sign_support": "UNRESOLVED_SIGN"
+          },
+          "Wyoming": {
+            "source_mean": -0.003982224052378047,
+            "animal_bootstrap95": [
+              -0.022544182333251773,
+              0.013361561492395863
+            ],
+            "eligible_original_animals": 71,
+            "sign_support": "UNRESOLVED_SIGN"
+          },
+          "signed_point_difference_Utah_minus_Wyoming": 0.0006253365464286612,
+          "both_groups_signed_in_same_direction": true
+        },
+        "q_daypart_per100W": {
+          "Utah": {
+            "source_mean": 0.004516917076921016,
+            "animal_bootstrap95": [
+              -0.0007407240471032644,
+              0.010566174844356326
+            ],
+            "eligible_original_animals": 84,
+            "sign_support": "UNRESOLVED_SIGN"
+          },
+          "Wyoming": {
+            "source_mean": 0.0014326691238392112,
+            "animal_bootstrap95": [
+              -0.001712715349604295,
+              0.004435587102741311
+            ],
+            "eligible_original_animals": 54,
+            "sign_support": "UNRESOLVED_SIGN"
+          },
+          "signed_point_difference_Utah_minus_Wyoming": 0.003084247953081805,
+          "both_groups_signed_in_same_direction": true
+        }
+      },
+      "interpretation": "Two source climate/geography/protocol sampling frames, not two independently random world biomes. Coefficient differences are descriptive; bootstrap source animal intervals not independent causal tests."
+    },
+    {
+      "taxon": "Ovis canadensis",
+      "two_original_source_studies": [
+        "10.5441/001/1.711",
+        "10.5441/001/1.703"
+      ],
+      "original_study_unit_replications": 2,
+      "weather_time_direction": {
+        "sun_cos_per100W": {
+          "Utah": {
+            "source_mean": 0.01686335143164922,
+            "animal_bootstrap95": [
+              0.006363657575023014,
+              0.02646642486991709
+            ],
+            "eligible_original_animals": 117,
+            "sign_support": "POSITIVE_SOURCE_BOOTSTRAP"
+          },
+          "Wyoming": {
+            "source_mean": -0.006520009192125117,
+            "animal_bootstrap95": [
+              -0.03230015412427198,
+              0.018927328719136428
+            ],
+            "eligible_original_animals": 23,
+            "sign_support": "UNRESOLVED_SIGN"
+          },
+          "signed_point_difference_Utah_minus_Wyoming": 0.023383360623774337,
+          "both_groups_signed_in_same_direction": false
+        },
+        "sun_sin_per100W": {
+          "Utah": {
+            "source_mean": 0.0291680989526407,
+            "animal_bootstrap95": [
+              0.01765451910594145,
+              0.041262637210591764
+            ],
+            "eligible_original_animals": 117,
+            "sign_support": "POSITIVE_SOURCE_BOOTSTRAP"
+          },
+          "Wyoming": {
+            "source_mean": -0.015089457766849841,
+            "animal_bootstrap95": [
+              -0.03296220783227557,
+              0.0032141633034368025
+            ],
+            "eligible_original_animals": 23,
+            "sign_support": "UNRESOLVED_SIGN"
+          },
+          "signed_point_difference_Utah_minus_Wyoming": 0.04425755671949054,
+          "both_groups_signed_in_same_direction": false
+        },
+        "q_daypart_per100W": {
+          "Utah": {
+            "source_mean": -0.0028311692842956054,
+            "animal_bootstrap95": [
+              -0.00752065434003011,
+              0.0013769788311604526
+            ],
+            "eligible_original_animals": 85,
+            "sign_support": "UNRESOLVED_SIGN"
+          },
+          "Wyoming": {
+            "source_mean": 0.0018305664536788784,
+            "animal_bootstrap95": [
+              -0.002104456043713631,
+              0.005452557889237066
+            ],
+            "eligible_original_animals": 23,
+            "sign_support": "UNRESOLVED_SIGN"
+          },
+          "signed_point_difference_Utah_minus_Wyoming": -0.004661735737974484,
+          "both_groups_signed_in_same_direction": false
+        }
+      },
+      "interpretation": "Two source climate/geography/protocol sampling frames, not two independently random world biomes. Coefficient differences are descriptive; bootstrap source animal intervals not independent causal tests."
+    }
+  ],
+  "boundaries": [
+    "Only studied original tagged animals eligible for original native day/night source dates and selected source gridyears; missingness is not an ecological zero.",
+    "Directional and daypart weather partial associations reuse same source animals and eligible days but target different GPS daytime/nighttime intervals.",
+    "Multiple original source gridyear contexts share original animals and years, not independent ecosystems.",
+    "Original context-specific weather values may reflect provider version differences on rerun; source JSON SHA preserved.",
+    "ER​A5 sun-adjusted radiation anomalies are neither measured body irradiance nor randomized shortwave exposure.",
+    "The source-level bootstrap represents selected source animals only; two regions not enough for worldwide macrobiome generality."
+  ]
+}
