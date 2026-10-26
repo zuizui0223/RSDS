@@ -1,0 +1,322 @@
+{
+  "version": "rsds-original-individual-temporal-heading-irradiance-v0",
+  "region": "Wyoming",
+  "original_source_doi": "10.5441/001/1.703",
+  "status": "SAME_ORIGINAL_ANIMAL_WEATHER_FRAME_COMPLETE",
+  "source_original_replayed_before_NEW_weather": true,
+  "original_native_taxa": [
+    "Odocoileus hemionus",
+    "Ovis canadensis"
+  ],
+  "taxon_results": [
+    {
+      "taxon": "Odocoileus hemionus",
+      "source_original_q_animals": 119,
+      "source_original_q": -0.0044624294869207584,
+      "source_original_daylength_animals": 118,
+      "source_original_daylength_slope": 0.005538249061142167,
+      "original_source_replay_success": true,
+      "all_source_original_gridyear_candidates": 8,
+      "eligible_source_gridyear_candidates": 6,
+      "selected_source_gridyears": 2,
+      "selection_blind_to_heading_and_weather": true,
+      "selected_contexts": [
+        {
+          "selected_gridyear_original_coverage_rank": 1,
+          "original_qualified_q_days": 5737,
+          "original_q_qualified_animals": 72,
+          "original_moving_daylight_steps": 15411,
+          "ecology_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+          "hourly_ERA5_movement_join_fraction": 1.0,
+          "hourly_weather_matched_solar_steps": 15411,
+          "individuals_without_qualified_fine_solar_clock": 12,
+          "direction_animals_with_identifiable_slope": 60,
+          "joint_daypart_and_direction_animals": 44,
+          "direction_sun_cos": {
+            "n_source_animals": 60,
+            "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+            "source_mean": -0.0007435498907383918,
+            "source_animal_bootstrap95": [
+              -0.023683056486335015,
+              0.021218849723718323
+            ],
+            "positive_animals": 32,
+            "negative_animals": 28
+          },
+          "direction_sun_sin": {
+            "n_source_animals": 60,
+            "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+            "source_mean": -0.008963693837458743,
+            "source_animal_bootstrap95": [
+              -0.030063347454409785,
+              0.01346778807137631
+            ],
+            "positive_animals": 30,
+            "negative_animals": 30
+          },
+          "daypart_q_vs_irradiance": {
+            "n_source_animals": 44,
+            "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+            "source_mean": 0.0001859283940042777,
+            "source_animal_bootstrap95": [
+              -0.00472344455591738,
+              0.004220791912651259
+            ],
+            "positive_animals": 27,
+            "negative_animals": 17
+          },
+          "ERA5_original_provider_response_sha256": "b02afc3384ff2db3545c98d6a0d57c8312da25351ae97a61cf897d8fa72e13bc",
+          "ERA5_full_calendar_hour_count": 8784
+        },
+        {
+          "selected_gridyear_original_coverage_rank": 2,
+          "original_qualified_q_days": 4745,
+          "original_q_qualified_animals": 53,
+          "original_moving_daylight_steps": 13167,
+          "ecology_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+          "hourly_ERA5_movement_join_fraction": 1.0,
+          "hourly_weather_matched_solar_steps": 13167,
+          "individuals_without_qualified_fine_solar_clock": 9,
+          "direction_animals_with_identifiable_slope": 44,
+          "joint_daypart_and_direction_animals": 36,
+          "direction_sun_cos": {
+            "n_source_animals": 44,
+            "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+            "source_mean": -0.009473564819645851,
+            "source_animal_bootstrap95": [
+              -0.027533070706358465,
+              0.007607762653631768
+            ],
+            "positive_animals": 20,
+            "negative_animals": 24
+          },
+          "direction_sun_sin": {
+            "n_source_animals": 44,
+            "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+            "source_mean": 0.0016415657327648297,
+            "source_animal_bootstrap95": [
+              -0.017766825466652956,
+              0.019550325198326383
+            ],
+            "positive_animals": 24,
+            "negative_animals": 20
+          },
+          "daypart_q_vs_irradiance": {
+            "n_source_animals": 36,
+            "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+            "source_mean": 0.0028676503008385917,
+            "source_animal_bootstrap95": [
+              -0.00028728311634819886,
+              0.005964276455428272
+            ],
+            "positive_animals": 24,
+            "negative_animals": 12
+          },
+          "ERA5_original_provider_response_sha256": "0dc6f27389f080263bbf46a399e2f26233e914ba8eb479128e2e5ab413889c9d",
+          "ERA5_full_calendar_hour_count": 8760
+        }
+      ],
+      "source_animal_identity_deduplicated_across_contexts": true,
+      "source_primary_original_GPS_not_released": true,
+      "source_animal_summary": {
+        "sun_cos_per100W": {
+          "n_source_animals": 71,
+          "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+          "source_mean": -0.007371432462198235,
+          "source_animal_bootstrap95": [
+            -0.023867572527332754,
+            0.010236362441839562
+          ],
+          "positive_animals": 32,
+          "negative_animals": 39
+        },
+        "sun_sin_per100W": {
+          "n_source_animals": 71,
+          "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+          "source_mean": -0.003982224052378047,
+          "source_animal_bootstrap95": [
+            -0.022544182333251773,
+            0.013361561492395863
+          ],
+          "positive_animals": 39,
+          "negative_animals": 32
+        },
+        "q_daypart_per100W": {
+          "n_source_animals": 54,
+          "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+          "source_mean": 0.0014326691238392112,
+          "source_animal_bootstrap95": [
+            -0.001712715349604295,
+            0.004435587102741311
+          ],
+          "positive_animals": 33,
+          "negative_animals": 21
+        },
+        "paired_source_animals": 54,
+        "within_source_animal_rho_q_vs_sun_cos": -0.35010482180293495,
+        "within_source_animal_rho_q_vs_sun_sin": -0.18406708595387838,
+        "status": "POST_RESULT_DESCRIPTIVE_NOT_CAUSAL"
+      },
+      "status": "POST_RESULT_ECOLOGICAL_SOURCE_EVALUATED"
+    },
+    {
+      "taxon": "Ovis canadensis",
+      "source_original_q_animals": 41,
+      "source_original_q": -0.01997499965861462,
+      "source_original_daylength_animals": 41,
+      "source_original_daylength_slope": 0.00021733399923758685,
+      "original_source_replay_success": true,
+      "all_source_original_gridyear_candidates": 4,
+      "eligible_source_gridyear_candidates": 4,
+      "selected_source_gridyears": 2,
+      "selection_blind_to_heading_and_weather": true,
+      "selected_contexts": [
+        {
+          "selected_gridyear_original_coverage_rank": 1,
+          "original_qualified_q_days": 2575,
+          "original_q_qualified_animals": 23,
+          "original_moving_daylight_steps": 5248,
+          "ecology_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+          "hourly_ERA5_movement_join_fraction": 1.0,
+          "hourly_weather_matched_solar_steps": 5248,
+          "individuals_without_qualified_fine_solar_clock": 1,
+          "direction_animals_with_identifiable_slope": 22,
+          "joint_daypart_and_direction_animals": 16,
+          "direction_sun_cos": {
+            "n_source_animals": 22,
+            "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+            "source_mean": -0.01930205835265227,
+            "source_animal_bootstrap95": [
+              -0.06746519988895239,
+              0.03427597904914758
+            ],
+            "positive_animals": 8,
+            "negative_animals": 14
+          },
+          "direction_sun_sin": {
+            "n_source_animals": 22,
+            "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+            "source_mean": -0.06469577802659822,
+            "source_animal_bootstrap95": [
+              -0.09734561770656235,
+              -0.03217284314416201
+            ],
+            "positive_animals": 4,
+            "negative_animals": 18
+          },
+          "daypart_q_vs_irradiance": {
+            "n_source_animals": 16,
+            "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+            "source_mean": 0.002520494178285805,
+            "source_animal_bootstrap95": [
+              -0.005094936351708232,
+              0.009888965154255629
+            ],
+            "positive_animals": 9,
+            "negative_animals": 7
+          },
+          "ERA5_original_provider_response_sha256": "9d4908b667decce33135a7c04509c8622490fc8272a0b568f86c79d477a4c692",
+          "ERA5_full_calendar_hour_count": 8784
+        },
+        {
+          "selected_gridyear_original_coverage_rank": 2,
+          "original_qualified_q_days": 1824,
+          "original_q_qualified_animals": 22,
+          "original_moving_daylight_steps": 6443,
+          "ecology_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+          "hourly_ERA5_movement_join_fraction": 1.0,
+          "hourly_weather_matched_solar_steps": 6443,
+          "individuals_without_qualified_fine_solar_clock": 0,
+          "direction_animals_with_identifiable_slope": 22,
+          "joint_daypart_and_direction_animals": 22,
+          "direction_sun_cos": {
+            "n_source_animals": 22,
+            "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+            "source_mean": 0.009002254544512757,
+            "source_animal_bootstrap95": [
+              -0.024083365441948914,
+              0.034923677498871646
+            ],
+            "positive_animals": 15,
+            "negative_animals": 7
+          },
+          "direction_sun_sin": {
+            "n_source_animals": 22,
+            "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+            "source_mean": 0.036856968367063425,
+            "source_animal_bootstrap95": [
+              0.023846215990544546,
+              0.05022349847289623
+            ],
+            "positive_animals": 20,
+            "negative_animals": 2
+          },
+          "daypart_q_vs_irradiance": {
+            "n_source_animals": 22,
+            "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+            "source_mean": 0.0021740253925441057,
+            "source_animal_bootstrap95": [
+              -0.0011182712108131388,
+              0.005329355152896042
+            ],
+            "positive_animals": 14,
+            "negative_animals": 8
+          },
+          "ERA5_original_provider_response_sha256": "e8f4ddd04d058391181bdb095065291700c4740d02147432f5d9675ddece76e1",
+          "ERA5_full_calendar_hour_count": 8760
+        }
+      ],
+      "source_animal_identity_deduplicated_across_contexts": true,
+      "source_primary_original_GPS_not_released": true,
+      "source_animal_summary": {
+        "sun_cos_per100W": {
+          "n_source_animals": 23,
+          "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+          "source_mean": -0.006520009192125117,
+          "source_animal_bootstrap95": [
+            -0.03230015412427198,
+            0.018927328719136428
+          ],
+          "positive_animals": 9,
+          "negative_animals": 14
+        },
+        "sun_sin_per100W": {
+          "n_source_animals": 23,
+          "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+          "source_mean": -0.015089457766849841,
+          "source_animal_bootstrap95": [
+            -0.03296220783227557,
+            0.0032141633034368025
+          ],
+          "positive_animals": 6,
+          "negative_animals": 17
+        },
+        "q_daypart_per100W": {
+          "n_source_animals": 23,
+          "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL",
+          "source_mean": 0.0018305664536788784,
+          "source_animal_bootstrap95": [
+            -0.002104456043713631,
+            0.005452557889237066
+          ],
+          "positive_animals": 16,
+          "negative_animals": 7
+        },
+        "paired_source_animals": 23,
+        "within_source_animal_rho_q_vs_sun_cos": 0.3409090909090909,
+        "within_source_animal_rho_q_vs_sun_sin": -0.3043478260869565,
+        "status": "POST_RESULT_DESCRIPTIVE_NOT_CAUSAL"
+      },
+      "status": "POST_RESULT_ECOLOGICAL_SOURCE_EVALUATED"
+    }
+  ],
+  "claim_limit": "Same original tags/days but different original GPS daytime/nighttime steps. ERA5 gridded observational anomalies not causal sunlight exposure. Group/bootstrap study-specific.",
+  "original_provider_integrity": {
+    "bytes": 98724772,
+    "checksum_type": "md5",
+    "provider_checksum_verified": true
+  },
+  "source_taxonomy_unclassified_rows": 0,
+  "weather_requested_unique_original_gridyears": 4,
+  "weather_verified_unique_original_gridyears": 4
+}
