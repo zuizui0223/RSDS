@@ -100,6 +100,16 @@ RSDSの既存2原Movebank調査（Utah/Wyoming 6分類群行）を、**新たな
 
 [新しい固定JSON](../research/RSDS_EIGHT_STUDY_SOURCE_EQUAL_MACRO_SENSITIVITY_FIRST_RESULT_20261026.json) ／ [source-equal計算](../scripts/source_equal_rsds_eight_study_temporal_solar_v1.py) ／ [解釈](RSDS_EIGHT_STUDY_SOURCE_EQUAL_MACRO_SENSITIVITY_20261026.md)。
 
+## J. 気象データのJSON版差と、実際の短波放射・風・気温数値の違いを区別（2026-10-28）
+
+RSDSでは、Utah/Wyoming元GPSから独立して選んだ**2つの公開固定ERA5モデル地点**（2020年8784 UTC時点、2021年8760 UTC時点）をそれぞれ2回同じOpen-Meteoパラメータで照会した。**2/2地点で元の生JSON全体のSHA256は不一致**となったが、4物理変数（短波放射W/m²、気温°C、100m風速m/s、風向FROM°）の**UTC時別数値を単位・時間軸・欠測とともに正規化したSHA256は2/2で一致**し、モデル格子メタデータも一致した。各変数で値が異なるUTC時間数は0だった。
+
+これによって**データファイル自体のSHA不一致と、物理的な気象時系列の相違は別の問題**であることを実測確認した。ただし、元GPSリンクの旧ERA5時別配列は保存されていないため、過去に取得した12コンテキストの旧数値が現在と一致するかは判定できない。歴史的**ERA5_VERSION_HOLD（12/12）**、48原日射研究の事前指定負方向の外部非再現結果は依然として不変。
+
+これは**気象数値版を正確に固定して再現するための肯定的な品質結果**であり、新しい日射による生物行動の因果作用や世界的な移動方向の法則ではない。元のGPS研究コンテキストを気象API照会前にMD5/q/日長係数まで再現して、新しい数値版を独立に採取するルートを別に用意している。
+
+[詳細な科学的検証](RSDS_ERA5_PHYSICAL_VS_JSON_VERSION_AUDIT_20261028.md) ／ [固定原ベンチマークJSON](../research/RSDS_ERA5_CANONICAL_BENCHMARK_FIRST_RESULT_20261028.json) ／ [数値の正規化と単位検査](../scripts/era5_canonical_physical_content_v1.py)。
+
 ## 再現可能性と論文発展
 
 - [全球太陽方向の研究草稿v2](../manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_v2_20261025.md)
