@@ -1,0 +1,43 @@
+{
+  "version": "RSDS_ORIGINAL_8_STUDY_UTC_CADENCE_MATCHED_DAY_Q_V1",
+  "freeze_date": "2026-10-28",
+  "stage": "POST_EIGHT_STUDY_OUTCOMES_PROSPECTIVELY_FIXED_OBSERVATION_SENSITIVITY_NOT_A_NEW_BIOLOGICAL_FIELD_REPLICATION",
+  "scientific_question": "Do observational day/night straight-line GPS displacement q and q~astronomical daylength associations change when the SAME original source tagged animal-day sequence is reduced from 1h to 2h GPS duty-cycle, and does such thinning reduce the estimable animal population?",
+  "frozen_previous_blobs": {
+    "original_two_study_source_first": "d8d84ca3583cc26ff373fd929f3f98156ca9b0cb",
+    "original_new_six_study_effects": "e2759ddb1120cbcd067dd5189775d685aea65a32",
+    "original_new_six_primary_file_SHA_receipt": "bc4ff8328eda9f60b0255b40da9363e6e3d20a59",
+    "original_eight_study_macro": "2c4670b54fa5b52737993ebf6babc3a7a58b166a"
+  },
+  "study_roster": "Original Utah DOI 10.5441/001/1.711 four native taxa, Wyoming DOI 10.5441/001/1.703 two taxa, plus six pre-event-registered new source studies including one great egret over-200MB source metadata HOLD. All 8 original DOIs and 12 study×taxon records preserved. No replacements.",
+  "sampling": {
+    "original_baseline": "Use exact previously frozen public source file UUID/size/MD5 and original preexisting timestamp-selected closest-to-hour GPS fixes. Replay original full-hour source q and within individual-year q~daylength effect means and animal support counts to <1e-12 before alternate subsetting.",
+    "baseline_interval_hours": "0.5 to 2.0, original solar-period at segment start/midpoint/end, <=60 km/h",
+    "deterministic_reduced_cadence": [
+      {
+        "phase": "EVEN_UTC_HOURS",
+        "selector": "original source hourly time bin UTC hour parity ==0"
+      },
+      {
+        "phase": "ODD_UTC_HOURS",
+        "selector": "original source hourly time bin UTC hour parity ==1"
+      }
+    ],
+    "thinned_interval_hours": "1.5 <= observed between-fixed-fix elapsed hours <= 2.5; same astronomical day/part at GPS endpoints and midpoint; GPS speed <=60km/h; no interpolation of missing fixes or solar period.",
+    "day_level_proxy": "Minimum straight-line displacement velocity km/h from successive qualified GPS fix locations. q_day = log1p(median admitted nighttime speed) - log1p(median admitted daytime speed). Retain only dates with >=3 DAY and >=3 NIGHT admitted steps for each observed cadence.",
+    "same_support_rule": "For each original tagged animal and calendar year, intersect day-qualified records from baseline and current parity; >=10 matched original local solar dates. Average q separately across same dates then per-animal equal over qualified years. Daylength slope requires >=10 matched dates and source modeled daylight range >=0.5 h. Never call an unmatched animal/day a zero.",
+    "inferential_units": "Original source study DOI independent study count; native taxa within a study dependent. Source-tagged animal is paired resampling unit, 2000 fixed seed animal bootstrap draws for delta parity-minus-hourly on matched dates. No independent GPS fix-level P-values.",
+    "q_delta_definition": "mean within original tagged animal q at 2h observed cadence minus baseline 1h q computed on exactly the matched date set, not a change in biology over time.",
+    "daylength_delta_definition": "within animal/year OLS q~daylength each cadence evaluated over the same qualified matched date set, then per animal equal across years. Require >=5 matched animals for descriptive source level delta and 95% percentile.",
+    "source_retention": "Retain all 12 study×taxon cohort rows including source metadata HOLD, inadequate temporal cadence, no paired tags, and signs with zero-spanning uncertainty. Report 1h original admissible tags, matched tags, matched animal-years/day count and phase attrition. Do not drop negative/null outcomes or replace sources.",
+    "no_joint_weather_claim": "No ERA5 request is made. This is an observation-process sensitivity of movement speed vs sampling interval; independent of old provider raw SHA version holds and negative 48-study radiation direction replication."
+  },
+  "safety": {
+    "size_cap_bytes": 200000000,
+    "event_row_cap": 2000000,
+    "raw_GPS_files": "ephemeral GitHub runner only; verify original source checksums, no animal tag ID, original event timestamp, geographical coordinates, grid keys, per-animal estimates or raw tracks published.",
+    "science_ceiling": "Within tagged original animals, q at 1h and 2h is not the same biological estimand: sampled straight-line displacement decreases across longer GPS spans due to tortuous paths and solar-daypart boundary selection. A change due to thinning is a measurement/protocol effect, NOT evidence that animals changed behavior.",
+    "previous_raw_ERA5_12_HOLDS": "UNCHANGED",
+    "external_shortwave_Negative": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
+  }
+}
