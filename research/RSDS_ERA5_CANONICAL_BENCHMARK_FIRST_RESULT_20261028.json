@@ -1,0 +1,105 @@
+{
+  "benchmarks": [
+    {
+      "UTC_hours_verified": 8784,
+      "benchmark_name": "benchmark_continental",
+      "does_not_compare_to_unarchived_original_v0_physical_values": true,
+      "first_missing_hourly_values_by_field": {
+        "shortwave_radiation": 0,
+        "temperature_2m": 0,
+        "wind_direction_100m": 0,
+        "wind_speed_100m": 0
+      },
+      "first_new_hourly_physical_SHA256": "7b59496182734c930db2714b69fff3d5696bbe5bf2f95ae019f654b3d8e69bfc",
+      "first_new_raw_SHA256": "c47414dc6285f547d6952ca2efc84d8ff43b2200f3d3aa2b8986d8ac8456f1ee",
+      "hours_differing_by_field": {
+        "shortwave_radiation": 0,
+        "temperature_2m": 0,
+        "wind_direction_100m": 0,
+        "wind_speed_100m": 0
+      },
+      "hours_with_any_invalid_legacy_original_row_first": 0,
+      "hours_with_any_invalid_legacy_original_row_second": 0,
+      "maximum_absolute_numeric_change_by_field": {
+        "shortwave_radiation": 0.0,
+        "temperature_2m": 0.0,
+        "wind_direction_100m": 0.0,
+        "wind_speed_100m": 0.0
+      },
+      "physical_hourly_numeric_SHA_identical": true,
+      "physical_hourly_schema": "rsds-era5-hourly-utc-physical-v1",
+      "raw_SHA_disagreement_with_identical_physical_values_and_grid": true,
+      "raw_response_SHA_identical": false,
+      "returned_weather_grid_metadata_identical": true,
+      "second_missing_hourly_values_by_field": {
+        "shortwave_radiation": 0,
+        "temperature_2m": 0,
+        "wind_direction_100m": 0,
+        "wind_speed_100m": 0
+      },
+      "second_new_hourly_physical_SHA256": "7b59496182734c930db2714b69fff3d5696bbe5bf2f95ae019f654b3d8e69bfc",
+      "second_new_raw_SHA256": "c96da9c33bc8346987fb1514c58f46e2c2439a5f595b8163656c747ea3453c7b",
+      "source_type": "PRECHOSEN_PUBLIC_NO_ORIGINAL_ANIMAL_GPS_SITE",
+      "status": "BENCHMARK_TWO_REQUESTS_VALIDATED",
+      "year": 2020
+    },
+    {
+      "UTC_hours_verified": 8760,
+      "benchmark_name": "benchmark_tropical_southern",
+      "does_not_compare_to_unarchived_original_v0_physical_values": true,
+      "first_missing_hourly_values_by_field": {
+        "shortwave_radiation": 0,
+        "temperature_2m": 0,
+        "wind_direction_100m": 0,
+        "wind_speed_100m": 0
+      },
+      "first_new_hourly_physical_SHA256": "b5204e67cf06a9b669819f032907b6a57af1de3af34be43ddd39837cded43912",
+      "first_new_raw_SHA256": "dc3ae6a044a1f23f5454c7c9e83fc742e134192c66de44e8b3602d9649cbe349",
+      "hours_differing_by_field": {
+        "shortwave_radiation": 0,
+        "temperature_2m": 0,
+        "wind_direction_100m": 0,
+        "wind_speed_100m": 0
+      },
+      "hours_with_any_invalid_legacy_original_row_first": 0,
+      "hours_with_any_invalid_legacy_original_row_second": 0,
+      "maximum_absolute_numeric_change_by_field": {
+        "shortwave_radiation": 0.0,
+        "temperature_2m": 0.0,
+        "wind_direction_100m": 0.0,
+        "wind_speed_100m": 0.0
+      },
+      "physical_hourly_numeric_SHA_identical": true,
+      "physical_hourly_schema": "rsds-era5-hourly-utc-physical-v1",
+      "raw_SHA_disagreement_with_identical_physical_values_and_grid": true,
+      "raw_response_SHA_identical": false,
+      "returned_weather_grid_metadata_identical": true,
+      "second_missing_hourly_values_by_field": {
+        "shortwave_radiation": 0,
+        "temperature_2m": 0,
+        "wind_direction_100m": 0,
+        "wind_speed_100m": 0
+      },
+      "second_new_hourly_physical_SHA256": "b5204e67cf06a9b669819f032907b6a57af1de3af34be43ddd39837cded43912",
+      "second_new_raw_SHA256": "5862ec7a6d92131d6afbec58b0e646f4e3066c2e4f7cac8a6ff2f4e85fdd7772",
+      "source_type": "PRECHOSEN_PUBLIC_NO_ORIGINAL_ANIMAL_GPS_SITE",
+      "status": "BENCHMARK_TWO_REQUESTS_VALIDATED",
+      "year": 2021
+    }
+  ],
+  "claims": [
+    "This benchmark tests the reproducibility of NOW-to-NOW physical hourly numeric values, not OLD-original-versus-NOW source climate values.",
+    "An identical canonical hash may coexist with a different raw JSON SHA because JSON metadata/formatting differ. Grid metadata is flagged separately.",
+    "Benchmark sites are source-independent fixed coordinates, not animal source study sites, and no animal behavior or migration effect is estimated.",
+    "These results cannot turn the old 12 GPS-linked weather SHA HOLDS into supported biological weather-replication effects."
+  ],
+  "date": "2026-10-28",
+  "old_12_original_source_ERA5_version_HOLDS_UNCHANGED": true,
+  "old_48_source_external_signed_radiation_NONREPLICATED_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "public_no_GPS_source_benchmarks": 2,
+  "raw_JSON_SHA_disagreements": 2,
+  "stable_hourly_physical_content_despite_raw_JSON_mismatch": 2,
+  "two_valid_requests_per_site_completed": 2,
+  "unarchived_old_12_original_GPS_context_physical_data_equivalence": "NOT_IDENTIFIABLE_WITH_ONLY_OLD_RAW_RESPONSE_SHA",
+  "version": "RSDS_ERA5_UTC_HOURLY_CANONICAL_BENCHMARK_V1_FIRST_RESULT"
+}
