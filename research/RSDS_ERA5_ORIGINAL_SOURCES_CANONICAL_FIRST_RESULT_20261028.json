@@ -1,0 +1,681 @@
+{
+  "CURRENT_raw_SHA_matches_historic_v0_raw_SHA_first_response": 0,
+  "baseline_physical_content_OLD_vs_NEW": "NOT_IDENTIFIABLE_OLD_HOURLY_NUMERIC_VALUES_NOT_ARCHIVED",
+  "baseline_raw_JSON_SHA_historical_replay_HOLD_contexts": 12,
+  "context_provider_result_status_counts": {
+    "CURRENT_VERSION_TWO_REQUESTS_PHYSICAL_AUDITED": 12
+  },
+  "current_provider_contexts_two_response_comparisons": 12,
+  "date": "2026-10-28",
+  "full_original_taxon_context_results": [
+    {
+      "context_outcomes": [
+        {
+          "UTC_hours_verified": 8760,
+          "does_not_compare_to_unarchived_original_v0_physical_values": true,
+          "first_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "first_new_hourly_physical_SHA256": "148ce77bc88844ad0b924fecee87959754e618d26731be48636cf2cf26244f7a",
+          "first_new_raw_SHA256": "d7d2207b759175b3f226de5ac80c41502b767f8a9fe37eb0f71cfd2c918b9bc3",
+          "first_new_raw_SHA_equals_old_raw_SHA": false,
+          "historical_old_weather_physical_array_not_archived": true,
+          "hours_differing_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "hours_with_any_invalid_legacy_original_row_first": 0,
+          "hours_with_any_invalid_legacy_original_row_second": 0,
+          "maximum_absolute_numeric_change_by_field": {
+            "shortwave_radiation": 0.0,
+            "temperature_2m": 0.0,
+            "wind_direction_100m": 0.0,
+            "wind_speed_100m": 0.0
+          },
+          "old_raw_ERA5_source_SHA_still_unverified": true,
+          "original_q_qualified_source_animals": 55,
+          "original_qualified_q_days": 6879,
+          "original_source_q_coverage_rank": 1,
+          "original_source_sunlight_moving_steps": 21407,
+          "physical_hourly_numeric_SHA_identical": true,
+          "physical_hourly_schema": "rsds-era5-hourly-utc-physical-v1",
+          "raw_SHA_disagreement_with_identical_physical_values_and_grid": true,
+          "raw_response_SHA_identical": false,
+          "returned_weather_grid_metadata_identical": true,
+          "second_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "second_new_hourly_physical_SHA256": "148ce77bc88844ad0b924fecee87959754e618d26731be48636cf2cf26244f7a",
+          "second_new_raw_SHA256": "98d1af697b393a5c068c04c5ebfe3e869ef572e721e77998abbe678cefb8ec86",
+          "second_new_raw_SHA_equals_old_raw_SHA": false,
+          "status": "CURRENT_VERSION_TWO_REQUESTS_PHYSICAL_AUDITED"
+        },
+        {
+          "UTC_hours_verified": 8784,
+          "does_not_compare_to_unarchived_original_v0_physical_values": true,
+          "first_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "first_new_hourly_physical_SHA256": "f60ee7eb926509872869e9fe2605820896b224cef2dbef9aff9c15308c61b3d7",
+          "first_new_raw_SHA256": "f19e1b67d22c7843f623ff8284ecc65042183b5a3b1d73845b5a3765ffab4eb3",
+          "first_new_raw_SHA_equals_old_raw_SHA": false,
+          "historical_old_weather_physical_array_not_archived": true,
+          "hours_differing_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "hours_with_any_invalid_legacy_original_row_first": 0,
+          "hours_with_any_invalid_legacy_original_row_second": 0,
+          "maximum_absolute_numeric_change_by_field": {
+            "shortwave_radiation": 0.0,
+            "temperature_2m": 0.0,
+            "wind_direction_100m": 0.0,
+            "wind_speed_100m": 0.0
+          },
+          "old_raw_ERA5_source_SHA_still_unverified": true,
+          "original_q_qualified_source_animals": 51,
+          "original_qualified_q_days": 4860,
+          "original_source_q_coverage_rank": 2,
+          "original_source_sunlight_moving_steps": 15086,
+          "physical_hourly_numeric_SHA_identical": true,
+          "physical_hourly_schema": "rsds-era5-hourly-utc-physical-v1",
+          "raw_SHA_disagreement_with_identical_physical_values_and_grid": true,
+          "raw_response_SHA_identical": false,
+          "returned_weather_grid_metadata_identical": true,
+          "second_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "second_new_hourly_physical_SHA256": "f60ee7eb926509872869e9fe2605820896b224cef2dbef9aff9c15308c61b3d7",
+          "second_new_raw_SHA256": "f9e8f6c5142b9186155ccff6d67179d4523fe4cba86039611270894e9b18fe30",
+          "second_new_raw_SHA_equals_old_raw_SHA": false,
+          "status": "CURRENT_VERSION_TWO_REQUESTS_PHYSICAL_AUDITED"
+        }
+      ],
+      "previous_v0_physical_content_provable": false,
+      "region": "Utah",
+      "source_original_weather_contexts": 2,
+      "status": "CURRENT_TWO_REQUESTS_PHYSICAL_AUDITED",
+      "taxon": "Antilocapra americana"
+    },
+    {
+      "context_outcomes": [
+        {
+          "UTC_hours_verified": 8784,
+          "does_not_compare_to_unarchived_original_v0_physical_values": true,
+          "first_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "first_new_hourly_physical_SHA256": "c937271077ce080312868897a5529e2d877815e3e9189bf55e314b1350093af1",
+          "first_new_raw_SHA256": "fbcc41c2003f902e4a479da7ce4c4a62bfca4cd7a38a350d9104197f97f63200",
+          "first_new_raw_SHA_equals_old_raw_SHA": false,
+          "historical_old_weather_physical_array_not_archived": true,
+          "hours_differing_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "hours_with_any_invalid_legacy_original_row_first": 0,
+          "hours_with_any_invalid_legacy_original_row_second": 0,
+          "maximum_absolute_numeric_change_by_field": {
+            "shortwave_radiation": 0.0,
+            "temperature_2m": 0.0,
+            "wind_direction_100m": 0.0,
+            "wind_speed_100m": 0.0
+          },
+          "old_raw_ERA5_source_SHA_still_unverified": true,
+          "original_q_qualified_source_animals": 91,
+          "original_qualified_q_days": 8697,
+          "original_source_q_coverage_rank": 1,
+          "original_source_sunlight_moving_steps": 18039,
+          "physical_hourly_numeric_SHA_identical": true,
+          "physical_hourly_schema": "rsds-era5-hourly-utc-physical-v1",
+          "raw_SHA_disagreement_with_identical_physical_values_and_grid": true,
+          "raw_response_SHA_identical": false,
+          "returned_weather_grid_metadata_identical": true,
+          "second_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "second_new_hourly_physical_SHA256": "c937271077ce080312868897a5529e2d877815e3e9189bf55e314b1350093af1",
+          "second_new_raw_SHA256": "eb12003106516aaefd5c19940e147ef06a345b5e5dc791d7e27ef200bd255ae5",
+          "second_new_raw_SHA_equals_old_raw_SHA": false,
+          "status": "CURRENT_VERSION_TWO_REQUESTS_PHYSICAL_AUDITED"
+        },
+        {
+          "UTC_hours_verified": 8760,
+          "does_not_compare_to_unarchived_original_v0_physical_values": true,
+          "first_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "first_new_hourly_physical_SHA256": "0bad7ce6b1a157fe9a9d95d394971f09df3dbffd6569ec44840dad0eb76ec118",
+          "first_new_raw_SHA256": "ce90a798dadc52f8b105ec4697a0b6a8818d3526fb64be15f53d4488b2fe0a2d",
+          "first_new_raw_SHA_equals_old_raw_SHA": false,
+          "historical_old_weather_physical_array_not_archived": true,
+          "hours_differing_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "hours_with_any_invalid_legacy_original_row_first": 0,
+          "hours_with_any_invalid_legacy_original_row_second": 0,
+          "maximum_absolute_numeric_change_by_field": {
+            "shortwave_radiation": 0.0,
+            "temperature_2m": 0.0,
+            "wind_direction_100m": 0.0,
+            "wind_speed_100m": 0.0
+          },
+          "old_raw_ERA5_source_SHA_still_unverified": true,
+          "original_q_qualified_source_animals": 77,
+          "original_qualified_q_days": 7208,
+          "original_source_q_coverage_rank": 2,
+          "original_source_sunlight_moving_steps": 14925,
+          "physical_hourly_numeric_SHA_identical": true,
+          "physical_hourly_schema": "rsds-era5-hourly-utc-physical-v1",
+          "raw_SHA_disagreement_with_identical_physical_values_and_grid": true,
+          "raw_response_SHA_identical": false,
+          "returned_weather_grid_metadata_identical": true,
+          "second_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "second_new_hourly_physical_SHA256": "0bad7ce6b1a157fe9a9d95d394971f09df3dbffd6569ec44840dad0eb76ec118",
+          "second_new_raw_SHA256": "cbcc16ac1b7d29fd537fc93e5456a8cc56ef8a68a6973c8bc079e6a668e12309",
+          "second_new_raw_SHA_equals_old_raw_SHA": false,
+          "status": "CURRENT_VERSION_TWO_REQUESTS_PHYSICAL_AUDITED"
+        }
+      ],
+      "previous_v0_physical_content_provable": false,
+      "region": "Utah",
+      "source_original_weather_contexts": 2,
+      "status": "CURRENT_TWO_REQUESTS_PHYSICAL_AUDITED",
+      "taxon": "Cervus elaphus"
+    },
+    {
+      "context_outcomes": [
+        {
+          "UTC_hours_verified": 8760,
+          "does_not_compare_to_unarchived_original_v0_physical_values": true,
+          "first_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "first_new_hourly_physical_SHA256": "4682d1bc3e16c82d3ee975dee32ce523b3efc2e6d2b1046fb8301b22e5681770",
+          "first_new_raw_SHA256": "25570b968c392204f156e3f5c85e2a677c4f86ddb0d7972ede592d881bd73aa0",
+          "first_new_raw_SHA_equals_old_raw_SHA": false,
+          "historical_old_weather_physical_array_not_archived": true,
+          "hours_differing_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "hours_with_any_invalid_legacy_original_row_first": 0,
+          "hours_with_any_invalid_legacy_original_row_second": 0,
+          "maximum_absolute_numeric_change_by_field": {
+            "shortwave_radiation": 0.0,
+            "temperature_2m": 0.0,
+            "wind_direction_100m": 0.0,
+            "wind_speed_100m": 0.0
+          },
+          "old_raw_ERA5_source_SHA_still_unverified": true,
+          "original_q_qualified_source_animals": 165,
+          "original_qualified_q_days": 16812,
+          "original_source_q_coverage_rank": 1,
+          "original_source_sunlight_moving_steps": 30855,
+          "physical_hourly_numeric_SHA_identical": true,
+          "physical_hourly_schema": "rsds-era5-hourly-utc-physical-v1",
+          "raw_SHA_disagreement_with_identical_physical_values_and_grid": true,
+          "raw_response_SHA_identical": false,
+          "returned_weather_grid_metadata_identical": true,
+          "second_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "second_new_hourly_physical_SHA256": "4682d1bc3e16c82d3ee975dee32ce523b3efc2e6d2b1046fb8301b22e5681770",
+          "second_new_raw_SHA256": "88c157b261f85c0268bbeff91fd324743fbde1d8740e0af8f8a7d3fc48c85cb5",
+          "second_new_raw_SHA_equals_old_raw_SHA": false,
+          "status": "CURRENT_VERSION_TWO_REQUESTS_PHYSICAL_AUDITED"
+        },
+        {
+          "UTC_hours_verified": 8784,
+          "does_not_compare_to_unarchived_original_v0_physical_values": true,
+          "first_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "first_new_hourly_physical_SHA256": "28a7d6d3a4875d24d1654d608e0d70a7430fc5d30fff290cc18d2f464d28b42a",
+          "first_new_raw_SHA256": "789eb8dfb26da93bbd6884a08a2e00014c4620668bfec36fa602338a7964fdaa",
+          "first_new_raw_SHA_equals_old_raw_SHA": false,
+          "historical_old_weather_physical_array_not_archived": true,
+          "hours_differing_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "hours_with_any_invalid_legacy_original_row_first": 0,
+          "hours_with_any_invalid_legacy_original_row_second": 0,
+          "maximum_absolute_numeric_change_by_field": {
+            "shortwave_radiation": 0.0,
+            "temperature_2m": 0.0,
+            "wind_direction_100m": 0.0,
+            "wind_speed_100m": 0.0
+          },
+          "old_raw_ERA5_source_SHA_still_unverified": true,
+          "original_q_qualified_source_animals": 158,
+          "original_qualified_q_days": 16591,
+          "original_source_q_coverage_rank": 2,
+          "original_source_sunlight_moving_steps": 25761,
+          "physical_hourly_numeric_SHA_identical": true,
+          "physical_hourly_schema": "rsds-era5-hourly-utc-physical-v1",
+          "raw_SHA_disagreement_with_identical_physical_values_and_grid": true,
+          "raw_response_SHA_identical": false,
+          "returned_weather_grid_metadata_identical": true,
+          "second_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "second_new_hourly_physical_SHA256": "28a7d6d3a4875d24d1654d608e0d70a7430fc5d30fff290cc18d2f464d28b42a",
+          "second_new_raw_SHA256": "23eb0fc4ef36e1868f7e3143124a49d492f025805244e3e329c0b9f4aa2b4bba",
+          "second_new_raw_SHA_equals_old_raw_SHA": false,
+          "status": "CURRENT_VERSION_TWO_REQUESTS_PHYSICAL_AUDITED"
+        }
+      ],
+      "previous_v0_physical_content_provable": false,
+      "region": "Utah",
+      "source_original_weather_contexts": 2,
+      "status": "CURRENT_TWO_REQUESTS_PHYSICAL_AUDITED",
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "context_outcomes": [
+        {
+          "UTC_hours_verified": 8784,
+          "does_not_compare_to_unarchived_original_v0_physical_values": true,
+          "first_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "first_new_hourly_physical_SHA256": "f60ee7eb926509872869e9fe2605820896b224cef2dbef9aff9c15308c61b3d7",
+          "first_new_raw_SHA256": "f19e1b67d22c7843f623ff8284ecc65042183b5a3b1d73845b5a3765ffab4eb3",
+          "first_new_raw_SHA_equals_old_raw_SHA": false,
+          "historical_old_weather_physical_array_not_archived": true,
+          "hours_differing_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "hours_with_any_invalid_legacy_original_row_first": 0,
+          "hours_with_any_invalid_legacy_original_row_second": 0,
+          "maximum_absolute_numeric_change_by_field": {
+            "shortwave_radiation": 0.0,
+            "temperature_2m": 0.0,
+            "wind_direction_100m": 0.0,
+            "wind_speed_100m": 0.0
+          },
+          "old_raw_ERA5_source_SHA_still_unverified": true,
+          "original_q_qualified_source_animals": 75,
+          "original_qualified_q_days": 7429,
+          "original_source_q_coverage_rank": 1,
+          "original_source_sunlight_moving_steps": 14775,
+          "physical_hourly_numeric_SHA_identical": true,
+          "physical_hourly_schema": "rsds-era5-hourly-utc-physical-v1",
+          "raw_SHA_disagreement_with_identical_physical_values_and_grid": true,
+          "raw_response_SHA_identical": false,
+          "returned_weather_grid_metadata_identical": true,
+          "second_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "second_new_hourly_physical_SHA256": "f60ee7eb926509872869e9fe2605820896b224cef2dbef9aff9c15308c61b3d7",
+          "second_new_raw_SHA256": "f9e8f6c5142b9186155ccff6d67179d4523fe4cba86039611270894e9b18fe30",
+          "second_new_raw_SHA_equals_old_raw_SHA": false,
+          "status": "CURRENT_VERSION_TWO_REQUESTS_PHYSICAL_AUDITED"
+        },
+        {
+          "UTC_hours_verified": 8760,
+          "does_not_compare_to_unarchived_original_v0_physical_values": true,
+          "first_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "first_new_hourly_physical_SHA256": "4682d1bc3e16c82d3ee975dee32ce523b3efc2e6d2b1046fb8301b22e5681770",
+          "first_new_raw_SHA256": "25570b968c392204f156e3f5c85e2a677c4f86ddb0d7972ede592d881bd73aa0",
+          "first_new_raw_SHA_equals_old_raw_SHA": false,
+          "historical_old_weather_physical_array_not_archived": true,
+          "hours_differing_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "hours_with_any_invalid_legacy_original_row_first": 0,
+          "hours_with_any_invalid_legacy_original_row_second": 0,
+          "maximum_absolute_numeric_change_by_field": {
+            "shortwave_radiation": 0.0,
+            "temperature_2m": 0.0,
+            "wind_direction_100m": 0.0,
+            "wind_speed_100m": 0.0
+          },
+          "old_raw_ERA5_source_SHA_still_unverified": true,
+          "original_q_qualified_source_animals": 48,
+          "original_qualified_q_days": 4703,
+          "original_source_q_coverage_rank": 2,
+          "original_source_sunlight_moving_steps": 9791,
+          "physical_hourly_numeric_SHA_identical": true,
+          "physical_hourly_schema": "rsds-era5-hourly-utc-physical-v1",
+          "raw_SHA_disagreement_with_identical_physical_values_and_grid": true,
+          "raw_response_SHA_identical": false,
+          "returned_weather_grid_metadata_identical": true,
+          "second_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "second_new_hourly_physical_SHA256": "4682d1bc3e16c82d3ee975dee32ce523b3efc2e6d2b1046fb8301b22e5681770",
+          "second_new_raw_SHA256": "88c157b261f85c0268bbeff91fd324743fbde1d8740e0af8f8a7d3fc48c85cb5",
+          "second_new_raw_SHA_equals_old_raw_SHA": false,
+          "status": "CURRENT_VERSION_TWO_REQUESTS_PHYSICAL_AUDITED"
+        }
+      ],
+      "previous_v0_physical_content_provable": false,
+      "region": "Utah",
+      "source_original_weather_contexts": 2,
+      "status": "CURRENT_TWO_REQUESTS_PHYSICAL_AUDITED",
+      "taxon": "Ovis canadensis"
+    },
+    {
+      "context_outcomes": [
+        {
+          "UTC_hours_verified": 8784,
+          "does_not_compare_to_unarchived_original_v0_physical_values": true,
+          "first_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "first_new_hourly_physical_SHA256": "0b6fd729b6fb0af8a456d6f288f9156b411130b81522f7e17cb2c67c36e24c5b",
+          "first_new_raw_SHA256": "9f2f2b922a2074c2dfc6520f41b56ec65a2edbb2e8f433f31b73110e18fabe88",
+          "first_new_raw_SHA_equals_old_raw_SHA": false,
+          "historical_old_weather_physical_array_not_archived": true,
+          "hours_differing_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "hours_with_any_invalid_legacy_original_row_first": 0,
+          "hours_with_any_invalid_legacy_original_row_second": 0,
+          "maximum_absolute_numeric_change_by_field": {
+            "shortwave_radiation": 0.0,
+            "temperature_2m": 0.0,
+            "wind_direction_100m": 0.0,
+            "wind_speed_100m": 0.0
+          },
+          "old_raw_ERA5_source_SHA_still_unverified": true,
+          "original_q_qualified_source_animals": 72,
+          "original_qualified_q_days": 5737,
+          "original_source_q_coverage_rank": 1,
+          "original_source_sunlight_moving_steps": 15411,
+          "physical_hourly_numeric_SHA_identical": true,
+          "physical_hourly_schema": "rsds-era5-hourly-utc-physical-v1",
+          "raw_SHA_disagreement_with_identical_physical_values_and_grid": true,
+          "raw_response_SHA_identical": false,
+          "returned_weather_grid_metadata_identical": true,
+          "second_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "second_new_hourly_physical_SHA256": "0b6fd729b6fb0af8a456d6f288f9156b411130b81522f7e17cb2c67c36e24c5b",
+          "second_new_raw_SHA256": "736accc4efbbe4fbbbd40d630073317001403b2a2ef26df1fa32bc327b861383",
+          "second_new_raw_SHA_equals_old_raw_SHA": false,
+          "status": "CURRENT_VERSION_TWO_REQUESTS_PHYSICAL_AUDITED"
+        },
+        {
+          "UTC_hours_verified": 8760,
+          "does_not_compare_to_unarchived_original_v0_physical_values": true,
+          "first_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "first_new_hourly_physical_SHA256": "d5d42ec1a36a8c29acf2caa900a49647f1e996200073846366b189b8156e17b6",
+          "first_new_raw_SHA256": "1184fab1dd42c93920e799151234439617153906c694998d4564f6bd2dde4ffb",
+          "first_new_raw_SHA_equals_old_raw_SHA": false,
+          "historical_old_weather_physical_array_not_archived": true,
+          "hours_differing_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "hours_with_any_invalid_legacy_original_row_first": 0,
+          "hours_with_any_invalid_legacy_original_row_second": 0,
+          "maximum_absolute_numeric_change_by_field": {
+            "shortwave_radiation": 0.0,
+            "temperature_2m": 0.0,
+            "wind_direction_100m": 0.0,
+            "wind_speed_100m": 0.0
+          },
+          "old_raw_ERA5_source_SHA_still_unverified": true,
+          "original_q_qualified_source_animals": 53,
+          "original_qualified_q_days": 4745,
+          "original_source_q_coverage_rank": 2,
+          "original_source_sunlight_moving_steps": 13167,
+          "physical_hourly_numeric_SHA_identical": true,
+          "physical_hourly_schema": "rsds-era5-hourly-utc-physical-v1",
+          "raw_SHA_disagreement_with_identical_physical_values_and_grid": true,
+          "raw_response_SHA_identical": false,
+          "returned_weather_grid_metadata_identical": true,
+          "second_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "second_new_hourly_physical_SHA256": "d5d42ec1a36a8c29acf2caa900a49647f1e996200073846366b189b8156e17b6",
+          "second_new_raw_SHA256": "c7229ec759ad3511d78c150821c70b92db436cff4715b74a0a90a09cda886a0f",
+          "second_new_raw_SHA_equals_old_raw_SHA": false,
+          "status": "CURRENT_VERSION_TWO_REQUESTS_PHYSICAL_AUDITED"
+        }
+      ],
+      "previous_v0_physical_content_provable": false,
+      "region": "Wyoming",
+      "source_original_weather_contexts": 2,
+      "status": "CURRENT_TWO_REQUESTS_PHYSICAL_AUDITED",
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "context_outcomes": [
+        {
+          "UTC_hours_verified": 8784,
+          "does_not_compare_to_unarchived_original_v0_physical_values": true,
+          "first_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "first_new_hourly_physical_SHA256": "56c4a6c6037a4579e9058ba184cb9961cedce487be414d5ab86b7fcd2ee9563b",
+          "first_new_raw_SHA256": "2c6a9a3453e4ed713415afc70388da0901c5cad07c0a29afd9f29137cc063d66",
+          "first_new_raw_SHA_equals_old_raw_SHA": false,
+          "historical_old_weather_physical_array_not_archived": true,
+          "hours_differing_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "hours_with_any_invalid_legacy_original_row_first": 0,
+          "hours_with_any_invalid_legacy_original_row_second": 0,
+          "maximum_absolute_numeric_change_by_field": {
+            "shortwave_radiation": 0.0,
+            "temperature_2m": 0.0,
+            "wind_direction_100m": 0.0,
+            "wind_speed_100m": 0.0
+          },
+          "old_raw_ERA5_source_SHA_still_unverified": true,
+          "original_q_qualified_source_animals": 23,
+          "original_qualified_q_days": 2575,
+          "original_source_q_coverage_rank": 1,
+          "original_source_sunlight_moving_steps": 5248,
+          "physical_hourly_numeric_SHA_identical": true,
+          "physical_hourly_schema": "rsds-era5-hourly-utc-physical-v1",
+          "raw_SHA_disagreement_with_identical_physical_values_and_grid": true,
+          "raw_response_SHA_identical": false,
+          "returned_weather_grid_metadata_identical": true,
+          "second_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "second_new_hourly_physical_SHA256": "56c4a6c6037a4579e9058ba184cb9961cedce487be414d5ab86b7fcd2ee9563b",
+          "second_new_raw_SHA256": "c9bca1d636db695595221e311104b5c5c3493aaf5e798d63676045385b529796",
+          "second_new_raw_SHA_equals_old_raw_SHA": false,
+          "status": "CURRENT_VERSION_TWO_REQUESTS_PHYSICAL_AUDITED"
+        },
+        {
+          "UTC_hours_verified": 8760,
+          "does_not_compare_to_unarchived_original_v0_physical_values": true,
+          "first_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "first_new_hourly_physical_SHA256": "269dea945c549cc461bac88dba152cdc637ffc5d899bdfddec864c6396360e9a",
+          "first_new_raw_SHA256": "a27d12871a7cbdabf0a643e8b7d195276048440e63b40fc5fbfcdf4a118f4713",
+          "first_new_raw_SHA_equals_old_raw_SHA": false,
+          "historical_old_weather_physical_array_not_archived": true,
+          "hours_differing_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "hours_with_any_invalid_legacy_original_row_first": 0,
+          "hours_with_any_invalid_legacy_original_row_second": 0,
+          "maximum_absolute_numeric_change_by_field": {
+            "shortwave_radiation": 0.0,
+            "temperature_2m": 0.0,
+            "wind_direction_100m": 0.0,
+            "wind_speed_100m": 0.0
+          },
+          "old_raw_ERA5_source_SHA_still_unverified": true,
+          "original_q_qualified_source_animals": 22,
+          "original_qualified_q_days": 1824,
+          "original_source_q_coverage_rank": 2,
+          "original_source_sunlight_moving_steps": 6443,
+          "physical_hourly_numeric_SHA_identical": true,
+          "physical_hourly_schema": "rsds-era5-hourly-utc-physical-v1",
+          "raw_SHA_disagreement_with_identical_physical_values_and_grid": true,
+          "raw_response_SHA_identical": false,
+          "returned_weather_grid_metadata_identical": true,
+          "second_missing_hourly_values_by_field": {
+            "shortwave_radiation": 0,
+            "temperature_2m": 0,
+            "wind_direction_100m": 0,
+            "wind_speed_100m": 0
+          },
+          "second_new_hourly_physical_SHA256": "269dea945c549cc461bac88dba152cdc637ffc5d899bdfddec864c6396360e9a",
+          "second_new_raw_SHA256": "6af436f6e4813cec543417bc68cd3bbaf7aafd37954599a634d8a417066d7e80",
+          "second_new_raw_SHA_equals_old_raw_SHA": false,
+          "status": "CURRENT_VERSION_TWO_REQUESTS_PHYSICAL_AUDITED"
+        }
+      ],
+      "previous_v0_physical_content_provable": false,
+      "region": "Wyoming",
+      "source_original_weather_contexts": 2,
+      "status": "CURRENT_TWO_REQUESTS_PHYSICAL_AUDITED",
+      "taxon": "Ovis canadensis"
+    }
+  ],
+  "historical_original_12_source_version_HOLDs_UNCHANGED": true,
+  "interpretation": [
+    "Two current provider requests at the same GPS-selected gridyear test current physical-data reproducibility, not the unarchived old numeric arrays.",
+    "A raw JSON SHA mismatch can reflect transient response-generation metadata, formatting or numbers, so only independently frozen canonical hourly numeric hashes can establish physical equality for NEW versions.",
+    "No GPS exact coordinates, grid identifiers, calendar years, timestamps, tag IDs, individual tracking records or original weather arrays are published.",
+    "The old twelve v0-v1 raw SHA differences are real as file identities but OLD-vs-NEW physical equivalence is unknowable from SHA fingerprints alone.",
+    "The previous source-specific animal effects and failed external solar radiation replication remain untouched; no causal ERA5 wildlife response is inferred."
+  ],
+  "new_original_source_weather_numeric_snapshot_does_not_change_old_biological_effects": true,
+  "original_48_study_external_negative_shortwave_replication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "original_selected_weather_contexts_expected": 12,
+  "original_selected_weather_contexts_reconstructed": 12,
+  "original_studies": 2,
+  "original_study_taxon_groups": 6,
+  "source_study_results": [
+    {
+      "GPS_MD5_replayed": true,
+      "native_taxon_count": 4,
+      "original_native_temporal_results_replayed_before_weather": true,
+      "region": "Utah",
+      "source_DOI": "10.5441/001/1.711",
+      "state": "ORIGINAL_GPS_SOURCE_PHYSICAL_VERSION_AUDIT_COMPLETED",
+      "unique_physical_weather_source_queries": 6
+    },
+    {
+      "GPS_MD5_replayed": true,
+      "native_taxon_count": 2,
+      "original_native_temporal_results_replayed_before_weather": true,
+      "region": "Wyoming",
+      "source_DOI": "10.5441/001/1.703",
+      "state": "ORIGINAL_GPS_SOURCE_PHYSICAL_VERSION_AUDIT_COMPLETED",
+      "unique_physical_weather_source_queries": 4
+    }
+  ],
+  "status": "NEW_PROVIDER_HOURLY_CONTENT_AUDIT_NOT_OLD_PHYSICAL_REPLICATION",
+  "version": "RSDS_ORIGINAL_GPS_CONTEXT_CURRENT_ERA5_PHYSICAL_V1_RESULT",
+  "within_current_session_canonical_UTC_hourly_values_equal": 12,
+  "within_current_session_raw_JSON_sha_mismatch": 12,
+  "within_current_session_raw_json_diff_but_physical_and_grid_equal": 12
+}
