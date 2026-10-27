@@ -1,0 +1,72 @@
+{
+  "version": "RSDS_ERA5_PHYSICAL_CONTENT_VERSION_AUDIT_V1",
+  "date": "2026-10-28",
+  "stage": "SEPARATE_POST_V0_WEATHER_SOURCE_REPRODUCIBILITY_AUDIT_NOT_BIOLOGICAL_REPLICATION",
+  "prior_old_raw_12": {
+    "baseline": "research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_FIRST_RESULTS_20261026.json",
+    "replay_audit": "research/RSDS_SAME_TAG_CONTEXT_PAIR_V1_FIRST_RESULT_20261026.json",
+    "old_response_raw_bytes_retained_in_RSDS": false,
+    "old_raw_JSON_SHA_mismatch_contexts": 12,
+    "old_source_physical_equivalence_identifiable": false,
+    "previous_outcome": "ERA5_VERSION_HOLD_UNCHANGED",
+    "negative_directional_external_replication": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
+  },
+  "critical_scientific_question": "Did old serialized provider response raw-SHA mismatches reflect transient metadata serialization, or physical changes in UTC-hourly four-field ERA5 values? Without archived old weather numeric arrays the old-vs-now physical-equivalence question cannot be answered; we can independently test now-vs-now reproducibility and freeze a newly versioned physical array.",
+  "two_strata": {
+    "public_nonGPS_benchmark": [
+      {
+        "name": "benchmark_continental",
+        "latitude_floor": 40,
+        "longitude_floor": -105,
+        "year": 2020
+      },
+      {
+        "name": "benchmark_tropical_southern",
+        "latitude_floor": -20,
+        "longitude_floor": 120,
+        "year": 2021
+      }
+    ],
+    "real_original_movebank_source_contexts": [
+      {
+        "region": "Utah",
+        "doi": "10.5441/001/1.711",
+        "original_native_taxa": 4,
+        "context_per_native_taxon": 2
+      },
+      {
+        "region": "Wyoming",
+        "doi": "10.5441/001/1.703",
+        "original_native_taxa": 2,
+        "context_per_native_taxon": 2
+      }
+    ]
+  },
+  "measurement": {
+    "full_calendar_year_UTC_hourly": true,
+    "model": "era5",
+    "endpoint": "https://archive-api.open-meteo.com/v1/archive",
+    "variables": [
+      "wind_speed_100m",
+      "wind_direction_100m",
+      "shortwave_radiation",
+      "temperature_2m"
+    ],
+    "exact_units": [
+      "m/s",
+      "°",
+      "W/m²",
+      "°C"
+    ],
+    "raw_response_sha256": "SHA256 unmodified raw HTTP JSON payload. Sensitive to dynamic generationtime_ms, metadata order and byte formatting.",
+    "physical_response_sha256": "SHA256 canonical representation of YEAR UTC hour labels + exact variable names/units + decimal numeric payloads at 1e-6 resolution and missing cells. Stable to whitespace, JSON key ordering, int/float numeric formatting, generationtime_ms and unconsumed metadata.",
+    "physical_metadata_check": "In addition to numerical hash comparison, flag physical grid metadata change separately. Do not coerce a new returned model grid to prior actual animal location.",
+    "within_same_session_replication": "Two independently requested identical parameter sets within the same run, 1-second separation. Compare raw and canonical SHA and per-variable changed hours. Do not infer the old archived physical values.",
+    "gap_limits": "Request cap 6 MB / calendar full-year only; every provider source hold remains explicit and no original GPX coordinates/year included in output."
+  },
+  "original_GPS_preflight": "For Utah and Wyoming source packets, require original bitstream UUID, size and MD5, then replay native q / daylight source means and counts to tolerance 1e-12 BEFORE choosing the original top-two q-coverage gridyears and requesting ERA5.",
+  "original_context_selection": "Use unchanged source-original q support top 2; verify original taxon context ranks, original qday and eligible animal counts against v0 before querying. No favorable new climate/version/animal sign selection.",
+  "new_physical_snapshot_policy": "New physical SHA is a NEW provider-version provenance, not a retroactive proof old v0 ERA5 arrays were identical. Do not reclassify any original biological shortwave effects or 12 holds.",
+  "privacy": "Do not store GPS source gridcenter/year, original tagged IDs, tracks, UTC animal fix times, per-animal GPS/ERA5 effects, raw provider JSON or request URL for tracked animals. Benchmark public lat/lon fixed independent of GPS sources and permitted.",
+  "next_biology_route": "Only after source-specific canonical hourly physical fingerprints are available and a new original GPS/animal/step eligibility contract is separately frozen can new weather/heading models be explored. Compare with original v0 as explicit reanalysis of a different version, not independent confirmation."
+}

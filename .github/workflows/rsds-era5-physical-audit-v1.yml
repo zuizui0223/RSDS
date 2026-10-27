@@ -1,0 +1,52 @@
+name: RSDS ERA5 physical hourly content vs raw JSON SHA audit v1
+on:
+  push:
+    branches:
+      - science/era5-physical-content-audit-v1
+    paths:
+      - 'scripts/era5_canonical_physical_content_v1.py'
+      - 'scripts/run_rsds_era5_canonical_benchmark_v1.py'
+      - 'tests/test_rsds_era5_canonical_physical_content_v1.py'
+      - 'research/RSDS_ERA5_PHYSICAL_CONTENT_VERSION_AUDIT_V1_CONTRACT.json'
+      - '.github/workflows/rsds-era5-physical-audit-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  canonical_provider_physical_data_audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/era5-physical-content-audit-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Synthetic known-truth unit/time/physical drift vs JSON metadata tests
+        run: python -m unittest discover -s tests -p 'test_rsds_era5_canonical_physical_content_v1.py' -v
+      - name: Verify old GPS source and external radiation prior outcomes untouched
+        run: python -m scripts.verify_rsds_migration
+      - name: TWO independent requests to identical public non-GPS ERA5 source-year benchmarks
+        run: |
+          python -m scripts.run_rsds_era5_canonical_benchmark_v1 --out research/RSDS_ERA5_CANONICAL_BENCHMARK_FIRST_RESULT_20261028.json
+          python -m json.tool research/RSDS_ERA5_CANONICAL_BENCHMARK_FIRST_RESULT_20261028.json > /dev/null
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-era5-hourly-physical-hash-repro-public-reference-only-v1
+          path: research/RSDS_ERA5_CANONICAL_BENCHMARK_FIRST_RESULT_20261028.json
+          if-no-files-found: error
+      - name: Commit actual benchmark physical hash receipt, no animal original GPS or source locations
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_ERA5_CANONICAL_BENCHMARK_FIRST_RESULT_20261028.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: compare raw JSON vs canonical hourly ERA5 values for fixed non-GPS benchmark sites"
+            git fetch origin science/era5-physical-content-audit-v1
+            git rebase origin/science/era5-physical-content-audit-v1
+            git push origin HEAD:science/era5-physical-content-audit-v1
+          fi
