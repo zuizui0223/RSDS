@@ -110,6 +110,21 @@ RSDSでは、Utah/Wyoming元GPSから独立して選んだ**2つの公開固定E
 
 [詳細な科学的検証](RSDS_ERA5_PHYSICAL_VS_JSON_VERSION_AUDIT_20261028.md) ／ [固定原ベンチマークJSON](../research/RSDS_ERA5_CANONICAL_BENCHMARK_FIRST_RESULT_20261028.json) ／ [数値の正規化と単位検査](../scripts/era5_canonical_physical_content_v1.py)。
 
+## K. 元GPSで使用した12コンテキストのERA5物理数値版再現に成功（2026-10-28）
+
+以前のUtah（4分類群）・Wyoming（2分類群）の原Movebank GPSでは、気象再取得JSONのSHA256不一致により12コンテキストの気象版再現を**ERA5_VERSION_HOLD**としていた。その旧JSON物理数値の配列は保存されていないため、**旧対新の気象値が同じかは原則として判定不能**である。
+
+今回は別途、元ファイルUUID/MD5と以前の原q・日長係数・適格個体数を**気象API照会前に完全再現**し、以前のq採用個体・日数で選択した**12元グリッド年コンテキスト**（Utah8・Wyoming4、実際の異なる元気象グリッド年10件）を復元した。各元気象グリッド年を2回取得して、UTC1時間・短波放射・風速・風向・気温・単位・モデル格子を比較した結果：
+
+- **12/12で今回の2回の生JSON全体のSHAが不一致。**
+- **12/12で今回の2回の時別物理値のcanonical SHAが完全一致。** 各変数で異なるUTC時点数は0、モデル格子も一致。
+- **0/12で今回の新JSONの生SHAが元の旧保存SHAと一致。** ただし旧物理値の一致・不一致は未判定。
+- 元GPSの提供元検証と旧生物q/日長効果は6/6分類群で再現。**以前のHOLDも負方向日射効果の独立外部非再現判定も変更なし。**
+
+**科学的な品質結果としての結論：** 気象サービスのHTTP生JSON SHAは、実際の物理的ERA5時別気象の再現性と同義ではない。今後の新しい気象版なら物理時系列を固定して同一個体・同一GPS時刻の解析を行えるが、現在の結果は日射・温熱・風による生物の移動方向の因果機構を実証したものではない。
+
+[元GPS12コンテキストの実測](../research/RSDS_ERA5_ORIGINAL_SOURCES_CANONICAL_FIRST_RESULT_20261028.json) ／ [研究上の含意](RSDS_ORIGINAL_GPS_ERA5_PHYSICAL_CONTENT_12_CONTEXTS_20261028.md) ／ [元の旧HOLD・新物理版の検証契約](../research/RSDS_ERA5_PHYSICAL_CONTENT_VERSION_AUDIT_V1_CONTRACT.json)。
+
 ## 再現可能性と論文発展
 
 - [全球太陽方向の研究草稿v2](../manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_v2_20261025.md)
