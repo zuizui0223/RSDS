@@ -1,0 +1,125 @@
+name: RSDS original eight-study GPS hourly cadence observation sensitivity v1
+on:
+  push:
+    branches:
+      - science/gps-cadence-matched-day-sensitivity-v1
+    paths:
+      - 'scripts/run_rsds_eight_study_gps_cadence_v1.py'
+      - 'scripts/aggregate_rsds_eight_study_gps_cadence_v1.py'
+      - 'tests/test_rsds_eight_study_gps_cadence_v1.py'
+      - 'tests/test_rsds_eight_study_gps_cadence_aggregate_v1.py'
+      - 'research/RSDS_ORIGINAL_EIGHT_STUDY_GPS_CADENCE_V1_CONTRACT.json'
+      - '.github/workflows/rsds-eight-study-gps-cadence-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_provider_study_and_synthetic_known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/gps-cadence-matched-day-sensitivity-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original source utility dependencies only
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Confirm 390 historic ODSP domain SHA original and external negative radiation unchanged
+        run: python -m scripts.verify_rsds_migration
+      - name: Synthetic original UTC hour/2h phase source dates/paired tags, all native source holds tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_eight_study_gps_cadence_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_eight_study_gps_cadence_aggregate_v1.py' -v
+  original_MD5_sealed_study_cadence:
+    needs: original_provider_study_and_synthetic_known_truth
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        study: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/gps-cadence-matched-day-sensitivity-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original native GPS geometry support
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Replay fixed original provider MD5+source q+daylength before comparing same tag and dates at even/odd 2h UTC cadence
+        run: |
+          python -m scripts.run_rsds_eight_study_gps_cadence_v1 --study-index ${{ matrix.study }} --out outputs/cadence_source
+      - name: Keep only grouped source effect and original sampling loss or HOLD status
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-gps-cadence-study-${{ matrix.study }}-v1
+          path: outputs/cadence_source/original_study_${{ matrix.study }}_cadence_v1.json
+          if-no-files-found: error
+  full_eight_original_study_source_grain_cadence_synthesis:
+    needs: original_MD5_sealed_study_cadence
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/gps-cadence-matched-day-sensitivity-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Required original GPS study package helper
+        run: python -m pip install 'numpy>=1.24,<3'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-gps-cadence-study-*-v1
+          merge-multiple: true
+          path: outputs/cadence_source
+      - name: Retain all 8 original study source DOIs, all 12 source-taxa even and odd UTC phase results
+        run: |
+          python -m scripts.aggregate_rsds_eight_study_gps_cadence_v1 --input outputs/cadence_source --out research/RSDS_EIGHT_STUDY_GPS_CADENCE_MATCHED_DAY_FIRST_RESULT_20261028.json
+          python -m json.tool research/RSDS_EIGHT_STUDY_GPS_CADENCE_MATCHED_DAY_FIRST_RESULT_20261028.json > /dev/null
+      - name: Confidential original tagged individuals/locations/GPS timestamps not present in public result
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_EIGHT_STUDY_GPS_CADENCE_MATCHED_DAY_FIRST_RESULT_20261028.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['original_field_studies']==8 and d['original_source_taxon_rows']==12
+          assert d['historic_ERA5_old_12_source_raw_SHA_HOLDS_UNCHANGED'] is True
+          assert d['historical_48_source_negative_radiation_replication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          def walk(x):
+              if isinstance(x,dict):
+                  for k,v in x.items():
+                      assert k not in {'individual_id','animal_id','tag_id','utc_hour','timestamp','latitude','longitude','location-lat','location-long','grid','per_animal','original_fix'}
+                      walk(v)
+              if isinstance(x,list):
+                  for t in x: walk(t)
+          walk(d)
+          print('Eight original studies, all native taxa, no original telemetry data or reclassified holds.')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-eight-study-same-tag-same-day-hourly-cadence-sensitivity-v1
+          path: research/RSDS_EIGHT_STUDY_GPS_CADENCE_MATCHED_DAY_FIRST_RESULT_20261028.json
+          if-no-files-found: error
+      - name: Commit first source-original observation effort sensitivity only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_EIGHT_STUDY_GPS_CADENCE_MATCHED_DAY_FIRST_RESULT_20261028.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: eight original source study UTC two-hour GPS phase thinning matched-tag day q and daylight"
+            git fetch origin science/gps-cadence-matched-day-sensitivity-v1
+            git rebase origin/science/gps-cadence-matched-day-sensitivity-v1
+            git push origin HEAD:science/gps-cadence-matched-day-sensitivity-v1
+          fi
