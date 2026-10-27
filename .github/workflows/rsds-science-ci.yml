@@ -177,6 +177,32 @@ jobs:
           assert d['old_48_source_external_signed_radiation_NONREPLICATED_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
           print('ERA5 2 independent benchmarks: raw JSON hash differs yet UTC-hourly physics unchanged; old source holds preserved')
           PY
+      - name: Verify original GPS MD5/q/daylength source-class ERA5 12-context physical first result is preserved
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_original_source_era5_physical_version_v1.py' -v
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          p=Path('research/RSDS_ERA5_ORIGINAL_SOURCES_CANONICAL_FIRST_RESULT_20261028.json')
+          raw=p.read_bytes()
+          sha=hashlib.sha1(('blob '+str(len(raw))+'\0').encode()+raw).hexdigest()
+          assert sha=='d39a1ee209ca81a895df6115110759ee4d0acd84','Original GPS weather numeric first source result changed'
+          d=json.loads(raw)
+          assert d['original_studies']==2 and d['original_study_taxon_groups']==6
+          assert d['original_selected_weather_contexts_reconstructed']==12
+          assert d['current_provider_contexts_two_response_comparisons']==12
+          assert d['within_current_session_raw_JSON_sha_mismatch']==12
+          assert d['within_current_session_canonical_UTC_hourly_values_equal']==12
+          assert d['within_current_session_raw_json_diff_but_physical_and_grid_equal']==12
+          assert d['CURRENT_raw_SHA_matches_historic_v0_raw_SHA_first_response']==0
+          assert d['baseline_raw_JSON_SHA_historical_replay_HOLD_contexts']==12
+          assert d['baseline_physical_content_OLD_vs_NEW']=='NOT_IDENTIFIABLE_OLD_HOURLY_NUMERIC_VALUES_NOT_ARCHIVED'
+          assert d['original_48_study_external_negative_shortwave_replication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          assert all(s['GPS_MD5_replayed'] and s['original_native_temporal_results_replayed_before_weather'] for s in d['source_study_results'])
+          print('12 original GPS-selected ERA5 current physical arrays stable; old physical data unknown and negative external verdict unchanged')
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
