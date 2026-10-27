@@ -46,5 +46,7 @@ jobs:
           git add research/RSDS_ERA5_CANONICAL_BENCHMARK_FIRST_RESULT_20261028.json
           if ! git diff --cached --quiet; then
             git commit -m "results: compare raw JSON vs canonical hourly ERA5 values for fixed non-GPS benchmark sites"
+            git fetch origin science/era5-physical-content-audit-v1
+            git rebase origin/science/era5-physical-content-audit-v1
             git push origin HEAD:science/era5-physical-content-audit-v1
           fi
