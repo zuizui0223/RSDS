@@ -1,0 +1,117 @@
+name: RSDS original GPS-selected ERA5 hourly physical version audit v1
+on:
+  push:
+    branches:
+      - science/era5-original-gps-context-audit-v1
+    paths:
+      - 'scripts/era5_canonical_physical_content_v1.py'
+      - 'scripts/audit_rsds_era5_original_source_physical_v1.py'
+      - 'scripts/aggregate_rsds_era5_original_source_physical_v1.py'
+      - 'tests/test_rsds_original_source_era5_physical_version_v1.py'
+      - 'research/RSDS_ERA5_PHYSICAL_CONTENT_VERSION_AUDIT_V1_CONTRACT.json'
+      - '.github/workflows/rsds-era5-original-source-canonical-audit-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_source_preweather_known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/era5-original-gps-context-audit-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original native GPS q/hourly geometry numerical dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Source exact-blob provenance, NOAA astronomy and ERA5 canonical known-truth tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.verify_rsds_migration
+          python -m unittest discover -s tests -p 'test_rsds_era5_canonical_physical_content_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_original_source_era5_physical_version_v1.py' -v
+  original_same_GPS_context_weather:
+    needs: original_source_preweather_known_truth
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        region: [Utah, Wyoming]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/era5-original-gps-context-audit-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original GPS numerical dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Revalidate original Movebank MD5, replay q/daylength and source context coverage, THEN request each original ERA5 gridyear twice
+        run: |
+          python -m scripts.audit_rsds_era5_original_source_physical_v1 --region ${{ matrix.region }} --out outputs/original_physical_version
+      - name: Upload group-only current physical content hashes and historical HOLDs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-${{ matrix.region }}-era5-content-audit-v1
+          path: outputs/original_physical_version/source_*.json
+          if-no-files-found: warn
+  original_source_ERA5_numeric_synthesis:
+    needs: original_same_GPS_context_weather
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/era5-original-gps-context-audit-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-original-*-era5-content-audit-v1
+          merge-multiple: true
+          path: outputs/original_physical_version
+      - name: Aggregate all twelve source-selected context results, with old physical nonidentifiability and all OLD ERA5 HOLDS
+        run: |
+          python -m scripts.aggregate_rsds_era5_original_source_physical_v1 --input outputs/original_physical_version --out research/RSDS_ERA5_ORIGINAL_SOURCES_CANONICAL_FIRST_RESULT_20261028.json
+          python -m json.tool research/RSDS_ERA5_ORIGINAL_SOURCES_CANONICAL_FIRST_RESULT_20261028.json > /dev/null
+      - name: Check original source privacy and preserve all six taxa
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('research/RSDS_ERA5_ORIGINAL_SOURCES_CANONICAL_FIRST_RESULT_20261028.json').read_text(encoding='utf-8'))
+          assert r['original_studies']==2 and r['original_study_taxon_groups']==6
+          assert r['baseline_raw_JSON_SHA_historical_replay_HOLD_contexts']==12
+          assert r['baseline_physical_content_OLD_vs_NEW']=='NOT_IDENTIFIABLE_OLD_HOURLY_NUMERIC_VALUES_NOT_ARCHIVED'
+          assert r['original_48_study_external_negative_shortwave_replication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          text=json.dumps(r)
+          for marker in ('"individual_id"','"animal_id"','"latitude"','"longitude"','"utc_hour"','"timestamp"','"_grid"','"raw_gps"','"original_fix"'):
+              assert marker not in text, 'Sensitive original GPS field in source group audit'
+          print('source-selected ERA5 canonical numeric audit has six taxa and no original GPS location/ID')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-two-original-gps-studies-era5-current-physical-content-audit-v1
+          path: research/RSDS_ERA5_ORIGINAL_SOURCES_CANONICAL_FIRST_RESULT_20261028.json
+          if-no-files-found: error
+      - name: Commit separate provider numerical version audit, not prior animal responses
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_ERA5_ORIGINAL_SOURCES_CANONICAL_FIRST_RESULT_20261028.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: 12 original GPS-selected ERA5 context current canonical physical hashes vs old raw SHA holds"
+            git fetch origin science/era5-original-gps-context-audit-v1
+            git rebase origin/science/era5-original-gps-context-audit-v1
+            git push origin HEAD:science/era5-original-gps-context-audit-v1
+          fi
