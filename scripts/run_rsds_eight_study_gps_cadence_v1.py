@@ -115,6 +115,7 @@ def per_tag_year_days(animals,mode):
     accepted_segments=proposed=0
     qualified_days=0
     source_hourly_fixes=0
+    retained_fix_count=0
     for tag, fix_by_hour in animals.items():
         source_hourly_fixes += len(fix_by_hour)
         original=sorted(
@@ -123,6 +124,7 @@ def per_tag_year_days(animals,mode):
              utc.hour%2==(0 if mode=="EVEN_UTC_HOURS" else 1)),
             key=lambda x:x[0]
         )
+        retained_fix_count+=len(original)
         days=defaultdict(lambda:{"day":[],"night":[],"lat":[]})
         for a,b in zip(original,original[1:]):
             proposed+=1
@@ -145,6 +147,8 @@ def per_tag_year_days(animals,mode):
             out[tag]=year
     return out,{
         "original_selected_1hour_source_fixes":source_hourly_fixes,
+        "UTC_phase_retained_GPS_fixes":retained_fix_count,
+        "fraction_of_original_hourly_GPS_fixes_retained":(retained_fix_count/source_hourly_fixes if source_hourly_fixes else None),
         "candidate_adjacent_GPS_intervals":proposed,
         "qualified_same_solar_period_GPS_intervals":accepted_segments,
         "animal_calendar_days_with_ge3_day_and_ge3_night_segments":qualified_days,
