@@ -60,8 +60,9 @@ class EightStudyCadenceAggregateTests(unittest.TestCase):
         self.assertEqual(len(a["all_original_source_study_and_native_taxa"]),8)
         self.assertEqual(a["status_by_original_source_study"],{"PREDECLARED_FILE_METADATA_HOLD":8})
         self.assertEqual(a["original_q_paired_cadence_support_counts"]["EVEN_UTC_HOURS"]["matched_q"],{})
-        self.assertTrue(all(all(x is None for x in rec["one_original_DOI_one_study_phase_delta_mean"].values())
-                            for rec in [a]))
+        self.assertTrue(all(x is None for rec in
+                            a["one_original_DOI_one_study_phase_delta_mean"].values()
+                            for x in rec.values()))
 
     def test_one_supported_native_taxon_requires_MD5_and_baseline_replay(self):
         x=placeholder()
