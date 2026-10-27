@@ -8,6 +8,10 @@
 
 **さらに実際の原GPS解析の12環境コンテキストまで検証（2026-10-28）：** Utah 4分類群・Wyoming 2分類群の元Movebank GPSファイルMD5、q・日長係数・適格個体数を**ERA5取得前に再現**。以前に固定した**12コンテキスト（重複除去で10グリッド年）**をそれぞれ2回照会した結果、**生JSON SHAは12/12で不一致、時別の気象4物理変数・UTC時刻・単位・モデル格子は12/12で一致（物理数値が異なる時点0）**。旧12コンテキストの旧生JSON SHAとの一致は0だが、旧物理時系列が保存されていないため**過去の物理値の再現性は不明**で、旧ERA5_VERSION_HOLDは変更しない。[12元GPSコンテキストの計測結果JSON](research/RSDS_ERA5_ORIGINAL_SOURCES_CANONICAL_FIRST_RESULT_20261028.json)／[解釈](docs/RSDS_ORIGINAL_GPS_ERA5_PHYSICAL_CONTENT_12_CONTEXTS_20261028.md)。[GitHub Actions検証](https://github.com/zuizui0223/RSDS/actions/runs/40534683501)。
 
+## 日射残差と移動方向：新ERA5物理版で元GPS統計係数を再現（2026-10-28）
+
+**元GPSの科学的係数が再計算可能になった：** Utah/Wyomingの全6分類群、元の12環境コンテキスト×3軸（昼夜GPS速度差q、太陽相対方位cosとsinへの短波放射残差の関連）を、[新たに正規化・固定したERA5物理数値版](research/RSDS_ERA5_ORIGINAL_SOURCES_CANONICAL_FIRST_RESULT_20261028.json)で再解析。**以前保存した36/36の条件付き係数と最大絶対差2.1×10⁻¹⁷以内、6群×3軸の18/18群平均も最大差1.4×10⁻¹⁷以内で再現。** [数値比較JSON](research/RSDS_CANONICAL_ERA5_V2_OLD_V0_EFFECT_REPLAY_AND_TAG_PAIRS_20261028.json)／[新結果JSON](research/RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2_FIRST_RESULT_20261028.json)／[解釈](docs/RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2_20261028.md)。同じ元タグの2コンテキストで4/6群が比較可能となり、UtahワピチとWyomingミュールジカのq係数差、Wyomingビッグホーンの太陽直交sin係数差に未補正の正の区間がある。ただし元GPS観測支持順位2−順位1であって**高日射・低日射の因果差ではない**。**旧ERA5の時別物理数値が保存されていないこと・旧12生JSON SHAのHOLD・48元研究の負方向外部非再現判定はそのまま**。同じ2公表研究の事後再解析であり、新しい独立原調査での生物学的再現と数えない。
+
 ## 現在の中心質問：時間利用と方向利用の組織化
 
 > **太陽・季節・環境の変化に対して、生物の時間利用と移動方向はどのように組織化され、その違いは種や地域を越えて一般化するのか？**
