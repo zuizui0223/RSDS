@@ -149,6 +149,34 @@ jobs:
           assert current['old_12_ERA5_provider_source_SHA_HOLDS_UNCHANGED']
           print('RSDS original source DOI-equal macro estimand and all older source HOLDS unchanged')
           PY
+      - name: Validate canonical ERA5 UTC hourly physical data and two real fixed-site provider source responses
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_era5_canonical_physical_content_v1.py' -v
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_ERA5_CANONICAL_BENCHMARK_FIRST_RESULT_20261028.json')
+          raw=p.read_bytes()
+          sha=hashlib.sha1(('blob '+str(len(raw))+'\0').encode()+raw).hexdigest()
+          assert sha=='31f54cdb07c847d3cd0f0d73cdc572693bd22858','First original ERA5 benchmark result changed'
+          d=json.loads(raw)
+          assert d['public_no_GPS_source_benchmarks']==2
+          assert d['two_valid_requests_per_site_completed']==2
+          assert d['raw_JSON_SHA_disagreements']==2
+          assert d['stable_hourly_physical_content_despite_raw_JSON_mismatch']==2
+          assert sorted(x['UTC_hours_verified'] for x in d['benchmarks'])==[8760,8784]
+          for site in d['benchmarks']:
+              assert site['physical_hourly_numeric_SHA_identical'] is True
+              assert site['returned_weather_grid_metadata_identical'] is True
+              assert site['raw_response_SHA_identical'] is False
+              assert all(n==0 for n in site['hours_differing_by_field'].values())
+          assert d['old_12_original_source_ERA5_version_HOLDS_UNCHANGED'] is True
+          assert d['old_48_source_external_signed_radiation_NONREPLICATED_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          print('ERA5 2 independent benchmarks: raw JSON hash differs yet UTC-hourly physics unchanged; old source holds preserved')
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
