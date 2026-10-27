@@ -56,7 +56,7 @@ def frozen():
         return json.loads(raw.decode("utf-8"))
     legacy=lock(FIRST,spec["historic_first_biological_result_git_blob_sha"])
     audit=lock(AUDIT,spec["parent_version_audit_git_blob_sha"])
-    if spec["version"]!="RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2":
+    if spec["version"]!="RSDS_CANONICAL_ERA5_SAME_ORIGINAL_TAG_ECOLOGY_V2":
         raise ValueError("The frozen canonical version scientific route has changed")
     if (legacy["fixed_original_study_count"]!=2
             or legacy["total_source_native_taxon_rows"]!=6
