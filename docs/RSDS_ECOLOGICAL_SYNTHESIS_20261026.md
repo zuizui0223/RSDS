@@ -125,6 +125,18 @@ RSDSでは、Utah/Wyoming元GPSから独立して選んだ**2つの公開固定E
 
 [元GPS12コンテキストの実測](../research/RSDS_ERA5_ORIGINAL_SOURCES_CANONICAL_FIRST_RESULT_20261028.json) ／ [研究上の含意](RSDS_ORIGINAL_GPS_ERA5_PHYSICAL_CONTENT_12_CONTEXTS_20261028.md) ／ [元の旧HOLD・新物理版の検証契約](../research/RSDS_ERA5_PHYSICAL_CONTENT_VERSION_AUDIT_V1_CONTRACT.json)。
 
+## L. 12元GPS環境コンテキスト・36条件付き日射係数は新ERA5物理版でも数値再現（2026-10-28）
+
+以前の元Utah（4分類群）・Wyoming（2分類群）の同一個体のGPS/ERA5から、短波放射残差に対する昼夜GPS速度差q、太陽相対移動cos、太陽直交sinの条件付き係数を推定していた。古いERA5**生JSONのSHA**が12/12で再取得版と不一致となり、旧版の厳密ファイル一致ルートでは環境間比較をHOLDにしていた。今回、GPS元ファイルMD5・元q／日長係数・適格タグ個体数を再検証し、独立に固定した**新しいERA5のUTC時別物理数値SHA**と一致する気象値だけで**推定器を一切変えず**再解析した。
+
+**結果：元の12コンテキスト×3軸＝36係数が最大絶対差2.1×10⁻¹⁷、元6群×3軸の18群平均が最大差1.4×10⁻¹⁷で一致。** 生JSONのSHAとは独立に、**保存済みの生物学的係数の数値再現性**を検証できた。しかし旧ERA5配列は保存されていないため、旧・新物理気象の全時系列一致の直接証明ではない。旧ERA5生JSON SHA12保留は歴史的なまま残す。
+
+全6群の**日射残差とq**の元個体bootstrap95%区間は0を含む。太陽方向cos/sinは**Utahビッグホーン**だけ記述的な正の個体区間（cos +0.01686 [0.00636,0.02647]；sin +0.02917 [0.01765,0.04126]）。同じタグが2元コンテキストの両方で効果を推定できたのは**4/6群**で、観測支持順位2−順位1の短波放射係数差の未補正個体bootstrap区間が正だったのは**Utahワピチのq（+0.01092）**、**Wyomingミュールジカのq（+0.00619）**、**Wyomingビッグホーンのsin（+0.10121）**。順位は日射の高低でも時系列の前後でもないので、日射応答が環境によって変わったという**因果的可塑性**は未証明。
+
+以上は**同じ元公表2研究の事後的な新数値版再解析**であり、旧48元研究の外部負方向日射効果の非再現判定は変わらない。独立原研究に対する検証はまだ必要。GPS速度の夜昼差qは潜在的活動時間でもなく、元のソース日・昼間の太陽方位移動区間の一致範囲にも注意する。
+
+[36元係数＋18群平均の機械的比較](../research/RSDS_CANONICAL_ERA5_V2_OLD_V0_EFFECT_REPLAY_AND_TAG_PAIRS_20261028.json) ／ [新元個体結果](../research/RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2_FIRST_RESULT_20261028.json) ／ [研究上の含意](RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2_20261028.md)。
+
 ## 再現可能性と論文発展
 
 - [全球太陽方向の研究草稿v2](../manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_v2_20261025.md)
