@@ -48,6 +48,9 @@ class FixedOriginalGPSCadenceMatchedSupport(unittest.TestCase):
             self.assertGreater(stats["qualified_same_solar_period_GPS_intervals"],0)
             self.assertLess(stats["candidate_adjacent_GPS_intervals"],
                             base["candidate_adjacent_GPS_intervals"])
+            self.assertAlmostEqual(stats["fraction_of_original_hourly_GPS_fixes_retained"],0.5,places=2)
+            self.assertEqual(stats["UTC_phase_retained_GPS_fixes"],
+                             sum(len(v) for v in records.values())//2)
             q,s,support=matched_per_tag(full,y)
             self.assertEqual(support["source_tagged_animals_with_ge10_matching_days"],6)
             self.assertEqual(len(q),6)
