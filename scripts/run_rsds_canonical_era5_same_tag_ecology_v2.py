@@ -14,6 +14,7 @@ GPS coordinates, tags, times and individual estimates remain ephemeral.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 from collections import defaultdict
@@ -47,10 +48,15 @@ AXES=("sun_cos","sun_sin","q")
 
 def frozen():
     spec=json.loads(CONTRACT.read_text(encoding="utf-8"))
-    legacy=json.loads(FIRST.read_text(encoding="utf-8"))
-    audit=json.loads(AUDIT.read_text(encoding="utf-8"))
-    if (spec["version"]!="RSDS_CANONICAL_ERA5_SAME_ORIGINAL_TAG_ECOLOGY_V2"
-            and spec["version"]!="RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2"):
+    def lock(path,expected):
+        raw=path.read_bytes()
+        sha=hashlib.sha1(("blob "+str(len(raw))+"\0").encode("ascii")+raw).hexdigest()
+        if sha != expected:
+            raise ValueError("Original source biological or new physical version SHA changed")
+        return json.loads(raw.decode("utf-8"))
+    legacy=lock(FIRST,spec["historic_first_biological_result_git_blob_sha"])
+    audit=lock(AUDIT,spec["parent_version_audit_git_blob_sha"])
+    if spec["version"]!="RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2":
         raise ValueError("The frozen canonical version scientific route has changed")
     if (legacy["fixed_original_study_count"]!=2
             or legacy["total_source_native_taxon_rows"]!=6
@@ -62,10 +68,7 @@ def frozen():
             or legacy["frozen_external_radiation_nonreplication_UNCHANGED"]!=NEG
             or audit["baseline_raw_JSON_SHA_historical_replay_HOLD_contexts"]!=12):
         raise ValueError("First source numeric version frame or negative old outcome changed")
-    return spec,{x["region"]:x for x in legacy["sources"]},{
-        x["region"]:x for x in audit["full_original_taxon_context_results"]
-        if False
-    },audit
+    return spec,{x["region"]:x for x in legacy["sources"]},audit
 
 
 def compare_context_eligibility(selected, first, audit):
@@ -175,7 +178,7 @@ def analyse_taxon_weather(taxon, tracks, old, audited, cache):
 
 
 def run_source(region,out_dir):
-    spec,first,unused,audit=frozen()
+    spec,first,audit=frozen()
     regions={"Utah":spec["study_coverage"]["utah"],
              "Wyoming":spec["study_coverage"]["wyoming"]}
     source,taxa,reference=source_meta(region)
