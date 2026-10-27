@@ -203,6 +203,38 @@ jobs:
           assert all(s['GPS_MD5_replayed'] and s['original_native_temporal_results_replayed_before_weather'] for s in d['source_study_results'])
           print('12 original GPS-selected ERA5 current physical arrays stable; old physical data unknown and negative external verdict unchanged')
           PY
+      - name: Pin original q/sun-direction 36 contextual coefficients and 18 taxon means on NEW canonical physical ERA5 version
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_canonical_era5_same_tag_ecology_v2.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_canonical_v2_old_v0_effect_replay_v1.py' -v
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          from scripts.compare_rsds_canonical_v2_old_v0_biology_v1 import run
+          paths = {
+            'research/RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2_FIRST_RESULT_20261028.json':
+              'ac87bdab689567ed145aa91ed8d24bab8cdce4f1',
+            'research/RSDS_CANONICAL_ERA5_V2_OLD_V0_EFFECT_REPLAY_AND_TAG_PAIRS_20261028.json':
+              '25ad21d46d79a0755acd849cf1773d378d56e17d',
+          }
+          for path, expected in paths.items():
+              raw = Path(path).read_bytes()
+              sha = hashlib.sha1(('blob '+str(len(raw))+'\0').encode()+raw).hexdigest()
+              assert sha == expected, f'First original source ecological result modified: {path}'
+          old = json.loads(Path(list(paths)[1]).read_text(encoding='utf-8'))
+          fresh = run()
+          assert old == fresh, 'Original GPS shortwave effect numerical replay changed'
+          assert fresh['native_original_context_and_three_axis_comparisons'] == 36
+          assert fresh['native_original_source_animal_mean_comparisons'] == 18
+          assert fresh['max_abs_new_vs_old_original_context_fitted_coefficient_difference'] < 1e-12
+          assert fresh['max_abs_new_vs_old_original_source_tag_means_difference'] < 1e-12
+          assert fresh['historic_12_raw_JSON_SHA_source_HOLDS_UNCHANGED'] is True
+          assert fresh['old_v0_weather_physical_array_identity'] == 'NOT_IDENTIFIABLE_FROM_UNARCHIVED_HISTORIC_HOURLY_ARRAYS'
+          assert fresh['historical_external_negative_radiation_nonreplication_UNCHANGED'] == 'NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          print('36 contexts + 18 source tag means numerically reproduced; old physical version and nonreplication safeguarded')
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
