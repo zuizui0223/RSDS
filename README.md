@@ -6,6 +6,8 @@
 
 **新しい独立検証：** 動物GPSではない**固定2地点のERA5全時別気象**を各2回取得すると、**2/2地点で生JSON SHA256が変化した一方、UTCの全8760/8784時間・短波放射・気温・風速・風向の数値版SHA256は同一**、返却モデル格子も一致した。つまりファイルのバイト列のSHA不一致だけでは「実際の気象数値が変更された」と言えない。[検証済みベンチマーク結果](research/RSDS_ERA5_CANONICAL_BENCHMARK_FIRST_RESULT_20261028.json)／[仕様と科学的境界](docs/RSDS_ERA5_PHYSICAL_VS_JSON_VERSION_AUDIT_20261028.md)。従来の**元GPS×ERA5 12コンテキストの旧JSON SHA不一致はHOLDのまま**で、当時の数値配列が未保存なので旧と現在の物理数値が等しかったかは判定不能。以前の外部負方向日射効果の非再現も変更しない。
 
+**さらに実際の原GPS解析の12環境コンテキストまで検証（2026-10-28）：** Utah 4分類群・Wyoming 2分類群の元Movebank GPSファイルMD5、q・日長係数・適格個体数を**ERA5取得前に再現**。以前に固定した**12コンテキスト（重複除去で10グリッド年）**をそれぞれ2回照会した結果、**生JSON SHAは12/12で不一致、時別の気象4物理変数・UTC時刻・単位・モデル格子は12/12で一致（物理数値が異なる時点0）**。旧12コンテキストの旧生JSON SHAとの一致は0だが、旧物理時系列が保存されていないため**過去の物理値の再現性は不明**で、旧ERA5_VERSION_HOLDは変更しない。[12元GPSコンテキストの計測結果JSON](research/RSDS_ERA5_ORIGINAL_SOURCES_CANONICAL_FIRST_RESULT_20261028.json)／[解釈](docs/RSDS_ORIGINAL_GPS_ERA5_PHYSICAL_CONTENT_12_CONTEXTS_20261028.md)。[GitHub Actions検証](https://github.com/zuizui0223/RSDS/actions/runs/40534683501)。
+
 ## 現在の中心質問：時間利用と方向利用の組織化
 
 > **太陽・季節・環境の変化に対して、生物の時間利用と移動方向はどのように組織化され、その違いは種や地域を越えて一般化するのか？**
