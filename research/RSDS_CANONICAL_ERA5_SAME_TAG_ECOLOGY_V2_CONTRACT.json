@@ -56,5 +56,6 @@
     "Do not infer individual response to increasing radiation from rank2−rank1 context selection; rank is based on original GPS q support.",
     "Bootstrap/source comparisons observational, multiple nominal intervals unadjusted; no world confidence or p-values based on GPS fixes.",
     "No original GPS individual ID, private grid/year/precise timestamps/coordinates, raw weather hourly arrays or individual slope estimates in public source results."
-  ]
+  ],
+  "historic_first_biological_result_git_blob_sha": "d8d84ca3583cc26ff373fd929f3f98156ca9b0cb"
 }
