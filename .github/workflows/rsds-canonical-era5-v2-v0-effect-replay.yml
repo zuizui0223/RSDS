@@ -1,0 +1,50 @@
+name: RSDS original ERA5 v0 effect vs new physical v2 reproducibility
+on:
+  push:
+    branches:
+      - science/era5-canonical-same-tag-ecology-v2
+    paths:
+      - 'scripts/compare_rsds_canonical_v2_old_v0_biology_v1.py'
+      - 'tests/test_rsds_canonical_v2_old_v0_effect_replay_v1.py'
+      - '.github/workflows/rsds-canonical-era5-v2-v0-effect-replay.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  native_source_effect_replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/era5-canonical-same-tag-ecology-v2
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify source-blinded 36 contextual and 18 animal-study source effects under new ERA5 physical version
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_canonical_v2_old_v0_effect_replay_v1.py' -v
+          python -m scripts.compare_rsds_canonical_v2_old_v0_biology_v1 --out research/RSDS_CANONICAL_ERA5_V2_OLD_V0_EFFECT_REPLAY_AND_TAG_PAIRS_20261028.json
+          python -m json.tool research/RSDS_CANONICAL_ERA5_V2_OLD_V0_EFFECT_REPLAY_AND_TAG_PAIRS_20261028.json > /dev/null
+      - name: Preserve original study/group-only source replay and tagged context results
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-36-context-effect-replay-old-vs-current-canonical-era5-v2
+          path: research/RSDS_CANONICAL_ERA5_V2_OLD_V0_EFFECT_REPLAY_AND_TAG_PAIRS_20261028.json
+          if-no-files-found: error
+      - name: Commit source-tag group-only reproducibility results and old HODL safeguards
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_CANONICAL_ERA5_V2_OLD_V0_EFFECT_REPLAY_AND_TAG_PAIRS_20261028.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: 36 original context and 18 source-tag ERA5 coefficient replay on new canonical physical version"
+            git fetch origin science/era5-canonical-same-tag-ecology-v2
+            git rebase origin/science/era5-canonical-same-tag-ecology-v2
+            git push origin HEAD:science/era5-canonical-same-tag-ecology-v2
+          fi
