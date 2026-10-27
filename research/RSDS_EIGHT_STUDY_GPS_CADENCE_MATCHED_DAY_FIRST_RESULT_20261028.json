@@ -1,0 +1,1275 @@
+{
+  "all_original_source_study_and_native_taxa": [
+    {
+      "fixed_original_study_index": 0,
+      "fullhour_q_daylength_source_replayed": true,
+      "native_taxon_count": 4,
+      "original_MD5_accepted": true,
+      "original_study_doi": "10.5441/001/1.711",
+      "source_hold_reason": null,
+      "source_native_taxon_results": [
+        {
+          "even_odd_cadence_effects": {
+            "EVEN_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 16864,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 1231,
+                "candidate_adjacent_GPS_intervals": 16652,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.04376474374112781,
+                "original_selected_1hour_source_fixes": 385333,
+                "qualified_same_solar_period_GPS_intervals": 12054,
+                "tags_with_some_q_observable": 107
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 742,
+                "source_tag_years_with_ge10_matched_daypart_days": 8,
+                "source_tagged_animals_with_ge10_matching_days": 6,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 6
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 2,
+                "n_original_tagged_animals_paired_between_cadences": 6,
+                "n_positive_tag_deltas": 2,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.0009566564812064541,
+                  0.0006935712906694004
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.0001105820174453986,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 3,
+                "n_original_tagged_animals_paired_between_cadences": 6,
+                "n_positive_tag_deltas": 1,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.0008463720157351392,
+                  3.727335813892563e-05
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.0003859038109145056,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            },
+            "ODD_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 368469,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 29364,
+                "candidate_adjacent_GPS_intervals": 368250,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.9562352562588722,
+                "original_selected_1hour_source_fixes": 385333,
+                "qualified_same_solar_period_GPS_intervals": 274186,
+                "tags_with_some_q_observable": 219
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 29202,
+                "source_tag_years_with_ge10_matched_daypart_days": 277,
+                "source_tagged_animals_with_ge10_matching_days": 212,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 210
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 101,
+                "n_original_tagged_animals_paired_between_cadences": 210,
+                "n_positive_tag_deltas": 105,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.0005179071798565548,
+                  0.00028148973029493694
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.00010065500132940338,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 111,
+                "n_original_tagged_animals_paired_between_cadences": 212,
+                "n_positive_tag_deltas": 97,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.0005327101516543217,
+                  2.9782656207733656e-05
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.0002620570783129922,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            }
+          },
+          "original_hourly_GPS_data_support": {
+            "UTC_phase_retained_GPS_fixes": 385333,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 30531,
+            "candidate_adjacent_GPS_intervals": 385111,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 385333,
+            "qualified_same_solar_period_GPS_intervals": 282687,
+            "tags_with_some_q_observable": 222
+          },
+          "original_source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+          "taxon": "Antilocapra americana"
+        },
+        {
+          "even_odd_cadence_effects": {
+            "EVEN_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 37928,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 2756,
+                "candidate_adjacent_GPS_intervals": 37592,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.06360322107854481,
+                "original_selected_1hour_source_fixes": 596322,
+                "qualified_same_solar_period_GPS_intervals": 27073,
+                "tags_with_some_q_observable": 201
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 1769,
+                "source_tag_years_with_ge10_matched_daypart_days": 28,
+                "source_tagged_animals_with_ge10_matching_days": 26,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 22
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 12,
+                "n_original_tagged_animals_paired_between_cadences": 22,
+                "n_positive_tag_deltas": 9,
+                "nominal_interval_sign": "NEGATIVE",
+                "original_tag_resample95": [
+                  -0.016298209334091086,
+                  -0.0010883792746773093
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.008087144682958885,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 15,
+                "n_original_tagged_animals_paired_between_cadences": 26,
+                "n_positive_tag_deltas": 9,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.0005288184926099208,
+                  0.004315598515923749
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": 0.0016840268144198776,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            },
+            "ODD_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 558394,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 43227,
+                "candidate_adjacent_GPS_intervals": 558045,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.9363967789214552,
+                "original_selected_1hour_source_fixes": 596322,
+                "qualified_same_solar_period_GPS_intervals": 412675,
+                "tags_with_some_q_observable": 346
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 42564,
+                "source_tag_years_with_ge10_matched_daypart_days": 473,
+                "source_tagged_animals_with_ge10_matching_days": 331,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 326
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 175,
+                "n_original_tagged_animals_paired_between_cadences": 326,
+                "n_positive_tag_deltas": 142,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.0005394663552261388,
+                  0.00012892413851959633
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.0001888447088869989,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 179,
+                "n_original_tagged_animals_paired_between_cadences": 331,
+                "n_positive_tag_deltas": 141,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.0003759604557554782,
+                  0.0002611857546596512
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -5.958053817583181e-05,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            }
+          },
+          "original_hourly_GPS_data_support": {
+            "UTC_phase_retained_GPS_fixes": 596322,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 45225,
+            "candidate_adjacent_GPS_intervals": 595973,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 596322,
+            "qualified_same_solar_period_GPS_intervals": 434819,
+            "tags_with_some_q_observable": 349
+          },
+          "original_source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+          "taxon": "Cervus elaphus"
+        },
+        {
+          "even_odd_cadence_effects": {
+            "EVEN_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 153658,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 10850,
+                "candidate_adjacent_GPS_intervals": 152078,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.04756361011447174,
+                "original_selected_1hour_source_fixes": 3230579,
+                "qualified_same_solar_period_GPS_intervals": 106681,
+                "tags_with_some_q_observable": 771
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 7153,
+                "source_tag_years_with_ge10_matched_daypart_days": 66,
+                "source_tagged_animals_with_ge10_matching_days": 57,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 57
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 24,
+                "n_original_tagged_animals_paired_between_cadences": 57,
+                "n_positive_tag_deltas": 33,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.005972198932476066,
+                  0.0021989155366923877
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.0016231577269079029,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 25,
+                "n_original_tagged_animals_paired_between_cadences": 57,
+                "n_positive_tag_deltas": 32,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.0007405178584130959,
+                  0.0017671521923200606
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": 0.0005008179291776081,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            },
+            "ODD_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 3076921,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 244823,
+                "candidate_adjacent_GPS_intervals": 3075153,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.9524363898855283,
+                "original_selected_1hour_source_fixes": 3230579,
+                "qualified_same_solar_period_GPS_intervals": 2281007,
+                "tags_with_some_q_observable": 1748
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 240422,
+                "source_tag_years_with_ge10_matched_daypart_days": 2241,
+                "source_tagged_animals_with_ge10_matching_days": 1706,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 1666
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 897,
+                "n_original_tagged_animals_paired_between_cadences": 1666,
+                "n_positive_tag_deltas": 759,
+                "nominal_interval_sign": "NEGATIVE",
+                "original_tag_resample95": [
+                  -0.00031941033266695324,
+                  -1.6274438042795105e-05
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.00016867998195293823,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 1088,
+                "n_original_tagged_animals_paired_between_cadences": 1706,
+                "n_positive_tag_deltas": 604,
+                "nominal_interval_sign": "NEGATIVE",
+                "original_tag_resample95": [
+                  -0.0007819603229907382,
+                  -0.0005607625515833255
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.0006677152357180178,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            }
+          },
+          "original_hourly_GPS_data_support": {
+            "UTC_phase_retained_GPS_fixes": 3230579,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 249608,
+            "candidate_adjacent_GPS_intervals": 3228808,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 3230579,
+            "qualified_same_solar_period_GPS_intervals": 2328967,
+            "tags_with_some_q_observable": 1763
+          },
+          "original_source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+          "taxon": "Odocoileus hemionus"
+        },
+        {
+          "even_odd_cadence_effects": {
+            "EVEN_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 86566,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 6175,
+                "candidate_adjacent_GPS_intervals": 86222,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.12917907730509579,
+                "original_selected_1hour_source_fixes": 670124,
+                "qualified_same_solar_period_GPS_intervals": 61862,
+                "tags_with_some_q_observable": 214
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 5381,
+                "source_tag_years_with_ge10_matched_daypart_days": 93,
+                "source_tagged_animals_with_ge10_matching_days": 77,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 77
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 36,
+                "n_original_tagged_animals_paired_between_cadences": 77,
+                "n_positive_tag_deltas": 41,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.012634157933199133,
+                  0.007089380133007426
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.0034050465295782316,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 31,
+                "n_original_tagged_animals_paired_between_cadences": 77,
+                "n_positive_tag_deltas": 46,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.0007790843518656407,
+                  0.0038393392059914884
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": 0.0016550728503032367,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            },
+            "ODD_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 583558,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 42805,
+                "candidate_adjacent_GPS_intervals": 583208,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.8708209226949042,
+                "original_selected_1hour_source_fixes": 670124,
+                "qualified_same_solar_period_GPS_intervals": 420148,
+                "tags_with_some_q_observable": 344
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 39765,
+                "source_tag_years_with_ge10_matched_daypart_days": 440,
+                "source_tagged_animals_with_ge10_matching_days": 329,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 325
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 132,
+                "n_original_tagged_animals_paired_between_cadences": 325,
+                "n_positive_tag_deltas": 193,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.0005843149522380038,
+                  0.001724910727342877
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": 0.0006208508974139636,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 148,
+                "n_original_tagged_animals_paired_between_cadences": 329,
+                "n_positive_tag_deltas": 181,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.00023638940115469883,
+                  0.0008178291256565683
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": 0.00028933298273118674,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            }
+          },
+          "original_hourly_GPS_data_support": {
+            "UTC_phase_retained_GPS_fixes": 670124,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 44716,
+            "candidate_adjacent_GPS_intervals": 669772,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 670124,
+            "qualified_same_solar_period_GPS_intervals": 460412,
+            "tags_with_some_q_observable": 351
+          },
+          "original_source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+          "taxon": "Ovis canadensis"
+        }
+      ],
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED"
+    },
+    {
+      "fixed_original_study_index": 1,
+      "fullhour_q_daylength_source_replayed": true,
+      "native_taxon_count": 2,
+      "original_MD5_accepted": true,
+      "original_study_doi": "10.5441/001/1.703",
+      "source_hold_reason": null,
+      "source_native_taxon_results": [
+        {
+          "even_odd_cadence_effects": {
+            "EVEN_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 183282,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 14877,
+                "candidate_adjacent_GPS_intervals": 183165,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.4623149801737446,
+                "original_selected_1hour_source_fixes": 396444,
+                "qualified_same_solar_period_GPS_intervals": 136385,
+                "tags_with_some_q_observable": 114
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 14871,
+                "source_tag_years_with_ge10_matched_daypart_days": 160,
+                "source_tagged_animals_with_ge10_matching_days": 113,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 112
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 61,
+                "n_original_tagged_animals_paired_between_cadences": 112,
+                "n_positive_tag_deltas": 51,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.0012200232502170586,
+                  0.0040254542320357556
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": 0.001000047919599304,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 24,
+                "n_original_tagged_animals_paired_between_cadences": 113,
+                "n_positive_tag_deltas": 89,
+                "nominal_interval_sign": "POSITIVE",
+                "original_tag_resample95": [
+                  0.0019140255709896056,
+                  0.004086837761295484
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": 0.0030485552890948775,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            },
+            "ODD_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 213162,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 17408,
+                "candidate_adjacent_GPS_intervals": 213040,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.5376850198262554,
+                "original_selected_1hour_source_fixes": 396444,
+                "qualified_same_solar_period_GPS_intervals": 158901,
+                "tags_with_some_q_observable": 119
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 16956,
+                "source_tag_years_with_ge10_matched_daypart_days": 166,
+                "source_tagged_animals_with_ge10_matching_days": 119,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 118
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 36,
+                "n_original_tagged_animals_paired_between_cadences": 118,
+                "n_positive_tag_deltas": 79,
+                "nominal_interval_sign": "POSITIVE",
+                "original_tag_resample95": [
+                  0.00042026569326392827,
+                  0.004441601854454299
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": 0.0021647790342916376,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 72,
+                "n_original_tagged_animals_paired_between_cadences": 119,
+                "n_positive_tag_deltas": 44,
+                "nominal_interval_sign": "NEGATIVE",
+                "original_tag_resample95": [
+                  -0.0032261010982795983,
+                  -0.001104225761014917
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.0021968280333306903,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            }
+          },
+          "original_hourly_GPS_data_support": {
+            "UTC_phase_retained_GPS_fixes": 396444,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 17402,
+            "candidate_adjacent_GPS_intervals": 396322,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 396444,
+            "qualified_same_solar_period_GPS_intervals": 338544,
+            "tags_with_some_q_observable": 119
+          },
+          "original_source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+          "taxon": "Odocoileus hemionus"
+        },
+        {
+          "even_odd_cadence_effects": {
+            "EVEN_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 91503,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 6801,
+                "candidate_adjacent_GPS_intervals": 91461,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.4990210781774057,
+                "original_selected_1hour_source_fixes": 183365,
+                "qualified_same_solar_period_GPS_intervals": 67769,
+                "tags_with_some_q_observable": 41
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 6801,
+                "source_tag_years_with_ge10_matched_daypart_days": 79,
+                "source_tagged_animals_with_ge10_matching_days": 41,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 41
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 21,
+                "n_original_tagged_animals_paired_between_cadences": 41,
+                "n_positive_tag_deltas": 20,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.0016394364941140736,
+                  0.0014887111937293787
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.00010390258571825535,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 4,
+                "n_original_tagged_animals_paired_between_cadences": 41,
+                "n_positive_tag_deltas": 37,
+                "nominal_interval_sign": "POSITIVE",
+                "original_tag_resample95": [
+                  0.003695047714658769,
+                  0.00648432578296131
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": 0.0050999637668814385,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            },
+            "ODD_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 91862,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 7405,
+                "candidate_adjacent_GPS_intervals": 91820,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.5009789218225943,
+                "original_selected_1hour_source_fixes": 183365,
+                "qualified_same_solar_period_GPS_intervals": 67826,
+                "tags_with_some_q_observable": 41
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 7405,
+                "source_tag_years_with_ge10_matched_daypart_days": 79,
+                "source_tagged_animals_with_ge10_matching_days": 41,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 41
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 22,
+                "n_original_tagged_animals_paired_between_cadences": 41,
+                "n_positive_tag_deltas": 19,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.0016444337730659078,
+                  0.0009127914370947138
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.0004109784673679818,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 41,
+                "n_original_tagged_animals_paired_between_cadences": 41,
+                "n_positive_tag_deltas": 0,
+                "nominal_interval_sign": "NEGATIVE",
+                "original_tag_resample95": [
+                  -0.008841734452326331,
+                  -0.0067866746613021115
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.007784749129814652,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            }
+          },
+          "original_hourly_GPS_data_support": {
+            "UTC_phase_retained_GPS_fixes": 183365,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 7675,
+            "candidate_adjacent_GPS_intervals": 183323,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 183365,
+            "qualified_same_solar_period_GPS_intervals": 158737,
+            "tags_with_some_q_observable": 41
+          },
+          "original_source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+          "taxon": "Ovis canadensis"
+        }
+      ],
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED"
+    },
+    {
+      "fixed_original_study_index": 2,
+      "fullhour_q_daylength_source_replayed": true,
+      "native_taxon_count": 1,
+      "original_MD5_accepted": true,
+      "original_study_doi": "10.5441/001/1.671",
+      "source_hold_reason": null,
+      "source_native_taxon_results": [
+        {
+          "even_odd_cadence_effects": {
+            "EVEN_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 366786,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 0,
+                "candidate_adjacent_GPS_intervals": 366447,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.48455712456948996,
+                "original_selected_1hour_source_fixes": 756951,
+                "qualified_same_solar_period_GPS_intervals": 231480,
+                "tags_with_some_q_observable": 0
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 0,
+                "source_tag_years_with_ge10_matched_daypart_days": 0,
+                "source_tagged_animals_with_ge10_matching_days": 0,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 0
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 0,
+                "n_original_tagged_animals_paired_between_cadences": 0,
+                "n_positive_tag_deltas": 0,
+                "nominal_interval_sign": "UNAVAILABLE",
+                "original_tag_resample95": null,
+                "paired_tag_mean_2h_minus_same_day_1h": null,
+                "status": "INSUFFICIENT_MATCHED_TAGS"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 0,
+                "n_original_tagged_animals_paired_between_cadences": 0,
+                "n_positive_tag_deltas": 0,
+                "nominal_interval_sign": "UNAVAILABLE",
+                "original_tag_resample95": null,
+                "paired_tag_mean_2h_minus_same_day_1h": null,
+                "status": "INSUFFICIENT_MATCHED_TAGS"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            },
+            "ODD_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 390165,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 0,
+                "candidate_adjacent_GPS_intervals": 389826,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.51544287543051,
+                "original_selected_1hour_source_fixes": 756951,
+                "qualified_same_solar_period_GPS_intervals": 229258,
+                "tags_with_some_q_observable": 0
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 0,
+                "source_tag_years_with_ge10_matched_daypart_days": 0,
+                "source_tagged_animals_with_ge10_matching_days": 0,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 0
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 0,
+                "n_original_tagged_animals_paired_between_cadences": 0,
+                "n_positive_tag_deltas": 0,
+                "nominal_interval_sign": "UNAVAILABLE",
+                "original_tag_resample95": null,
+                "paired_tag_mean_2h_minus_same_day_1h": null,
+                "status": "INSUFFICIENT_MATCHED_TAGS"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 0,
+                "n_original_tagged_animals_paired_between_cadences": 0,
+                "n_positive_tag_deltas": 0,
+                "nominal_interval_sign": "UNAVAILABLE",
+                "original_tag_resample95": null,
+                "paired_tag_mean_2h_minus_same_day_1h": null,
+                "status": "INSUFFICIENT_MATCHED_TAGS"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            }
+          },
+          "original_hourly_GPS_data_support": {
+            "UTC_phase_retained_GPS_fixes": 756951,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 7460,
+            "candidate_adjacent_GPS_intervals": 756612,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 756951,
+            "qualified_same_solar_period_GPS_intervals": 567332,
+            "tags_with_some_q_observable": 215
+          },
+          "original_source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+          "taxon": "Meleagris gallopavo"
+        }
+      ],
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED"
+    },
+    {
+      "fixed_original_study_index": 3,
+      "fullhour_q_daylength_source_replayed": true,
+      "native_taxon_count": 1,
+      "original_MD5_accepted": true,
+      "original_study_doi": "10.5441/001/1.323",
+      "source_hold_reason": null,
+      "source_native_taxon_results": [
+        {
+          "even_odd_cadence_effects": {
+            "EVEN_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 55095,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 2279,
+                "candidate_adjacent_GPS_intervals": 55058,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.5005814904326652,
+                "original_selected_1hour_source_fixes": 110062,
+                "qualified_same_solar_period_GPS_intervals": 32563,
+                "tags_with_some_q_observable": 37
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 2205,
+                "source_tag_years_with_ge10_matched_daypart_days": 43,
+                "source_tagged_animals_with_ge10_matching_days": 32,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 29
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 16,
+                "n_original_tagged_animals_paired_between_cadences": 29,
+                "n_positive_tag_deltas": 13,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.004739145130410314,
+                  0.006077631593140148
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": 0.0006449437460359637,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 24,
+                "n_original_tagged_animals_paired_between_cadences": 32,
+                "n_positive_tag_deltas": 8,
+                "nominal_interval_sign": "NEGATIVE",
+                "original_tag_resample95": [
+                  -0.017008934225125484,
+                  -0.004078162972330363
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.010791251728732671,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            },
+            "ODD_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 54967,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 1753,
+                "candidate_adjacent_GPS_intervals": 54930,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.4994185095673348,
+                "original_selected_1hour_source_fixes": 110062,
+                "qualified_same_solar_period_GPS_intervals": 31305,
+                "tags_with_some_q_observable": 36
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 1692,
+                "source_tag_years_with_ge10_matched_daypart_days": 40,
+                "source_tagged_animals_with_ge10_matching_days": 30,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 29
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 19,
+                "n_original_tagged_animals_paired_between_cadences": 29,
+                "n_positive_tag_deltas": 10,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.022790912909523557,
+                  0.009229034205805085
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.006443462776785249,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 21,
+                "n_original_tagged_animals_paired_between_cadences": 30,
+                "n_positive_tag_deltas": 9,
+                "nominal_interval_sign": "NEGATIVE",
+                "original_tag_resample95": [
+                  -0.01737162304822828,
+                  -0.0023624045202568157
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.009934794693210309,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            }
+          },
+          "original_hourly_GPS_data_support": {
+            "UTC_phase_retained_GPS_fixes": 110062,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 4930,
+            "candidate_adjacent_GPS_intervals": 110025,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 110062,
+            "qualified_same_solar_period_GPS_intervals": 83332,
+            "tags_with_some_q_observable": 37
+          },
+          "original_source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+          "taxon": "Lynx rufus"
+        }
+      ],
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED"
+    },
+    {
+      "fixed_original_study_index": 4,
+      "fullhour_q_daylength_source_replayed": true,
+      "native_taxon_count": 1,
+      "original_MD5_accepted": true,
+      "original_study_doi": "10.5441/001/1.304",
+      "source_hold_reason": null,
+      "source_native_taxon_results": [
+        {
+          "even_odd_cadence_effects": {
+            "EVEN_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 16884,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 784,
+                "candidate_adjacent_GPS_intervals": 16849,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.49998519352068466,
+                "original_selected_1hour_source_fixes": 33769,
+                "qualified_same_solar_period_GPS_intervals": 12166,
+                "tags_with_some_q_observable": 33
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 737,
+                "source_tag_years_with_ge10_matched_daypart_days": 24,
+                "source_tagged_animals_with_ge10_matching_days": 24,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 23
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 14,
+                "n_original_tagged_animals_paired_between_cadences": 23,
+                "n_positive_tag_deltas": 9,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.025988681587116844,
+                  0.0102425520943799
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.007423078862077221,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 20,
+                "n_original_tagged_animals_paired_between_cadences": 24,
+                "n_positive_tag_deltas": 4,
+                "nominal_interval_sign": "NEGATIVE",
+                "original_tag_resample95": [
+                  -0.0722106996845154,
+                  -0.03605769191231649
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.05361532852792021,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            },
+            "ODD_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 16885,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 304,
+                "candidate_adjacent_GPS_intervals": 16850,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.5000148064793154,
+                "original_selected_1hour_source_fixes": 33769,
+                "qualified_same_solar_period_GPS_intervals": 12183,
+                "tags_with_some_q_observable": 20
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 254,
+                "source_tag_years_with_ge10_matched_daypart_days": 10,
+                "source_tagged_animals_with_ge10_matching_days": 10,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 10
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 4,
+                "n_original_tagged_animals_paired_between_cadences": 10,
+                "n_positive_tag_deltas": 6,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.021316730821317204,
+                  0.025546007913320443
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": 0.0034508995277040947,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 6,
+                "n_original_tagged_animals_paired_between_cadences": 10,
+                "n_positive_tag_deltas": 4,
+                "nominal_interval_sign": "NEGATIVE",
+                "original_tag_resample95": [
+                  -0.05946643324613532,
+                  -0.00874231201399459
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.03241317195035006,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            }
+          },
+          "original_hourly_GPS_data_support": {
+            "UTC_phase_retained_GPS_fixes": 33769,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 1390,
+            "candidate_adjacent_GPS_intervals": 33734,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 33769,
+            "qualified_same_solar_period_GPS_intervals": 28925,
+            "tags_with_some_q_observable": 34
+          },
+          "original_source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+          "taxon": "Vulpes vulpes"
+        }
+      ],
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED"
+    },
+    {
+      "fixed_original_study_index": 5,
+      "fullhour_q_daylength_source_replayed": true,
+      "native_taxon_count": 1,
+      "original_MD5_accepted": true,
+      "original_study_doi": "10.5441/001/1.644",
+      "source_hold_reason": null,
+      "source_native_taxon_results": [
+        {
+          "even_odd_cadence_effects": {
+            "EVEN_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 9056,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 192,
+                "candidate_adjacent_GPS_intervals": 9043,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.560465404134175,
+                "original_selected_1hour_source_fixes": 16158,
+                "qualified_same_solar_period_GPS_intervals": 4212,
+                "tags_with_some_q_observable": 9
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 154,
+                "source_tag_years_with_ge10_matched_daypart_days": 7,
+                "source_tagged_animals_with_ge10_matching_days": 7,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 6
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 5,
+                "n_original_tagged_animals_paired_between_cadences": 6,
+                "n_positive_tag_deltas": 1,
+                "nominal_interval_sign": "NEGATIVE",
+                "original_tag_resample95": [
+                  -0.06072226608802119,
+                  -0.009690563740431824
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.03539641798481598,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 6,
+                "n_original_tagged_animals_paired_between_cadences": 7,
+                "n_positive_tag_deltas": 1,
+                "nominal_interval_sign": "NEGATIVE",
+                "original_tag_resample95": [
+                  -0.021921590741589187,
+                  -0.002845366774526558
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.010419201416646142,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            },
+            "ODD_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 7102,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 41,
+                "candidate_adjacent_GPS_intervals": 7092,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.439534595865825,
+                "original_selected_1hour_source_fixes": 16158,
+                "qualified_same_solar_period_GPS_intervals": 2997,
+                "tags_with_some_q_observable": 8
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 10,
+                "source_tag_years_with_ge10_matched_daypart_days": 1,
+                "source_tagged_animals_with_ge10_matching_days": 1,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 1
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 0,
+                "n_original_tagged_animals_paired_between_cadences": 1,
+                "n_positive_tag_deltas": 1,
+                "nominal_interval_sign": "UNAVAILABLE",
+                "original_tag_resample95": null,
+                "paired_tag_mean_2h_minus_same_day_1h": null,
+                "status": "INSUFFICIENT_MATCHED_TAGS"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 1,
+                "n_original_tagged_animals_paired_between_cadences": 1,
+                "n_positive_tag_deltas": 0,
+                "nominal_interval_sign": "UNAVAILABLE",
+                "original_tag_resample95": null,
+                "paired_tag_mean_2h_minus_same_day_1h": null,
+                "status": "INSUFFICIENT_MATCHED_TAGS"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            }
+          },
+          "original_hourly_GPS_data_support": {
+            "UTC_phase_retained_GPS_fixes": 16158,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 583,
+            "candidate_adjacent_GPS_intervals": 16145,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 16158,
+            "qualified_same_solar_period_GPS_intervals": 9810,
+            "tags_with_some_q_observable": 9
+          },
+          "original_source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+          "taxon": "Prionailurus viverrinus"
+        }
+      ],
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED"
+    },
+    {
+      "fixed_original_study_index": 6,
+      "fullhour_q_daylength_source_replayed": false,
+      "native_taxon_count": 1,
+      "original_MD5_accepted": false,
+      "original_study_doi": "10.5441/001/1.641",
+      "source_hold_reason": "ORIGINAL_FILE_ABSENT_OR_OVER_FROZEN_200MB_BUDGET",
+      "source_native_taxon_results": [
+        {
+          "even_odd_cadence_effects": null,
+          "original_hourly_GPS_data_support": null,
+          "original_source_status": "PREDECLARED_FILE_METADATA_HOLD",
+          "taxon": "Ardea alba"
+        }
+      ],
+      "source_status": "PREDECLARED_FILE_METADATA_HOLD"
+    },
+    {
+      "fixed_original_study_index": 7,
+      "fullhour_q_daylength_source_replayed": true,
+      "native_taxon_count": 1,
+      "original_MD5_accepted": true,
+      "original_study_doi": "10.5441/001/1.740",
+      "source_hold_reason": null,
+      "source_native_taxon_results": [
+        {
+          "even_odd_cadence_effects": {
+            "EVEN_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 45429,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 2433,
+                "candidate_adjacent_GPS_intervals": 45385,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.4994777522456653,
+                "original_selected_1hour_source_fixes": 90953,
+                "qualified_same_solar_period_GPS_intervals": 32851,
+                "tags_with_some_q_observable": 43
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 2383,
+                "source_tag_years_with_ge10_matched_daypart_days": 52,
+                "source_tagged_animals_with_ge10_matching_days": 42,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 42
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 22,
+                "n_original_tagged_animals_paired_between_cadences": 42,
+                "n_positive_tag_deltas": 20,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.004160693408821947,
+                  0.0015336183887811356
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.0011428331913146265,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 17,
+                "n_original_tagged_animals_paired_between_cadences": 42,
+                "n_positive_tag_deltas": 25,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.0009737853116888957,
+                  0.001267779374565546
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": 0.000149292192739821,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            },
+            "ODD_UTC_HOURS": {
+              "animal_date_overlap_rule": "ge10_same_dates_per_calendar_year",
+              "data_support": {
+                "UTC_phase_retained_GPS_fixes": 45524,
+                "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 2225,
+                "candidate_adjacent_GPS_intervals": 45480,
+                "fraction_of_original_hourly_GPS_fixes_retained": 0.5005222477543346,
+                "original_selected_1hour_source_fixes": 90953,
+                "qualified_same_solar_period_GPS_intervals": 32935,
+                "tags_with_some_q_observable": 43
+              },
+              "identical_original_tag_date_support": {
+                "original_tagged_days_identical_between_1h_and_2h": 2195,
+                "source_tag_years_with_ge10_matched_daypart_days": 45,
+                "source_tagged_animals_with_ge10_matching_days": 43,
+                "source_tagged_animals_with_identifiable_matched_q_daylength_slope": 43
+              },
+              "matched_q_daylength_slope_difference_per_hour": {
+                "n_negative_tag_deltas": 25,
+                "n_original_tagged_animals_paired_between_cadences": 43,
+                "n_positive_tag_deltas": 18,
+                "nominal_interval_sign": "INCLUDES_ZERO",
+                "original_tag_resample95": [
+                  -0.0050234403372191325,
+                  0.00414776017084245
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": -0.0006518687822896096,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "matched_q_velocity_proxy_difference": {
+                "n_negative_tag_deltas": 13,
+                "n_original_tagged_animals_paired_between_cadences": 43,
+                "n_positive_tag_deltas": 30,
+                "nominal_interval_sign": "POSITIVE",
+                "original_tag_resample95": [
+                  0.000727246245174394,
+                  0.0033082223802401696
+                ],
+                "paired_tag_mean_2h_minus_same_day_1h": 0.0019935470671763058,
+                "status": "SOURCE_TAGGED_ANIMAL_DESCRIPTIVE"
+              },
+              "source_interval_gap_hours": "1.5_to_2.5"
+            }
+          },
+          "original_hourly_GPS_data_support": {
+            "UTC_phase_retained_GPS_fixes": 90953,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 3885,
+            "candidate_adjacent_GPS_intervals": 90909,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 90953,
+            "qualified_same_solar_period_GPS_intervals": 78010,
+            "tags_with_some_q_observable": 44
+          },
+          "original_source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+          "taxon": "Phascolarctos cinereus"
+        }
+      ],
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED"
+    }
+  ],
+  "analysis_stage": "POST_ORIGINAL_OUTCOMES_SAME_TAG_SAME_DAY_TELEMETRY_CADENCE_SENSITIVITY",
+  "date": "2026-10-28",
+  "historic_ERA5_old_12_source_raw_SHA_HOLDS_UNCHANGED": true,
+  "historical_48_source_negative_radiation_replication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "limits": [
+    "A 2h movement straight-line speed difference from 1h is inherently sensitive to travel tortuosity, measured time intervals and diurnal edges; do not interpret as a true activity budget change or animal response to sampling.",
+    "2h phases are even/odd UTC hour bins, not morning/afternoon, true solar period exposure, or independently recruited individuals.",
+    "Within each source tagged animal/year the original dates eligible under 1h and 2h are intersected. Numbers of matching dates, individuals, slopes and source holds are reported and no missing effect replaced by zero.",
+    "The baseline 1h q and 2h source effects are different observation estimands even on the same animal/date because displacement chord length varies with interval length.",
+    "Native taxa within Utah and Wyoming share their underlying original studies. Study-equal source summaries cannot be treated as independent native taxa, random world ecosystem samples or causal within-study environmental effects.",
+    "All tag-resampled 95% intervals are nominal descriptive source-conditional uncertainties uncorrected for multiplicity.",
+    "No ERA5 requested. Earlier original GPS-linked ERA5 12/12 raw SHA version holds and external 48-study directional shortwave negative-replication remain unchanged.",
+    "No original animal tag IDs, raw GPS location/time, private source grids, per-animal slope or restricted records are redistributed."
+  ],
+  "one_original_DOI_one_study_phase_delta_mean": {
+    "10.5441/001/1.304": {
+      "EVEN_UTC_HOURS": -0.05361532852792021,
+      "ODD_UTC_HOURS": -0.03241317195035006
+    },
+    "10.5441/001/1.323": {
+      "EVEN_UTC_HOURS": -0.010791251728732671,
+      "ODD_UTC_HOURS": -0.009934794693210309
+    },
+    "10.5441/001/1.641": {
+      "EVEN_UTC_HOURS": null,
+      "ODD_UTC_HOURS": null
+    },
+    "10.5441/001/1.644": {
+      "EVEN_UTC_HOURS": -0.010419201416646142,
+      "ODD_UTC_HOURS": null
+    },
+    "10.5441/001/1.671": {
+      "EVEN_UTC_HOURS": null,
+      "ODD_UTC_HOURS": null
+    },
+    "10.5441/001/1.703": {
+      "EVEN_UTC_HOURS": 0.004074259527988158,
+      "ODD_UTC_HOURS": -0.0049907885815726714
+    },
+    "10.5441/001/1.711": {
+      "EVEN_UTC_HOURS": 0.0008635034457465542,
+      "ODD_UTC_HOURS": -0.0001750049673689138
+    },
+    "10.5441/001/1.740": {
+      "EVEN_UTC_HOURS": 0.000149292192739821,
+      "ODD_UTC_HOURS": 0.0019935470671763058
+    }
+  },
+  "original_field_studies": 8,
+  "original_q_paired_cadence_support_counts": {
+    "EVEN_UTC_HOURS": {
+      "matched_daylength": {
+        "INCLUDES_ZERO": 8,
+        "NEGATIVE": 2,
+        "UNAVAILABLE": 1
+      },
+      "matched_q": {
+        "INCLUDES_ZERO": 5,
+        "NEGATIVE": 3,
+        "POSITIVE": 2,
+        "UNAVAILABLE": 1
+      }
+    },
+    "ODD_UTC_HOURS": {
+      "matched_daylength": {
+        "INCLUDES_ZERO": 7,
+        "NEGATIVE": 1,
+        "POSITIVE": 1,
+        "UNAVAILABLE": 2
+      },
+      "matched_q": {
+        "INCLUDES_ZERO": 3,
+        "NEGATIVE": 5,
+        "POSITIVE": 1,
+        "UNAVAILABLE": 2
+      }
+    }
+  },
+  "original_source_taxon_rows": 12,
+  "status_by_original_source_study": {
+    "PREDECLARED_FILE_METADATA_HOLD": 1,
+    "SOURCE_CADENCE_SENSITIVITY_COMPLETED": 7
+  },
+  "version": "RSDS_EIGHT_STUDY_UTC_GPS_1H_VS_2H_MATCHED_DAY_V1_FIRST_RESULT"
+}
