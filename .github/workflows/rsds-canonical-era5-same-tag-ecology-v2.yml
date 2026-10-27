@@ -1,0 +1,127 @@
+name: RSDS original tagged-animal current canonical ERA5 weather ecology v2
+on:
+  push:
+    branches:
+      - science/era5-canonical-same-tag-ecology-v2
+    paths:
+      - 'scripts/run_rsds_canonical_era5_same_tag_ecology_v2.py'
+      - 'scripts/aggregate_rsds_canonical_era5_same_tag_ecology_v2.py'
+      - 'tests/test_rsds_canonical_era5_same_tag_ecology_v2.py'
+      - 'research/RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2_CONTRACT.json'
+      - '.github/workflows/rsds-canonical-era5-same-tag-ecology-v2.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  prior_native_GPS_and_weather_numeric_provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/era5-canonical-same-tag-ecology-v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install legacy original GPS shortwave adjusted estimator dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Verify original 390 ODSP study results and heldout failure immutable
+        run: python -m scripts.verify_rsds_migration
+      - name: Verify canonical current source weather SHA and old q replay estimator known truth
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_canonical_era5_same_tag_ecology_v2.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_same_animal_solar_weather_v0.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_same_tag_context_pair_v1.py' -v
+  actual_original_tagged_source_weather_effects:
+    needs: prior_native_GPS_and_weather_numeric_provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        region: [Utah, Wyoming]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/era5-canonical-same-tag-ecology-v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original tagged animal model numerical runtime
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Original Movebank GPS MD5 and q/daylight replay BEFORE fitting new source-vetted hourly ERA5 solar cos/sin/q contrasts
+        run: |
+          python -m scripts.run_rsds_canonical_era5_same_tag_ecology_v2 --region ${{ matrix.region }} --out outputs/canonical_same_tag_v2
+      - name: Retain original source group effect/HOLD results only without tags, GPS, private gridyear or weather arrays
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-canonical-tag-original-${{ matrix.region }}-v2
+          path: outputs/canonical_same_tag_v2/source_*.json
+          if-no-files-found: warn
+  fixed_original_two_study_six_taxon_synthesis:
+    needs: actual_original_tagged_source_weather_effects
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/era5-canonical-same-tag-ecology-v2
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original source private-GPS estimator import dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-canonical-tag-original-*-v2
+          merge-multiple: true
+          path: outputs/canonical_same_tag_v2
+      - name: All six original native taxa current canonical weather response grouping, including previous source holds
+        run: |
+          python -m scripts.aggregate_rsds_canonical_era5_same_tag_ecology_v2 --input outputs/canonical_same_tag_v2 --out research/RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2_FIRST_RESULT_20261028.json
+          python -m json.tool research/RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2_FIRST_RESULT_20261028.json > /dev/null
+      - name: Original tagged animal, private source location, precise event exclusion
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          f=Path('research/RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2_FIRST_RESULT_20261028.json')
+          d=json.loads(f.read_text(encoding='utf-8'))
+          assert d['original_study_count']==2
+          assert d['original_source_taxon_rows']==6
+          assert d['historical_12_ERA5_raw_JSON_SHA_HOLDs_UNCHANGED'] is True
+          assert d['old_ERA5_numeric_version_equivalence']=='NOT_IDENTIFIABLE_UNARCHIVED_OLD_ARRAYS'
+          assert d['historic_48_source_negative_radiation_replication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          def walk(x):
+              if isinstance(x,dict):
+                  for k,v in x.items():
+                      assert k not in {'individual_id','animal_id','tag_id','timestamp','latitude','longitude','utc_hour','_grid','raw_gps','original_fix','animal_original_event'}
+                      walk(v)
+              if isinstance(x,list):
+                  for y in x:walk(y)
+          walk(d)
+          print('source-original ERA5 current physical v2 effect aggregate preserves all six taxa and privacy')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-current-canonical-ERA5-original-tag-source-ecology-v2
+          path: research/RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2_FIRST_RESULT_20261028.json
+          if-no-files-found: error
+      - name: Commit new source group biological version reanalysis without altering historical results
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2_FIRST_RESULT_20261028.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: six original tagged GPS taxa under newly canonical frozen physical ERA5 source version"
+            git fetch origin science/era5-canonical-same-tag-ecology-v2
+            git rebase origin/science/era5-canonical-same-tag-ecology-v2
+            git push origin HEAD:science/era5-canonical-same-tag-ecology-v2
+          fi

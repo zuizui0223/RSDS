@@ -1,0 +1,725 @@
+{
+  "all_original_18_source_animal_mean_coefficients_reproduced_to_1e-12": true,
+  "all_original_36_context_fitted_coefficients_reproduced_to_1e-12": true,
+  "all_six_source_taxon_comparisons": [
+    {
+      "native_taxon": "Antilocapra americana",
+      "old_v0_vs_new_canonical_source_animal_effects": {
+        "daypart_q": {
+          "new_animal_source_bootstrap95": [
+            -0.005365393290399941,
+            0.0020430590426238912
+          ],
+          "new_canonical_source_mean": -0.001728067618050529,
+          "new_minus_old_fitted_coefficient": 1.951563910473908e-18,
+          "old_source_mean": -0.001728067618050531,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        },
+        "sun_cos": {
+          "new_animal_source_bootstrap95": [
+            -0.0019332185889240144,
+            0.018017230502317766
+          ],
+          "new_canonical_source_mean": 0.008065346668979375,
+          "new_minus_old_fitted_coefficient": -1.734723475976807e-18,
+          "old_source_mean": 0.008065346668979376,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        },
+        "sun_sin": {
+          "new_animal_source_bootstrap95": [
+            -0.007136015020028094,
+            0.012579436439678971
+          ],
+          "new_canonical_source_mean": 0.0031542788594452914,
+          "new_minus_old_fitted_coefficient": 6.071532165918825e-18,
+          "old_source_mean": 0.0031542788594452853,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        }
+      },
+      "paired_context_effect_status": "INSUFFICIENT_PAIRED_TAGS",
+      "paired_same_tag_delta_axes": {
+        "q": {
+          "descriptive_paired_animal_bootstrap95": null,
+          "nominal_source_interval_sign": "NOT_ESTIMABLE",
+          "rank2_minus_rank1_original_tag_mean": null,
+          "tagged_animals_in_both_contexts_with_axis": 0
+        },
+        "sun_cos": {
+          "descriptive_paired_animal_bootstrap95": null,
+          "nominal_source_interval_sign": "NOT_ESTIMABLE",
+          "rank2_minus_rank1_original_tag_mean": null,
+          "tagged_animals_in_both_contexts_with_axis": 0
+        },
+        "sun_sin": {
+          "descriptive_paired_animal_bootstrap95": null,
+          "nominal_source_interval_sign": "NOT_ESTIMABLE",
+          "rank2_minus_rank1_original_tag_mean": null,
+          "tagged_animals_in_both_contexts_with_axis": 0
+        }
+      },
+      "region": "Utah",
+      "same_original_tagged_animal_between_contexts": 0,
+      "two_original_q_ranked_contexts": [
+        {
+          "axes": {
+            "daypart_q": {
+              "new_canonical_source_mean": -0.004472396368671122,
+              "new_minus_old_fitted_coefficient": -8.673617379884035e-19,
+              "old_source_mean": -0.004472396368671121,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_cos": {
+              "new_canonical_source_mean": 0.0033381377959780653,
+              "new_minus_old_fitted_coefficient": -3.0357660829594124e-18,
+              "old_source_mean": 0.0033381377959780683,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_sin": {
+              "new_canonical_source_mean": 0.016518489815401313,
+              "new_minus_old_fitted_coefficient": 0.0,
+              "old_source_mean": 0.016518489815401313,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            }
+          },
+          "rank_by_original_q_coverage": 1
+        },
+        {
+          "axes": {
+            "daypart_q": {
+              "new_canonical_source_mean": 0.0017023433202252134,
+              "new_minus_old_fitted_coefficient": 6.071532165918825e-18,
+              "old_source_mean": 0.0017023433202252073,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_cos": {
+              "new_canonical_source_mean": 0.013481940169293377,
+              "new_minus_old_fitted_coefficient": 3.469446951953614e-18,
+              "old_source_mean": 0.013481940169293374,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_sin": {
+              "new_canonical_source_mean": -0.01215887952758765,
+              "new_minus_old_fitted_coefficient": 1.3877787807814457e-17,
+              "old_source_mean": -0.012158879527587664,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            }
+          },
+          "rank_by_original_q_coverage": 2
+        }
+      ]
+    },
+    {
+      "native_taxon": "Cervus elaphus",
+      "old_v0_vs_new_canonical_source_animal_effects": {
+        "daypart_q": {
+          "new_animal_source_bootstrap95": [
+            -0.0007503291962673765,
+            0.006625460419542813
+          ],
+          "new_canonical_source_mean": 0.0030880268371067145,
+          "new_minus_old_fitted_coefficient": -1.734723475976807e-18,
+          "old_source_mean": 0.003088026837106716,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        },
+        "sun_cos": {
+          "new_animal_source_bootstrap95": [
+            -0.011192856276330466,
+            0.006488618251620139
+          ],
+          "new_canonical_source_mean": -0.0023937856473453026,
+          "new_minus_old_fitted_coefficient": -3.903127820947816e-18,
+          "old_source_mean": -0.0023937856473452987,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        },
+        "sun_sin": {
+          "new_animal_source_bootstrap95": [
+            -0.0038390582272832875,
+            0.01324663940894596
+          ],
+          "new_canonical_source_mean": 0.004666111473343254,
+          "new_minus_old_fitted_coefficient": 1.734723475976807e-18,
+          "old_source_mean": 0.004666111473343252,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        }
+      },
+      "paired_context_effect_status": "PAIRED_2_CONTEXT_EFFECT_ESTIMABLE",
+      "paired_same_tag_delta_axes": {
+        "q": {
+          "descriptive_paired_animal_bootstrap95": [
+            0.0025699557419621324,
+            0.019078081301568288
+          ],
+          "nominal_source_interval_sign": "NOMINAL_POSITIVE",
+          "rank2_minus_rank1_original_tag_mean": 0.010916566057791628,
+          "tagged_animals_in_both_contexts_with_axis": 32
+        },
+        "sun_cos": {
+          "descriptive_paired_animal_bootstrap95": [
+            -0.01602683106325539,
+            0.025695407537675116
+          ],
+          "nominal_source_interval_sign": "INCLUDES_ZERO",
+          "rank2_minus_rank1_original_tag_mean": 0.004256966571396956,
+          "tagged_animals_in_both_contexts_with_axis": 50
+        },
+        "sun_sin": {
+          "descriptive_paired_animal_bootstrap95": [
+            -0.0352373403609809,
+            0.006936639613672421
+          ],
+          "nominal_source_interval_sign": "INCLUDES_ZERO",
+          "rank2_minus_rank1_original_tag_mean": -0.01388940303467051,
+          "tagged_animals_in_both_contexts_with_axis": 50
+        }
+      },
+      "region": "Utah",
+      "same_original_tagged_animal_between_contexts": 50,
+      "two_original_q_ranked_contexts": [
+        {
+          "axes": {
+            "daypart_q": {
+              "new_canonical_source_mean": 0.0008051726368409524,
+              "new_minus_old_fitted_coefficient": -3.7947076036992655e-18,
+              "old_source_mean": 0.0008051726368409562,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_cos": {
+              "new_canonical_source_mean": -0.006093669505381292,
+              "new_minus_old_fitted_coefficient": -6.071532165918825e-18,
+              "old_source_mean": -0.006093669505381286,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_sin": {
+              "new_canonical_source_mean": 0.009722361769643332,
+              "new_minus_old_fitted_coefficient": 1.734723475976807e-18,
+              "old_source_mean": 0.00972236176964333,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            }
+          },
+          "rank_by_original_q_coverage": 1
+        },
+        {
+          "axes": {
+            "daypart_q": {
+              "new_canonical_source_mean": 0.007054462465439905,
+              "new_minus_old_fitted_coefficient": 3.469446951953614e-18,
+              "old_source_mean": 0.007054462465439902,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_cos": {
+              "new_canonical_source_mean": 5.0860869663805614e-05,
+              "new_minus_old_fitted_coefficient": 1.4230153513872246e-18,
+              "old_source_mean": 5.086086966380419e-05,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_sin": {
+              "new_canonical_source_mean": -0.0017223882246587793,
+              "new_minus_old_fitted_coefficient": 3.686287386450715e-18,
+              "old_source_mean": -0.001722388224658783,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            }
+          },
+          "rank_by_original_q_coverage": 2
+        }
+      ]
+    },
+    {
+      "native_taxon": "Odocoileus hemionus",
+      "old_v0_vs_new_canonical_source_animal_effects": {
+        "daypart_q": {
+          "new_animal_source_bootstrap95": [
+            -0.0007407240471032653,
+            0.010566174844356327
+          ],
+          "new_canonical_source_mean": 0.004516917076921016,
+          "new_minus_old_fitted_coefficient": 0.0,
+          "old_source_mean": 0.004516917076921016,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        },
+        "sun_cos": {
+          "new_animal_source_bootstrap95": [
+            -0.012899870894328995,
+            0.006038384774627449
+          ],
+          "new_canonical_source_mean": -0.0032022728980872005,
+          "new_minus_old_fitted_coefficient": -3.0357660829594124e-18,
+          "old_source_mean": -0.0032022728980871974,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        },
+        "sun_sin": {
+          "new_animal_source_bootstrap95": [
+            -0.013023797843847874,
+            0.00637324937284212
+          ],
+          "new_canonical_source_mean": -0.0033568875059493846,
+          "new_minus_old_fitted_coefficient": 8.673617379884035e-19,
+          "old_source_mean": -0.0033568875059493855,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        }
+      },
+      "paired_context_effect_status": "PAIRED_2_CONTEXT_EFFECT_ESTIMABLE",
+      "paired_same_tag_delta_axes": {
+        "q": {
+          "descriptive_paired_animal_bootstrap95": [
+            -0.010782249397649785,
+            0.012843987563280602
+          ],
+          "nominal_source_interval_sign": "INCLUDES_ZERO",
+          "rank2_minus_rank1_original_tag_mean": 0.0003267360251456858,
+          "tagged_animals_in_both_contexts_with_axis": 44
+        },
+        "sun_cos": {
+          "descriptive_paired_animal_bootstrap95": [
+            -0.009600961900602823,
+            0.026321501749826302
+          ],
+          "nominal_source_interval_sign": "INCLUDES_ZERO",
+          "rank2_minus_rank1_original_tag_mean": 0.008036316944898932,
+          "tagged_animals_in_both_contexts_with_axis": 102
+        },
+        "sun_sin": {
+          "descriptive_paired_animal_bootstrap95": [
+            -0.0026038024921738534,
+            0.02855312514142875
+          ],
+          "nominal_source_interval_sign": "INCLUDES_ZERO",
+          "rank2_minus_rank1_original_tag_mean": 0.012929802304467648,
+          "tagged_animals_in_both_contexts_with_axis": 102
+        }
+      },
+      "region": "Utah",
+      "same_original_tagged_animal_between_contexts": 102,
+      "two_original_q_ranked_contexts": [
+        {
+          "axes": {
+            "daypart_q": {
+              "new_canonical_source_mean": 0.0038501058451574145,
+              "new_minus_old_fitted_coefficient": 0.0,
+              "old_source_mean": 0.0038501058451574145,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_cos": {
+              "new_canonical_source_mean": -0.003772966500729507,
+              "new_minus_old_fitted_coefficient": 1.734723475976807e-18,
+              "old_source_mean": -0.0037729665007295086,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_sin": {
+              "new_canonical_source_mean": -0.01167803728676033,
+              "new_minus_old_fitted_coefficient": 1.734723475976807e-18,
+              "old_source_mean": -0.011678037286760331,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            }
+          },
+          "rank_by_original_q_coverage": 1
+        },
+        {
+          "axes": {
+            "daypart_q": {
+              "new_canonical_source_mean": 0.004893542359702586,
+              "new_minus_old_fitted_coefficient": 1.734723475976807e-18,
+              "old_source_mean": 0.004893542359702584,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_cos": {
+              "new_canonical_source_mean": 0.0021272425766253517,
+              "new_minus_old_fitted_coefficient": -8.673617379884035e-18,
+              "old_source_mean": 0.0021272425766253604,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_sin": {
+              "new_canonical_source_mean": 0.004893830780927048,
+              "new_minus_old_fitted_coefficient": -3.469446951953614e-18,
+              "old_source_mean": 0.004893830780927051,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            }
+          },
+          "rank_by_original_q_coverage": 2
+        }
+      ]
+    },
+    {
+      "native_taxon": "Ovis canadensis",
+      "old_v0_vs_new_canonical_source_animal_effects": {
+        "daypart_q": {
+          "new_animal_source_bootstrap95": [
+            -0.007520654340030114,
+            0.001376978831160458
+          ],
+          "new_canonical_source_mean": -0.00283116928429561,
+          "new_minus_old_fitted_coefficient": -4.7704895589362195e-18,
+          "old_source_mean": -0.0028311692842956054,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        },
+        "sun_cos": {
+          "new_animal_source_bootstrap95": [
+            0.006363657575023006,
+            0.026466424869917085
+          ],
+          "new_canonical_source_mean": 0.016863351431649215,
+          "new_minus_old_fitted_coefficient": -3.469446951953614e-18,
+          "old_source_mean": 0.01686335143164922,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        },
+        "sun_sin": {
+          "new_animal_source_bootstrap95": [
+            0.017654519105941475,
+            0.04126263721059178
+          ],
+          "new_canonical_source_mean": 0.029168098952640713,
+          "new_minus_old_fitted_coefficient": 1.3877787807814457e-17,
+          "old_source_mean": 0.0291680989526407,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        }
+      },
+      "paired_context_effect_status": "INSUFFICIENT_PAIRED_TAGS",
+      "paired_same_tag_delta_axes": {
+        "q": {
+          "descriptive_paired_animal_bootstrap95": null,
+          "nominal_source_interval_sign": "NOT_ESTIMABLE",
+          "rank2_minus_rank1_original_tag_mean": null,
+          "tagged_animals_in_both_contexts_with_axis": 0
+        },
+        "sun_cos": {
+          "descriptive_paired_animal_bootstrap95": null,
+          "nominal_source_interval_sign": "NOT_ESTIMABLE",
+          "rank2_minus_rank1_original_tag_mean": null,
+          "tagged_animals_in_both_contexts_with_axis": 0
+        },
+        "sun_sin": {
+          "descriptive_paired_animal_bootstrap95": null,
+          "nominal_source_interval_sign": "NOT_ESTIMABLE",
+          "rank2_minus_rank1_original_tag_mean": null,
+          "tagged_animals_in_both_contexts_with_axis": 0
+        }
+      },
+      "region": "Utah",
+      "same_original_tagged_animal_between_contexts": 0,
+      "two_original_q_ranked_contexts": [
+        {
+          "axes": {
+            "daypart_q": {
+              "new_canonical_source_mean": -0.002679692825291937,
+              "new_minus_old_fitted_coefficient": 4.336808689942018e-19,
+              "old_source_mean": -0.0026796928252919372,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_cos": {
+              "new_canonical_source_mean": 0.011972073594877751,
+              "new_minus_old_fitted_coefficient": -5.204170427930421e-18,
+              "old_source_mean": 0.011972073594877756,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_sin": {
+              "new_canonical_source_mean": 0.03899716073868714,
+              "new_minus_old_fitted_coefficient": 2.0816681711721685e-17,
+              "old_source_mean": 0.03899716073868712,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            }
+          },
+          "rank_by_original_q_coverage": 1
+        },
+        {
+          "axes": {
+            "daypart_q": {
+              "new_canonical_source_mean": -0.003095031503205235,
+              "new_minus_old_fitted_coefficient": -1.3877787807814457e-17,
+              "old_source_mean": -0.0030950315032052212,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_cos": {
+              "new_canonical_source_mean": 0.024978426024474594,
+              "new_minus_old_fitted_coefficient": 0.0,
+              "old_source_mean": 0.024978426024474594,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_sin": {
+              "new_canonical_source_mean": 0.012860791898518223,
+              "new_minus_old_fitted_coefficient": 1.734723475976807e-18,
+              "old_source_mean": 0.012860791898518222,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            }
+          },
+          "rank_by_original_q_coverage": 2
+        }
+      ]
+    },
+    {
+      "native_taxon": "Odocoileus hemionus",
+      "old_v0_vs_new_canonical_source_animal_effects": {
+        "daypart_q": {
+          "new_animal_source_bootstrap95": [
+            -0.001712715349604297,
+            0.004435587102741308
+          ],
+          "new_canonical_source_mean": 0.001432669123839206,
+          "new_minus_old_fitted_coefficient": -5.204170427930421e-18,
+          "old_source_mean": 0.0014326691238392112,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        },
+        "sun_cos": {
+          "new_animal_source_bootstrap95": [
+            -0.023867572527332754,
+            0.010236362441839566
+          ],
+          "new_canonical_source_mean": -0.007371432462198235,
+          "new_minus_old_fitted_coefficient": 0.0,
+          "old_source_mean": -0.007371432462198235,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        },
+        "sun_sin": {
+          "new_animal_source_bootstrap95": [
+            -0.022544182333251773,
+            0.013361561492395863
+          ],
+          "new_canonical_source_mean": -0.003982224052378054,
+          "new_minus_old_fitted_coefficient": -6.938893903907228e-18,
+          "old_source_mean": -0.003982224052378047,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        }
+      },
+      "paired_context_effect_status": "PAIRED_2_CONTEXT_EFFECT_ESTIMABLE",
+      "paired_same_tag_delta_axes": {
+        "q": {
+          "descriptive_paired_animal_bootstrap95": [
+            0.00022706167810428128,
+            0.012687053490902838
+          ],
+          "nominal_source_interval_sign": "NOMINAL_POSITIVE",
+          "rank2_minus_rank1_original_tag_mean": 0.006185823618366474,
+          "tagged_animals_in_both_contexts_with_axis": 26
+        },
+        "sun_cos": {
+          "descriptive_paired_animal_bootstrap95": [
+            -0.06644750466719367,
+            0.00504698024344895
+          ],
+          "nominal_source_interval_sign": "INCLUDES_ZERO",
+          "rank2_minus_rank1_original_tag_mean": -0.031013049580386864,
+          "tagged_animals_in_both_contexts_with_axis": 33
+        },
+        "sun_sin": {
+          "descriptive_paired_animal_bootstrap95": [
+            -0.005039557170297557,
+            0.04243799379809997
+          ],
+          "nominal_source_interval_sign": "INCLUDES_ZERO",
+          "rank2_minus_rank1_original_tag_mean": 0.018657680917366144,
+          "tagged_animals_in_both_contexts_with_axis": 33
+        }
+      },
+      "region": "Wyoming",
+      "same_original_tagged_animal_between_contexts": 33,
+      "two_original_q_ranked_contexts": [
+        {
+          "axes": {
+            "daypart_q": {
+              "new_canonical_source_mean": 0.00018592839400427417,
+              "new_minus_old_fitted_coefficient": -3.5236570605778894e-18,
+              "old_source_mean": 0.0001859283940042777,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_cos": {
+              "new_canonical_source_mean": -0.0007435498907383917,
+              "new_minus_old_fitted_coefficient": 1.0842021724855044e-19,
+              "old_source_mean": -0.0007435498907383918,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_sin": {
+              "new_canonical_source_mean": -0.008963693837458753,
+              "new_minus_old_fitted_coefficient": -1.0408340855860843e-17,
+              "old_source_mean": -0.008963693837458743,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            }
+          },
+          "rank_by_original_q_coverage": 1
+        },
+        {
+          "axes": {
+            "daypart_q": {
+              "new_canonical_source_mean": 0.00286765030083859,
+              "new_minus_old_fitted_coefficient": -1.734723475976807e-18,
+              "old_source_mean": 0.0028676503008385917,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_cos": {
+              "new_canonical_source_mean": -0.009473564819645855,
+              "new_minus_old_fitted_coefficient": -3.469446951953614e-18,
+              "old_source_mean": -0.009473564819645851,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_sin": {
+              "new_canonical_source_mean": 0.0016415657327648319,
+              "new_minus_old_fitted_coefficient": 2.168404344971009e-18,
+              "old_source_mean": 0.0016415657327648297,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            }
+          },
+          "rank_by_original_q_coverage": 2
+        }
+      ]
+    },
+    {
+      "native_taxon": "Ovis canadensis",
+      "old_v0_vs_new_canonical_source_animal_effects": {
+        "daypart_q": {
+          "new_animal_source_bootstrap95": [
+            -0.0021044560437136297,
+            0.005452557889237069
+          ],
+          "new_canonical_source_mean": 0.0018305664536788786,
+          "new_minus_old_fitted_coefficient": 2.168404344971009e-19,
+          "old_source_mean": 0.0018305664536788784,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        },
+        "sun_cos": {
+          "new_animal_source_bootstrap95": [
+            -0.03230015412427198,
+            0.01892732871913641
+          ],
+          "new_canonical_source_mean": -0.006520009192125126,
+          "new_minus_old_fitted_coefficient": -8.673617379884035e-18,
+          "old_source_mean": -0.006520009192125117,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        },
+        "sun_sin": {
+          "new_animal_source_bootstrap95": [
+            -0.032962207832275575,
+            0.0032141633034367934
+          ],
+          "new_canonical_source_mean": -0.015089457766849846,
+          "new_minus_old_fitted_coefficient": -5.204170427930421e-18,
+          "old_source_mean": -0.015089457766849841,
+          "status": "NUMERICALLY_REPRODUCED_1E-12"
+        }
+      },
+      "paired_context_effect_status": "PAIRED_2_CONTEXT_EFFECT_ESTIMABLE",
+      "paired_same_tag_delta_axes": {
+        "q": {
+          "descriptive_paired_animal_bootstrap95": [
+            -0.008372150691865457,
+            0.009731150611966726
+          ],
+          "nominal_source_interval_sign": "INCLUDES_ZERO",
+          "rank2_minus_rank1_original_tag_mean": 0.00046125420175732924,
+          "tagged_animals_in_both_contexts_with_axis": 15
+        },
+        "sun_cos": {
+          "descriptive_paired_animal_bootstrap95": [
+            -0.042260913930060255,
+            0.09716062328900707
+          ],
+          "nominal_source_interval_sign": "INCLUDES_ZERO",
+          "rank2_minus_rank1_original_tag_mean": 0.029180210782583944,
+          "tagged_animals_in_both_contexts_with_axis": 21
+        },
+        "sun_sin": {
+          "descriptive_paired_animal_bootstrap95": [
+            0.06651236081709674,
+            0.13649756211862313
+          ],
+          "nominal_source_interval_sign": "NOMINAL_POSITIVE",
+          "rank2_minus_rank1_original_tag_mean": 0.10121206587839408,
+          "tagged_animals_in_both_contexts_with_axis": 21
+        }
+      },
+      "region": "Wyoming",
+      "same_original_tagged_animal_between_contexts": 21,
+      "two_original_q_ranked_contexts": [
+        {
+          "axes": {
+            "daypart_q": {
+              "new_canonical_source_mean": 0.002520494178285809,
+              "new_minus_old_fitted_coefficient": 4.336808689942018e-18,
+              "old_source_mean": 0.002520494178285805,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_cos": {
+              "new_canonical_source_mean": -0.019302058352652286,
+              "new_minus_old_fitted_coefficient": -1.734723475976807e-17,
+              "old_source_mean": -0.01930205835265227,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_sin": {
+              "new_canonical_source_mean": -0.06469577802659822,
+              "new_minus_old_fitted_coefficient": 0.0,
+              "old_source_mean": -0.06469577802659822,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            }
+          },
+          "rank_by_original_q_coverage": 1
+        },
+        {
+          "axes": {
+            "daypart_q": {
+              "new_canonical_source_mean": 0.002174025392544103,
+              "new_minus_old_fitted_coefficient": -2.6020852139652106e-18,
+              "old_source_mean": 0.0021740253925441057,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_cos": {
+              "new_canonical_source_mean": 0.009002254544512757,
+              "new_minus_old_fitted_coefficient": 0.0,
+              "old_source_mean": 0.009002254544512757,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            },
+            "sun_sin": {
+              "new_canonical_source_mean": 0.03685696836706342,
+              "new_minus_old_fitted_coefficient": -6.938893903907228e-18,
+              "old_source_mean": 0.036856968367063425,
+              "status": "NUMERICALLY_REPRODUCED_1E-12"
+            }
+          },
+          "rank_by_original_q_coverage": 2
+        }
+      ]
+    }
+  ],
+  "analysis_stage": "POST_NEW_SOURCE_EFFECTS_DESCRIPTIVE_EFFECT_REPLAY_NOT_OLD_PHYSICAL_ARRAY_REPLAY",
+  "current_provider_numeric_physical_sha_matched_contexts": 12,
+  "date": "2026-10-28",
+  "historic_12_raw_JSON_SHA_source_HOLDS_UNCHANGED": true,
+  "historical_external_negative_radiation_nonreplication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "interpretation_ceiling": [
+    "36 original context and 18 tagged-source fitted effect values matching numerically proves repeatability of those saved statistical summaries under the new snapshot, NOT byte identity or equality of all unarchived old hourly weather arrays.",
+    "This is a same-source same-sample post-result reanalysis, NOT external biological field study replication, true climate model version equivalence or causal solar navigation.",
+    "Only q-coverage-ranked context2 minus context1 within same tagged animals is contrasted; not higher/lower irradiance or common ecological gradient.",
+    "Paired animal nominal bootstrap 95% intervals are exploratory and NOT corrected for multiple testing. Zero-spanning does not prove no effect.",
+    "The old standalone strict raw-JSON equality ERA5_VERSION_HOLD from the earlier V1 route is retained as a historic source-identity outcome, even when biological fitted coefficients are numerically reproduced.",
+    "Utah/Wyoming source field studies are nonrandom and field/tag/season/route-dependent, so this is not a world/global hierarchical ecology estimate."
+  ],
+  "max_abs_new_vs_old_original_context_fitted_coefficient_difference": 2.0816681711721685e-17,
+  "max_abs_new_vs_old_original_source_tag_means_difference": 1.3877787807814457e-17,
+  "native_original_context_and_three_axis_comparisons": 36,
+  "native_original_source_animal_mean_comparisons": 18,
+  "old_v0_weather_physical_array_identity": "NOT_IDENTIFIABLE_FROM_UNARCHIVED_HISTORIC_HOURLY_ARRAYS",
+  "original_blob_SHA_inputs": {
+    "research/RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2_FIRST_RESULT_20261028.json": "ac87bdab689567ed145aa91ed8d24bab8cdce4f1",
+    "research/RSDS_ERA5_ORIGINAL_SOURCES_CANONICAL_FIRST_RESULT_20261028.json": "d39a1ee209ca81a895df6115110759ee4d0acd84",
+    "research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_FIRST_RESULTS_20261026.json": "d8d84ca3583cc26ff373fd929f3f98156ca9b0cb"
+  },
+  "original_field_studies": 2,
+  "original_source_taxon_groups": 6,
+  "original_source_weather_contexts": 12,
+  "paired_original_same_tag_context_nominal_descriptive_bootstrap_sign_counts": {
+    "q": {
+      "INCLUDES_ZERO": 2,
+      "NOMINAL_NEGATIVE": 0,
+      "NOMINAL_POSITIVE": 2,
+      "NOT_ESTIMABLE": 2
+    },
+    "sun_cos": {
+      "INCLUDES_ZERO": 4,
+      "NOMINAL_NEGATIVE": 0,
+      "NOMINAL_POSITIVE": 0,
+      "NOT_ESTIMABLE": 2
+    },
+    "sun_sin": {
+      "INCLUDES_ZERO": 3,
+      "NOMINAL_NEGATIVE": 0,
+      "NOMINAL_POSITIVE": 1,
+      "NOT_ESTIMABLE": 2
+    }
+  },
+  "version": "RSDS_V0_V2_ORIGINAL_ERA5_COEFFICIENT_REPLAY_WITH_TAG_PAIRS"
+}

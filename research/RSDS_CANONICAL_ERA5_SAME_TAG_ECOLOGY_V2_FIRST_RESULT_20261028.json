@@ -1,0 +1,1228 @@
+{
+  "all_fixed_original_study_taxon_results": [
+    {
+      "new_CANONICAL_weather_state": "CURRENT_VERSION_SOURCE_CONTEXTS_COMPLETE",
+      "old_historic_ERA5_version_HOLD_remains": true,
+      "original_contexts": [
+        {
+          "current_hourly_numeric_SHA_expected_from_pre_estimator_audit": "148ce77bc88844ad0b924fecee87959754e618d26731be48636cf2cf26244f7a",
+          "new_provider_physical_content_status": "CANONICAL_PHYSICAL_EXACT_SHA_MATCH",
+          "new_source_effects": {
+            "ERA5_GPS_hourly_link_fraction": 1.0,
+            "daypart_q": {
+              "n_source_animals": 55,
+              "negative_animals": 34,
+              "positive_animals": 21,
+              "source_animal_bootstrap95": [
+                -0.008596748349519692,
+                -0.00042198339293263366
+              ],
+              "source_mean": -0.004472396368671122,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "eligible_direction_source_animals": 55,
+            "eligible_joint_q_and_sun_source_animals": 55,
+            "source_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+            "sun_cos": {
+              "n_source_animals": 55,
+              "negative_animals": 23,
+              "positive_animals": 32,
+              "source_animal_bootstrap95": [
+                -0.007063037033743614,
+                0.013040325992843963
+              ],
+              "source_mean": 0.0033381377959780653,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "sun_sin": {
+              "n_source_animals": 55,
+              "negative_animals": 15,
+              "positive_animals": 40,
+              "source_animal_bootstrap95": [
+                0.006563903255549978,
+                0.02570937538797667
+              ],
+              "source_mean": 0.016518489815401313,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            }
+          },
+          "old_source_q_animals": 55,
+          "old_source_q_qualified_days": 6879,
+          "old_sun_moving_steps": 21407,
+          "original_first_v0_effects_REFERENCE_ONLY": {
+            "daypart_q_vs_irradiance": -0.004472396368671121,
+            "direction_sun_cos": 0.0033381377959780683,
+            "direction_sun_sin": 0.016518489815401313
+          },
+          "original_q_coverage_context_rank": 1,
+          "original_raw_ERA5_v0_physical_equivalence": "NOT_IDENTIFIABLE_NO_OLD_NUMERIC_ARRAYS",
+          "status": "NEW_CANONICAL_WEATHER_BIOLOGY_EVALUATED"
+        },
+        {
+          "current_hourly_numeric_SHA_expected_from_pre_estimator_audit": "f60ee7eb926509872869e9fe2605820896b224cef2dbef9aff9c15308c61b3d7",
+          "new_provider_physical_content_status": "CANONICAL_PHYSICAL_EXACT_SHA_MATCH",
+          "new_source_effects": {
+            "ERA5_GPS_hourly_link_fraction": 1.0,
+            "daypart_q": {
+              "n_source_animals": 44,
+              "negative_animals": 22,
+              "positive_animals": 22,
+              "source_animal_bootstrap95": [
+                -0.0048597272122304,
+                0.008625598739044995
+              ],
+              "source_mean": 0.0017023433202252134,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "eligible_direction_source_animals": 48,
+            "eligible_joint_q_and_sun_source_animals": 44,
+            "source_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+            "sun_cos": {
+              "n_source_animals": 48,
+              "negative_animals": 18,
+              "positive_animals": 30,
+              "source_animal_bootstrap95": [
+                -0.003269332561522301,
+                0.03080160660242207
+              ],
+              "source_mean": 0.013481940169293377,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "sun_sin": {
+              "n_source_animals": 48,
+              "negative_animals": 24,
+              "positive_animals": 24,
+              "source_animal_bootstrap95": [
+                -0.02907545184908341,
+                0.003527846924367451
+              ],
+              "source_mean": -0.01215887952758765,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            }
+          },
+          "old_source_q_animals": 51,
+          "old_source_q_qualified_days": 4860,
+          "old_sun_moving_steps": 15086,
+          "original_first_v0_effects_REFERENCE_ONLY": {
+            "daypart_q_vs_irradiance": 0.0017023433202252073,
+            "direction_sun_cos": 0.013481940169293374,
+            "direction_sun_sin": -0.012158879527587664
+          },
+          "original_q_coverage_context_rank": 2,
+          "original_raw_ERA5_v0_physical_equivalence": "NOT_IDENTIFIABLE_NO_OLD_NUMERIC_ARRAYS",
+          "status": "NEW_CANONICAL_WEATHER_BIOLOGY_EVALUATED"
+        }
+      ],
+      "paired_tagged_animal_contrast_status": "INSUFFICIENT_PAIRED_TAGS",
+      "paired_tagged_context_response_RANK2_MINUS_RANK1": {
+        "all_three_axis_paired_original_tags": 0,
+        "causal_or_independent_world_replication": false,
+        "identical_tag_ids_in_both_original_contexts": 0,
+        "per_axis": {
+          "q": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 0,
+            "paired_animal_bootstrap95": null,
+            "paired_source_animals": 0,
+            "positive_tag_differences": 0,
+            "rank2_minus_rank1_source_tag_mean": null,
+            "status": "INSUFFICIENT_PAIRED_ANIMALS",
+            "within_tag_sign_flip": 0,
+            "zero_tag_differences": 0
+          },
+          "sun_cos": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 0,
+            "paired_animal_bootstrap95": null,
+            "paired_source_animals": 0,
+            "positive_tag_differences": 0,
+            "rank2_minus_rank1_source_tag_mean": null,
+            "status": "INSUFFICIENT_PAIRED_ANIMALS",
+            "within_tag_sign_flip": 0,
+            "zero_tag_differences": 0
+          },
+          "sun_sin": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 0,
+            "paired_animal_bootstrap95": null,
+            "paired_source_animals": 0,
+            "positive_tag_differences": 0,
+            "rank2_minus_rank1_source_tag_mean": null,
+            "status": "INSUFFICIENT_PAIRED_ANIMALS",
+            "within_tag_sign_flip": 0,
+            "zero_tag_differences": 0
+          }
+        },
+        "release_contains_individual_keys": false,
+        "within_paired_tag_rho_delta_q_vs_delta_sun_cos": null,
+        "within_paired_tag_rho_delta_q_vs_delta_sun_sin": null
+      },
+      "region": "Utah",
+      "same_original_tagged_animals_in_two_q_coverage_ranked_contexts": 0,
+      "source_animal_response_per100W": {
+        "daypart_q_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.005365393290399941,
+            0.0020430590426238912
+          ],
+          "mean": -0.001728067618050529,
+          "n_source_animals": 99,
+          "status": "INCLUDES_ZERO"
+        },
+        "sun_cos_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.0019332185889240144,
+            0.018017230502317766
+          ],
+          "mean": 0.008065346668979375,
+          "n_source_animals": 103,
+          "status": "INCLUDES_ZERO"
+        },
+        "sun_sin_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.007136015020028094,
+            0.012579436439678971
+          ],
+          "mean": 0.0031542788594452914,
+          "n_source_animals": 103,
+          "status": "INCLUDES_ZERO"
+        }
+      },
+      "source_doi": "10.5441/001/1.711",
+      "taxon": "Antilocapra americana"
+    },
+    {
+      "new_CANONICAL_weather_state": "CURRENT_VERSION_SOURCE_CONTEXTS_COMPLETE",
+      "old_historic_ERA5_version_HOLD_remains": true,
+      "original_contexts": [
+        {
+          "current_hourly_numeric_SHA_expected_from_pre_estimator_audit": "c937271077ce080312868897a5529e2d877815e3e9189bf55e314b1350093af1",
+          "new_provider_physical_content_status": "CANONICAL_PHYSICAL_EXACT_SHA_MATCH",
+          "new_source_effects": {
+            "ERA5_GPS_hourly_link_fraction": 1.0,
+            "daypart_q": {
+              "n_source_animals": 69,
+              "negative_animals": 31,
+              "positive_animals": 38,
+              "source_animal_bootstrap95": [
+                -0.004644151744116492,
+                0.005690075446772028
+              ],
+              "source_mean": 0.0008051726368409524,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "eligible_direction_source_animals": 82,
+            "eligible_joint_q_and_sun_source_animals": 69,
+            "source_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+            "sun_cos": {
+              "n_source_animals": 82,
+              "negative_animals": 46,
+              "positive_animals": 36,
+              "source_animal_bootstrap95": [
+                -0.018660816455411993,
+                0.006083343941605581
+              ],
+              "source_mean": -0.006093669505381292,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "sun_sin": {
+              "n_source_animals": 82,
+              "negative_animals": 40,
+              "positive_animals": 42,
+              "source_animal_bootstrap95": [
+                -0.002722850897276407,
+                0.022049522301710336
+              ],
+              "source_mean": 0.009722361769643332,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            }
+          },
+          "old_source_q_animals": 91,
+          "old_source_q_qualified_days": 8697,
+          "old_sun_moving_steps": 18039,
+          "original_first_v0_effects_REFERENCE_ONLY": {
+            "daypart_q_vs_irradiance": 0.0008051726368409562,
+            "direction_sun_cos": -0.006093669505381286,
+            "direction_sun_sin": 0.00972236176964333
+          },
+          "original_q_coverage_context_rank": 1,
+          "original_raw_ERA5_v0_physical_equivalence": "NOT_IDENTIFIABLE_NO_OLD_NUMERIC_ARRAYS",
+          "status": "NEW_CANONICAL_WEATHER_BIOLOGY_EVALUATED"
+        },
+        {
+          "current_hourly_numeric_SHA_expected_from_pre_estimator_audit": "0bad7ce6b1a157fe9a9d95d394971f09df3dbffd6569ec44840dad0eb76ec118",
+          "new_provider_physical_content_status": "CANONICAL_PHYSICAL_EXACT_SHA_MATCH",
+          "new_source_effects": {
+            "ERA5_GPS_hourly_link_fraction": 1.0,
+            "daypart_q": {
+              "n_source_animals": 52,
+              "negative_animals": 16,
+              "positive_animals": 36,
+              "source_animal_bootstrap95": [
+                0.002582144540938259,
+                0.011651196402025152
+              ],
+              "source_mean": 0.007054462465439905,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "eligible_direction_source_animals": 70,
+            "eligible_joint_q_and_sun_source_animals": 52,
+            "source_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+            "sun_cos": {
+              "n_source_animals": 70,
+              "negative_animals": 34,
+              "positive_animals": 36,
+              "source_animal_bootstrap95": [
+                -0.012681941403880946,
+                0.012138299139791564
+              ],
+              "source_mean": 5.0860869663805614e-05,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "sun_sin": {
+              "n_source_animals": 70,
+              "negative_animals": 34,
+              "positive_animals": 36,
+              "source_animal_bootstrap95": [
+                -0.011788913159427605,
+                0.007779607757370541
+              ],
+              "source_mean": -0.0017223882246587793,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            }
+          },
+          "old_source_q_animals": 77,
+          "old_source_q_qualified_days": 7208,
+          "old_sun_moving_steps": 14925,
+          "original_first_v0_effects_REFERENCE_ONLY": {
+            "daypart_q_vs_irradiance": 0.007054462465439902,
+            "direction_sun_cos": 5.086086966380419e-05,
+            "direction_sun_sin": -0.001722388224658783
+          },
+          "original_q_coverage_context_rank": 2,
+          "original_raw_ERA5_v0_physical_equivalence": "NOT_IDENTIFIABLE_NO_OLD_NUMERIC_ARRAYS",
+          "status": "NEW_CANONICAL_WEATHER_BIOLOGY_EVALUATED"
+        }
+      ],
+      "paired_tagged_animal_contrast_status": "PAIRED_2_CONTEXT_EFFECT_ESTIMABLE",
+      "paired_tagged_context_response_RANK2_MINUS_RANK1": {
+        "all_three_axis_paired_original_tags": 32,
+        "causal_or_independent_world_replication": false,
+        "identical_tag_ids_in_both_original_contexts": 50,
+        "per_axis": {
+          "q": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 10,
+            "paired_animal_bootstrap95": [
+              0.0025699557419621324,
+              0.019078081301568288
+            ],
+            "paired_source_animals": 32,
+            "positive_tag_differences": 22,
+            "rank2_minus_rank1_source_tag_mean": 0.010916566057791628,
+            "status": "PAIRED_ESTIMABLE",
+            "within_tag_sign_flip": 17,
+            "zero_tag_differences": 0
+          },
+          "sun_cos": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 24,
+            "paired_animal_bootstrap95": [
+              -0.01602683106325539,
+              0.025695407537675116
+            ],
+            "paired_source_animals": 50,
+            "positive_tag_differences": 26,
+            "rank2_minus_rank1_source_tag_mean": 0.004256966571396956,
+            "status": "PAIRED_ESTIMABLE",
+            "within_tag_sign_flip": 17,
+            "zero_tag_differences": 0
+          },
+          "sun_sin": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 31,
+            "paired_animal_bootstrap95": [
+              -0.0352373403609809,
+              0.006936639613672421
+            ],
+            "paired_source_animals": 50,
+            "positive_tag_differences": 19,
+            "rank2_minus_rank1_source_tag_mean": -0.01388940303467051,
+            "status": "PAIRED_ESTIMABLE",
+            "within_tag_sign_flip": 26,
+            "zero_tag_differences": 0
+          }
+        },
+        "release_contains_individual_keys": false,
+        "within_paired_tag_rho_delta_q_vs_delta_sun_cos": -0.11950146627565983,
+        "within_paired_tag_rho_delta_q_vs_delta_sun_sin": -0.14076246334310852
+      },
+      "region": "Utah",
+      "same_original_tagged_animals_in_two_q_coverage_ranked_contexts": 50,
+      "source_animal_response_per100W": {
+        "daypart_q_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.0007503291962673765,
+            0.006625460419542813
+          ],
+          "mean": 0.0030880268371067145,
+          "n_source_animals": 89,
+          "status": "INCLUDES_ZERO"
+        },
+        "sun_cos_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.011192856276330466,
+            0.006488618251620139
+          ],
+          "mean": -0.0023937856473453026,
+          "n_source_animals": 102,
+          "status": "INCLUDES_ZERO"
+        },
+        "sun_sin_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.0038390582272832875,
+            0.01324663940894596
+          ],
+          "mean": 0.004666111473343254,
+          "n_source_animals": 102,
+          "status": "INCLUDES_ZERO"
+        }
+      },
+      "source_doi": "10.5441/001/1.711",
+      "taxon": "Cervus elaphus"
+    },
+    {
+      "new_CANONICAL_weather_state": "CURRENT_VERSION_SOURCE_CONTEXTS_COMPLETE",
+      "old_historic_ERA5_version_HOLD_remains": true,
+      "original_contexts": [
+        {
+          "current_hourly_numeric_SHA_expected_from_pre_estimator_audit": "4682d1bc3e16c82d3ee975dee32ce523b3efc2e6d2b1046fb8301b22e5681770",
+          "new_provider_physical_content_status": "CANONICAL_PHYSICAL_EXACT_SHA_MATCH",
+          "new_source_effects": {
+            "ERA5_GPS_hourly_link_fraction": 1.0,
+            "daypart_q": {
+              "n_source_animals": 76,
+              "negative_animals": 40,
+              "positive_animals": 36,
+              "source_animal_bootstrap95": [
+                -0.002848744870144054,
+                0.010832027747913532
+              ],
+              "source_mean": 0.0038501058451574145,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "eligible_direction_source_animals": 148,
+            "eligible_joint_q_and_sun_source_animals": 76,
+            "source_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+            "sun_cos": {
+              "n_source_animals": 148,
+              "negative_animals": 78,
+              "positive_animals": 70,
+              "source_animal_bootstrap95": [
+                -0.013939138807497163,
+                0.005733428182182664
+              ],
+              "source_mean": -0.003772966500729507,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "sun_sin": {
+              "n_source_animals": 148,
+              "negative_animals": 92,
+              "positive_animals": 56,
+              "source_animal_bootstrap95": [
+                -0.019331051417635622,
+                -0.0034972446279569244
+              ],
+              "source_mean": -0.01167803728676033,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            }
+          },
+          "old_source_q_animals": 165,
+          "old_source_q_qualified_days": 16812,
+          "old_sun_moving_steps": 30855,
+          "original_first_v0_effects_REFERENCE_ONLY": {
+            "daypart_q_vs_irradiance": 0.0038501058451574145,
+            "direction_sun_cos": -0.0037729665007295086,
+            "direction_sun_sin": -0.011678037286760331
+          },
+          "original_q_coverage_context_rank": 1,
+          "original_raw_ERA5_v0_physical_equivalence": "NOT_IDENTIFIABLE_NO_OLD_NUMERIC_ARRAYS",
+          "status": "NEW_CANONICAL_WEATHER_BIOLOGY_EVALUATED"
+        },
+        {
+          "current_hourly_numeric_SHA_expected_from_pre_estimator_audit": "28a7d6d3a4875d24d1654d608e0d70a7430fc5d30fff290cc18d2f464d28b42a",
+          "new_provider_physical_content_status": "CANONICAL_PHYSICAL_EXACT_SHA_MATCH",
+          "new_source_effects": {
+            "ERA5_GPS_hourly_link_fraction": 1.0,
+            "daypart_q": {
+              "n_source_animals": 52,
+              "negative_animals": 22,
+              "positive_animals": 30,
+              "source_animal_bootstrap95": [
+                -0.001339733948743854,
+                0.01337176532499616
+              ],
+              "source_mean": 0.004893542359702586,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "eligible_direction_source_animals": 134,
+            "eligible_joint_q_and_sun_source_animals": 52,
+            "source_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+            "sun_cos": {
+              "n_source_animals": 134,
+              "negative_animals": 65,
+              "positive_animals": 69,
+              "source_animal_bootstrap95": [
+                -0.011617619961685413,
+                0.016685084908375555
+              ],
+              "source_mean": 0.0021272425766253517,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "sun_sin": {
+              "n_source_animals": 134,
+              "negative_animals": 69,
+              "positive_animals": 65,
+              "source_animal_bootstrap95": [
+                -0.009155788097484414,
+                0.018895378708976274
+              ],
+              "source_mean": 0.004893830780927048,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            }
+          },
+          "old_source_q_animals": 158,
+          "old_source_q_qualified_days": 16591,
+          "old_sun_moving_steps": 25761,
+          "original_first_v0_effects_REFERENCE_ONLY": {
+            "daypart_q_vs_irradiance": 0.004893542359702584,
+            "direction_sun_cos": 0.0021272425766253604,
+            "direction_sun_sin": 0.004893830780927051
+          },
+          "original_q_coverage_context_rank": 2,
+          "original_raw_ERA5_v0_physical_equivalence": "NOT_IDENTIFIABLE_NO_OLD_NUMERIC_ARRAYS",
+          "status": "NEW_CANONICAL_WEATHER_BIOLOGY_EVALUATED"
+        }
+      ],
+      "paired_tagged_animal_contrast_status": "PAIRED_2_CONTEXT_EFFECT_ESTIMABLE",
+      "paired_tagged_context_response_RANK2_MINUS_RANK1": {
+        "all_three_axis_paired_original_tags": 44,
+        "causal_or_independent_world_replication": false,
+        "identical_tag_ids_in_both_original_contexts": 102,
+        "per_axis": {
+          "q": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 23,
+            "paired_animal_bootstrap95": [
+              -0.010782249397649785,
+              0.012843987563280602
+            ],
+            "paired_source_animals": 44,
+            "positive_tag_differences": 21,
+            "rank2_minus_rank1_source_tag_mean": 0.0003267360251456858,
+            "status": "PAIRED_ESTIMABLE",
+            "within_tag_sign_flip": 24,
+            "zero_tag_differences": 0
+          },
+          "sun_cos": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 43,
+            "paired_animal_bootstrap95": [
+              -0.009600961900602823,
+              0.026321501749826302
+            ],
+            "paired_source_animals": 102,
+            "positive_tag_differences": 59,
+            "rank2_minus_rank1_source_tag_mean": 0.008036316944898932,
+            "status": "PAIRED_ESTIMABLE",
+            "within_tag_sign_flip": 50,
+            "zero_tag_differences": 0
+          },
+          "sun_sin": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 48,
+            "paired_animal_bootstrap95": [
+              -0.0026038024921738534,
+              0.02855312514142875
+            ],
+            "paired_source_animals": 102,
+            "positive_tag_differences": 54,
+            "rank2_minus_rank1_source_tag_mean": 0.012929802304467648,
+            "status": "PAIRED_ESTIMABLE",
+            "within_tag_sign_flip": 45,
+            "zero_tag_differences": 0
+          }
+        },
+        "release_contains_individual_keys": false,
+        "within_paired_tag_rho_delta_q_vs_delta_sun_cos": -0.28789907674959475,
+        "within_paired_tag_rho_delta_q_vs_delta_sun_sin": -0.2195362604834731
+      },
+      "region": "Utah",
+      "same_original_tagged_animals_in_two_q_coverage_ranked_contexts": 102,
+      "source_animal_response_per100W": {
+        "daypart_q_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.0007407240471032653,
+            0.010566174844356327
+          ],
+          "mean": 0.004516917076921016,
+          "n_source_animals": 84,
+          "status": "INCLUDES_ZERO"
+        },
+        "sun_cos_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.012899870894328995,
+            0.006038384774627449
+          ],
+          "mean": -0.0032022728980872005,
+          "n_source_animals": 180,
+          "status": "INCLUDES_ZERO"
+        },
+        "sun_sin_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.013023797843847874,
+            0.00637324937284212
+          ],
+          "mean": -0.0033568875059493846,
+          "n_source_animals": 180,
+          "status": "INCLUDES_ZERO"
+        }
+      },
+      "source_doi": "10.5441/001/1.711",
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "new_CANONICAL_weather_state": "CURRENT_VERSION_SOURCE_CONTEXTS_COMPLETE",
+      "old_historic_ERA5_version_HOLD_remains": true,
+      "original_contexts": [
+        {
+          "current_hourly_numeric_SHA_expected_from_pre_estimator_audit": "f60ee7eb926509872869e9fe2605820896b224cef2dbef9aff9c15308c61b3d7",
+          "new_provider_physical_content_status": "CANONICAL_PHYSICAL_EXACT_SHA_MATCH",
+          "new_source_effects": {
+            "ERA5_GPS_hourly_link_fraction": 1.0,
+            "daypart_q": {
+              "n_source_animals": 54,
+              "negative_animals": 30,
+              "positive_animals": 24,
+              "source_animal_bootstrap95": [
+                -0.0080126046238669,
+                0.002392194663005869
+              ],
+              "source_mean": -0.002679692825291937,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "eligible_direction_source_animals": 73,
+            "eligible_joint_q_and_sun_source_animals": 54,
+            "source_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+            "sun_cos": {
+              "n_source_animals": 73,
+              "negative_animals": 28,
+              "positive_animals": 45,
+              "source_animal_bootstrap95": [
+                -0.0009094801973465517,
+                0.02467850895097237
+              ],
+              "source_mean": 0.011972073594877751,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "sun_sin": {
+              "n_source_animals": 73,
+              "negative_animals": 24,
+              "positive_animals": 49,
+              "source_animal_bootstrap95": [
+                0.024971480242142758,
+                0.053771146296722326
+              ],
+              "source_mean": 0.03899716073868714,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            }
+          },
+          "old_source_q_animals": 75,
+          "old_source_q_qualified_days": 7429,
+          "old_sun_moving_steps": 14775,
+          "original_first_v0_effects_REFERENCE_ONLY": {
+            "daypart_q_vs_irradiance": -0.0026796928252919372,
+            "direction_sun_cos": 0.011972073594877756,
+            "direction_sun_sin": 0.03899716073868712
+          },
+          "original_q_coverage_context_rank": 1,
+          "original_raw_ERA5_v0_physical_equivalence": "NOT_IDENTIFIABLE_NO_OLD_NUMERIC_ARRAYS",
+          "status": "NEW_CANONICAL_WEATHER_BIOLOGY_EVALUATED"
+        },
+        {
+          "current_hourly_numeric_SHA_expected_from_pre_estimator_audit": "4682d1bc3e16c82d3ee975dee32ce523b3efc2e6d2b1046fb8301b22e5681770",
+          "new_provider_physical_content_status": "CANONICAL_PHYSICAL_EXACT_SHA_MATCH",
+          "new_source_effects": {
+            "ERA5_GPS_hourly_link_fraction": 1.0,
+            "daypart_q": {
+              "n_source_animals": 31,
+              "negative_animals": 21,
+              "positive_animals": 10,
+              "source_animal_bootstrap95": [
+                -0.011463993273128633,
+                0.00611546218231571
+              ],
+              "source_mean": -0.003095031503205235,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "eligible_direction_source_animals": 44,
+            "eligible_joint_q_and_sun_source_animals": 31,
+            "source_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+            "sun_cos": {
+              "n_source_animals": 44,
+              "negative_animals": 12,
+              "positive_animals": 32,
+              "source_animal_bootstrap95": [
+                0.006748697089110027,
+                0.04168379698324198
+              ],
+              "source_mean": 0.024978426024474594,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "sun_sin": {
+              "n_source_animals": 44,
+              "negative_animals": 18,
+              "positive_animals": 26,
+              "source_animal_bootstrap95": [
+                -0.006292539514907147,
+                0.03152310195360338
+              ],
+              "source_mean": 0.012860791898518223,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            }
+          },
+          "old_source_q_animals": 48,
+          "old_source_q_qualified_days": 4703,
+          "old_sun_moving_steps": 9791,
+          "original_first_v0_effects_REFERENCE_ONLY": {
+            "daypart_q_vs_irradiance": -0.0030950315032052212,
+            "direction_sun_cos": 0.024978426024474594,
+            "direction_sun_sin": 0.012860791898518222
+          },
+          "original_q_coverage_context_rank": 2,
+          "original_raw_ERA5_v0_physical_equivalence": "NOT_IDENTIFIABLE_NO_OLD_NUMERIC_ARRAYS",
+          "status": "NEW_CANONICAL_WEATHER_BIOLOGY_EVALUATED"
+        }
+      ],
+      "paired_tagged_animal_contrast_status": "INSUFFICIENT_PAIRED_TAGS",
+      "paired_tagged_context_response_RANK2_MINUS_RANK1": {
+        "all_three_axis_paired_original_tags": 0,
+        "causal_or_independent_world_replication": false,
+        "identical_tag_ids_in_both_original_contexts": 0,
+        "per_axis": {
+          "q": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 0,
+            "paired_animal_bootstrap95": null,
+            "paired_source_animals": 0,
+            "positive_tag_differences": 0,
+            "rank2_minus_rank1_source_tag_mean": null,
+            "status": "INSUFFICIENT_PAIRED_ANIMALS",
+            "within_tag_sign_flip": 0,
+            "zero_tag_differences": 0
+          },
+          "sun_cos": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 0,
+            "paired_animal_bootstrap95": null,
+            "paired_source_animals": 0,
+            "positive_tag_differences": 0,
+            "rank2_minus_rank1_source_tag_mean": null,
+            "status": "INSUFFICIENT_PAIRED_ANIMALS",
+            "within_tag_sign_flip": 0,
+            "zero_tag_differences": 0
+          },
+          "sun_sin": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 0,
+            "paired_animal_bootstrap95": null,
+            "paired_source_animals": 0,
+            "positive_tag_differences": 0,
+            "rank2_minus_rank1_source_tag_mean": null,
+            "status": "INSUFFICIENT_PAIRED_ANIMALS",
+            "within_tag_sign_flip": 0,
+            "zero_tag_differences": 0
+          }
+        },
+        "release_contains_individual_keys": false,
+        "within_paired_tag_rho_delta_q_vs_delta_sun_cos": null,
+        "within_paired_tag_rho_delta_q_vs_delta_sun_sin": null
+      },
+      "region": "Utah",
+      "same_original_tagged_animals_in_two_q_coverage_ranked_contexts": 0,
+      "source_animal_response_per100W": {
+        "daypart_q_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.007520654340030114,
+            0.001376978831160458
+          ],
+          "mean": -0.00283116928429561,
+          "n_source_animals": 85,
+          "status": "INCLUDES_ZERO"
+        },
+        "sun_cos_vs_irradiance": {
+          "animal_bootstrap95": [
+            0.006363657575023006,
+            0.026466424869917085
+          ],
+          "mean": 0.016863351431649215,
+          "n_source_animals": 117,
+          "status": "NOMINAL_POSITIVE_ANIMAL_BOOTSTRAP"
+        },
+        "sun_sin_vs_irradiance": {
+          "animal_bootstrap95": [
+            0.017654519105941475,
+            0.04126263721059178
+          ],
+          "mean": 0.029168098952640713,
+          "n_source_animals": 117,
+          "status": "NOMINAL_POSITIVE_ANIMAL_BOOTSTRAP"
+        }
+      },
+      "source_doi": "10.5441/001/1.711",
+      "taxon": "Ovis canadensis"
+    },
+    {
+      "new_CANONICAL_weather_state": "CURRENT_VERSION_SOURCE_CONTEXTS_COMPLETE",
+      "old_historic_ERA5_version_HOLD_remains": true,
+      "original_contexts": [
+        {
+          "current_hourly_numeric_SHA_expected_from_pre_estimator_audit": "0b6fd729b6fb0af8a456d6f288f9156b411130b81522f7e17cb2c67c36e24c5b",
+          "new_provider_physical_content_status": "CANONICAL_PHYSICAL_EXACT_SHA_MATCH",
+          "new_source_effects": {
+            "ERA5_GPS_hourly_link_fraction": 1.0,
+            "daypart_q": {
+              "n_source_animals": 44,
+              "negative_animals": 17,
+              "positive_animals": 27,
+              "source_animal_bootstrap95": [
+                -0.004723444555917388,
+                0.004220791912651255
+              ],
+              "source_mean": 0.00018592839400427417,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "eligible_direction_source_animals": 60,
+            "eligible_joint_q_and_sun_source_animals": 44,
+            "source_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+            "sun_cos": {
+              "n_source_animals": 60,
+              "negative_animals": 28,
+              "positive_animals": 32,
+              "source_animal_bootstrap95": [
+                -0.023683056486335004,
+                0.021218849723718326
+              ],
+              "source_mean": -0.0007435498907383917,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "sun_sin": {
+              "n_source_animals": 60,
+              "negative_animals": 30,
+              "positive_animals": 30,
+              "source_animal_bootstrap95": [
+                -0.03006334745440979,
+                0.013467788071376299
+              ],
+              "source_mean": -0.008963693837458753,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            }
+          },
+          "old_source_q_animals": 72,
+          "old_source_q_qualified_days": 5737,
+          "old_sun_moving_steps": 15411,
+          "original_first_v0_effects_REFERENCE_ONLY": {
+            "daypart_q_vs_irradiance": 0.0001859283940042777,
+            "direction_sun_cos": -0.0007435498907383918,
+            "direction_sun_sin": -0.008963693837458743
+          },
+          "original_q_coverage_context_rank": 1,
+          "original_raw_ERA5_v0_physical_equivalence": "NOT_IDENTIFIABLE_NO_OLD_NUMERIC_ARRAYS",
+          "status": "NEW_CANONICAL_WEATHER_BIOLOGY_EVALUATED"
+        },
+        {
+          "current_hourly_numeric_SHA_expected_from_pre_estimator_audit": "d5d42ec1a36a8c29acf2caa900a49647f1e996200073846366b189b8156e17b6",
+          "new_provider_physical_content_status": "CANONICAL_PHYSICAL_EXACT_SHA_MATCH",
+          "new_source_effects": {
+            "ERA5_GPS_hourly_link_fraction": 1.0,
+            "daypart_q": {
+              "n_source_animals": 36,
+              "negative_animals": 12,
+              "positive_animals": 24,
+              "source_animal_bootstrap95": [
+                -0.00028728311634820363,
+                0.005964276455428272
+              ],
+              "source_mean": 0.00286765030083859,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "eligible_direction_source_animals": 44,
+            "eligible_joint_q_and_sun_source_animals": 36,
+            "source_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+            "sun_cos": {
+              "n_source_animals": 44,
+              "negative_animals": 24,
+              "positive_animals": 20,
+              "source_animal_bootstrap95": [
+                -0.02753307070635847,
+                0.007607762653631766
+              ],
+              "source_mean": -0.009473564819645855,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "sun_sin": {
+              "n_source_animals": 44,
+              "negative_animals": 20,
+              "positive_animals": 24,
+              "source_animal_bootstrap95": [
+                -0.017766825466652952,
+                0.019550325198326387
+              ],
+              "source_mean": 0.0016415657327648319,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            }
+          },
+          "old_source_q_animals": 53,
+          "old_source_q_qualified_days": 4745,
+          "old_sun_moving_steps": 13167,
+          "original_first_v0_effects_REFERENCE_ONLY": {
+            "daypart_q_vs_irradiance": 0.0028676503008385917,
+            "direction_sun_cos": -0.009473564819645851,
+            "direction_sun_sin": 0.0016415657327648297
+          },
+          "original_q_coverage_context_rank": 2,
+          "original_raw_ERA5_v0_physical_equivalence": "NOT_IDENTIFIABLE_NO_OLD_NUMERIC_ARRAYS",
+          "status": "NEW_CANONICAL_WEATHER_BIOLOGY_EVALUATED"
+        }
+      ],
+      "paired_tagged_animal_contrast_status": "PAIRED_2_CONTEXT_EFFECT_ESTIMABLE",
+      "paired_tagged_context_response_RANK2_MINUS_RANK1": {
+        "all_three_axis_paired_original_tags": 26,
+        "causal_or_independent_world_replication": false,
+        "identical_tag_ids_in_both_original_contexts": 33,
+        "per_axis": {
+          "q": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 12,
+            "paired_animal_bootstrap95": [
+              0.00022706167810428128,
+              0.012687053490902838
+            ],
+            "paired_source_animals": 26,
+            "positive_tag_differences": 14,
+            "rank2_minus_rank1_source_tag_mean": 0.006185823618366474,
+            "status": "PAIRED_ESTIMABLE",
+            "within_tag_sign_flip": 12,
+            "zero_tag_differences": 0
+          },
+          "sun_cos": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 19,
+            "paired_animal_bootstrap95": [
+              -0.06644750466719367,
+              0.00504698024344895
+            ],
+            "paired_source_animals": 33,
+            "positive_tag_differences": 14,
+            "rank2_minus_rank1_source_tag_mean": -0.031013049580386864,
+            "status": "PAIRED_ESTIMABLE",
+            "within_tag_sign_flip": 19,
+            "zero_tag_differences": 0
+          },
+          "sun_sin": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 15,
+            "paired_animal_bootstrap95": [
+              -0.005039557170297557,
+              0.04243799379809997
+            ],
+            "paired_source_animals": 33,
+            "positive_tag_differences": 18,
+            "rank2_minus_rank1_source_tag_mean": 0.018657680917366144,
+            "status": "PAIRED_ESTIMABLE",
+            "within_tag_sign_flip": 12,
+            "zero_tag_differences": 0
+          }
+        },
+        "release_contains_individual_keys": false,
+        "within_paired_tag_rho_delta_q_vs_delta_sun_cos": -0.19247863247863248,
+        "within_paired_tag_rho_delta_q_vs_delta_sun_sin": 0.011282051282051283
+      },
+      "region": "Wyoming",
+      "same_original_tagged_animals_in_two_q_coverage_ranked_contexts": 33,
+      "source_animal_response_per100W": {
+        "daypart_q_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.001712715349604297,
+            0.004435587102741308
+          ],
+          "mean": 0.001432669123839206,
+          "n_source_animals": 54,
+          "status": "INCLUDES_ZERO"
+        },
+        "sun_cos_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.023867572527332754,
+            0.010236362441839566
+          ],
+          "mean": -0.007371432462198235,
+          "n_source_animals": 71,
+          "status": "INCLUDES_ZERO"
+        },
+        "sun_sin_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.022544182333251773,
+            0.013361561492395863
+          ],
+          "mean": -0.003982224052378054,
+          "n_source_animals": 71,
+          "status": "INCLUDES_ZERO"
+        }
+      },
+      "source_doi": "10.5441/001/1.703",
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "new_CANONICAL_weather_state": "CURRENT_VERSION_SOURCE_CONTEXTS_COMPLETE",
+      "old_historic_ERA5_version_HOLD_remains": true,
+      "original_contexts": [
+        {
+          "current_hourly_numeric_SHA_expected_from_pre_estimator_audit": "56c4a6c6037a4579e9058ba184cb9961cedce487be414d5ab86b7fcd2ee9563b",
+          "new_provider_physical_content_status": "CANONICAL_PHYSICAL_EXACT_SHA_MATCH",
+          "new_source_effects": {
+            "ERA5_GPS_hourly_link_fraction": 1.0,
+            "daypart_q": {
+              "n_source_animals": 16,
+              "negative_animals": 7,
+              "positive_animals": 9,
+              "source_animal_bootstrap95": [
+                -0.0050949363517082255,
+                0.00988896515425563
+              ],
+              "source_mean": 0.002520494178285809,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "eligible_direction_source_animals": 22,
+            "eligible_joint_q_and_sun_source_animals": 16,
+            "source_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+            "sun_cos": {
+              "n_source_animals": 22,
+              "negative_animals": 14,
+              "positive_animals": 8,
+              "source_animal_bootstrap95": [
+                -0.06746519988895239,
+                0.03427597904914756
+              ],
+              "source_mean": -0.019302058352652286,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "sun_sin": {
+              "n_source_animals": 22,
+              "negative_animals": 18,
+              "positive_animals": 4,
+              "source_animal_bootstrap95": [
+                -0.09734561770656236,
+                -0.032172843144162
+              ],
+              "source_mean": -0.06469577802659822,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            }
+          },
+          "old_source_q_animals": 23,
+          "old_source_q_qualified_days": 2575,
+          "old_sun_moving_steps": 5248,
+          "original_first_v0_effects_REFERENCE_ONLY": {
+            "daypart_q_vs_irradiance": 0.002520494178285805,
+            "direction_sun_cos": -0.01930205835265227,
+            "direction_sun_sin": -0.06469577802659822
+          },
+          "original_q_coverage_context_rank": 1,
+          "original_raw_ERA5_v0_physical_equivalence": "NOT_IDENTIFIABLE_NO_OLD_NUMERIC_ARRAYS",
+          "status": "NEW_CANONICAL_WEATHER_BIOLOGY_EVALUATED"
+        },
+        {
+          "current_hourly_numeric_SHA_expected_from_pre_estimator_audit": "269dea945c549cc461bac88dba152cdc637ffc5d899bdfddec864c6396360e9a",
+          "new_provider_physical_content_status": "CANONICAL_PHYSICAL_EXACT_SHA_MATCH",
+          "new_source_effects": {
+            "ERA5_GPS_hourly_link_fraction": 1.0,
+            "daypart_q": {
+              "n_source_animals": 22,
+              "negative_animals": 8,
+              "positive_animals": 14,
+              "source_animal_bootstrap95": [
+                -0.0011182712108131385,
+                0.005329355152896042
+              ],
+              "source_mean": 0.002174025392544103,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "eligible_direction_source_animals": 22,
+            "eligible_joint_q_and_sun_source_animals": 22,
+            "source_state": "ORIGINAL_SAME_ANIMAL_WEATHER_EVALUATED",
+            "sun_cos": {
+              "n_source_animals": 22,
+              "negative_animals": 7,
+              "positive_animals": 15,
+              "source_animal_bootstrap95": [
+                -0.024083365441948903,
+                0.034923677498871646
+              ],
+              "source_mean": 0.009002254544512757,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            },
+            "sun_sin": {
+              "n_source_animals": 22,
+              "negative_animals": 2,
+              "positive_animals": 20,
+              "source_animal_bootstrap95": [
+                0.023846215990544536,
+                0.050223498472896214
+              ],
+              "source_mean": 0.03685696836706342,
+              "status": "SOURCE_DESCRIPTIVE_OBSERVATIONAL"
+            }
+          },
+          "old_source_q_animals": 22,
+          "old_source_q_qualified_days": 1824,
+          "old_sun_moving_steps": 6443,
+          "original_first_v0_effects_REFERENCE_ONLY": {
+            "daypart_q_vs_irradiance": 0.0021740253925441057,
+            "direction_sun_cos": 0.009002254544512757,
+            "direction_sun_sin": 0.036856968367063425
+          },
+          "original_q_coverage_context_rank": 2,
+          "original_raw_ERA5_v0_physical_equivalence": "NOT_IDENTIFIABLE_NO_OLD_NUMERIC_ARRAYS",
+          "status": "NEW_CANONICAL_WEATHER_BIOLOGY_EVALUATED"
+        }
+      ],
+      "paired_tagged_animal_contrast_status": "PAIRED_2_CONTEXT_EFFECT_ESTIMABLE",
+      "paired_tagged_context_response_RANK2_MINUS_RANK1": {
+        "all_three_axis_paired_original_tags": 15,
+        "causal_or_independent_world_replication": false,
+        "identical_tag_ids_in_both_original_contexts": 21,
+        "per_axis": {
+          "q": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 7,
+            "paired_animal_bootstrap95": [
+              -0.008372150691865457,
+              0.009731150611966726
+            ],
+            "paired_source_animals": 15,
+            "positive_tag_differences": 8,
+            "rank2_minus_rank1_source_tag_mean": 0.00046125420175732924,
+            "status": "PAIRED_ESTIMABLE",
+            "within_tag_sign_flip": 9,
+            "zero_tag_differences": 0
+          },
+          "sun_cos": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 8,
+            "paired_animal_bootstrap95": [
+              -0.042260913930060255,
+              0.09716062328900707
+            ],
+            "paired_source_animals": 21,
+            "positive_tag_differences": 13,
+            "rank2_minus_rank1_source_tag_mean": 0.029180210782583944,
+            "status": "PAIRED_ESTIMABLE",
+            "within_tag_sign_flip": 17,
+            "zero_tag_differences": 0
+          },
+          "sun_sin": {
+            "interpretation": "rank2-minus-rank1, original q-support-ranked contexts; not a high-versus-low irradiance effect.",
+            "negative_tag_differences": 3,
+            "paired_animal_bootstrap95": [
+              0.06651236081709674,
+              0.13649756211862313
+            ],
+            "paired_source_animals": 21,
+            "positive_tag_differences": 18,
+            "rank2_minus_rank1_source_tag_mean": 0.10121206587839408,
+            "status": "PAIRED_ESTIMABLE",
+            "within_tag_sign_flip": 15,
+            "zero_tag_differences": 0
+          }
+        },
+        "release_contains_individual_keys": false,
+        "within_paired_tag_rho_delta_q_vs_delta_sun_cos": -0.26785714285714285,
+        "within_paired_tag_rho_delta_q_vs_delta_sun_sin": -0.325
+      },
+      "region": "Wyoming",
+      "same_original_tagged_animals_in_two_q_coverage_ranked_contexts": 21,
+      "source_animal_response_per100W": {
+        "daypart_q_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.0021044560437136297,
+            0.005452557889237069
+          ],
+          "mean": 0.0018305664536788786,
+          "n_source_animals": 23,
+          "status": "INCLUDES_ZERO"
+        },
+        "sun_cos_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.03230015412427198,
+            0.01892732871913641
+          ],
+          "mean": -0.006520009192125126,
+          "n_source_animals": 23,
+          "status": "INCLUDES_ZERO"
+        },
+        "sun_sin_vs_irradiance": {
+          "animal_bootstrap95": [
+            -0.032962207832275575,
+            0.0032141633034367934
+          ],
+          "mean": -0.015089457766849846,
+          "n_source_animals": 23,
+          "status": "INCLUDES_ZERO"
+        }
+      },
+      "source_doi": "10.5441/001/1.703",
+      "taxon": "Ovis canadensis"
+    }
+  ],
+  "causal_or_global_claims": [
+    "This is a NEW version reanalysis of original two already observed GPS studies; it is NOT an independent heldout source replication.",
+    "The frozen current physical hourly ERA5 numeric SHA is checked before effect fitting. Old raw SHA and old physical arrays cannot be retroactively upgraded or compared.",
+    "The sign of sun cos or sin response to shortwave anomalies may reflect migration route, habitat, microclimate, timing, wind, temperature and nonrandom tagged individual source selection.",
+    "Original source tag/daypart q is a GPS displacement proxy, not latent daily activity time.",
+    "Rank2-minus-rank1 context contrast does not assign lower/higher radiation, latitude, phenology, migration or environmental stress.",
+    "Source animal bootstrap nominal 95% is not a multiple-testing adjusted world population confidence interval, source ecosystem unit count remains two.",
+    "All unavailable weather numeric versions, q/clock support holds, original native taxa and old externally negative radiation replication are retained.",
+    "Original animal identifiers, exact GPS coordinates/dates and individual source weather effects not published."
+  ],
+  "current_canonical_weather_contexts_exact_source_SHA_replayed": 12,
+  "date": "2026-10-28",
+  "historic_48_source_negative_radiation_replication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "historical_12_ERA5_raw_JSON_SHA_HOLDs_UNCHANGED": true,
+  "native_taxon_estimator_states": {
+    "CURRENT_VERSION_SOURCE_CONTEXTS_COMPLETE": 6
+  },
+  "old_ERA5_numeric_version_equivalence": "NOT_IDENTIFIABLE_UNARCHIVED_OLD_ARRAYS",
+  "original_source_taxon_rows": 6,
+  "original_study_count": 2,
+  "previous_first_biological_effects_unmodified": true,
+  "same_tag_two_context_effect_support": {
+    "INSUFFICIENT_PAIRED_TAGS": 2,
+    "PAIRED_2_CONTEXT_EFFECT_ESTIMABLE": 4
+  },
+  "selected_contexts_reported": 12,
+  "selected_original_GPS_gridyear_context_denominator": 12,
+  "source_animal_effect_nominal_sign_support": {
+    "daypart_q_vs_irradiance": {
+      "INCLUDES_ZERO": 6
+    },
+    "sun_cos_vs_irradiance": {
+      "INCLUDES_ZERO": 5,
+      "NOMINAL_POSITIVE_ANIMAL_BOOTSTRAP": 1
+    },
+    "sun_sin_vs_irradiance": {
+      "INCLUDES_ZERO": 5,
+      "NOMINAL_POSITIVE_ANIMAL_BOOTSTRAP": 1
+    }
+  },
+  "stage": "POST_OUTCOME_NEW_CANONICAL_PHYSICAL_WEATHER_VERSION_REANALYSIS",
+  "version": "RSDS_CANONICAL_ERA5_SOURCE_ORIGINAL_SAME_TAG_BIOLOGY_V2_FIRST_RESULT"
+}
