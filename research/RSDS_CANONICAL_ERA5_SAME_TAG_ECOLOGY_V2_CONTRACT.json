@@ -1,0 +1,60 @@
+{
+  "version": "RSDS_CANONICAL_ERA5_SAME_ORIGINAL_TAG_ECOLOGY_V2",
+  "date": "2026-10-28",
+  "stage": "POST_PRIOR_ECOLOGICAL_OUTCOMES_NEW_FIXED_PROVIDER_NUMERIC_VERSION_REANALYSIS_NOT_EXTERNAL_REPLICATION",
+  "parent_version_audit": "research/RSDS_ERA5_ORIGINAL_SOURCES_CANONICAL_FIRST_RESULT_20261028.json",
+  "parent_version_audit_git_blob_sha": "d39a1ee209ca81a895df6115110759ee4d0acd84",
+  "historic_first_biological_result": "research/RSDS_SAME_ANIMAL_SOLAR_WEATHER_V0_FIRST_RESULTS_20261026.json",
+  "historic_old_raw_SHA_HOLD": "research/RSDS_SAME_TAG_CONTEXT_PAIR_V1_FIRST_RESULT_20261026.json",
+  "historical_external_negative": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "study_coverage": {
+    "source_studies": 2,
+    "utah": {
+      "doi": "10.5441/001/1.711",
+      "native_taxa": [
+        "Antilocapra americana",
+        "Cervus elaphus",
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ]
+    },
+    "wyoming": {
+      "doi": "10.5441/001/1.703",
+      "native_taxa": [
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ]
+    },
+    "selected_q_gridyear_contexts": 12,
+    "unique_private_weather_gridyears": 10
+  },
+  "pre_weather_input_verification": "Same original Movebank UUID/MD5/source bytes, native q source animal counts and q~daylength means at tolerance 1e-12, original 2 q coverage source gridyear ranks and qday/source animal/solar heading step counts must match saved old v0 before ANY new model effect is computed.",
+  "current_weather_version": "For each original source gridyear, re-request ERA5 hourly four fields once, then compare exact canonical UTC full-year values/time/units six-decimal physical SHA256 against NEW ORIGINAL SOURCE VERSION AUDIT; do NOT compare only raw JSON SHA. If new physical fingerprint differs, HOLD that context and don't refit. Old ERA5 v0 physical values were not preserved.",
+  "phys_vars": [
+    "wind_speed_100m m/s",
+    "wind_direction_100m FROM degrees",
+    "shortwave_radiation W/m2",
+    "temperature_2m Celsius"
+  ],
+  "replay_estimator": "Exactly previous scripts/run_rsds_same_animal_solar_weather_v0.py evaluate_context with within individual-year-month 1-hour apparent-solar-time centering, geometric Sun altitude and altitude squared, solar azimuth cos/sin, daylength, 2m temperature, 100m wind magnitude and wind-flow-TO vs Sun cosine; GPS sun-relative cos and sin + daily q responses per +100W/m2 ERA5 shortwave anomaly. No new threshold tuning.",
+  "source_order": "Source/each taxon qday-selected gridyear rank1 and rank2, not high/low solar radiation, earlier/later ecological season, animal reaction sign, or geographic climate intervention.",
+  "inferential_design": "Source native taxon effect is equal available ORIGINAL tagged animal means across up to two selected contexts. Paired contrast uses same original tagged animals with estimable original three (q,Sun cos,Sun sin) source-context effects in both rank1 and rank2. Require n>=5 for descriptive original animal 2000-bootstrap; preserve all six source native taxa if unsupported.",
+  "endpoint": [
+    "raw q~shortwave anomaly slope per +100W/m2, source equal-tag mean and source-animal descriptive bootstrap95",
+    "sun_cos~shortwave anomaly, source equal-tag mean and source-animal descriptive bootstrap95",
+    "sun_sin~shortwave anomaly, source equal-tag mean and source-animal descriptive bootstrap95",
+    "within ORIGINAL identical tag ranks2−1 for each slope (not an exposure-ordered difference)"
+  ],
+  "null_and_HOLD": "All 6 original study×taxon rows, all selected contexts, original source qday/daylight-step eligibility, any canonical weather mismatch or insufficient repeated original tags. No source replacements, zero filling or original v0 reclassification.",
+  "limitations": [
+    "This analysis reuses prior original two studies and source selection after earlier results, so it is NOT an independent source/biome replication or global macroestimate.",
+    "Canonical now-now hourly weather stability does not imply old-vs-new climate values were identical, since old physical arrays were not archived. Compare biological estimates as explicit different-version reanalysis only.",
+    "Shortwave radiation gridded at ERA5 surface is not animal solar exposure, body facing, causal photic cue or microhabitat shading.",
+    "Within animal solar clock and season adjustment does not eliminate route, local wind/terrain, detection duty-cycle and resource-state confounding.",
+    "Day/night q is observed GPS step velocity contrast, not true activity-time allocation.",
+    "Paired q/daylight direction share source tag/day but not necessarily exactly the same GPS event intervals and 1-degree source region.",
+    "Do not infer individual response to increasing radiation from rank2−rank1 context selection; rank is based on original GPS q support.",
+    "Bootstrap/source comparisons observational, multiple nominal intervals unadjusted; no world confidence or p-values based on GPS fixes.",
+    "No original GPS individual ID, private grid/year/precise timestamps/coordinates, raw weather hourly arrays or individual slope estimates in public source results."
+  ]
+}
