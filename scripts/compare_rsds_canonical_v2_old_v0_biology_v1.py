@@ -83,7 +83,7 @@ def run():
         parent=oldrows.pop(key,None)
         if parent is None:
             raise ValueError("Unexpected original study native taxon label")
-        if len(rec["original_contexts"])!=len(parent["selected_contexts"])!=2:
+        if len(rec["original_contexts"])!=2 or len(parent["selected_contexts"])!=2:
             raise ValueError("Original q source context count changed")
         comparisons=[]
         for i,(fresh,prior) in enumerate(zip(rec["original_contexts"],
