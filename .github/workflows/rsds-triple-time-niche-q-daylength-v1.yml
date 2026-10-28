@@ -1,0 +1,125 @@
+name: RSDS original eight-study matched GPS time-niche q and daylength sign ecology
+on:
+  push:
+    branches:
+      - science/triple-matched-ecological-q-daylength-invariance-v1
+    paths:
+      - 'scripts/run_rsds_triple_matched_ecological_q_v1.py'
+      - 'scripts/aggregate_rsds_triple_ecological_q_invariance_v1.py'
+      - 'tests/test_rsds_triple_q_photoperiod_levels_v1.py'
+      - 'tests/test_rsds_triple_ecological_q_invariance_aggregate_v1.py'
+      - 'research/RSDS_TRIPLE_DATE_ECOLOGICAL_Q_DAYLENGTH_INVARIANCE_V1_CONTRACT.json'
+      - '.github/workflows/rsds-triple-time-niche-q-daylength-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  source_original_native_ecology_known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/triple-matched-ecological-q-daylength-invariance-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Existing original GPS native time/daylength numerical support
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Validate all original source domain data bitstreams and old negative-source verdict
+        run: python -m scripts.verify_rsds_migration
+      - name: Synthetic same-original-tag/year/date three q level and slope signs, plus all original study/HOLD tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_triple_q_photoperiod_levels_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_triple_ecological_q_invariance_aggregate_v1.py' -v
+  original_eight_original_GPS_source_ecological_signs:
+    needs: source_original_native_ecology_known_truth
+    runs-on: ubuntu-latest
+    timeout-minutes: 95
+    strategy:
+      fail-fast: false
+      matrix:
+        index: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/triple-matched-ecological-q-daylength-invariance-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install legacy original GPS and astronomy numerical dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Provider original MD5/q daylight replay before EXACT three-schedule same-tag/day q and photoperiod slopes
+        run: |
+          python -m scripts.run_rsds_triple_matched_ecological_q_v1 --index ${{ matrix.index }} --out outputs/triple_q_time_niche
+      - name: Preserve original source group means and bootstrap only, never tagged GPS or events
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-triple-q-time-niche-source-${{ matrix.index }}-v1
+          path: outputs/triple_q_time_niche/source_${{ matrix.index }}_triple_q_ecology.json
+          if-no-files-found: warn
+  all_original_eight_study_time_niche_synthesis:
+    needs: original_eight_original_GPS_source_ecological_signs
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/triple-matched-ecological-q-daylength-invariance-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install legacy original source imports
+        run: python -m pip install 'numpy>=1.24,<3'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-original-triple-q-time-niche-source-*-v1
+          merge-multiple: true
+          path: outputs/triple_q_time_niche
+      - name: Strictly keep eight original source studies and all twelve study-native taxon q and daylength axes with true source HOLDs
+        run: |
+          python -m scripts.aggregate_rsds_triple_ecological_q_invariance_v1 --input outputs/triple_q_time_niche --out research/RSDS_TRIPLE_DATE_ECOLOGICAL_Q_DAYLENGTH_INVARIANCE_V1_FIRST_RESULT_20261028.json
+          python -m json.tool research/RSDS_TRIPLE_DATE_ECOLOGICAL_Q_DAYLENGTH_INVARIANCE_V1_FIRST_RESULT_20261028.json > /dev/null
+      - name: Confirm no original tagged animal, GPS location or precise observation date/time in source-group receipt
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_TRIPLE_DATE_ECOLOGICAL_Q_DAYLENGTH_INVARIANCE_V1_FIRST_RESULT_20261028.json')
+          x=json.loads(p.read_text(encoding='utf-8'))
+          assert x['original_source_studies']==8 and x['original_study_taxon_rows']==12
+          assert x['historical_original_12_ERA5_source_version_HOLDS_UNCHANGED'] is True
+          assert x['historical_48_source_signed_shortwave_external_NONREPLICATED_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          def verify(v):
+              if isinstance(v,dict):
+                  for key,z in v.items():
+                      assert key not in {'tag_id','animal_id','individual_id','raw_gps','utc_hour','timestamp','calendar_date','latitude','longitude','location-lat','location-long','per_animal','_grid'}
+                      verify(z)
+              elif isinstance(v,list):
+                  for z in v: verify(z)
+          verify(x)
+          print('RSDS 8 original study/12 taxon q/daylength direct matched-day source means public only')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-triple-common-tag-day-original-eight-study-temporal-q-photoperiod-sign-invariance-v1
+          path: research/RSDS_TRIPLE_DATE_ECOLOGICAL_Q_DAYLENGTH_INVARIANCE_V1_FIRST_RESULT_20261028.json
+          if-no-files-found: error
+      - name: Commit first original biological q/slope source-only group effects without altering previous source outcomes
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_TRIPLE_DATE_ECOLOGICAL_Q_DAYLENGTH_INVARIANCE_V1_FIRST_RESULT_20261028.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: original 8 study native q and photoperiod sign robustness at exact same GPS animal dates"
+            git fetch origin science/triple-matched-ecological-q-daylength-invariance-v1
+            git rebase origin/science/triple-matched-ecological-q-daylength-invariance-v1
+            git push origin HEAD:science/triple-matched-ecological-q-daylength-invariance-v1
+          fi
