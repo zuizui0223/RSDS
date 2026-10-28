@@ -151,6 +151,18 @@ RSDSでは、Utah/Wyoming元GPSから独立して選んだ**2つの公開固定E
 
 [8原研究12行の原結果](../research/RSDS_EIGHT_STUDY_GPS_CADENCE_MATCHED_DAY_FIRST_RESULT_20261028.json) ／ [ソース観測時計位相の原結果](../research/RSDS_EIGHT_STUDY_GPS_CADENCE_PHASE_ALIAS_DIAGNOSTIC_20261028.json) ／ [観測過程・HOLDを含む科学的解釈](RSDS_GPS_SAMPLING_CADENCE_SAME_TAG_ECOLOGY_20261028.md)。
 
+## M. UTC測位時刻の偶奇差は同じ元標識個体・同じ日でも残る（2026-10-28）
+
+GPS観測努力・測位時刻の違いを生物の時間ニッチの差として誤認しないため、Utah・Wyomingと新6原調査を含む**8公表Movebank研究×12 study×taxon行**を保持し、元ファイルMD5と元のq／日長係数を再現してから、**元1時間bin採用GPS・UTC偶数時の2時間系列・UTC奇数時の2時間系列の全てに同じ標識個体・元暦年・元観測日が存在するデータ**だけを再解析した。
+
+**科学的な肯定的成果：** 8/12群で5元タグ以上の3系列共通日付があった。Wyomingのミュールジカ（113元タグ）は**q偶数2h−q奇数2h=+0.005393 [0.003574,0.007132]**、ビッグホーン（41元タグ）は**+0.013339 [0.011617,0.014897]**となり、独立元タグbootstrap95%区間がいずれもゼロを含まない。共通の元系列と比較したq差も、両種で偶数時は正・奇数時は負を示した。**異なる採用個体や日付の分布だけでは、この位相依存の観測q差は説明できない**ことが明確になった。Utahワピチも6元タグで偶数−奇数差の区間が正だったが、Utahの元観測データ自体が奇数UTC時に集中し、元タグ支援が弱い。
+
+残る5つの比較可能群は偶数−奇数q差の区間が0を含む。野生シチメンチョウ・スナドリネコ・Utahプロングホーンは3系列共通の元タグ／日付が不足し、ダイサギは元GPS容量上限HOLD。過去の日長係数・日射×方向の肯定結果を**除外・ゼロ化・再分類していない**。
+
+**生態学の中心主張への影響：** 真の行動時刻を表す日周ニッチと、元GPS直線変位速度から推測した時間利用は区別しなければならない。3系列で同じ元個体／日にそろえても、GPS測位時刻・区間長・移動軌跡の弦長による**観測過程の差**が残る。元8研究の夜昼qの符号差や日長係数の非一様性を、直ちに種適応・日射選好・温熱回避と結びつけてはいけない。一方、この観測過程を明示的に考慮すれば、今後元study・地域をまたぐ**時間ニッチの真の一般性**を検証する基礎ができる。
+
+[原8研究3系列完全同日GPS結果](../research/RSDS_GPS_THREE_PHASE_EXACT_TAG_DATE_V2_FIRST_RESULT_20261028.json) ／ [生物学的解釈と厳密なHOLD](RSDS_GPS_EXACT_THREE_PHASE_TAG_DATES_ECOLOGY_20261028.md) ／ [SHA固定した追加監査](../research/RSDS_GPS_TRIPLE_DATE_CADENCE_ECOLOGICAL_INTERPRETATION_V2_20261028.json)。
+
 ## 再現可能性と論文発展
 
 - [全球太陽方向の研究草稿v2](../manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_v2_20261025.md)
