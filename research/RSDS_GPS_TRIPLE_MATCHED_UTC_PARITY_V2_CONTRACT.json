@@ -1,0 +1,32 @@
+{
+  "version": "RSDS_EXACT_TRIPLE_TAG_DATE_UTC_PHASE_GPS_V2",
+  "date": "2026-10-28",
+  "stage": "POST_FIRST_PARITY_OUTCOMES_DESCRIPTIVE_TRIPLE_MATCHED_VALIDATION",
+  "previous_contract": "research/RSDS_ORIGINAL_EIGHT_STUDY_GPS_CADENCE_V1_CONTRACT.json",
+  "original_first_phase_result": "research/RSDS_EIGHT_STUDY_GPS_CADENCE_MATCHED_DAY_FIRST_RESULT_20261028.json",
+  "first_result_git_blob_SHA": "8b93fe361eccbdc13647e465ddfaa24ad10c7c98",
+  "original_phase_alias_result": "research/RSDS_EIGHT_STUDY_GPS_CADENCE_PHASE_ALIAS_DIAGNOSTIC_20261028.json",
+  "phase_alias_git_blob_SHA": "670199d6a40f3271f2fffa896c1e9971c66a737c",
+  "question": "Are Wyoming's apparently opposite nominal EVEN and ODD 2h-minus-original q source signs still supported when original, even and odd use exactly the SAME original tagged animal, year, and astronomy-qualified observation dates?",
+  "source_regime": "Exact original eight fixed study DOI, 12 native taxa, provider bitstream UUID/bytes/MD5. Replay original q and q~astronomical daylength source means/counts before any UTC parity outcome is computed.",
+  "three_schedules": {
+    "original": "Original source one selected fix per UTC-hour bin. Qualified actual interval 0.5-2 hours.",
+    "even": "Original fixed sequence restricted to even UTC-hour bins. Qualified actual interval 1.5-2.5 hours.",
+    "odd": "Original fixed sequence restricted to odd UTC-hour bins. Qualified actual interval 1.5-2.5 hours."
+  },
+  "eligibility": "Same original tag/calendar-year and INTERSECTION of astronomy/daypart-qualified local solar dates across all THREE schedules. No interpolation. Require at least ten triple matched dates per tag-year, at least three DAY and three NIGHT accepted source GPS segments per original schedule/day, speed <=60 km/h and original sunrise/daypart consistency.",
+  "comparisons": [
+    "q_EVEN-q_ORIGINAL",
+    "q_ODD-q_ORIGINAL",
+    "q_EVEN-q_ODD",
+    "q~daylength slope EVEN-ORIGINAL",
+    "q~daylength slope ODD-ORIGINAL",
+    "q~daylength slope EVEN-ODD"
+  ],
+  "daylength_x": "Use original source hourlybin GPS-derived mean-lat astronomical daylength for SAME matched dates as common daylength x-vector across all three q slopes. Require at least 0.5 hours x support for slope.",
+  "individual_weight": "Equal across qualified years within tag; equal across tags within source native taxon; >=5 source original tagged animals for mean and fixed-seed 2000 original tag bootstrap nominal 95%.",
+  "source_support_guard": "Triple matched tags cannot exceed min(even-vs-original tagged n, odd-vs-original tagged n) of previous first source result; keep all 8 source studies, all 12 native taxa, and true unsupported/HOLD.",
+  "interpretation": "Sampling support and GPS straight-line displacement chord/interval phase sensitivity ONLY. Not animal's biological reaction, independently replicated solar clock biology, latent activity duration, causal shortwave, same-solar-time condition or population-general effect.",
+  "old_source_holds": "Old GPS egret predeclared 200MB source HOLD, old 12 ERA5 JSON source HOLD and old external 48 study negative signed radiation replication must remain unchanged.",
+  "privacy": "Publish original DOI, taxon and source counts with aggregate source tagged animal means/CIs, never precise original GPS locations/timestamps, animal IDs, gridyears, individual tracks or individual coefficients."
+}
