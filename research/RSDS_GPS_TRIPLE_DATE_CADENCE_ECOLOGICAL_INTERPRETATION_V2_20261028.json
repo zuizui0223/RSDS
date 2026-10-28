@@ -1,0 +1,868 @@
+{
+  "all_eight_source_study_native_taxa_group_effects": [
+    {
+      "first_source_status": "TRIPLE_SOURCE_SUPPORT_EVALUATED",
+      "native_taxon": "Antilocapra americana",
+      "strict_three_phase_same_tag_date_effects": {
+        "daylength_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        },
+        "daylength_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        },
+        "daylength_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        },
+        "q_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        },
+        "q_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        },
+        "q_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        }
+      },
+      "study_doi": "10.5441/001/1.711",
+      "triple_original_tag_support": {
+        "original_source_tags_with_at_least_one_day_in_all_three_schedules": 104,
+        "source_original_tags_with_at_least_ten_triple_days": 0,
+        "source_original_tags_with_daylength_slope_triple_support": 0,
+        "triply_qualified_original_animal_days": 0,
+        "triply_qualified_tag_years_with_at_least_ten_identical_dates": 0
+      }
+    },
+    {
+      "first_source_status": "TRIPLE_SOURCE_SUPPORT_EVALUATED",
+      "native_taxon": "Cervus elaphus",
+      "strict_three_phase_same_tag_date_effects": {
+        "daylength_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": -0.011664056708974916,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 6,
+          "source_original_tag_bootstrap95": [
+            -0.05014158713547426,
+            0.03284117875251003
+          ]
+        },
+        "daylength_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_NEGATIVE",
+          "original_tag_group_mean": -0.029334186515386614,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 6,
+          "source_original_tag_bootstrap95": [
+            -0.05522705984593724,
+            -0.00433412785373427
+          ]
+        },
+        "daylength_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": -0.017670129806411698,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 6,
+          "source_original_tag_bootstrap95": [
+            -0.07247266416658539,
+            0.03464259297855546
+          ]
+        },
+        "q_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+          "original_tag_group_mean": 0.026041822875359676,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 6,
+          "source_original_tag_bootstrap95": [
+            0.005079282921559386,
+            0.046713942729273504
+          ]
+        },
+        "q_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+          "original_tag_group_mean": 0.01214128270791329,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 6,
+          "source_original_tag_bootstrap95": [
+            0.0006499147761339254,
+            0.024064371194883267
+          ]
+        },
+        "q_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_NEGATIVE",
+          "original_tag_group_mean": -0.013900540167446388,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 6,
+          "source_original_tag_bootstrap95": [
+            -0.0281976805609955,
+            -0.0009168482902920024
+          ]
+        }
+      },
+      "study_doi": "10.5441/001/1.711",
+      "triple_original_tag_support": {
+        "original_source_tags_with_at_least_one_day_in_all_three_schedules": 198,
+        "source_original_tags_with_at_least_ten_triple_days": 6,
+        "source_original_tags_with_daylength_slope_triple_support": 6,
+        "triply_qualified_original_animal_days": 174,
+        "triply_qualified_tag_years_with_at_least_ten_identical_dates": 6
+      }
+    },
+    {
+      "first_source_status": "TRIPLE_SOURCE_SUPPORT_EVALUATED",
+      "native_taxon": "Odocoileus hemionus",
+      "strict_three_phase_same_tag_date_effects": {
+        "daylength_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+          "original_tag_group_mean": 0.008421143067764019,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 11,
+          "source_original_tag_bootstrap95": [
+            0.0028681254236228764,
+            0.016541991984736916
+          ]
+        },
+        "daylength_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+          "original_tag_group_mean": 0.010953155570657413,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 11,
+          "source_original_tag_bootstrap95": [
+            0.0007494764107907326,
+            0.025635527447255238
+          ]
+        },
+        "daylength_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.002532012502893393,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 11,
+          "source_original_tag_bootstrap95": [
+            -0.007102581271516801,
+            0.017146125282348636
+          ]
+        },
+        "q_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.0025060699255521684,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 11,
+          "source_original_tag_bootstrap95": [
+            -0.00014582694789908032,
+            0.005562774585097485
+          ]
+        },
+        "q_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+          "original_tag_group_mean": 0.005820069071496149,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 11,
+          "source_original_tag_bootstrap95": [
+            0.0032116480957535983,
+            0.00844925205633351
+          ]
+        },
+        "q_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+          "original_tag_group_mean": 0.0033139991459439806,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 11,
+          "source_original_tag_bootstrap95": [
+            0.0017815983095388597,
+            0.005006575232705098
+          ]
+        }
+      },
+      "study_doi": "10.5441/001/1.711",
+      "triple_original_tag_support": {
+        "original_source_tags_with_at_least_one_day_in_all_three_schedules": 756,
+        "source_original_tags_with_at_least_ten_triple_days": 11,
+        "source_original_tags_with_daylength_slope_triple_support": 11,
+        "triply_qualified_original_animal_days": 2009,
+        "triply_qualified_tag_years_with_at_least_ten_identical_dates": 18
+      }
+    },
+    {
+      "first_source_status": "TRIPLE_SOURCE_SUPPORT_EVALUATED",
+      "native_taxon": "Ovis canadensis",
+      "strict_three_phase_same_tag_date_effects": {
+        "daylength_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.011788600820895433,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 38,
+          "source_original_tag_bootstrap95": [
+            -0.003049623256536328,
+            0.02644110936227818
+          ]
+        },
+        "daylength_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.0034305906509028293,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 38,
+          "source_original_tag_bootstrap95": [
+            -0.010336760272328863,
+            0.01711094785515664
+          ]
+        },
+        "daylength_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": -0.008358010169992604,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 38,
+          "source_original_tag_bootstrap95": [
+            -0.026670124581930143,
+            0.00970920870371535
+          ]
+        },
+        "q_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": -0.004866494038264443,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 45,
+          "source_original_tag_bootstrap95": [
+            -0.012777194721820971,
+            0.0012473309667843453
+          ]
+        },
+        "q_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.0025770875522332076,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 45,
+          "source_original_tag_bootstrap95": [
+            -0.0015598647323139731,
+            0.0063907744127683465
+          ]
+        },
+        "q_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+          "original_tag_group_mean": 0.00744358159049765,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 45,
+          "source_original_tag_bootstrap95": [
+            0.0007717299064013917,
+            0.0164481341178365
+          ]
+        }
+      },
+      "study_doi": "10.5441/001/1.711",
+      "triple_original_tag_support": {
+        "original_source_tags_with_at_least_one_day_in_all_three_schedules": 206,
+        "source_original_tags_with_at_least_ten_triple_days": 45,
+        "source_original_tags_with_daylength_slope_triple_support": 38,
+        "triply_qualified_original_animal_days": 1444,
+        "triply_qualified_tag_years_with_at_least_ten_identical_dates": 45
+      }
+    },
+    {
+      "first_source_status": "TRIPLE_SOURCE_SUPPORT_EVALUATED",
+      "native_taxon": "Odocoileus hemionus",
+      "strict_three_phase_same_tag_date_effects": {
+        "daylength_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": -0.001027619473773875,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 112,
+          "source_original_tag_bootstrap95": [
+            -0.0029730517040693315,
+            0.0011139504285935613
+          ]
+        },
+        "daylength_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.0008743238674703912,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 112,
+          "source_original_tag_bootstrap95": [
+            -0.0013255033786925493,
+            0.00408624916938079
+          ]
+        },
+        "daylength_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.001901943341244266,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 112,
+          "source_original_tag_bootstrap95": [
+            -0.00019204861899752522,
+            0.004529081480880476
+          ]
+        },
+        "q_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+          "original_tag_group_mean": 0.005393070134477692,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 113,
+          "source_original_tag_bootstrap95": [
+            0.003574390736353467,
+            0.007132088593752572
+          ]
+        },
+        "q_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+          "original_tag_group_mean": 0.0030554414383962315,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 113,
+          "source_original_tag_bootstrap95": [
+            0.001895025656950855,
+            0.004144485716078205
+          ]
+        },
+        "q_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_NEGATIVE",
+          "original_tag_group_mean": -0.0023376286960814603,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 113,
+          "source_original_tag_bootstrap95": [
+            -0.0036952449891554406,
+            -0.001014069285629879
+          ]
+        }
+      },
+      "study_doi": "10.5441/001/1.703",
+      "triple_original_tag_support": {
+        "original_source_tags_with_at_least_one_day_in_all_three_schedules": 114,
+        "source_original_tags_with_at_least_ten_triple_days": 113,
+        "source_original_tags_with_daylength_slope_triple_support": 112,
+        "triply_qualified_original_animal_days": 14720,
+        "triply_qualified_tag_years_with_at_least_ten_identical_dates": 160
+      }
+    },
+    {
+      "first_source_status": "TRIPLE_SOURCE_SUPPORT_EVALUATED",
+      "native_taxon": "Ovis canadensis",
+      "strict_three_phase_same_tag_date_effects": {
+        "daylength_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.002109571177301009,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 41,
+          "source_original_tag_bootstrap95": [
+            -0.0005407535029244547,
+            0.004805784548165335
+          ]
+        },
+        "daylength_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.00013280942762509688,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 41,
+          "source_original_tag_bootstrap95": [
+            -0.0016351805544676846,
+            0.0020368038643886325
+          ]
+        },
+        "daylength_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_NEGATIVE",
+          "original_tag_group_mean": -0.001976761749675912,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 41,
+          "source_original_tag_bootstrap95": [
+            -0.0035410378138762883,
+            -0.0003243158340048031
+          ]
+        },
+        "q_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+          "original_tag_group_mean": 0.013338853585317417,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 41,
+          "source_original_tag_bootstrap95": [
+            0.011616714184694872,
+            0.014896883547671448
+          ]
+        },
+        "q_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+          "original_tag_group_mean": 0.005403215055281212,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 41,
+          "source_original_tag_bootstrap95": [
+            0.0039729193103877885,
+            0.006833619874910242
+          ]
+        },
+        "q_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_NEGATIVE",
+          "original_tag_group_mean": -0.007935638530036206,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 41,
+          "source_original_tag_bootstrap95": [
+            -0.009084821588414458,
+            -0.006867035536568864
+          ]
+        }
+      },
+      "study_doi": "10.5441/001/1.703",
+      "triple_original_tag_support": {
+        "original_source_tags_with_at_least_one_day_in_all_three_schedules": 41,
+        "source_original_tags_with_at_least_ten_triple_days": 41,
+        "source_original_tags_with_daylength_slope_triple_support": 41,
+        "triply_qualified_original_animal_days": 6673,
+        "triply_qualified_tag_years_with_at_least_ten_identical_dates": 78
+      }
+    },
+    {
+      "first_source_status": "TRIPLE_SOURCE_SUPPORT_EVALUATED",
+      "native_taxon": "Meleagris gallopavo",
+      "strict_three_phase_same_tag_date_effects": {
+        "daylength_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        },
+        "daylength_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        },
+        "daylength_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        },
+        "q_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        },
+        "q_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        },
+        "q_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        }
+      },
+      "study_doi": "10.5441/001/1.671",
+      "triple_original_tag_support": {
+        "original_source_tags_with_at_least_one_day_in_all_three_schedules": 0,
+        "source_original_tags_with_at_least_ten_triple_days": 0,
+        "source_original_tags_with_daylength_slope_triple_support": 0,
+        "triply_qualified_original_animal_days": 0,
+        "triply_qualified_tag_years_with_at_least_ten_identical_dates": 0
+      }
+    },
+    {
+      "first_source_status": "TRIPLE_SOURCE_SUPPORT_EVALUATED",
+      "native_taxon": "Lynx rufus",
+      "strict_three_phase_same_tag_date_effects": {
+        "daylength_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.00542695028646068,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 25,
+          "source_original_tag_bootstrap95": [
+            -0.007896894094902388,
+            0.020771985426820266
+          ]
+        },
+        "daylength_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": -0.0039523763639454776,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 25,
+          "source_original_tag_bootstrap95": [
+            -0.014851850612367185,
+            0.00897973552126566
+          ]
+        },
+        "daylength_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_NEGATIVE",
+          "original_tag_group_mean": -0.009379326650406156,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 25,
+          "source_original_tag_bootstrap95": [
+            -0.015661661116677435,
+            -0.003536955876040168
+          ]
+        },
+        "q_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.0026025744046445135,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 25,
+          "source_original_tag_bootstrap95": [
+            -0.007341864592698831,
+            0.01227856236390073
+          ]
+        },
+        "q_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_NEGATIVE",
+          "original_tag_group_mean": -0.012453718016825419,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 25,
+          "source_original_tag_bootstrap95": [
+            -0.021030251513405207,
+            -0.0030984509443542038
+          ]
+        },
+        "q_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_NEGATIVE",
+          "original_tag_group_mean": -0.01505629242146993,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 25,
+          "source_original_tag_bootstrap95": [
+            -0.026858377053537122,
+            -0.002929046263611449
+          ]
+        }
+      },
+      "study_doi": "10.5441/001/1.323",
+      "triple_original_tag_support": {
+        "original_source_tags_with_at_least_one_day_in_all_three_schedules": 36,
+        "source_original_tags_with_at_least_ten_triple_days": 25,
+        "source_original_tags_with_daylength_slope_triple_support": 25,
+        "triply_qualified_original_animal_days": 783,
+        "triply_qualified_tag_years_with_at_least_ten_identical_dates": 29
+      }
+    },
+    {
+      "first_source_status": "TRIPLE_SOURCE_SUPPORT_EVALUATED",
+      "native_taxon": "Vulpes vulpes",
+      "strict_three_phase_same_tag_date_effects": {
+        "daylength_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_NEGATIVE",
+          "original_tag_group_mean": -0.01638272624028015,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 10,
+          "source_original_tag_bootstrap95": [
+            -0.029549845564322653,
+            -0.0044529021124144605
+          ]
+        },
+        "daylength_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": -0.011270105813394302,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 10,
+          "source_original_tag_bootstrap95": [
+            -0.041927180123287285,
+            0.011876014703886289
+          ]
+        },
+        "daylength_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.00511262042688585,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 10,
+          "source_original_tag_bootstrap95": [
+            -0.019019832173325646,
+            0.027949303239711544
+          ]
+        },
+        "q_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.0032620181326854353,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 10,
+          "source_original_tag_bootstrap95": [
+            -0.004367867857017789,
+            0.009958335522593533
+          ]
+        },
+        "q_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_NEGATIVE",
+          "original_tag_group_mean": -0.028583959072082363,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 10,
+          "source_original_tag_bootstrap95": [
+            -0.052167092797875875,
+            -0.0055853268256019694
+          ]
+        },
+        "q_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "NOMINAL_NEGATIVE",
+          "original_tag_group_mean": -0.0318459772047678,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 10,
+          "source_original_tag_bootstrap95": [
+            -0.05764476570774696,
+            -0.007933275793443854
+          ]
+        }
+      },
+      "study_doi": "10.5441/001/1.304",
+      "triple_original_tag_support": {
+        "original_source_tags_with_at_least_one_day_in_all_three_schedules": 20,
+        "source_original_tags_with_at_least_ten_triple_days": 10,
+        "source_original_tags_with_daylength_slope_triple_support": 10,
+        "triply_qualified_original_animal_days": 240,
+        "triply_qualified_tag_years_with_at_least_ten_identical_dates": 10
+      }
+    },
+    {
+      "first_source_status": "TRIPLE_SOURCE_SUPPORT_EVALUATED",
+      "native_taxon": "Prionailurus viverrinus",
+      "strict_three_phase_same_tag_date_effects": {
+        "daylength_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        },
+        "daylength_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        },
+        "daylength_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        },
+        "q_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        },
+        "q_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        },
+        "q_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "UNAVAILABLE",
+          "original_tag_group_mean": null,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 0,
+          "source_original_tag_bootstrap95": null
+        }
+      },
+      "study_doi": "10.5441/001/1.644",
+      "triple_original_tag_support": {
+        "original_source_tags_with_at_least_one_day_in_all_three_schedules": 8,
+        "source_original_tags_with_at_least_ten_triple_days": 0,
+        "source_original_tags_with_daylength_slope_triple_support": 0,
+        "triply_qualified_original_animal_days": 0,
+        "triply_qualified_tag_years_with_at_least_ten_identical_dates": 0
+      }
+    },
+    {
+      "first_source_status": "PREDECLARED_FILE_METADATA_HOLD",
+      "native_taxon": "Ardea alba",
+      "strict_three_phase_same_tag_date_effects": null,
+      "study_doi": "10.5441/001/1.641",
+      "triple_original_tag_support": null
+    },
+    {
+      "first_source_status": "TRIPLE_SOURCE_SUPPORT_EVALUATED",
+      "native_taxon": "Phascolarctos cinereus",
+      "strict_three_phase_same_tag_date_effects": {
+        "daylength_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.000601800252654803,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 39,
+          "source_original_tag_bootstrap95": [
+            -0.006063146038074853,
+            0.006122331916651695
+          ]
+        },
+        "daylength_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.0003443618225057659,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 39,
+          "source_original_tag_bootstrap95": [
+            -0.003610318731573204,
+            0.003880542742449533
+          ]
+        },
+        "daylength_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": -0.00025743843014903675,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 39,
+          "source_original_tag_bootstrap95": [
+            -0.004968630598399505,
+            0.004413211550537643
+          ]
+        },
+        "q_even_minus_odd": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": -0.0005194573766198876,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 39,
+          "source_original_tag_bootstrap95": [
+            -0.002958465443317587,
+            0.0018121000865427468
+          ]
+        },
+        "q_even_minus_original": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.0008188352516112603,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 39,
+          "source_original_tag_bootstrap95": [
+            -0.0010255440387133266,
+            0.0026328274271124456
+          ]
+        },
+        "q_odd_minus_original": {
+          "nominal_bootstrap_interval_sign": "INCLUDES_ZERO",
+          "original_tag_group_mean": 0.001338292628231148,
+          "same_original_tags_and_calendar_dates_with_estimable_axis": 39,
+          "source_original_tag_bootstrap95": [
+            -0.00038937593653196447,
+            0.003178319076976655
+          ]
+        }
+      },
+      "study_doi": "10.5441/001/1.740",
+      "triple_original_tag_support": {
+        "original_source_tags_with_at_least_one_day_in_all_three_schedules": 43,
+        "source_original_tags_with_at_least_ten_triple_days": 39,
+        "source_original_tags_with_daylength_slope_triple_support": 39,
+        "triply_qualified_original_animal_days": 1506,
+        "triply_qualified_tag_years_with_at_least_ten_identical_dates": 40
+      }
+    }
+  ],
+  "date": "2026-10-28",
+  "interpretation_ceiling": [
+    "The exact same original tagged animals, calendar years and astronomy-qualified dates are used in the ORIGINAL/EVEN/ODD contrast. This rules out different admissible animal/date sets as the sole explanation of the observed Wyoming source sign reversal.",
+    "It does not identify biological responses to light, sun azimuth, heat or UTC clock parity. The GPS travel segment length and acquisition phase define different OBSERVATION estimands.",
+    "Three-group supported positive even-minus-odd nominal q differences come from only TWO independent original field study DOIs; they do not represent globally or phylogenetically general animal behavior.",
+    "Native source animals only conditionally sampled; 2000 paired animal-bootstrap 95% intervals are post-result descriptive and uncorrected for multiple axes and taxa.",
+    "Unavailable triple-match original groups remain UNAVAILABLE, including Turkish turkey and Thai fishing cat temporal/date support and old great egret 200MB source HOLD.",
+    "Original source 'hourly' GPS reflects at most one location within UTC-hour bins, not a guarantee of 1h actual between-fix intervals. Utah native fix timestamps overwhelmingly favor odd UTC hours.",
+    "The q response estimates log1p NIGHT−DAY straight-line observed GPS step speed, not latent duration/activity or identical true movement paths at different fix intervals.",
+    "Source study DOI and native taxon rows are NOT interchangeable independent world ecosystem units.",
+    "Old ERA5 source response 12/12 serialized JSON SHA version holds and previous 48-source radiation-direction external nonreplication are unchanged."
+  ],
+  "original_Wyoming_two_native_taxa_exact_three_phase_recurrence": {
+    "Odocoileus hemionus": {
+      "original_triply_matched_tag_count": 113,
+      "q_even_minus_odd": {
+        "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+        "original_tag_group_mean": 0.005393070134477692,
+        "same_original_tags_and_calendar_dates_with_estimable_axis": 113,
+        "source_original_tag_bootstrap95": [
+          0.003574390736353467,
+          0.007132088593752572
+        ]
+      },
+      "q_even_minus_original": {
+        "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+        "original_tag_group_mean": 0.0030554414383962315,
+        "same_original_tags_and_calendar_dates_with_estimable_axis": 113,
+        "source_original_tag_bootstrap95": [
+          0.001895025656950855,
+          0.004144485716078205
+        ]
+      },
+      "q_odd_minus_original": {
+        "nominal_bootstrap_interval_sign": "NOMINAL_NEGATIVE",
+        "original_tag_group_mean": -0.0023376286960814603,
+        "same_original_tags_and_calendar_dates_with_estimable_axis": 113,
+        "source_original_tag_bootstrap95": [
+          -0.0036952449891554406,
+          -0.001014069285629879
+        ]
+      }
+    },
+    "Ovis canadensis": {
+      "original_triply_matched_tag_count": 41,
+      "q_even_minus_odd": {
+        "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+        "original_tag_group_mean": 0.013338853585317417,
+        "same_original_tags_and_calendar_dates_with_estimable_axis": 41,
+        "source_original_tag_bootstrap95": [
+          0.011616714184694872,
+          0.014896883547671448
+        ]
+      },
+      "q_even_minus_original": {
+        "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+        "original_tag_group_mean": 0.005403215055281212,
+        "same_original_tags_and_calendar_dates_with_estimable_axis": 41,
+        "source_original_tag_bootstrap95": [
+          0.0039729193103877885,
+          0.006833619874910242
+        ]
+      },
+      "q_odd_minus_original": {
+        "nominal_bootstrap_interval_sign": "NOMINAL_NEGATIVE",
+        "original_tag_group_mean": -0.007935638530036206,
+        "same_original_tags_and_calendar_dates_with_estimable_axis": 41,
+        "source_original_tag_bootstrap95": [
+          -0.009084821588414458,
+          -0.006867035536568864
+        ]
+      }
+    }
+  },
+  "original_field_studies": 8,
+  "original_study_taxon_rows": 12,
+  "previous_12_ERA5_source_json_version_HOLDS_UNCHANGED": true,
+  "previous_48_source_signed_sunlight_external_NONREPLICATED_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "qualified_original_source_taxa_with_positive_even_minus_odd_q": {
+    "n": 3,
+    "source_taxa": [
+      {
+        "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+        "original_tag_group_mean": 0.026041822875359676,
+        "same_original_tags_and_calendar_dates_with_estimable_axis": 6,
+        "source_original_tag_bootstrap95": [
+          0.005079282921559386,
+          0.046713942729273504
+        ],
+        "study_doi": "10.5441/001/1.711",
+        "taxon": "Cervus elaphus"
+      },
+      {
+        "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+        "original_tag_group_mean": 0.005393070134477692,
+        "same_original_tags_and_calendar_dates_with_estimable_axis": 113,
+        "source_original_tag_bootstrap95": [
+          0.003574390736353467,
+          0.007132088593752572
+        ],
+        "study_doi": "10.5441/001/1.703",
+        "taxon": "Odocoileus hemionus"
+      },
+      {
+        "nominal_bootstrap_interval_sign": "NOMINAL_POSITIVE",
+        "original_tag_group_mean": 0.013338853585317417,
+        "same_original_tags_and_calendar_dates_with_estimable_axis": 41,
+        "source_original_tag_bootstrap95": [
+          0.011616714184694872,
+          0.014896883547671448
+        ],
+        "study_doi": "10.5441/001/1.703",
+        "taxon": "Ovis canadensis"
+      }
+    ]
+  },
+  "qualifying_same_tag_original_three_phase_source_taxon_rows": 8,
+  "source_axis_nominal_interval_counts": {
+    "daylength_even_minus_odd": {
+      "INCLUDES_ZERO": 6,
+      "NOMINAL_NEGATIVE": 1,
+      "NOMINAL_POSITIVE": 1,
+      "UNAVAILABLE": 3
+    },
+    "daylength_even_minus_original": {
+      "INCLUDES_ZERO": 6,
+      "NOMINAL_NEGATIVE": 1,
+      "NOMINAL_POSITIVE": 1,
+      "UNAVAILABLE": 3
+    },
+    "daylength_odd_minus_original": {
+      "INCLUDES_ZERO": 6,
+      "NOMINAL_NEGATIVE": 2,
+      "UNAVAILABLE": 3
+    },
+    "q_even_minus_odd": {
+      "INCLUDES_ZERO": 5,
+      "NOMINAL_POSITIVE": 3,
+      "UNAVAILABLE": 3
+    },
+    "q_even_minus_original": {
+      "INCLUDES_ZERO": 2,
+      "NOMINAL_NEGATIVE": 2,
+      "NOMINAL_POSITIVE": 4,
+      "UNAVAILABLE": 3
+    },
+    "q_odd_minus_original": {
+      "INCLUDES_ZERO": 1,
+      "NOMINAL_NEGATIVE": 5,
+      "NOMINAL_POSITIVE": 2,
+      "UNAVAILABLE": 3
+    }
+  },
+  "source_original_first_result_git_blobs": {
+    "research/RSDS_EIGHT_STUDY_GPS_CADENCE_MATCHED_DAY_FIRST_RESULT_20261028.json": "8b93fe361eccbdc13647e465ddfaa24ad10c7c98",
+    "research/RSDS_GPS_THREE_PHASE_EXACT_TAG_DATE_V2_FIRST_RESULT_20261028.json": "da679f8ca8d973de7da55463e5643037df6a0579"
+  },
+  "source_state_counts": {
+    "PREDECLARED_FILE_METADATA_HOLD": 1,
+    "TRIPLE_SOURCE_SUPPORT_EVALUATED": 7
+  },
+  "status": "SOURCE_ORIGINAL_TAG_DATE_MATCHED_OBSERVATION_PROCESS_PHASE_BIAS",
+  "version": "RSDS_EIGHT_STUDY_ORIGINAL_GPS_TRIPLE_TAG_DATE_ECOLOGICAL_INTERPRETATION_V2"
+}
