@@ -16,6 +16,8 @@
 
 **元原GPSを検証した8研究×12分類群の1時間bin・UTC偶数/奇数2時間系列の比較が成功。** [全study結果](research/RSDS_EIGHT_STUDY_GPS_CADENCE_MATCHED_DAY_FIRST_RESULT_20261028.json)／[UTC時刻偏りの固定診断](research/RSDS_EIGHT_STUDY_GPS_CADENCE_PHASE_ALIAS_DIAGNOSTIC_20261028.json)／[生態学上の解釈](docs/RSDS_GPS_SAMPLING_CADENCE_SAME_TAG_ECOLOGY_20261028.md)。Utahの4分類群ではGPS点の**87.1〜95.6%が奇数UTC時**に偏り、元の「1時間binから最大1件」の系列が実際の1時間ごとの受信を意味しないことが判明した。Wyomingのミュールジカ・ビッグホーンはUTC偶奇がほぼ均等だが、偶数時・奇数時の元系列との差でq（観測NIGHT−DAYのGPS速度差）の**記述的符号が双方の種で反転**した。両位相の採用個体・日付が同じとは限らず、同一個体の行動逆転ではない。野生シチメンチョウは2時間側でq適格日が0、ダイサギは元ファイル容量上限HOLD。現在は3系列すべてで同じ元タグ・日付に限定する追加確認へ進める。**旧ERA5版HOLDと48元研究の日射負方向外部非再現は不変。**
 
+**厳密な同じ標識個体・年・日付の検証も完了（2026-10-28）：** [追加原GPS 3系列検証の第一次結果](research/RSDS_GPS_THREE_PHASE_EXACT_TAG_DATE_V2_FIRST_RESULT_20261028.json)／[固定SHA実証整理](research/RSDS_GPS_TRIPLE_DATE_CADENCE_ECOLOGICAL_INTERPRETATION_V2_20261028.json)／[科学的解釈](docs/RSDS_GPS_EXACT_THREE_PHASE_TAG_DATES_ECOLOGY_20261028.md)。8原study×12 study/taxon行を保持し、元系列・偶数UTC時・奇数UTC時の**3系列全てに共通する元タグ・元暦年・元天文日**を使って確認した結果、**8群で元タグ5個体以上の完全対応が成立**。Wyomingミュールジカ**113元タグでq偶数−奇数 +0.005393 [0.003574,0.007132]**、ビッグホーン**41元タグで+0.013339 [0.011617,0.014897]**と、記述的元個体bootstrap95%区間がゼロを含まなかった。**異なる個体／日付を採用したことだけでは説明できないGPS測位時刻・移動区間の系統的差**である。ただし偶数時と奇数時で実際に観測したGPS移動区間は異なるため、動物の行動や太陽コンパスがUTC偶奇で変化した証明ではない。元study単位は2件（Wyoming+Utahの陽性3群）に過ぎない。古いERA5 HOLDや日射効果の外部負方向非再現は不変。
+
 ## 現在の中心質問：時間利用と方向利用の組織化
 
 > **太陽・季節・環境の変化に対して、生物の時間利用と移動方向はどのように組織化され、その違いは種や地域を越えて一般化するのか？**
