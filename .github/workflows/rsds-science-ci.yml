@@ -235,6 +235,37 @@ jobs:
           assert fresh['historical_external_negative_radiation_nonreplication_UNCHANGED'] == 'NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
           print('36 contexts + 18 source tag means numerically reproduced; old physical version and nonreplication safeguarded')
           PY
+      - name: Guard original eight-study UTC fix-clock parity alias and qualified-tag q sensitivity
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_eight_study_gps_cadence_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_eight_study_gps_cadence_aggregate_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_gps_utc_phase_alias_v1.py' -v
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          from scripts.summarize_rsds_gps_utc_phase_alias_v1 import analyze
+          sources={
+             'research/RSDS_EIGHT_STUDY_GPS_CADENCE_MATCHED_DAY_FIRST_RESULT_20261028.json':
+                '8b93fe361eccbdc13647e465ddfaa24ad10c7c98',
+             'research/RSDS_EIGHT_STUDY_GPS_CADENCE_PHASE_ALIAS_DIAGNOSTIC_20261028.json':
+                '670199d6a40f3271f2fffa896c1e9971c66a737c',
+          }
+          for p,expected in sources.items():
+              raw=Path(p).read_bytes()
+              sha=hashlib.sha1(('blob '+str(len(raw))+'\0').encode()+raw).hexdigest()
+              assert sha==expected, f'Original UTC GPS source result has changed {p}'
+          data=json.loads(Path(list(sources)[1]).read_text(encoding='utf-8'))
+          assert data == analyze()
+          assert data['original_field_studies']==8 and data['source_taxon_rows']==12
+          assert data['source_cohorts_with_native_UTC_phase_fix_schedule_imbalance_below_20pct']==4
+          assert data['source_cohorts_with_near_balanced_UTC_phase_fix_schedule']==7
+          assert len(data['native_taxa_with_opposite_nominal_signed_q_cadence_effects_between_even_odd_UTC_phases'])==2
+          assert data['historical_12_ERA5_source_version_HOLDS_UNCHANGED'] is True
+          assert data['historic_48_source_sunlight_direction_external_NONREPLICATED_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          print('UTC parity alias 4/11 original cohorts; opposite phase-specific q biases in both Wyoming taxa; all original study HOLDS unchanged')
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
