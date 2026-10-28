@@ -266,6 +266,40 @@ jobs:
           assert data['historic_48_source_sunlight_direction_external_NONREPLICATED_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
           print('UTC parity alias 4/11 original cohorts; opposite phase-specific q biases in both Wyoming taxa; all original study HOLDS unchanged')
           PY
+      - name: Preserve 8 original GPS studies triple exact matched tag dates and observed UTC acquisition phase bias
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_gps_three_phase_exact_dates_v2.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_three_phase_exact_original_aggregate_v2.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_triple_exact_date_empirical_synthesis_v2.py' -v
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          from scripts.summarize_rsds_three_phase_original_ecology_v2 import run
+          known={
+            'research/RSDS_GPS_THREE_PHASE_EXACT_TAG_DATE_V2_FIRST_RESULT_20261028.json':
+              'da679f8ca8d973de7da55463e5643037df6a0579',
+            'research/RSDS_GPS_TRIPLE_DATE_CADENCE_ECOLOGICAL_INTERPRETATION_V2_20261028.json':
+              '2a608374131e7a2271fd8418f239bb37446d54ba',
+          }
+          for p,expect in known.items():
+              raw=Path(p).read_bytes()
+              sha=hashlib.sha1(('blob '+str(len(raw))+'\0').encode()+raw).hexdigest()
+              assert sha==expect, f'Original tagged animal GPS three UTC phase result changed: {p}'
+          first=json.loads(Path(list(known)[0]).read_text(encoding='utf-8'))
+          old=json.loads(Path(list(known)[1]).read_text(encoding='utf-8'))
+          assert old==run(), 'First source-derived clock bias interpretation changed'
+          assert first['fixed_original_source_studies']==8
+          assert first['native_source_study_taxon_rows']==12
+          assert old['qualifying_same_tag_original_three_phase_source_taxon_rows']==8
+          assert old['qualified_original_source_taxa_with_positive_even_minus_odd_q']['n']==3
+          assert old['original_Wyoming_two_native_taxa_exact_three_phase_recurrence']['Odocoileus hemionus']['original_triply_matched_tag_count']==113
+          assert old['original_Wyoming_two_native_taxa_exact_three_phase_recurrence']['Ovis canadensis']['original_triply_matched_tag_count']==41
+          assert old['previous_12_ERA5_source_json_version_HOLDS_UNCHANGED']
+          assert old['previous_48_source_signed_sunlight_external_NONREPLICATED_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          print('8 original GPS source DOI and exact same original tag/year/date q UTC phase effects locked with all holds')
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
