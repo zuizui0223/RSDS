@@ -300,6 +300,39 @@ jobs:
           assert old['previous_48_source_signed_sunlight_external_NONREPLICATED_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
           print('8 original GPS source DOI and exact same original tag/year/date q UTC phase effects locked with all holds')
           PY
+      - name: Lock original eight-study temporal q and q~daylength ecological signs on identical animal dates across three GPS clocks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_triple_q_photoperiod_levels_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_triple_ecological_q_invariance_aggregate_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_full_vs_triple_ecological_q_v1.py' -v
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          from scripts.audit_rsds_full_vs_matched_temporal_ecology_v1 import run
+          first={
+              'research/RSDS_TRIPLE_DATE_ECOLOGICAL_Q_DAYLENGTH_INVARIANCE_V1_FIRST_RESULT_20261028.json':
+                  '157af4cacbe4359b07f4cedbed2793f8c49972b3',
+              'research/RSDS_TRIPLE_DATE_VS_ORIGINAL_ECOLOGICAL_TIME_SIGN_AUDIT_20261028.json':
+                  '3142224a80951ccac06b4eb35a91319a187dbc8d'
+          }
+          for name,expected in first.items():
+              raw=Path(name).read_bytes()
+              sha=hashlib.sha1(('blob '+str(len(raw))+'\0').encode()+raw).hexdigest()
+              assert sha==expected, f'Original eight-study source temporal ecology first result changed: {name}'
+          d=json.loads(Path(list(first)[1]).read_text(encoding='utf-8'))
+          assert d==run()
+          assert d['original_field_study_doi_count']==8 and d['source_taxon_rows']==12
+          assert d['full_vs_triple_q_support_sign_count']['SAME_SIGN_SUPPORTED_IN_FULL_AND_ALL_THREE_SCHEDULES_POSITIVE']==3
+          assert d['full_vs_triple_q_support_sign_count']['SAME_SIGN_SUPPORTED_IN_FULL_AND_ALL_THREE_SCHEDULES_NEGATIVE']==2
+          assert d['full_vs_triple_daylength_slope_sign_count']['SAME_SIGN_SUPPORTED_IN_FULL_AND_ALL_THREE_SCHEDULES_POSITIVE']==2
+          assert d['n_distinct_original_field_studies_with_q_sign_supported_in_full_and_all_three_schedules']==5
+          assert d['n_distinct_original_field_studies_with_daylength_sign_supported_in_full_and_all_three_schedules']==2
+          assert d['old_12_ERA5_serialized_raw_SHA_HOLDS_UNCHANGED'] is True
+          assert d['old_48_source_external_signed_radiation_nonreplication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          print('RSDS five source q and two original source q~daylength signed ecology results retained; exact animal-day support and negative climate source unchanged')
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
