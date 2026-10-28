@@ -1,0 +1,749 @@
+{
+  "all_original_source_taxon_phase_records": [
+    {
+      "BOTH_PHASES_SAME_SIGNED_NONZERO_NOMINAL_q_EFFECT": false,
+      "OPPOSITE_SIGNED_NONZERO_NOMINAL_q_EFFECT_ACROSS_PHASE_SPECIFIC_MATCHES": false,
+      "fixes_even_plus_odd_exact_partition": true,
+      "original_q_daily_tags_before_alternate_cadence": 222,
+      "original_study_doi": "10.5441/001/1.711",
+      "phase_effects": [
+        {
+          "daylength_animal_bootstrap95": [
+            -0.0009566564812064541,
+            0.0006935712906694004
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "daylength_slope_twohour_minus_onehour": -0.0001105820174453986,
+          "matched_original_q_animal_count": 6,
+          "matched_q_days": 742,
+          "original_UTC_hour_fix_share": 0.04376474374112781,
+          "original_UTC_hour_selected_fixes": 16864,
+          "phase": "EVEN_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.0008463543381068625,
+            3.156310805484929e-05
+          ],
+          "q_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "q_source_tagged_animals_with_some_q": 107,
+          "q_two_hour_minus_onehour": -0.0003859038109145056,
+          "source_support_original_tag_years": 8
+        },
+        {
+          "daylength_animal_bootstrap95": [
+            -0.0005028581939056474,
+            0.00027869434568543146
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "daylength_slope_twohour_minus_onehour": -0.00010065500132940338,
+          "matched_original_q_animal_count": 212,
+          "matched_q_days": 29202,
+          "original_UTC_hour_fix_share": 0.9562352562588722,
+          "original_UTC_hour_selected_fixes": 368469,
+          "phase": "ODD_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.0005437946164508155,
+            1.1827871133360533e-05
+          ],
+          "q_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "q_source_tagged_animals_with_some_q": 219,
+          "q_two_hour_minus_onehour": -0.0002620570783129922,
+          "source_support_original_tag_years": 277
+        }
+      ],
+      "source_original_UTC_parity_imbalance_abs_difference": 0.9124705125177444,
+      "source_original_fix_schedule_phase_class": "PARITY_ALIASED_ORIGINAL_COLLAR_SCHEDULE",
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+      "taxon": "Antilocapra americana",
+      "total_selected_source_original_hourly_bin_fixes": 385333,
+      "warning": "The two phase effects may use different animal/date intersections; a sign reversal between separately matched parity cohorts is NOT yet an exactly triple-matched original animal/date contrast."
+    },
+    {
+      "BOTH_PHASES_SAME_SIGNED_NONZERO_NOMINAL_q_EFFECT": false,
+      "OPPOSITE_SIGNED_NONZERO_NOMINAL_q_EFFECT_ACROSS_PHASE_SPECIFIC_MATCHES": false,
+      "fixes_even_plus_odd_exact_partition": true,
+      "original_q_daily_tags_before_alternate_cadence": 349,
+      "original_study_doi": "10.5441/001/1.711",
+      "phase_effects": [
+        {
+          "daylength_animal_bootstrap95": [
+            -0.017171882449439225,
+            -0.0013897053342051655
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "NEGATIVE",
+          "daylength_slope_twohour_minus_onehour": -0.008087144682958885,
+          "matched_original_q_animal_count": 26,
+          "matched_q_days": 1769,
+          "original_UTC_hour_fix_share": 0.06360322107854481,
+          "original_UTC_hour_selected_fixes": 37928,
+          "phase": "EVEN_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.0004942900824316826,
+            0.004285991294709911
+          ],
+          "q_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "q_source_tagged_animals_with_some_q": 201,
+          "q_two_hour_minus_onehour": 0.0016840268144198776,
+          "source_support_original_tag_years": 28
+        },
+        {
+          "daylength_animal_bootstrap95": [
+            -0.000509819494402459,
+            0.00010940893878774948
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "daylength_slope_twohour_minus_onehour": -0.0001888447088869989,
+          "matched_original_q_animal_count": 331,
+          "matched_q_days": 42564,
+          "original_UTC_hour_fix_share": 0.9363967789214552,
+          "original_UTC_hour_selected_fixes": 558394,
+          "phase": "ODD_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.0003948047586016938,
+            0.0002704619343733804
+          ],
+          "q_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "q_source_tagged_animals_with_some_q": 346,
+          "q_two_hour_minus_onehour": -5.958053817583181e-05,
+          "source_support_original_tag_years": 473
+        }
+      ],
+      "source_original_UTC_parity_imbalance_abs_difference": 0.8727935578429105,
+      "source_original_fix_schedule_phase_class": "PARITY_ALIASED_ORIGINAL_COLLAR_SCHEDULE",
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+      "taxon": "Cervus elaphus",
+      "total_selected_source_original_hourly_bin_fixes": 596322,
+      "warning": "The two phase effects may use different animal/date intersections; a sign reversal between separately matched parity cohorts is NOT yet an exactly triple-matched original animal/date contrast."
+    },
+    {
+      "BOTH_PHASES_SAME_SIGNED_NONZERO_NOMINAL_q_EFFECT": false,
+      "OPPOSITE_SIGNED_NONZERO_NOMINAL_q_EFFECT_ACROSS_PHASE_SPECIFIC_MATCHES": false,
+      "fixes_even_plus_odd_exact_partition": true,
+      "original_q_daily_tags_before_alternate_cadence": 1763,
+      "original_study_doi": "10.5441/001/1.711",
+      "phase_effects": [
+        {
+          "daylength_animal_bootstrap95": [
+            -0.00601274992032873,
+            0.0019691327980220445
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "daylength_slope_twohour_minus_onehour": -0.0016231577269079029,
+          "matched_original_q_animal_count": 57,
+          "matched_q_days": 7153,
+          "original_UTC_hour_fix_share": 0.04756361011447174,
+          "original_UTC_hour_selected_fixes": 153658,
+          "phase": "EVEN_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.0007987730859149896,
+            0.0018153740092665294
+          ],
+          "q_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "q_source_tagged_animals_with_some_q": 771,
+          "q_two_hour_minus_onehour": 0.0005008179291776081,
+          "source_support_original_tag_years": 66
+        },
+        {
+          "daylength_animal_bootstrap95": [
+            -0.0003297108592846175,
+            -1.548576439531226e-05
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "NEGATIVE",
+          "daylength_slope_twohour_minus_onehour": -0.00016867998195293823,
+          "matched_original_q_animal_count": 1706,
+          "matched_q_days": 240422,
+          "original_UTC_hour_fix_share": 0.9524363898855283,
+          "original_UTC_hour_selected_fixes": 3076921,
+          "phase": "ODD_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.0007818037841792793,
+            -0.0005530722491648852
+          ],
+          "q_nominal_animal_bootstrap_sign": "NEGATIVE",
+          "q_source_tagged_animals_with_some_q": 1748,
+          "q_two_hour_minus_onehour": -0.0006677152357180178,
+          "source_support_original_tag_years": 2241
+        }
+      ],
+      "source_original_UTC_parity_imbalance_abs_difference": 0.9048727797710565,
+      "source_original_fix_schedule_phase_class": "PARITY_ALIASED_ORIGINAL_COLLAR_SCHEDULE",
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+      "taxon": "Odocoileus hemionus",
+      "total_selected_source_original_hourly_bin_fixes": 3230579,
+      "warning": "The two phase effects may use different animal/date intersections; a sign reversal between separately matched parity cohorts is NOT yet an exactly triple-matched original animal/date contrast."
+    },
+    {
+      "BOTH_PHASES_SAME_SIGNED_NONZERO_NOMINAL_q_EFFECT": false,
+      "OPPOSITE_SIGNED_NONZERO_NOMINAL_q_EFFECT_ACROSS_PHASE_SPECIFIC_MATCHES": false,
+      "fixes_even_plus_odd_exact_partition": true,
+      "original_q_daily_tags_before_alternate_cadence": 351,
+      "original_study_doi": "10.5441/001/1.711",
+      "phase_effects": [
+        {
+          "daylength_animal_bootstrap95": [
+            -0.01223258863608171,
+            0.007120994909270163
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "daylength_slope_twohour_minus_onehour": -0.0034050465295782316,
+          "matched_original_q_animal_count": 77,
+          "matched_q_days": 5381,
+          "original_UTC_hour_fix_share": 0.12917907730509579,
+          "original_UTC_hour_selected_fixes": 86566,
+          "phase": "EVEN_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.000575934804952779,
+            0.0036730097174418963
+          ],
+          "q_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "q_source_tagged_animals_with_some_q": 214,
+          "q_two_hour_minus_onehour": 0.0016550728503032367,
+          "source_support_original_tag_years": 93
+        },
+        {
+          "daylength_animal_bootstrap95": [
+            -0.0005843443721834995,
+            0.0017314179880869639
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "daylength_slope_twohour_minus_onehour": 0.0006208508974139636,
+          "matched_original_q_animal_count": 329,
+          "matched_q_days": 39765,
+          "original_UTC_hour_fix_share": 0.8708209226949042,
+          "original_UTC_hour_selected_fixes": 583558,
+          "phase": "ODD_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.0002637374155759976,
+            0.0008304917228242346
+          ],
+          "q_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "q_source_tagged_animals_with_some_q": 344,
+          "q_two_hour_minus_onehour": 0.00028933298273118674,
+          "source_support_original_tag_years": 440
+        }
+      ],
+      "source_original_UTC_parity_imbalance_abs_difference": 0.7416418453898084,
+      "source_original_fix_schedule_phase_class": "PARITY_ALIASED_ORIGINAL_COLLAR_SCHEDULE",
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+      "taxon": "Ovis canadensis",
+      "total_selected_source_original_hourly_bin_fixes": 670124,
+      "warning": "The two phase effects may use different animal/date intersections; a sign reversal between separately matched parity cohorts is NOT yet an exactly triple-matched original animal/date contrast."
+    },
+    {
+      "BOTH_PHASES_SAME_SIGNED_NONZERO_NOMINAL_q_EFFECT": false,
+      "OPPOSITE_SIGNED_NONZERO_NOMINAL_q_EFFECT_ACROSS_PHASE_SPECIFIC_MATCHES": true,
+      "fixes_even_plus_odd_exact_partition": true,
+      "original_q_daily_tags_before_alternate_cadence": 119,
+      "original_study_doi": "10.5441/001/1.703",
+      "phase_effects": [
+        {
+          "daylength_animal_bootstrap95": [
+            -0.0012471310023803009,
+            0.004193966120460491
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "daylength_slope_twohour_minus_onehour": 0.001000047919599304,
+          "matched_original_q_animal_count": 113,
+          "matched_q_days": 14871,
+          "original_UTC_hour_fix_share": 0.4623149801737446,
+          "original_UTC_hour_selected_fixes": 183282,
+          "phase": "EVEN_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            0.0019085540871690099,
+            0.004101598991216417
+          ],
+          "q_nominal_animal_bootstrap_sign": "POSITIVE",
+          "q_source_tagged_animals_with_some_q": 114,
+          "q_two_hour_minus_onehour": 0.0030485552890948775,
+          "source_support_original_tag_years": 160
+        },
+        {
+          "daylength_animal_bootstrap95": [
+            0.00041973668264588224,
+            0.004420967509461196
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "POSITIVE",
+          "daylength_slope_twohour_minus_onehour": 0.0021647790342916376,
+          "matched_original_q_animal_count": 119,
+          "matched_q_days": 16956,
+          "original_UTC_hour_fix_share": 0.5376850198262554,
+          "original_UTC_hour_selected_fixes": 213162,
+          "phase": "ODD_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.0033094915568936366,
+            -0.0011124649140752338
+          ],
+          "q_nominal_animal_bootstrap_sign": "NEGATIVE",
+          "q_source_tagged_animals_with_some_q": 119,
+          "q_two_hour_minus_onehour": -0.0021968280333306903,
+          "source_support_original_tag_years": 166
+        }
+      ],
+      "source_original_UTC_parity_imbalance_abs_difference": 0.07537003965251077,
+      "source_original_fix_schedule_phase_class": "NEAR_BALANCED_UTC_FIX_PARITY",
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+      "taxon": "Odocoileus hemionus",
+      "total_selected_source_original_hourly_bin_fixes": 396444,
+      "warning": "The two phase effects may use different animal/date intersections; a sign reversal between separately matched parity cohorts is NOT yet an exactly triple-matched original animal/date contrast."
+    },
+    {
+      "BOTH_PHASES_SAME_SIGNED_NONZERO_NOMINAL_q_EFFECT": false,
+      "OPPOSITE_SIGNED_NONZERO_NOMINAL_q_EFFECT_ACROSS_PHASE_SPECIFIC_MATCHES": true,
+      "fixes_even_plus_odd_exact_partition": true,
+      "original_q_daily_tags_before_alternate_cadence": 41,
+      "original_study_doi": "10.5441/001/1.703",
+      "phase_effects": [
+        {
+          "daylength_animal_bootstrap95": [
+            -0.0016073392782284806,
+            0.0015074384566753133
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "daylength_slope_twohour_minus_onehour": -0.00010390258571825535,
+          "matched_original_q_animal_count": 41,
+          "matched_q_days": 6801,
+          "original_UTC_hour_fix_share": 0.4990210781774057,
+          "original_UTC_hour_selected_fixes": 91503,
+          "phase": "EVEN_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            0.003665953539267458,
+            0.006442015217595543
+          ],
+          "q_nominal_animal_bootstrap_sign": "POSITIVE",
+          "q_source_tagged_animals_with_some_q": 41,
+          "q_two_hour_minus_onehour": 0.0050999637668814385,
+          "source_support_original_tag_years": 79
+        },
+        {
+          "daylength_animal_bootstrap95": [
+            -0.0017495520677876552,
+            0.0009227552515230787
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "daylength_slope_twohour_minus_onehour": -0.0004109784673679818,
+          "matched_original_q_animal_count": 41,
+          "matched_q_days": 7405,
+          "original_UTC_hour_fix_share": 0.5009789218225943,
+          "original_UTC_hour_selected_fixes": 91862,
+          "phase": "ODD_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.00884310907308373,
+            -0.006784394150603405
+          ],
+          "q_nominal_animal_bootstrap_sign": "NEGATIVE",
+          "q_source_tagged_animals_with_some_q": 41,
+          "q_two_hour_minus_onehour": -0.007784749129814652,
+          "source_support_original_tag_years": 79
+        }
+      ],
+      "source_original_UTC_parity_imbalance_abs_difference": 0.001957843645188584,
+      "source_original_fix_schedule_phase_class": "NEAR_BALANCED_UTC_FIX_PARITY",
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+      "taxon": "Ovis canadensis",
+      "total_selected_source_original_hourly_bin_fixes": 183365,
+      "warning": "The two phase effects may use different animal/date intersections; a sign reversal between separately matched parity cohorts is NOT yet an exactly triple-matched original animal/date contrast."
+    },
+    {
+      "BOTH_PHASES_SAME_SIGNED_NONZERO_NOMINAL_q_EFFECT": false,
+      "OPPOSITE_SIGNED_NONZERO_NOMINAL_q_EFFECT_ACROSS_PHASE_SPECIFIC_MATCHES": false,
+      "fixes_even_plus_odd_exact_partition": true,
+      "original_q_daily_tags_before_alternate_cadence": 215,
+      "original_study_doi": "10.5441/001/1.671",
+      "phase_effects": [
+        {
+          "daylength_animal_bootstrap95": null,
+          "daylength_nominal_animal_bootstrap_sign": "UNAVAILABLE",
+          "daylength_slope_twohour_minus_onehour": null,
+          "matched_original_q_animal_count": 0,
+          "matched_q_days": 0,
+          "original_UTC_hour_fix_share": 0.48455712456948996,
+          "original_UTC_hour_selected_fixes": 366786,
+          "phase": "EVEN_UTC_HOURS",
+          "q_animal_bootstrap95": null,
+          "q_nominal_animal_bootstrap_sign": "UNAVAILABLE",
+          "q_source_tagged_animals_with_some_q": 0,
+          "q_two_hour_minus_onehour": null,
+          "source_support_original_tag_years": 0
+        },
+        {
+          "daylength_animal_bootstrap95": null,
+          "daylength_nominal_animal_bootstrap_sign": "UNAVAILABLE",
+          "daylength_slope_twohour_minus_onehour": null,
+          "matched_original_q_animal_count": 0,
+          "matched_q_days": 0,
+          "original_UTC_hour_fix_share": 0.51544287543051,
+          "original_UTC_hour_selected_fixes": 390165,
+          "phase": "ODD_UTC_HOURS",
+          "q_animal_bootstrap95": null,
+          "q_nominal_animal_bootstrap_sign": "UNAVAILABLE",
+          "q_source_tagged_animals_with_some_q": 0,
+          "q_two_hour_minus_onehour": null,
+          "source_support_original_tag_years": 0
+        }
+      ],
+      "source_original_UTC_parity_imbalance_abs_difference": 0.030885750861020078,
+      "source_original_fix_schedule_phase_class": "NEAR_BALANCED_UTC_FIX_PARITY",
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+      "taxon": "Meleagris gallopavo",
+      "total_selected_source_original_hourly_bin_fixes": 756951,
+      "warning": "The two phase effects may use different animal/date intersections; a sign reversal between separately matched parity cohorts is NOT yet an exactly triple-matched original animal/date contrast."
+    },
+    {
+      "BOTH_PHASES_SAME_SIGNED_NONZERO_NOMINAL_q_EFFECT": true,
+      "OPPOSITE_SIGNED_NONZERO_NOMINAL_q_EFFECT_ACROSS_PHASE_SPECIFIC_MATCHES": false,
+      "fixes_even_plus_odd_exact_partition": true,
+      "original_q_daily_tags_before_alternate_cadence": 37,
+      "original_study_doi": "10.5441/001/1.323",
+      "phase_effects": [
+        {
+          "daylength_animal_bootstrap95": [
+            -0.00461236337389301,
+            0.0064336335388714095
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "daylength_slope_twohour_minus_onehour": 0.0006449437460359637,
+          "matched_original_q_animal_count": 32,
+          "matched_q_days": 2205,
+          "original_UTC_hour_fix_share": 0.5005814904326652,
+          "original_UTC_hour_selected_fixes": 55095,
+          "phase": "EVEN_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.01733443109259821,
+            -0.0043819969703302415
+          ],
+          "q_nominal_animal_bootstrap_sign": "NEGATIVE",
+          "q_source_tagged_animals_with_some_q": 37,
+          "q_two_hour_minus_onehour": -0.010791251728732671,
+          "source_support_original_tag_years": 43
+        },
+        {
+          "daylength_animal_bootstrap95": [
+            -0.023278872851260787,
+            0.009451608234042917
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "daylength_slope_twohour_minus_onehour": -0.006443462776785249,
+          "matched_original_q_animal_count": 30,
+          "matched_q_days": 1692,
+          "original_UTC_hour_fix_share": 0.4994185095673348,
+          "original_UTC_hour_selected_fixes": 54967,
+          "phase": "ODD_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.01724074477806563,
+            -0.0026466203335462173
+          ],
+          "q_nominal_animal_bootstrap_sign": "NEGATIVE",
+          "q_source_tagged_animals_with_some_q": 36,
+          "q_two_hour_minus_onehour": -0.009934794693210309,
+          "source_support_original_tag_years": 40
+        }
+      ],
+      "source_original_UTC_parity_imbalance_abs_difference": 0.0011629808653303986,
+      "source_original_fix_schedule_phase_class": "NEAR_BALANCED_UTC_FIX_PARITY",
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+      "taxon": "Lynx rufus",
+      "total_selected_source_original_hourly_bin_fixes": 110062,
+      "warning": "The two phase effects may use different animal/date intersections; a sign reversal between separately matched parity cohorts is NOT yet an exactly triple-matched original animal/date contrast."
+    },
+    {
+      "BOTH_PHASES_SAME_SIGNED_NONZERO_NOMINAL_q_EFFECT": true,
+      "OPPOSITE_SIGNED_NONZERO_NOMINAL_q_EFFECT_ACROSS_PHASE_SPECIFIC_MATCHES": false,
+      "fixes_even_plus_odd_exact_partition": true,
+      "original_q_daily_tags_before_alternate_cadence": 34,
+      "original_study_doi": "10.5441/001/1.304",
+      "phase_effects": [
+        {
+          "daylength_animal_bootstrap95": [
+            -0.026885924526912824,
+            0.010105320472675367
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "daylength_slope_twohour_minus_onehour": -0.007423078862077221,
+          "matched_original_q_animal_count": 24,
+          "matched_q_days": 737,
+          "original_UTC_hour_fix_share": 0.49998519352068466,
+          "original_UTC_hour_selected_fixes": 16884,
+          "phase": "EVEN_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.07196440248496888,
+            -0.035094539378983755
+          ],
+          "q_nominal_animal_bootstrap_sign": "NEGATIVE",
+          "q_source_tagged_animals_with_some_q": 33,
+          "q_two_hour_minus_onehour": -0.05361532852792021,
+          "source_support_original_tag_years": 24
+        },
+        {
+          "daylength_animal_bootstrap95": [
+            -0.01884014581337518,
+            0.025371972382419106
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "daylength_slope_twohour_minus_onehour": 0.0034508995277040947,
+          "matched_original_q_animal_count": 10,
+          "matched_q_days": 254,
+          "original_UTC_hour_fix_share": 0.5000148064793154,
+          "original_UTC_hour_selected_fixes": 16885,
+          "phase": "ODD_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.05763109826006865,
+            -0.008271443417135144
+          ],
+          "q_nominal_animal_bootstrap_sign": "NEGATIVE",
+          "q_source_tagged_animals_with_some_q": 20,
+          "q_two_hour_minus_onehour": -0.03241317195035006,
+          "source_support_original_tag_years": 10
+        }
+      ],
+      "source_original_UTC_parity_imbalance_abs_difference": 2.9612958630742536e-05,
+      "source_original_fix_schedule_phase_class": "NEAR_BALANCED_UTC_FIX_PARITY",
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+      "taxon": "Vulpes vulpes",
+      "total_selected_source_original_hourly_bin_fixes": 33769,
+      "warning": "The two phase effects may use different animal/date intersections; a sign reversal between separately matched parity cohorts is NOT yet an exactly triple-matched original animal/date contrast."
+    },
+    {
+      "BOTH_PHASES_SAME_SIGNED_NONZERO_NOMINAL_q_EFFECT": false,
+      "OPPOSITE_SIGNED_NONZERO_NOMINAL_q_EFFECT_ACROSS_PHASE_SPECIFIC_MATCHES": false,
+      "fixes_even_plus_odd_exact_partition": true,
+      "original_q_daily_tags_before_alternate_cadence": 9,
+      "original_study_doi": "10.5441/001/1.644",
+      "phase_effects": [
+        {
+          "daylength_animal_bootstrap95": [
+            -0.060560016556110034,
+            -0.0073021733787980506
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "NEGATIVE",
+          "daylength_slope_twohour_minus_onehour": -0.03539641798481598,
+          "matched_original_q_animal_count": 7,
+          "matched_q_days": 154,
+          "original_UTC_hour_fix_share": 0.560465404134175,
+          "original_UTC_hour_selected_fixes": 9056,
+          "phase": "EVEN_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.02217599986555088,
+            -0.0027729640396071545
+          ],
+          "q_nominal_animal_bootstrap_sign": "NEGATIVE",
+          "q_source_tagged_animals_with_some_q": 9,
+          "q_two_hour_minus_onehour": -0.010419201416646142,
+          "source_support_original_tag_years": 7
+        },
+        {
+          "daylength_animal_bootstrap95": null,
+          "daylength_nominal_animal_bootstrap_sign": "UNAVAILABLE",
+          "daylength_slope_twohour_minus_onehour": null,
+          "matched_original_q_animal_count": 1,
+          "matched_q_days": 10,
+          "original_UTC_hour_fix_share": 0.439534595865825,
+          "original_UTC_hour_selected_fixes": 7102,
+          "phase": "ODD_UTC_HOURS",
+          "q_animal_bootstrap95": null,
+          "q_nominal_animal_bootstrap_sign": "UNAVAILABLE",
+          "q_source_tagged_animals_with_some_q": 8,
+          "q_two_hour_minus_onehour": null,
+          "source_support_original_tag_years": 1
+        }
+      ],
+      "source_original_UTC_parity_imbalance_abs_difference": 0.12093080826835001,
+      "source_original_fix_schedule_phase_class": "NEAR_BALANCED_UTC_FIX_PARITY",
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+      "taxon": "Prionailurus viverrinus",
+      "total_selected_source_original_hourly_bin_fixes": 16158,
+      "warning": "The two phase effects may use different animal/date intersections; a sign reversal between separately matched parity cohorts is NOT yet an exactly triple-matched original animal/date contrast."
+    },
+    {
+      "original_study_doi": "10.5441/001/1.641",
+      "source_original_fix_schedule_phase_class": "UNAVAILABLE",
+      "source_status": "PREDECLARED_FILE_METADATA_HOLD",
+      "supported_q_effects": null,
+      "taxon": "Ardea alba"
+    },
+    {
+      "BOTH_PHASES_SAME_SIGNED_NONZERO_NOMINAL_q_EFFECT": false,
+      "OPPOSITE_SIGNED_NONZERO_NOMINAL_q_EFFECT_ACROSS_PHASE_SPECIFIC_MATCHES": false,
+      "fixes_even_plus_odd_exact_partition": true,
+      "original_q_daily_tags_before_alternate_cadence": 44,
+      "original_study_doi": "10.5441/001/1.740",
+      "phase_effects": [
+        {
+          "daylength_animal_bootstrap95": [
+            -0.004132838192096868,
+            0.0014450436897531624
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "daylength_slope_twohour_minus_onehour": -0.0011428331913146265,
+          "matched_original_q_animal_count": 42,
+          "matched_q_days": 2383,
+          "original_UTC_hour_fix_share": 0.4994777522456653,
+          "original_UTC_hour_selected_fixes": 45429,
+          "phase": "EVEN_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            -0.0010246811937711033,
+            0.0013107664621405414
+          ],
+          "q_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "q_source_tagged_animals_with_some_q": 43,
+          "q_two_hour_minus_onehour": 0.000149292192739821,
+          "source_support_original_tag_years": 52
+        },
+        {
+          "daylength_animal_bootstrap95": [
+            -0.0048841734319405,
+            0.0041981614665044225
+          ],
+          "daylength_nominal_animal_bootstrap_sign": "INCLUDES_ZERO",
+          "daylength_slope_twohour_minus_onehour": -0.0006518687822896096,
+          "matched_original_q_animal_count": 43,
+          "matched_q_days": 2195,
+          "original_UTC_hour_fix_share": 0.5005222477543346,
+          "original_UTC_hour_selected_fixes": 45524,
+          "phase": "ODD_UTC_HOURS",
+          "q_animal_bootstrap95": [
+            0.0007912571303342283,
+            0.0034404734214118294
+          ],
+          "q_nominal_animal_bootstrap_sign": "POSITIVE",
+          "q_source_tagged_animals_with_some_q": 43,
+          "q_two_hour_minus_onehour": 0.0019935470671763058,
+          "source_support_original_tag_years": 45
+        }
+      ],
+      "source_original_UTC_parity_imbalance_abs_difference": 0.0010444955086693075,
+      "source_original_fix_schedule_phase_class": "NEAR_BALANCED_UTC_FIX_PARITY",
+      "source_status": "SOURCE_CADENCE_SENSITIVITY_COMPLETED",
+      "taxon": "Phascolarctos cinereus",
+      "total_selected_source_original_hourly_bin_fixes": 90953,
+      "warning": "The two phase effects may use different animal/date intersections; a sign reversal between separately matched parity cohorts is NOT yet an exactly triple-matched original animal/date contrast."
+    }
+  ],
+  "claim_ceiling": [
+    "Observational UTC hour parity labels are not two experimental movement treatments or measured solar clock response.",
+    "The comparator '1h' refers to at most one source fix per UTC-hour bin; original accepted GPS steps could span 0.5 to 2.0h, not necessarily exactly one hour.",
+    "If only 4-13% of original fix bins occur in the EVEN phase, EVEN restriction does NOT represent retaining half the original sampling opportunities.",
+    "Source q proxy uses GPS displacement chord speed and can change with interval length, trip tortuosity, daypart boundary, missingness and actual original collar duty cycle.",
+    "Individual calendar years and dates overlap between old 1h and EACH phase separately, NOT necessarily between even and odd phase results. Opposite effect signs cannot be interpreted as paired same-day phase reversal without triple intersection.",
+    "Original 12 source-taxon units include four Utah and two Wyoming same-study taxa; count original study DOI before global scaling.",
+    "The source HOLD and all source-conditioned nominal animal CIs, including unresolved values, remain unchanged. Not a climate mediation, direct animal solar response, true activity time, or population representative inference."
+  ],
+  "date": "2026-10-28",
+  "historic_48_source_sunlight_direction_external_NONREPLICATED_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "historical_12_ERA5_source_version_HOLDS_UNCHANGED": true,
+  "main_interpretation": "The original source one-fix-per-UTC-hour selection is NOT a guaranteed one-hour GPS fix collection schedule. Four Utah source×taxon cohorts have overwhelmingly odd UTC hour bins. Both Wyoming ungulates show opposite signed nominal parity-specific measurement effects, but calendar-day/animal intersections differ between phases, so exact triple matched support is required before attributing a difference to UTC phase alone.",
+  "native_taxa_with_opposite_nominal_signed_q_cadence_effects_between_even_odd_UTC_phases": [
+    {
+      "study_doi": "10.5441/001/1.703",
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "study_doi": "10.5441/001/1.703",
+      "taxon": "Ovis canadensis"
+    }
+  ],
+  "native_taxa_with_same_nominal_nonzero_q_cadence_effects_between_even_odd": [
+    {
+      "common_source_signed_q_bias": "NEGATIVE",
+      "study_doi": "10.5441/001/1.323",
+      "taxon": "Lynx rufus"
+    },
+    {
+      "common_source_signed_q_bias": "NEGATIVE",
+      "study_doi": "10.5441/001/1.304",
+      "taxon": "Vulpes vulpes"
+    }
+  ],
+  "original_field_studies": 8,
+  "original_source_group_first_result_git_blob_SHA": "8b93fe361eccbdc13647e465ddfaa24ad10c7c98",
+  "source_cohorts_metadata_HOLD": 1,
+  "source_cohorts_with_native_UTC_phase_fix_schedule_imbalance_below_20pct": 4,
+  "source_cohorts_with_near_balanced_UTC_phase_fix_schedule": 7,
+  "source_original_study_equal_phase_q_bias": {
+    "EVEN_UTC_HOURS": [
+      {
+        "native_taxa_with_original_paired_q_effect": 1,
+        "native_taxon_study_mean_q_measurement_bias": -0.05361532852792021,
+        "original_study_doi": "10.5441/001/1.304"
+      },
+      {
+        "native_taxa_with_original_paired_q_effect": 1,
+        "native_taxon_study_mean_q_measurement_bias": -0.010791251728732671,
+        "original_study_doi": "10.5441/001/1.323"
+      },
+      {
+        "native_taxa_with_original_paired_q_effect": 0,
+        "native_taxon_study_mean_q_measurement_bias": null,
+        "original_study_doi": "10.5441/001/1.641"
+      },
+      {
+        "native_taxa_with_original_paired_q_effect": 1,
+        "native_taxon_study_mean_q_measurement_bias": -0.010419201416646142,
+        "original_study_doi": "10.5441/001/1.644"
+      },
+      {
+        "native_taxa_with_original_paired_q_effect": 0,
+        "native_taxon_study_mean_q_measurement_bias": null,
+        "original_study_doi": "10.5441/001/1.671"
+      },
+      {
+        "native_taxa_with_original_paired_q_effect": 2,
+        "native_taxon_study_mean_q_measurement_bias": 0.004074259527988158,
+        "original_study_doi": "10.5441/001/1.703"
+      },
+      {
+        "native_taxa_with_original_paired_q_effect": 4,
+        "native_taxon_study_mean_q_measurement_bias": 0.0008635034457465542,
+        "original_study_doi": "10.5441/001/1.711"
+      },
+      {
+        "native_taxa_with_original_paired_q_effect": 1,
+        "native_taxon_study_mean_q_measurement_bias": 0.000149292192739821,
+        "original_study_doi": "10.5441/001/1.740"
+      }
+    ],
+    "ODD_UTC_HOURS": [
+      {
+        "native_taxa_with_original_paired_q_effect": 1,
+        "native_taxon_study_mean_q_measurement_bias": -0.03241317195035006,
+        "original_study_doi": "10.5441/001/1.304"
+      },
+      {
+        "native_taxa_with_original_paired_q_effect": 1,
+        "native_taxon_study_mean_q_measurement_bias": -0.009934794693210309,
+        "original_study_doi": "10.5441/001/1.323"
+      },
+      {
+        "native_taxa_with_original_paired_q_effect": 0,
+        "native_taxon_study_mean_q_measurement_bias": null,
+        "original_study_doi": "10.5441/001/1.641"
+      },
+      {
+        "native_taxa_with_original_paired_q_effect": 0,
+        "native_taxon_study_mean_q_measurement_bias": null,
+        "original_study_doi": "10.5441/001/1.644"
+      },
+      {
+        "native_taxa_with_original_paired_q_effect": 0,
+        "native_taxon_study_mean_q_measurement_bias": null,
+        "original_study_doi": "10.5441/001/1.671"
+      },
+      {
+        "native_taxa_with_original_paired_q_effect": 2,
+        "native_taxon_study_mean_q_measurement_bias": -0.0049907885815726714,
+        "original_study_doi": "10.5441/001/1.703"
+      },
+      {
+        "native_taxa_with_original_paired_q_effect": 4,
+        "native_taxon_study_mean_q_measurement_bias": -0.00017500496736891374,
+        "original_study_doi": "10.5441/001/1.711"
+      },
+      {
+        "native_taxa_with_original_paired_q_effect": 1,
+        "native_taxon_study_mean_q_measurement_bias": 0.0019935470671763058,
+        "original_study_doi": "10.5441/001/1.740"
+      }
+    ]
+  },
+  "source_taxon_rows": 12,
+  "stage": "POST_FIRST_PARITY_OUTCOME_OBSERVATION_PROCESS_AUDIT",
+  "version": "RSDS_ORIGINAL_GPS_UTC_PARITY_ALIASED_CADENCE_DIAGNOSTIC_V1"
+}

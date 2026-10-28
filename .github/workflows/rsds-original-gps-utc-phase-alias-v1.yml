@@ -1,0 +1,49 @@
+name: RSDS original GPS UTC phase alias vs native observation cadence audit v1
+on:
+  push:
+    branches:
+      - science/gps-cadence-matched-day-sensitivity-v1
+    paths:
+      - 'scripts/summarize_rsds_gps_utc_phase_alias_v1.py'
+      - 'tests/test_rsds_gps_utc_phase_alias_v1.py'
+      - '.github/workflows/rsds-original-gps-utc-phase-alias-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  source_original_phase_alias:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/gps-cadence-matched-day-sensitivity-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Confirm eight source original and 12 native taxa exact first result, hold and phase source counts
+        run: python -m unittest discover -s tests -p 'test_rsds_gps_utc_phase_alias_v1.py' -v
+      - name: Compute q/clock biological observational parity alias result only from source-locked first result
+        run: |
+          python -m scripts.summarize_rsds_gps_utc_phase_alias_v1 --out research/RSDS_EIGHT_STUDY_GPS_CADENCE_PHASE_ALIAS_DIAGNOSTIC_20261028.json
+          python -m json.tool research/RSDS_EIGHT_STUDY_GPS_CADENCE_PHASE_ALIAS_DIAGNOSTIC_20261028.json > /dev/null
+      - name: Preserve original study source-level phase selection issue
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-GPS-UTC-clock-phase-alias-biological-observation-quality-v1
+          path: research/RSDS_EIGHT_STUDY_GPS_CADENCE_PHASE_ALIAS_DIAGNOSTIC_20261028.json
+          if-no-files-found: error
+      - name: Save first fixed original source-level parity alias diagnosis (no animal GPS re-fetch)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_EIGHT_STUDY_GPS_CADENCE_PHASE_ALIAS_DIAGNOSTIC_20261028.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: original study UTC fix-clock phase alias and opposite q measurement-phase effects"
+            git fetch origin science/gps-cadence-matched-day-sensitivity-v1
+            git rebase origin/science/gps-cadence-matched-day-sensitivity-v1
+            git push origin HEAD:science/gps-cadence-matched-day-sensitivity-v1
+          fi
