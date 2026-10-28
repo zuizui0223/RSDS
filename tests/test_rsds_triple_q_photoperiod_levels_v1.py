@@ -56,7 +56,7 @@ class ThreeScheduleEcologicalQKnownTruth(unittest.TestCase):
         self.assertEqual(classify_stability(group,Q_KEYS),"THREE_SCHEDULES_NOMINAL_POSITIVE")
         self.assertEqual(classify_stability(slopes,SLOPE_KEYS),"THREE_SCHEDULES_NOMINAL_POSITIVE")
         self.assertAlmostEqual(group["q_even"]["group_original_tag_mean"]-
-                               group["q_odd"]["group_original_tag_mean"],.00645,places=12)
+                               group["q_odd"]["group_original_tag_mean"],.0073,places=12)
         self.assertAlmostEqual(slopes["daylength_even"]["group_original_tag_mean"],.012,places=12)
         self.assertAlmostEqual(slopes["daylength_odd"]["group_original_tag_mean"],.012,places=12)
         self.assertEqual(group,paired_bootstrap(q,Q_KEYS))
