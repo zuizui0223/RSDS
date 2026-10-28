@@ -12,6 +12,10 @@
 
 **元GPSの科学的係数が再計算可能になった：** Utah/Wyomingの全6分類群、元の12環境コンテキスト×3軸（昼夜GPS速度差q、太陽相対方位cosとsinへの短波放射残差の関連）を、[新たに正規化・固定したERA5物理数値版](research/RSDS_ERA5_ORIGINAL_SOURCES_CANONICAL_FIRST_RESULT_20261028.json)で再解析。**以前保存した36/36の条件付き係数と最大絶対差2.1×10⁻¹⁷以内、6群×3軸の18/18群平均も最大差1.4×10⁻¹⁷以内で再現。** [数値比較JSON](research/RSDS_CANONICAL_ERA5_V2_OLD_V0_EFFECT_REPLAY_AND_TAG_PAIRS_20261028.json)／[新結果JSON](research/RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2_FIRST_RESULT_20261028.json)／[解釈](docs/RSDS_CANONICAL_ERA5_SAME_TAG_ECOLOGY_V2_20261028.md)。同じ元タグの2コンテキストで4/6群が比較可能となり、UtahワピチとWyomingミュールジカのq係数差、Wyomingビッグホーンの太陽直交sin係数差に未補正の正の区間がある。ただし元GPS観測支持順位2−順位1であって**高日射・低日射の因果差ではない**。**旧ERA5の時別物理数値が保存されていないこと・旧12生JSON SHAのHOLD・48元研究の負方向外部非再現判定はそのまま**。同じ2公表研究の事後再解析であり、新しい独立原調査での生物学的再現と数えない。
 
+## GPS観測時刻の偏り：8原調査からの新結果（2026-10-28）
+
+**元原GPSを検証した8研究×12分類群の1時間bin・UTC偶数/奇数2時間系列の比較が成功。** [全study結果](research/RSDS_EIGHT_STUDY_GPS_CADENCE_MATCHED_DAY_FIRST_RESULT_20261028.json)／[UTC時刻偏りの固定診断](research/RSDS_EIGHT_STUDY_GPS_CADENCE_PHASE_ALIAS_DIAGNOSTIC_20261028.json)／[生態学上の解釈](docs/RSDS_GPS_SAMPLING_CADENCE_SAME_TAG_ECOLOGY_20261028.md)。Utahの4分類群ではGPS点の**87.1〜95.6%が奇数UTC時**に偏り、元の「1時間binから最大1件」の系列が実際の1時間ごとの受信を意味しないことが判明した。Wyomingのミュールジカ・ビッグホーンはUTC偶奇がほぼ均等だが、偶数時・奇数時の元系列との差でq（観測NIGHT−DAYのGPS速度差）の**記述的符号が双方の種で反転**した。両位相の採用個体・日付が同じとは限らず、同一個体の行動逆転ではない。野生シチメンチョウは2時間側でq適格日が0、ダイサギは元ファイル容量上限HOLD。現在は3系列すべてで同じ元タグ・日付に限定する追加確認へ進める。**旧ERA5版HOLDと48元研究の日射負方向外部非再現は不変。**
+
 ## 現在の中心質問：時間利用と方向利用の組織化
 
 > **太陽・季節・環境の変化に対して、生物の時間利用と移動方向はどのように組織化され、その違いは種や地域を越えて一般化するのか？**
