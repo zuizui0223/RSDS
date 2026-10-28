@@ -1,0 +1,43 @@
+{
+  "version": "RSDS_SAME_TAG_TRIPLE_DATE_ECOLOGICAL_Q_AND_DAYLENGTH_INVARIANCE_V1",
+  "freeze_date": "2026-10-28",
+  "stage": "POST_EXPLORATORY_PARITY_DIAGNOSIS_MATCHED_ORIGINAL_TAG_DATE_ECOLOGICAL_ESTIMAND",
+  "center_question": "What signed night−day GPS displacement q and within-tag-year q~astronomical-daylength relationships remain under three different observation schedules when we compare exactly the SAME original tagged animals and solar dates?",
+  "scope": "All 8 original Movebank source study DOIs, 12 native taxon×source cohorts. Preserve old Great Egret >200MB original-file HOLD and Turkey/fishing cat no-triple-tag support. No replacement.",
+  "pinned_prior_source_group_results": [
+    {
+      "path": "research/RSDS_GPS_THREE_PHASE_EXACT_TAG_DATE_V2_FIRST_RESULT_20261028.json",
+      "git_blob_sha": "da679f8ca8d973de7da55463e5643037df6a0579"
+    },
+    {
+      "path": "research/RSDS_GPS_TRIPLE_DATE_CADENCE_ECOLOGICAL_INTERPRETATION_V2_20261028.json",
+      "git_blob_sha": "2a608374131e7a2271fd8418f239bb37446d54ba"
+    }
+  ],
+  "original_GPS_integrity": "Check public original provider bitstream UUID/file bytes/MD5; replay source first q and q~daylength source-tag mean and n EXACTLY before computing new common-date original q levels. Original telemetry ephemeral, no original raw GPS redistribution.",
+  "original_observation_schedules": {
+    "ORIGINAL_UTC_HOURBIN": "Timestamp-only at most one original GPS fix per UTC-hour bin; actual accepted elapsed GPS step 0.5 to 2.0 hours.",
+    "EVEN_UTC_2H": "Use only original even UTC-hour bin selected fixes, actual elapsed GPS step 1.5 to 2.5 hours.",
+    "ODD_UTC_2H": "Use only original odd UTC-hour bin selected fixes, actual elapsed GPS step 1.5 to 2.5 hours."
+  },
+  "strict_comparability": "For each actual original source tagged animal and calendar year, only astronomy-qualified solar calendar days simultaneously eligible in ALL THREE schedules; at least 10 identical qualifying dates/year (at least 3 accepted day and 3 accepted night steps per schedule/day); daylength x is calculated from original full-hourbin source latitude on those days (identical x for all schedules); observational weather not requested.",
+  "q_level": "Within each triple-qualified tag year, mean(log1p(median observed NIGHT GPS step km/h)−log1p(median observed DAY GPS step km/h)) on matched dates; tag level = equal mean across qualified original years. Not true hours of activity.",
+  "q_daylength_slope": "Within original tagged year OLS q vs the SAME original-source astronomical daylength x for each schedule. Require >=0.5 hour spread and 10 matched dates. Tag mean over slope-qualified years. Same tag population across all THREE slopes.",
+  "data_unit": "First pair original year/date, then original tagged animal, then study/taxon. Every native taxon contributes one conditional descriptive source group. Never pool 12 source×taxon as independent field studies or count original GPS fixes as iid.",
+  "bootstrap": "2000 fixed-seed original-tag resampling per source for the three q means with common original tagged animal selection (same bootstrap draw indices for q_original/even/odd) and likewise three slope means (only source tags with all slopes). >=5 matching original tags to publish source means/nominal 95% percentile intervals. Under 5 remains UNAVAILABLE, never zero.",
+  "validation_against_frozen_triplet": "Per source taxon n, original same-tag-years/days support, and six group-level phase-minus-original q/slope means MUST match original archived triple-date result within 1e-12; source group HOLD and all original study/taxon denominations unmodified. No effect-sign selection.",
+  "sign_invariance": "Distinguish three schedules each with a descriptive source-tag CI entirely POSITIVE or NEGATIVE, unresolved zero-spanning interval, and any mixture of POSITIVE/NEGATIVE; do not call stable sign if a CI includes zero or is unsupported. This is exploratory same-source robustness only, not equivalence nor hypothesis test of universal niche.",
+  "historical_outcomes_immutable": {
+    "old_12_ERA5_raw_JSON_SHA_HOLDS": "UNCHANGED",
+    "old_48_source_shortwave_direction_external_replication": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+    "new_source_ERA5_canonical_version": "NOT USED"
+  },
+  "limitations": [
+    "This route reuses originally observed studies after the earlier q and parity results were inspected, so no independent heldout ecology or preregistered sample.",
+    "Telemetry cadence, GPS path-chord length, fix missingness, astronomical sun-clock phase and day/night availability still differ between schedules; same days do not imply same physical exposure or movement events.",
+    "Sunrise/daylength association can proxy temperature, resource cycles and season; no causal photoperiodic mechanism identified.",
+    "An unresolved source animal bootstrap sign is not an estimate of exactly zero, a biological equality or an absence of temporal niche.",
+    "All study×taxon source conditional bootstrap bands nominal unadjusted for multiplicity; 8 original field studies purposively sampled and species clustered within some sources.",
+    "Original GPS individual IDs, calendar dates, coordinates, fix-level events, source original gridyears, and tagged individual coefficients must never be committed."
+  ]
+}
