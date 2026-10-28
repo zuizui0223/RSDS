@@ -144,7 +144,7 @@ def analyze():
         studyrows=[x for x in rows if x["original_study_doi"]==doi]
         for phase in PHASES:
             m=[p["q_two_hour_minus_onehour"]
-               for sr in studyrows if sr.get("supported_q_effects") is not None
+               for sr in studyrows if isinstance(sr.get("phase_effects"),list)
                for p in sr["phase_effects"] if p["phase"]==phase
                and p["q_two_hour_minus_onehour"] is not None]
             source_equal[phase].append({
