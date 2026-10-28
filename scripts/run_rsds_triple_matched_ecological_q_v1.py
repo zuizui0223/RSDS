@@ -46,12 +46,16 @@ def freeze():
     spec=json.loads(CONTRACT.read_text(encoding="utf-8"))
     if spec["version"]!="RSDS_SAME_TAG_TRIPLE_DATE_ECOLOGICAL_Q_AND_DAYLENGTH_INVARIANCE_V1":
         raise ValueError("Original ecological source sign stability scope changed")
-    prior_spec,first=previous_frozen()
+    prior_spec,previous_phase=previous_frozen()
     raw=PREVIOUS.read_bytes()
     pinned={r["path"]:r["git_blob_sha"] for r in spec["pinned_prior_source_group_results"]}
     if git_blob(raw)!=pinned[str(PREVIOUS.relative_to(HERE))]:
         raise ValueError("Original first triply-matched GPS source group result changed")
-    if first["fixed_original_source_studies"]!=8 or first["native_source_study_taxon_rows"]!=12:
+    first=json.loads(raw.decode("utf-8"))
+    if (previous_phase["original_field_studies"]!=8 or
+            previous_phase["original_source_taxon_rows"]!=12 or
+            first["fixed_original_source_studies"]!=8 or
+            first["native_source_study_taxon_rows"]!=12):
         raise ValueError("Original eight study/twelve taxon denominator changed")
     if (first["old_48_original_source_negative_shortwave_direction_external_replication_UNCHANGED"]!=NEGATIVE
             or first["old_12_ERA5_source_RAW_SHA_HOLDS_UNCHANGED"] is not True):
