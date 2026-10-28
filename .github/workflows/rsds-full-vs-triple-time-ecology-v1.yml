@@ -1,0 +1,48 @@
+name: RSDS original full source versus exact matched GPS temporal ecology robustness
+on:
+  push:
+    branches:
+      - science/triple-matched-ecological-q-daylength-invariance-v1
+    paths:
+      - 'scripts/audit_rsds_full_vs_matched_temporal_ecology_v1.py'
+      - 'tests/test_rsds_full_vs_triple_ecological_q_v1.py'
+      - '.github/workflows/rsds-full-vs-triple-time-ecology-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify_original_study_temporal_ecology:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/triple-matched-ecological-q-daylength-invariance-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compare pinned original 8 study all animals to exact same original tag/year/day across 3 GPS schedules
+        run: python -m unittest discover -s tests -p 'test_rsds_full_vs_triple_ecological_q_v1.py' -v
+      - name: Reproduce old full-sample q and matched q/photoperiod sign survival for all original 12 study taxa
+        run: |
+          python -m scripts.audit_rsds_full_vs_matched_temporal_ecology_v1 --out research/RSDS_TRIPLE_DATE_VS_ORIGINAL_ECOLOGICAL_TIME_SIGN_AUDIT_20261028.json
+          python -m json.tool research/RSDS_TRIPLE_DATE_VS_ORIGINAL_ECOLOGICAL_TIME_SIGN_AUDIT_20261028.json > /dev/null
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-full-vs-triple-same-tag-date-8-study-temporal-ecology
+          path: research/RSDS_TRIPLE_DATE_VS_ORIGINAL_ECOLOGICAL_TIME_SIGN_AUDIT_20261028.json
+          if-no-files-found: error
+      - name: Save source-linked full q vs matched q ecological evidence; do not revise source first results
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_TRIPLE_DATE_VS_ORIGINAL_ECOLOGICAL_TIME_SIGN_AUDIT_20261028.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: five q and two photoperiod source signs retained across full source and three GPS schedules"
+            git fetch origin science/triple-matched-ecological-q-daylength-invariance-v1
+            git rebase origin/science/triple-matched-ecological-q-daylength-invariance-v1
+            git push origin HEAD:science/triple-matched-ecological-q-daylength-invariance-v1
+          fi
