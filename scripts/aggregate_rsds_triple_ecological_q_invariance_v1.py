@@ -16,7 +16,7 @@ from pathlib import Path
 from statistics import mean
 
 from scripts.run_rsds_triple_matched_ecological_q_v1 import (
-    HERE,freeze,Q_KEYS,SLOPE_KEYS,SCHEDULES,NEGATIVE
+    HERE,freeze,Q_KEYS,SLOPE_KEYS,SCHEDULES,NEGATIVE,classify_stability
 )
 
 OUT=HERE/"research/RSDS_TRIPLE_DATE_ECOLOGICAL_Q_DAYLENGTH_INVARIANCE_V1_FIRST_RESULT_20261028.json"
@@ -87,7 +87,10 @@ def consistency(source):
                     if obj["status"] not in ALLOWED:
                         raise ValueError("Unknown source temporal ecological bootstrap sign")
                     nc=obj["n_source_tags"]
-                    if nc!=n["original_tags_with_at_least_ten_triple_qualified_days"] if k in Q_KEYS else nc!=n["original_tags_with_common_photoperiod_slope_support"]:
+                    expected_n=(n["original_tags_with_at_least_ten_triple_qualified_days"]
+                                if k in Q_KEYS else
+                                n["original_tags_with_common_photoperiod_slope_support"])
+                    if nc!=expected_n:
                         raise ValueError("Original native source tag number differs for q or photoperiod")
                     if nc<5:
                         if obj["status"]!="UNAVAILABLE" or obj["group_original_tag_mean"] is not None or obj["nominal_source_tag_bootstrap95"] is not None:
@@ -105,10 +108,10 @@ def consistency(source):
                 gstable=group["source_daylength_slope_sign_recurrence"]
                 qset=[q[k]["status"] for k in Q_KEYS]
                 gset=[grad[k]["status"] for k in SLOPE_KEYS]
-                if qstable.startswith("THREE_SCHEDULES_NOMINAL_") and len(set(qset))!=1:
-                    raise ValueError("All three q schedule signs did not match")
-                if gstable.startswith("THREE_SCHEDULES_NOMINAL_") and len(set(gset))!=1:
-                    raise ValueError("All three q/daylength slopes did not have matching signs")
+                if qstable!=classify_stability(q,Q_KEYS):
+                    raise ValueError("Original source full/even/odd q sign stability label disagrees with three actual intervals")
+                if gstable!=classify_stability(grad,SLOPE_KEYS):
+                    raise ValueError("Original source full/even/odd daylength sign stability label disagrees with three actual intervals")
                 stability["q"][qstable]+=1
                 stability["daylength"][gstable]+=1
                 if all(q[k]["group_original_tag_mean"] is not None for k in Q_KEYS):
