@@ -1,0 +1,121 @@
+name: RSDS exact same original GPS animal day three UTC phases v2
+on:
+  push:
+    branches:
+      - science/three-phase-exact-original-gps-dates-v2
+    paths:
+      - 'scripts/run_rsds_gps_three_phase_exact_dates_v2.py'
+      - 'scripts/aggregate_rsds_three_phase_exact_original_gps_v2.py'
+      - 'tests/test_rsds_gps_three_phase_exact_dates_v2.py'
+      - 'tests/test_rsds_three_phase_exact_original_aggregate_v2.py'
+      - 'research/RSDS_GPS_TRIPLE_MATCHED_UTC_PARITY_V2_CONTRACT.json'
+      - '.github/workflows/rsds-triple-same-tag-date-utc-cadence-v2.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  source_and_synthetic_three_phase_known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/three-phase-exact-original-gps-dates-v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Existing native source q/daylight numpy dependencies
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Verify original migrated research and eight study source first results fixed
+        run: python -m scripts.verify_rsds_migration
+      - name: Synthetic exact three-way original tag-year-date supports, time slopes and all original source holds
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_gps_three_phase_exact_dates_v2.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_three_phase_exact_original_aggregate_v2.py' -v
+  original_eight_study_triple_match:
+    needs: source_and_synthetic_three_phase_known_truth
+    runs-on: ubuntu-latest
+    timeout-minutes: 95
+    strategy:
+      fail-fast: false
+      matrix:
+        index: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/three-phase-exact-original-gps-dates-v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Existing native GPS astronomy numerical support
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Reverify MD5 and old source effects, then evaluate same private original animal/year/date three schedule q and daylength
+        run: |
+          python -m scripts.run_rsds_gps_three_phase_exact_dates_v2 --source-index ${{ matrix.index }} --out outputs/triple_original_gps
+      - name: Only source group q/photoperiod/cadence with privacy protecting aggregates
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-triple-original-study-${{ matrix.index }}-v2
+          path: outputs/triple_original_gps/original_source_${{ matrix.index }}_triple_UTC_v2.json
+          if-no-files-found: warn
+  original_study_triple_paired_biological_aggregation:
+    needs: original_eight_study_triple_match
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/three-phase-exact-original-gps-dates-v2
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original GPS source import runtime
+        run: python -m pip install 'numpy>=1.24,<3'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-triple-original-study-*-v2
+          merge-multiple: true
+          path: outputs/triple_original_gps
+      - name: Preserve all eight original studies and 12 taxa including original source HOLDs
+        run: |
+          python -m scripts.aggregate_rsds_three_phase_exact_original_gps_v2 --input outputs/triple_original_gps --out research/RSDS_GPS_THREE_PHASE_EXACT_TAG_DATE_V2_FIRST_RESULT_20261028.json
+          python -m json.tool research/RSDS_GPS_THREE_PHASE_EXACT_TAG_DATE_V2_FIRST_RESULT_20261028.json > /dev/null
+      - name: Source first result publication contains no private tagged animal dates or GPS positions
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_GPS_THREE_PHASE_EXACT_TAG_DATE_V2_FIRST_RESULT_20261028.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['fixed_original_source_studies']==8
+          assert d['native_source_study_taxon_rows']==12
+          assert d['old_12_ERA5_source_RAW_SHA_HOLDS_UNCHANGED']
+          assert d['old_48_original_source_negative_shortwave_direction_external_replication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          s=json.dumps(d)
+          for x in ('"animal_id"','"tag_id"','"individual_id"','"timestamp"','"utc_hour"','"original_GPS_coordinates"','"location-lat"','"location-long"','"calendar_date"','"original_tag_events"'):
+              assert x not in s, f'sensitive source GPS key {x}'
+          print('Source GPS eight DOI twelve taxa three-way common original date result privacy checked')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-eight-studies-triple-common-tag-day-gps-time-ecology
+          path: research/RSDS_GPS_THREE_PHASE_EXACT_TAG_DATE_V2_FIRST_RESULT_20261028.json
+          if-no-files-found: error
+      - name: Commit frozen first triple-match source effect without original GPS or tags
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_GPS_THREE_PHASE_EXACT_TAG_DATE_V2_FIRST_RESULT_20261028.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: exact original tagged animal/calendar day triple GPS timing phase source sensitivity"
+            git fetch origin science/three-phase-exact-original-gps-dates-v2
+            git rebase origin/science/three-phase-exact-original-gps-dates-v2
+            git push origin HEAD:science/three-phase-exact-original-gps-dates-v2
+          fi
