@@ -1,0 +1,49 @@
+name: RSDS original eight-study triple exact tagged animal date ecology synthesis v2
+on:
+  push:
+    branches:
+      - science/three-phase-exact-original-gps-dates-v2
+    paths:
+      - 'scripts/summarize_rsds_three_phase_original_ecology_v2.py'
+      - 'tests/test_rsds_triple_exact_date_empirical_synthesis_v2.py'
+      - '.github/workflows/rsds-triple-original-empirical-synthesis-v2.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_three_phase_cadence_source_ecology:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/three-phase-exact-original-gps-dates-v2
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test all eight original source study/taxa and two Wyoming tag matched UTC phase signs against immutable source blobs
+        run: |
+          python -m unittest discover -s tests -p 'test_rsds_triple_exact_date_empirical_synthesis_v2.py' -v
+      - name: Produce source-only biological observation bias interpretation, not a global causal sunlight claim
+        run: |
+          python -m scripts.summarize_rsds_three_phase_original_ecology_v2 --out research/RSDS_GPS_TRIPLE_DATE_CADENCE_ECOLOGICAL_INTERPRETATION_V2_20261028.json
+          python -m json.tool research/RSDS_GPS_TRIPLE_DATE_CADENCE_ECOLOGICAL_INTERPRETATION_V2_20261028.json > /dev/null
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-triple-same-tag-year-date-Wyoming-UTC-bias-original-eight-studies
+          path: research/RSDS_GPS_TRIPLE_DATE_CADENCE_ECOLOGICAL_INTERPRETATION_V2_20261028.json
+          if-no-files-found: error
+      - name: Commit immutable source-specific q phase observation bias interpretation only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_GPS_TRIPLE_DATE_CADENCE_ECOLOGICAL_INTERPRETATION_V2_20261028.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: exact same original Wyoming tagged dates still show UTC cadence q phase asymmetry"
+            git fetch origin science/three-phase-exact-original-gps-dates-v2
+            git rebase origin/science/three-phase-exact-original-gps-dates-v2
+            git push origin HEAD:science/three-phase-exact-original-gps-dates-v2
+          fi
