@@ -1,0 +1,245 @@
+{
+  "contrasts_with_estimable_month_adjusted_daylength_slope": 6,
+  "date": "2026-10-29",
+  "interpretation_limits": [
+    "The 6 pair×schedule rows represent ONLY TWO original field-study DOI units, with correlated native species sampled within each field-study, NOT six independent world populations.",
+    "The same original source calendar was fixed before examining these WITHIN-MONTH slope values, but the study/pair selection is post prior-sign and is exploratory not blinded replication.",
+    "Year-month intercept adjustment removes across-month differences, not individual DATE trends within month. Astronomical daylength is deterministic in calendar day and cannot be isolated causally from other seasonal cues without independent conditions.",
+    "Only nine year-month source blocks Illinois and eight Wyoming support original estimates. Month block bootstrap 95% is descriptive, unadjusted, and not a population confidence interval.",
+    "Same shared source date does not mean the same actual GPS event time, collar acquisition schedule, habitat/weather or predator-prey interaction across different tagged original animals.",
+    "NIGHT-DAY GPS q is a sampled chord-displacement contrast, NOT true activity duration, direct sun cue use, interspecific competition or predation.",
+    "Missing or weak within-month astronomical support yields UNAVAILABLE, not zero. Do not select favorable date subsets post hoc.",
+    "Previous 48 source irradiance direction external negative replication and original ERA5 response raw-SHA twelve historical holds unchanged.",
+    "No private animal IDs, original GPS locations, precise source date/month-year labels, raw telemetry or individual q slopes are republished."
+  ],
+  "month_conditional_nominal_bootstrap_sign_counts": {
+    "INCLUDES_ZERO": 4,
+    "NEGATIVE": 1,
+    "POSITIVE": 1
+  },
+  "old_12_ERA5_raw_JSON_HOLDS_UNCHANGED": true,
+  "old_48_signed_radiation_external_nonreplication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "original_source_pair_clock_comparisons_expected": 6,
+  "original_source_pair_clock_comparisons_reported": 6,
+  "original_studies": 2,
+  "original_study_native_taxa": {
+    "Illinois": 3,
+    "Wyoming": 2
+  },
+  "original_study_source_states": {
+    "ORIGINAL_IL_THREE_NATIVE_MONTH_CONTRAST_COMPLETE": 1,
+    "ORIGINAL_WY_TWO_NATIVE_MONTH_CONTRAST_COMPLETE": 1
+  },
+  "prior_first_original_study_results_untouched": true,
+  "source_study_results": [
+    {
+      "MD5_and_native_source_effects_replayed": true,
+      "hold_error_type": null,
+      "hold_stage": null,
+      "native_pair_schedule_results": [
+        {
+          "before_vs_after_calendar_month_control": "WITHIN_MONTH_INTERVAL_INCLUDES_ZERO",
+          "native_first": "Canis latrans",
+          "native_second": "Lynx rufus",
+          "original_unadjusted_daylength_slope": 0.04628893203079968,
+          "original_unadjusted_source_nominal_sign": "POSITIVE",
+          "schedule": "original",
+          "source_original_calendar_days": 169,
+          "within_year_month_demeaned_q_daylength": {
+            "bootstrap_finite_replicates": 2000,
+            "eligible_source_calendar_days": 167,
+            "eligible_source_month_blocks": 8,
+            "leave_one_month_block_out_range": [
+              0.07244439789644122,
+              0.14929315487591077
+            ],
+            "month_cluster_bootstrap95": [
+              -0.026448235256805428,
+              0.22888668237039497
+            ],
+            "nominal_interval_sign": "INCLUDES_ZERO",
+            "not_causal_daylength": true,
+            "source_calendar_dates": 169,
+            "source_year_month_blocks": 9,
+            "status": "MONTH_CONDITIONAL_DESCRIPTIVE_ESTIMABLE",
+            "within_month_daylength_centered_sum_squares_hours2": 19.70910558754423,
+            "within_month_daylength_slope": 0.10683011569500576
+          }
+        },
+        {
+          "before_vs_after_calendar_month_control": "WITHIN_MONTH_INTERVAL_INCLUDES_ZERO",
+          "native_first": "Canis latrans",
+          "native_second": "Odocoileus virginianus",
+          "original_unadjusted_daylength_slope": 0.019945963592492264,
+          "original_unadjusted_source_nominal_sign": "POSITIVE",
+          "schedule": "original",
+          "source_original_calendar_days": 169,
+          "within_year_month_demeaned_q_daylength": {
+            "bootstrap_finite_replicates": 2000,
+            "eligible_source_calendar_days": 167,
+            "eligible_source_month_blocks": 8,
+            "leave_one_month_block_out_range": [
+              -0.04498454777574154,
+              0.0559650079495
+            ],
+            "month_cluster_bootstrap95": [
+              -0.10056154782018613,
+              0.16133439515419828
+            ],
+            "nominal_interval_sign": "INCLUDES_ZERO",
+            "not_causal_daylength": true,
+            "source_calendar_dates": 169,
+            "source_year_month_blocks": 9,
+            "status": "MONTH_CONDITIONAL_DESCRIPTIVE_ESTIMABLE",
+            "within_month_daylength_centered_sum_squares_hours2": 19.70910558754423,
+            "within_month_daylength_slope": 0.022172865295733046
+          }
+        },
+        {
+          "before_vs_after_calendar_month_control": "PREVIOUS_NEGATIVE_ASSOCIATION_PERSISTS_WITHIN_MONTH_EXPLORATORY",
+          "native_first": "Lynx rufus",
+          "native_second": "Odocoileus virginianus",
+          "original_unadjusted_daylength_slope": -0.026342968438307413,
+          "original_unadjusted_source_nominal_sign": "NEGATIVE",
+          "schedule": "original",
+          "source_original_calendar_days": 169,
+          "within_year_month_demeaned_q_daylength": {
+            "bootstrap_finite_replicates": 2000,
+            "eligible_source_calendar_days": 167,
+            "eligible_source_month_blocks": 8,
+            "leave_one_month_block_out_range": [
+              -0.12947230203450993,
+              -0.04667466948877351
+            ],
+            "month_cluster_bootstrap95": [
+              -0.17655237817695874,
+              -0.0010839447089603027
+            ],
+            "nominal_interval_sign": "NEGATIVE",
+            "not_causal_daylength": true,
+            "source_calendar_dates": 169,
+            "source_year_month_blocks": 9,
+            "status": "MONTH_CONDITIONAL_DESCRIPTIVE_ESTIMABLE",
+            "within_month_daylength_centered_sum_squares_hours2": 19.70910558754423,
+            "within_month_daylength_slope": -0.0846572503992727
+          }
+        }
+      ],
+      "original_native_taxa": [
+        "Canis latrans",
+        "Lynx rufus",
+        "Odocoileus virginianus"
+      ],
+      "original_study_DOI": "10.5441/001/1.649",
+      "original_study_region": "Illinois",
+      "source_original_shared_calendar_days": 169,
+      "source_original_year_month_blocks": 9,
+      "status": "ORIGINAL_IL_THREE_NATIVE_MONTH_CONTRAST_COMPLETE"
+    },
+    {
+      "MD5_and_native_source_effects_replayed": true,
+      "hold_error_type": null,
+      "hold_stage": null,
+      "native_pair_schedule_results": [
+        {
+          "before_vs_after_calendar_month_control": "PREVIOUS_POSITIVE_ASSOCIATION_PERSISTS_WITHIN_MONTH_EXPLORATORY",
+          "native_first": "Odocoileus hemionus",
+          "native_second": "Ovis canadensis",
+          "original_unadjusted_daylength_slope": 0.011673653876371936,
+          "original_unadjusted_source_nominal_sign": "NOMINAL_POSITIVE",
+          "schedule": "original",
+          "source_original_calendar_days": 193,
+          "within_year_month_demeaned_q_daylength": {
+            "bootstrap_finite_replicates": 2000,
+            "eligible_source_calendar_days": 193,
+            "eligible_source_month_blocks": 8,
+            "leave_one_month_block_out_range": [
+              0.0037121911344430106,
+              0.013013539986548358
+            ],
+            "month_cluster_bootstrap95": [
+              8.148028565263067e-05,
+              0.022899771595626655
+            ],
+            "nominal_interval_sign": "POSITIVE",
+            "not_causal_daylength": true,
+            "source_calendar_dates": 193,
+            "source_year_month_blocks": 8,
+            "status": "MONTH_CONDITIONAL_DESCRIPTIVE_ESTIMABLE",
+            "within_month_daylength_centered_sum_squares_hours2": 23.992957344959333,
+            "within_month_daylength_slope": 0.010266184385105494
+          }
+        },
+        {
+          "before_vs_after_calendar_month_control": "WITHIN_MONTH_INTERVAL_INCLUDES_ZERO",
+          "native_first": "Odocoileus hemionus",
+          "native_second": "Ovis canadensis",
+          "original_unadjusted_daylength_slope": 0.013358456372272055,
+          "original_unadjusted_source_nominal_sign": "NOMINAL_POSITIVE",
+          "schedule": "even",
+          "source_original_calendar_days": 193,
+          "within_year_month_demeaned_q_daylength": {
+            "bootstrap_finite_replicates": 2000,
+            "eligible_source_calendar_days": 193,
+            "eligible_source_month_blocks": 8,
+            "leave_one_month_block_out_range": [
+              0.001075018262180373,
+              0.011968904639721722
+            ],
+            "month_cluster_bootstrap95": [
+              -0.008288552172857488,
+              0.020205148934007086
+            ],
+            "nominal_interval_sign": "INCLUDES_ZERO",
+            "not_causal_daylength": true,
+            "source_calendar_dates": 193,
+            "source_year_month_blocks": 8,
+            "status": "MONTH_CONDITIONAL_DESCRIPTIVE_ESTIMABLE",
+            "within_month_daylength_centered_sum_squares_hours2": 23.992957344959333,
+            "within_month_daylength_slope": 0.006634975493860697
+          }
+        },
+        {
+          "before_vs_after_calendar_month_control": "WITHIN_MONTH_INTERVAL_INCLUDES_ZERO",
+          "native_first": "Odocoileus hemionus",
+          "native_second": "Ovis canadensis",
+          "original_unadjusted_daylength_slope": 0.011558629015356208,
+          "original_unadjusted_source_nominal_sign": "NOMINAL_POSITIVE",
+          "schedule": "odd",
+          "source_original_calendar_days": 193,
+          "within_year_month_demeaned_q_daylength": {
+            "bootstrap_finite_replicates": 2000,
+            "eligible_source_calendar_days": 193,
+            "eligible_source_month_blocks": 8,
+            "leave_one_month_block_out_range": [
+              0.00232744756907672,
+              0.00946983582939711
+            ],
+            "month_cluster_bootstrap95": [
+              -0.0037572671656904435,
+              0.01645215725534639
+            ],
+            "nominal_interval_sign": "INCLUDES_ZERO",
+            "not_causal_daylength": true,
+            "source_calendar_dates": 193,
+            "source_year_month_blocks": 8,
+            "status": "MONTH_CONDITIONAL_DESCRIPTIVE_ESTIMABLE",
+            "within_month_daylength_centered_sum_squares_hours2": 23.992957344959333,
+            "within_month_daylength_slope": 0.00609512231079527
+          }
+        }
+      ],
+      "original_native_taxa": [
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "original_study_DOI": "10.5441/001/1.703",
+      "original_study_region": "Wyoming",
+      "source_original_shared_calendar_days": 193,
+      "source_original_year_month_blocks": 8,
+      "status": "ORIGINAL_WY_TWO_NATIVE_MONTH_CONTRAST_COMPLETE"
+    }
+  ],
+  "stage": "POST_COOBSERVED_NATIVE_SOURCE_PHOTOPERIOD_RESULTS_WITHIN_MONTH_SEASONAL_CONFOUND_CHECK",
+  "version": "RSDS_ILLINOIS_WYOMING_WITHIN_MONTH_PHOTOPERIOD_TWO_SOURCE_V1"
+}
