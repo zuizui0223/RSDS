@@ -450,6 +450,38 @@ jobs:
           assert two["previous_48_source_negative_direction_shortwave_external_replication_UNCHANGED"]=="NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
           print("Illinois 169-day three-taxon q and daylength original-source receipt locked; Washington q unavailable, no false 2-study external replication")
           PY
+      - name: Lock two original coobserved field studies and six year-month adjusted photoperiod comparisons
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_within_month_photoperiod_source_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_within_month_shared_source_aggregate_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_shared_month_photoperiod_first_ecology_v1.py' -v
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          from scripts.validate_rsds_shared_month_photoperiod_v1 import source_interpretation
+          known={
+              'research/RSDS_SHARED_MONTH_ADJUSTED_PHOTOPERIOD_TWO_STUDY_V1_FIRST_RESULT_20261029.json':
+                  'ce14cf34bcb1237671a8ad4c5f325bd91eb35356',
+              'research/RSDS_SHARED_MONTH_PHOTOPERIOD_VALIDATED_ECOLOGY_20261029.json':
+                  'ce923c3a065dfd21eed66bff902c4049a7d0bcb8',
+          }
+          for path,expected in known.items():
+              data=Path(path).read_bytes()
+              got=hashlib.sha1(('blob '+str(len(data))+'\0').encode()+data).hexdigest()
+              assert got==expected, f'Original coobserved source month-adjusted first result modified: {path}'
+          stored=json.loads(Path(list(known)[1]).read_text(encoding='utf-8'))
+          assert stored==source_interpretation()
+          assert stored['original_source_field_studies']==2
+          assert stored['source_native_taxon_and_schedule_comparisons']==6
+          assert stored['month_conditioned_comparisons_nominal_bootstrap_interval_signs']=={
+              'NEGATIVE':1,'POSITIVE':1,'INCLUDES_ZERO':4
+          }
+          assert stored['old_12_ERA5_source_provider_raw_SHA_HOLDS_UNCHANGED']
+          assert stored['old_external_48_source_negative_radiation_direction_nonreplication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          print('Illinois169 Wyoming193 original shared-date/month conditional six q/daylength comparisons SHA-locked; old source neg/HOLDS unchanged')
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
