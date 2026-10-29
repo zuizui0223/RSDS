@@ -1,0 +1,31 @@
+name: RSDS Illinois original three-native common-date ecology first result
+on:
+  push:
+    branches:
+      - science/illinois-three-native-shared-calendar-v1
+    paths:
+      - 'tests/test_rsds_illinois_three_native_first_ecology_v1.py'
+      - 'docs/RSDS_ILLINOIS_COYOTE_BOBCAT_DEER_SHARED_TEMPORAL_ECOLOGY_20261029.md'
+      - '.github/workflows/rsds-illinois-three-native-first-result-ci-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original_three_native_169_calendar_dates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/illinois-three-native-shared-calendar-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original GPS q/daylength native study dependencies
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Check first source biology source SHA, original native q/daylength replay, all three taxa 169-calendar common date contrasts
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_illinois_three_native_first_ecology_v1.py' -v
+          python -m scripts.verify_rsds_migration
