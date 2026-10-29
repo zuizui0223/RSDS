@@ -1,0 +1,51 @@
+name: RSDS Wyoming same original study shared season two-taxon photoperiod ecological validation
+on:
+  push:
+    branches:
+      - science/wyoming-coobserved-date-photoperiod-contrast-v1
+    paths:
+      - 'scripts/validate_rsds_wyoming_shared_season_ecology_v1.py'
+      - 'tests/test_rsds_wyoming_shared_season_first_result_v1.py'
+      - '.github/workflows/rsds-wyoming-shared-season-evidence-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_source_evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/wyoming-coobserved-date-photoperiod-contrast-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Re-verify all original migrated ecological research source SHA and negative external result
+        run: python -m scripts.verify_rsds_migration
+      - name: Test exact original source SHAs, 193 common dates, positive/negative native slopes and old HOLD gates
+        run: python -m unittest discover -s tests -p 'test_rsds_wyoming_shared_season_first_result_v1.py' -v
+      - name: Generate standalone evidence-locked noncausal Wyoming original two-taxon seasonal contrast
+        run: |
+          python -m scripts.validate_rsds_wyoming_shared_season_ecology_v1 --out research/RSDS_WYOMING_SHARED_SEASON_DIVERGENT_PHOTOPERIOD_VALIDATION_V1_20261029.json
+          python -m json.tool research/RSDS_WYOMING_SHARED_SEASON_DIVERGENT_PHOTOPERIOD_VALIDATION_V1_20261029.json > /dev/null
+      - name: Preserve exact source-group result, no original telemetry
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-wyoming-193-original-coobserved-dates-two-taxon-slope-opposition-v1
+          path: research/RSDS_WYOMING_SHARED_SEASON_DIVERGENT_PHOTOPERIOD_VALIDATION_V1_20261029.json
+          if-no-files-found: error
+      - name: Commit frozen evidence interpretation separately from source first result
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_WYOMING_SHARED_SEASON_DIVERGENT_PHOTOPERIOD_VALIDATION_V1_20261029.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: validate 193 shared Wyoming original dates with mule-positive and bighorn-negative daylight effects"
+            git fetch origin science/wyoming-coobserved-date-photoperiod-contrast-v1
+            git rebase origin/science/wyoming-coobserved-date-photoperiod-contrast-v1
+            git push origin HEAD:science/wyoming-coobserved-date-photoperiod-contrast-v1
+          fi
