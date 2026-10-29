@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/compare_rsds_two_ungulate_study_shared_date_v1.py'
       - 'tests/test_rsds_two_original_ungulate_study_calendar_v1.py'
+      - 'research/RSDS_UTAH_ORIGINAL_SHARED_DATE_FIRST_BLOB_V1.json'
       - '.github/workflows/rsds-utah-wyoming-shared-calendar-v1.yml'
   workflow_dispatch:
 permissions:
@@ -25,3 +26,49 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_rsds_two_original_ungulate_study_calendar_v1.py' -v
       - name: Verify historical solar signed external nonreplication still frozen
         run: python -m scripts.verify_rsds_migration
+      - name: Cross-study comparison only AFTER independent Utah original result is source SHA-sealed
+        run: |
+          python -m scripts.compare_rsds_two_ungulate_study_shared_date_v1 --out research/RSDS_UTAH_WYOMING_TWO_STUDY_SHARED_DATE_PHOTOPERIOD_V1_RESULT_20261029.json
+          python -m json.tool research/RSDS_UTAH_WYOMING_TWO_STUDY_SHARED_DATE_PHOTOPERIOD_V1_RESULT_20261029.json > /dev/null
+      - name: Audit actual second original study support and preserve null/old source negative verdict
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_UTAH_WYOMING_TWO_STUDY_SHARED_DATE_PHOTOPERIOD_V1_RESULT_20261029.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['fixed_original_study_DOIs']==2
+          assert d['comparison_native_taxa']==['Odocoileus hemionus','Ovis canadensis']
+          assert d['source_original_studies_full_calendar_comparison_identifiable']==2
+          by={x['original_field_study']:x for x in d['all_study_source_original_native_photoperiod_sign_results']}
+          assert by['Utah']['source_study_shared_calendar_dates']==199
+          assert by['Wyoming']['source_study_shared_calendar_dates']==193
+          assert len(d['original_studies_with_same_opposite_native_daylength_sign_through_three_clocks'])==1
+          assert d['original_studies_with_same_opposite_native_daylength_sign_through_three_clocks']==['Wyoming']
+          assert not d['both_original_studies_show_same_source_native_sign_if_supported']
+          assert d['previous_12_ERA5_source_raw_HOLDS_UNCHANGED']
+          assert d['previous_48_source_shortwave_direction_external_nonreplication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          content=json.dumps(d)
+          for private in ('"animal_id"','"individual_id"','"tag_id"','"source_year"','"calendar_date"','"latitude"','"longitude"','"GPS_timestamp"','"GPS_time"'):
+              assert private not in content
+          print('Utah vs Wyoming source-pinned 2 independent field studies: Wyoming native sign opposition persists; Utah contrast is unresolved, not falsely replicated')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-utah-wyoming-two-original-study-common-calendar-daylength-v1
+          path: research/RSDS_UTAH_WYOMING_TWO_STUDY_SHARED_DATE_PHOTOPERIOD_V1_RESULT_20261029.json
+          if-no-files-found: error
+      - name: Commit source-pinned cross-study inference without modifying either original source result
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_UTAH_WYOMING_TWO_STUDY_SHARED_DATE_PHOTOPERIOD_V1_RESULT_20261029.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: distinct original Utah and Wyoming shared-date mule/bighorn astronomical daylength signs"
+            git fetch origin science/utah-two-ungulates-shared-dates-photoperiod-v1
+            git rebase origin/science/utah-two-ungulates-shared-dates-photoperiod-v1
+            git push origin HEAD:science/utah-two-ungulates-shared-dates-photoperiod-v1
+          fi
