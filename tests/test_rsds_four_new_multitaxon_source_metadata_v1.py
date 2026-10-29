@@ -64,6 +64,25 @@ class FourOriginalMultitaxonStudyFileFreezeTests(unittest.TestCase):
         self.assertEqual(r["source_status"],"ORIGINAL_SOURCE_METADATA_HOLD")
         self.assertIsNone(r["source_original_file"])
 
+    def test_two_original_csv_publisher_sources_choose_unique_tenfold_larger_without_event_access(self):
+        x=self.contract["sources"][0]
+        files=[
+            {"name":"Scaling of movement in Galapagos tortoises.csv",
+             "bitstream_uuid":"complete-original-GPS", "bytes":136916273,
+             "checksum":{"checkSumAlgorithm":"MD5","value":"c"*32}},
+            {"name":"Movement data.csv","bitstream_uuid":"small-companion",
+             "bytes":1239072,
+             "checksum":{"checkSumAlgorithm":"MD5","value":"d"*32}},
+        ]
+        with patch("scripts.preflight_rsds_four_new_multitaxon_gps_v1.original_files",
+                   return_value=files):
+            result=source_only_one(x,self.catalog[x["package_uuid"]])
+        self.assertEqual(result["source_status"],"SOURCE_ONLY_ORIGINAL_FILE_ADMISSIBLE")
+        self.assertEqual(result["source_original_file"]["bitstream_uuid"],"complete-original-GPS")
+        self.assertEqual(result["source_only_primary_selection_rule"],
+                         "LARGEST_ORIGINAL_CSV_AT_LEAST_10X_COMPANION_PRE_EVENT")
+        self.assertEqual(result["original_animal_events_opened_before_file_freeze"],0)
+
     def test_source_file_cap_fixed_before_behavior_outcome(self):
         x=self.contract["sources"][3]
         file={"name":"source.csv","bitstream_uuid":"primary","bytes":MAX_BYTES+1,
