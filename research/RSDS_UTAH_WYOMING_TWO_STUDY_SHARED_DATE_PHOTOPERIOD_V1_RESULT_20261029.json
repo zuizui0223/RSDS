@@ -1,0 +1,250 @@
+{
+  "all_study_source_original_native_photoperiod_sign_results": [
+    {
+      "both_native_taxa_original_tags_on_shared_calendar": {
+        "Odocoileus hemionus": 108,
+        "Ovis canadensis": 41
+      },
+      "original_field_study": "Wyoming",
+      "original_study_DOI": "10.5441/001/1.703",
+      "same_reference_astronomical_daylength_lat": 43.0,
+      "shared_calendar_source_status": "SHARED_DATE_SOURCE_EVALUATED",
+      "source_study_shared_calendar_dates": 193,
+      "source_study_year_month_blocks": 8,
+      "three_observation_schedules": {
+        "even": {
+          "contrast": {
+            "ci": [
+              0.009050299340276739,
+              0.01698206356396647
+            ],
+            "mule_minus_bighorn": 0.01280098790008331,
+            "nominal_sign": "NOMINAL_POSITIVE"
+          },
+          "native": {
+            "Odocoileus hemionus": {
+              "ci": [
+                0.005477950526078162,
+                0.011888622065604626
+              ],
+              "mean": 0.008430770080500336,
+              "n_source_original_tags": 108,
+              "sign": "POSITIVE"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                -0.006640765973778465,
+                -0.0019798337358768593
+              ],
+              "mean": -0.004370217819582973,
+              "n_source_original_tags": 41,
+              "sign": "NEGATIVE"
+            }
+          },
+          "positive_mule_negative_bighorn_supported": true,
+          "status": "EVALUATED"
+        },
+        "odd": {
+          "contrast": {
+            "ci": [
+              0.012441508133488209,
+              0.0195311431063281
+            ],
+            "mule_minus_bighorn": 0.015842745850824742,
+            "nominal_sign": "NOMINAL_POSITIVE"
+          },
+          "native": {
+            "Odocoileus hemionus": {
+              "ci": [
+                0.006585878646846706,
+                0.012547475427289128
+              ],
+              "mean": 0.009424539354268856,
+              "n_source_original_tags": 108,
+              "sign": "POSITIVE"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                -0.008442612298678313,
+                -0.004514543563788185
+              ],
+              "mean": -0.006418206496555887,
+              "n_source_original_tags": 41,
+              "sign": "NEGATIVE"
+            }
+          },
+          "positive_mule_negative_bighorn_supported": true,
+          "status": "EVALUATED"
+        },
+        "original": {
+          "contrast": {
+            "ci": [
+              0.009824407696110652,
+              0.014959154011107959
+            ],
+            "mule_minus_bighorn": 0.012347378623912636,
+            "nominal_sign": "NOMINAL_POSITIVE"
+          },
+          "native": {
+            "Odocoileus hemionus": {
+              "ci": [
+                0.005932503260125796,
+                0.009883153547220651
+              ],
+              "mean": 0.007827081911270831,
+              "n_source_original_tags": 108,
+              "sign": "POSITIVE"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                -0.005999168150912397,
+                -0.002949857729332914
+              ],
+              "mean": -0.004520296712641806,
+              "n_source_original_tags": 41,
+              "sign": "NEGATIVE"
+            }
+          },
+          "positive_mule_negative_bighorn_supported": true,
+          "status": "EVALUATED"
+        }
+      }
+    },
+    {
+      "both_native_taxa_original_tags_on_shared_calendar": {
+        "Odocoileus hemionus": 10,
+        "Ovis canadensis": 42
+      },
+      "original_field_study": "Utah",
+      "original_study_DOI": "10.5441/001/1.711",
+      "same_reference_astronomical_daylength_lat": 43.0,
+      "shared_calendar_source_status": "SHARED_DATE_SOURCE_EVALUATED",
+      "source_study_shared_calendar_dates": 199,
+      "source_study_year_month_blocks": 10,
+      "three_observation_schedules": {
+        "even": {
+          "contrast": {
+            "ci": [
+              -0.0477814194252582,
+              0.04572774495826938
+            ],
+            "mule_minus_bighorn": -0.005383095853685058,
+            "nominal_sign": "INCLUDES_ZERO"
+          },
+          "native": {
+            "Odocoileus hemionus": {
+              "ci": [
+                0.003984700976290167,
+                0.06799815137067063
+              ],
+              "mean": 0.026652400018439486,
+              "n_source_original_tags": 10,
+              "sign": "POSITIVE"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                0.004640289718852411,
+                0.06421279616053044
+              ],
+              "mean": 0.03203549587212454,
+              "n_source_original_tags": 42,
+              "sign": "POSITIVE"
+            }
+          },
+          "positive_mule_negative_bighorn_supported": false,
+          "status": "EVALUATED"
+        },
+        "odd": {
+          "contrast": {
+            "ci": [
+              -0.03879279263580537,
+              0.05626954658450144
+            ],
+            "mule_minus_bighorn": 0.005895694577022973,
+            "nominal_sign": "INCLUDES_ZERO"
+          },
+          "native": {
+            "Odocoileus hemionus": {
+              "ci": [
+                -0.0004992604693255776,
+                0.023740814289553016
+              ],
+              "mean": 0.00948515268479972,
+              "n_source_original_tags": 10,
+              "sign": "INCLUDES_ZERO"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                -0.050161140703910714,
+                0.04829682845657782
+              ],
+              "mean": 0.0035894581077767474,
+              "n_source_original_tags": 42,
+              "sign": "INCLUDES_ZERO"
+            }
+          },
+          "positive_mule_negative_bighorn_supported": false,
+          "status": "EVALUATED"
+        },
+        "original": {
+          "contrast": {
+            "ci": [
+              -0.0700772491261888,
+              0.013202942189877973
+            ],
+            "mule_minus_bighorn": -0.027200522597441403,
+            "nominal_sign": "INCLUDES_ZERO"
+          },
+          "native": {
+            "Odocoileus hemionus": {
+              "ci": [
+                0.0010066569766252322,
+                0.033433272451506894
+              ],
+              "mean": 0.01373620343501315,
+              "n_source_original_tags": 10,
+              "sign": "POSITIVE"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                0.004261234833007117,
+                0.08338733303635149
+              ],
+              "mean": 0.04093672603245455,
+              "n_source_original_tags": 42,
+              "sign": "POSITIVE"
+            }
+          },
+          "positive_mule_negative_bighorn_supported": false,
+          "status": "EVALUATED"
+        }
+      }
+    }
+  ],
+  "both_original_studies_show_same_source_native_sign_if_supported": false,
+  "comparison_native_taxa": [
+    "Odocoileus hemionus",
+    "Ovis canadensis"
+  ],
+  "date": "2026-10-29",
+  "fixed_original_study_DOIs": 2,
+  "interpretation_ceiling": [
+    "Utah pair of mule deer/bighorn species and the shared 43N daylength coordinate were chosen AFTER observing the Wyoming result, not blinded preregistration.",
+    "Same public taxa across two distinct Movebank source DOI represent at most two field-study contexts, not four independent ecological/phylogenetic species-level replications.",
+    "Within each source the calendar year dates are shared between species, but tags/duty cycles/habitats and actual irradiance may differ; across Utah versus Wyoming exact calendar dates/years need NOT match.",
+    "An insufficient Utah source shared-date sample is a missing/attrition endpoint, not a negative species behavioral biological response.",
+    "Original q is night minus day observed GPS straight-line displacement proxy, not actual duration of activity or within-individual physiological photoperiod sensitivity.",
+    "A zero-spanning nominal bootstrap CI is unresolved and not proof of absence or sign equivalence. No multiplicity-corrected or external population confidence claim.",
+    "Historical 12 ERA5 raw response source SHA HOLDs and separate 48-source negative signed radiation external validation unchanged; no GPS telemetry/IDs/date-level time/location redistributed."
+  ],
+  "original_studies_with_same_opposite_native_daylength_sign_through_three_clocks": [
+    "Wyoming"
+  ],
+  "previous_12_ERA5_source_raw_HOLDS_UNCHANGED": true,
+  "previous_48_source_shortwave_direction_external_nonreplication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "source_43N_astronomical_reference_shared": true,
+  "source_original_studies_full_calendar_comparison_identifiable": 2,
+  "source_sample_is_random_world_ecosystem": false,
+  "stage": "POST_WYOMING_POSITIVE_RESULT_ADDITIONAL_FIXED_UTAH_SOURCE_DIAGNOSTIC",
+  "version": "RSDS_TWO_ORIGINAL_STUDIES_SAME_NATIVE_TAXA_COMMON_CALENDAR_PHOTOPERIOD_V1"
+}
