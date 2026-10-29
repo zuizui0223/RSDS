@@ -67,9 +67,12 @@ def frozen():
         raise ValueError("Original full source denominator/negative external result changed")
     study=next(x for x in old["all_fixed_original_studies_and_native_taxa"]
                if x["original_study_DOI"]==s["original_study"]["doi"])
-    if {x["taxon"] for x in study["native_source_results"]}!=set(TAXA):
+    old_three=next(x for x in original["all_original_source_studies_and_native_tag_triple_q"]
+                   if x["original_study_doi"]==s["original_study"]["doi"])
+    if ({x["taxon"] for x in study["native_source_results"]}!=set(TAXA) or
+            {x["taxon"] for x in old_three["taxa"]}!=set(TAXA)):
         raise ValueError("Both originally published native Wyoming taxa not present")
-    return s,study
+    return s,study,old_three
 
 
 def as_three_original_calendar(tracks):
@@ -305,11 +308,12 @@ def monthly_block_calendar_contrast(daydiff,seed):
     return out
 
 
-def replay_original_triple(tracks,prior):
-    """Verify old original exact GPS 3-schedule q and slope results unchanged."""
+def replay_original_triple(tracks,prior_absolute,prior_delta):
+    """Use original 3-schedule DELTA input for replay, compare with absolute levels."""
     for sp in TAXA:
-        previous=next(x for x in prior["native_source_results"] if x["taxon"]==sp)
-        got=replay_first_strict_three(sp,tracks[sp],previous)
+        previous=next(x for x in prior_absolute["native_source_results"] if x["taxon"]==sp)
+        archived_delta=next(x for x in prior_delta["taxa"] if x["taxon"]==sp)
+        got=replay_first_strict_three(sp,tracks[sp],archived_delta)
         for key in ("source_q_sign_recurrence",
                     "source_daylength_slope_sign_recurrence"):
             if got[key]!=previous[key]:
@@ -332,7 +336,7 @@ def replay_original_triple(tracks,prior):
 
 
 def run(out):
-    spec,previous=frozen()
+    spec,previous,previous_delta=frozen()
     old,new,_,_=verify_frame()
     region="Wyoming"
     src,taxa,reference,_=source_reference(region,old,new)
@@ -372,7 +376,7 @@ def run(out):
         stage="ORIGINAL_NATIVE_FULL_DATE_Q_DAYLENGTH_REPLAY"
         source_baseline_check(tracks,reference)
         stage="PREVIOUS_TRIPLE_DATE_Q_DAYLENGTH_REPLAY"
-        replay_original_triple(tracks,previous)
+        replay_original_triple(tracks,previous,previous_delta)
         result["both_native_taxa_original_all_date_and_original_triple_source_estimates_replayed"]=True
         print("RSDS_WYOMING_SHARED_DATE_PREVIOUS_NATIVE_Q_REPLAY",len(taxa),flush=True)
 
