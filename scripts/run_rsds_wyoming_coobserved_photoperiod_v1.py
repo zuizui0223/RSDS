@@ -314,9 +314,11 @@ def replay_original_triple(tracks,prior_absolute,prior_delta):
         previous=next(x for x in prior_absolute["native_source_results"] if x["taxon"]==sp)
         archived_delta=next(x for x in prior_delta["taxa"] if x["taxon"]==sp)
         got=replay_first_strict_three(sp,tracks[sp],archived_delta)
-        for key in ("source_q_sign_recurrence",
-                    "source_daylength_slope_sign_recurrence"):
-            if got[key]!=previous[key]:
+        for newer,archived in (
+            ("source_q_sign_recurrence","source_q_three_schedule_nominal_sign_stability"),
+            ("source_daylength_slope_sign_recurrence","source_daylength_three_schedule_nominal_sign_stability")
+        ):
+            if got[newer]!=previous[archived]:
                 raise ValueError("Old Wyoming original GPS q/photoperiod sign changed")
         for dst,old_key in (("q_original_tag_means_on_exact_same_dates",
                               "original_same_date_q_source_estimates"),
