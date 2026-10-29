@@ -1,0 +1,92 @@
+name: RSDS within-Wyoming two native taxa same calendar photoperiod source comparison
+on:
+  push:
+    branches:
+      - science/wyoming-coobserved-date-photoperiod-contrast-v1
+    paths:
+      - 'scripts/run_rsds_wyoming_coobserved_photoperiod_v1.py'
+      - 'tests/test_rsds_wyoming_coobserved_photoperiod_v1.py'
+      - 'research/RSDS_WYOMING_COOCCURRENT_DATES_PHOTOPERIOD_CONTRAST_V1_CONTRACT.json'
+      - '.github/workflows/rsds-wyoming-same-calendar-photoperiod-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_source_same_season_known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/wyoming-coobserved-date-photoperiod-contrast-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original GPS native source astronomical daylight numerical runtime
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Freeze old source science and historical external sunlight failure
+        run: python -m scripts.verify_rsds_migration
+      - name: Synthetic within-one original-study two-taxon same-calendar dates and 43N reference daylight known truth
+        run: python -m unittest discover -s tests -p 'test_rsds_wyoming_coobserved_photoperiod_v1.py' -v
+  wyoming_original_native_two_taxon_coobservation:
+    needs: original_source_same_season_known_truth
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/wyoming-coobserved-date-photoperiod-contrast-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original provider GPS astronomy and tagged animal analysis dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Reverify original Wyoming GPS provider MD5, replay native q and triple matched slopes, then compare shared calendar dates
+        run: |
+          python -m scripts.run_rsds_wyoming_coobserved_photoperiod_v1 --out outputs/wyoming_shared_seasons
+          python -m json.tool outputs/wyoming_shared_seasons/wyoming_shared_calendar_two_taxa_result_v1.json > /dev/null
+      - name: Verify grouped result contains no individual source tags, original calendar dates, GPS lat/lon or hourly files
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('outputs/wyoming_shared_seasons/wyoming_shared_calendar_two_taxa_result_v1.json')
+          r=json.loads(p.read_text(encoding='utf-8'))
+          assert r['study_Doi']=='10.5441/001/1.703'
+          assert set(r['native_taxa'])=={'Odocoileus hemionus','Ovis canadensis'}
+          assert r['historical_12_ERA5_raw_JSON_HOLDS_UNCHANGED']
+          assert r['historical_48_source_signed_radiation_external_NONREPLICATED_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          if r['status'] in {'STUDY_COMMON_DATE_EVALUATED','INSUFFICIENT_COOCCURRENT_SOURCE_DATE_SUPPORT'}:
+              assert r['original_provider_GPS_MD5_verified']
+              assert r['both_native_taxa_original_all_date_and_original_triple_source_estimates_replayed']
+          def inspect(z):
+              if isinstance(z,dict):
+                  for key,v in z.items():
+                      assert key not in {'individual_id','animal_id','tag_id','source_year','calendar_date','date','longitude','latitude','location-lat','location-long','_grid','GPS_timestamp','GPS_time','per_tag_slopes'}
+                      inspect(v)
+              elif isinstance(z,list):
+                  for v in z: inspect(v)
+          inspect(r)
+          print('Wyoming within-one study two native taxa original GPS seasonal source comparison source-group-only verified:',r['status'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-Wyoming-within-study-shared-calendar-daylength-two-taxon-v1
+          path: outputs/wyoming_shared_seasons/wyoming_shared_calendar_two_taxa_result_v1.json
+          if-no-files-found: error
+      - name: Archive source-group result including unsupported sample status, never original GPS
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp outputs/wyoming_shared_seasons/wyoming_shared_calendar_two_taxa_result_v1.json research/RSDS_WYOMING_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_WYOMING_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: Wyoming two native taxa same calendar date photoperiod original source comparison"
+            git fetch origin science/wyoming-coobserved-date-photoperiod-contrast-v1
+            git rebase origin/science/wyoming-coobserved-date-photoperiod-contrast-v1
+            git push origin HEAD:science/wyoming-coobserved-date-photoperiod-contrast-v1
+          fi
