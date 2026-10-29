@@ -1,0 +1,117 @@
+name: RSDS two original coobserved carnivore studies temporal q and photoperiod
+on:
+  push:
+    branches:
+      - science/coyote-bobcat-two-study-time-niche-v1
+    paths:
+      - 'research/RSDS_COYOTE_BOBCAT_TWO_STUDY_TIME_NICHE_V1_CONTRACT.json'
+      - 'scripts/run_rsds_predator_pair_shared_date_temporal_v1.py'
+      - 'scripts/aggregate_rsds_predator_pair_two_study_temporal_v1.py'
+      - 'tests/test_rsds_predator_pair_shared_date_temporal_v1.py'
+      - 'tests/test_rsds_predator_pair_two_study_aggregate_v1.py'
+      - '.github/workflows/rsds-original-carnivore-temporal-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_source_frozen_known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/coyote-bobcat-two-study-time-niche-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original GPS q and astronomy native support
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Validate old original source SHA, study native taxonomy and synthetic source coobserved dates
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.verify_rsds_migration
+          python -m unittest discover -s tests -p 'test_rsds_predator_pair_shared_date_temporal_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_predator_pair_two_study_aggregate_v1.py' -v
+  new_original_predator_source_temporal:
+    needs: original_source_frozen_known_truth
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    strategy:
+      fail-fast: false
+      matrix:
+        region: [Washington, Illinois]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/coyote-bobcat-two-study-time-niche-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original native GPS q/daylength numerical support
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Verify old pre-event original MD5 and original GPS tag/hour coverage, then calculate NEW q and native time niche pair
+        run: |
+          python -m scripts.run_rsds_predator_pair_shared_date_temporal_v1 --region ${{ matrix.region }} --out outputs/carnivore_time
+      - name: Only original source study native taxon GROUP effects; never original telemetry
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-predator-original-${{ matrix.region }}-source-temporal-v1
+          path: outputs/carnivore_time/source_*.json
+          if-no-files-found: warn
+  two_original_study_source_equal_pair:
+    needs: new_original_predator_source_temporal
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/coyote-bobcat-two-study-time-niche-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-predator-original-*-source-temporal-v1
+          merge-multiple: true
+          path: outputs/carnivore_time
+      - name: Preserve both original source studies and all five source-native taxon rows and missingness
+        run: |
+          python -m scripts.aggregate_rsds_predator_pair_two_study_temporal_v1 --input outputs/carnivore_time --out research/RSDS_COYOTE_BOBCAT_TWO_STUDY_SHARED_DATE_TEMPORAL_V1_FIRST_RESULT_20261029.json
+          python -m json.tool research/RSDS_COYOTE_BOBCAT_TWO_STUDY_SHARED_DATE_TEMPORAL_V1_FIRST_RESULT_20261029.json > /dev/null
+      - name: Group-only result privacy and immutable historical negative evidence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('research/RSDS_COYOTE_BOBCAT_TWO_STUDY_SHARED_DATE_TEMPORAL_V1_FIRST_RESULT_20261029.json').read_text(encoding='utf-8'))
+          assert d['original_study_DOI_count']==2
+          assert d['native_study_taxon_rows']==5
+          assert d['preselected_primary_native_pair']==['Canis latrans','Lynx rufus']
+          assert d['previous_12_ERA5_source_JSON_HOLDS_UNCHANGED'] is True
+          assert d['previous_48_source_negative_direction_shortwave_external_replication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          text=json.dumps(d)
+          for s in ('"individual_id"','"animal_id"','"GPS_latitude"','"location-lat"','"timestamp"','"original_event_date"','"original_tag_id"'):
+              assert s not in text, 'Original animal telemetry in public source result'
+          print('Two published source DOI x five original native taxa original-GPS q scientific frame complete')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-two-carnivore-original-studies-coobserved-time-niche-v1
+          path: research/RSDS_COYOTE_BOBCAT_TWO_STUDY_SHARED_DATE_TEMPORAL_V1_FIRST_RESULT_20261029.json
+          if-no-files-found: error
+      - name: Commit first native original temporal source result with all HOLDs and no original GPS or tags
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_COYOTE_BOBCAT_TWO_STUDY_SHARED_DATE_TEMPORAL_V1_FIRST_RESULT_20261029.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: Illinois Washington coobserved original coyotes and bobcats diel q and daylength comparisons"
+            git fetch origin science/coyote-bobcat-two-study-time-niche-v1
+            git rebase origin/science/coyote-bobcat-two-study-time-niche-v1
+            git push origin HEAD:science/coyote-bobcat-two-study-time-niche-v1
+          fi
