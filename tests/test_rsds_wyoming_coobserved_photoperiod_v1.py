@@ -11,7 +11,7 @@ from scripts.run_rsds_wyoming_coobserved_photoperiod_v1 import (
     TAXA,SCHEDULES,frozen,daylength,as_three_original_calendar,
     matched_two_taxon_calendar,per_tag_effects,bootstrap_source,
     between_taxa_effect,same_calendar_date_difference,
-    monthly_block_calendar_contrast
+    monthly_block_calendar_contrast,replay_original_triple
 )
 
 
@@ -45,6 +45,27 @@ class WyomingWithinStudySharedDates(unittest.TestCase):
                             for x in prior["native_source_results"]))
         self.assertEqual(spec["date_filter"]["minimum_date_level"].split("shared dates")[0].strip(),
                          "For pooled calendar-date study comparison, >=20")
+
+    def test_replay_uses_actual_distinct_archived_native_sign_schema(self):
+        from unittest.mock import patch
+        spec, absolute, delta=frozen()
+        def fake_replay(taxon, original_gps, original_delta_row):
+            self.assertIn("new_strict_triple_original_tag_effects",original_delta_row)
+            historical=next(x for x in absolute["native_source_results"]
+                            if x["taxon"]==taxon)
+            return {
+                "source_q_sign_recurrence":
+                    historical["source_q_three_schedule_nominal_sign_stability"],
+                "source_daylength_slope_sign_recurrence":
+                    historical["source_daylength_three_schedule_nominal_sign_stability"],
+                "q_original_tag_means_on_exact_same_dates":
+                    historical["original_same_date_q_source_estimates"],
+                "q_daylength_per_hour_on_exact_same_dates":
+                    historical["original_same_date_daylength_slope_estimates"],
+            }
+        with patch("scripts.run_rsds_wyoming_coobserved_photoperiod_v1.replay_first_strict_three",
+                   side_effect=fake_replay):
+            self.assertTrue(replay_original_triple({s:{} for s in TAXA},absolute,delta))
 
     def test_all_synthetic_dates_shared_and_fixed_study_photoperiod_x(self):
         pool=synthetic()
