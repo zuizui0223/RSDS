@@ -103,7 +103,7 @@ def aggregate(sources):
                 "source_calendar_days":x["source_calendar_dates_with_both_taxa"],
                 "source_year_month_blocks":x["source_month_year_blocks"],
                 "native_original_tags_on_shared_source_dates":x["source_native_taxon_tag_support_on_shared_calendar"],
-                "source_native_pair":contrasts,
+                "native_source_pair":contrasts,
                 "calendar_year_month_block_pair":x["date_level_pair_difference_vs_daylength"],
             }
         full.append({"source_region":name,"source_original_study_DOI":src["doi"],
