@@ -39,7 +39,7 @@ jobs:
           from scripts.run_rsds_four_new_multinative_original_gps_temporal_v1 import fixed_sources
           c,entries=fixed_sources()
           assert len(c['sources'])==4
-          assert sum(len(x['registered_native_taxa']) for x in c['sources'])==10
+          assert sum(len(x['registered_taxa']) for x in c['sources'])==10
           assert len(entries)==4
           assert all(x['source_status']=='SOURCE_ONLY_ORIGINAL_FILE_ADMISSIBLE' for x in entries)
           assert all(x['original_animal_events_opened_before_file_freeze']==0 for x in entries)
