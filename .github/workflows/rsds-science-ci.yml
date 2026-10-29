@@ -333,6 +333,41 @@ jobs:
           assert d['old_48_source_external_signed_radiation_nonreplication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
           print('RSDS five source q and two original source q~daylength signed ecology results retained; exact animal-day support and negative climate source unchanged')
           PY
+      - name: Guard Wyoming same original study 193 shared calendar days and two opposite photoperiod q slopes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_wyoming_coobserved_photoperiod_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_wyoming_shared_season_first_result_v1.py' -v
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          from scripts.validate_rsds_wyoming_shared_season_ecology_v1 import validate
+          locked={
+            'research/RSDS_WYOMING_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json':
+              '9b04b18ee73227b4e7a1715ebfb97f610af66952',
+            'research/RSDS_WYOMING_SHARED_SEASON_DIVERGENT_PHOTOPERIOD_VALIDATION_V1_20261029.json':
+              'e7979c5ff720597704903254ec6f8ee33332b1ae',
+          }
+          for p,expected in locked.items():
+              raw=Path(p).read_bytes()
+              sha=hashlib.sha1(('blob '+str(len(raw))+'\0').encode()+raw).hexdigest()
+              assert sha==expected, f'Original Wyoming shared-calendar source result changed: {p}'
+          original=json.loads(Path(list(locked)[0]).read_text(encoding='utf-8'))
+          summarized=json.loads(Path(list(locked)[1]).read_text(encoding='utf-8'))
+          assert summarized==validate(), 'Wyoming original native taxon photoperiod interpretation changed'
+          assert original['status']=='STUDY_COMMON_DATE_EVALUATED'
+          assert original['original_provider_GPS_MD5_verified']
+          assert original['both_native_taxa_original_all_date_and_original_triple_source_estimates_replayed']
+          assert summarized['original_field_study_replications']==1
+          assert summarized['source_coobserved_calendar_dates']==193
+          assert summarized['original_taxon_source_tagged_95pct_results']['Odocoileus hemionus']['source_original_tag_n']==108
+          assert summarized['original_taxon_source_tagged_95pct_results']['Ovis canadensis']['source_original_tag_n']==41
+          assert summarized['all_three_GPS_schedules_show_mule_positive_bighorn_negative_and_positive_contrast']
+          assert summarized['previous_twelve_ERA5_raw_source_version_HOLDS_UNCHANGED']
+          assert summarized['previous_forty_eight_source_negative_direction_verdict_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          print('Wyoming 193 shared calendar dates; 108 mule deer and 41 bighorn tags; 3 GPS clocks opposite q/daylength signs, old holds frozen')
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
