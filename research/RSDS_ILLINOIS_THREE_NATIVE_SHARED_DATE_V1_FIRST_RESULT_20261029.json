@@ -1,0 +1,212 @@
+{
+  "MD5_verified": true,
+  "date": "2026-10-29",
+  "first_all_native_q_daylength_and_solar_source_replayed": true,
+  "native_taxa": [
+    "Canis latrans",
+    "Lynx rufus",
+    "Odocoileus virginianus"
+  ],
+  "old_12_ERA5_raw_SHA_HOLDS_UNCHANGED": true,
+  "previous_washington_temporal_no_eligible_tags_HOLD_UNCHANGED": true,
+  "prior_48_negative_shortwave_direction_external_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "source_all_native_q_levels_on_same_original_calendar": {
+    "Canis latrans": {
+      "daylength_original": {
+        "nominal_sign": "POSITIVE",
+        "original_tagged_animals": 8,
+        "source_animal_mean": 0.03744037618886841,
+        "source_tag_bootstrap95": [
+          0.009705669318817726,
+          0.06703121111357523
+        ]
+      },
+      "daylength_source_tagged_animals": 8,
+      "q_original": {
+        "nominal_sign": "POSITIVE",
+        "original_tagged_animals": 8,
+        "source_animal_mean": 0.268521642425637,
+        "source_tag_bootstrap95": [
+          0.17938320110821077,
+          0.3517427539986164
+        ]
+      },
+      "q_source_tagged_animals": 8
+    },
+    "Lynx rufus": {
+      "daylength_original": {
+        "nominal_sign": "NEGATIVE",
+        "original_tagged_animals": 5,
+        "source_animal_mean": -0.02342903720092846,
+        "source_tag_bootstrap95": [
+          -0.04230114412709945,
+          -0.004142494370127572
+        ]
+      },
+      "daylength_source_tagged_animals": 5,
+      "q_original": {
+        "nominal_sign": "POSITIVE",
+        "original_tagged_animals": 5,
+        "source_animal_mean": 0.09339268528468585,
+        "source_tag_bootstrap95": [
+          0.03479263542402441,
+          0.16736574998629808
+        ]
+      },
+      "q_source_tagged_animals": 5
+    },
+    "Odocoileus virginianus": {
+      "daylength_original": {
+        "nominal_sign": "INCLUDES_ZERO",
+        "original_tagged_animals": 12,
+        "source_animal_mean": -0.0003715996655885711,
+        "source_tag_bootstrap95": [
+          -0.005045155900701676,
+          0.004313408928235524
+        ]
+      },
+      "daylength_source_tagged_animals": 12,
+      "q_original": {
+        "nominal_sign": "INCLUDES_ZERO",
+        "original_tagged_animals": 12,
+        "source_animal_mean": 0.0024497395467369303,
+        "source_tag_bootstrap95": [
+          -0.015237087835176725,
+          0.02085665514183805
+        ]
+      },
+      "q_source_tagged_animals": 12
+    }
+  },
+  "source_all_three_native_support": {
+    "fixed_point_source_support_iterations": 3,
+    "native_original_tag_count_on_all_three_shared_source_dates": {
+      "Canis latrans": 8,
+      "Lynx rufus": 5,
+      "Odocoileus virginianus": 12
+    },
+    "original_calendar_years_and_dates_not_exported": true,
+    "reference_astronomical_daylength_latitude_degrees": 43.0,
+    "shared_source_calendar_dates_all_three_native_taxa": 169,
+    "shared_source_year_month_blocks": 9
+  },
+  "status": "THREE_NATIVE_SHARED_SOURCE_DATE_EVALUATED",
+  "study_DOI": "10.5441/001/1.649",
+  "three_source_native_pair_q_and_daylength": {
+    "Canis latrans MINUS Lynx rufus": {
+      "daily_mean_q_difference_vs_standard_daylength": {
+        "date_block95": [
+          0.03346140914613944,
+          0.06694221022865039
+        ],
+        "slope": 0.04628893203079968,
+        "source_calendar_days": 169,
+        "source_year_month_blocks": 9,
+        "status": "POSITIVE"
+      },
+      "native_first": "Canis latrans",
+      "native_second": "Lynx rufus",
+      "q": {
+        "first_minus_second_mean": 0.1751289571409511,
+        "original_tag_bootstrap95": [
+          0.07196677780192551,
+          0.27848170306284653
+        ],
+        "source_tag_counts": [
+          8,
+          5
+        ],
+        "status": "POSITIVE"
+      },
+      "q_daylength": {
+        "first_minus_second_mean": 0.06086941338979687,
+        "original_tag_bootstrap95": [
+          0.027756584192535246,
+          0.09610881274819694
+        ],
+        "source_tag_counts": [
+          8,
+          5
+        ],
+        "status": "POSITIVE"
+      }
+    },
+    "Canis latrans MINUS Odocoileus virginianus": {
+      "daily_mean_q_difference_vs_standard_daylength": {
+        "date_block95": [
+          0.0003869453404757205,
+          0.035402906078953224
+        ],
+        "slope": 0.019945963592492264,
+        "source_calendar_days": 169,
+        "source_year_month_blocks": 9,
+        "status": "POSITIVE"
+      },
+      "native_first": "Canis latrans",
+      "native_second": "Odocoileus virginianus",
+      "q": {
+        "first_minus_second_mean": 0.26607190287890004,
+        "original_tag_bootstrap95": [
+          0.18299703881519594,
+          0.3493443706800063
+        ],
+        "source_tag_counts": [
+          8,
+          12
+        ],
+        "status": "POSITIVE"
+      },
+      "q_daylength": {
+        "first_minus_second_mean": 0.03781197585445698,
+        "original_tag_bootstrap95": [
+          0.009015025581635475,
+          0.0673058958280639
+        ],
+        "source_tag_counts": [
+          8,
+          12
+        ],
+        "status": "POSITIVE"
+      }
+    },
+    "Lynx rufus MINUS Odocoileus virginianus": {
+      "daily_mean_q_difference_vs_standard_daylength": {
+        "date_block95": [
+          -0.054049453791821626,
+          -0.011586201283565875
+        ],
+        "slope": -0.026342968438307413,
+        "source_calendar_days": 169,
+        "source_year_month_blocks": 9,
+        "status": "NEGATIVE"
+      },
+      "native_first": "Lynx rufus",
+      "native_second": "Odocoileus virginianus",
+      "q": {
+        "first_minus_second_mean": 0.09094294573794892,
+        "original_tag_bootstrap95": [
+          0.03233823023224564,
+          0.16318197531046322
+        ],
+        "source_tag_counts": [
+          5,
+          12
+        ],
+        "status": "POSITIVE"
+      },
+      "q_daylength": {
+        "first_minus_second_mean": -0.02305743753533989,
+        "original_tag_bootstrap95": [
+          -0.04318764921144781,
+          -0.001588777620452841
+        ],
+        "source_tag_counts": [
+          5,
+          12
+        ],
+        "status": "NEGATIVE"
+      }
+    }
+  },
+  "version": "RSDS_ILLINOIS_ALL_THREE_ORIGINAL_NATIVE_SHARED_DATE_Q_V1_RESULT"
+}
