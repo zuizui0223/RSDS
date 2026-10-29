@@ -34,10 +34,15 @@ def synthetic(n1=7,n2=8,days=120):
 
 class WyomingWithinStudySharedDates(unittest.TestCase):
     def test_frozen_original_MD5_study_frame_and_prior_result_immutable(self):
-        spec,prior=frozen()
+        spec,prior,prior_delta=frozen()
         self.assertEqual(spec["original_study"]["doi"],"10.5441/001/1.703")
         self.assertEqual([x["taxon"] for x in prior["native_source_results"]],
                          list(TAXA))
+        self.assertEqual({x["taxon"] for x in prior_delta["taxa"]},set(TAXA))
+        self.assertTrue(all("new_strict_triple_original_tag_effects" in x
+                            for x in prior_delta["taxa"]))
+        self.assertTrue(all("original_same_date_q_source_estimates" in x
+                            for x in prior["native_source_results"]))
         self.assertEqual(spec["date_filter"]["minimum_date_level"].split("shared dates")[0].strip(),
                          "For pooled calendar-date study comparison, >=20")
 
