@@ -42,6 +42,9 @@ class TwoIndependentOriginalStudyCalendarComparison(unittest.TestCase):
         self.assertEqual(out["original_studies_with_same_opposite_native_daylength_sign_through_three_clocks"],
                          ["Wyoming","Utah"])
         self.assertTrue(out["both_original_studies_show_same_source_native_sign_if_supported"])
+        self.assertTrue(out["both_studies_preserve_native_diel_q_ordering_if_supported"])
+        self.assertEqual(out["original_studies_with_mule_higher_observed_night_relative_q_through_three_clocks"],
+                         ["Wyoming","Utah"])
 
     def test_utah_insufficient_source_days_are_neither_confirmed_nor_negative_biology(self):
         utah=utah_synthetic_from_public_schema()
@@ -88,6 +91,29 @@ class TwoIndependentOriginalStudyCalendarComparison(unittest.TestCase):
             "q_daylength_slope_mule_minus_bighorn_by_schedule"]["schedules"]["original"]
         x["mule_minus_bighorn_slope"]+=0.0001
         with self.assertRaisesRegex(ValueError,"algebra"):
+            compare(utah,wyoming_fixture())
+
+    def test_diel_q_level_ordering_is_distinct_from_photoperiod_slope(self):
+        utah=utah_synthetic_from_public_schema()
+        wyoming=wyoming_fixture()
+        report=compare(utah,wyoming)
+        self.assertTrue(report["both_studies_preserve_native_diel_q_ordering_if_supported"])
+        for source in report["all_study_source_original_native_photoperiod_sign_results"]:
+            for phase in SCHEDULES:
+                z=source["three_observation_schedules"][phase]
+                self.assertEqual(z["q_contrast"]["nominal_sign"],"NOMINAL_POSITIVE")
+                self.assertTrue(z["mule_higher_observed_night_relative_q_supported"])
+                self.assertAlmostEqual(
+                    z["native_q_levels"][SOURCE[0]]["mean"]-
+                    z["native_q_levels"][SOURCE[1]]["mean"],
+                    z["q_contrast"]["mule_minus_bighorn"], places=12)
+
+    def test_diel_q_source_mule_bighorn_algebraic_tamper_fails_closed(self):
+        utah=utah_synthetic_from_public_schema()
+        s=utah["same_study_between_native_taxon"][
+            "q_mule_minus_bighorn_by_schedule"]["schedules"]["original"]
+        s["mule_minus_bighorn_slope"]+=0.0001
+        with self.assertRaisesRegex(ValueError,"q contrast fails original native algebra"):
             compare(utah,wyoming_fixture())
 
     def test_prior_old_radiation_external_no_replication_not_modifiable(self):
