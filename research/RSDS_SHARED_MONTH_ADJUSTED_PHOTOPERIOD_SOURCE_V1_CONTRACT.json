@@ -1,0 +1,79 @@
+{
+  "version": "RSDS_WITHIN_MONTH_SHARED_CALENDAR_PHOTOPERIOD_V1",
+  "date": "2026-10-29",
+  "stage": "POST_ILLINOIS_AND_WYOMING_PHOTOPERIOD_OUTCOMES_EXPLORATORY_SEASONAL_CONFOUNDING_DIAGNOSTIC",
+  "scientific_question": "Are source-coobserved species contrasts in NIGHT-DAY observed GPS displacement associated with astronomical daylength only across different calendar months, or do relationships also persist within fixed calendar-year × month blocks of the SAME original study-shared days?",
+  "fixed_original_sources": [
+    {
+      "region": "Illinois",
+      "doi": "10.5441/001/1.649",
+      "taxa": [
+        "Canis latrans",
+        "Lynx rufus",
+        "Odocoileus virginianus"
+      ],
+      "shared_native_calendar_days": 169,
+      "year_month_blocks": 9,
+      "source_result": "research/RSDS_ILLINOIS_THREE_NATIVE_SHARED_DATE_V1_FIRST_RESULT_20261029.json",
+      "source_result_git_blob_sha": "924156e8f98d0bb9fda2f9d23aabc03060af2a31",
+      "pairs": [
+        [
+          "Canis latrans",
+          "Lynx rufus"
+        ],
+        [
+          "Canis latrans",
+          "Odocoileus virginianus"
+        ],
+        [
+          "Lynx rufus",
+          "Odocoileus virginianus"
+        ]
+      ],
+      "schedules": [
+        "original"
+      ]
+    },
+    {
+      "region": "Wyoming",
+      "doi": "10.5441/001/1.703",
+      "taxa": [
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "shared_native_calendar_days": 193,
+      "year_month_blocks": 8,
+      "source_result": "research/RSDS_WYOMING_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json",
+      "source_result_git_blob_sha": "9b04b18ee73227b4e7a1715ebfb97f610af66952",
+      "pairs": [
+        [
+          "Odocoileus hemionus",
+          "Ovis canadensis"
+        ]
+      ],
+      "schedules": [
+        "original",
+        "even",
+        "odd"
+      ]
+    }
+  ],
+  "source_integrity": "Before opening new within-month coefficients: verify original published Movebank source bitstream UUID/bytes/MD5 and each previously frozen native source q/daylength effect and original same-calendar date count/month block count, exactly the same first individual/date support, and the previously archived unadjusted daily taxon-difference photoperiod slopes to 1e-12. No source/taxon/day/month re-selection using q outcomes.",
+  "calendar_support": "Same source study shared eligible (year, solar-local date) across all native taxa. Illinois: fixed point three-native common calendar, each source tag year >=10 source shared dates and reference 43N daylight variation >=0.5h. Wyoming: original 3 UTC sampling schedules each with the same source-tag supported dates as earlier Wyoming study; fixed-point two-native common calendar.",
+  "time_and_weather": "Astronomical daylength at the SAME fixed 43 degrees north for both sources. No ERA5 weather is used. Date q difference computed per source-native species by equal available tagged animal daily q and subtracting second from first; retains source-native tag composition variation by day. Exact dates, GPS positions, year/month labels never emitted.",
+  "predefined_estimator": "For each native species-pair q difference y_d and standardized 43N astronomical daylength L_d, for blocks b=(year,calendar_month), calculate centered x=L_d−mean_b L, centered y=y_d−mean_b y. Within-month coefficient beta=sum_b,d(x_center*y_center)/sum_b,d(x_center^2). This is ordinary OLS slope with block fixed intercepts, not independent astronomical/causal identification.",
+  "source_support": "Eligible block >=5 shared dates, daylight span >=0.05h; eligible source >=5 eligible blocks, >=40 total days and sum within-block centered L² >=0.25 h². Thresholds frozen before new slope reading. No absence-to-zero conversion.",
+  "uncertainty": "2000 deterministic year-month BLOCK bootstrap resamples with replacement of eligible blocks; recompute within-block centered cross-products and slope, retaining block lengths. 2.5/97.5 percentile only if >=1900 finite bootstrap draws. Leave-one-month-block-out slope range. No iid GPS/day-level P values, nominal not multiple-comparison corrected.",
+  "result_scope": "Two original studies, Illinois 3 taxon pairs and Wyoming one native taxon pair × 3 source GPS sampling schedules = six contrasts; represent only two independent field studies, not six independent populations or worldwide species guild effects. Preserve all four pairs and schedule statuses.",
+  "interpretation_ceiling": [
+    "Within month/year fixed effects remove comparisons BETWEEN months but do not isolate photoperiod causality: astronomical L is a deterministic smooth function of calendar day and within-month date trends can proxy food, migration, breeding, temperature, wind, rainfall or observation effort.",
+    "Only nine source year-month blocks in Illinois and eight in Wyoming; block bootstrap intervals can be sensitive to cluster leverage and cannot be interpreted as global population confidence.",
+    "Different coobserved species may have changing original tagged animal composition, source detection frequencies, seasonal coverage, actual within-day GPS fix times and microhabitats despite SAME source calendar dates.",
+    "NIGHT−DAY q is observed log1p straight-line minimum GPS displacement speed not fraction of time active, energetic expenditure, prey capture or causal partitioning of true activity.",
+    "Original Illinois source pairs and their datewise q~daylength signs are already known; this is post-result diagnostic, not blind replication.",
+    "All old original source provider data and 48-source negative signed shortwave external nonreplication and 12 ERA5 JSON SHA historical HOLDS remain unchanged.",
+    "No original precise source year/month, individual tag ID, event date/time, GPS coordinate, per-tag speed or raw original telemetry is published."
+  ],
+  "old_48_source_radiation_replication": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "old_12_ERA5_source_version_HOLDS": "UNCHANGED"
+}

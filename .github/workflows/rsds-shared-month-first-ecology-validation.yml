@@ -1,0 +1,49 @@
+name: RSDS Illinois Wyoming within-month shared-calendar biological first result validation
+on:
+  push:
+    branches:
+      - science/shared-calendar-within-month-photoperiod-v1
+    paths:
+      - 'scripts/validate_rsds_shared_month_photoperiod_v1.py'
+      - 'tests/test_rsds_shared_month_photoperiod_first_ecology_v1.py'
+      - '.github/workflows/rsds-shared-month-first-ecology-validation.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  first_source_GPS_month_effect_validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/shared-calendar-within-month-photoperiod-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test all original source Git blob pins and 6 native seasonal comparisons
+        run: python -m unittest discover -s tests -p 'test_rsds_shared_month_photoperiod_first_ecology_v1.py' -v
+      - name: Write independent source-only first-result interpretation audit
+        run: |
+          python -m scripts.validate_rsds_shared_month_photoperiod_v1 --out research/RSDS_SHARED_MONTH_PHOTOPERIOD_VALIDATED_ECOLOGY_20261029.json
+          python -m json.tool research/RSDS_SHARED_MONTH_PHOTOPERIOD_VALIDATED_ECOLOGY_20261029.json > /dev/null
+      - name: Preserve immutable study group original data-based inference receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-illinois-wyoming-source-month-fixed-astronomical-season-validated-ecology
+          path: research/RSDS_SHARED_MONTH_PHOTOPERIOD_VALIDATED_ECOLOGY_20261029.json
+          if-no-files-found: error
+      - name: Commit source group year-month conditionally adjusted ecological interpretation only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_SHARED_MONTH_PHOTOPERIOD_VALIDATED_ECOLOGY_20261029.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: validate exactly two conditional same-month source photoperiod contrasts among six source pairs"
+            git fetch origin science/shared-calendar-within-month-photoperiod-v1
+            git rebase origin/science/shared-calendar-within-month-photoperiod-v1
+            git push origin HEAD:science/shared-calendar-within-month-photoperiod-v1
+          fi

@@ -1,0 +1,126 @@
+name: RSDS Illinois Wyoming coobserved GPS q daylength within-calendar-month test
+on:
+  push:
+    branches:
+      - science/shared-calendar-within-month-photoperiod-v1
+    paths:
+      - 'research/RSDS_SHARED_MONTH_ADJUSTED_PHOTOPERIOD_SOURCE_V1_CONTRACT.json'
+      - 'scripts/rsds_within_month_photoperiod_shared_calendar_v1.py'
+      - 'scripts/run_rsds_shared_calendar_month_photoperiod_v1.py'
+      - 'scripts/aggregate_rsds_within_month_shared_calendar_v1.py'
+      - 'tests/test_rsds_within_month_photoperiod_source_v1.py'
+      - 'tests/test_rsds_within_month_shared_source_aggregate_v1.py'
+      - '.github/workflows/rsds-shared-calendar-month-photoperiod-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  frozen_source_and_month_block_known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/shared-calendar-within-month-photoperiod-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Reuse original source q geometry dependencies
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Original source research immutable and no sign-selection
+        run: python -m scripts.verify_rsds_migration
+      - name: Known-truth month-only confounding versus within-month astronomy and all-pair HOLD support
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_within_month_photoperiod_source_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_within_month_shared_source_aggregate_v1.py' -v
+  original_native_source_monthly_contrasts:
+    needs: frozen_source_and_month_block_known_truth
+    runs-on: ubuntu-latest
+    timeout-minutes: 80
+    strategy:
+      fail-fast: false
+      matrix:
+        region: [Illinois, Wyoming]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/shared-calendar-within-month-photoperiod-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original GPS/q and daylength numerical support
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Revalidate published original Movebank bitstream MD5, prior source q, and same-calendar original slopes BEFORE within-month association
+        run: |
+          python -m scripts.run_rsds_shared_calendar_month_photoperiod_v1 --source ${{ matrix.region }} --out outputs/shared_month
+      - name: Upload DOI/group-only all sign and source HOLD results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-shared-calendar-original-${{ matrix.region }}-within-month-v1
+          path: outputs/shared_month/*_shared_month.json
+          if-no-files-found: warn
+  full_two_study_native_month_inference:
+    needs: original_native_source_monthly_contrasts
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/shared-calendar-within-month-photoperiod-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-shared-calendar-original-*-within-month-v1
+          merge-multiple: true
+          path: outputs/shared_month
+      - name: Aggregate all six original native pair schedule comparisons including unavailable month evidence
+        run: |
+          python -m scripts.aggregate_rsds_within_month_shared_calendar_v1 --inputs outputs/shared_month --out research/RSDS_SHARED_MONTH_ADJUSTED_PHOTOPERIOD_TWO_STUDY_V1_FIRST_RESULT_20261029.json
+          python -m json.tool research/RSDS_SHARED_MONTH_ADJUSTED_PHOTOPERIOD_TWO_STUDY_V1_FIRST_RESULT_20261029.json > /dev/null
+      - name: Validate original event confidentiality and all old source HOLDS
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_SHARED_MONTH_ADJUSTED_PHOTOPERIOD_TWO_STUDY_V1_FIRST_RESULT_20261029.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['original_studies']==2
+          assert d['original_source_pair_clock_comparisons_expected']==6
+          assert d['old_12_ERA5_raw_JSON_HOLDS_UNCHANGED']
+          assert d['old_48_signed_radiation_external_nonreplication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          forbidden={'individual_id','animal_id','tag_id','timestamp','event_year','event_month','event_date','latitude','longitude','source_original_gridyear','raw_gps','gps_fixes'}
+          def walk(x):
+              if isinstance(x,dict):
+                  for k,v in x.items():
+                      assert k not in forbidden, f'private source coordinate/id/time field: {k}'
+                      walk(v)
+              elif isinstance(x,list):
+                  for y in x: walk(y)
+          walk(d)
+          print('All original 2 field studies, 6 fixed native species/clock pairs, old external radiation failure and confidential GPS preserved')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-illinois-wyoming-within-month-seasonal-photoperiod-source-audit
+          path: research/RSDS_SHARED_MONTH_ADJUSTED_PHOTOPERIOD_TWO_STUDY_V1_FIRST_RESULT_20261029.json
+          if-no-files-found: error
+      - name: Commit new first result only, without changing archived prior native dates/slopes
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_SHARED_MONTH_ADJUSTED_PHOTOPERIOD_TWO_STUDY_V1_FIRST_RESULT_20261029.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: original Illinois/Wyoming coobserved species q-daylength slopes within source calendar months"
+            git fetch origin science/shared-calendar-within-month-photoperiod-v1
+            git rebase origin/science/shared-calendar-within-month-photoperiod-v1
+            git push origin HEAD:science/shared-calendar-within-month-photoperiod-v1
+          fi
