@@ -1,0 +1,20 @@
+{
+  "both_native_taxa_original_all_date_and_original_triple_source_estimates_replayed": false,
+  "calendar_date_paired_source_difference": null,
+  "date": "2026-10-29",
+  "historical_12_ERA5_raw_JSON_HOLDS_UNCHANGED": true,
+  "historical_48_source_signed_radiation_external_NONREPLICATED_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "hold_error_type": "KeyError",
+  "hold_stage": "PREVIOUS_TRIPLE_DATE_Q_DAYLENGTH_REPLAY",
+  "native_taxa": [
+    "Odocoileus hemionus",
+    "Ovis canadensis"
+  ],
+  "original_provider_GPS_MD5_verified": true,
+  "same_study_between_native_taxon": null,
+  "shared_support": null,
+  "source_taxon_results": [],
+  "status": "ORIGINAL_WYOMING_SOURCE_OR_SHARED_DATE_HOLD",
+  "study_Doi": "10.5441/001/1.703",
+  "version": "RSDS_WYOMING_COOCCURRENT_CALENDAR_DAY_PHOTOPERIOD_V1_ORIGINAL_RESULT"
+}
