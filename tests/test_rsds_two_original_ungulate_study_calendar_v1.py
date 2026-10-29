@@ -86,7 +86,7 @@ class TwoIndependentOriginalStudyCalendarComparison(unittest.TestCase):
         utah=utah_synthetic_from_public_schema()
         x=utah["same_study_between_native_taxon"][
             "q_daylength_slope_mule_minus_bighorn_by_schedule"]["schedules"]["original"]
-        x["mule_minus_bighorn_slope"]+=.2
+        x["mule_minus_bighorn_slope"]+=0.0001
         with self.assertRaisesRegex(ValueError,"algebra"):
             compare(utah,wyoming_fixture())
 
