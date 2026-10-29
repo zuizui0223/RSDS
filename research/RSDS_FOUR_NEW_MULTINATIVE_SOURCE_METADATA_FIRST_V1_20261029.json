@@ -1,0 +1,108 @@
+{
+  "version": "RSDS_FOUR_NEW_MULTINATIVE_SOURCE_ONLY_ORIGINAL_GPS_V1",
+  "date": "2026-10-29",
+  "original_published_study_count": 4,
+  "registered_native_taxon_rows": 10,
+  "source_only_admissible_original_files": 4,
+  "source_only_metadata_HOLDS": 0,
+  "animal_GPS_events_read_by_source_only_preflight": 0,
+  "source_file_entries": [
+    {
+      "original_repository_package_uuid": "f9b4b052-8169-4ba8-9f96-9ae0ab883dd0",
+      "published_DOI": "10.5441/001/1.2cp86266",
+      "original_study_id": "174165487",
+      "registered_native_taxa": [
+        "Chelonoidis donfaustoi",
+        "Chelonoidis hoodensis",
+        "Chelonoidis porteri"
+      ],
+      "published_source_license": "CC0 1.0 Universal",
+      "metadata_reported_animals": 46,
+      "metadata_reported_original_fixes": 502845,
+      "original_animal_events_opened_before_file_freeze": 0,
+      "source_original_file": {
+        "filename": "Scaling of movement in Galapagos tortoises (data from Bastille-Rousseau et al. 2016).csv",
+        "bitstream_uuid": "a36d2464-7ac6-404c-a2fd-50cb00075fa5",
+        "bytes": 136916273,
+        "checksum": {
+          "checkSumAlgorithm": "MD5",
+          "value": "1f006ac46e436fc648e0de423d6f3bfd"
+        }
+      },
+      "source_status": "SOURCE_ONLY_ORIGINAL_FILE_ADMISSIBLE",
+      "source_only_primary_selection_rule": "LARGEST_ORIGINAL_CSV_AT_LEAST_10X_COMPANION_PRE_EVENT"
+    },
+    {
+      "original_repository_package_uuid": "1111b046-b2fa-44a1-a79c-847a6c0ba235",
+      "published_DOI": "10.5441/001/1.3fv21n7m",
+      "original_study_id": "350174730",
+      "registered_native_taxa": [
+        "Anas acuta",
+        "Anas platyrhynchos"
+      ],
+      "published_source_license": "CC0 1.0 Universal",
+      "metadata_reported_animals": 39,
+      "metadata_reported_original_fixes": 422545,
+      "original_animal_events_opened_before_file_freeze": 0,
+      "source_original_file": {
+        "filename": "Dabbling duck migration Ottenby 2017 (Anas platyrhynchos, Anas acuta).csv",
+        "bitstream_uuid": "3b2a830b-27eb-471b-a1f3-8d7e1a0f41f1",
+        "bytes": 128003020,
+        "checksum": {
+          "checkSumAlgorithm": "MD5",
+          "value": "f1a104040111ba4aab992af7b612f494"
+        }
+      },
+      "source_status": "SOURCE_ONLY_ORIGINAL_FILE_ADMISSIBLE"
+    },
+    {
+      "original_repository_package_uuid": "569fdce7-bd58-41b1-83c8-e4def740dae0",
+      "published_DOI": "10.5441/001/1.mf903197",
+      "original_study_id": "2919708",
+      "registered_native_taxa": [
+        "Torgos tracheliotus",
+        "Gyps africanus"
+      ],
+      "published_source_license": "CC0 1.0 Universal",
+      "metadata_reported_animals": 15,
+      "metadata_reported_original_fixes": 346650,
+      "original_animal_events_opened_before_file_freeze": 0,
+      "source_original_file": {
+        "filename": "HUJ MoveEcol Lab Israel_ Foraging search efficiency in white backed & lappet-faced vultures, Namibia (data from Spiegel et al. 2013) V2.csv",
+        "bitstream_uuid": "32d3670b-851b-46c5-963b-d2a0c7e3f725",
+        "bytes": 121120202,
+        "checksum": {
+          "checkSumAlgorithm": "MD5",
+          "value": "525b73c1986901fde87482a2d2fe4006"
+        }
+      },
+      "source_status": "SOURCE_ONLY_ORIGINAL_FILE_ADMISSIBLE"
+    },
+    {
+      "original_repository_package_uuid": "8318572a-a9d8-4d9e-b685-7db8a73bdf86",
+      "published_DOI": "10.5441/001/1.fk899541",
+      "original_study_id": "1904388965",
+      "registered_native_taxa": [
+        "Branta leucopsis",
+        "Anser albifrons",
+        "Anser anser"
+      ],
+      "published_source_license": "CC0 1.0 Universal",
+      "metadata_reported_animals": 185,
+      "metadata_reported_original_fixes": 479064,
+      "original_animal_events_opened_before_file_freeze": 0,
+      "source_original_file": {
+        "filename": "GPS data from More grazing, more damage Assessed yield loss on agricultural grassland relates non-linearly to goose grazing pressure.csv",
+        "bitstream_uuid": "7496bc82-dbb2-469f-ab32-27690f188089",
+        "bytes": 117340876,
+        "checksum": {
+          "checkSumAlgorithm": "MD5",
+          "value": "1597af159115bd206aaa9e042f44fcc7"
+        }
+      },
+      "source_status": "SOURCE_ONLY_ORIGINAL_FILE_ADMISSIBLE"
+    }
+  ],
+  "sample_was_frozen_before_animal_temporal_q_outcomes": true,
+  "original_FOUR_studies_not_four_animal_populations_or_globally_random": true
+}

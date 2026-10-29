@@ -1,0 +1,164 @@
+{
+  "African_vulture_source_night_day_q": "UNSUPPORTED_NO_APPROPRIATE_SOURCE_TAGS",
+  "Galapagos_exact_registered_taxon_label_mapping": "UNRESOLVED_ZERO_EXACT_REGISTERED_TAXON_ROWS_NOT_BIOLOGICAL_ZERO",
+  "Galapagos_metadata_source_only_primary_file_selected_and_MD5_verified": true,
+  "all_three_frozen_original_goose_source_native_pairs": [
+    {
+      "descriptive_source_month_block_bootstrap95": [
+        -0.03022741133340843,
+        0.041609946716889404
+      ],
+      "month_nominal_sign": "INCLUDES_ZERO",
+      "pair_q_nominal_sign": "NEGATIVE",
+      "source_NIGHT_DAY_q_difference": -0.10011883017417918,
+      "source_month_leave_one_out_slope_range": [
+        -0.011370068783195375,
+        0.016020727392224276
+      ],
+      "source_original_individual_pair_bootstrap95": [
+        -0.12091102164165946,
+        -0.07805766777053674
+      ],
+      "source_year_month_blocks": 5,
+      "taxa": [
+        "Branta leucopsis",
+        "Anser albifrons"
+      ],
+      "within_month_study_reference_daylength_slope": 0.0008682272357895166
+    },
+    {
+      "descriptive_source_month_block_bootstrap95": [
+        -0.10660402275366235,
+        0.02093302057024266
+      ],
+      "month_nominal_sign": "INCLUDES_ZERO",
+      "pair_q_nominal_sign": "NEGATIVE",
+      "source_NIGHT_DAY_q_difference": -0.11485708938299688,
+      "source_month_leave_one_out_slope_range": [
+        -0.07270903248661914,
+        -0.01690180922593517
+      ],
+      "source_original_individual_pair_bootstrap95": [
+        -0.14305655218422103,
+        -0.08499959394499611
+      ],
+      "source_year_month_blocks": 5,
+      "taxa": [
+        "Branta leucopsis",
+        "Anser anser"
+      ],
+      "within_month_study_reference_daylength_slope": -0.035073359377631314
+    },
+    {
+      "descriptive_source_month_block_bootstrap95": [
+        -0.11045604429392274,
+        -0.003916419628667224
+      ],
+      "month_nominal_sign": "NEGATIVE",
+      "pair_q_nominal_sign": "INCLUDES_ZERO",
+      "source_NIGHT_DAY_q_difference": -0.014738259208817703,
+      "source_month_leave_one_out_slope_range": [
+        -0.06133896370342375,
+        -0.02735806255491876
+      ],
+      "source_original_individual_pair_bootstrap95": [
+        -0.04520710993760503,
+        0.017514284978339026
+      ],
+      "source_year_month_blocks": 5,
+      "taxa": [
+        "Anser albifrons",
+        "Anser anser"
+      ],
+      "within_month_study_reference_daylength_slope": -0.03594158661342082
+    }
+  ],
+  "date": "2026-10-29",
+  "duck_mallard_full_study_negative_q": "NEGATIVE_UNADJUSTED_ORIGINAL_TAG_BOOTSTRAP",
+  "duck_mallard_full_study_q_eligible_tagged_animals": 21,
+  "goose_native_pair_q_nominal_interval_counts": {
+    "INCLUDES_ZERO": 1,
+    "NEGATIVE": 2,
+    "POSITIVE": 0
+  },
+  "goose_native_q_and_study_reference_daylength": [
+    {
+      "daylength_nominal_interval_sign": "NEGATIVE",
+      "daylength_original_tag_bootstrap95": [
+        -0.030733783780547766,
+        -0.012772078930820812
+      ],
+      "native_taxon": "Branta leucopsis",
+      "observed_NIGHT_minus_DAY_GPS_q": -0.1840335077564767,
+      "original_same_calendar_q_tag_count": 62,
+      "q_nominal_interval_sign": "NEGATIVE",
+      "q_original_tag_bootstrap95": [
+        -0.1954815964064487,
+        -0.17214779843636513
+      ],
+      "q_per_hour_study_reference_daylength_slope": -0.021707250275369374
+    },
+    {
+      "daylength_nominal_interval_sign": "INCLUDES_ZERO",
+      "daylength_original_tag_bootstrap95": [
+        -0.0393434785999419,
+        0.005781983386898815
+      ],
+      "native_taxon": "Anser albifrons",
+      "observed_NIGHT_minus_DAY_GPS_q": -0.08391467758229752,
+      "original_same_calendar_q_tag_count": 11,
+      "q_nominal_interval_sign": "NEGATIVE",
+      "q_original_tag_bootstrap95": [
+        -0.10156278334000637,
+        -0.06694712015891909
+      ],
+      "q_per_hour_study_reference_daylength_slope": -0.015805411455122778
+    },
+    {
+      "daylength_nominal_interval_sign": "POSITIVE",
+      "daylength_original_tag_bootstrap95": [
+        0.008882631811842349,
+        0.03177315012183498
+      ],
+      "native_taxon": "Anser anser",
+      "observed_NIGHT_minus_DAY_GPS_q": -0.06917641837347982,
+      "original_same_calendar_q_tag_count": 10,
+      "q_nominal_interval_sign": "NEGATIVE",
+      "q_original_tag_bootstrap95": [
+        -0.09630916119228468,
+        -0.04398645028166272
+      ],
+      "q_per_hour_study_reference_daylength_slope": 0.020657883034855887
+    }
+  ],
+  "goose_within_month_pair_daylength_nominal_interval_counts": {
+    "INCLUDES_ZERO": 2,
+    "NEGATIVE": 1,
+    "POSITIVE": 0
+  },
+  "new_coobserved_geese_original_study_DOI": "10.5441/001/1.fk899541",
+  "new_coobserved_geese_source_study_native_taxa": 3,
+  "new_geese_original_same_source_calendar_days": 120,
+  "new_geese_source_year_month_blocks": 5,
+  "original_multinative_studies_with_any_all_taxa_shared_q_calendar": 1,
+  "original_source_studies_selected_before_new_q": 4,
+  "original_studies_with_no_all_native_shared_calendar": 2,
+  "previous_12_ERA5_raw_JSON_HOLDS_UNCHANGED": true,
+  "previous_48_source_signed_shortwave_direction_EXTERNAL_NONREPLICATED_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "registered_native_study_taxon_rows": 10,
+  "scientific_limitations": [
+    "Only one of the four additional original field studies supports all preselected native taxa on exactly the same source calendar under the predeclared q definition. This is meaningful sampling qualification, not absence of ecological differences in the other 3.",
+    "Galapagos primary original file MD5 matches, but none of its three registered taxon labels appear under exact canonical taxon matching; diagnose metadata taxonomy/schema before making any animal conclusion. Do not replace the source/file or infer no turtles.",
+    "The 120 goose calendar dates do not imply geese occupied the same geography, shared predators or interacted; real individual encountered sunshine, temperature and weather are not measured.",
+    "All goose q values are recorded straight-line GPS displacement speed contrasts rather than biological activity hours. Instrument schedules may differ among species within the same study.",
+    "A pair q difference has independent tagged animal bootstrap uncertainty, not study-global replication. Source-month conditional q-daylength association can reflect calendar/season rather than causal photoperiod.",
+    "Five observed year-month calendar blocks and multiple native pair comparisons are not sufficient for a globally general ecological law or adjusted inference.",
+    "Older 8-study macro source ecological results, 12 old ERA5 raw JSON source holds, and 48-study heldout signed radiation negative replication are unchanged."
+  ],
+  "source_file_snapshot_and_original_behavior_first_result_git_blobs": {
+    "research/RSDS_FOUR_NEW_MULTINATIVE_GPS_SHARED_CALENDAR_V1_FIRST_RESULT_20261029.json": "4034d5318c914dc789a7fcd6535eedbf3a229d53",
+    "research/RSDS_FOUR_NEW_MULTINATIVE_SOURCE_METADATA_FIRST_V1_20261029.json": "d476c8500f99030c864c382fcf32694e0450a48e"
+  },
+  "source_original_MD5_verified": 4,
+  "version": "RSDS_FOUR_NEW_MULTI_NATIVE_ORIGINAL_GPS_SOURCE_SCIENTIFIC_VALIDATION_V1"
+}
