@@ -482,6 +482,43 @@ jobs:
           assert stored['old_external_48_source_negative_radiation_direction_nonreplication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
           print('Illinois169 Wyoming193 original shared-date/month conditional six q/daylength comparisons SHA-locked; old source neg/HOLDS unchanged')
           PY
+      - name: Verify four independent original multi-native GPS studies and three-goose shared day ecological evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_four_new_multitaxon_source_metadata_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_four_multinative_original_q_calendar_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_four_multinative_original_temporal_aggregate_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_four_new_multinative_original_evidence_v1.py' -v
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          from scripts.validate_rsds_four_new_multinative_temporal_first_v1 import infer
+          reference={
+            'research/RSDS_FOUR_NEW_MULTINATIVE_SOURCE_METADATA_FIRST_V1_20261029.json':
+                'd476c8500f99030c864c382fcf32694e0450a48e',
+            'research/RSDS_FOUR_NEW_MULTINATIVE_GPS_SHARED_CALENDAR_V1_FIRST_RESULT_20261029.json':
+                '4034d5318c914dc789a7fcd6535eedbf3a229d53',
+            'research/RSDS_FOUR_MULTINATIVE_ORIGINAL_GPS_ECOLOGICAL_VALIDATION_V1_20261029.json':
+                'eeba1e0bc3e33b13322852539833e3fbf07d834a'
+          }
+          for file,known_sha in reference.items():
+              data=Path(file).read_bytes()
+              actual=hashlib.sha1(('blob '+str(len(data))+'\0').encode()+data).hexdigest()
+              assert actual==known_sha, f'Four source original GPS first evidence altered: {file}'
+          prior=json.loads(Path('research/RSDS_FOUR_MULTINATIVE_ORIGINAL_GPS_ECOLOGICAL_VALIDATION_V1_20261029.json').read_text(encoding='utf-8'))
+          assert prior==infer(),'Four-source first ecological interpretation differs from fixed original evidence'
+          assert prior['original_source_studies_selected_before_new_q']==4
+          assert prior['registered_native_study_taxon_rows']==10
+          assert prior['new_geese_original_same_source_calendar_days']==120
+          assert prior['goose_native_pair_q_nominal_interval_counts']=={
+              'POSITIVE':0,'NEGATIVE':2,'INCLUDES_ZERO':1}
+          assert prior['goose_within_month_pair_daylength_nominal_interval_counts']=={
+              'POSITIVE':0,'NEGATIVE':1,'INCLUDES_ZERO':2}
+          assert prior['previous_12_ERA5_raw_JSON_HOLDS_UNCHANGED'] is True
+          assert prior['previous_48_source_signed_shortwave_direction_EXTERNAL_NONREPLICATED_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          print('Four original source MD5 first receipts, goose 120 common days, source taxon/eligibility HOLDS and historical sunlight negative external nonreplication locked')
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
