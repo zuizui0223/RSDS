@@ -58,36 +58,65 @@ def validate_study(value,doi,region):
 
 
 def component(study,schedule):
-    a=study["source_taxon_results"]
-    by_taxon={r["taxon"]:r for r in a}
-    native={}
+    """Native q LEVEL versus q~daylength SLOPE are distinct inference axes."""
+    by_taxon={r["taxon"]:r for r in study["source_taxon_results"]}
+    native_slopes={}
+    native_q={}
     for name in SOURCE:
-        s=by_taxon[name]["common_date_photoperiod_q_slope_by_schedule"]
-        if s["status"]!="ESTIMABLE" or s["original_tag_count"]<5:
-            return {"status":"INCOMPLETE_ORIGINAL_TAG_SUPPORT","native":None,"contrast":None}
-        v=s["schedules"][schedule]
-        ci=v["animal_bootstrap95"]
-        if (v["nominal_sign"] not in ("POSITIVE","NEGATIVE","INCLUDES_ZERO") or
-            not isinstance(ci,list) or len(ci)!=2 or
-            not ci[0]<=v["mean"]<=ci[1]):
-            raise ValueError("Tagged-source q~L effect sign/interval invalid")
-        native[name]={"mean":v["mean"],"ci":ci,"sign":v["nominal_sign"],
-                      "n_source_original_tags":s["original_tag_count"]}
-    diff=study["same_study_between_native_taxon"]["q_daylength_slope_mule_minus_bighorn_by_schedule"]["schedules"][schedule]
-    value=diff["mule_minus_bighorn_slope"]
-    ci=diff["descriptive_original_tag_bootstrap95"]
-    if not isinstance(ci,list) or len(ci)!=2 or not ci[0]<=value<=ci[1]:
-        raise ValueError("Original source native two-taxon slope contrast/CI invalid")
-    if abs(value-(native[SOURCE[0]]["mean"]-native[SOURCE[1]]["mean"]))>1e-12:
-        raise ValueError("Within-source slope contrast fails original native algebra")
+        record=by_taxon[name]
+        for endpoint,destination,label in (
+            ("common_date_photoperiod_q_slope_by_schedule",native_slopes,"q~L"),
+            ("common_date_temporal_q_by_schedule",native_q,"q")
+        ):
+            src=record[endpoint]
+            if src["status"]!="ESTIMABLE" or src["original_tag_count"]<5:
+                return {"status":"INCOMPLETE_ORIGINAL_TAG_SUPPORT","native":None,
+                        "contrast":None,"native_q_levels":None,"q_contrast":None}
+            val=src["schedules"][schedule]
+            ci=val["animal_bootstrap95"]
+            if (val["nominal_sign"] not in ("POSITIVE","NEGATIVE","INCLUDES_ZERO") or
+                not isinstance(ci,list) or len(ci)!=2 or
+                not ci[0]<=val["mean"]<=ci[1]):
+                raise ValueError("Tagged-source original "+label+" effect sign/interval invalid")
+            destination[name]={"mean":val["mean"],"ci":ci,
+                               "sign":val["nominal_sign"],
+                               "n_source_original_tags":src["original_tag_count"]}
+    contrasts={}
+    for sourcekey,native,name in (
+        ("q_daylength_slope_mule_minus_bighorn_by_schedule",native_slopes,"slope"),
+        ("q_mule_minus_bighorn_by_schedule",native_q,"q")
+    ):
+        obj=study["same_study_between_native_taxon"][sourcekey]["schedules"][schedule]
+        value=obj["mule_minus_bighorn_slope"]
+        ci=obj["descriptive_original_tag_bootstrap95"]
+        if not isinstance(ci,list) or len(ci)!=2 or not ci[0]<=value<=ci[1]:
+            raise ValueError("Original source native two-taxon "+name+" contrast/CI invalid")
+        if abs(value-(native[SOURCE[0]]["mean"]-native[SOURCE[1]]["mean"]))>1e-12:
+            raise ValueError("Within-source "+name+" contrast fails original native algebra")
+        contrasts[name]={"mule_minus_bighorn":value,"ci":ci,
+                         "nominal_sign":obj["status"]}
+    datewise=(study.get("calendar_date_paired_source_difference") or {}).get("slopes",{}).get(schedule)
+    date_slope=None
+    if datewise:
+        date_slope={
+            "source_date_mean_q_difference_vs_reference_daylength":
+                datewise["mule_q_minus_bighorn_q_vs_shared_reference_daylength"],
+            "year_month_block_descriptive95":datewise["year_month_block_descriptive95"],
+            "status":datewise["status"],
+        }
     return {
-        "status": "EVALUATED",
-        "native":native,
-        "contrast":{"mule_minus_bighorn":value,"ci":ci,"nominal_sign":diff["status"]},
+        "status":"EVALUATED",
+        "native":native_slopes,
+        "contrast":contrasts["slope"],
+        "native_q_levels":native_q,
+        "q_contrast":contrasts["q"],
+        "date_level_q_difference_photoperiod_slope":date_slope,
         "positive_mule_negative_bighorn_supported":(
-            native[SOURCE[0]]["sign"]=="POSITIVE" and
-            native[SOURCE[1]]["sign"]=="NEGATIVE" and
-            diff["status"]=="NOMINAL_POSITIVE")
+            native_slopes[SOURCE[0]]["sign"]=="POSITIVE" and
+            native_slopes[SOURCE[1]]["sign"]=="NEGATIVE" and
+            contrasts["slope"]["nominal_sign"]=="NOMINAL_POSITIVE"),
+        "mule_higher_observed_night_relative_q_supported":(
+            contrasts["q"]["nominal_sign"]=="NOMINAL_POSITIVE"),
     }
 
 
@@ -129,6 +158,11 @@ def compare(utah,wyoming):
         all(r["three_observation_schedules"][s]["positive_mule_negative_bighorn_supported"]
             for s in SCHEDULES)
     ]
+    q_order_studies=[
+        r["original_field_study"] for r in complete if
+        all(r["three_observation_schedules"][s]["mule_higher_observed_night_relative_q_supported"]
+            for s in SCHEDULES)
+    ]
     return {
         "version":"RSDS_TWO_ORIGINAL_STUDIES_SAME_NATIVE_TAXA_COMMON_CALENDAR_PHOTOPERIOD_V1",
         "date":"2026-10-29",
@@ -140,6 +174,9 @@ def compare(utah,wyoming):
         "original_studies_with_same_opposite_native_daylength_sign_through_three_clocks":shared_sign,
         "both_original_studies_show_same_source_native_sign_if_supported":(
             len(complete)==2 and len(shared_sign)==2),
+        "original_studies_with_mule_higher_observed_night_relative_q_through_three_clocks":q_order_studies,
+        "both_studies_preserve_native_diel_q_ordering_if_supported":(
+            len(complete)==2 and len(q_order_studies)==2),
         "all_study_source_original_native_photoperiod_sign_results":records,
         "source_sample_is_random_world_ecosystem":False,
         "previous_12_ERA5_source_raw_HOLDS_UNCHANGED":True,
@@ -150,6 +187,7 @@ def compare(utah,wyoming):
             "Within each source the calendar year dates are shared between species, but tags/duty cycles/habitats and actual irradiance may differ; across Utah versus Wyoming exact calendar dates/years need NOT match.",
             "An insufficient Utah source shared-date sample is a missing/attrition endpoint, not a negative species behavioral biological response.",
             "Original q is night minus day observed GPS straight-line displacement proxy, not actual duration of activity or within-individual physiological photoperiod sensitivity.",
+            "Source-wide mule-deer relative night-minus-day observed GPS displacement q ordering is descriptive and a separate estimand from the seasonal q~daylength slope; any cross-study recurrence is post-Wyoming-result discovery, not prospectively preregistered confirmation.",
             "A zero-spanning nominal bootstrap CI is unresolved and not proof of absence or sign equivalence. No multiplicity-corrected or external population confidence claim.",
             "Historical 12 ERA5 raw response source SHA HOLDs and separate 48-source negative signed radiation external validation unchanged; no GPS telemetry/IDs/date-level time/location redistributed."
         ]
