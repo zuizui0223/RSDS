@@ -1,0 +1,72 @@
+{
+  "version": "RSDS_COYOTE_BOBCAT_TWO_STUDY_TEMPORAL_NICHE_V1",
+  "date": "2026-10-29",
+  "stage": "POST_PREVIOUS_SOLAR_AZIMUTH_SOURCE_ANALYSIS_NEW_TEMPORAL_Q_ENDPOINT_NOT_BLIND_EXTERNAL_REPLICATION",
+  "question": "Does coyote (Canis latrans) versus bobcat (Lynx rufus) observed NIGHT−DAY GPS displacement q ordering, and q~daylength seasonal slope difference, recur across two original Illinois and Washington studies when both taxa are observed on the same astronomy-qualified source calendar days?",
+  "source_studies": [
+    {
+      "region": "Washington",
+      "doi": "10.5441/001/1.gm93267b",
+      "package_uuid": "e7808391-1019-45cb-8701-e3ded043e0d8",
+      "study_id": "2636372210",
+      "native_taxa": [
+        "Canis latrans",
+        "Lynx rufus"
+      ],
+      "primary_two": [
+        "Canis latrans",
+        "Lynx rufus"
+      ],
+      "bitstream_uuid": "95a5148d-f8ce-4c45-b480-bb8f63b901c2",
+      "bytes": 23631112,
+      "md5": "0ed7aafa577f0363cc3fdfc25c8821ed",
+      "file_name": "GPS tracking of bobcats and coyotes in northern Washington.csv"
+    },
+    {
+      "region": "Illinois",
+      "doi": "10.5441/001/1.649",
+      "package_uuid": "7d38dd27-3bd3-4f2d-a5f6-06cafe4b043e",
+      "study_id": "1233029719",
+      "native_taxa": [
+        "Canis latrans",
+        "Lynx rufus",
+        "Odocoileus virginianus"
+      ],
+      "primary_two": [
+        "Canis latrans",
+        "Lynx rufus"
+      ],
+      "bitstream_uuid": "740a961c-c6ba-47cc-ae2e-a95d6aa4ed21",
+      "bytes": 31838152,
+      "md5": "611cc8d3100560ada3213c684059147a",
+      "file_name": "Illinois white-tailed deer and predators.csv"
+    }
+  ],
+  "pinned_previous": [
+    {
+      "path": "research/GLOBAL_SOLAR_AZIMUTH_12_NEW_SOURCE_FROZEN_ORIGINAL_FILE_MANIFEST_20261025.json",
+      "git_blob_SHA": "ef157a25e96476ce4838f2eac6f758bf6e0a5b82"
+    },
+    {
+      "path": "research/GLOBAL_SOLAR_AZIMUTH_12_NEW_SOURCE_FIRST_ORIGINAL_GPS_RESULT_20261025.json",
+      "git_blob_SHA": "d3a05ac1324fa8fc6cf738e1866704841f0b6d88"
+    },
+    {
+      "path": "research/RSDS_UTAH_WYOMING_TWO_STUDY_SHARED_DATE_PHOTOPERIOD_V1_RESULT_20261029.json",
+      "git_blob_SHA": "715cd5234f686047b1d59189be83f3cf631030bf"
+    }
+  ],
+  "source_integrity": "Exact pre-existing public source UUID, file size, original provider MD5 and old original solar-heading source total/native rows, hour-selected fixes and native tag counts required before new q effect. Both source GPS files were already opened for solar-direction analysis; this new q slope is post-source but before temporal effect sign inspection.",
+  "native_unit": "One independently published Movebank study DOI, with species nested inside study. Two source studies not four independent ecosystems. Illinois white-tailed deer native taxon stays in full result even when not part of target coyote/bobcat contrast.",
+  "original_hourbin": "One fix per UTC-hour bin selected only by timestamp; accepted actual 0.5 to 2 hour consecutive GPS straight-line intervals, speed at most 60 km/h, same astronomical solar date/part at start/mid/end. At least three day and three night GPS steps per animal-day, ten qualifying days/year.",
+  "source_shared_dates": "Within each study coyote and bobcat must both have at least one tagged animal eligible on identical source astronomy calendar date; source date support chosen by iterative fixed-point 10-day-per-tag-year and 0.5h seasonal range rules without peeking at q or effect signs.",
+  "astronomy_reference": "43.0 degrees N reference astronomical daylength for the same native source calendar dates, following previous Utah/Wyoming two-study comparison; not the physical local photoperiod of the original GPS site.",
+  "source_q": "Mean tag-level observed NIGHT−DAY q = log1p(median nighttime straight-line GPS displacement km/h)−log1p(median daytime speed km/h) on source-shared dates.",
+  "source_daylength": "Within-tag/calendar-year OLS of daily q versus common 43N source astronomical daylength (>=0.5h range), equal years within tag. Primary inference tag-block bootstrap; secondary datewise q difference versus daylength year-month block bootstrap.",
+  "three_observation_schedules": "Original UTC-hourbin source primary; even and odd UTC-hour bin alternate 2h source only as support-qualified secondary if both native species qualify for same date support. No replacement/relaxation if 2h lacks enough day/night source steps.",
+  "bootstrap": "Source original tagged individuals >=5 per taxon, 2000 deterministic original tag resamples for coyote-minus-bobcat q and q~daylength; year-month blocks >=5 and common days>=20 for date-level slope. All intervals descriptive unadjusted multiple comparisons.",
+  "missingness": "If a taxon/source cannot support shared calendar, source stays HOLD/UNAVAILABLE not an ecological zero. Both source DOIs and all 5 original source×taxon groups preserved regardless of outcome.",
+  "privacy": "Do not export original tag IDs, true site/grid, exact original calendar dates, event times/positions, per-tag parameters or raw tracking payloads.",
+  "old_results": "The prior Utah/Wyoming two-species diel rank result, historical 12 ERA5 raw-JSON source holds and previously preregistered 48 source negative-direction shortwave nonreplication remain unmodified.",
+  "external_nonreplication": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
+}
