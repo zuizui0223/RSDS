@@ -6,7 +6,7 @@ on:
     paths:
       - 'scripts/run_rsds_utah_coobserved_photoperiod_v1.py'
       - 'tests/test_rsds_utah_coobserved_photoperiod_v1.py'
-      - 'research/RSDS_WYOMING_COOCCURRENT_DATES_PHOTOPERIOD_CONTRAST_V1_CONTRACT.json'
+      - 'research/RSDS_UTAH_COOCCURRENT_DATES_PHOTOPERIOD_V1_CONTRACT.json'
       - '.github/workflows/rsds-utah-same-calendar-photoperiod-v1.yml'
   workflow_dispatch:
 permissions:
