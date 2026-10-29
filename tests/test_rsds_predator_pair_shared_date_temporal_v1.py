@@ -58,7 +58,8 @@ class CoyotesBobcatsNewOriginalSourceCalendarTests(unittest.TestCase):
         self.assertEqual(ds,days)
 
     def test_native_source_daily_q_and_same_day_photo_astro_positive_contrast(self):
-        x=pool()
+        # Five or more year-month blocks are required for the date-block slope.
+        x=pool(days=160)
         shared,dates,_=same_native_calendar(x[TAXA[0]],x[TAXA[1]],SCHEDULES)
         scores={}
         for sp in TAXA:
@@ -72,7 +73,7 @@ class CoyotesBobcatsNewOriginalSourceCalendarTests(unittest.TestCase):
             self.assertEqual(pair[axis]["nominal_sign"],"POSITIVE")
             self.assertAlmostEqual(pair[axis]["coyote_minus_bobcat_mean"],.1295,places=12)
         day=calendar_date_slope(shared,dates,SCHEDULES,999)
-        self.assertEqual(day["coobserved_source_calendar_dates"],80)
+        self.assertEqual(day["coobserved_source_calendar_dates"],160)
         self.assertEqual(set(day["slopes"]),set(SCHEDULES))
         self.assertTrue(all(abs(v["same_calendar_coyote_minus_bobcat_q_daylength_slope"])<1e-12
                             for v in day["slopes"].values()))
