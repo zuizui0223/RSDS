@@ -355,22 +355,28 @@ def run(out):
     }
     out.mkdir(parents=True,exist_ok=True)
     private=out/"private_wyoming_same_study_coobserved_calendar_gps.csv"
+    stage="ORIGINAL_PROVIDER_METADATA"
     try:
         original=[x for x in original_files(src["package_uuid"])
                   if x["bitstream_uuid"]==src["original_bitstream_uuid"]]
         if len(original)!=1 or original[0]["bytes"]!=src["original_bytes"] or \
            original[0]["checksum"]["value"].lower()!=src["original_md5"].lower():
             raise ValueError("Original Wyoming original public source UUID/file bytes/MD5 changed")
+        stage="ORIGINAL_PROVIDER_FILE_MD5"
         verify=checksum_and_download(original[0],private)
         if not verify["provider_checksum_verified"]:
             raise ValueError("Original Wyoming source provider MD5 did not match")
         result["original_provider_GPS_MD5_verified"]=True
+        stage="ORIGINAL_SOURCE_GPS_PARSING"
         tracks,counts,unknown=streaming_time_selected_csv(private,taxa)
+        stage="ORIGINAL_NATIVE_FULL_DATE_Q_DAYLENGTH_REPLAY"
         source_baseline_check(tracks,reference)
+        stage="PREVIOUS_TRIPLE_DATE_Q_DAYLENGTH_REPLAY"
         replay_original_triple(tracks,previous)
         result["both_native_taxa_original_all_date_and_original_triple_source_estimates_replayed"]=True
         print("RSDS_WYOMING_SHARED_DATE_PREVIOUS_NATIVE_Q_REPLAY",len(taxa),flush=True)
 
+        stage="STUDY_SHARED_CALENDAR_SUPPORT_AND_NEW_ORIGINAL_Q"
         private_pool={sp:as_three_original_calendar(tracks[sp]) for sp in TAXA}
         shared_pool,shared_dates,iterations=matched_two_taxon_calendar(private_pool)
         initial={sp:len(private_pool[sp]) for sp in TAXA}
@@ -430,7 +436,12 @@ def run(out):
             tracks[sp].clear()
     except Exception as e:
         result["status"]="ORIGINAL_WYOMING_SOURCE_OR_SHARED_DATE_HOLD"
+        result["hold_stage"]=stage
         result["hold_error_type"]=type(e).__name__
+        print("RSDS_WYOMING_SHARED_DATE_SOURCE_HOLD",json.dumps({
+            "hold_stage":stage,"exception_type":type(e).__name__,
+            "original_md5_passed":result["original_provider_GPS_MD5_verified"]
+        },sort_keys=True),flush=True)
     finally:
         private.unlink(missing_ok=True)
     (out/"wyoming_shared_calendar_two_taxa_result_v1.json").write_text(
