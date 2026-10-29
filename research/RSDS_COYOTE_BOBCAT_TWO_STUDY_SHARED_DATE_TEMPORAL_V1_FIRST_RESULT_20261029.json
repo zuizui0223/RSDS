@@ -1,0 +1,563 @@
+{
+  "all_original_source_study_native_taxa": [
+    {
+      "no_tag_ID_or_GPS_event_exported": true,
+      "original_source_status": "ORIGINAL_SOURCE_SHARED_CALENDAR_EVALUATED",
+      "prior_original_solar_analysis_was_opened": true,
+      "shared_calendar": {
+        "ORIGINAL_ONLY": {
+          "calendar_year_month_block_pair": {
+            "coobserved_source_calendar_dates": 0,
+            "coobserved_source_year_month_blocks": 0,
+            "slopes": {
+              "original": {
+                "calendar_month_block_bootstrap95": null,
+                "nominal_sign": "UNAVAILABLE",
+                "same_calendar_coyote_minus_bobcat_q_daylength_slope": null
+              }
+            }
+          },
+          "native_original_tags_on_shared_source_dates": {
+            "Canis latrans": 0,
+            "Lynx rufus": 0
+          },
+          "native_source_pair": {
+            "original": {
+              "daylength_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": null,
+                "native_tags": {
+                  "Canis latrans": 0,
+                  "Lynx rufus": 0
+                },
+                "nominal_sign": "UNAVAILABLE",
+                "source_tag_bootstrap95": null
+              },
+              "nominal_daylength_direction": "UNAVAILABLE",
+              "nominal_q_direction": "UNAVAILABLE",
+              "q_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": null,
+                "native_tags": {
+                  "Canis latrans": 0,
+                  "Lynx rufus": 0
+                },
+                "nominal_sign": "UNAVAILABLE",
+                "source_tag_bootstrap95": null
+              }
+            }
+          },
+          "source_calendar_days": 0,
+          "source_year_month_blocks": 0,
+          "status": "INSUFFICIENT_COOCCURRENT_SOURCE_NATIVE_TAGS"
+        },
+        "THREE_SCHEDULES": {
+          "calendar_year_month_block_pair": {
+            "coobserved_source_calendar_dates": 0,
+            "coobserved_source_year_month_blocks": 0,
+            "slopes": {
+              "even": {
+                "calendar_month_block_bootstrap95": null,
+                "nominal_sign": "UNAVAILABLE",
+                "same_calendar_coyote_minus_bobcat_q_daylength_slope": null
+              },
+              "odd": {
+                "calendar_month_block_bootstrap95": null,
+                "nominal_sign": "UNAVAILABLE",
+                "same_calendar_coyote_minus_bobcat_q_daylength_slope": null
+              },
+              "original": {
+                "calendar_month_block_bootstrap95": null,
+                "nominal_sign": "UNAVAILABLE",
+                "same_calendar_coyote_minus_bobcat_q_daylength_slope": null
+              }
+            }
+          },
+          "native_original_tags_on_shared_source_dates": {
+            "Canis latrans": 0,
+            "Lynx rufus": 0
+          },
+          "native_source_pair": {
+            "even": {
+              "daylength_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": null,
+                "native_tags": {
+                  "Canis latrans": 0,
+                  "Lynx rufus": 0
+                },
+                "nominal_sign": "UNAVAILABLE",
+                "source_tag_bootstrap95": null
+              },
+              "nominal_daylength_direction": "UNAVAILABLE",
+              "nominal_q_direction": "UNAVAILABLE",
+              "q_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": null,
+                "native_tags": {
+                  "Canis latrans": 0,
+                  "Lynx rufus": 0
+                },
+                "nominal_sign": "UNAVAILABLE",
+                "source_tag_bootstrap95": null
+              }
+            },
+            "odd": {
+              "daylength_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": null,
+                "native_tags": {
+                  "Canis latrans": 0,
+                  "Lynx rufus": 0
+                },
+                "nominal_sign": "UNAVAILABLE",
+                "source_tag_bootstrap95": null
+              },
+              "nominal_daylength_direction": "UNAVAILABLE",
+              "nominal_q_direction": "UNAVAILABLE",
+              "q_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": null,
+                "native_tags": {
+                  "Canis latrans": 0,
+                  "Lynx rufus": 0
+                },
+                "nominal_sign": "UNAVAILABLE",
+                "source_tag_bootstrap95": null
+              }
+            },
+            "original": {
+              "daylength_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": null,
+                "native_tags": {
+                  "Canis latrans": 0,
+                  "Lynx rufus": 0
+                },
+                "nominal_sign": "UNAVAILABLE",
+                "source_tag_bootstrap95": null
+              },
+              "nominal_daylength_direction": "UNAVAILABLE",
+              "nominal_q_direction": "UNAVAILABLE",
+              "q_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": null,
+                "native_tags": {
+                  "Canis latrans": 0,
+                  "Lynx rufus": 0
+                },
+                "nominal_sign": "UNAVAILABLE",
+                "source_tag_bootstrap95": null
+              }
+            }
+          },
+          "source_calendar_days": 0,
+          "source_year_month_blocks": 0,
+          "status": "INSUFFICIENT_COOCCURRENT_SOURCE_NATIVE_TAGS"
+        }
+      },
+      "source_native_taxa": {
+        "Canis latrans": {
+          "original_eligible_q_tag_count": 0,
+          "original_hourbin_source_tag_count": 34,
+          "q": {
+            "ci": null,
+            "mean": null,
+            "source_tags": 0,
+            "status": "UNAVAILABLE"
+          },
+          "q_daylength": {
+            "ci": null,
+            "mean": null,
+            "source_tags": 0,
+            "status": "UNAVAILABLE"
+          }
+        },
+        "Lynx rufus": {
+          "original_eligible_q_tag_count": 0,
+          "original_hourbin_source_tag_count": 36,
+          "q": {
+            "ci": null,
+            "mean": null,
+            "source_tags": 0,
+            "status": "UNAVAILABLE"
+          },
+          "q_daylength": {
+            "ci": null,
+            "mean": null,
+            "source_tags": 0,
+            "status": "UNAVAILABLE"
+          }
+        }
+      },
+      "source_original_study_DOI": "10.5441/001/1.gm93267b",
+      "source_provider_MD5_replayed": true,
+      "source_region": "Washington"
+    },
+    {
+      "no_tag_ID_or_GPS_event_exported": true,
+      "original_source_status": "ORIGINAL_SOURCE_SHARED_CALENDAR_EVALUATED",
+      "prior_original_solar_analysis_was_opened": true,
+      "shared_calendar": {
+        "ORIGINAL_ONLY": {
+          "calendar_year_month_block_pair": {
+            "coobserved_source_calendar_dates": 194,
+            "coobserved_source_year_month_blocks": 9,
+            "slopes": {
+              "original": {
+                "calendar_month_block_bootstrap95": [
+                  0.027365159782596328,
+                  0.06125159980095304
+                ],
+                "nominal_sign": "POSITIVE",
+                "same_calendar_coyote_minus_bobcat_q_daylength_slope": 0.038716726476820805
+              }
+            }
+          },
+          "native_original_tags_on_shared_source_dates": {
+            "Canis latrans": 9,
+            "Lynx rufus": 5
+          },
+          "native_source_pair": {
+            "original": {
+              "daylength_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": 0.04298324173770422,
+                "native_tags": {
+                  "Canis latrans": 9,
+                  "Lynx rufus": 5
+                },
+                "nominal_sign": "INCLUDES_ZERO",
+                "source_tag_bootstrap95": [
+                  -0.0009088800474600367,
+                  0.07961223221924577
+                ]
+              },
+              "nominal_daylength_direction": "INCLUDES_ZERO",
+              "nominal_q_direction": "POSITIVE",
+              "q_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": 0.16552443224935098,
+                "native_tags": {
+                  "Canis latrans": 9,
+                  "Lynx rufus": 5
+                },
+                "nominal_sign": "POSITIVE",
+                "source_tag_bootstrap95": [
+                  0.06262755843182305,
+                  0.26543722833185873
+                ]
+              }
+            }
+          },
+          "source_calendar_days": 194,
+          "source_year_month_blocks": 9,
+          "status": "BOTH_NATIVE_TAXA_SOURCE_COOCCURRENT_ESTIMABLE"
+        },
+        "THREE_SCHEDULES": {
+          "calendar_year_month_block_pair": {
+            "coobserved_source_calendar_dates": 0,
+            "coobserved_source_year_month_blocks": 0,
+            "slopes": {
+              "even": {
+                "calendar_month_block_bootstrap95": null,
+                "nominal_sign": "UNAVAILABLE",
+                "same_calendar_coyote_minus_bobcat_q_daylength_slope": null
+              },
+              "odd": {
+                "calendar_month_block_bootstrap95": null,
+                "nominal_sign": "UNAVAILABLE",
+                "same_calendar_coyote_minus_bobcat_q_daylength_slope": null
+              },
+              "original": {
+                "calendar_month_block_bootstrap95": null,
+                "nominal_sign": "UNAVAILABLE",
+                "same_calendar_coyote_minus_bobcat_q_daylength_slope": null
+              }
+            }
+          },
+          "native_original_tags_on_shared_source_dates": {
+            "Canis latrans": 0,
+            "Lynx rufus": 0
+          },
+          "native_source_pair": {
+            "even": {
+              "daylength_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": null,
+                "native_tags": {
+                  "Canis latrans": 0,
+                  "Lynx rufus": 0
+                },
+                "nominal_sign": "UNAVAILABLE",
+                "source_tag_bootstrap95": null
+              },
+              "nominal_daylength_direction": "UNAVAILABLE",
+              "nominal_q_direction": "UNAVAILABLE",
+              "q_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": null,
+                "native_tags": {
+                  "Canis latrans": 0,
+                  "Lynx rufus": 0
+                },
+                "nominal_sign": "UNAVAILABLE",
+                "source_tag_bootstrap95": null
+              }
+            },
+            "odd": {
+              "daylength_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": null,
+                "native_tags": {
+                  "Canis latrans": 0,
+                  "Lynx rufus": 0
+                },
+                "nominal_sign": "UNAVAILABLE",
+                "source_tag_bootstrap95": null
+              },
+              "nominal_daylength_direction": "UNAVAILABLE",
+              "nominal_q_direction": "UNAVAILABLE",
+              "q_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": null,
+                "native_tags": {
+                  "Canis latrans": 0,
+                  "Lynx rufus": 0
+                },
+                "nominal_sign": "UNAVAILABLE",
+                "source_tag_bootstrap95": null
+              }
+            },
+            "original": {
+              "daylength_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": null,
+                "native_tags": {
+                  "Canis latrans": 0,
+                  "Lynx rufus": 0
+                },
+                "nominal_sign": "UNAVAILABLE",
+                "source_tag_bootstrap95": null
+              },
+              "nominal_daylength_direction": "UNAVAILABLE",
+              "nominal_q_direction": "UNAVAILABLE",
+              "q_coyote_minus_bobcat": {
+                "coyote_minus_bobcat_mean": null,
+                "native_tags": {
+                  "Canis latrans": 0,
+                  "Lynx rufus": 0
+                },
+                "nominal_sign": "UNAVAILABLE",
+                "source_tag_bootstrap95": null
+              }
+            }
+          },
+          "source_calendar_days": 0,
+          "source_year_month_blocks": 0,
+          "status": "INSUFFICIENT_COOCCURRENT_SOURCE_NATIVE_TAGS"
+        }
+      },
+      "source_native_taxa": {
+        "Canis latrans": {
+          "original_eligible_q_tag_count": 20,
+          "original_hourbin_source_tag_count": 27,
+          "q": {
+            "ci": [
+              0.17503953599733119,
+              0.29777183759931736
+            ],
+            "mean": 0.23604360337140973,
+            "source_tags": 20,
+            "status": "POSITIVE"
+          },
+          "q_daylength": {
+            "ci": [
+              -0.02324930729420801,
+              0.028457328113246038
+            ],
+            "mean": 0.003472505345294776,
+            "source_tags": 16,
+            "status": "INCLUDES_ZERO"
+          }
+        },
+        "Lynx rufus": {
+          "original_eligible_q_tag_count": 5,
+          "original_hourbin_source_tag_count": 9,
+          "q": {
+            "ci": [
+              0.03699969921359718,
+              0.1476933294102901
+            ],
+            "mean": 0.09528118037978406,
+            "source_tags": 5,
+            "status": "POSITIVE"
+          },
+          "q_daylength": {
+            "ci": [
+              -0.03843439452615826,
+              -0.017652377214029475
+            ],
+            "mean": -0.028251997550837234,
+            "source_tags": 5,
+            "status": "NEGATIVE"
+          }
+        },
+        "Odocoileus virginianus": {
+          "original_eligible_q_tag_count": 23,
+          "original_hourbin_source_tag_count": 45,
+          "q": {
+            "ci": [
+              0.0006696818568439536,
+              0.028993461512611226
+            ],
+            "mean": 0.014735618357208186,
+            "source_tags": 23,
+            "status": "POSITIVE"
+          },
+          "q_daylength": {
+            "ci": [
+              -0.004978273587749186,
+              0.002017136266238556
+            ],
+            "mean": -0.0016203525997638588,
+            "source_tags": 23,
+            "status": "INCLUDES_ZERO"
+          }
+        }
+      },
+      "source_original_study_DOI": "10.5441/001/1.649",
+      "source_provider_MD5_replayed": true,
+      "source_region": "Illinois"
+    }
+  ],
+  "date": "2026-10-29",
+  "native_study_taxon_rows": 5,
+  "new_temporal_effects_evaluated_after_specific_source_selection": true,
+  "original_study_DOI_count": 2,
+  "preselected_primary_native_pair": [
+    "Canis latrans",
+    "Lynx rufus"
+  ],
+  "previous_12_ERA5_source_JSON_HOLDS_UNCHANGED": true,
+  "previous_48_source_negative_direction_shortwave_external_replication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "prior_GPS_solar_azimuth_exploratory_source_opened": true,
+  "scientific_ceilings": [
+    "Two published source DOI studies were already exposed for solar azimuth analysis in 2026-10-25. This is a new temporally defined original-GPS analysis, not a blinded new-source empirical replication.",
+    "The primary pair is sympatric coyote and bobcat recorded in Illinois versus northern Washington. The Illinois white-tailed deer remains a native source record, not a substitute for unsupported predator tags.",
+    "A source-level shared calendar q comparison requires at least 5 tagged animals per native group and 10 valid dates/year; insufficient source calendar support is UNAVAILABLE not zero.",
+    "Original one-fix-per-UTC-hourbin does not prove true hourly data capture, and UTC-even/odd schedules can be unsupported or biased.",
+    "q is NIGHT minus DAY observed straight-line GPS speed, not latent biological hours of activity, predation risk or foraging time.",
+    "An astronomical 43N standardized seasonal daylength is a common mathematical reference, not experienced local photoperiod or causal solar exposure.",
+    "Study-local species contrasts in two published field studies cannot identify globally conserved guild niche, solar-thermal mechanism, species adaptation or direct predator-prey interactions.",
+    "All source native/collar/calendar missingness and previous radiation nonreplication/ERA5 weather holds remain unchanged."
+  ],
+  "source_original_outcome_states": {
+    "Illinois": "ORIGINAL_SOURCE_SHARED_CALENDAR_EVALUATED",
+    "Washington": "ORIGINAL_SOURCE_SHARED_CALENDAR_EVALUATED"
+  },
+  "two_study_native_pair_repeatability": {
+    "ORIGINAL_ONLY": {
+      "original": {
+        "source_study_native_pair": {
+          "Illinois": {
+            "daylength": {
+              "effect": 0.04298324173770422,
+              "nominal_sign": "INCLUDES_ZERO"
+            },
+            "q": {
+              "effect": 0.16552443224935098,
+              "nominal_sign": "POSITIVE"
+            }
+          },
+          "Washington": {
+            "daylength": {
+              "effect": null,
+              "nominal_sign": "UNAVAILABLE"
+            },
+            "q": {
+              "effect": null,
+              "nominal_sign": "UNAVAILABLE"
+            }
+          }
+        },
+        "two_source_same_sign_classification": {
+          "daylength": "INCONCLUSIVE_OR_SOURCE_HOLD",
+          "q": "INCONCLUSIVE_OR_SOURCE_HOLD"
+        }
+      }
+    },
+    "THREE_SCHEDULES": {
+      "even": {
+        "source_study_native_pair": {
+          "Illinois": {
+            "daylength": {
+              "effect": null,
+              "nominal_sign": "UNAVAILABLE"
+            },
+            "q": {
+              "effect": null,
+              "nominal_sign": "UNAVAILABLE"
+            }
+          },
+          "Washington": {
+            "daylength": {
+              "effect": null,
+              "nominal_sign": "UNAVAILABLE"
+            },
+            "q": {
+              "effect": null,
+              "nominal_sign": "UNAVAILABLE"
+            }
+          }
+        },
+        "two_source_same_sign_classification": {
+          "daylength": "INCONCLUSIVE_OR_SOURCE_HOLD",
+          "q": "INCONCLUSIVE_OR_SOURCE_HOLD"
+        }
+      },
+      "odd": {
+        "source_study_native_pair": {
+          "Illinois": {
+            "daylength": {
+              "effect": null,
+              "nominal_sign": "UNAVAILABLE"
+            },
+            "q": {
+              "effect": null,
+              "nominal_sign": "UNAVAILABLE"
+            }
+          },
+          "Washington": {
+            "daylength": {
+              "effect": null,
+              "nominal_sign": "UNAVAILABLE"
+            },
+            "q": {
+              "effect": null,
+              "nominal_sign": "UNAVAILABLE"
+            }
+          }
+        },
+        "two_source_same_sign_classification": {
+          "daylength": "INCONCLUSIVE_OR_SOURCE_HOLD",
+          "q": "INCONCLUSIVE_OR_SOURCE_HOLD"
+        }
+      },
+      "original": {
+        "source_study_native_pair": {
+          "Illinois": {
+            "daylength": {
+              "effect": null,
+              "nominal_sign": "UNAVAILABLE"
+            },
+            "q": {
+              "effect": null,
+              "nominal_sign": "UNAVAILABLE"
+            }
+          },
+          "Washington": {
+            "daylength": {
+              "effect": null,
+              "nominal_sign": "UNAVAILABLE"
+            },
+            "q": {
+              "effect": null,
+              "nominal_sign": "UNAVAILABLE"
+            }
+          }
+        },
+        "two_source_same_sign_classification": {
+          "daylength": "INCONCLUSIVE_OR_SOURCE_HOLD",
+          "q": "INCONCLUSIVE_OR_SOURCE_HOLD"
+        }
+      }
+    }
+  },
+  "version": "RSDS_TWO_ORIGINAL_SOURCE_CARNIVORE_SHARED_DAY_TEMPORAL_V1_FIRST_RESULT"
+}

@@ -1,0 +1,29 @@
+name: RSDS coobserved predator source q first ecological result integrity
+on:
+  push:
+    branches:
+      - science/coyote-bobcat-two-study-time-niche-v1
+    paths:
+      - 'tests/test_rsds_predator_two_study_first_ecology_v1.py'
+      - 'docs/RSDS_COYOTE_BOBCAT_SHARED_DATE_TEMPORAL_ECOLOGY_20261029.md'
+      - '.github/workflows/rsds-predator-first-temporal-ecology-ci-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source_first_ecological_signs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/coyote-bobcat-two-study-time-niche-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Native q time and astronomical daylength source environment
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Verify old source original files and stable previously failed radiation external test
+        run: python -m scripts.verify_rsds_migration
+      - name: Source first 2-field-study/5-native-taxon source q, temporal difference, and incomplete regional repeatability
+        run: python -m unittest discover -s tests -p 'test_rsds_predator_two_study_first_ecology_v1.py' -v
