@@ -1,0 +1,13 @@
+{
+  "version": "RSDS_FOUR_NEW_MULTI_NATIVE_GPS_PRE_EVENT_SOURCE_BLOB_PIN_V1",
+  "date": "2026-10-29",
+  "original_source_manifest": "research/RSDS_FOUR_NEW_MULTINATIVE_SOURCE_METADATA_FIRST_V1_20261029.json",
+  "original_source_manifest_git_blob_SHA": "d476c8500f99030c864c382fcf32694e0450a48e",
+  "original_public_studies": 4,
+  "original_native_taxon_rows": 10,
+  "source_only_four_original_files_checksum_specified": 4,
+  "GPS_events_opened_before_source_file_freeze": 0,
+  "source_catalog_was_locked_before_new_q_results": true,
+  "previously_recorded_source_first_metadata_holds_not_inferred_as_animal_effects": true,
+  "later_original_GPS_use_requires_exact_original_manifest_blob_SHA": true
+}
