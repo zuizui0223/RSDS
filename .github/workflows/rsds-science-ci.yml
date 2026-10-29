@@ -368,6 +368,47 @@ jobs:
           assert summarized['previous_forty_eight_source_negative_direction_verdict_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
           print('Wyoming 193 shared calendar dates; 108 mule deer and 41 bighorn tags; 3 GPS clocks opposite q/daylength signs, old holds frozen')
           PY
+      - name: Pin two original source native ungulate shared-calendar q rank and seasonal photoperiod nonrecurrence
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_utah_coobserved_photoperiod_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_two_original_ungulate_study_calendar_v1.py' -v
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          from scripts.compare_rsds_two_ungulate_study_shared_date_v1 import compare
+          sources={
+            "research/RSDS_WYOMING_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json":
+              "9b04b18ee73227b4e7a1715ebfb97f610af66952",
+            "research/RSDS_UTAH_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json":
+              "87bfaf257d5c68676342118146db5141c76ae0a0",
+            "research/RSDS_UTAH_WYOMING_TWO_STUDY_SHARED_DATE_PHOTOPERIOD_V1_RESULT_20261029.json":
+              "715cd5234f686047b1d59189be83f3cf631030bf",
+          }
+          loaded={}
+          for filename,expected in sources.items():
+              b=Path(filename).read_bytes()
+              sha=hashlib.sha1(('blob '+str(len(b))+'\0').encode()+b).hexdigest()
+              assert sha==expected, f'Original Movebank source first-result SHA changed: {filename}'
+              loaded[filename]=json.loads(b)
+          wyoming=loaded[next(p for p in sources if "WYOMING_COOCCURRENT" in p)]
+          utah=loaded[next(p for p in sources if "UTAH_COOCCURRENT" in p)]
+          combined=loaded[next(p for p in sources if "UTAH_WYOMING_TWO" in p)]
+          assert combined==compare(utah,wyoming)
+          assert wyoming["study_Doi"]=="10.5441/001/1.703"
+          assert utah["study_Doi"]=="10.5441/001/1.711"
+          assert wyoming["shared_support"]["original_study_calendar_dates_with_both_taxa_observed_on_all_three_schedules"]==193
+          assert utah["shared_support"]["original_study_calendar_dates_with_both_taxa_observed_on_all_three_schedules"]==199
+          assert combined["fixed_original_study_DOIs"]==2
+          assert combined["original_studies_with_mule_higher_observed_night_relative_q_through_three_clocks"]==["Wyoming","Utah"]
+          assert combined["both_studies_preserve_native_diel_q_ordering_if_supported"]
+          assert combined["original_studies_with_same_opposite_native_daylength_sign_through_three_clocks"]==["Wyoming"]
+          assert not combined["both_original_studies_show_same_source_native_sign_if_supported"]
+          assert combined["previous_12_ERA5_source_raw_HOLDS_UNCHANGED"]
+          assert combined["previous_48_source_shortwave_direction_external_nonreplication_UNCHANGED"]=="NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
+          print("2 original Movebank studies: both repeat tagged GPS diel q ranking, only Wyoming supports opposite signed native q-daylength; original Wyoming source first result is unchanged.")
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
