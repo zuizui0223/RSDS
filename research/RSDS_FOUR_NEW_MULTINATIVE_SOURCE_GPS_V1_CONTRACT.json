@@ -71,7 +71,9 @@
       ".csv.gz",
       ".zip"
     ],
-    "hold_policy": "Multiple plausible tracking files, unsupported type, missing provider checksum, no GPS native taxonomy, over 200MB or source API errors -> METADATA_HOLD, never replace study/taxa."
+    "hold_policy": "Multiple plausible tracking files, unsupported type, missing provider checksum, no GPS native taxonomy, over 200MB or source API errors -> METADATA_HOLD, never replace study/taxa.",
+    "original_primary_file_resolution_when_two_eligible_files": "If exactly two otherwise eligible ORIGINAL tracking CSV files coexist, choose the uniquely larger CSV only when it is >=10,000,000 bytes and at least 10 times the other, based strictly on provider names/sizes (before GPS event access). The smaller may be a derived summary; do not open it to choose. Otherwise metadata HOLD. No behavioral content or taxon effect may enter resolution.",
+    "original_census_pre_event_manifest_replacement_policy": "Prior source-only first report is superseded BEFORE any original GPS event access; final metadata receipt SHA must be pinned independently. Historical first metadata receipt remains in Git history."
   },
   "new_event_contract": {
     "time": "At most one fix per UTC-hour bin from original event timestamps; accepted 0.5 to 2.0 hours between original adjacent fixes, speed <=60 km/h, same local solar date and daypart at begin/mid/end; no interpolation.",
