@@ -1,0 +1,176 @@
+{
+  "all_original_unadjusted_native_daylength_slopes_replayed": 6,
+  "date": "2026-10-29",
+  "month_conditioned_comparisons_nominal_bootstrap_interval_signs": {
+    "INCLUDES_ZERO": 4,
+    "NEGATIVE": 1,
+    "POSITIVE": 1
+  },
+  "nominal_source_intervals_not_spanning_zero": 2,
+  "old_12_ERA5_source_provider_raw_SHA_HOLDS_UNCHANGED": true,
+  "old_external_48_source_negative_radiation_direction_nonreplication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "original_source_field_studies": 2,
+  "original_source_first_input_git_blobs": {
+    "research/RSDS_ILLINOIS_THREE_NATIVE_SHARED_DATE_V1_FIRST_RESULT_20261029.json": "924156e8f98d0bb9fda2f9d23aabc03060af2a31",
+    "research/RSDS_SHARED_MONTH_ADJUSTED_PHOTOPERIOD_TWO_STUDY_V1_FIRST_RESULT_20261029.json": "ce14cf34bcb1237671a8ad4c5f325bd91eb35356",
+    "research/RSDS_WYOMING_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json": "9b04b18ee73227b4e7a1715ebfb97f610af66952"
+  },
+  "scientific_claim_ceiling": [
+    "Within-source calendar-month daylength association persists in only two of six predeclared study×pair×schedule source conditional comparisons; four other estimates are not numerically zero but have descriptive 95% month-block intervals spanning zero.",
+    "Both two zero-excluding month-block bootstrap intervals border zero, and only eight eligible month-year blocks from each original study support these exploratory results. No multiplicity correction, causal effect or world generality follows.",
+    "Some adjusted point slopes are numerically larger than old all-month slopes; a zero-spanning CI does NOT show between-month seasons entirely explain the former associations.",
+    "A within-calendar-month daylength trend is still almost a deterministic day-of-month trend; weather, food, breeding, tag composition, source GPS duty-cycle and spatial route remain confounded.",
+    "Illinois three taxa and Wyoming two taxa are each from exactly one original Movebank source study, not five independent new ecological populations.",
+    "Historical first native source effects, old raw ERA5 JSON 12 holds and external 48 study negative signed radiation replication unchanged.",
+    "No original GPS tracking IDs, coordinates, date/month/year labels or source-private daily q data are published."
+  ],
+  "source_case_results": [
+    {
+      "GPS_timestamp_schedule": "original",
+      "interpretation": "WITHIN_MONTH_INTERVAL_INCLUDES_ZERO",
+      "month_block_bootstrap95": [
+        -0.026448235256805428,
+        0.22888668237039497
+      ],
+      "month_block_leave_one_out_range": [
+        0.07244439789644122,
+        0.14929315487591077
+      ],
+      "month_conditioned_daylength_slope": 0.10683011569500576,
+      "month_conditioned_source_calendar_days": 167,
+      "month_conditioned_source_nominal_sign": "INCLUDES_ZERO",
+      "month_conditioned_year_month_blocks": 8,
+      "original_source_month_blocks": 9,
+      "original_study_doi": "10.5441/001/1.649",
+      "region": "Illinois",
+      "same_original_source_calendar_days": 169,
+      "taxon_first": "Canis latrans",
+      "taxon_second": "Lynx rufus",
+      "unadjusted_daylength_slope": 0.04628893203079968,
+      "unadjusted_source_nominal_status": "POSITIVE"
+    },
+    {
+      "GPS_timestamp_schedule": "original",
+      "interpretation": "WITHIN_MONTH_INTERVAL_INCLUDES_ZERO",
+      "month_block_bootstrap95": [
+        -0.10056154782018613,
+        0.16133439515419828
+      ],
+      "month_block_leave_one_out_range": [
+        -0.04498454777574154,
+        0.0559650079495
+      ],
+      "month_conditioned_daylength_slope": 0.022172865295733046,
+      "month_conditioned_source_calendar_days": 167,
+      "month_conditioned_source_nominal_sign": "INCLUDES_ZERO",
+      "month_conditioned_year_month_blocks": 8,
+      "original_source_month_blocks": 9,
+      "original_study_doi": "10.5441/001/1.649",
+      "region": "Illinois",
+      "same_original_source_calendar_days": 169,
+      "taxon_first": "Canis latrans",
+      "taxon_second": "Odocoileus virginianus",
+      "unadjusted_daylength_slope": 0.019945963592492264,
+      "unadjusted_source_nominal_status": "POSITIVE"
+    },
+    {
+      "GPS_timestamp_schedule": "original",
+      "interpretation": "PREVIOUS_NEGATIVE_ASSOCIATION_PERSISTS_WITHIN_MONTH_EXPLORATORY",
+      "month_block_bootstrap95": [
+        -0.17655237817695874,
+        -0.0010839447089603027
+      ],
+      "month_block_leave_one_out_range": [
+        -0.12947230203450993,
+        -0.04667466948877351
+      ],
+      "month_conditioned_daylength_slope": -0.0846572503992727,
+      "month_conditioned_source_calendar_days": 167,
+      "month_conditioned_source_nominal_sign": "NEGATIVE",
+      "month_conditioned_year_month_blocks": 8,
+      "original_source_month_blocks": 9,
+      "original_study_doi": "10.5441/001/1.649",
+      "region": "Illinois",
+      "same_original_source_calendar_days": 169,
+      "taxon_first": "Lynx rufus",
+      "taxon_second": "Odocoileus virginianus",
+      "unadjusted_daylength_slope": -0.026342968438307413,
+      "unadjusted_source_nominal_status": "NEGATIVE"
+    },
+    {
+      "GPS_timestamp_schedule": "original",
+      "interpretation": "PREVIOUS_POSITIVE_ASSOCIATION_PERSISTS_WITHIN_MONTH_EXPLORATORY",
+      "month_block_bootstrap95": [
+        8.148028565263067e-05,
+        0.022899771595626655
+      ],
+      "month_block_leave_one_out_range": [
+        0.0037121911344430106,
+        0.013013539986548358
+      ],
+      "month_conditioned_daylength_slope": 0.010266184385105494,
+      "month_conditioned_source_calendar_days": 193,
+      "month_conditioned_source_nominal_sign": "POSITIVE",
+      "month_conditioned_year_month_blocks": 8,
+      "original_source_month_blocks": 8,
+      "original_study_doi": "10.5441/001/1.703",
+      "region": "Wyoming",
+      "same_original_source_calendar_days": 193,
+      "taxon_first": "Odocoileus hemionus",
+      "taxon_second": "Ovis canadensis",
+      "unadjusted_daylength_slope": 0.011673653876371936,
+      "unadjusted_source_nominal_status": "NOMINAL_POSITIVE"
+    },
+    {
+      "GPS_timestamp_schedule": "even",
+      "interpretation": "WITHIN_MONTH_INTERVAL_INCLUDES_ZERO",
+      "month_block_bootstrap95": [
+        -0.008288552172857488,
+        0.020205148934007086
+      ],
+      "month_block_leave_one_out_range": [
+        0.001075018262180373,
+        0.011968904639721722
+      ],
+      "month_conditioned_daylength_slope": 0.006634975493860697,
+      "month_conditioned_source_calendar_days": 193,
+      "month_conditioned_source_nominal_sign": "INCLUDES_ZERO",
+      "month_conditioned_year_month_blocks": 8,
+      "original_source_month_blocks": 8,
+      "original_study_doi": "10.5441/001/1.703",
+      "region": "Wyoming",
+      "same_original_source_calendar_days": 193,
+      "taxon_first": "Odocoileus hemionus",
+      "taxon_second": "Ovis canadensis",
+      "unadjusted_daylength_slope": 0.013358456372272055,
+      "unadjusted_source_nominal_status": "NOMINAL_POSITIVE"
+    },
+    {
+      "GPS_timestamp_schedule": "odd",
+      "interpretation": "WITHIN_MONTH_INTERVAL_INCLUDES_ZERO",
+      "month_block_bootstrap95": [
+        -0.0037572671656904435,
+        0.01645215725534639
+      ],
+      "month_block_leave_one_out_range": [
+        0.00232744756907672,
+        0.00946983582939711
+      ],
+      "month_conditioned_daylength_slope": 0.00609512231079527,
+      "month_conditioned_source_calendar_days": 193,
+      "month_conditioned_source_nominal_sign": "INCLUDES_ZERO",
+      "month_conditioned_year_month_blocks": 8,
+      "original_source_month_blocks": 8,
+      "original_study_doi": "10.5441/001/1.703",
+      "region": "Wyoming",
+      "same_original_source_calendar_days": 193,
+      "taxon_first": "Odocoileus hemionus",
+      "taxon_second": "Ovis canadensis",
+      "unadjusted_daylength_slope": 0.011558629015356208,
+      "unadjusted_source_nominal_status": "NOMINAL_POSITIVE"
+    }
+  ],
+  "source_native_taxon_and_schedule_comparisons": 6,
+  "stage": "SOURCE_FIRST_TWO_STUDY_MONTH_CONFOUNDED_SEASONAL_ECOLOGY_SENSITIVITY",
+  "version": "RSDS_COOBSERVED_SOURCE_WITHIN_MONTH_PHOTOPERIOD_VALIDATED_V1"
+}
