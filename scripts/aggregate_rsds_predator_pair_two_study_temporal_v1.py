@@ -123,7 +123,7 @@ def aggregate(sources):
             data={}
             for s in (w,i):
                 case=s["shared_calendar"][part]
-                z=case["source_native_pair"]
+                z=case["native_source_pair"]
                 data[s["source_region"]]={
                    axis:{"nominal_sign":z[phase]["nominal_"+axis+"_direction"],
                          "effect":z[phase][f"{axis}_coyote_minus_bobcat"]["coyote_minus_bobcat_mean"]}
