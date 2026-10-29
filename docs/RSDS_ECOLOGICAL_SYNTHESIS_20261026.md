@@ -191,6 +191,18 @@ RSDSの8原研究における「種や地域で日長関連が異なる」とい
 
 [元GPS193日・108対41タグの一次結果](../research/RSDS_WYOMING_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json) ／ [科学的解釈](RSDS_WYOMING_SHARED_CALENDAR_PHOTOPERIOD_ECOLOGY_20261029.md) ／ [元SHA固定と独立結果検証](../research/RSDS_WYOMING_SHARED_SEASON_DIVERGENT_PHOTOPERIOD_VALIDATION_V1_20261029.json) ／ [英語論文草稿](../manuscript/RSDS_EIGHT_STUDY_TIME_SOLAR_MOVEMENT_MACROECOLOGY_v1_20261026.md)。
 
+## P. 日周の種間順位は2独立原GPS調査で同じだが、日長傾きの種間対照は共通しない（2026-10-29）
+
+既報の[Wyoming 193共通暦日でのミュールジカ／ビッグホーンの正負q〜日長係数](../research/RSDS_WYOMING_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json)を、元GPS観測が独立した[Utahの公表原調査（DOI 10.5441/001/1.711）](../research/RSDS_UTAH_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json)で追加検証した。Utahの元GPS UUID／ファイルサイズ／MD5、元4 native taxonのq・日長平均と個体支持数、および2種の元3系列係数を**新比較前に再現**。Wyomingと同じ43°Nの天文日長・元／偶数／奇数GPS3系列を使い、元研究内の共通暦日だけを選んだ。Utahでは**199共通暦日・2年・ミュールジカ10元タグ・ビッグホーン42元タグ**が適格。Wyomingは193暦日・108／41タグ。
+
+- **日周の観測ニッチの相対的位置は再現：** 共通暦日上のq（NIGHT−DAYの観測GPS直線変位速度のlog1p差）のミュールジカ−ビッグホーン種間差は、元GPS系列でWyoming **+0.01702 [0.01416,0.01987]**、Utah **+0.03767 [0.02158,0.05716]**（元タグbootstrap95%）。UTC偶数・奇数2h系列でも**両原研究×全3系列の6比較で同方向の正の記述的区間**だった。これは2公表研究における元観測qの種間順位の繰返しであり、種の真の活動時間割合や世界標本の一般則ではない。
+- **季節的日長関係の種間差は再現せず：** Wyomingは同一193共通暦日でq〜43°N日長のミュールジカ傾き**+0.00783**、ビッグホーン**−0.00452**、元タグ種間差**+0.01235 [0.00982,0.01496]**。Utahでは同一199暦日のミュールジカ**+0.01374**、ビッグホーン**+0.04094**で、種間差**−0.02720 [−0.07008,+0.01320]**はゼロを含む。Utahの偶数・奇数両側の種間傾き区間もゼロを含む。
+- **暦日単位の別推定でも区別：** 同じ日付ごとの種別平均qを差し引き日長で回帰すると、元系列Wyoming **+0.01167（8年月ブロック区間[+0.00763,+0.02029]）**、Utah **−0.000055（10年月ブロック区間[−0.00956,+0.01514]）**。暦日データは元タグ数に依存する観測構造を持ち、数年月ブロックだけなので確証的・母集団推論ではない。
+
+**新しい生態学上の示唆：** 時間ニッチを単純な「夜行／昼行」1変量として扱うのではなく、**相対的な日周移動レベル（study内での種間順位）**と**季節／日長に沿った変化の傾き**を別軸として定義すべきである。今回の2独立元研究では前者は同じ方向を示し、後者のWyomingの正／負対照はUtahでは確認できなかった。ただしUtah10ミュールジカ、元観測UTC位相の強い偏り、両源研究のGPS機器・資源・生息場所・気象・個体群の非統制、結果を見た後で同じ2種を選んだ経緯が残る。**日長が種間の差を引き起こした、系統に保存された夜行性の差、一般的な日射反応だとは結論できない。** 旧ERA5 JSONの12ソースHOLDと外部48原短波放射負方向再現不成立は不変。
+
+[2研究のSHA固定比較](../research/RSDS_UTAH_WYOMING_TWO_STUDY_SHARED_DATE_PHOTOPERIOD_V1_RESULT_20261029.json) ／ [原Utahデータを元4分類群まで再現した方法](../scripts/run_rsds_utah_coobserved_photoperiod_v1.py) ／ [生態学的解釈と元タグ支持数](RSDS_UTAH_WYOMING_DIEL_RANK_VS_PHOTOPERIOD_SLOPE_20261029.md)。
+
 ## 再現可能性と論文発展
 
 - [全球太陽方向の研究草稿v2](../manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_v2_20261025.md)
