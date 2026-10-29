@@ -1,0 +1,54 @@
+name: RSDS original four-study multi-native GPS ecological evidence validation
+on:
+  push:
+    branches:
+      - science/four-multinative-gps-temporal-outcomes-v1
+    paths:
+      - 'scripts/validate_rsds_four_new_multinative_temporal_first_v1.py'
+      - 'tests/test_rsds_four_new_multinative_original_evidence_v1.py'
+      - '.github/workflows/rsds-four-multinative-first-evidence-ci-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify_original_four_study_gps_ecology:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/four-multinative-gps-temporal-outcomes-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: SHA-pin source-only four-study original GPS manifest and first empirical four-study outcomes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_four_new_multinative_original_evidence_v1.py' -v
+      - name: Compute source-locked descriptive goose 120-day niche and month association
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.validate_rsds_four_new_multinative_temporal_first_v1 --out research/RSDS_FOUR_MULTINATIVE_ORIGINAL_GPS_ECOLOGICAL_VALIDATION_V1_20261029.json
+          python -m json.tool research/RSDS_FOUR_MULTINATIVE_ORIGINAL_GPS_ECOLOGICAL_VALIDATION_V1_20261029.json >/dev/null
+      - name: Retain all four original source outcomes and unsupported source taxonomy/eligibility
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-four-original-multispecies-goose-120-common-days-evidence-v1
+          path: research/RSDS_FOUR_MULTINATIVE_ORIGINAL_GPS_ECOLOGICAL_VALIDATION_V1_20261029.json
+          if-no-files-found: error
+      - name: Commit public group-only evidence without individual original GPS records
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_FOUR_MULTINATIVE_ORIGINAL_GPS_ECOLOGICAL_VALIDATION_V1_20261029.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: original goose 120 shared-date temporal niche and source-HOLD audit"
+            git fetch origin science/four-multinative-gps-temporal-outcomes-v1
+            git rebase origin/science/four-multinative-gps-temporal-outcomes-v1
+            git push origin HEAD:science/four-multinative-gps-temporal-outcomes-v1
+          fi
