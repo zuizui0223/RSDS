@@ -94,6 +94,13 @@ def source_only_one(x,catalog):
         if len(viable)!=1:
             report["hold_reason"]="AMBIGUOUS_OR_MISSING_SINGLE_PRIMARY_TRACK_FILE"
             report["candidate_primary_original_files"]=len(viable)
+            # Source-only filenames, sizes and provider bundle UUIDs allow a
+            # pre-event manual scientific review. NO GPS records opened.
+            report["source_only_candidate_file_metadata"]=[
+                {"filename":v.get("name"),"bytes":v.get("bytes"),
+                 "bitstream_uuid":v.get("bitstream_uuid")}
+                for v in viable
+            ]
             return report
         chosen=viable[0]
         if (not isinstance(chosen.get("bytes"),int) or
