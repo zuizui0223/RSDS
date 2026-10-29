@@ -3,8 +3,8 @@
   "date": "2026-10-29",
   "original_published_study_count": 4,
   "registered_native_taxon_rows": 10,
-  "source_only_admissible_original_files": 3,
-  "source_only_metadata_HOLDS": 1,
+  "source_only_admissible_original_files": 4,
+  "source_only_metadata_HOLDS": 0,
   "animal_GPS_events_read_by_source_only_preflight": 0,
   "source_file_entries": [
     {
@@ -20,22 +20,17 @@
       "metadata_reported_animals": 46,
       "metadata_reported_original_fixes": 502845,
       "original_animal_events_opened_before_file_freeze": 0,
-      "source_original_file": null,
-      "source_status": "ORIGINAL_SOURCE_METADATA_HOLD",
-      "hold_reason": "AMBIGUOUS_OR_MISSING_SINGLE_PRIMARY_TRACK_FILE",
-      "candidate_primary_original_files": 2,
-      "source_only_candidate_file_metadata": [
-        {
-          "filename": "Scaling of movement in Galapagos tortoises (data from Bastille-Rousseau et al. 2016).csv",
-          "bytes": 136916273,
-          "bitstream_uuid": "a36d2464-7ac6-404c-a2fd-50cb00075fa5"
-        },
-        {
-          "filename": "Movement data.csv",
-          "bytes": 1239072,
-          "bitstream_uuid": "040ac915-e2e0-4cad-8b8c-92f4df30e337"
+      "source_original_file": {
+        "filename": "Scaling of movement in Galapagos tortoises (data from Bastille-Rousseau et al. 2016).csv",
+        "bitstream_uuid": "a36d2464-7ac6-404c-a2fd-50cb00075fa5",
+        "bytes": 136916273,
+        "checksum": {
+          "checkSumAlgorithm": "MD5",
+          "value": "1f006ac46e436fc648e0de423d6f3bfd"
         }
-      ]
+      },
+      "source_status": "SOURCE_ONLY_ORIGINAL_FILE_ADMISSIBLE",
+      "source_only_primary_selection_rule": "LARGEST_ORIGINAL_CSV_AT_LEAST_10X_COMPANION_PRE_EVENT"
     },
     {
       "original_repository_package_uuid": "1111b046-b2fa-44a1-a79c-847a6c0ba235",
