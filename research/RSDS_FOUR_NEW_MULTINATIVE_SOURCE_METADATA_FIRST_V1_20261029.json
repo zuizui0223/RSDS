@@ -23,7 +23,19 @@
       "source_original_file": null,
       "source_status": "ORIGINAL_SOURCE_METADATA_HOLD",
       "hold_reason": "AMBIGUOUS_OR_MISSING_SINGLE_PRIMARY_TRACK_FILE",
-      "candidate_primary_original_files": 2
+      "candidate_primary_original_files": 2,
+      "source_only_candidate_file_metadata": [
+        {
+          "filename": "Scaling of movement in Galapagos tortoises (data from Bastille-Rousseau et al. 2016).csv",
+          "bytes": 136916273,
+          "bitstream_uuid": "a36d2464-7ac6-404c-a2fd-50cb00075fa5"
+        },
+        {
+          "filename": "Movement data.csv",
+          "bytes": 1239072,
+          "bitstream_uuid": "040ac915-e2e0-4cad-8b8c-92f4df30e337"
+        }
+      ]
     },
     {
       "original_repository_package_uuid": "1111b046-b2fa-44a1-a79c-847a6c0ba235",
