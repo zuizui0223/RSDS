@@ -1,0 +1,70 @@
+name: RSDS Illinois three native coobserved GPS temporal niche partition v1
+on:
+  push:
+    branches:
+      - science/illinois-three-native-shared-calendar-v1
+    paths:
+      - 'research/RSDS_ILLINOIS_THREE_NATIVE_SHARED_DATE_V1_CONTRACT.json'
+      - 'scripts/run_rsds_illinois_three_native_shared_calendar_v1.py'
+      - 'tests/test_rsds_illinois_three_native_shared_calendar_v1.py'
+      - '.github/workflows/rsds-illinois-three-native-shared-date-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_three_native_source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/illinois-three-native-shared-calendar-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original public GPS q/daylength numerical runtime
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Test source original prior Illinois q/solar provenance and sign-blind same source calendar days
+        run: |
+          python -m unittest discover -s tests -p 'test_rsds_illinois_three_native_shared_calendar_v1.py' -v
+      - name: Verify one original Illinois published GPS provider file MD5 and prior native q/slope outcomes before 3-species common dates
+        run: |
+          python -m scripts.run_rsds_illinois_three_native_shared_calendar_v1 --out outputs/illinois_three_native
+          python -m json.tool outputs/illinois_three_native/illinois_three_native_shared_date_result.json > /dev/null
+      - name: Validate no original tagged animal, exact source dates or GPS coordinates published
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('outputs/illinois_three_native/illinois_three_native_shared_date_result.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['study_DOI']=='10.5441/001/1.649'
+          assert d['native_taxa']==['Canis latrans','Lynx rufus','Odocoileus virginianus']
+          assert d['old_12_ERA5_raw_SHA_HOLDS_UNCHANGED'] is True
+          assert d['prior_48_negative_shortwave_direction_external_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          for forbidden in ('"animal_id"','"individual_id"','"location-lat"','"location-long"','"original_event_datetime"','"private_gps"','"UTC_timestamp"'):
+              assert forbidden not in json.dumps(d), f'Original tagged GPS data leak: {forbidden}'
+          PY
+      - name: Persist all-three original source coobserved q and native source HOLDS, never tags or dates
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rsds-illinois-coyote-bobcat-deer-original-shared-source-calendar-v1
+          path: outputs/illinois_three_native/illinois_three_native_shared_date_result.json
+          if-no-files-found: warn
+      - name: Commit complete original source triad study outcome without replacing old results
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp outputs/illinois_three_native/illinois_three_native_shared_date_result.json research/RSDS_ILLINOIS_THREE_NATIVE_SHARED_DATE_V1_FIRST_RESULT_20261029.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_ILLINOIS_THREE_NATIVE_SHARED_DATE_V1_FIRST_RESULT_20261029.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: original Illinois predator and white-tailed deer q common-calendar temporal niche contrast"
+            git fetch origin science/illinois-three-native-shared-calendar-v1
+            git rebase origin/science/illinois-three-native-shared-calendar-v1
+            git push origin HEAD:science/illinois-three-native-shared-calendar-v1
+          fi
