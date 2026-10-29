@@ -217,6 +217,27 @@ Utah/Wyomingのミュールジカ・ビッグホーンの2原研究比較では�
 
 [Illinois 169日・3 native taxaの第一実測JSON](../research/RSDS_ILLINOIS_THREE_NATIVE_SHARED_DATE_V1_FIRST_RESULT_20261029.json) ／ [生態学的解釈](RSDS_ILLINOIS_COYOTE_BOBCAT_DEER_SHARED_TEMPORAL_ECOLOGY_20261029.md) ／ [Washington欠測を含む2原study固定結果](../research/RSDS_COYOTE_BOBCAT_TWO_STUDY_SHARED_DATE_TEMPORAL_V1_FIRST_RESULT_20261029.json)。
 
+## Q. 共通暦月内でも2つの種間q−日長関係は残るが、4比較は不確定（原GPS、2026-10-29）
+
+Illinoisのコヨーテ・ボブキャット・オジロジカ（同169暦日・9年月ブロック）とWyomingのミュールジカ・ビッグホーン（同193暦日・8年月ブロック）について、原提供元Movebankの元GPS bitstream MD5と、以前のq・日長係数・個体数・種間q差の全期間日長回帰係数を**新しい結果を見る前に全て数値再現**した。元の暦日支持と共通43°N天文日長を維持し、同じ**暦年×暦月**の中でq種間差と日長双方の平均を除去した係数を推定し、年月ブロックを2000回再標本化した。
+
+| 原調査・種間q差 | 以前の全期間勾配/h | 暦月内勾配/h | 記述的年月ブロック95% |
+|---|---:|---:|---|
+| Illinois コヨーテ−ボブキャット | +0.04629 | +0.10683 | [−0.02645,+0.22889] ゼロ含む |
+| Illinois コヨーテ−オジロジカ | +0.01995 | +0.02217 | [−0.10056,+0.16133] ゼロ含む |
+| Illinois ボブキャット−オジロジカ | −0.02634 | **−0.08466** | **[−0.17655,−0.00108]** |
+| Wyoming ミュールジカ−ビッグホーン（元UTC時計） | +0.01167 | **+0.01027** | **[+0.00008,+0.02290]** |
+| Wyoming 同種（偶数UTC時2h GPS） | +0.01336 | +0.00663 | [−0.00829,+0.02021] ゼロ含む |
+| Wyoming 同種（奇数UTC時2h GPS） | +0.01156 | +0.00610 | [−0.00376,+0.01645] ゼロ含む |
+
+Illinoisの新月内推定は8年月ブロック・167元共通日、Wyomingは8年月ブロック・193元共通日で成立した。**6比較中2比較**の名目ブロック95%区間が元の符号と同方向でゼロを含まず、残る**4比較**はゼロを含んだ。未確定な4比較で**点推定値がゼロになったわけではない**。Illinoisコヨーテ−ボブキャットはむしろ月内点推定+0.10683が全期間+0.04629より大きいが、ブロック再標本化の不確実性が大きい。よって元の日長関係がすべて月間季節の副産物であるという結論もできない。
+
+**生態学的意味：** 共存種の相対夜昼GPS変位という時間ニッチ「位置」と、日長に沿った年内季節方向は別の測定軸であり、一部の種間関連は月間季節差を除いた後にも残る。しかし暦月内でも天文日長は日付とほぼ一体なので、繁殖・食物・温度・風・日射・移動経路・同日記録した元タグの構成から光周期自体の効果を分離できない。2フィールド調査の8年月ブロックだけで世界の動物群の一般則・種間競争・捕食行動を決めない。観測GPS qは真の活動時間ではない。
+
+[全2元研究6比較の元実測](../research/RSDS_SHARED_MONTH_ADJUSTED_PHOTOPERIOD_TWO_STUDY_V1_FIRST_RESULT_20261029.json) ／ [原研究3ファイルGit blob固定の追加結果検証](../research/RSDS_SHARED_MONTH_PHOTOPERIOD_VALIDATED_ECOLOGY_20261029.json) ／ [研究契約](../research/RSDS_SHARED_MONTH_ADJUSTED_PHOTOPERIOD_SOURCE_V1_CONTRACT.json) ／ [詳細な生態学的考察](RSDS_ILLINOIS_WYOMING_WITHIN_MONTH_PHOTOPERIOD_ECOLOGY_20261029.md)。
+
+以前の48原GPS日射方位の外部負符号再現不成立と、旧ERA5生JSON SHAに関する12元ソースHOLDは変更していない。
+
 ## 再現可能性と論文発展
 
 - [全球太陽方向の研究草稿v2](../manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_v2_20261025.md)
