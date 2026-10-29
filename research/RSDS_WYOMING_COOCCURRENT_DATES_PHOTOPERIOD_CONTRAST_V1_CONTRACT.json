@@ -1,0 +1,49 @@
+{
+  "version": "RSDS_WYOMING_COOCCURRENT_DATES_TWO_TAXON_PHOTOPERIOD_V1",
+  "date": "2026-10-29",
+  "stage": "POST_HOC_WITHIN_ONE_STUDY_ECOLOGICAL_SHARED_SEASON_SUPPORT_TEST",
+  "original_study": {
+    "doi": "10.5441/001/1.703",
+    "region": "Wyoming",
+    "study_index": 1,
+    "taxa": [
+      "Odocoileus hemionus",
+      "Ovis canadensis"
+    ]
+  },
+  "immutable_source_results": [
+    {
+      "path": "research/RSDS_TRIPLE_DATE_ECOLOGICAL_Q_DAYLENGTH_INVARIANCE_V1_FIRST_RESULT_20261028.json",
+      "git_blob_sha": "157af4cacbe4359b07f4cedbed2793f8c49972b3"
+    },
+    {
+      "path": "research/RSDS_GPS_THREE_PHASE_EXACT_TAG_DATE_V2_FIRST_RESULT_20261028.json",
+      "git_blob_sha": "da679f8ca8d973de7da55463e5643037df6a0579"
+    }
+  ],
+  "scientific_question": "Do positive mule-deer versus negative bighorn q~astronomical daylength source associations persist in the SAME published Wyoming original GPS study after requiring BOTH native taxa observed on the SAME calendar-year / local-astronomical dates across ORIGINAL UTC-hourbin, EVEN 2h and ODD 2h acquisition schedules?",
+  "source_integrity": "Verify original Movebank exact source bitstream UUID/file bytes/provider MD5, then replay BOTH original native q/night-day and q~daylength all-source means/tag numbers, and both native complete three-schedule q/daylight group effects to 1e-12 BEFORE shared-date filtering. One original DOI, not two independent ecosystems.",
+  "prior_outcome_disclosure": "This was chosen AFTER observing opposite nominal daylength slopes in the original strict triple subset; the new study is an exploratory support-quality falsification attempt, not a preregistered or untouched independent replication.",
+  "date_filter": {
+    "initial_triple_source": "For each original tagged individual and calendar year, intersect local astronomical dates with at least 3 DAY and 3 NIGHT source-valid straight-line GPS intervals in ALL original, EVEN and ODD schedules.",
+    "exact_study_date": "A local astronomical date belongs to the same-study comparison only if at least one originally eligible tagged individual in EACH of the two taxa has triple-qualified source GPS data on exactly that YEAR+DATE.",
+    "iterative_support": "From original tag-year entries with >=10 triple date records and daylength spread>=0.5h, repeatedly intersect dates supported by both taxa and remove tag-year entries that lack >=10 study-shared dates or daylight range 0.5h until fixed point. Never choose dates based on q or slope magnitude/sign.",
+    "standard_photoperiod_x": "Compute a common astronomical daylight-hours axis at a fixed reference latitude of 43.0°N, declared before processing data, for every shared solar calendar date in the Wyoming study; 43N is a standardized study-region reference rather than the actual per-animal daylength or received sunshine.",
+    "unchanged_schedule_intervals": "ORIGINAL q uses accepted actual 0.5-2.0h original GPS intervals, EVEN and ODD use accepted actual 1.5-2.5h original original-fix subsets; <=60km/h and same solar day/part at segment start/midpoint/end. No interpolation.",
+    "original_tag_unit": "For each retained tagged animal, calculate three within-year q~common-L slopes, then equal-weight original eligible years per tag. Require >=5 distinct original tags/taxon to publish group estimate.",
+    "minimum_date_level": "For pooled calendar-date study comparison, >=20 shared dates, reference daylength range>=0.5h, and >=5 independent year-month blocks with at least two distinct daylength values; otherwise date-level slope contrast stays UNAVAILABLE.",
+    "no_source_selection": "All two native taxa must remain; if no shared season support, preserve INSUFFICIENT_COMMON_DATE_SUPPORT rather than adding new source/year/day or relabeling original exploratory result."
+  },
+  "outcomes": {
+    "primary": "Within-one-original-study mule deer and bighorn q~common reference astronomical daylength slope, each source tag mean (per schedule); and mule minus bighorn slope difference with independently resampled original tagged animals 2000 times; source group/bootstrap95 nominal and signs, not world confidence.",
+    "secondary": "On exactly same source calendar-year/local astronomical dates, compute daily species q means (each taxon equal 1 regardless of GPS tags) then slope of (mule q minus bighorn q) vs shared standardized 43N daylength, with 2000 year-month block bootstrap draws; exploratory paired calendar-date analysis, not original-tag experimental treatment.",
+    "source_frame": "One original Wyoming study with two native taxa; both species sampled in same published source but may occupy different microhabitats, collar duty cycles or climate histories.",
+    "privacy": "Export only study DOI, native taxa, group animal-day/year/month-block counts, source grouped signs/means/bootstrap95. Do not expose source GPS tag IDs, original source coordinates, raw GPS, exact original dates/times, original track or per-tag coefficients."
+  },
+  "historical_constraints": {
+    "old_12_ERA5_raw_SHA_HOLDS": "UNCHANGED",
+    "old_48_original_source_radiation_direction_external": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+    "old_within_study_original_q_daylength": "UNMODIFIED",
+    "no_weather_or_solar_causality": "NO ERA5 is fetched. Photoperiod is deterministic reference astronomical daylength; same calendar dates do not mean identical physical sunlight, resources, temperature, predation or habitat."
+  }
+}
