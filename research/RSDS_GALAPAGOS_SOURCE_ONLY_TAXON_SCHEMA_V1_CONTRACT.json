@@ -1,0 +1,48 @@
+{
+  "version": "RSDS_GALAPAGOS_PUBLISHER_ORIGINAL_TAXON_LABEL_AUDIT_V1",
+  "date": "2026-10-29",
+  "stage": "POST_Q_OUTCOME_DIAGNOSTIC_OF_PREVIOUSLY_FROZEN_ORIGINAL_SOURCE_TAXON_SCHEMA_HOLD",
+  "source_study": {
+    "package_uuid": "f9b4b052-8169-4ba8-9f96-9ae0ab883dd0",
+    "doi": "10.5441/001/1.2cp86266",
+    "study_id": "174165487",
+    "original_file_name": "Scaling of movement in Galapagos tortoises (data from Bastille-Rousseau et al. 2016).csv",
+    "bitstream_uuid": "a36d2464-7ac6-404c-a2fd-50cb00075fa5",
+    "file_bytes": 136916273,
+    "checksum": {
+      "checkSumAlgorithm": "MD5",
+      "value": "1f006ac46e436fc648e0de423d6f3bfd"
+    },
+    "registered_taxa": [
+      "Chelonoidis donfaustoi",
+      "Chelonoidis hoodensis",
+      "Chelonoidis porteri"
+    ]
+  },
+  "frozen_original_source_first_result": "research/RSDS_FOUR_NEW_MULTINATIVE_GPS_SHARED_CALENDAR_V1_FIRST_RESULT_20261029.json",
+  "frozen_original_source_first_result_git_blob_SHA": "4034d5318c914dc789a7fcd6535eedbf3a229d53",
+  "scientific_question": "The source publisher original file MD5 matches and registered native tortoise taxa exist in the Movebank catalog, but all 3 exact canonical taxon name matches in frozen q parser returned zero rows. Is the source taxon field missing, blank, different spelling, or a row-level nonnative label? Diagnose without reading movement outcome or changing original source sample.",
+  "raw_event_access_safety": "Read ONLY the original CSV HEADER and per-row source taxon label column (if identified). No original tagged animal identifier, timestamps, precise coordinates, GPS speed, per-individual effects, calendar date or movement data may be read into an output object or written.",
+  "allowed_taxon_column_names": [
+    "individual-taxon-canonical-name",
+    "individual-taxon-scientific-name",
+    "taxon-canonical-name",
+    "species",
+    "taxon",
+    "individual-taxon"
+  ],
+  "limits": {
+    "max_uncompressed_csv_bytes": 200000000,
+    "max_rows": 2000000,
+    "max_taxon_labels": 75
+  },
+  "outputs": [
+    "Original header names including only columns from a fixed allowlist taxonomy-relevant, and booleans for required GPS schema field presence; do not print entire header if potential sensitive custom columns.",
+    "Each unique source taxon string, number of rows, share of all source rows and whether it EXACTLY matches one of three registered study taxa, only when <=75 distinct labels.",
+    "Counts of null/empty native taxon labels, distinct raw source labels, rows scanned, and reason for mismatch.",
+    "No guessed synonym mapping, genus replacement, rescue, native taxon list changes or effect reruns until separately frozen taxonomy crosswalk with authoritative proof."
+  ],
+  "prior_science": "Keep historic Galapagos SOURCE_NO_VALID_GPS_FIXES as recorded first parser state; interpret as STRICT TAXON_SCHEMA_HOLD pending mapping, not absence of original wildlife or proof of no GPS animals.",
+  "no_privacy": "No individual tags or animal original timestamps/positions/year/date; source native taxon species names are public.",
+  "nonclaims": "This is data-quality diagnosis only, not biological q/night-day, photoperiod, island syndrome or causal solar findings. Preserve old ERA5 12 source holds, external 48-source radiation direction negative replication and all old published q source results."
+}
