@@ -409,6 +409,47 @@ jobs:
           assert combined["previous_48_source_shortwave_direction_external_nonreplication_UNCHANGED"]=="NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
           print("2 original Movebank studies: both repeat tagged GPS diel q ranking, only Wyoming supports opposite signed native q-daylength; original Wyoming source first result is unchanged.")
           PY
+      - name: Verify original Illinois co-observed 3 native taxa and Washington temporal support HOLD
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_predator_pair_shared_date_temporal_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_predator_pair_two_study_aggregate_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_predator_two_study_first_ecology_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_illinois_three_native_shared_calendar_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_illinois_three_native_first_ecology_v1.py' -v
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          observed={
+            "research/RSDS_COYOTE_BOBCAT_TWO_STUDY_SHARED_DATE_TEMPORAL_V1_FIRST_RESULT_20261029.json":
+              "a0e1ec8e61836f87057189c66e526dd9505f7e62",
+            "research/RSDS_ILLINOIS_THREE_NATIVE_SHARED_DATE_V1_FIRST_RESULT_20261029.json":
+              "924156e8f98d0bb9fda2f9d23aabc03060af2a31"
+          }
+          first=[]
+          for path,expected in observed.items():
+              raw=Path(path).read_bytes()
+              sha=hashlib.sha1(("blob "+str(len(raw))+"\0").encode()+raw).hexdigest()
+              assert sha==expected, f"Original source first q and daylength result modified: {path}"
+              first.append(json.loads(raw))
+          two,three=first
+          assert two["original_study_DOI_count"]==2 and two["native_study_taxon_rows"]==5
+          assert two["two_study_native_pair_repeatability"]["ORIGINAL_ONLY"]["original"]["two_source_same_sign_classification"]["q"]=="INCONCLUSIVE_OR_SOURCE_HOLD"
+          assert three["study_DOI"]=="10.5441/001/1.649"
+          assert three["MD5_verified"] and three["first_all_native_q_daylength_and_solar_source_replayed"]
+          support=three["source_all_three_native_support"]
+          assert support["shared_source_calendar_dates_all_three_native_taxa"]==169
+          assert support["native_original_tag_count_on_all_three_shared_source_dates"]=={
+              "Canis latrans":8,"Lynx rufus":5,"Odocoileus virginianus":12
+          }
+          pairs=three["three_source_native_pair_q_and_daylength"]
+          assert len(pairs)==3 and all(x["q"]["status"]=="POSITIVE" for x in pairs.values())
+          assert three["old_12_ERA5_raw_SHA_HOLDS_UNCHANGED"] and two["previous_12_ERA5_source_JSON_HOLDS_UNCHANGED"]
+          assert three["prior_48_negative_shortwave_direction_external_UNCHANGED"]=="NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
+          assert two["previous_48_source_negative_direction_shortwave_external_replication_UNCHANGED"]=="NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
+          print("Illinois 169-day three-taxon q and daylength original-source receipt locked; Washington q unavailable, no false 2-study external replication")
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
