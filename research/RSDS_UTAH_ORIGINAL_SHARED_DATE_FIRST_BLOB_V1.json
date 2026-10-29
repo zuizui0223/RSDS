@@ -1,0 +1,20 @@
+{
+  "version": "RSDS_UTAH_ORIGINAL_SHARED_DATE_FIRST_RESULT_GIT_BLOB_V1",
+  "date": "2026-10-29",
+  "stage": "UTAH_FIRST_RESULT_SEALED_BEFORE_SECOND_STUDY_COMPARISON",
+  "utah_result_path": "research/RSDS_UTAH_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json",
+  "utah_result_git_blob_sha": "87bfaf257d5c68676342118146db5141c76ae0a0",
+  "wyoming_reference_path": "research/RSDS_WYOMING_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json",
+  "wyoming_reference_git_blob_sha": "9b04b18ee73227b4e7a1715ebfb97f610af66952",
+  "utah_original_source_study_DOI": "10.5441/001/1.711",
+  "utah_original_provider_MD5_replay_verified": true,
+  "utah_source_native_four_taxa_original_q_replayed_before_new_two_taxon_effect": true,
+  "original_source_calendar_overlap_days": 199,
+  "original_tags_mule_deer": 10,
+  "original_tags_bighorn": 42,
+  "source_input_selection": "exact previously fixed two native taxa and 43N astronomy reference, no sign-dependent selection",
+  "prior_48_study_sunlight_negative_external_replication": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "historic_12_ERA5_source_SHA_HOLDS_unchanged": true,
+  "old_wyoming_first_blob_restored_to_main_identity": true,
+  "no_original_individual_dates_or_locations_exported": true
+}

@@ -1,0 +1,478 @@
+{
+  "all_study_source_original_native_photoperiod_sign_results": [
+    {
+      "both_native_taxa_original_tags_on_shared_calendar": {
+        "Odocoileus hemionus": 108,
+        "Ovis canadensis": 41
+      },
+      "original_field_study": "Wyoming",
+      "original_study_DOI": "10.5441/001/1.703",
+      "same_reference_astronomical_daylength_lat": 43.0,
+      "shared_calendar_source_status": "SHARED_DATE_SOURCE_EVALUATED",
+      "source_study_shared_calendar_dates": 193,
+      "source_study_year_month_blocks": 8,
+      "three_observation_schedules": {
+        "even": {
+          "contrast": {
+            "ci": [
+              0.009050299340276739,
+              0.01698206356396647
+            ],
+            "mule_minus_bighorn": 0.01280098790008331,
+            "nominal_sign": "NOMINAL_POSITIVE"
+          },
+          "date_level_q_difference_photoperiod_slope": {
+            "source_date_mean_q_difference_vs_reference_daylength": 0.013358456372272055,
+            "status": "NOMINAL_POSITIVE",
+            "year_month_block_descriptive95": [
+              0.009292409019353045,
+              0.016988526951978316
+            ]
+          },
+          "mule_higher_observed_night_relative_q_supported": true,
+          "native": {
+            "Odocoileus hemionus": {
+              "ci": [
+                0.005477950526078162,
+                0.011888622065604626
+              ],
+              "mean": 0.008430770080500336,
+              "n_source_original_tags": 108,
+              "sign": "POSITIVE"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                -0.006640765973778465,
+                -0.0019798337358768593
+              ],
+              "mean": -0.004370217819582973,
+              "n_source_original_tags": 41,
+              "sign": "NEGATIVE"
+            }
+          },
+          "native_q_levels": {
+            "Odocoileus hemionus": {
+              "ci": [
+                -0.0019332357266746102,
+                0.001703411587949933
+              ],
+              "mean": -0.00010644178013558103,
+              "n_source_original_tags": 108,
+              "sign": "INCLUDES_ZERO"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                -0.01777331358454076,
+                -0.011850454023436768
+              ],
+              "mean": -0.014750888717189724,
+              "n_source_original_tags": 41,
+              "sign": "NEGATIVE"
+            }
+          },
+          "positive_mule_negative_bighorn_supported": true,
+          "q_contrast": {
+            "ci": [
+              0.011246405898167439,
+              0.017975655683300586
+            ],
+            "mule_minus_bighorn": 0.014644446937054143,
+            "nominal_sign": "NOMINAL_POSITIVE"
+          },
+          "status": "EVALUATED"
+        },
+        "odd": {
+          "contrast": {
+            "ci": [
+              0.012441508133488209,
+              0.0195311431063281
+            ],
+            "mule_minus_bighorn": 0.015842745850824742,
+            "nominal_sign": "NOMINAL_POSITIVE"
+          },
+          "date_level_q_difference_photoperiod_slope": {
+            "source_date_mean_q_difference_vs_reference_daylength": 0.011558629015356208,
+            "status": "NOMINAL_POSITIVE",
+            "year_month_block_descriptive95": [
+              0.0054367425158077295,
+              0.025873556745444087
+            ]
+          },
+          "mule_higher_observed_night_relative_q_supported": true,
+          "native": {
+            "Odocoileus hemionus": {
+              "ci": [
+                0.006585878646846706,
+                0.012547475427289128
+              ],
+              "mean": 0.009424539354268856,
+              "n_source_original_tags": 108,
+              "sign": "POSITIVE"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                -0.008442612298678313,
+                -0.004514543563788185
+              ],
+              "mean": -0.006418206496555887,
+              "n_source_original_tags": 41,
+              "sign": "NEGATIVE"
+            }
+          },
+          "native_q_levels": {
+            "Odocoileus hemionus": {
+              "ci": [
+                -0.00626605934981382,
+                -0.00279210376253545
+              ],
+              "mean": -0.004502453859512884,
+              "n_source_original_tags": 108,
+              "sign": "NEGATIVE"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                -0.030483084025856547,
+                -0.02528603219150955
+              ],
+              "mean": -0.027893492707867604,
+              "n_source_original_tags": 41,
+              "sign": "NEGATIVE"
+            }
+          },
+          "positive_mule_negative_bighorn_supported": true,
+          "q_contrast": {
+            "ci": [
+              0.020318256826013514,
+              0.02665393975865066
+            ],
+            "mule_minus_bighorn": 0.02339103884835472,
+            "nominal_sign": "NOMINAL_POSITIVE"
+          },
+          "status": "EVALUATED"
+        },
+        "original": {
+          "contrast": {
+            "ci": [
+              0.009824407696110652,
+              0.014959154011107959
+            ],
+            "mule_minus_bighorn": 0.012347378623912636,
+            "nominal_sign": "NOMINAL_POSITIVE"
+          },
+          "date_level_q_difference_photoperiod_slope": {
+            "source_date_mean_q_difference_vs_reference_daylength": 0.011673653876371936,
+            "status": "NOMINAL_POSITIVE",
+            "year_month_block_descriptive95": [
+              0.007631096276766672,
+              0.020292966103889906
+            ]
+          },
+          "mule_higher_observed_night_relative_q_supported": true,
+          "native": {
+            "Odocoileus hemionus": {
+              "ci": [
+                0.005932503260125796,
+                0.009883153547220651
+              ],
+              "mean": 0.007827081911270831,
+              "n_source_original_tags": 108,
+              "sign": "POSITIVE"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                -0.005999168150912397,
+                -0.002949857729332914
+              ],
+              "mean": -0.004520296712641806,
+              "n_source_original_tags": 41,
+              "sign": "NEGATIVE"
+            }
+          },
+          "native_q_levels": {
+            "Odocoileus hemionus": {
+              "ci": [
+                -0.004462364614068744,
+                -0.001696025116897964
+              ],
+              "mean": -0.0030730244371755433,
+              "n_source_original_tags": 108,
+              "sign": "NEGATIVE"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                -0.02269841535416867,
+                -0.017623106050052805
+              ],
+              "mean": -0.020091485153930583,
+              "n_source_original_tags": 41,
+              "sign": "NEGATIVE"
+            }
+          },
+          "positive_mule_negative_bighorn_supported": true,
+          "q_contrast": {
+            "ci": [
+              0.01415697129789862,
+              0.01987304491305146
+            ],
+            "mule_minus_bighorn": 0.01701846071675504,
+            "nominal_sign": "NOMINAL_POSITIVE"
+          },
+          "status": "EVALUATED"
+        }
+      }
+    },
+    {
+      "both_native_taxa_original_tags_on_shared_calendar": {
+        "Odocoileus hemionus": 10,
+        "Ovis canadensis": 42
+      },
+      "original_field_study": "Utah",
+      "original_study_DOI": "10.5441/001/1.711",
+      "same_reference_astronomical_daylength_lat": 43.0,
+      "shared_calendar_source_status": "SHARED_DATE_SOURCE_EVALUATED",
+      "source_study_shared_calendar_dates": 199,
+      "source_study_year_month_blocks": 10,
+      "three_observation_schedules": {
+        "even": {
+          "contrast": {
+            "ci": [
+              -0.0477814194252582,
+              0.04572774495826938
+            ],
+            "mule_minus_bighorn": -0.005383095853685058,
+            "nominal_sign": "INCLUDES_ZERO"
+          },
+          "date_level_q_difference_photoperiod_slope": {
+            "source_date_mean_q_difference_vs_reference_daylength": -0.0007858332333541868,
+            "status": "INCLUDES_ZERO",
+            "year_month_block_descriptive95": [
+              -0.008177305952501728,
+              0.014637560072700707
+            ]
+          },
+          "mule_higher_observed_night_relative_q_supported": true,
+          "native": {
+            "Odocoileus hemionus": {
+              "ci": [
+                0.003984700976290167,
+                0.06799815137067063
+              ],
+              "mean": 0.026652400018439486,
+              "n_source_original_tags": 10,
+              "sign": "POSITIVE"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                0.004640289718852411,
+                0.06421279616053044
+              ],
+              "mean": 0.03203549587212454,
+              "n_source_original_tags": 42,
+              "sign": "POSITIVE"
+            }
+          },
+          "native_q_levels": {
+            "Odocoileus hemionus": {
+              "ci": [
+                -0.0232328974122266,
+                0.007181301965313008
+              ],
+              "mean": -0.009151064276885418,
+              "n_source_original_tags": 10,
+              "sign": "INCLUDES_ZERO"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                -0.0603307939718986,
+                -0.04413210743404125
+              ],
+              "mean": -0.05168043493085967,
+              "n_source_original_tags": 42,
+              "sign": "NEGATIVE"
+            }
+          },
+          "positive_mule_negative_bighorn_supported": false,
+          "q_contrast": {
+            "ci": [
+              0.02614026446566156,
+              0.06141835087551623
+            ],
+            "mule_minus_bighorn": 0.042529370653974254,
+            "nominal_sign": "NOMINAL_POSITIVE"
+          },
+          "status": "EVALUATED"
+        },
+        "odd": {
+          "contrast": {
+            "ci": [
+              -0.03879279263580537,
+              0.05626954658450144
+            ],
+            "mule_minus_bighorn": 0.005895694577022973,
+            "nominal_sign": "INCLUDES_ZERO"
+          },
+          "date_level_q_difference_photoperiod_slope": {
+            "source_date_mean_q_difference_vs_reference_daylength": -0.005625320379908634,
+            "status": "INCLUDES_ZERO",
+            "year_month_block_descriptive95": [
+              -0.01493154499388001,
+              0.012184758110652736
+            ]
+          },
+          "mule_higher_observed_night_relative_q_supported": true,
+          "native": {
+            "Odocoileus hemionus": {
+              "ci": [
+                -0.0004992604693255776,
+                0.023740814289553016
+              ],
+              "mean": 0.00948515268479972,
+              "n_source_original_tags": 10,
+              "sign": "INCLUDES_ZERO"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                -0.050161140703910714,
+                0.04829682845657782
+              ],
+              "mean": 0.0035894581077767474,
+              "n_source_original_tags": 42,
+              "sign": "INCLUDES_ZERO"
+            }
+          },
+          "native_q_levels": {
+            "Odocoileus hemionus": {
+              "ci": [
+                -0.024105052928314837,
+                0.0035939206865542015
+              ],
+              "mean": -0.011908296000337092,
+              "n_source_original_tags": 10,
+              "sign": "INCLUDES_ZERO"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                -0.057368489164340265,
+                -0.03646235247900474
+              ],
+              "mean": -0.04680653884098227,
+              "n_source_original_tags": 42,
+              "sign": "NEGATIVE"
+            }
+          },
+          "positive_mule_negative_bighorn_supported": false,
+          "q_contrast": {
+            "ci": [
+              0.01839494946231836,
+              0.05346460018493682
+            ],
+            "mule_minus_bighorn": 0.03489824284064518,
+            "nominal_sign": "NOMINAL_POSITIVE"
+          },
+          "status": "EVALUATED"
+        },
+        "original": {
+          "contrast": {
+            "ci": [
+              -0.0700772491261888,
+              0.013202942189877973
+            ],
+            "mule_minus_bighorn": -0.027200522597441403,
+            "nominal_sign": "INCLUDES_ZERO"
+          },
+          "date_level_q_difference_photoperiod_slope": {
+            "source_date_mean_q_difference_vs_reference_daylength": -5.497041601395459e-05,
+            "status": "INCLUDES_ZERO",
+            "year_month_block_descriptive95": [
+              -0.009556736042234434,
+              0.015140540029602209
+            ]
+          },
+          "mule_higher_observed_night_relative_q_supported": true,
+          "native": {
+            "Odocoileus hemionus": {
+              "ci": [
+                0.0010066569766252322,
+                0.033433272451506894
+              ],
+              "mean": 0.01373620343501315,
+              "n_source_original_tags": 10,
+              "sign": "POSITIVE"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                0.004261234833007117,
+                0.08338733303635149
+              ],
+              "mean": 0.04093672603245455,
+              "n_source_original_tags": 42,
+              "sign": "POSITIVE"
+            }
+          },
+          "native_q_levels": {
+            "Odocoileus hemionus": {
+              "ci": [
+                -0.030027549476133147,
+                0.0005593236335847486
+              ],
+              "mean": -0.016574325268700958,
+              "n_source_original_tags": 10,
+              "sign": "INCLUDES_ZERO"
+            },
+            "Ovis canadensis": {
+              "ci": [
+                -0.06220838479623235,
+                -0.0470751949680001
+              ],
+              "mean": -0.05424578533037518,
+              "n_source_original_tags": 42,
+              "sign": "NEGATIVE"
+            }
+          },
+          "positive_mule_negative_bighorn_supported": false,
+          "q_contrast": {
+            "ci": [
+              0.021580950529482876,
+              0.057157891207130704
+            ],
+            "mule_minus_bighorn": 0.037671460061674225,
+            "nominal_sign": "NOMINAL_POSITIVE"
+          },
+          "status": "EVALUATED"
+        }
+      }
+    }
+  ],
+  "both_original_studies_show_same_source_native_sign_if_supported": false,
+  "both_studies_preserve_native_diel_q_ordering_if_supported": true,
+  "comparison_native_taxa": [
+    "Odocoileus hemionus",
+    "Ovis canadensis"
+  ],
+  "date": "2026-10-29",
+  "fixed_original_study_DOIs": 2,
+  "interpretation_ceiling": [
+    "Utah pair of mule deer/bighorn species and the shared 43N daylength coordinate were chosen AFTER observing the Wyoming result, not blinded preregistration.",
+    "Same public taxa across two distinct Movebank source DOI represent at most two field-study contexts, not four independent ecological/phylogenetic species-level replications.",
+    "Within each source the calendar year dates are shared between species, but tags/duty cycles/habitats and actual irradiance may differ; across Utah versus Wyoming exact calendar dates/years need NOT match.",
+    "An insufficient Utah source shared-date sample is a missing/attrition endpoint, not a negative species behavioral biological response.",
+    "Original q is night minus day observed GPS straight-line displacement proxy, not actual duration of activity or within-individual physiological photoperiod sensitivity.",
+    "Source-wide mule-deer relative night-minus-day observed GPS displacement q ordering is descriptive and a separate estimand from the seasonal q~daylength slope; any cross-study recurrence is post-Wyoming-result discovery, not prospectively preregistered confirmation.",
+    "A zero-spanning nominal bootstrap CI is unresolved and not proof of absence or sign equivalence. No multiplicity-corrected or external population confidence claim.",
+    "Historical 12 ERA5 raw response source SHA HOLDs and separate 48-source negative signed radiation external validation unchanged; no GPS telemetry/IDs/date-level time/location redistributed."
+  ],
+  "original_studies_with_mule_higher_observed_night_relative_q_through_three_clocks": [
+    "Wyoming",
+    "Utah"
+  ],
+  "original_studies_with_same_opposite_native_daylength_sign_through_three_clocks": [
+    "Wyoming"
+  ],
+  "previous_12_ERA5_source_raw_HOLDS_UNCHANGED": true,
+  "previous_48_source_shortwave_direction_external_nonreplication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "source_43N_astronomical_reference_shared": true,
+  "source_original_studies_full_calendar_comparison_identifiable": 2,
+  "source_sample_is_random_world_ecosystem": false,
+  "stage": "POST_WYOMING_POSITIVE_RESULT_ADDITIONAL_FIXED_UTAH_SOURCE_DIAGNOSTIC",
+  "version": "RSDS_TWO_ORIGINAL_STUDIES_SAME_NATIVE_TAXA_COMMON_CALENDAR_PHOTOPERIOD_V1"
+}

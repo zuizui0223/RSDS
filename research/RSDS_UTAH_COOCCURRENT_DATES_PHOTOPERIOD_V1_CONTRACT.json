@@ -1,0 +1,56 @@
+{
+  "version": "RSDS_UTAH_COOCCURRENT_DATES_TWO_TAXON_PHOTOPERIOD_V1",
+  "freeze_date": "2026-10-29",
+  "stage": "POST_WYOMING_SHARED_DATE_RESULT_ADDITIONAL_ORIGINAL_STUDY_SUPPORT_VALIDATION_NOT_BLIND_CONFIRMATION",
+  "scientific_question": "Do mule-deer and bighorn GPS night-minus-day relative displacement q vs astronomical daylength differ within the SAME original public Utah source, after selecting their coobserved source-local solar dates with EXACT triple original/even/odd original-collar recording support, using same 43 degree latitude reference as Wyoming, before looking at new Utah cross-taxon date effects?",
+  "original_study": {
+    "doi": "10.5441/001/1.711",
+    "region": "Utah",
+    "study_index": 0,
+    "native_taxa_in_full_original_source": [
+      "Antilocapra americana",
+      "Cervus elaphus",
+      "Odocoileus hemionus",
+      "Ovis canadensis"
+    ],
+    "preselected_two_taxon_comparison": [
+      "Odocoileus hemionus",
+      "Ovis canadensis"
+    ],
+    "rationale": "Exactly the same two scientific taxa as the already opened Wyoming original shared-date contrast (source DOI 10.5441/001/1.703), not the stronger or weaker Utah study-native effect selected after viewing shared date results.",
+    "original_source_file_format": "zip"
+  },
+  "immutable_source_results": [
+    {
+      "path": "research/RSDS_TRIPLE_DATE_ECOLOGICAL_Q_DAYLENGTH_INVARIANCE_V1_FIRST_RESULT_20261028.json",
+      "git_blob_sha": "157af4cacbe4359b07f4cedbed2793f8c49972b3"
+    },
+    {
+      "path": "research/RSDS_GPS_THREE_PHASE_EXACT_TAG_DATE_V2_FIRST_RESULT_20261028.json",
+      "git_blob_sha": "da679f8ca8d973de7da55463e5643037df6a0579"
+    },
+    {
+      "path": "research/RSDS_WYOMING_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json",
+      "git_blob_sha": "9b04b18ee73227b4e7a1715ebfb97f610af66952"
+    }
+  ],
+  "prespecified_support_selection": {
+    "source_preflight": "Verify exact source original bitstream UUID, byte count and original MD5, replay ALL FOUR original Utah taxon q and q/daylength source means and eligible original animal counts before any new cross-taxon shared-date effects. Then replay archive source triple original same-tag/date group means for the two preselected taxa to 1e-12. Never rescue weak support by selecting another native pair, changing source years or loosening minimum count thresholds.",
+    "original_three_schedules": "Use source-original at most one GPS fix per UTC hour bin with actual accepted 0.5–2h GPS interval; EVEN UTC bin and ODD UTC bin each with accepted actual 1.5–2.5h intervals, original day-night part at interval endpoints/midpoints, min 3 DAY and 3 NIGHT steps on each tag/date/schedule and speed <=60km/h.",
+    "source_tagyear": "Within each original individual/calendar-year require >=10 exact original/even/odd daypart-eligible solar dates and common astronomical-daylength span >=0.5h.",
+    "reference_astronomy": "Use SAME common fixed 43.0°N reference astronomical photoperiod x from original Wyoming study, not source animal actual latitude or a physical received-sunlight measurement. This removes reference latitude scale variation from source-sign comparison; no weather source queried.",
+    "same_study_calendar_date": "Iteratively intersect tag-year solar dates from both native taxa; retain dates on which >=1 source-qualified animal from BOTH taxa had a triple-hour-schedule GPS day; after intersection drop tag-years with <10 shared dates or <0.5h shared reference daylength span, repeat until convergence (max 100). Only SUPPORT, never q values or sign, may enter selection.",
+    "animal_unit": "Per source tag equally weight each eligible calendar year and calculate source q/q~L group means and 2000 tagged-animal bootstrap per schedule. Require >=5 original tags in EACH native taxon; otherwise SOURCE_HOLD, not ecological zero.",
+    "month_year_test": "For a date-matched average-q difference slope q_mule−q_bighorn vs same x, bootstrap 2000 year-month blocks. Require >=20 coobserved calendar dates, at least 5 original year-month blocks, reference daylength spread>=0.5h; remain null if not supported.",
+    "report": "Always publish source DOI and both fixed scientific taxon rows; support counts, native q/q~L coefficients and nominal CIs for ORIGINAL/EVEN/ODD, mule−bighorn contrast and date-level contrast if identifiable; no original GPS tag IDs, true calendar years or days, exact positions/time, per-animal slopes or private GPS track files."
+  },
+  "scientific_interpretation": [
+    "This is a new separate original source DOI from Wyoming but the two taxa were selected after observing Wyoming's positive mule versus negative bighorn result; it is NOT a fully blinded or preregistered external confirmatory replication.",
+    "Utah's original GPS acquisition clock is heavily ODD UTC hour biased (roughly 87–96% depending on taxon), and prior strict triple tag support is only ~11 mule-deer and ~45 bighorn; lack of same-calendar support is informative attrition, never a null biological response.",
+    "Wyoming shared-date slope was positive mule−negative bighorn on 193 source calendar days, reference latitude 43.0°N. No assumptions of same Utah calendar years, season or shared tags with Wyoming.",
+    "A source-signed contrast under this fixed x axis cannot identify causal daylight physiology, thermoregulation, sun navigation, direct heat or general global taxonomic trait effect; habitats, seasons, resources and collars may remain different within and between studies.",
+    "Old Movebank source, 12 original ERA5 serialized raw SHA historical HOLDS and 48-source external signed radiation-direction nonreplication are immutable.",
+    "Do not use eBird; no TinyFish dependency in source retrieval or execution."
+  ],
+  "historical_negative_radiation": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
+}

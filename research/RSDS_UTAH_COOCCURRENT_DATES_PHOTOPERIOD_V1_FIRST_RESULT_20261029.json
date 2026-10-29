@@ -1,0 +1,287 @@
+{
+  "both_native_taxa_original_all_date_and_original_triple_source_estimates_replayed": true,
+  "calendar_date_paired_source_difference": {
+    "coobserved_original_source_dates": 199,
+    "mean_source_qualified_tags_per_species_per_date_NOT_EXPORTED": true,
+    "shared_year_month_blocks": 10,
+    "slopes": {
+      "even": {
+        "mule_q_minus_bighorn_q_vs_shared_reference_daylength": -0.0007858332333541868,
+        "status": "INCLUDES_ZERO",
+        "year_month_block_descriptive95": [
+          -0.008177305952501728,
+          0.014637560072700707
+        ]
+      },
+      "odd": {
+        "mule_q_minus_bighorn_q_vs_shared_reference_daylength": -0.005625320379908634,
+        "status": "INCLUDES_ZERO",
+        "year_month_block_descriptive95": [
+          -0.01493154499388001,
+          0.012184758110652736
+        ]
+      },
+      "original": {
+        "mule_q_minus_bighorn_q_vs_shared_reference_daylength": -5.497041601395459e-05,
+        "status": "INCLUDES_ZERO",
+        "year_month_block_descriptive95": [
+          -0.009556736042234434,
+          0.015140540029602209
+        ]
+      }
+    }
+  },
+  "date": "2026-10-29",
+  "historical_12_ERA5_raw_JSON_HOLDS_UNCHANGED": true,
+  "historical_48_source_signed_radiation_external_NONREPLICATED_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "native_taxa": [
+    "Odocoileus hemionus",
+    "Ovis canadensis"
+  ],
+  "original_provider_GPS_MD5_verified": true,
+  "same_study_between_native_taxon": {
+    "q_daylength_slope_mule_minus_bighorn_by_schedule": {
+      "native_taxon_tag_counts": {
+        "Odocoileus hemionus": 10,
+        "Ovis canadensis": 42
+      },
+      "schedules": {
+        "even": {
+          "descriptive_original_tag_bootstrap95": [
+            -0.0477814194252582,
+            0.04572774495826938
+          ],
+          "mule_minus_bighorn_slope": -0.005383095853685058,
+          "status": "INCLUDES_ZERO"
+        },
+        "odd": {
+          "descriptive_original_tag_bootstrap95": [
+            -0.03879279263580537,
+            0.05626954658450144
+          ],
+          "mule_minus_bighorn_slope": 0.005895694577022973,
+          "status": "INCLUDES_ZERO"
+        },
+        "original": {
+          "descriptive_original_tag_bootstrap95": [
+            -0.0700772491261888,
+            0.013202942189877973
+          ],
+          "mule_minus_bighorn_slope": -0.027200522597441403,
+          "status": "INCLUDES_ZERO"
+        }
+      }
+    },
+    "q_mule_minus_bighorn_by_schedule": {
+      "native_taxon_tag_counts": {
+        "Odocoileus hemionus": 10,
+        "Ovis canadensis": 42
+      },
+      "schedules": {
+        "even": {
+          "descriptive_original_tag_bootstrap95": [
+            0.02614026446566156,
+            0.06141835087551623
+          ],
+          "mule_minus_bighorn_slope": 0.042529370653974254,
+          "status": "NOMINAL_POSITIVE"
+        },
+        "odd": {
+          "descriptive_original_tag_bootstrap95": [
+            0.01839494946231836,
+            0.05346460018493682
+          ],
+          "mule_minus_bighorn_slope": 0.03489824284064518,
+          "status": "NOMINAL_POSITIVE"
+        },
+        "original": {
+          "descriptive_original_tag_bootstrap95": [
+            0.021580950529482876,
+            0.057157891207130704
+          ],
+          "mule_minus_bighorn_slope": 0.037671460061674225,
+          "status": "NOMINAL_POSITIVE"
+        }
+      }
+    }
+  },
+  "shared_support": {
+    "common_daylight_standard_reference_latitude_degrees": 43.0,
+    "date_support_fixed_point_iterations": 2,
+    "distinct_calendar_month_numbers_in_coobserved_dates": 5,
+    "distinct_original_calendar_years_with_coobserved_dates": 2,
+    "no_original_calendar_years_or_dates_or_tag_IDs_exported": true,
+    "original_study_calendar_dates_with_both_taxa_observed_on_all_three_schedules": 199,
+    "original_tags_with_10_days_on_both_taxa_shared_calendar": {
+      "Odocoileus hemionus": 10,
+      "Ovis canadensis": 42
+    },
+    "original_tags_with_3_schedule_10_day_local_eligible_season": {
+      "Odocoileus hemionus": 11,
+      "Ovis canadensis": 42
+    }
+  },
+  "source_taxon_results": [
+    {
+      "common_date_photoperiod_q_slope_by_schedule": {
+        "original_tag_count": 10,
+        "same_tags_and_source_calendar_date_support_for_all_three_schedules": true,
+        "schedules": {
+          "even": {
+            "animal_bootstrap95": [
+              0.003984700976290167,
+              0.06799815137067063
+            ],
+            "mean": 0.026652400018439486,
+            "negative_source_tags": 1,
+            "nominal_sign": "POSITIVE",
+            "positive_source_tags": 9
+          },
+          "odd": {
+            "animal_bootstrap95": [
+              -0.0004992604693255776,
+              0.023740814289553016
+            ],
+            "mean": 0.00948515268479972,
+            "negative_source_tags": 4,
+            "nominal_sign": "INCLUDES_ZERO",
+            "positive_source_tags": 6
+          },
+          "original": {
+            "animal_bootstrap95": [
+              0.0010066569766252322,
+              0.033433272451506894
+            ],
+            "mean": 0.01373620343501315,
+            "negative_source_tags": 4,
+            "nominal_sign": "POSITIVE",
+            "positive_source_tags": 6
+          }
+        },
+        "status": "ESTIMABLE"
+      },
+      "common_date_temporal_q_by_schedule": {
+        "original_tag_count": 10,
+        "same_tags_and_source_calendar_date_support_for_all_three_schedules": true,
+        "schedules": {
+          "even": {
+            "animal_bootstrap95": [
+              -0.0232328974122266,
+              0.007181301965313008
+            ],
+            "mean": -0.009151064276885418,
+            "negative_source_tags": 6,
+            "nominal_sign": "INCLUDES_ZERO",
+            "positive_source_tags": 4
+          },
+          "odd": {
+            "animal_bootstrap95": [
+              -0.024105052928314837,
+              0.0035939206865542015
+            ],
+            "mean": -0.011908296000337092,
+            "negative_source_tags": 7,
+            "nominal_sign": "INCLUDES_ZERO",
+            "positive_source_tags": 3
+          },
+          "original": {
+            "animal_bootstrap95": [
+              -0.030027549476133147,
+              0.0005593236335847486
+            ],
+            "mean": -0.016574325268700958,
+            "negative_source_tags": 8,
+            "nominal_sign": "INCLUDES_ZERO",
+            "positive_source_tags": 2
+          }
+        },
+        "status": "ESTIMABLE"
+      },
+      "original_study_coobserved_date_tagged_animals_daylength": 10,
+      "original_study_coobserved_date_tagged_animals_q": 10,
+      "taxon": "Odocoileus hemionus"
+    },
+    {
+      "common_date_photoperiod_q_slope_by_schedule": {
+        "original_tag_count": 42,
+        "same_tags_and_source_calendar_date_support_for_all_three_schedules": true,
+        "schedules": {
+          "even": {
+            "animal_bootstrap95": [
+              0.004640289718852411,
+              0.06421279616053044
+            ],
+            "mean": 0.03203549587212454,
+            "negative_source_tags": 19,
+            "nominal_sign": "POSITIVE",
+            "positive_source_tags": 23
+          },
+          "odd": {
+            "animal_bootstrap95": [
+              -0.050161140703910714,
+              0.04829682845657782
+            ],
+            "mean": 0.0035894581077767474,
+            "negative_source_tags": 24,
+            "nominal_sign": "INCLUDES_ZERO",
+            "positive_source_tags": 18
+          },
+          "original": {
+            "animal_bootstrap95": [
+              0.004261234833007117,
+              0.08338733303635149
+            ],
+            "mean": 0.04093672603245455,
+            "negative_source_tags": 24,
+            "nominal_sign": "POSITIVE",
+            "positive_source_tags": 18
+          }
+        },
+        "status": "ESTIMABLE"
+      },
+      "common_date_temporal_q_by_schedule": {
+        "original_tag_count": 42,
+        "same_tags_and_source_calendar_date_support_for_all_three_schedules": true,
+        "schedules": {
+          "even": {
+            "animal_bootstrap95": [
+              -0.0603307939718986,
+              -0.04413210743404125
+            ],
+            "mean": -0.05168043493085967,
+            "negative_source_tags": 42,
+            "nominal_sign": "NEGATIVE",
+            "positive_source_tags": 0
+          },
+          "odd": {
+            "animal_bootstrap95": [
+              -0.057368489164340265,
+              -0.03646235247900474
+            ],
+            "mean": -0.04680653884098227,
+            "negative_source_tags": 39,
+            "nominal_sign": "NEGATIVE",
+            "positive_source_tags": 3
+          },
+          "original": {
+            "animal_bootstrap95": [
+              -0.06220838479623235,
+              -0.0470751949680001
+            ],
+            "mean": -0.05424578533037518,
+            "negative_source_tags": 42,
+            "nominal_sign": "NEGATIVE",
+            "positive_source_tags": 0
+          }
+        },
+        "status": "ESTIMABLE"
+      },
+      "original_study_coobserved_date_tagged_animals_daylength": 42,
+      "original_study_coobserved_date_tagged_animals_q": 42,
+      "taxon": "Ovis canadensis"
+    }
+  ],
+  "status": "STUDY_COMMON_DATE_EVALUATED",
+  "study_Doi": "10.5441/001/1.711",
+  "version": "RSDS_UTAH_COOCCURRENT_CALENDAR_DAY_PHOTOPERIOD_V1_ORIGINAL_RESULT"
+}
