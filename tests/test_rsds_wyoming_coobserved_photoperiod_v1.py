@@ -105,6 +105,23 @@ class WyomingWithinStudySharedDates(unittest.TestCase):
             for v in r["slopes"].values()
         ))
 
+    def test_synthetic_seven_month_date_block_slope_detects_opposing_native_signs(self):
+        pool=synthetic(n1=8,n2=7,days=200)
+        aligned,dates,_=matched_two_taxon_calendar(pool)
+        self.assertEqual(len(dates),200)
+        observations=same_calendar_date_difference(aligned,dates)
+        outcome=monthly_block_calendar_contrast(observations,21212)
+        self.assertGreaterEqual(outcome["shared_year_month_blocks"],5)
+        for sch in SCHEDULES:
+            row=outcome["slopes"][sch]
+            self.assertAlmostEqual(
+                row["mule_q_minus_bighorn_q_vs_shared_reference_daylength"],
+                .04,places=12
+            )
+            self.assertEqual(row["status"],"NOMINAL_POSITIVE")
+            self.assertLess(row["year_month_block_descriptive95"][0],
+                            row["year_month_block_descriptive95"][1])
+
     def test_date_overlap_pruning_not_converted_to_animal_nonresponse(self):
         pool=synthetic()
         # Move one species' dates far enough away to prevent overlap.
