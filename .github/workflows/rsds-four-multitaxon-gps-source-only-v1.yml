@@ -1,0 +1,53 @@
+name: RSDS four new independent multi-taxon original Movebank source metadata
+on:
+  push:
+    branches:
+      - science/independent-multitaxon-original-gps-temporal-v1
+    paths:
+      - 'research/RSDS_FOUR_NEW_MULTINATIVE_SOURCE_GPS_V1_CONTRACT.json'
+      - 'scripts/preflight_rsds_four_new_multitaxon_gps_v1.py'
+      - 'tests/test_rsds_four_new_multitaxon_source_metadata_v1.py'
+      - '.github/workflows/rsds-four-multitaxon-gps-source-only-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  frozen_four_original_source_metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/independent-multitaxon-original-gps-temporal-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify all four study DOIs, ten source-native taxa, licenses and 437 catalog source metadata before GPS events
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_four_new_multitaxon_source_metadata_v1.py' -v
+      - name: Read ORIGINAL source bitstream UUID/size/publisher checksum metadata ONLY, zero animal GPS events
+        run: |
+          python -m scripts.preflight_rsds_four_new_multitaxon_gps_v1 --out research/RSDS_FOUR_NEW_MULTINATIVE_SOURCE_METADATA_FIRST_V1_20261029.json
+          python -m json.tool research/RSDS_FOUR_NEW_MULTINATIVE_SOURCE_METADATA_FIRST_V1_20261029.json > /dev/null
+      - name: Retain full four-study source metadata / HOLD before outcome event access
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-four-new-multi-taxon-original-source-metadata-pre-event-v1
+          path: research/RSDS_FOUR_NEW_MULTINATIVE_SOURCE_METADATA_FIRST_V1_20261029.json
+          if-no-files-found: error
+      - name: Commit source-only outcome-blind original GPS file identity before opening movement data
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_FOUR_NEW_MULTINATIVE_SOURCE_METADATA_FIRST_V1_20261029.json
+          if ! git diff --cached --quiet; then
+            git commit -m "source: freeze four original multi-native GPS tracking files/checksums before q results"
+            git fetch origin science/independent-multitaxon-original-gps-temporal-v1
+            git rebase origin/science/independent-multitaxon-original-gps-temporal-v1
+            git push origin HEAD:science/independent-multitaxon-original-gps-temporal-v1
+          fi
