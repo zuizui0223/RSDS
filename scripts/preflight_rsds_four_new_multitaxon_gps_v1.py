@@ -91,6 +91,20 @@ def source_only_one(x,catalog):
                   or "tracking" in z["name"].lower()]
         if len(specific)==1:
             viable=specific
+        if len(viable)==2 and all(z["name"].lower().endswith(".csv") for z in viable):
+            # PRE-EVENT size-only original-file disambiguation.
+            # A comprehensive original GPS table can coexist with a small
+            # derived "Movement data.csv" companion. Never open either one
+            # to learn which outcome or taxon would be more favorable.
+            sizes=sorted(viable,key=lambda x:x.get("bytes") or 0,reverse=True)
+            largest,smaller=sizes
+            if (isinstance(largest.get("bytes"),int) and
+                    isinstance(smaller.get("bytes"),int) and
+                    largest["bytes"]>=10_000_000 and
+                    smaller["bytes"]>0 and
+                    largest["bytes"]>=10*smaller["bytes"]):
+                viable=[largest]
+                report["source_only_primary_selection_rule"]="LARGEST_ORIGINAL_CSV_AT_LEAST_10X_COMPANION_PRE_EVENT"
         if len(viable)!=1:
             report["hold_reason"]="AMBIGUOUS_OR_MISSING_SINGLE_PRIMARY_TRACK_FILE"
             report["candidate_primary_original_files"]=len(viable)
