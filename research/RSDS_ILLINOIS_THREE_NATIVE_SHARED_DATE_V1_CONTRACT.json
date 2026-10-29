@@ -1,0 +1,60 @@
+{
+  "version": "RSDS_ILLINOIS_THREE_NATIVE_SYMPATRIC_DATE_Q_V1",
+  "date": "2026-10-29",
+  "stage": "POST_FIRST_ILLINOIS_COYOTE_BOBCAT_TEMPORAL_OUTCOME_EXPLORATORY_THIRD_NATIVE_HERBIVORE_COMPARISON",
+  "scientific_question": "Within the same 194+ original Illinois study GPS calendar-day source frame, is the recorded NIGHT−DAY GPS displacement q temporally differentiated across native Canis latrans, Lynx rufus and Odocoileus virginianus when ALL THREE taxa are observed on the SAME dates? Does the q difference with a herbivore agree with or differ from the predator-predator ordering? Do not infer actual predation or behavior transitions.",
+  "source_original_study": {
+    "doi": "10.5441/001/1.649",
+    "package_uuid": "7d38dd27-3bd3-4f2d-a5f6-06cafe4b043e",
+    "bitstream_uuid": "740a961c-c6ba-47cc-ae2e-a95d6aa4ed21",
+    "bytes": 31838152,
+    "md5": "611cc8d3100560ada3213c684059147a",
+    "study_id": "1233029719",
+    "file_name": "Illinois white-tailed deer and predators.csv",
+    "native_taxa": [
+      "Canis latrans",
+      "Lynx rufus",
+      "Odocoileus virginianus"
+    ]
+  },
+  "pinned_previous": [
+    {
+      "path": "research/RSDS_COYOTE_BOBCAT_TWO_STUDY_SHARED_DATE_TEMPORAL_V1_FIRST_RESULT_20261029.json",
+      "git_blob_SHA": "a0e1ec8e61836f87057189c66e526dd9505f7e62"
+    },
+    {
+      "path": "research/GLOBAL_SOLAR_AZIMUTH_12_NEW_SOURCE_FIRST_ORIGINAL_GPS_RESULT_20261025.json",
+      "git_blob_SHA": "d3a05ac1324fa8fc6cf738e1866704841f0b6d88"
+    }
+  ],
+  "prior_first_native_q_support": {
+    "Canis_latrans": 20,
+    "Lynx_rufus": 5,
+    "Odocoileus_virginianus": 23
+  },
+  "selection": "All three native taxa that were fixed for this original source before the new time outcome. Do not add or remove a taxon based on its q sign. Since Illinois q signs already known, all three-species comparisons are explicitly exploratory and can be unsupported.",
+  "source_first_integrity": "Require original Movebank provider bitstream UUID/bytes/MD5, hourly selected fixes and native tagged animal counts (from October 25), and q, q~daylength full-source n/mean originally frozen by PR16 to 1e-12 BEFORE recomputing any three-native source coobserved-day q effect.",
+  "q": "Original timestamp-only at most one fix per UTC-hour bin; >=3 accepted DAY and >=3 accepted NIGHT straight-line GPS displacement steps on same astronomical date, within animal-year >=10 eligible dates. Raw 0.5–2h actual interval, speed <=60km/h, same solar period at start/midpoint/end.",
+  "shared_dates": "Iterative fixed-point intersection of source astronomy (year,solar date) among ALL three native species, retaining native original tagged-animal-year with >=10 shared original qualified dates and >=0.5 h daylength support at fixed 43°N reference. Eligibility only from date support, NEVER observed q values or species signs.",
+  "sample_units": "Within each taxon equal available calendar-year q and slope contributions per original tagged animal. Between each taxon pair, separately resample original tagged individuals (2000 reps; n>=5 for each source native taxon), preserving same shared source calendar-day frame. For datewise q difference vs daylength resample year-month blocks (>=5 blocks and >=20 source days).",
+  "preselected_species_pairs": [
+    "Canis latrans minus Lynx rufus",
+    "Canis latrans minus Odocoileus virginianus",
+    "Lynx rufus minus Odocoileus virginianus"
+  ],
+  "estimands": [
+    "mean observed source tagged animal q and q~43N daylength for all three native taxa on common shared dates",
+    "3 original native species pair q differences with source tag bootstrap 95%",
+    "3 native source pair q~daylength slope differences and source calendar month-block q-difference slope, each with explicit support"
+  ],
+  "limits": [
+    "One source field study only, not three independent ecological populations or two geographic replications.",
+    "All three native q and daylength source effects already examined in Illinois after PR16; this is a posthoc shared-source support restriction, not a blind confirmation or a new species selection.",
+    "Same source original calendar date does not imply identical sampled GPS UTC hours, microhabitats, experienced temperature, sunlight, predator-prey encounters or physical movement trajectories.",
+    "GPS q is log1p NIGHT−DAY observed displacement speed, not true proportion of active time, predator success, prey avoidance, competition, or niche partition measured by occupancy.",
+    "Minimum five ORIGINAL tagged animals per taxon for descriptive source-bootstrap; any unsupported 3-native shared calendar must remain unavailable rather than drop the deer or substitute 2-native dates.",
+    "8 original study macroestimates and their SOURCE weighting remain unaltered. Earlier ERA5 source raw JSON twelve HOLDS and preregistered 48-source signed shortwave direction negative external replication unchanged.",
+    "Privacy: source native taxon/DOI and aggregate support only; no original animal IDs, exact times/dates, coordinates, grids or per-animal q/slope values."
+  ],
+  "historical_external_negative": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
+}
