@@ -1,0 +1,95 @@
+{
+  "version": "RSDS_FOUR_NEW_MULTINATIVE_ORIGINAL_GPS_STUDY_TEMPORAL_V1",
+  "freeze_date": "2026-10-29",
+  "stage": "NEW_ORIGINAL_STUDY_TEMPORAL_OUTCOMES_NOT_PREVIOUSLY_OPENED_IN_THIS_ROUTE",
+  "question": "Across four new published independent original animal-GPS studies tracking ≥2 native taxa, do recorded NIGHT−DAY displacement niches form source-study-specific rankings on exactly co-observed astronomical dates, and do species contrasts in source-reference photoperiod trends differ across sites and locomotor guilds?",
+  "original_437_registry": "research/seasonal_database_catalog/2026-10-19/movebank/catalog.json",
+  "source_selection": "Selected solely on fixed public metadata (new DOI+study ID relative to Illinois/Wyoming/Utah temporal comparison; ≥2 distinct registered taxa; GPS source, ≥10 reported animals, ≥150000 original fixes, guild diversity). Includes Galápagos giant tortoises, migratory ducks, African vultures, and grazing geese. Not representative random sampling, and some sources were previously used for solar-direction cataloging, so NOT all-behavior untouched prospective external replication.",
+  "sources": [
+    {
+      "package_uuid": "f9b4b052-8169-4ba8-9f96-9ae0ab883dd0",
+      "doi": "10.5441/001/1.2cp86266",
+      "study_id": "174165487",
+      "registered_taxa": [
+        "Chelonoidis donfaustoi",
+        "Chelonoidis hoodensis",
+        "Chelonoidis porteri"
+      ],
+      "reported_animals": 46,
+      "reported_fixes": 502845,
+      "region_hint": "Galapagos islands",
+      "guild_hint": "giant tortoises, terrestrial island reptiles"
+    },
+    {
+      "package_uuid": "1111b046-b2fa-44a1-a79c-847a6c0ba235",
+      "doi": "10.5441/001/1.3fv21n7m",
+      "study_id": "350174730",
+      "registered_taxa": [
+        "Anas acuta",
+        "Anas platyrhynchos"
+      ],
+      "reported_animals": 39,
+      "reported_fixes": 422545,
+      "region_hint": "migratory ducks",
+      "guild_hint": "waterfowl"
+    },
+    {
+      "package_uuid": "569fdce7-bd58-41b1-83c8-e4def740dae0",
+      "doi": "10.5441/001/1.mf903197",
+      "study_id": "2919708",
+      "registered_taxa": [
+        "Torgos tracheliotus",
+        "Gyps africanus"
+      ],
+      "reported_animals": 15,
+      "reported_fixes": 346650,
+      "region_hint": "African vultures",
+      "guild_hint": "soaring scavenging birds"
+    },
+    {
+      "package_uuid": "8318572a-a9d8-4d9e-b685-7db8a73bdf86",
+      "doi": "10.5441/001/1.fk899541",
+      "study_id": "1904388965",
+      "registered_taxa": [
+        "Branta leucopsis",
+        "Anser albifrons",
+        "Anser anser"
+      ],
+      "reported_animals": 185,
+      "reported_fixes": 479064,
+      "region_hint": "grazing geese agricultural grasslands",
+      "guild_hint": "grazing geese, waterfowl"
+    }
+  ],
+  "independence": "Original field-study DOI and repository study ID are the replication units. Exclude a known duplicate DOI for African vultures (10.5441/001/1.pr1vj29n) sharing study ID 2919708. Native taxa within one study are dependent. No claim they were spatially sympatric merely because source calendar dates overlap.",
+  "stage1_metadata": {
+    "execute_before_animal_GPS": "Retrieve source ORIGINAL bundle bitstream inventory ONLY. Select a unique original GPS or tracking CSV/CSV.gz/ZIP by filename, never by q or daylength results. Freeze bitstream UUID/bytes/checksum and source metadata status to git before animal event reads.",
+    "byte_limit": 200000000,
+    "max_original_rows": 2000000,
+    "source_allow": [
+      ".csv",
+      ".csv.gz",
+      ".zip"
+    ],
+    "hold_policy": "Multiple plausible tracking files, unsupported type, missing provider checksum, no GPS native taxonomy, over 200MB or source API errors -> METADATA_HOLD, never replace study/taxa."
+  },
+  "new_event_contract": {
+    "time": "At most one fix per UTC-hour bin from original event timestamps; accepted 0.5 to 2.0 hours between original adjacent fixes, speed <=60 km/h, same local solar date and daypart at begin/mid/end; no interpolation.",
+    "native_day_q": "Within original tagged animal×solar date at least 3 accepted DAY and 3 NIGHT GPS movement steps; q=log1p(median NIGHT GPS km/h)-log1p(median DAY GPS km/h), not latent activity hours.",
+    "native_year": "For native taxon baseline an animal-year requires ≥10 eligible q days. For source level same-calendar group each native tag/year with >=10 dates in shared source calendar; do not require photoperiod span to estimate q.",
+    "coobserved_source_calendar": "All registered taxa >1 are preselected. Iterative fixed-point intersection of eligible source (calendar year, local solar date) across EVERY native taxon; prune tag-years with fewer than 10 common days until stable. Report no-overlap hold, never select best subset of species or pair on q outcome.",
+    "study_reference_daylength": "A common STUDY-level astronomical reference latitude from median original valid GPS latitude across all registered source native taxa, computed blind to q/daylength outcome and never published as exact coordinate. This is reference daylength, not each animal's actual exposure (especially migratory species).",
+    "photoperiod": "Within each tag-year regression q~common study-reference astronomical daylength across source-shared dates; require ≥10 common days and >=0.5 h observed daylength variation, else SLOPE_UNAVAILABLE. Island/equatorial reference may never meet threshold; do not alter cutoff after seeing this.",
+    "native_bootstrap": "For native q positions and q~daylength slope, source group mean over original tagged animals with ≥5 animals required; 2000 fixed-seed animal resamples, nominal 95% interval; record unsupported explicitly.",
+    "pair_q": "For EVERY unordered pre-fixed native species pair in source study, compare q levels on source-wide all-taxa shared dates; original tagged animal independent bootstrap across the two taxa; status only if ≥5 tags per side. No multiple-testing adjusted assertions.",
+    "pair_calendar_slope": "Native daily q mean over available tagged animals on same source calendar date, pair difference q_A-q_B regressed on study-reference daylength, year-month block bootstrap if >=5 independent year-month blocks and >=40 shared days; additionally within-month demeaning with ≥5 usable blocks and >=0.25h² residual photoperiod variation. Do not interpret as causal daylength.",
+    "source_support": "Publish number of distinct source original animals, original valid fix/day counts, shared source date and year-month counts but never original dates, source study coordinates, tag IDs, per-animal observations or timestamps. An unsupported source is not zero.",
+    "inference": "Compare source-native niche positions vs seasonal slopes as separate biological axes; species/region/guild/telemetry duty cycle remain confounded. Four purposively selected published studies, not a representative global random sample."
+  },
+  "historical": [
+    "Maintain prior Illinois three-species 169-calendar-date and Wyoming two-species 193-calendar-date original source outputs and all month-adjusted signed/hypothesis limits.",
+    "Maintain 48-source signed shortwave-direction heldout negative replication result NOT REPLICATED.",
+    "Maintain 12 old ERA5 raw JSON source identity HOLDS and the fact old numerical weather arrays are not archived.",
+    "No eBird or TinyFish source access."
+  ]
+}
