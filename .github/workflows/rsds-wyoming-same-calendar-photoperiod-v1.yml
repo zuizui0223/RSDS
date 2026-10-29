@@ -58,9 +58,12 @@ jobs:
           assert set(r['native_taxa'])=={'Odocoileus hemionus','Ovis canadensis'}
           assert r['historical_12_ERA5_raw_JSON_HOLDS_UNCHANGED']
           assert r['historical_48_source_signed_radiation_external_NONREPLICATED_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
-          if r['status'] in {'STUDY_COMMON_DATE_EVALUATED','INSUFFICIENT_COOCCURRENT_SOURCE_DATE_SUPPORT'}:
-              assert r['original_provider_GPS_MD5_verified']
-              assert r['both_native_taxa_original_all_date_and_original_triple_source_estimates_replayed']
+          # Provider and all original source biology must be reproduced BEFORE
+          # a successful result CI; a code/error-type HOLD is not empirical
+          # evidence of insufficient two-species shared calendar support.
+          assert r['original_provider_GPS_MD5_verified'], 'Frozen original Wyoming source MD5 replay failed'
+          assert r['both_native_taxa_original_all_date_and_original_triple_source_estimates_replayed'], 'Previous source q/daylight/triple original coefficients not replayed'
+          assert r['status'] in {'STUDY_COMMON_DATE_EVALUATED','INSUFFICIENT_COOCCURRENT_SOURCE_DATE_SUPPORT'}
           def inspect(z):
               if isinstance(z,dict):
                   for key,v in z.items():
