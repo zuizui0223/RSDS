@@ -1,0 +1,962 @@
+{
+  "all_frozen_source_study_original_results": [
+    {
+      "all_source_native_pairs_original_q_and_season": [],
+      "guild_metadata_hint": "giant tortoises, terrestrial island reptiles",
+      "original_all_native_common_calendar_support": null,
+      "original_native_source_q_and_daylength": [
+        {
+          "original_q_daylength_full_source_tag_effect": null,
+          "original_q_full_source_tag_effect": null,
+          "original_qualified_day_source_coverage": {
+            "UTC_phase_retained_GPS_fixes": 0,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 0,
+            "candidate_adjacent_GPS_intervals": 0,
+            "fraction_of_original_hourly_GPS_fixes_retained": null,
+            "original_selected_1hour_source_fixes": 0,
+            "qualified_same_solar_period_GPS_intervals": 0,
+            "tags_with_some_q_observable": 0
+          },
+          "original_source_animals_with_diel_q": 0,
+          "original_source_animals_with_q_daylength": 0,
+          "original_source_metadata_taxonomy_coverage": {
+            "hour_selected_fixes": 0,
+            "invalid_rows": 0,
+            "original_taxon_rows": 0,
+            "source_individuals": 0
+          },
+          "status": "ORIGINAL_NATIVE_Q_EVALUATED",
+          "taxon": "Chelonoidis donfaustoi"
+        },
+        {
+          "original_q_daylength_full_source_tag_effect": null,
+          "original_q_full_source_tag_effect": null,
+          "original_qualified_day_source_coverage": {
+            "UTC_phase_retained_GPS_fixes": 0,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 0,
+            "candidate_adjacent_GPS_intervals": 0,
+            "fraction_of_original_hourly_GPS_fixes_retained": null,
+            "original_selected_1hour_source_fixes": 0,
+            "qualified_same_solar_period_GPS_intervals": 0,
+            "tags_with_some_q_observable": 0
+          },
+          "original_source_animals_with_diel_q": 0,
+          "original_source_animals_with_q_daylength": 0,
+          "original_source_metadata_taxonomy_coverage": {
+            "hour_selected_fixes": 0,
+            "invalid_rows": 0,
+            "original_taxon_rows": 0,
+            "source_individuals": 0
+          },
+          "status": "ORIGINAL_NATIVE_Q_EVALUATED",
+          "taxon": "Chelonoidis hoodensis"
+        },
+        {
+          "original_q_daylength_full_source_tag_effect": null,
+          "original_q_full_source_tag_effect": null,
+          "original_qualified_day_source_coverage": {
+            "UTC_phase_retained_GPS_fixes": 0,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 0,
+            "candidate_adjacent_GPS_intervals": 0,
+            "fraction_of_original_hourly_GPS_fixes_retained": null,
+            "original_selected_1hour_source_fixes": 0,
+            "qualified_same_solar_period_GPS_intervals": 0,
+            "tags_with_some_q_observable": 0
+          },
+          "original_source_animals_with_diel_q": 0,
+          "original_source_animals_with_q_daylength": 0,
+          "original_source_metadata_taxonomy_coverage": {
+            "hour_selected_fixes": 0,
+            "invalid_rows": 0,
+            "original_taxon_rows": 0,
+            "source_individuals": 0
+          },
+          "status": "ORIGINAL_NATIVE_Q_EVALUATED",
+          "taxon": "Chelonoidis porteri"
+        }
+      ],
+      "original_study_id": "174165487",
+      "published_DOI": "10.5441/001/1.2cp86266",
+      "source_hold_error_type": null,
+      "source_provider_original_MD5_replayed": true,
+      "source_registered_native_taxa": [
+        "Chelonoidis donfaustoi",
+        "Chelonoidis hoodensis",
+        "Chelonoidis porteri"
+      ],
+      "source_status": "SOURCE_NO_VALID_GPS_FIXES",
+      "source_study_rank": 0
+    },
+    {
+      "all_source_native_pairs_original_q_and_season": [
+        {
+          "native_first": "Anas acuta",
+          "native_second": "Anas platyrhynchos",
+          "not_proven_spatial_sympatry": true,
+          "same_source_calendar_dates_across_ALL_taxa": 0,
+          "source_common_day_q_difference_daylength": null,
+          "source_original_animal_q_pair": {
+            "first_minus_second_q": null,
+            "native_tag_support": [
+              0,
+              0
+            ],
+            "nominal_interval_sign": "UNAVAILABLE",
+            "original_independent_tag_bootstrap95": null
+          }
+        }
+      ],
+      "guild_metadata_hint": "waterfowl",
+      "original_all_native_common_calendar_support": {
+        "fixed_point_shared_calendar_support_iterations": 2,
+        "reference_astronomical_latitude_exact_value_not_exported": true,
+        "registered_source_taxa": 2,
+        "source_calendar_dates_shared_by_all_registered_taxa": 0,
+        "source_registered_native_q_tag_counts": {
+          "Anas acuta": 0,
+          "Anas platyrhynchos": 0
+        },
+        "source_shared_calendar_dates_and_GPS_coordinates_not_exported": true,
+        "source_yearmonth_blocks": 0
+      },
+      "original_native_source_q_and_daylength": [
+        {
+          "native_original_source_tag_years_on_shared_calendar": 0,
+          "original_q_daylength_full_source_tag_effect": null,
+          "original_q_full_source_tag_effect": null,
+          "original_qualified_day_source_coverage": {
+            "UTC_phase_retained_GPS_fixes": 2330,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 17,
+            "candidate_adjacent_GPS_intervals": 2325,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 2330,
+            "qualified_same_solar_period_GPS_intervals": 732,
+            "tags_with_some_q_observable": 4
+          },
+          "original_source_animals_with_diel_q": 0,
+          "original_source_animals_with_q_daylength": 0,
+          "original_source_metadata_taxonomy_coverage": {
+            "hour_selected_fixes": 2330,
+            "invalid_rows": 0,
+            "original_taxon_rows": 2531,
+            "source_individuals": 5
+          },
+          "same_study_all_native_common_calendar_daylength_slope": {
+            "mean": null,
+            "negative_original_tagged_animals": 0,
+            "nominal_interval_sign": "UNAVAILABLE",
+            "positive_original_tagged_animals": 0,
+            "qualified_original_tagged_animals": 0,
+            "source_original_tag_bootstrap95": null
+          },
+          "same_study_all_native_common_calendar_q": {
+            "mean": null,
+            "negative_original_tagged_animals": 0,
+            "nominal_interval_sign": "UNAVAILABLE",
+            "positive_original_tagged_animals": 0,
+            "qualified_original_tagged_animals": 0,
+            "source_original_tag_bootstrap95": null
+          },
+          "status": "ORIGINAL_NATIVE_Q_EVALUATED",
+          "taxon": "Anas acuta"
+        },
+        {
+          "native_original_source_tag_years_on_shared_calendar": 0,
+          "original_q_daylength_full_source_tag_effect": {
+            "animal_bootstrap_95_percentile": [
+              -0.06608137989087286,
+              0.05823406253172753
+            ],
+            "individual_negative": 7,
+            "individual_positive": 13,
+            "mean": -0.0005950119432492525,
+            "n_individuals": 20,
+            "unit": "change in log1p NIGHT-DAY step rate per hour daylight"
+          },
+          "original_q_full_source_tag_effect": {
+            "animal_bootstrap_95_percentile": [
+              -0.04417099959261305,
+              -0.015521108310727528
+            ],
+            "individual_negative": 15,
+            "individual_positive": 6,
+            "mean": -0.029977175175700362,
+            "n_individuals": 21,
+            "unit": "NIGHT-DAY log1p observed step km/h"
+          },
+          "original_qualified_day_source_coverage": {
+            "UTC_phase_retained_GPS_fixes": 36263,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 1280,
+            "candidate_adjacent_GPS_intervals": 36232,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 36263,
+            "qualified_same_solar_period_GPS_intervals": 27088,
+            "tags_with_some_q_observable": 28
+          },
+          "original_source_animals_with_diel_q": 21,
+          "original_source_animals_with_q_daylength": 20,
+          "original_source_metadata_taxonomy_coverage": {
+            "hour_selected_fixes": 36263,
+            "invalid_rows": 0,
+            "original_taxon_rows": 420065,
+            "source_individuals": 31
+          },
+          "same_study_all_native_common_calendar_daylength_slope": {
+            "mean": null,
+            "negative_original_tagged_animals": 0,
+            "nominal_interval_sign": "UNAVAILABLE",
+            "positive_original_tagged_animals": 0,
+            "qualified_original_tagged_animals": 0,
+            "source_original_tag_bootstrap95": null
+          },
+          "same_study_all_native_common_calendar_q": {
+            "mean": null,
+            "negative_original_tagged_animals": 0,
+            "nominal_interval_sign": "UNAVAILABLE",
+            "positive_original_tagged_animals": 0,
+            "qualified_original_tagged_animals": 0,
+            "source_original_tag_bootstrap95": null
+          },
+          "status": "ORIGINAL_NATIVE_Q_EVALUATED",
+          "taxon": "Anas platyrhynchos"
+        }
+      ],
+      "original_study_id": "350174730",
+      "published_DOI": "10.5441/001/1.3fv21n7m",
+      "source_hold_error_type": null,
+      "source_provider_original_MD5_replayed": true,
+      "source_registered_native_taxa": [
+        "Anas acuta",
+        "Anas platyrhynchos"
+      ],
+      "source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "source_study_rank": 1
+    },
+    {
+      "all_source_native_pairs_original_q_and_season": [
+        {
+          "native_first": "Torgos tracheliotus",
+          "native_second": "Gyps africanus",
+          "not_proven_spatial_sympatry": true,
+          "same_source_calendar_dates_across_ALL_taxa": 0,
+          "source_common_day_q_difference_daylength": null,
+          "source_original_animal_q_pair": {
+            "first_minus_second_q": null,
+            "native_tag_support": [
+              0,
+              0
+            ],
+            "nominal_interval_sign": "UNAVAILABLE",
+            "original_independent_tag_bootstrap95": null
+          }
+        }
+      ],
+      "guild_metadata_hint": "soaring scavenging birds",
+      "original_all_native_common_calendar_support": {
+        "fixed_point_shared_calendar_support_iterations": 1,
+        "reference_astronomical_latitude_exact_value_not_exported": true,
+        "registered_source_taxa": 2,
+        "source_calendar_dates_shared_by_all_registered_taxa": 0,
+        "source_registered_native_q_tag_counts": {
+          "Gyps africanus": 0,
+          "Torgos tracheliotus": 0
+        },
+        "source_shared_calendar_dates_and_GPS_coordinates_not_exported": true,
+        "source_yearmonth_blocks": 0
+      },
+      "original_native_source_q_and_daylength": [
+        {
+          "native_original_source_tag_years_on_shared_calendar": 0,
+          "original_q_daylength_full_source_tag_effect": null,
+          "original_q_full_source_tag_effect": null,
+          "original_qualified_day_source_coverage": {
+            "UTC_phase_retained_GPS_fixes": 13557,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 0,
+            "candidate_adjacent_GPS_intervals": 13554,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 13557,
+            "qualified_same_solar_period_GPS_intervals": 10909,
+            "tags_with_some_q_observable": 0
+          },
+          "original_source_animals_with_diel_q": 0,
+          "original_source_animals_with_q_daylength": 0,
+          "original_source_metadata_taxonomy_coverage": {
+            "hour_selected_fixes": 13557,
+            "invalid_rows": 0,
+            "original_taxon_rows": 100540,
+            "source_individuals": 3
+          },
+          "same_study_all_native_common_calendar_daylength_slope": {
+            "mean": null,
+            "negative_original_tagged_animals": 0,
+            "nominal_interval_sign": "UNAVAILABLE",
+            "positive_original_tagged_animals": 0,
+            "qualified_original_tagged_animals": 0,
+            "source_original_tag_bootstrap95": null
+          },
+          "same_study_all_native_common_calendar_q": {
+            "mean": null,
+            "negative_original_tagged_animals": 0,
+            "nominal_interval_sign": "UNAVAILABLE",
+            "positive_original_tagged_animals": 0,
+            "qualified_original_tagged_animals": 0,
+            "source_original_tag_bootstrap95": null
+          },
+          "status": "ORIGINAL_NATIVE_Q_EVALUATED",
+          "taxon": "Torgos tracheliotus"
+        },
+        {
+          "native_original_source_tag_years_on_shared_calendar": 0,
+          "original_q_daylength_full_source_tag_effect": null,
+          "original_q_full_source_tag_effect": null,
+          "original_qualified_day_source_coverage": {
+            "UTC_phase_retained_GPS_fixes": 33316,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 0,
+            "candidate_adjacent_GPS_intervals": 33304,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 33316,
+            "qualified_same_solar_period_GPS_intervals": 27009,
+            "tags_with_some_q_observable": 0
+          },
+          "original_source_animals_with_diel_q": 0,
+          "original_source_animals_with_q_daylength": 0,
+          "original_source_metadata_taxonomy_coverage": {
+            "hour_selected_fixes": 33316,
+            "invalid_rows": 0,
+            "original_taxon_rows": 246110,
+            "source_individuals": 12
+          },
+          "same_study_all_native_common_calendar_daylength_slope": {
+            "mean": null,
+            "negative_original_tagged_animals": 0,
+            "nominal_interval_sign": "UNAVAILABLE",
+            "positive_original_tagged_animals": 0,
+            "qualified_original_tagged_animals": 0,
+            "source_original_tag_bootstrap95": null
+          },
+          "same_study_all_native_common_calendar_q": {
+            "mean": null,
+            "negative_original_tagged_animals": 0,
+            "nominal_interval_sign": "UNAVAILABLE",
+            "positive_original_tagged_animals": 0,
+            "qualified_original_tagged_animals": 0,
+            "source_original_tag_bootstrap95": null
+          },
+          "status": "ORIGINAL_NATIVE_Q_EVALUATED",
+          "taxon": "Gyps africanus"
+        }
+      ],
+      "original_study_id": "2919708",
+      "published_DOI": "10.5441/001/1.mf903197",
+      "source_hold_error_type": null,
+      "source_provider_original_MD5_replayed": true,
+      "source_registered_native_taxa": [
+        "Torgos tracheliotus",
+        "Gyps africanus"
+      ],
+      "source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "source_study_rank": 2
+    },
+    {
+      "all_source_native_pairs_original_q_and_season": [
+        {
+          "native_first": "Branta leucopsis",
+          "native_second": "Anser albifrons",
+          "not_proven_spatial_sympatry": true,
+          "same_source_calendar_dates_across_ALL_taxa": 120,
+          "source_common_day_q_difference_daylength": {
+            "all_yearmonth_reference_daylength_slope": 0.00978857825204435,
+            "all_yearmonth_slope_status": "DESCRIPTIVE_ESTIMABLE",
+            "interpretation": "Reference astronomical daylength is determined by date and study GPS median latitude; a within-month slope is not biological photoperiod causality.",
+            "source_shared_calendar_days": 120,
+            "source_year_month_blocks": 5,
+            "study_reference_astronomical_daylength_hours_range": 5.17850473997516,
+            "within_month_reference_daylength": {
+              "bootstrap_finite_replicates": 2000,
+              "eligible_source_calendar_days": 120,
+              "eligible_source_month_blocks": 5,
+              "leave_one_month_block_out_range": [
+                -0.011370068783195375,
+                0.016020727392224276
+              ],
+              "month_cluster_bootstrap95": [
+                -0.03022741133340843,
+                0.041609946716889404
+              ],
+              "nominal_interval_sign": "INCLUDES_ZERO",
+              "not_causal_daylength": true,
+              "source_calendar_dates": 120,
+              "source_year_month_blocks": 5,
+              "status": "MONTH_CONDITIONAL_DESCRIPTIVE_ESTIMABLE",
+              "within_month_daylength_centered_sum_squares_hours2": 25.035770661922804,
+              "within_month_daylength_slope": 0.0008682272357895166
+            }
+          },
+          "source_original_animal_q_pair": {
+            "first_minus_second_q": -0.10011883017417918,
+            "native_tag_support": [
+              62,
+              11
+            ],
+            "nominal_interval_sign": "NEGATIVE",
+            "original_independent_tag_bootstrap95": [
+              -0.12091102164165946,
+              -0.07805766777053674
+            ]
+          }
+        },
+        {
+          "native_first": "Branta leucopsis",
+          "native_second": "Anser anser",
+          "not_proven_spatial_sympatry": true,
+          "same_source_calendar_dates_across_ALL_taxa": 120,
+          "source_common_day_q_difference_daylength": {
+            "all_yearmonth_reference_daylength_slope": -0.02066136043712611,
+            "all_yearmonth_slope_status": "DESCRIPTIVE_ESTIMABLE",
+            "interpretation": "Reference astronomical daylength is determined by date and study GPS median latitude; a within-month slope is not biological photoperiod causality.",
+            "source_shared_calendar_days": 120,
+            "source_year_month_blocks": 5,
+            "study_reference_astronomical_daylength_hours_range": 5.17850473997516,
+            "within_month_reference_daylength": {
+              "bootstrap_finite_replicates": 2000,
+              "eligible_source_calendar_days": 120,
+              "eligible_source_month_blocks": 5,
+              "leave_one_month_block_out_range": [
+                -0.07270903248661914,
+                -0.01690180922593517
+              ],
+              "month_cluster_bootstrap95": [
+                -0.10660402275366235,
+                0.02093302057024266
+              ],
+              "nominal_interval_sign": "INCLUDES_ZERO",
+              "not_causal_daylength": true,
+              "source_calendar_dates": 120,
+              "source_year_month_blocks": 5,
+              "status": "MONTH_CONDITIONAL_DESCRIPTIVE_ESTIMABLE",
+              "within_month_daylength_centered_sum_squares_hours2": 25.035770661922804,
+              "within_month_daylength_slope": -0.035073359377631314
+            }
+          },
+          "source_original_animal_q_pair": {
+            "first_minus_second_q": -0.11485708938299688,
+            "native_tag_support": [
+              62,
+              10
+            ],
+            "nominal_interval_sign": "NEGATIVE",
+            "original_independent_tag_bootstrap95": [
+              -0.14305655218422103,
+              -0.08499959394499611
+            ]
+          }
+        },
+        {
+          "native_first": "Anser albifrons",
+          "native_second": "Anser anser",
+          "not_proven_spatial_sympatry": true,
+          "same_source_calendar_dates_across_ALL_taxa": 120,
+          "source_common_day_q_difference_daylength": {
+            "all_yearmonth_reference_daylength_slope": -0.030449938689170467,
+            "all_yearmonth_slope_status": "DESCRIPTIVE_ESTIMABLE",
+            "interpretation": "Reference astronomical daylength is determined by date and study GPS median latitude; a within-month slope is not biological photoperiod causality.",
+            "source_shared_calendar_days": 120,
+            "source_year_month_blocks": 5,
+            "study_reference_astronomical_daylength_hours_range": 5.17850473997516,
+            "within_month_reference_daylength": {
+              "bootstrap_finite_replicates": 2000,
+              "eligible_source_calendar_days": 120,
+              "eligible_source_month_blocks": 5,
+              "leave_one_month_block_out_range": [
+                -0.06133896370342375,
+                -0.02735806255491876
+              ],
+              "month_cluster_bootstrap95": [
+                -0.11045604429392274,
+                -0.003916419628667224
+              ],
+              "nominal_interval_sign": "NEGATIVE",
+              "not_causal_daylength": true,
+              "source_calendar_dates": 120,
+              "source_year_month_blocks": 5,
+              "status": "MONTH_CONDITIONAL_DESCRIPTIVE_ESTIMABLE",
+              "within_month_daylength_centered_sum_squares_hours2": 25.035770661922804,
+              "within_month_daylength_slope": -0.03594158661342082
+            }
+          },
+          "source_original_animal_q_pair": {
+            "first_minus_second_q": -0.014738259208817703,
+            "native_tag_support": [
+              11,
+              10
+            ],
+            "nominal_interval_sign": "INCLUDES_ZERO",
+            "original_independent_tag_bootstrap95": [
+              -0.04520710993760503,
+              0.017514284978339026
+            ]
+          }
+        }
+      ],
+      "guild_metadata_hint": "grazing geese, waterfowl",
+      "original_all_native_common_calendar_support": {
+        "fixed_point_shared_calendar_support_iterations": 3,
+        "reference_astronomical_latitude_exact_value_not_exported": true,
+        "registered_source_taxa": 3,
+        "source_calendar_dates_shared_by_all_registered_taxa": 120,
+        "source_registered_native_q_tag_counts": {
+          "Anser albifrons": 11,
+          "Anser anser": 10,
+          "Branta leucopsis": 62
+        },
+        "source_shared_calendar_dates_and_GPS_coordinates_not_exported": true,
+        "source_yearmonth_blocks": 5
+      },
+      "original_native_source_q_and_daylength": [
+        {
+          "native_original_source_tag_years_on_shared_calendar": 103,
+          "original_q_daylength_full_source_tag_effect": {
+            "animal_bootstrap_95_percentile": [
+              -0.016178350032399952,
+              0.006565938639276819
+            ],
+            "individual_negative": 33,
+            "individual_positive": 31,
+            "mean": -0.004376129442388242,
+            "n_individuals": 64,
+            "unit": "change in log1p NIGHT-DAY step rate per hour daylight"
+          },
+          "original_q_full_source_tag_effect": {
+            "animal_bootstrap_95_percentile": [
+              -0.17960867344971498,
+              -0.15215913857702817
+            ],
+            "individual_negative": 63,
+            "individual_positive": 1,
+            "mean": -0.1654734745042472,
+            "n_individuals": 64,
+            "unit": "NIGHT-DAY log1p observed step km/h"
+          },
+          "original_qualified_day_source_coverage": {
+            "UTC_phase_retained_GPS_fixes": 247009,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 10155,
+            "candidate_adjacent_GPS_intervals": 246943,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 247009,
+            "qualified_same_solar_period_GPS_intervals": 211533,
+            "tags_with_some_q_observable": 65
+          },
+          "original_source_animals_with_diel_q": 64,
+          "original_source_animals_with_q_daylength": 64,
+          "original_source_metadata_taxonomy_coverage": {
+            "hour_selected_fixes": 247009,
+            "invalid_rows": 419,
+            "original_taxon_rows": 247428,
+            "source_individuals": 66
+          },
+          "same_study_all_native_common_calendar_daylength_slope": {
+            "mean": -0.021707250275369374,
+            "negative_original_tagged_animals": 48,
+            "nominal_interval_sign": "NEGATIVE",
+            "positive_original_tagged_animals": 14,
+            "qualified_original_tagged_animals": 62,
+            "source_original_tag_bootstrap95": [
+              -0.030733783780547766,
+              -0.012772078930820812
+            ]
+          },
+          "same_study_all_native_common_calendar_q": {
+            "mean": -0.1840335077564767,
+            "negative_original_tagged_animals": 62,
+            "nominal_interval_sign": "NEGATIVE",
+            "positive_original_tagged_animals": 0,
+            "qualified_original_tagged_animals": 62,
+            "source_original_tag_bootstrap95": [
+              -0.1954815964064487,
+              -0.17214779843636513
+            ]
+          },
+          "status": "ORIGINAL_NATIVE_Q_EVALUATED",
+          "taxon": "Branta leucopsis"
+        },
+        {
+          "native_original_source_tag_years_on_shared_calendar": 16,
+          "original_q_daylength_full_source_tag_effect": {
+            "animal_bootstrap_95_percentile": [
+              -0.04777688930352582,
+              -0.004772257106868325
+            ],
+            "individual_negative": 34,
+            "individual_positive": 16,
+            "mean": -0.026533756900550577,
+            "n_individuals": 50,
+            "unit": "change in log1p NIGHT-DAY step rate per hour daylight"
+          },
+          "original_q_full_source_tag_effect": {
+            "animal_bootstrap_95_percentile": [
+              -0.13671935338156951,
+              -0.10642737466618964
+            ],
+            "individual_negative": 50,
+            "individual_positive": 0,
+            "mean": -0.12098595255170014,
+            "n_individuals": 50,
+            "unit": "NIGHT-DAY log1p observed step km/h"
+          },
+          "original_qualified_day_source_coverage": {
+            "UTC_phase_retained_GPS_fixes": 74280,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 2929,
+            "candidate_adjacent_GPS_intervals": 74200,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 74280,
+            "qualified_same_solar_period_GPS_intervals": 57569,
+            "tags_with_some_q_observable": 62
+          },
+          "original_source_animals_with_diel_q": 50,
+          "original_source_animals_with_q_daylength": 50,
+          "original_source_metadata_taxonomy_coverage": {
+            "hour_selected_fixes": 74280,
+            "invalid_rows": 0,
+            "original_taxon_rows": 74436,
+            "source_individuals": 80
+          },
+          "same_study_all_native_common_calendar_daylength_slope": {
+            "mean": -0.015805411455122778,
+            "negative_original_tagged_animals": 7,
+            "nominal_interval_sign": "INCLUDES_ZERO",
+            "positive_original_tagged_animals": 4,
+            "qualified_original_tagged_animals": 11,
+            "source_original_tag_bootstrap95": [
+              -0.0393434785999419,
+              0.005781983386898815
+            ]
+          },
+          "same_study_all_native_common_calendar_q": {
+            "mean": -0.08391467758229752,
+            "negative_original_tagged_animals": 11,
+            "nominal_interval_sign": "NEGATIVE",
+            "positive_original_tagged_animals": 0,
+            "qualified_original_tagged_animals": 11,
+            "source_original_tag_bootstrap95": [
+              -0.10156278334000637,
+              -0.06694712015891909
+            ]
+          },
+          "status": "ORIGINAL_NATIVE_Q_EVALUATED",
+          "taxon": "Anser albifrons"
+        },
+        {
+          "native_original_source_tag_years_on_shared_calendar": 19,
+          "original_q_daylength_full_source_tag_effect": {
+            "animal_bootstrap_95_percentile": [
+              -0.0057761869565961,
+              0.022332069078932672
+            ],
+            "individual_negative": 8,
+            "individual_positive": 20,
+            "mean": 0.008466614673794356,
+            "n_individuals": 28,
+            "unit": "change in log1p NIGHT-DAY step rate per hour daylight"
+          },
+          "original_q_full_source_tag_effect": {
+            "animal_bootstrap_95_percentile": [
+              -0.08745262713684228,
+              -0.06190127658475135
+            ],
+            "individual_negative": 28,
+            "individual_positive": 0,
+            "mean": -0.07397429689771891,
+            "n_individuals": 28,
+            "unit": "NIGHT-DAY log1p observed step km/h"
+          },
+          "original_qualified_day_source_coverage": {
+            "UTC_phase_retained_GPS_fixes": 158383,
+            "animal_calendar_days_with_ge3_day_and_ge3_night_segments": 6988,
+            "candidate_adjacent_GPS_intervals": 158345,
+            "fraction_of_original_hourly_GPS_fixes_retained": 1.0,
+            "original_selected_1hour_source_fixes": 158383,
+            "qualified_same_solar_period_GPS_intervals": 126643,
+            "tags_with_some_q_observable": 32
+          },
+          "original_source_animals_with_diel_q": 28,
+          "original_source_animals_with_q_daylength": 28,
+          "original_source_metadata_taxonomy_coverage": {
+            "hour_selected_fixes": 158383,
+            "invalid_rows": 0,
+            "original_taxon_rows": 158383,
+            "source_individuals": 38
+          },
+          "same_study_all_native_common_calendar_daylength_slope": {
+            "mean": 0.020657883034855887,
+            "negative_original_tagged_animals": 3,
+            "nominal_interval_sign": "POSITIVE",
+            "positive_original_tagged_animals": 7,
+            "qualified_original_tagged_animals": 10,
+            "source_original_tag_bootstrap95": [
+              0.008882631811842349,
+              0.03177315012183498
+            ]
+          },
+          "same_study_all_native_common_calendar_q": {
+            "mean": -0.06917641837347982,
+            "negative_original_tagged_animals": 10,
+            "nominal_interval_sign": "NEGATIVE",
+            "positive_original_tagged_animals": 0,
+            "qualified_original_tagged_animals": 10,
+            "source_original_tag_bootstrap95": [
+              -0.09630916119228468,
+              -0.04398645028166272
+            ]
+          },
+          "status": "ORIGINAL_NATIVE_Q_EVALUATED",
+          "taxon": "Anser anser"
+        }
+      ],
+      "original_study_id": "1904388965",
+      "published_DOI": "10.5441/001/1.fk899541",
+      "source_hold_error_type": null,
+      "source_provider_original_MD5_replayed": true,
+      "source_registered_native_taxa": [
+        "Branta leucopsis",
+        "Anser albifrons",
+        "Anser anser"
+      ],
+      "source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "source_study_rank": 3
+    }
+  ],
+  "all_source_study_native_q_support": [
+    {
+      "native_original_q_tag_count": 0,
+      "native_taxon": "Chelonoidis donfaustoi",
+      "shared_source_q": null,
+      "shared_source_q_daylength": null,
+      "source_status": "SOURCE_NO_VALID_GPS_FIXES",
+      "study": "10.5441/001/1.2cp86266"
+    },
+    {
+      "native_original_q_tag_count": 0,
+      "native_taxon": "Chelonoidis hoodensis",
+      "shared_source_q": null,
+      "shared_source_q_daylength": null,
+      "source_status": "SOURCE_NO_VALID_GPS_FIXES",
+      "study": "10.5441/001/1.2cp86266"
+    },
+    {
+      "native_original_q_tag_count": 0,
+      "native_taxon": "Chelonoidis porteri",
+      "shared_source_q": null,
+      "shared_source_q_daylength": null,
+      "source_status": "SOURCE_NO_VALID_GPS_FIXES",
+      "study": "10.5441/001/1.2cp86266"
+    },
+    {
+      "native_original_q_tag_count": 0,
+      "native_taxon": "Anas acuta",
+      "shared_source_q": {
+        "mean": null,
+        "negative_original_tagged_animals": 0,
+        "nominal_interval_sign": "UNAVAILABLE",
+        "positive_original_tagged_animals": 0,
+        "qualified_original_tagged_animals": 0,
+        "source_original_tag_bootstrap95": null
+      },
+      "shared_source_q_daylength": {
+        "mean": null,
+        "negative_original_tagged_animals": 0,
+        "nominal_interval_sign": "UNAVAILABLE",
+        "positive_original_tagged_animals": 0,
+        "qualified_original_tagged_animals": 0,
+        "source_original_tag_bootstrap95": null
+      },
+      "source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "study": "10.5441/001/1.3fv21n7m"
+    },
+    {
+      "native_original_q_tag_count": 21,
+      "native_taxon": "Anas platyrhynchos",
+      "shared_source_q": {
+        "mean": null,
+        "negative_original_tagged_animals": 0,
+        "nominal_interval_sign": "UNAVAILABLE",
+        "positive_original_tagged_animals": 0,
+        "qualified_original_tagged_animals": 0,
+        "source_original_tag_bootstrap95": null
+      },
+      "shared_source_q_daylength": {
+        "mean": null,
+        "negative_original_tagged_animals": 0,
+        "nominal_interval_sign": "UNAVAILABLE",
+        "positive_original_tagged_animals": 0,
+        "qualified_original_tagged_animals": 0,
+        "source_original_tag_bootstrap95": null
+      },
+      "source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "study": "10.5441/001/1.3fv21n7m"
+    },
+    {
+      "native_original_q_tag_count": 0,
+      "native_taxon": "Torgos tracheliotus",
+      "shared_source_q": {
+        "mean": null,
+        "negative_original_tagged_animals": 0,
+        "nominal_interval_sign": "UNAVAILABLE",
+        "positive_original_tagged_animals": 0,
+        "qualified_original_tagged_animals": 0,
+        "source_original_tag_bootstrap95": null
+      },
+      "shared_source_q_daylength": {
+        "mean": null,
+        "negative_original_tagged_animals": 0,
+        "nominal_interval_sign": "UNAVAILABLE",
+        "positive_original_tagged_animals": 0,
+        "qualified_original_tagged_animals": 0,
+        "source_original_tag_bootstrap95": null
+      },
+      "source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "study": "10.5441/001/1.mf903197"
+    },
+    {
+      "native_original_q_tag_count": 0,
+      "native_taxon": "Gyps africanus",
+      "shared_source_q": {
+        "mean": null,
+        "negative_original_tagged_animals": 0,
+        "nominal_interval_sign": "UNAVAILABLE",
+        "positive_original_tagged_animals": 0,
+        "qualified_original_tagged_animals": 0,
+        "source_original_tag_bootstrap95": null
+      },
+      "shared_source_q_daylength": {
+        "mean": null,
+        "negative_original_tagged_animals": 0,
+        "nominal_interval_sign": "UNAVAILABLE",
+        "positive_original_tagged_animals": 0,
+        "qualified_original_tagged_animals": 0,
+        "source_original_tag_bootstrap95": null
+      },
+      "source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "study": "10.5441/001/1.mf903197"
+    },
+    {
+      "native_original_q_tag_count": 64,
+      "native_taxon": "Branta leucopsis",
+      "shared_source_q": {
+        "mean": -0.1840335077564767,
+        "negative_original_tagged_animals": 62,
+        "nominal_interval_sign": "NEGATIVE",
+        "positive_original_tagged_animals": 0,
+        "qualified_original_tagged_animals": 62,
+        "source_original_tag_bootstrap95": [
+          -0.1954815964064487,
+          -0.17214779843636513
+        ]
+      },
+      "shared_source_q_daylength": {
+        "mean": -0.021707250275369374,
+        "negative_original_tagged_animals": 48,
+        "nominal_interval_sign": "NEGATIVE",
+        "positive_original_tagged_animals": 14,
+        "qualified_original_tagged_animals": 62,
+        "source_original_tag_bootstrap95": [
+          -0.030733783780547766,
+          -0.012772078930820812
+        ]
+      },
+      "source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "study": "10.5441/001/1.fk899541"
+    },
+    {
+      "native_original_q_tag_count": 50,
+      "native_taxon": "Anser albifrons",
+      "shared_source_q": {
+        "mean": -0.08391467758229752,
+        "negative_original_tagged_animals": 11,
+        "nominal_interval_sign": "NEGATIVE",
+        "positive_original_tagged_animals": 0,
+        "qualified_original_tagged_animals": 11,
+        "source_original_tag_bootstrap95": [
+          -0.10156278334000637,
+          -0.06694712015891909
+        ]
+      },
+      "shared_source_q_daylength": {
+        "mean": -0.015805411455122778,
+        "negative_original_tagged_animals": 7,
+        "nominal_interval_sign": "INCLUDES_ZERO",
+        "positive_original_tagged_animals": 4,
+        "qualified_original_tagged_animals": 11,
+        "source_original_tag_bootstrap95": [
+          -0.0393434785999419,
+          0.005781983386898815
+        ]
+      },
+      "source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "study": "10.5441/001/1.fk899541"
+    },
+    {
+      "native_original_q_tag_count": 28,
+      "native_taxon": "Anser anser",
+      "shared_source_q": {
+        "mean": -0.06917641837347982,
+        "negative_original_tagged_animals": 10,
+        "nominal_interval_sign": "NEGATIVE",
+        "positive_original_tagged_animals": 0,
+        "qualified_original_tagged_animals": 10,
+        "source_original_tag_bootstrap95": [
+          -0.09630916119228468,
+          -0.04398645028166272
+        ]
+      },
+      "shared_source_q_daylength": {
+        "mean": 0.020657883034855887,
+        "negative_original_tagged_animals": 3,
+        "nominal_interval_sign": "POSITIVE",
+        "positive_original_tagged_animals": 7,
+        "qualified_original_tagged_animals": 10,
+        "source_original_tag_bootstrap95": [
+          0.008882631811842349,
+          0.03177315012183498
+        ]
+      },
+      "source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "study": "10.5441/001/1.fk899541"
+    }
+  ],
+  "date": "2026-10-29",
+  "fixed_original_published_studies": 4,
+  "prior_12_ERA5_version_source_HOLDS_UNCHANGED": true,
+  "prior_48_source_shortwave_direction_NEGATIVE_EXTERNAL_REPLICATION_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "registered_original_study_native_taxon_rows": 10,
+  "scientific_claim_boundary": [
+    "Original sources and native species were fixed on SOURCE metadata, before opening original animal temporal q data. The four published sources are purposive, not a representative world random sample.",
+    "The geese source was earlier inspected for solar-heading observations, so this is new only for its same-calendar temporal ecology route, not untouched independent external all-phenotype validation.",
+    "Source common astronomical calendar dates across registered taxa do NOT prove their spatial co-occurrence or actual individual encounters, common microclimate or biological competition.",
+    "Study-level reference astronomical daylength derives from median native source GPS latitudes, not direct per-animal experienced sunlight. Equatorial island sources may have inadequate daylight range and valid q without estimable slope.",
+    "GPS q is log1p(NIGHT minimum straight-line recorded step speed) minus log1p(DAY counterpart), not actual activity-hour budget. Instrument interval and individual tags/day support can distort rankings.",
+    "Source native taxon q and photoperiod slopes may use distinct qualified tag sets. No unsupported effect or climate slope converted to zero.",
+    "Month-block nominal 95% uncertainty is post-selection exploratory, cannot identify causal photoperiod from date, weather, breeding and seasonal behavior.",
+    "Each original study DOI is one replication unit; multiple native taxa and pairwise comparisons within it are dependent, no P-value from independent GPS fixes.",
+    "48-study shortwave radiation directional external negative replication and 12 old ERA5 serialized JSON weather version HOLDs remain unchanged.",
+    "No original animal tags, private GPS coordinates/time, source original individual-year, calendar dates or individual coefficients publicly redistributed."
+  ],
+  "stage": "SOURCE_ORIGINAL_EVENTS_OPENED_ONLY_AFTER_FOUR_MD5_SNAPSHOTS_FIXED",
+  "study_status_counts": {
+    "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED": 3,
+    "SOURCE_NO_VALID_GPS_FIXES": 1
+  },
+  "supported_native_and_source_pair_nominal_sign_counts": {
+    "native_daylength_INCLUDES_ZERO": 1,
+    "native_daylength_NEGATIVE": 1,
+    "native_daylength_POSITIVE": 1,
+    "native_daylength_UNAVAILABLE": 4,
+    "native_q_NEGATIVE": 3,
+    "native_q_UNAVAILABLE": 4,
+    "pair_q_INCLUDES_ZERO": 1,
+    "pair_q_NEGATIVE": 2,
+    "pair_q_UNAVAILABLE": 2,
+    "pair_within_month_INCLUDES_ZERO": 2,
+    "pair_within_month_NEGATIVE": 1
+  },
+  "version": "RSDS_FOUR_NEW_MULTI_NATIVE_STUDY_Q_SEASON_SHARED_CALENDAR_V1_FIRST_RESULT"
+}
