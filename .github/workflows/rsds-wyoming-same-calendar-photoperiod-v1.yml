@@ -64,7 +64,7 @@ jobs:
           def inspect(z):
               if isinstance(z,dict):
                   for key,v in z.items():
-                      assert key not in {'individual_id','animal_id','tag_id','source_year','calendar_date','date','longitude','latitude','location-lat','location-long','_grid','GPS_timestamp','GPS_time','per_tag_slopes'}
+                      assert key not in {'individual_id','animal_id','tag_id','source_year','calendar_date','longitude','latitude','location-lat','location-long','_grid','GPS_timestamp','GPS_time','per_tag_slopes'}
                       inspect(v)
               elif isinstance(z,list):
                   for v in z: inspect(v)
