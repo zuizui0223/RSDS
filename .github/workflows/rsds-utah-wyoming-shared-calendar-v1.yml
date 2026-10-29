@@ -47,6 +47,8 @@ jobs:
           assert len(d['original_studies_with_same_opposite_native_daylength_sign_through_three_clocks'])==1
           assert d['original_studies_with_same_opposite_native_daylength_sign_through_three_clocks']==['Wyoming']
           assert not d['both_original_studies_show_same_source_native_sign_if_supported']
+          assert d['both_studies_preserve_native_diel_q_ordering_if_supported']
+          assert d['original_studies_with_mule_higher_observed_night_relative_q_through_three_clocks']==['Wyoming','Utah']
           assert d['previous_12_ERA5_source_raw_HOLDS_UNCHANGED']
           assert d['previous_48_source_shortwave_direction_external_nonreplication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
           content=json.dumps(d)
