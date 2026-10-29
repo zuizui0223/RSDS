@@ -83,10 +83,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cp outputs/utah_shared_seasons/utah_shared_calendar_two_taxa_result_v1.json research/RSDS_WYOMING_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json
+          cp outputs/utah_shared_seasons/utah_shared_calendar_two_taxa_result_v1.json research/RSDS_UTAH_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/RSDS_WYOMING_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json
+          git add research/RSDS_UTAH_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json
           if ! git diff --cached --quiet; then
             git commit -m "results: Utah two native taxa same calendar date photoperiod original source comparison"
             git fetch origin science/utah-two-ungulates-shared-dates-photoperiod-v1
