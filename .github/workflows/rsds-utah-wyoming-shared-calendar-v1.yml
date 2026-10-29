@@ -1,0 +1,27 @@
+name: RSDS Utah vs Wyoming two original field study common-calendar photoperiod comparison
+on:
+  push:
+    branches:
+      - science/utah-two-ungulates-shared-dates-photoperiod-v1
+    paths:
+      - 'scripts/compare_rsds_two_ungulate_study_shared_date_v1.py'
+      - 'tests/test_rsds_two_original_ungulate_study_calendar_v1.py'
+      - '.github/workflows/rsds-utah-wyoming-shared-calendar-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  independent_original_study_native_source_comparison_known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/utah-two-ungulates-shared-dates-photoperiod-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Synthetic second source DOI and native taxon bootstrap / null-pair tests
+        run: python -m unittest discover -s tests -p 'test_rsds_two_original_ungulate_study_calendar_v1.py' -v
+      - name: Verify historical solar signed external nonreplication still frozen
+        run: python -m scripts.verify_rsds_migration
