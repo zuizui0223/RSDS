@@ -1,0 +1,571 @@
+{
+  "Illinois_original_DOI_is_NOT_part_of_twelve_full_source_study_frame": true,
+  "date": "2026-10-31",
+  "distinct_native_taxa_labels": 8,
+  "four_calendar_study_DOIs_already_in_twelve_study_full_source_macro": 3,
+  "limits": [
+    "Four published study DOIs are the replication unit, not ten native study-taxon rows or 681 separately sampled calendar-day opportunities. Some source field studies or animals may share ecological history.",
+    "The same calendar days among source taxa DO NOT prove spatial sympatry, identical habitat, exposure, monitoring effort, light interception, shared resource availability or competition.",
+    "Native q is NIGHT−DAY log1p observed straight-line GPS displacement velocity, NOT true biological activity duration or behavior state.",
+    "A study-reference astronomical daylength is deterministic with season/date and differs between goose study and 43N ungulate/Illinois references. Comparing coefficients as identical exposures is unjustified.",
+    "Opposing nominal source tagged-animal daylight slopes may arise from sample selection, migration route, annual season, GPS duty-cycle, ecology and observation processes; the analysis is exploratory and unadjusted for multiple original native pairs.",
+    "A monthly block bootstrap can have only five to nine blocks. Results are source conditional, not worldwide/phylogenetic or causal evidence.",
+    "The two-study repeated mule deer–bighorn q rank is an observational replication of a signed within-study position, NOT a blind external validation of daylength mechanisms; Utah pair selected after prior Wyoming result.",
+    "Illinois coobserved study is an additional original DOI outside the separately defined 12-study full-source q macro cohort. Do not silently call this a combined 13-study homogeneous sample.",
+    "Previous independently nonreplicated 48-source radiation direction and historic ERA5 raw JSON 12 context source HOLDs remain unchanged.",
+    "No private animal IDs, GPS coordinates, original observation dates, tracks or individual effects are published."
+  ],
+  "native_original_month_conditional_pair_source_comparisons": {
+    "Geese": [
+      {
+        "conditional_reference_daylength_slope": 0.0008682272357895166,
+        "native_taxa": [
+          "Branta leucopsis",
+          "Anser albifrons"
+        ],
+        "nominal_sign": "INCLUDES_ZERO",
+        "not_a_new_field_study": true,
+        "source_year_month_blocks": 5,
+        "year_month_block_bootstrap95": [
+          -0.03022741133340843,
+          0.041609946716889404
+        ]
+      },
+      {
+        "conditional_reference_daylength_slope": -0.035073359377631314,
+        "native_taxa": [
+          "Branta leucopsis",
+          "Anser anser"
+        ],
+        "nominal_sign": "INCLUDES_ZERO",
+        "not_a_new_field_study": true,
+        "source_year_month_blocks": 5,
+        "year_month_block_bootstrap95": [
+          -0.10660402275366235,
+          0.02093302057024266
+        ]
+      },
+      {
+        "conditional_reference_daylength_slope": -0.03594158661342082,
+        "native_taxa": [
+          "Anser albifrons",
+          "Anser anser"
+        ],
+        "nominal_sign": "NEGATIVE",
+        "not_a_new_field_study": true,
+        "source_year_month_blocks": 5,
+        "year_month_block_bootstrap95": [
+          -0.11045604429392274,
+          -0.003916419628667224
+        ]
+      }
+    ],
+    "Illinois": [
+      {
+        "conditional_reference_daylength_slope": 0.10683011569500576,
+        "native_taxa": [
+          "Canis latrans",
+          "Lynx rufus"
+        ],
+        "nominal_sign": "INCLUDES_ZERO",
+        "not_a_new_field_study": true,
+        "source_year_month_blocks": 9,
+        "year_month_block_bootstrap95": [
+          -0.026448235256805428,
+          0.22888668237039497
+        ]
+      },
+      {
+        "conditional_reference_daylength_slope": 0.022172865295733046,
+        "native_taxa": [
+          "Canis latrans",
+          "Odocoileus virginianus"
+        ],
+        "nominal_sign": "INCLUDES_ZERO",
+        "not_a_new_field_study": true,
+        "source_year_month_blocks": 9,
+        "year_month_block_bootstrap95": [
+          -0.10056154782018613,
+          0.16133439515419828
+        ]
+      },
+      {
+        "conditional_reference_daylength_slope": -0.0846572503992727,
+        "native_taxa": [
+          "Lynx rufus",
+          "Odocoileus virginianus"
+        ],
+        "nominal_sign": "NEGATIVE",
+        "not_a_new_field_study": true,
+        "source_year_month_blocks": 9,
+        "year_month_block_bootstrap95": [
+          -0.17655237817695874,
+          -0.0010839447089603027
+        ]
+      }
+    ],
+    "Utah": "NOT_TESTED_WITHIN_MONTH_DO_NOT_INFER_ZERO",
+    "Wyoming": [
+      {
+        "conditional_reference_daylength_slope": 0.010266184385105494,
+        "native_taxa": [
+          "Odocoileus hemionus",
+          "Ovis canadensis"
+        ],
+        "nominal_sign": "POSITIVE",
+        "not_a_new_field_study": true,
+        "source_year_month_blocks": 8,
+        "year_month_block_bootstrap95": [
+          8.148028565263067e-05,
+          0.022899771595626655
+        ]
+      }
+    ]
+  },
+  "native_study_taxon_rows": 10,
+  "old_12_ERA5_source_version_raw_JSON_HOLDS_UNCHANGED": true,
+  "old_48_source_negative_radiation_direction_external_replication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "original_source_studies_with_identical_native_source_calendar_days": 4,
+  "original_studies_with_at_least_one_resolved_native_relative_q_rank": 4,
+  "original_studies_with_opposite_supported_native_daylength_slope_signs": 3,
+  "original_study_calendar_q_daylength_comparisons": [
+    {
+      "all_source_native_taxon_q_and_season": [
+        {
+          "original_tagged_animals_q": 8,
+          "source_q": {
+            "mean": 0.268521642425637,
+            "nominal_sign": "POSITIVE",
+            "original_source_animal_bootstrap95": [
+              0.17938320110821077,
+              0.3517427539986164
+            ]
+          },
+          "source_reference_daylength_slope_per_hour": {
+            "mean": 0.03744037618886841,
+            "nominal_sign": "POSITIVE",
+            "original_source_animal_bootstrap95": [
+              0.009705669318817726,
+              0.06703121111357523
+            ]
+          },
+          "taxon": "Canis latrans"
+        },
+        {
+          "original_tagged_animals_q": 5,
+          "source_q": {
+            "mean": 0.09339268528468585,
+            "nominal_sign": "POSITIVE",
+            "original_source_animal_bootstrap95": [
+              0.03479263542402441,
+              0.16736574998629808
+            ]
+          },
+          "source_reference_daylength_slope_per_hour": {
+            "mean": -0.02342903720092846,
+            "nominal_sign": "NEGATIVE",
+            "original_source_animal_bootstrap95": [
+              -0.04230114412709945,
+              -0.004142494370127572
+            ]
+          },
+          "taxon": "Lynx rufus"
+        },
+        {
+          "original_tagged_animals_q": 12,
+          "source_q": {
+            "mean": 0.0024497395467369303,
+            "nominal_sign": "INCLUDES_ZERO",
+            "original_source_animal_bootstrap95": [
+              -0.015237087835176725,
+              0.02085665514183805
+            ]
+          },
+          "source_reference_daylength_slope_per_hour": {
+            "mean": -0.0003715996655885711,
+            "nominal_sign": "INCLUDES_ZERO",
+            "original_source_animal_bootstrap95": [
+              -0.005045155900701676,
+              0.004313408928235524
+            ]
+          },
+          "taxon": "Odocoileus virginianus"
+        }
+      ],
+      "all_within_original_study_native_pair_q_rank_contrasts": [
+        {
+          "first": "Canis latrans",
+          "not_independent_field_study": true,
+          "second": "Lynx rufus",
+          "source_shared_calendar_relative_q_difference": {
+            "mean": 0.1751289571409511,
+            "nominal_sign": "POSITIVE",
+            "original_source_animal_bootstrap95": [
+              0.07196677780192551,
+              0.27848170306284653
+            ]
+          }
+        },
+        {
+          "first": "Canis latrans",
+          "not_independent_field_study": true,
+          "second": "Odocoileus virginianus",
+          "source_shared_calendar_relative_q_difference": {
+            "mean": 0.26607190287890004,
+            "nominal_sign": "POSITIVE",
+            "original_source_animal_bootstrap95": [
+              0.18299703881519594,
+              0.3493443706800063
+            ]
+          }
+        },
+        {
+          "first": "Lynx rufus",
+          "not_independent_field_study": true,
+          "second": "Odocoileus virginianus",
+          "source_shared_calendar_relative_q_difference": {
+            "mean": 0.09094294573794892,
+            "nominal_sign": "POSITIVE",
+            "original_source_animal_bootstrap95": [
+              0.03233823023224564,
+              0.16318197531046322
+            ]
+          }
+        }
+      ],
+      "daylength_reference": "43 degrees N study-reference daylength",
+      "native_source_taxon_rows": 3,
+      "no_proven_spatial_sympatry_or_biological_solar_photoperiod_causality": true,
+      "original_source_field_study": "Illinois",
+      "original_study_DOI": "10.5441/001/1.649",
+      "source_contains_nominally_positive_AND_negative_native_photoperiod_slopes": true,
+      "source_native_pairs_with_resolved_observed_relative_q_rank": 3,
+      "source_shared_calendar_days": 169,
+      "source_year_month_blocks": 9
+    },
+    {
+      "all_source_native_taxon_q_and_season": [
+        {
+          "original_tagged_animals_q": 108,
+          "source_q": {
+            "mean": -0.0030730244371755433,
+            "nominal_sign": "NEGATIVE",
+            "original_source_animal_bootstrap95": [
+              -0.004462364614068744,
+              -0.001696025116897964
+            ]
+          },
+          "source_reference_daylength_slope_per_hour": {
+            "mean": 0.007827081911270831,
+            "nominal_sign": "POSITIVE",
+            "original_source_animal_bootstrap95": [
+              0.005932503260125796,
+              0.009883153547220651
+            ]
+          },
+          "taxon": "Odocoileus hemionus"
+        },
+        {
+          "original_tagged_animals_q": 41,
+          "source_q": {
+            "mean": -0.020091485153930583,
+            "nominal_sign": "NEGATIVE",
+            "original_source_animal_bootstrap95": [
+              -0.02269841535416867,
+              -0.017623106050052805
+            ]
+          },
+          "source_reference_daylength_slope_per_hour": {
+            "mean": -0.004520296712641806,
+            "nominal_sign": "NEGATIVE",
+            "original_source_animal_bootstrap95": [
+              -0.005999168150912397,
+              -0.002949857729332914
+            ]
+          },
+          "taxon": "Ovis canadensis"
+        }
+      ],
+      "all_within_original_study_native_pair_q_rank_contrasts": [
+        {
+          "first": "Odocoileus hemionus",
+          "not_independent_field_study": true,
+          "reference_daylength_native_contrast": {
+            "mean": 0.012347378623912636,
+            "nominal_sign": "POSITIVE",
+            "original_source_tag_bootstrap95": [
+              0.009824407696110652,
+              0.014959154011107959
+            ]
+          },
+          "second": "Ovis canadensis",
+          "source_shared_calendar_relative_q_difference": {
+            "mean": 0.01701846071675504,
+            "nominal_sign": "POSITIVE",
+            "original_source_animal_bootstrap95": [
+              0.01415697129789862,
+              0.01987304491305146
+            ]
+          },
+          "three_fixed_original_UTC_clock_q_contrast_signs": {
+            "even": "POSITIVE",
+            "odd": "POSITIVE",
+            "original": "POSITIVE"
+          }
+        }
+      ],
+      "daylength_reference": "43 degrees N common reference daylength",
+      "native_source_taxon_rows": 2,
+      "no_proven_spatial_sympatry_or_biological_solar_photoperiod_causality": true,
+      "original_source_field_study": "Wyoming",
+      "original_study_DOI": "10.5441/001/1.703",
+      "source_contains_nominally_positive_AND_negative_native_photoperiod_slopes": true,
+      "source_native_pairs_with_resolved_observed_relative_q_rank": 1,
+      "source_shared_calendar_days": 193,
+      "source_year_month_blocks": 8
+    },
+    {
+      "all_source_native_taxon_q_and_season": [
+        {
+          "original_tagged_animals_q": 10,
+          "source_q": {
+            "mean": -0.016574325268700958,
+            "nominal_sign": "INCLUDES_ZERO",
+            "original_source_animal_bootstrap95": [
+              -0.030027549476133147,
+              0.0005593236335847486
+            ]
+          },
+          "source_reference_daylength_slope_per_hour": {
+            "mean": 0.01373620343501315,
+            "nominal_sign": "POSITIVE",
+            "original_source_animal_bootstrap95": [
+              0.0010066569766252322,
+              0.033433272451506894
+            ]
+          },
+          "taxon": "Odocoileus hemionus"
+        },
+        {
+          "original_tagged_animals_q": 42,
+          "source_q": {
+            "mean": -0.05424578533037518,
+            "nominal_sign": "NEGATIVE",
+            "original_source_animal_bootstrap95": [
+              -0.06220838479623235,
+              -0.0470751949680001
+            ]
+          },
+          "source_reference_daylength_slope_per_hour": {
+            "mean": 0.04093672603245455,
+            "nominal_sign": "POSITIVE",
+            "original_source_animal_bootstrap95": [
+              0.004261234833007117,
+              0.08338733303635149
+            ]
+          },
+          "taxon": "Ovis canadensis"
+        }
+      ],
+      "all_within_original_study_native_pair_q_rank_contrasts": [
+        {
+          "first": "Odocoileus hemionus",
+          "not_independent_field_study": true,
+          "reference_daylength_native_contrast": {
+            "mean": -0.027200522597441403,
+            "nominal_sign": "INCLUDES_ZERO",
+            "original_source_tag_bootstrap95": [
+              -0.0700772491261888,
+              0.013202942189877973
+            ]
+          },
+          "second": "Ovis canadensis",
+          "source_shared_calendar_relative_q_difference": {
+            "mean": 0.037671460061674225,
+            "nominal_sign": "POSITIVE",
+            "original_source_animal_bootstrap95": [
+              0.021580950529482876,
+              0.057157891207130704
+            ]
+          },
+          "three_fixed_original_UTC_clock_q_contrast_signs": {
+            "even": "POSITIVE",
+            "odd": "POSITIVE",
+            "original": "POSITIVE"
+          }
+        }
+      ],
+      "daylength_reference": "43 degrees N common reference daylength",
+      "native_source_taxon_rows": 2,
+      "no_proven_spatial_sympatry_or_biological_solar_photoperiod_causality": true,
+      "original_source_field_study": "Utah",
+      "original_study_DOI": "10.5441/001/1.711",
+      "source_contains_nominally_positive_AND_negative_native_photoperiod_slopes": false,
+      "source_native_pairs_with_resolved_observed_relative_q_rank": 1,
+      "source_shared_calendar_days": 199,
+      "source_year_month_blocks": 10
+    },
+    {
+      "all_source_native_taxon_q_and_season": [
+        {
+          "original_tagged_animals_q": 62,
+          "source_q": {
+            "mean": -0.1840335077564767,
+            "nominal_sign": "NEGATIVE",
+            "original_source_animal_bootstrap95": [
+              -0.1954815964064487,
+              -0.17214779843636513
+            ]
+          },
+          "source_reference_daylength_slope_per_hour": {
+            "mean": -0.021707250275369374,
+            "nominal_sign": "NEGATIVE",
+            "original_source_animal_bootstrap95": [
+              -0.030733783780547766,
+              -0.012772078930820812
+            ]
+          },
+          "taxon": "Branta leucopsis"
+        },
+        {
+          "original_tagged_animals_q": 11,
+          "source_q": {
+            "mean": -0.08391467758229752,
+            "nominal_sign": "NEGATIVE",
+            "original_source_animal_bootstrap95": [
+              -0.10156278334000637,
+              -0.06694712015891909
+            ]
+          },
+          "source_reference_daylength_slope_per_hour": {
+            "mean": -0.015805411455122778,
+            "nominal_sign": "INCLUDES_ZERO",
+            "original_source_animal_bootstrap95": [
+              -0.0393434785999419,
+              0.005781983386898815
+            ]
+          },
+          "taxon": "Anser albifrons"
+        },
+        {
+          "original_tagged_animals_q": 10,
+          "source_q": {
+            "mean": -0.06917641837347982,
+            "nominal_sign": "NEGATIVE",
+            "original_source_animal_bootstrap95": [
+              -0.09630916119228468,
+              -0.04398645028166272
+            ]
+          },
+          "source_reference_daylength_slope_per_hour": {
+            "mean": 0.020657883034855887,
+            "nominal_sign": "POSITIVE",
+            "original_source_animal_bootstrap95": [
+              0.008882631811842349,
+              0.03177315012183498
+            ]
+          },
+          "taxon": "Anser anser"
+        }
+      ],
+      "all_within_original_study_native_pair_q_rank_contrasts": [
+        {
+          "first": "Branta leucopsis",
+          "not_independent_field_study": true,
+          "second": "Anser albifrons",
+          "source_shared_calendar_relative_q_difference": {
+            "mean": -0.10011883017417918,
+            "nominal_sign": "NEGATIVE",
+            "original_source_animal_bootstrap95": [
+              -0.12091102164165946,
+              -0.07805766777053674
+            ]
+          },
+          "within_month_study_reference_daylength_slope": {
+            "mean": 0.0008682272357895166,
+            "month_block_bootstrap95": [
+              -0.03022741133340843,
+              0.041609946716889404
+            ],
+            "nominal_sign": "INCLUDES_ZERO",
+            "year_month_blocks": 5
+          }
+        },
+        {
+          "first": "Branta leucopsis",
+          "not_independent_field_study": true,
+          "second": "Anser anser",
+          "source_shared_calendar_relative_q_difference": {
+            "mean": -0.11485708938299688,
+            "nominal_sign": "NEGATIVE",
+            "original_source_animal_bootstrap95": [
+              -0.14305655218422103,
+              -0.08499959394499611
+            ]
+          },
+          "within_month_study_reference_daylength_slope": {
+            "mean": -0.035073359377631314,
+            "month_block_bootstrap95": [
+              -0.10660402275366235,
+              0.02093302057024266
+            ],
+            "nominal_sign": "INCLUDES_ZERO",
+            "year_month_blocks": 5
+          }
+        },
+        {
+          "first": "Anser albifrons",
+          "not_independent_field_study": true,
+          "second": "Anser anser",
+          "source_shared_calendar_relative_q_difference": {
+            "mean": -0.014738259208817703,
+            "nominal_sign": "INCLUDES_ZERO",
+            "original_source_animal_bootstrap95": [
+              -0.04520710993760503,
+              0.017514284978339026
+            ]
+          },
+          "within_month_study_reference_daylength_slope": {
+            "mean": -0.03594158661342082,
+            "month_block_bootstrap95": [
+              -0.11045604429392274,
+              -0.003916419628667224
+            ],
+            "nominal_sign": "NEGATIVE",
+            "year_month_blocks": 5
+          }
+        }
+      ],
+      "daylength_reference": "Goose original study common reference daylength (not the same latitude as other studies)",
+      "native_source_taxon_rows": 3,
+      "no_proven_spatial_sympatry_or_biological_solar_photoperiod_causality": true,
+      "original_source_field_study": "Geese",
+      "original_study_DOI": "10.5441/001/1.fk899541",
+      "source_contains_nominally_positive_AND_negative_native_photoperiod_slopes": true,
+      "source_native_pairs_with_resolved_observed_relative_q_rank": 2,
+      "source_shared_calendar_days": 120,
+      "source_year_month_blocks": 5
+    }
+  ],
+  "research_stage": "POST_FIRST_ORIGINAL_CALENDAR_STUDY_RESULTS_COMPARATIVE_ECOLOGY",
+  "same_native_mule_deer_minus_bighorn_repeated_pair_across_two_DOIs": {
+    "Utah_native_daylength_signs_both_positive_and_pair_contrast_unresolved": true,
+    "all_three_source_GPS_UTC_schedules_show_positive_q_pair_rank": true,
+    "old_Wyoming_source_inspected_before_Utah_pair_selection": true,
+    "opposite_native_daylength_signs_supported_only_in_Wyoming": true,
+    "source_studies": 2,
+    "two_published_source_DOIs": [
+      "10.5441/001/1.703",
+      "10.5441/001/1.711"
+    ]
+  },
+  "source_result_git_blob_receipts": {
+    "research/RSDS_12_STUDY_22_NATIVE_TEMPORAL_MACRO_FIRST_RESULT_20261031.json": "af0574c6bb6383402a97b5bebadb8cf0408e9740",
+    "research/RSDS_FOUR_MULTINATIVE_ORIGINAL_GPS_ECOLOGICAL_VALIDATION_V1_20261029.json": "eeba1e0bc3e33b13322852539833e3fbf07d834a",
+    "research/RSDS_ILLINOIS_THREE_NATIVE_SHARED_DATE_V1_FIRST_RESULT_20261029.json": "924156e8f98d0bb9fda2f9d23aabc03060af2a31",
+    "research/RSDS_SHARED_MONTH_ADJUSTED_PHOTOPERIOD_TWO_STUDY_V1_FIRST_RESULT_20261029.json": "ce14cf34bcb1237671a8ad4c5f325bd91eb35356",
+    "research/RSDS_UTAH_WYOMING_TWO_STUDY_SHARED_DATE_PHOTOPERIOD_V1_RESULT_20261029.json": "715cd5234f686047b1d59189be83f3cf631030bf"
+  },
+  "study_calendar_days_in_separate_study_frames_NOT_INDEPENDENT_DAILY_REPLICATES": 681,
+  "version": "RSDS_FOUR_COOOBSERVED_ORIGINAL_STUDY_CALENDAR_DIEL_PHOTOPERIOD_V1_FIRST"
+}
