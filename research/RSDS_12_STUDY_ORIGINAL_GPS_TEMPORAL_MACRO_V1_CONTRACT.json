@@ -1,0 +1,52 @@
+{
+  "version": "RSDS_ORIGINAL_TWELVE_STUDY_TEMPORAL_MACRO_V1",
+  "freeze_date": "2026-10-31",
+  "stage": "POST_OUTCOME_SOURCE_GRAIN_MACRO_SENSITIVITY_NO_NEW_TRACKING_EVENT_ACCESS",
+  "main_question": "Across all 12 previously published and frozen original Movebank GPS studies, what signs and source-study-equal descriptive temporal q/astronomical daylength associations remain when four new multi-native studies and all source coverage failures are preserved?",
+  "source_blobs": [
+    {
+      "path": "research/RSDS_8_STUDY_TIME_SOLAR_HEADING_MACRO_ATLAS_V1_20261026.json",
+      "git_blob_sha": "2c4670b54fa5b52737993ebf6babc3a7a58b166a"
+    },
+    {
+      "path": "research/RSDS_FOUR_NEW_MULTINATIVE_GPS_SHARED_CALENDAR_V1_FIRST_RESULT_20261029.json",
+      "git_blob_sha": "4034d5318c914dc789a7fcd6535eedbf3a229d53"
+    },
+    {
+      "path": "research/RSDS_FOUR_MULTINATIVE_ORIGINAL_GPS_ECOLOGICAL_VALIDATION_V1_20261029.json",
+      "git_blob_sha": "eeba1e0bc3e33b13322852539833e3fbf07d834a"
+    },
+    {
+      "path": "research/RSDS_FOUR_NEW_MULTINATIVE_SOURCE_METADATA_FIRST_V1_20261029.json",
+      "git_blob_sha": "d476c8500f99030c864c382fcf32694e0450a48e"
+    }
+  ],
+  "source_frame": "8 existing original DOI and 12 native study-taxon records plus 4 independent pre-event source-only frozen DOI and 10 native records; 12 DOIs and 22 native study-taxon records, 20 unique native taxon labels. No duplicate DOI.",
+  "q": "Same original hourly-bin selected 0.5–2h GPS step velocity q=mean per source tagged animal of log1p(median NIGHT step km/h) minus log1p(median DAY step km/h), not activity duration. n>=5 for tagged bootstrap.",
+  "photoperiod": "Original native within-animal-year q~native GPS local astronomical daylength per hour. Keep this separate from goose shared-120-day study-reference daylength.",
+  "unit": "One published DOI is one study; equal native taxon means within each DOI, then equal available DOI means. No weighting by fixes, tagged individuals or number of native taxa. Never make missing effect zero.",
+  "uncertainty": "5000 fixed-seed resamples of source DOI means and leave-one-DOI-out ranges, descriptive only conditional on purposive nonprobability source samples. Keep original tagged-bootstrap intervals as original; no fake global inference.",
+  "old_v_new": "Preserve 7/8 eligible source q and 11 cohort results; compare expanded 9/12 eligible source q and 15 cohort results. Distinct source set, NOT time trend.",
+  "hold_policy": "All 12 DOIs and 22 native rows retained including Great Egret size HOLD, Galapagos tortoise source taxonomy/schema HOLD, African vultures cadence HOLD, Anas acuta no q support. Never call those ecological zero.",
+  "goose": "One new original goose DOI has three species on exactly 120 source-shared calendar days in 5 year-month blocks. Archive all three paired q and shared-reference photoperiod slopes separately from full source native q/daylength, never as independent studies.",
+  "previous_controls": {
+    "old_external_shortwave_direction": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+    "old_12_ERA5_raw_SHA_HOLDS": "UNCHANGED",
+    "gps_is_not_activity_time": true,
+    "no_causal_solar_compass_photoperiod_claim": true
+  },
+  "expected_denominators": {
+    "published_studies": 12,
+    "native_source_taxon_rows": 22,
+    "distinct_species_labels": 20,
+    "q_supported_rows": 15,
+    "q_supported_studies": 9,
+    "photoperiod_supported_rows": 15,
+    "photoperiod_supported_studies": 9,
+    "new_studies": 4,
+    "goose_shared_days": 120,
+    "goose_year_month_blocks": 5
+  },
+  "privacy": "Never publish original animal IDs, GPS coordinates, exact event timestamps, calendar dates, source private grid, individual-level effects or tracks. Public original DOI/taxon/group estimates and source support only.",
+  "interpretation": "Post-result source-equal study sensitivity, not a probability sample of world ecological processes, taxon/guild causal contrast or independent prospective biological replication."
+}
