@@ -1,0 +1,85 @@
+{
+  "version": "RSDS_ORIGINAL_FOUR_COOOBSERVED_CALENDAR_NICHE_V1",
+  "date": "2026-10-31",
+  "stage": "POST_OUTCOME_SOURCE_STUDY_COMPARATIVE_SYNTHESIS_NO_NEW_EVENT_SELECTION_OR_TELEMETRY",
+  "question": "When different native taxa are observed on the same source-calendar days, are their daily GPS night/day movement positions ranked differently and are their astronomical-daylength slopes recurrent across distinct source studies?",
+  "source_result_files": [
+    {
+      "path": "research/RSDS_ILLINOIS_THREE_NATIVE_SHARED_DATE_V1_FIRST_RESULT_20261029.json",
+      "git_blob_sha": "924156e8f98d0bb9fda2f9d23aabc03060af2a31"
+    },
+    {
+      "path": "research/RSDS_UTAH_WYOMING_TWO_STUDY_SHARED_DATE_PHOTOPERIOD_V1_RESULT_20261029.json",
+      "git_blob_sha": "715cd5234f686047b1d59189be83f3cf631030bf"
+    },
+    {
+      "path": "research/RSDS_FOUR_MULTINATIVE_ORIGINAL_GPS_ECOLOGICAL_VALIDATION_V1_20261029.json",
+      "git_blob_sha": "eeba1e0bc3e33b13322852539833e3fbf07d834a"
+    },
+    {
+      "path": "research/RSDS_SHARED_MONTH_ADJUSTED_PHOTOPERIOD_TWO_STUDY_V1_FIRST_RESULT_20261029.json",
+      "git_blob_sha": "ce14cf34bcb1237671a8ad4c5f325bd91eb35356"
+    },
+    {
+      "path": "research/RSDS_12_STUDY_22_NATIVE_TEMPORAL_MACRO_FIRST_RESULT_20261031.json",
+      "git_blob_sha": "af0574c6bb6383402a97b5bebadb8cf0408e9740"
+    }
+  ],
+  "source_DOI_frame": [
+    {
+      "region": "Illinois",
+      "doi": "10.5441/001/1.649",
+      "registered_taxa": [
+        "Canis latrans",
+        "Lynx rufus",
+        "Odocoileus virginianus"
+      ],
+      "shared_source_calendar_days": 169,
+      "year_month_blocks": 9,
+      "astronomical_reference": "43 degrees N study-reference daylength"
+    },
+    {
+      "region": "Wyoming",
+      "doi": "10.5441/001/1.703",
+      "registered_taxa": [
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "shared_source_calendar_days": 193,
+      "year_month_blocks": 8,
+      "astronomical_reference": "43 degrees N common reference daylength"
+    },
+    {
+      "region": "Utah",
+      "doi": "10.5441/001/1.711",
+      "registered_taxa": [
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "shared_source_calendar_days": 199,
+      "year_month_blocks": 10,
+      "astronomical_reference": "43 degrees N common reference daylength"
+    },
+    {
+      "region": "Geese",
+      "doi": "10.5441/001/1.fk899541",
+      "registered_taxa": [
+        "Branta leucopsis",
+        "Anser albifrons",
+        "Anser anser"
+      ],
+      "shared_source_calendar_days": 120,
+      "year_month_blocks": 5,
+      "astronomical_reference": "Goose original study common reference daylength (not the same latitude as other studies)"
+    }
+  ],
+  "recorded_biology": "Original q=night-minus-day log1p GPS straight-line displacement velocity, not actual minutes of activity. Native q/photoperiod are original source-calendar studies, not the full-study annual native sample.",
+  "rank_requirement": "A native pair has a resolved relative q position only if ORIGINAL source original-tagged bootstrap nominal interval is entirely positive or negative. Retain unresolved native pair effects as unresolved; no favorable sign selection.",
+  "photoperiod_heterogeneity": "Native study-reference q~daylength slopes are interpreted by ORIGINAL source tagged animal bootstrap nominal signs; both positive and negative within same DOI define exploratory opposite-signed native trends. This is not a directly causal daylength treatment, and reference daylength cannot be compared in numeric magnitude across latitudes.",
+  "independent_replication": "For the SAME repeated native pair (mule deer minus bighorn), compare all three fixed original GPS schedules in two different DOI source studies. Original q-rank direction in both is source-level observational repeatability; the positive versus negative native daylength slope contrast is supported only in Wyoming and unresolved in Utah, selected after prior Wyoming outcome.",
+  "month_sensitivity": "Report earlier Illinois and Wyoming year×month conditional native pair outcomes with source-month cluster bootstrap and goose 5-block within-month outcomes, distinct from all-month source-native tagged regression effects. Utah month conditional was not run, so NOT_EVALUATED, not zero.",
+  "inference_unit": "One independently published original field study DOI is a replication unit. Three IL native taxa, two WY, two UT, three geese are ten study×native pairs but only FOUR original source studies and EIGHT unique registered taxon labels. Some populations or source study recruitment may still be correlated.",
+  "source_support": "Preserve exact original source numbers of shared calendar days 169,193,199,120 and number of year×month blocks 9,8,10,5. No original calendar event dates, individual IDs, GPS position or exact source data released.",
+  "history": "Do not change previous original 48-source signed shortwave directional external nonreplication or old 12 ERA5 raw JSON source version HOLDS. This is photoperiod and GPS velocity observational calendar comparison only.",
+  "publication_limit": "Post-outcome source-conditioned exploratory pattern; study/date and location relative photoperiod can covary with habitat, season, GPS duty cycle, species distribution, migration route and resource availability. No causal climate or global community assembly mechanism."
+}

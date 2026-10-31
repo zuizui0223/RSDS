@@ -548,6 +548,32 @@ jobs:
           assert first['original_12_ERA5_raw_JSON_source_HOLDS_UNCHANGED']
           print('Twelve original study DOI and 22 native source Q/daylength first macro SHA, 120 shared goose days and old source HOLDS preserved')
           PY
+      - name: Guard four original source-matched calendar studies and seasonally divergent native q niches
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_four_coobserved_calendar_niches_v1.py' -v
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          from scripts.build_rsds_four_coobserved_calendar_ecological_niches_v1 import analyze
+          file=Path('research/RSDS_FOUR_COOOBSERVED_CALENDAR_NICHE_V1_FIRST_RESULT_20261031.json')
+          raw=file.read_bytes()
+          sha=hashlib.sha1(('blob '+str(len(raw))+'\0').encode()+raw).hexdigest()
+          assert sha=='a15bdf0a6edf9e5d632ddd2b46983af7948355b0', 'Original four-study shared-calendar evidence SHA changed'
+          record=json.loads(raw)
+          assert record==analyze()
+          assert record['original_source_studies_with_identical_native_source_calendar_days']==4
+          assert record['native_study_taxon_rows']==10
+          assert record['study_calendar_days_in_separate_study_frames_NOT_INDEPENDENT_DAILY_REPLICATES']==681
+          assert record['original_studies_with_at_least_one_resolved_native_relative_q_rank']==4
+          assert record['original_studies_with_opposite_supported_native_daylength_slope_signs']==3
+          assert record['same_native_mule_deer_minus_bighorn_repeated_pair_across_two_DOIs']['source_studies']==2
+          assert record['Illinois_original_DOI_is_NOT_part_of_twelve_full_source_study_frame']
+          assert record['old_12_ERA5_source_version_raw_JSON_HOLDS_UNCHANGED']
+          assert record['old_48_source_negative_radiation_direction_external_replication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          print('Four original study shared-calendar diel q ranks and daylight slope divergence source-SHA fixed, old source HOLDS intact')
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |

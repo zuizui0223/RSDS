@@ -267,6 +267,19 @@ RSDSの元8公表Movebank研究（12 study×native taxon行）を、新たに原
 
 [新たな12原研究のマクロデータ](../research/RSDS_12_STUDY_22_NATIVE_TEMPORAL_MACRO_FIRST_RESULT_20261031.json) ／ [12研究間・ガン同一暦日の詳細](RSDS_TWELVE_ORIGINAL_STUDY_TEMPORAL_MACROECOLOGY_20261031.md) ／ [SHA固定の実行コード](../scripts/build_rsds_twelve_original_study_temporal_macro_v1.py) ／ [英語論文草稿](../manuscript/RSDS_TWELVE_STUDY_DIEL_PHOTOPERIOD_ORIGINAL_GPS_ECOLOGY_v1_20261031.md)。
 
+## T. 日周移動ニッチの種間順位と、日長に沿った季節変化は別の一般性を持つ（2026-10-31）
+
+公開原GPSで研究内の同暦日を共有できた**Illinois169日・Wyoming193日・Utah199日・ガン120日、4公表元study DOI**を、各元sourceの既にMD5／GPS動物支持・原タグbootstrapまで検証済みの第一次結果とGit blob SHAから再集計した。**10 study×native taxon行、8登録学名**だが、研究間の独立単位は4元studyのみ。全studyで少なくとも一組のq（NIGHT−DAY観測GPS最短直線変位速度差）の種間順位が元タグ区間で支持され、Illinois3/3組、Wyoming1/1、Utah1/1、ガン2/3組だった。
+
+- **同じ2種間の順位の再現：** ミュールジカ−ビッグホーンの同一研究内・同暦日q差は、**Wyoming +0.01702**（元タグbootstrap95%[+0.01416,+0.01987]）と**Utah +0.03767**（[+0.02158,+0.05716]）。元GPS観測時刻、UTC偶数時2hと奇数時2hの**3系列全てで正符号の元タグ区間が維持**した。ただし、Utahのこの2種選定はWyoming結果を見た後であり、完全独立の事前選択ではない。qは真の活動時間ではない。
+- **その日長傾きの地域差：** q~共通43°N参照日長係数は、Wyomingでは**ミュールジカ+0.00783/h、ビッグホーン−0.00452/h**で正負が分かれ、種間差+0.01235/hの元タグ95%区間も正。Utahでは**ミュールジカ+0.01374/h、ビッグホーン+0.04094/h**で両方正、種間差−0.02720/hの元タグ95%区間はゼロを含む。**同じ種間のq順位は繰り返されても、日長に沿った変化の種間対照は自動的には再現しない。**
+- **別生物群の共通暦日の傾き分化：** Illinoisの3種169日ではコヨーテq+0.26852＞ボブキャット+0.09339＞オジロジカ+0.00245、日長係数はコヨーテ正・ボブキャット負・オジロジカ不確定。ガン3種120日ではqが全種負なのに、カオジロガンの日長係数は負・ハイイロガンは正。**4/4研究に相対q順位差、3/4研究に同一元study内で正負の異なる名目上の日長係数**があった。
+- **季節と天文日長の交絡を保持：** Illinoisボブキャット−オジロジカ、Wyomingミュールジカ−ビッグホーン、ガンのマガン−ハイイロガンでは以前の年×月内daylength中心化でも種間差の元年月ブロックbootstrap区間が片側を示した。ただし月ブロック5〜9、事後多重比較未補正の源研究内結果で、太陽光や競争による原因的な応答を確証しない。Utahの同月内解析は**未実施**でありゼロ扱いしない。
+
+**生態学的に支持される中心像：** 日周移動ニッチにおける「相対的な位置」と、同じ天文暦に沿う時間利用の「季節的な方向」は、同じ種類の生態学的量ではない。前者の種間順位が別の元studyで保たれても、後者まで共通とは限らない。共通暦日は同所生息、同気象、同資源、同GPS観測過程の証明ではなく、世界一般の因果メカニズムや系統効果は未同定。
+
+[4元studyの原GPS同暦日比較の完成JSON](../research/RSDS_FOUR_COOOBSERVED_CALENDAR_NICHE_V1_FIRST_RESULT_20261031.json) ／ [研究上の解釈](RSDS_FOUR_COOOBSERVED_SOURCE_STUDY_DIEL_POSITION_VS_DAYLIGHT_SLOPE_20261031.md) ／ [英語論文草稿](../manuscript/RSDS_FOUR_COOOBSERVED_CALENDARS_DIEL_RANK_DAYLIGHT_SLOPE_v1_20261031.md)。この4研究コホートと、前節の**12原studyの全ソースq推定**は異なる研究・観測日サンプルであり、元Illinois DOIを加えて13元研究の一つの平均を捏造しない。48原研究日射負方向外部再現不成立、旧ERA5 JSON12保留は不変。
+
 ## 再現可能性と論文発展
 
 - [全球太陽方向の研究草稿v2](../manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_v2_20261025.md)

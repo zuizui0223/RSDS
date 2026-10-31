@@ -1,0 +1,72 @@
+name: RSDS four coobserved native original GPS calendar study q and daylight niche comparison
+on:
+  push:
+    branches:
+      - science/four-coobserved-original-calendar-niche-comparison-v1
+    paths:
+      - 'research/RSDS_FOUR_COOOBSERVED_CALENDAR_NICHE_V1_CONTRACT.json'
+      - 'scripts/build_rsds_four_coobserved_calendar_ecological_niches_v1.py'
+      - 'tests/test_rsds_four_coobserved_calendar_niches_v1.py'
+      - '.github/workflows/rsds-four-coobserved-calendar-niches-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  immutable_original_study_calendar_ecological_comparison:
+    runs-on: ubuntu-latest
+    timeout-minutes: 17
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/four-coobserved-original-calendar-niche-comparison-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify original source study library provenance and negative sunlight finding
+        run: python -m scripts.verify_rsds_migration
+      - name: Validate all four original source shared-date frames and confidence-sign reasoning
+        run: python -m unittest discover -s tests -p 'test_rsds_four_coobserved_calendar_niches_v1.py' -v
+      - name: Build four-source 169/193/199/120-day original native q/calendar and monthly control atlas
+        run: |
+          python -m scripts.build_rsds_four_coobserved_calendar_ecological_niches_v1 --out research/RSDS_FOUR_COOOBSERVED_CALENDAR_NICHE_V1_FIRST_RESULT_20261031.json
+          python -m json.tool research/RSDS_FOUR_COOOBSERVED_CALENDAR_NICHE_V1_FIRST_RESULT_20261031.json > /dev/null
+      - name: Verify original source counts, native taxa, and no individual telemetry
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_FOUR_COOOBSERVED_CALENDAR_NICHE_V1_FIRST_RESULT_20261031.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['original_source_studies_with_identical_native_source_calendar_days']==4
+          assert d['native_study_taxon_rows']==10
+          assert d['study_calendar_days_in_separate_study_frames_NOT_INDEPENDENT_DAILY_REPLICATES']==681
+          assert d['original_studies_with_at_least_one_resolved_native_relative_q_rank']==4
+          assert d['original_studies_with_opposite_supported_native_daylength_slope_signs']==3
+          assert d['old_12_ERA5_source_version_raw_JSON_HOLDS_UNCHANGED'] is True
+          assert d['old_48_source_negative_radiation_direction_external_replication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          raw=p.read_text(encoding='utf-8')
+          for field in ('"individual_id"','"animal_id"','"tag_id"','"original_GPS_track"',
+                        '"latitude"','"longitude"','"timestamp"','"event_date"'):
+              assert field not in raw, f'Original telemetry content must not be released: {field}'
+          print('Four distinct original study calendars / 10 native taxon source cohorts / all old negative endpoints intact')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-four-field-studies-coobserved-original-native-diel-calendar-niche-contrast
+          path: research/RSDS_FOUR_COOOBSERVED_CALENDAR_NICHE_V1_FIRST_RESULT_20261031.json
+          if-no-files-found: error
+      - name: Commit original source-level ecological calendar comparisons only, no telemetry
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_FOUR_COOOBSERVED_CALENDAR_NICHE_V1_FIRST_RESULT_20261031.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: four original field study shared source calendar q ranks and daylight trend differences"
+            git fetch origin science/four-coobserved-original-calendar-niche-comparison-v1
+            git rebase origin/science/four-coobserved-original-calendar-niche-comparison-v1
+            git push origin HEAD:science/four-coobserved-original-calendar-niche-comparison-v1
+          fi
