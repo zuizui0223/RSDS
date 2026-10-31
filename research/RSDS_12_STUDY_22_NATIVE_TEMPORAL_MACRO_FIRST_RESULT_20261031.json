@@ -1,0 +1,1065 @@
+{
+  "all_original_studies": 12,
+  "all_original_study_native_taxon_rows_including_HOLD": [
+    {
+      "daylength": {
+        "mean": 0.004899934756973461,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 213,
+        "status": "POSITIVE",
+        "tag_bootstrap95": [
+          0.0015727083739978875,
+          0.008013235182086414
+        ]
+      },
+      "native_taxon": "Antilocapra americana",
+      "original_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "original_source_stratum": "PREVIOUS_EIGHT_STUDIES",
+      "original_study_doi": "10.5441/001/1.711",
+      "q": {
+        "mean": -0.1171668232141959,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 215,
+        "status": "NEGATIVE",
+        "tag_bootstrap95": [
+          -0.12175099359970626,
+          -0.11258860955602955
+        ]
+      }
+    },
+    {
+      "daylength": {
+        "mean": 0.009598574984599324,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 332,
+        "status": "POSITIVE",
+        "tag_bootstrap95": [
+          0.007155956289142913,
+          0.011945928671224418
+        ]
+      },
+      "native_taxon": "Cervus elaphus",
+      "original_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "original_source_stratum": "PREVIOUS_EIGHT_STUDIES",
+      "original_study_doi": "10.5441/001/1.711",
+      "q": {
+        "mean": -0.031888720397475416,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 337,
+        "status": "NEGATIVE",
+        "tag_bootstrap95": [
+          -0.03576520611434819,
+          -0.02763130251964814
+        ]
+      }
+    },
+    {
+      "daylength": {
+        "mean": 0.005619415769068772,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 1683,
+        "status": "POSITIVE",
+        "tag_bootstrap95": [
+          0.004388078182072968,
+          0.006920966097037151
+        ]
+      },
+      "native_taxon": "Odocoileus hemionus",
+      "original_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "original_source_stratum": "PREVIOUS_EIGHT_STUDIES",
+      "original_study_doi": "10.5441/001/1.711",
+      "q": {
+        "mean": -0.02184895488685285,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 1723,
+        "status": "NEGATIVE",
+        "tag_bootstrap95": [
+          -0.02321004124388584,
+          -0.02046763062163855
+        ]
+      }
+    },
+    {
+      "daylength": {
+        "mean": 0.005538249061142167,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 118,
+        "status": "POSITIVE",
+        "tag_bootstrap95": [
+          0.004101632821224659,
+          0.006972859886325625
+        ]
+      },
+      "native_taxon": "Odocoileus hemionus",
+      "original_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "original_source_stratum": "PREVIOUS_EIGHT_STUDIES",
+      "original_study_doi": "10.5441/001/1.703",
+      "q": {
+        "mean": -0.0044624294869207584,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 119,
+        "status": "NEGATIVE",
+        "tag_bootstrap95": [
+          -0.005777731444226381,
+          -0.003089662007489691
+        ]
+      }
+    },
+    {
+      "daylength": {
+        "mean": -0.003411758739636626,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 339,
+        "status": "INCLUDES_ZERO",
+        "tag_bootstrap95": [
+          -0.006502919223183204,
+          0.0006123921190547578
+        ]
+      },
+      "native_taxon": "Ovis canadensis",
+      "original_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "original_source_stratum": "PREVIOUS_EIGHT_STUDIES",
+      "original_study_doi": "10.5441/001/1.711",
+      "q": {
+        "mean": -0.06576087192631512,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 343,
+        "status": "NEGATIVE",
+        "tag_bootstrap95": [
+          -0.06902186763881439,
+          -0.06272814999976593
+        ]
+      }
+    },
+    {
+      "daylength": {
+        "mean": 0.00021733399923758685,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 41,
+        "status": "INCLUDES_ZERO",
+        "tag_bootstrap95": [
+          -0.005847345967794438,
+          0.010985829877007601
+        ]
+      },
+      "native_taxon": "Ovis canadensis",
+      "original_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "original_source_stratum": "PREVIOUS_EIGHT_STUDIES",
+      "original_study_doi": "10.5441/001/1.703",
+      "q": {
+        "mean": -0.01997499965861462,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 41,
+        "status": "NEGATIVE",
+        "tag_bootstrap95": [
+          -0.022469942801247658,
+          -0.017531021856795847
+        ]
+      }
+    },
+    {
+      "daylength": {
+        "mean": -0.026299888128490025,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 170,
+        "status": "NEGATIVE",
+        "tag_bootstrap95": [
+          -0.0371904104945014,
+          -0.015330450535656421
+        ]
+      },
+      "native_taxon": "Meleagris gallopavo",
+      "original_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "original_source_stratum": "PREVIOUS_EIGHT_STUDIES",
+      "original_study_doi": "10.5441/001/1.671",
+      "q": {
+        "mean": -0.0915454462260995,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 186,
+        "status": "NEGATIVE",
+        "tag_bootstrap95": [
+          -0.09668160894348057,
+          -0.08658081928483057
+        ]
+      }
+    },
+    {
+      "daylength": {
+        "mean": 0.012819774445985886,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 31,
+        "status": "POSITIVE",
+        "tag_bootstrap95": [
+          0.0015505906881394568,
+          0.023203120411592202
+        ]
+      },
+      "native_taxon": "Lynx rufus",
+      "original_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "original_source_stratum": "PREVIOUS_EIGHT_STUDIES",
+      "original_study_doi": "10.5441/001/1.323",
+      "q": {
+        "mean": 0.1085989197299469,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 35,
+        "status": "POSITIVE",
+        "tag_bootstrap95": [
+          0.0802823649591662,
+          0.13501424978082832
+        ]
+      }
+    },
+    {
+      "daylength": {
+        "mean": 0.0009782924299143007,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 30,
+        "status": "INCLUDES_ZERO",
+        "tag_bootstrap95": [
+          -0.03373129401476338,
+          0.027853192180006973
+        ]
+      },
+      "native_taxon": "Vulpes vulpes",
+      "original_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "original_source_stratum": "PREVIOUS_EIGHT_STUDIES",
+      "original_study_doi": "10.5441/001/1.304",
+      "q": {
+        "mean": 0.18975378246072777,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 30,
+        "status": "POSITIVE",
+        "tag_bootstrap95": [
+          0.15580729672412016,
+          0.2216704016945587
+        ]
+      }
+    },
+    {
+      "daylength": {
+        "mean": -0.045389512719868505,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 7,
+        "status": "INCLUDES_ZERO",
+        "tag_bootstrap95": [
+          -0.0996110566303726,
+          0.018607794040063182
+        ]
+      },
+      "native_taxon": "Prionailurus viverrinus",
+      "original_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "original_source_stratum": "PREVIOUS_EIGHT_STUDIES",
+      "original_study_doi": "10.5441/001/1.644",
+      "q": {
+        "mean": 0.10097679331631548,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 9,
+        "status": "POSITIVE",
+        "tag_bootstrap95": [
+          0.07291184708669471,
+          0.13226846260959857
+        ]
+      }
+    },
+    {
+      "daylength": {
+        "mean": null,
+        "origin_source_status": "ORIGINAL_METADATA_HOLD",
+        "source_tags": 0,
+        "status": "UNAVAILABLE",
+        "tag_bootstrap95": null
+      },
+      "native_taxon": "Ardea alba",
+      "original_source_status": "ORIGINAL_METADATA_HOLD",
+      "original_source_stratum": "PREVIOUS_EIGHT_STUDIES",
+      "original_study_doi": "10.5441/001/1.641",
+      "q": {
+        "mean": null,
+        "origin_source_status": "ORIGINAL_METADATA_HOLD",
+        "source_tags": 0,
+        "status": "UNAVAILABLE",
+        "tag_bootstrap95": null
+      }
+    },
+    {
+      "daylength": {
+        "mean": 0.001463872019545867,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 43,
+        "status": "INCLUDES_ZERO",
+        "tag_bootstrap95": [
+          -0.0007567041284794745,
+          0.0034703393302583157
+        ]
+      },
+      "native_taxon": "Phascolarctos cinereus",
+      "original_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+      "original_source_stratum": "PREVIOUS_EIGHT_STUDIES",
+      "original_study_doi": "10.5441/001/1.740",
+      "q": {
+        "mean": 0.00608386954491994,
+        "origin_source_status": "ORIGINAL_SOURCE_GPS_ECOLOGY_EVALUATED",
+        "source_tags": 43,
+        "status": "POSITIVE",
+        "tag_bootstrap95": [
+          0.004205078288839237,
+          0.007975559125205612
+        ]
+      }
+    },
+    {
+      "daylength": {
+        "mean": null,
+        "origin_source_status": "SOURCE_NO_VALID_GPS_FIXES",
+        "source_tags": 0,
+        "status": "UNAVAILABLE",
+        "tag_bootstrap95": null
+      },
+      "native_taxon": "Chelonoidis donfaustoi",
+      "original_source_status": "SOURCE_NO_VALID_GPS_FIXES",
+      "original_source_stratum": "FOUR_NEW_SOURCE_FROZEN_STUDIES",
+      "original_study_doi": "10.5441/001/1.2cp86266",
+      "q": {
+        "mean": null,
+        "origin_source_status": "SOURCE_NO_VALID_GPS_FIXES",
+        "source_tags": 0,
+        "status": "UNAVAILABLE",
+        "tag_bootstrap95": null
+      }
+    },
+    {
+      "daylength": {
+        "mean": null,
+        "origin_source_status": "SOURCE_NO_VALID_GPS_FIXES",
+        "source_tags": 0,
+        "status": "UNAVAILABLE",
+        "tag_bootstrap95": null
+      },
+      "native_taxon": "Chelonoidis hoodensis",
+      "original_source_status": "SOURCE_NO_VALID_GPS_FIXES",
+      "original_source_stratum": "FOUR_NEW_SOURCE_FROZEN_STUDIES",
+      "original_study_doi": "10.5441/001/1.2cp86266",
+      "q": {
+        "mean": null,
+        "origin_source_status": "SOURCE_NO_VALID_GPS_FIXES",
+        "source_tags": 0,
+        "status": "UNAVAILABLE",
+        "tag_bootstrap95": null
+      }
+    },
+    {
+      "daylength": {
+        "mean": null,
+        "origin_source_status": "SOURCE_NO_VALID_GPS_FIXES",
+        "source_tags": 0,
+        "status": "UNAVAILABLE",
+        "tag_bootstrap95": null
+      },
+      "native_taxon": "Chelonoidis porteri",
+      "original_source_status": "SOURCE_NO_VALID_GPS_FIXES",
+      "original_source_stratum": "FOUR_NEW_SOURCE_FROZEN_STUDIES",
+      "original_study_doi": "10.5441/001/1.2cp86266",
+      "q": {
+        "mean": null,
+        "origin_source_status": "SOURCE_NO_VALID_GPS_FIXES",
+        "source_tags": 0,
+        "status": "UNAVAILABLE",
+        "tag_bootstrap95": null
+      }
+    },
+    {
+      "daylength": {
+        "mean": null,
+        "origin_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+        "source_tags": 0,
+        "status": "UNAVAILABLE",
+        "tag_bootstrap95": null
+      },
+      "native_taxon": "Anas acuta",
+      "original_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "original_source_stratum": "FOUR_NEW_SOURCE_FROZEN_STUDIES",
+      "original_study_doi": "10.5441/001/1.3fv21n7m",
+      "q": {
+        "mean": null,
+        "origin_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+        "source_tags": 0,
+        "status": "UNAVAILABLE",
+        "tag_bootstrap95": null
+      }
+    },
+    {
+      "daylength": {
+        "mean": -0.0005950119432492525,
+        "origin_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+        "source_tags": 20,
+        "status": "INCLUDES_ZERO",
+        "tag_bootstrap95": [
+          -0.06608137989087286,
+          0.05823406253172753
+        ]
+      },
+      "native_taxon": "Anas platyrhynchos",
+      "original_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "original_source_stratum": "FOUR_NEW_SOURCE_FROZEN_STUDIES",
+      "original_study_doi": "10.5441/001/1.3fv21n7m",
+      "q": {
+        "mean": -0.029977175175700362,
+        "origin_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+        "source_tags": 21,
+        "status": "NEGATIVE",
+        "tag_bootstrap95": [
+          -0.04417099959261305,
+          -0.015521108310727528
+        ]
+      }
+    },
+    {
+      "daylength": {
+        "mean": null,
+        "origin_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+        "source_tags": 0,
+        "status": "UNAVAILABLE",
+        "tag_bootstrap95": null
+      },
+      "native_taxon": "Torgos tracheliotus",
+      "original_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "original_source_stratum": "FOUR_NEW_SOURCE_FROZEN_STUDIES",
+      "original_study_doi": "10.5441/001/1.mf903197",
+      "q": {
+        "mean": null,
+        "origin_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+        "source_tags": 0,
+        "status": "UNAVAILABLE",
+        "tag_bootstrap95": null
+      }
+    },
+    {
+      "daylength": {
+        "mean": null,
+        "origin_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+        "source_tags": 0,
+        "status": "UNAVAILABLE",
+        "tag_bootstrap95": null
+      },
+      "native_taxon": "Gyps africanus",
+      "original_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "original_source_stratum": "FOUR_NEW_SOURCE_FROZEN_STUDIES",
+      "original_study_doi": "10.5441/001/1.mf903197",
+      "q": {
+        "mean": null,
+        "origin_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+        "source_tags": 0,
+        "status": "UNAVAILABLE",
+        "tag_bootstrap95": null
+      }
+    },
+    {
+      "daylength": {
+        "mean": -0.004376129442388242,
+        "origin_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+        "source_tags": 64,
+        "status": "INCLUDES_ZERO",
+        "tag_bootstrap95": [
+          -0.016178350032399952,
+          0.006565938639276819
+        ]
+      },
+      "native_taxon": "Branta leucopsis",
+      "original_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "original_source_stratum": "FOUR_NEW_SOURCE_FROZEN_STUDIES",
+      "original_study_doi": "10.5441/001/1.fk899541",
+      "q": {
+        "mean": -0.1654734745042472,
+        "origin_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+        "source_tags": 64,
+        "status": "NEGATIVE",
+        "tag_bootstrap95": [
+          -0.17960867344971498,
+          -0.15215913857702817
+        ]
+      }
+    },
+    {
+      "daylength": {
+        "mean": -0.026533756900550577,
+        "origin_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+        "source_tags": 50,
+        "status": "NEGATIVE",
+        "tag_bootstrap95": [
+          -0.04777688930352582,
+          -0.004772257106868325
+        ]
+      },
+      "native_taxon": "Anser albifrons",
+      "original_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "original_source_stratum": "FOUR_NEW_SOURCE_FROZEN_STUDIES",
+      "original_study_doi": "10.5441/001/1.fk899541",
+      "q": {
+        "mean": -0.12098595255170014,
+        "origin_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+        "source_tags": 50,
+        "status": "NEGATIVE",
+        "tag_bootstrap95": [
+          -0.13671935338156951,
+          -0.10642737466618964
+        ]
+      }
+    },
+    {
+      "daylength": {
+        "mean": 0.008466614673794356,
+        "origin_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+        "source_tags": 28,
+        "status": "INCLUDES_ZERO",
+        "tag_bootstrap95": [
+          -0.0057761869565961,
+          0.022332069078932672
+        ]
+      },
+      "native_taxon": "Anser anser",
+      "original_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+      "original_source_stratum": "FOUR_NEW_SOURCE_FROZEN_STUDIES",
+      "original_study_doi": "10.5441/001/1.fk899541",
+      "q": {
+        "mean": -0.07397429689771891,
+        "origin_source_status": "ORIGINAL_MULTINATIVE_SHARED_CALENDAR_COMPLETED",
+        "source_tags": 28,
+        "status": "NEGATIVE",
+        "tag_bootstrap95": [
+          -0.08745262713684228,
+          -0.06190127658475135
+        ]
+      }
+    }
+  ],
+  "all_source_native_taxon_rows": 22,
+  "astronomical_daylength_original_study_equal_inference": {
+    "all_original_DOI_source_means_including_unavailable": [
+      {
+        "equal_available_native_taxon_mean": null,
+        "estimable_native_taxa": 0,
+        "source_mean_status": "UNAVAILABLE",
+        "source_study_doi": "10.5441/001/1.2cp86266",
+        "total_native_taxon_rows": 3
+      },
+      {
+        "equal_available_native_taxon_mean": 0.0009782924299143007,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.304",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": 0.012819774445985886,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.323",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": -0.0005950119432492525,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "NEGATIVE_POINT",
+        "source_study_doi": "10.5441/001/1.3fv21n7m",
+        "total_native_taxon_rows": 2
+      },
+      {
+        "equal_available_native_taxon_mean": null,
+        "estimable_native_taxa": 0,
+        "source_mean_status": "UNAVAILABLE",
+        "source_study_doi": "10.5441/001/1.641",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": -0.045389512719868505,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "NEGATIVE_POINT",
+        "source_study_doi": "10.5441/001/1.644",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": -0.026299888128490025,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "NEGATIVE_POINT",
+        "source_study_doi": "10.5441/001/1.671",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": 0.002877791530189877,
+        "estimable_native_taxa": 2,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.703",
+        "total_native_taxon_rows": 2
+      },
+      {
+        "equal_available_native_taxon_mean": 0.004176541692751233,
+        "estimable_native_taxa": 4,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.711",
+        "total_native_taxon_rows": 4
+      },
+      {
+        "equal_available_native_taxon_mean": 0.001463872019545867,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.740",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": -0.007481090556381488,
+        "estimable_native_taxa": 3,
+        "source_mean_status": "NEGATIVE_POINT",
+        "source_study_doi": "10.5441/001/1.fk899541",
+        "total_native_taxon_rows": 3
+      },
+      {
+        "equal_available_native_taxon_mean": null,
+        "estimable_native_taxa": 0,
+        "source_mean_status": "UNAVAILABLE",
+        "source_study_doi": "10.5441/001/1.mf903197",
+        "total_native_taxon_rows": 2
+      }
+    ],
+    "leave_one_original_study_DOI_out_mean_range": [
+      -0.0087836257094485,
+      -0.0015074648137167002
+    ],
+    "native_source_taxon_rows_with_estimate": 15,
+    "native_taxon_row_equal_mean_OVERWEIGHTS_MULTI_TAXON_STUDIES": -0.0038002663822614335,
+    "not_global_CI": true,
+    "original_DOI_source_mean_point_signs": {
+      "EXACT_ZERO": 0,
+      "NEGATIVE": 4,
+      "POSITIVE": 5
+    },
+    "original_field_study_DOIs_including_HOLD": 12,
+    "original_studies_with_estimable_native_source_mean": 9,
+    "source_DOI_bootstrap95_DESCRIPTIVE_NONPROBABILITY": [
+      -0.018798106207905216,
+      0.0034042601179355473
+    ],
+    "source_DOI_equal_mean": -0.006383247914400234,
+    "source_mean_minus_native_row_mean": -0.0025829815321388007
+  },
+  "date": "2026-10-31",
+  "distinct_native_species_labels": 20,
+  "external_48_source_negative_shortwave_direction_nonreplication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "first_eight_study_original_daylength_DOI_equal_reference": {
+    "all_original_DOI_source_means_including_unavailable": [
+      {
+        "equal_available_native_taxon_mean": 0.0009782924299143007,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.304",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": 0.012819774445985886,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.323",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": null,
+        "estimable_native_taxa": 0,
+        "source_mean_status": "UNAVAILABLE",
+        "source_study_doi": "10.5441/001/1.641",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": -0.045389512719868505,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "NEGATIVE_POINT",
+        "source_study_doi": "10.5441/001/1.644",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": -0.026299888128490025,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "NEGATIVE_POINT",
+        "source_study_doi": "10.5441/001/1.671",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": 0.002877791530189877,
+        "estimable_native_taxa": 2,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.703",
+        "total_native_taxon_rows": 2
+      },
+      {
+        "equal_available_native_taxon_mean": 0.004176541692751233,
+        "estimable_native_taxa": 4,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.711",
+        "total_native_taxon_rows": 4
+      },
+      {
+        "equal_available_native_taxon_mean": 0.001463872019545867,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.740",
+        "total_native_taxon_rows": 1
+      }
+    ],
+    "leave_one_original_study_DOI_out_mean_range": [
+      -0.010365483862659543,
+      -0.0006639360016838102
+    ],
+    "native_source_taxon_rows_with_estimate": 11,
+    "native_taxon_row_equal_mean_OVERWEIGHTS_MULTI_TAXON_STUDIES": -0.003087792011047981,
+    "not_global_CI": true,
+    "original_DOI_source_mean_point_signs": {
+      "EXACT_ZERO": 0,
+      "NEGATIVE": 2,
+      "POSITIVE": 5
+    },
+    "original_field_study_DOIs_including_HOLD": 8,
+    "original_studies_with_estimable_native_source_mean": 7,
+    "source_DOI_bootstrap95_DESCRIPTIVE_NONPROBABILITY": [
+      -0.022333614247930816,
+      0.005414095535211468
+    ],
+    "source_DOI_equal_mean": -0.007053304104281624,
+    "source_mean_minus_native_row_mean": -0.003965512093233643
+  },
+  "first_eight_study_original_q_DOI_equal_reference": {
+    "all_original_DOI_source_means_including_unavailable": [
+      {
+        "equal_available_native_taxon_mean": 0.18975378246072777,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.304",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": 0.1085989197299469,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.323",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": null,
+        "estimable_native_taxa": 0,
+        "source_mean_status": "UNAVAILABLE",
+        "source_study_doi": "10.5441/001/1.641",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": 0.10097679331631548,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.644",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": -0.0915454462260995,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "NEGATIVE_POINT",
+        "source_study_doi": "10.5441/001/1.671",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": -0.01221871457276769,
+        "estimable_native_taxa": 2,
+        "source_mean_status": "NEGATIVE_POINT",
+        "source_study_doi": "10.5441/001/1.703",
+        "total_native_taxon_rows": 2
+      },
+      {
+        "equal_available_native_taxon_mean": -0.05916634260620982,
+        "estimable_native_taxa": 4,
+        "source_mean_status": "NEGATIVE_POINT",
+        "source_study_doi": "10.5441/001/1.711",
+        "total_native_taxon_rows": 4
+      },
+      {
+        "equal_available_native_taxon_mean": 0.00608386954491994,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.740",
+        "total_native_taxon_rows": 1
+      }
+    ],
+    "leave_one_original_study_DOI_out_mean_range": [
+      0.008788179864350884,
+      0.055671384645488764
+    ],
+    "native_source_taxon_rows_with_estimate": 11,
+    "native_taxon_row_equal_mean_OVERWEIGHTS_MULTI_TAXON_STUDIES": 0.004796829023221447,
+    "not_global_CI": true,
+    "original_DOI_source_mean_point_signs": {
+      "EXACT_ZERO": 0,
+      "NEGATIVE": 3,
+      "POSITIVE": 4
+    },
+    "original_field_study_DOIs_including_HOLD": 8,
+    "original_studies_with_estimable_native_source_mean": 7,
+    "source_DOI_bootstrap95_DESCRIPTIVE_NONPROBABILITY": [
+      -0.03191350583971098,
+      0.10580879574889938
+    ],
+    "source_DOI_equal_mean": 0.03464040880669044,
+    "source_mean_minus_native_row_mean": 0.029843579783468993
+  },
+  "interpretation_ceiling": [
+    "Twelve source DOIs are independent publications not randomly selected representative world ecosystems; twenty-two native source-taxon rows are NOT twenty-two independent studies.",
+    "The original GPS q is NIGHT−DAY log1p observed straight-line step displacement speed (km/h), not true latent activity time or fractions of daylight used.",
+    "Eight-study and twelve-study source-equal comparisons differ in which studies exist; the change is not a time trend or biological change.",
+    "Study-equal DOI bootstrap percentiles are resampling sensitivity conditional on purposively selected original field studies, NOT general global population uncertainty.",
+    "Native within-study q and astronomical daylength effects may use different original source animal samples and year/day availability.",
+    "The goose three-native shared 120-date study-reference daylength is a SEPARATE estimand from original full-source native local daylength slopes, and three goose source native taxa are one field-study unit.",
+    "Some source failures reflect label/schema mismatch, GPS sampling cadence or file size rather than ecological absence; all original HOLD rows remain null.",
+    "Original native source animal bootstrap nominal intervals are unadjusted for multiple comparisons, no causal photoperiod or evolutionary trait effect identified.",
+    "Historic 48-source shortwave signed directional negative external replication and original 12 ERA5 raw JSON version holds remain unchanged.",
+    "No private GPS tags, original locations, precise dates, individual effects or raw telemetry included."
+  ],
+  "native_source_daylength_nominal_animal_CI_sign_counts": {
+    "INCLUDES_ZERO": 8,
+    "NEGATIVE": 2,
+    "POSITIVE": 5,
+    "UNAVAILABLE": 7
+  },
+  "native_source_q_nominal_animal_CI_sign_counts": {
+    "NEGATIVE": 11,
+    "POSITIVE": 4,
+    "UNAVAILABLE": 7
+  },
+  "new_original_studies": 4,
+  "new_source_native_goose_original_shared_calendar_days": 120,
+  "new_source_native_goose_original_year_month_blocks": 5,
+  "one_source_coobserved_three_goose_native_q_and_reference_daylength": [
+    {
+      "native_taxon": "Branta leucopsis",
+      "nominal_original_tag_bootstrap_daylength": [
+        -0.030733783780547766,
+        -0.012772078930820812
+      ],
+      "nominal_original_tag_bootstrap_q": [
+        -0.1954815964064487,
+        -0.17214779843636513
+      ],
+      "shared_120_date_q": -0.1840335077564767,
+      "shared_120_date_q_source_tags": 62,
+      "shared_120_date_reference_daylength_slope_per_hour": -0.021707250275369374
+    },
+    {
+      "native_taxon": "Anser albifrons",
+      "nominal_original_tag_bootstrap_daylength": [
+        -0.0393434785999419,
+        0.005781983386898815
+      ],
+      "nominal_original_tag_bootstrap_q": [
+        -0.10156278334000637,
+        -0.06694712015891909
+      ],
+      "shared_120_date_q": -0.08391467758229752,
+      "shared_120_date_q_source_tags": 11,
+      "shared_120_date_reference_daylength_slope_per_hour": -0.015805411455122778
+    },
+    {
+      "native_taxon": "Anser anser",
+      "nominal_original_tag_bootstrap_daylength": [
+        0.008882631811842349,
+        0.03177315012183498
+      ],
+      "nominal_original_tag_bootstrap_q": [
+        -0.09630916119228468,
+        -0.04398645028166272
+      ],
+      "shared_120_date_q": -0.06917641837347982,
+      "shared_120_date_q_source_tags": 10,
+      "shared_120_date_reference_daylength_slope_per_hour": 0.020657883034855887
+    }
+  ],
+  "one_source_three_goose_pair_q_and_month_reference_slopes": [
+    {
+      "descriptive_source_month_block_bootstrap95": [
+        -0.03022741133340843,
+        0.041609946716889404
+      ],
+      "month_nominal_sign": "INCLUDES_ZERO",
+      "pair_q_nominal_sign": "NEGATIVE",
+      "source_NIGHT_DAY_q_difference": -0.10011883017417918,
+      "source_month_leave_one_out_slope_range": [
+        -0.011370068783195375,
+        0.016020727392224276
+      ],
+      "source_original_individual_pair_bootstrap95": [
+        -0.12091102164165946,
+        -0.07805766777053674
+      ],
+      "source_year_month_blocks": 5,
+      "taxa": [
+        "Branta leucopsis",
+        "Anser albifrons"
+      ],
+      "within_month_study_reference_daylength_slope": 0.0008682272357895166
+    },
+    {
+      "descriptive_source_month_block_bootstrap95": [
+        -0.10660402275366235,
+        0.02093302057024266
+      ],
+      "month_nominal_sign": "INCLUDES_ZERO",
+      "pair_q_nominal_sign": "NEGATIVE",
+      "source_NIGHT_DAY_q_difference": -0.11485708938299688,
+      "source_month_leave_one_out_slope_range": [
+        -0.07270903248661914,
+        -0.01690180922593517
+      ],
+      "source_original_individual_pair_bootstrap95": [
+        -0.14305655218422103,
+        -0.08499959394499611
+      ],
+      "source_year_month_blocks": 5,
+      "taxa": [
+        "Branta leucopsis",
+        "Anser anser"
+      ],
+      "within_month_study_reference_daylength_slope": -0.035073359377631314
+    },
+    {
+      "descriptive_source_month_block_bootstrap95": [
+        -0.11045604429392274,
+        -0.003916419628667224
+      ],
+      "month_nominal_sign": "NEGATIVE",
+      "pair_q_nominal_sign": "INCLUDES_ZERO",
+      "source_NIGHT_DAY_q_difference": -0.014738259208817703,
+      "source_month_leave_one_out_slope_range": [
+        -0.06133896370342375,
+        -0.02735806255491876
+      ],
+      "source_original_individual_pair_bootstrap95": [
+        -0.04520710993760503,
+        0.017514284978339026
+      ],
+      "source_year_month_blocks": 5,
+      "taxa": [
+        "Anser albifrons",
+        "Anser anser"
+      ],
+      "within_month_study_reference_daylength_slope": -0.03594158661342082
+    }
+  ],
+  "original_12_ERA5_raw_JSON_source_HOLDS_UNCHANGED": true,
+  "original_source_git_blob_receipts": {
+    "research/RSDS_8_STUDY_TIME_SOLAR_HEADING_MACRO_ATLAS_V1_20261026.json": "2c4670b54fa5b52737993ebf6babc3a7a58b166a",
+    "research/RSDS_FOUR_MULTINATIVE_ORIGINAL_GPS_ECOLOGICAL_VALIDATION_V1_20261029.json": "eeba1e0bc3e33b13322852539833e3fbf07d834a",
+    "research/RSDS_FOUR_NEW_MULTINATIVE_GPS_SHARED_CALENDAR_V1_FIRST_RESULT_20261029.json": "4034d5318c914dc789a7fcd6535eedbf3a229d53",
+    "research/RSDS_FOUR_NEW_MULTINATIVE_SOURCE_METADATA_FIRST_V1_20261029.json": "d476c8500f99030c864c382fcf32694e0450a48e"
+  },
+  "research_stage": "POST_FIRST_SOURCE_OUTCOMES_ORIGINAL_FIELD_STUDY_EQUAL_MACRO_COMPARISON",
+  "temporal_q_original_study_equal_inference": {
+    "all_original_DOI_source_means_including_unavailable": [
+      {
+        "equal_available_native_taxon_mean": null,
+        "estimable_native_taxa": 0,
+        "source_mean_status": "UNAVAILABLE",
+        "source_study_doi": "10.5441/001/1.2cp86266",
+        "total_native_taxon_rows": 3
+      },
+      {
+        "equal_available_native_taxon_mean": 0.18975378246072777,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.304",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": 0.1085989197299469,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.323",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": -0.029977175175700362,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "NEGATIVE_POINT",
+        "source_study_doi": "10.5441/001/1.3fv21n7m",
+        "total_native_taxon_rows": 2
+      },
+      {
+        "equal_available_native_taxon_mean": null,
+        "estimable_native_taxa": 0,
+        "source_mean_status": "UNAVAILABLE",
+        "source_study_doi": "10.5441/001/1.641",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": 0.10097679331631548,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.644",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": -0.0915454462260995,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "NEGATIVE_POINT",
+        "source_study_doi": "10.5441/001/1.671",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": -0.01221871457276769,
+        "estimable_native_taxa": 2,
+        "source_mean_status": "NEGATIVE_POINT",
+        "source_study_doi": "10.5441/001/1.703",
+        "total_native_taxon_rows": 2
+      },
+      {
+        "equal_available_native_taxon_mean": -0.05916634260620982,
+        "estimable_native_taxa": 4,
+        "source_mean_status": "NEGATIVE_POINT",
+        "source_study_doi": "10.5441/001/1.711",
+        "total_native_taxon_rows": 4
+      },
+      {
+        "equal_available_native_taxon_mean": 0.00608386954491994,
+        "estimable_native_taxa": 1,
+        "source_mean_status": "POSITIVE_POINT",
+        "source_study_doi": "10.5441/001/1.740",
+        "total_native_taxon_rows": 1
+      },
+      {
+        "equal_available_native_taxon_mean": -0.12014457465122208,
+        "estimable_native_taxa": 3,
+        "source_mean_status": "NEGATIVE_POINT",
+        "source_study_doi": "10.5441/001/1.fk899541",
+        "total_native_taxon_rows": 3
+      },
+      {
+        "equal_available_native_taxon_mean": null,
+        "estimable_native_taxa": 0,
+        "source_mean_status": "UNAVAILABLE",
+        "source_study_doi": "10.5441/001/1.mf903197",
+        "total_native_taxon_rows": 2
+      }
+    ],
+    "leave_one_original_study_DOI_out_mean_range": [
+      -0.012174083830102142,
+      0.02656321080889159
+    ],
+    "native_source_taxon_rows_with_estimate": 15,
+    "native_taxon_row_equal_mean_OVERWEIGHTS_MULTI_TAXON_STUDIES": -0.022509718658262047,
+    "not_global_CI": true,
+    "original_DOI_source_mean_point_signs": {
+      "EXACT_ZERO": 0,
+      "NEGATIVE": 5,
+      "POSITIVE": 4
+    },
+    "original_field_study_DOIs_including_HOLD": 12,
+    "original_studies_with_estimable_native_source_mean": 9,
+    "source_DOI_bootstrap95_DESCRIPTIVE_NONPROBABILITY": [
+      -0.04923231149820311,
+      0.07674246171695534
+    ],
+    "source_DOI_equal_mean": 0.010262345757767848,
+    "source_mean_minus_native_row_mean": 0.032772064416029895
+  },
+  "version": "RSDS_TWELVE_ORIGINAL_STUDY_22_NATIVE_TEMPORAL_MACRO_V1_FIRST_RESULT"
+}
