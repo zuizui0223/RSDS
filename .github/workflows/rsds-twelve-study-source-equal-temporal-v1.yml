@@ -1,0 +1,76 @@
+name: RSDS 12 original Movebank studies source-equal time and photoperiod macro v1
+on:
+  push:
+    branches:
+      - science/twelve-study-original-gps-temporal-macro-v1
+    paths:
+      - 'scripts/build_rsds_twelve_original_study_temporal_macro_v1.py'
+      - 'tests/test_rsds_twelve_original_study_temporal_macro_v1.py'
+      - 'research/RSDS_12_STUDY_ORIGINAL_GPS_TEMPORAL_MACRO_V1_CONTRACT.json'
+      - '.github/workflows/rsds-twelve-study-source-equal-temporal-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  twelve_frozen_source_DOI_and_native_taxon_ecology:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/twelve-study-original-gps-temporal-macro-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify historical ODSP source provenance and previous negative radiation outcome
+        run: python -m scripts.verify_rsds_migration
+      - name: Validate exact SHA of first original study results and native-tag bootstrap sign/DOI denominators
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_twelve_original_study_temporal_macro_v1.py' -v
+      - name: Recalculate descriptive twelve original-study DOI-equal q and daylight associations with all 22 native rows
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.build_rsds_twelve_original_study_temporal_macro_v1 --out research/RSDS_12_STUDY_22_NATIVE_TEMPORAL_MACRO_FIRST_RESULT_20261031.json
+          python -m json.tool research/RSDS_12_STUDY_22_NATIVE_TEMPORAL_MACRO_FIRST_RESULT_20261031.json > /dev/null
+      - name: Verify no original raw GPS records, tagged IDs or precise event coordinates
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_12_STUDY_22_NATIVE_TEMPORAL_MACRO_FIRST_RESULT_20261031.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['all_original_studies']==12 and d['all_source_native_taxon_rows']==22
+          assert d['temporal_q_original_study_equal_inference']['original_studies_with_estimable_native_source_mean']==9
+          assert d['new_source_native_goose_original_shared_calendar_days']==120
+          assert d['external_48_source_negative_shortwave_direction_nonreplication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          assert d['original_12_ERA5_raw_JSON_source_HOLDS_UNCHANGED'] is True
+          raw=p.read_text(encoding='utf-8')
+          for term in ('"animal_id"', '"individual_id"', '"tag_id"',
+                       '"latitude"', '"longitude"', '"timestamp"',
+                       '"event_date"', '"original_gps_fixes"', '"private_grid"'):
+              assert term not in raw, f'Private source track field present: {term}'
+          print('Twelve original published study DOIs, 22 native source taxa, all source HOLDs, no raw GPS data.')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-12-original-movebank-studies-22-native-taxa-source-equal-temporal-macro
+          path: research/RSDS_12_STUDY_22_NATIVE_TEMPORAL_MACRO_FIRST_RESULT_20261031.json
+          if-no-files-found: error
+      - name: Commit the immutable source-group original ecology macro without any animal telemetry
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_12_STUDY_22_NATIVE_TEMPORAL_MACRO_FIRST_RESULT_20261031.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: twelve original Movebank studies temporal q and photoperiod source-grain macro ecology"
+            git fetch origin science/twelve-study-original-gps-temporal-macro-v1
+            git rebase origin/science/twelve-study-original-gps-temporal-macro-v1
+            git push origin HEAD:science/twelve-study-original-gps-temporal-macro-v1
+          fi

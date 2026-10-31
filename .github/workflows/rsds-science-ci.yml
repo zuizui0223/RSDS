@@ -519,6 +519,35 @@ jobs:
           assert prior['previous_48_source_signed_shortwave_direction_EXTERNAL_NONREPLICATED_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
           print('Four original source MD5 first receipts, goose 120 common days, source taxon/eligibility HOLDS and historical sunlight negative external nonreplication locked')
           PY
+      - name: Guard twelve original study temporal macro, 22 native taxa and source-equal q/daylight signs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_twelve_original_study_temporal_macro_v1.py' -v
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          from scripts.build_rsds_twelve_original_study_temporal_macro_v1 import main_analysis
+          f=Path('research/RSDS_12_STUDY_22_NATIVE_TEMPORAL_MACRO_FIRST_RESULT_20261031.json')
+          raw=f.read_bytes()
+          sha=hashlib.sha1(('blob '+str(len(raw))+'\0').encode()+raw).hexdigest()
+          assert sha=='af0574c6bb6383402a97b5bebadb8cf0408e9740', 'Frozen first 12-study q/photoperiod group result changed'
+          first=json.loads(raw)
+          assert first==main_analysis()
+          assert first['all_original_studies']==12
+          assert first['all_source_native_taxon_rows']==22
+          assert first['distinct_native_species_labels']==20
+          q=first['temporal_q_original_study_equal_inference']
+          assert q['original_studies_with_estimable_native_source_mean']==9
+          assert q['native_source_taxon_rows_with_estimate']==15
+          assert q['original_DOI_source_mean_point_signs']=={'POSITIVE':4,'NEGATIVE':5,'EXACT_ZERO':0}
+          assert first['native_source_q_nominal_animal_CI_sign_counts']=={'NEGATIVE':11,'POSITIVE':4,'UNAVAILABLE':7}
+          assert first['native_source_daylength_nominal_animal_CI_sign_counts']=={'POSITIVE':5,'NEGATIVE':2,'INCLUDES_ZERO':8,'UNAVAILABLE':7}
+          assert first['new_source_native_goose_original_shared_calendar_days']==120
+          assert first['external_48_source_negative_shortwave_direction_nonreplication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          assert first['original_12_ERA5_raw_JSON_source_HOLDS_UNCHANGED']
+          print('Twelve original study DOI and 22 native source Q/daylength first macro SHA, 120 shared goose days and old source HOLDS preserved')
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |

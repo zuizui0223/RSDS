@@ -252,6 +252,21 @@ Illinoisの新月内推定は8年月ブロック・167元共通日、Wyomingは8
 
 [原GPS 4study×10分類群の第一結果](../research/RSDS_FOUR_NEW_MULTINATIVE_GPS_SHARED_CALENDAR_V1_FIRST_RESULT_20261029.json) ／ [ガン3種120日・未支持3原studyのSHA固定定量監査](../research/RSDS_FOUR_MULTINATIVE_ORIGINAL_GPS_ECOLOGICAL_VALIDATION_V1_20261029.json) ／ [詳細な生態学的考察](RSDS_GOOSE_THREE_NATIVE_SHARED_DATE_TEMPORAL_NICHE_20261029.md) ／ [原登録study契約・MD5](../research/RSDS_FOUR_NEW_MULTINATIVE_SOURCE_GPS_V1_CONTRACT.json)。
 
+## S. 12公表元GPS研究・22分類群行の統合で「時間利用の共通方向」は支持されない（2026-10-31）
+
+RSDSの元8公表Movebank研究（12 study×native taxon行）を、新たに原GPS提供元UUID・bytes・MD5と元研究学名登録を結果取得前に固定した4研究（登録10 native taxon行）へ拡張した。**12元study DOI・22 source×taxon行・20学名**を全て残し、既存4つの科学的元結果ファイルのGit blob SHAを固定した事後的マクロ統合を実施した。元動物GPS・ERA5の再取得・元の先行結果の再分類はしていない。
+
+- 昼夜観測GPS直線変位qは **15/22行・9/12元研究**で元タグbootstrapの支持があり、符号は**負11・正4・未支持7**。q~元個体年内天文日長係数は**正5・負2・区間が0を含む8・未支持7**。qは実際の活動時間割合ではなく、観測GPS速度差である。
+- **分類群行を均等平均する場合**、qは元8study×11推定行+0.00480から、拡張後15推定行で**−0.02251**に変わった。しかし**元study DOIを独立単位にして先にstudy内分類群を平均した場合**、元7study+0.03464→拡張9study**+0.01026**となる。元studyブロックbootstrap95%区間は**−0.04923〜+0.07674**でゼロを含み、1研究DOIを除くだけで平均値が**−0.01217〜+0.02656**と符号をまたぐ。研究間の普遍的な昼間／夜間GPS変位優位という結論は現状支持されない。
+- 元study均等のq~日長傾きも**−0.00638/h**（元DOIブロックbootstrap95%区間 **−0.01880〜+0.00340**）で符号は未確定。個別native taxonの正負が存在しても、調査地域・季節・GPS duty-cycleを分離した日長因果効果ではない。
+- 新ガンstudy **10.5441/001/1.fk899541**の3種が**同じ120GPS適格暦日・5年月ブロック**を共有した結果、qは3種とも負なのに、研究共通参照日長に対するq傾きはカオジロガン−0.02171/h、ハイイロガン+0.02066/h（マガンは不確定）という対照があった。**日周ニッチの位置と、季節的な天文時計に沿う変化の方向は別々に組織化される可能性**がある。これは**同じ元study内の観測的比較**で、3研究の独立外部再現ではない。共通暦日も動物が同所で活動したことの証明ではない。
+
+**HOLDの科学的扱い：** 元登録Galápagosゾウガメのtaxon schema照合不能3行、ハゲワシ観測cadence不足2行、渡りガモの一種未支持1行、ダイサギ原GPS元ファイル容量上限1行＝合計7行は非推定のまま保存。動物不在・q=0・日長関係の不存在の証拠ではない。源研究12件も世界の無作為独立生態系標本ではなく、元study中の分類群数に偏りがある。
+
+今回の統合は**生態的な記録移動と季節・日長関係の非一様性を、元研究階層まで考慮して量的に整理した成果**である。しかし真の時間予算、日射・気温・風の原因的媒介、太陽コンパス利用、資源・捕食による行動分業や全球一般則はまだ同定できていない。古い48ソースの日射方向外部符号再現失敗と旧ERA5 raw JSON12コンテキストHOLDは維持する。
+
+[新たな12原研究のマクロデータ](../research/RSDS_12_STUDY_22_NATIVE_TEMPORAL_MACRO_FIRST_RESULT_20261031.json) ／ [12研究間・ガン同一暦日の詳細](RSDS_TWELVE_ORIGINAL_STUDY_TEMPORAL_MACROECOLOGY_20261031.md) ／ [SHA固定の実行コード](../scripts/build_rsds_twelve_original_study_temporal_macro_v1.py) ／ [英語論文草稿](../manuscript/RSDS_TWELVE_STUDY_DIEL_PHOTOPERIOD_ORIGINAL_GPS_ECOLOGY_v1_20261031.md)。
+
 ## 再現可能性と論文発展
 
 - [全球太陽方向の研究草稿v2](../manuscript/GLOBAL_SOLAR_AZIMUTH_ORIGINAL_GPS_MACROECOLOGY_v2_20261025.md)
