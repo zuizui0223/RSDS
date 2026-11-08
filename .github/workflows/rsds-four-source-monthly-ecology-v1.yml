@@ -1,0 +1,78 @@
+name: RSDS four coobserved original field studies within-month daylight ecology v1
+on:
+  push:
+    branches:
+      - science/utah-coobserved-within-month-photoperiod-v1
+    paths:
+      - 'scripts/summarize_rsds_four_original_shared_months_with_utah_v1.py'
+      - 'tests/test_rsds_four_study_month_daylength_completion_v1.py'
+      - 'docs/RSDS_UTAH_COOOBSERVED_MONTH_CENTERED_PHOTOPERIOD_20261108.md'
+      - '.github/workflows/rsds-four-source-monthly-ecology-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  source_original_four_study_month_synthesis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/utah-coobserved-within-month-photoperiod-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: All four original source study and eight native pair prior result/HOLD synthetic tests
+        run: |
+          python -m unittest discover -s tests -p 'test_rsds_four_study_month_daylength_completion_v1.py' -v
+      - name: Collect old original 3-study month results and NEW Utah MD5-source first result if available
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC=research/RSDS_UTAH_COOOBSERVED_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json
+          if [ -f "$SRC" ]; then
+            python -m scripts.summarize_rsds_four_original_shared_months_with_utah_v1 --out research/RSDS_FOUR_ORIGINAL_SHARED_CALENDAR_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json
+            python -m json.tool research/RSDS_FOUR_ORIGINAL_SHARED_CALENDAR_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json > /dev/null
+          else
+            echo "Utah provider first-result not yet archived. Synthetic source-denominator validation only; do not claim complete 4-study monthly ecology."
+          fi
+      - name: Strict source DOI/HOLD/and private-tag protection after real Utah first result
+        if: hashFiles('research/RSDS_FOUR_ORIGINAL_SHARED_CALENDAR_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json') != ''
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          f=Path('research/RSDS_FOUR_ORIGINAL_SHARED_CALENDAR_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json')
+          z=json.loads(f.read_text(encoding='utf-8'))
+          assert z['original_field_studies']==4 and z['original_study_native_pair_rows']==8
+          assert z['old_original_three_studies_native_pair_rows']==7
+          assert z['earlier_4_study_first_UTAH_UNTESTED_statement_UNCHANGED'] is True
+          assert z['original_12_ERA5_raw_source_SHA_HOLDS_UNCHANGED'] is True
+          assert z['previous_48_source_external_signed_radiation_NONREPLICATED_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          for bad in ('"individual_id"','"tag_id"','"animal_id"','"latitude"','"longitude"',
+                      '"calendar_date"','"timestamp"','"source_gps_fix"'):
+              assert bad not in json.dumps(z), bad
+          print('4 published source DOIs, eight native pairs: original science and private GPS limitations validated')
+          PY
+      - name: Save fully integrated original field study month source-only effect report
+        if: hashFiles('research/RSDS_FOUR_ORIGINAL_SHARED_CALENDAR_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-four-coobserved-original-study-within-month-q-daylight-ecology-v1
+          path: research/RSDS_FOUR_ORIGINAL_SHARED_CALENDAR_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json
+          if-no-files-found: error
+      - name: Commit four published field-study original month source result without animal telemetry
+        if: hashFiles('research/RSDS_FOUR_ORIGINAL_SHARED_CALENDAR_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json') != ''
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_FOUR_ORIGINAL_SHARED_CALENDAR_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: complete four original coobserved study month-conditioned source ecological contrasts"
+            git fetch origin science/utah-coobserved-within-month-photoperiod-v1
+            git rebase origin/science/utah-coobserved-within-month-photoperiod-v1
+            git push origin HEAD:science/utah-coobserved-within-month-photoperiod-v1
+          fi
