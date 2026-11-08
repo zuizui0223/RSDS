@@ -89,7 +89,7 @@ def frozen():
             or four["old_48_source_negative_radiation_direction_external_replication_UNCHANGED"]!=HISTORIC_SOURCE
             or not four["old_12_ERA5_source_version_raw_JSON_HOLDS_UNCHANGED"]
             or month["original_source_field_studies"]!=2
-            or month["original_study_native_taxa"]!=5
+            or month["source_native_taxon_and_schedule_comparisons"]!=6
             or month["old_48_signed_radiation_external_nonreplication_UNCHANGED"]!=HISTORIC_SOURCE):
         raise ValueError("Published four-study month comparison or source old HOLD changed")
     return spec,original_ref,previous_absolute,previous_delta,prior
