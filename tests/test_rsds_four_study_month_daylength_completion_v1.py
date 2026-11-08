@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 from scripts.summarize_rsds_four_original_shared_months_with_utah_v1 import (
-    FOUR, FOUR_SHA, blob, combine_four, NEG, SOURCES
+    FOUR, FOUR_SHA, UTAH, OUTPUT, blob, combine_four, run, NEG, SOURCES
 )
 
 
@@ -78,6 +78,35 @@ class FourOriginalFieldStudyWithinMonthSourceAtlas(unittest.TestCase):
         self.assertEqual(ut["original_native_pair"],["Odocoileus hemionus","Ovis canadensis"])
         self.assertEqual(ut["source_original_year_month_blocks"],10)
         self.assertEqual(ut["month_slope"],.005)
+
+    def test_actual_utah_MD5_verified_month_result_and_four_study_first_result_locked(self):
+        """Run original-source four-study integration from exact original data blobs."""
+        if not UTAH.is_file() or not OUTPUT.is_file():
+            self.fail("Original provider-authenticated Utah monthly source and four-study first results missing")
+        self.assertEqual(blob(UTAH.read_bytes()),
+                         "4d49c376df9209f47ca99ae6c3fa5c37078d5774")
+        self.assertEqual(blob(OUTPUT.read_bytes()),
+                         "1071267425d23e609f8831a982f5cb334c66a2db")
+        utah=json.loads(UTAH.read_text(encoding="utf-8"))
+        self.assertEqual(utah["status"],"UTAH_SOURCE_MONTH_CENTERED_ORIGINAL_EVALUATED")
+        self.assertTrue(utah["provider_original_GPS_bitstream_MD5_verified"])
+        self.assertTrue(utah["all_four_native_original_q_and_daylength_replayed_before_month_test"])
+        self.assertTrue(utah["original_two_taxa_triple_source_GPS_replayed_before_month_test"])
+        self.assertEqual(utah["strict_shared_source_date_support"]["source_shared_original_calendar_days"],199)
+        self.assertEqual(utah["strict_shared_source_date_support"]["original_source_year_month_blocks"],10)
+        self.assertEqual([x["source_GPS_UTC_clock_schedule"] for x in
+                          utah["month_conditioned_original_pair_results"]],
+                         ["original","even","odd"])
+        self.assertEqual([x["month_centered_source_daylength_response"]["eligible_source_month_blocks"]
+                          for x in utah["month_conditioned_original_pair_results"]],[9,9,9])
+        self.assertTrue(all(x["month_centered_source_daylength_response"]["eligible_source_calendar_days"]==196
+                            for x in utah["month_conditioned_original_pair_results"]))
+        self.assertTrue(all(x["month_centered_source_daylength_response"]["nominal_interval_sign"]==
+                            "INCLUDES_ZERO" for x in utah["month_conditioned_original_pair_results"]))
+        summary=run()
+        self.assertEqual(summary,json.loads(OUTPUT.read_text(encoding="utf-8")))
+        self.assertEqual(summary["source_month_nominal_bootstrap_sign_counts"],
+                         {"INCLUDES_ZERO":5,"NEGATIVE":2,"POSITIVE":1})
 
     def test_historic_utah_unestimated_state_not_reclassified_as_biological_zero(self):
         ut=fake_utah("ORIGINAL_SOURCE_OR_MONTH_SUPPORT_HOLD")
