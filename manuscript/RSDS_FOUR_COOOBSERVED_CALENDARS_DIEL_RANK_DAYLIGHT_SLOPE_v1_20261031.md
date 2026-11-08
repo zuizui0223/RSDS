@@ -32,7 +32,7 @@ where \(v\) is straight-line GPS displacement speed in km/h from eligible consec
 
 Four study calendars were independently preserved: Illinois 169 days in nine year–month blocks, Wyoming 193 days in eight, Utah 199 days in ten, and geese 120 days in five. The astronomical daylength reference was 43°N for Illinois and the two ungulate studies, but an independent study-specific reference latitude for geese; magnitudes cannot be interpreted as matched direct daylight exposures between source geographies.
 
-For the repeated mule-deer–bighorn pair, original q rank and daylength trends were checked in all three archived source GPS schedules: original UTC hourly-bin selected source fixes, even-hour-only 2-hour intervals, and odd-hour-only 2-hour intervals. This is an **instrument sampling** sensitivity, not an experimental light treatment. Year–month-centered analyses of q species contrasts from Illinois, Wyoming and the goose source were included only as prior source-specific exploratory checks. Comparable within-month analysis was **not** performed for Utah.
+For the repeated mule-deer–bighorn pair, original q rank and daylength trends were checked in all three archived source GPS schedules: original UTC hourly-bin selected source fixes, even-hour-only 2-hour intervals, and odd-hour-only 2-hour intervals. This is an **instrument sampling** sensitivity, not an experimental light treatment. Year–month-centered analyses of q species contrasts were available from Illinois, Wyoming and the goose source in the original first comparative result. Utah was explicitly **NOT_TESTED** at that time. In a separate original GPS provider-MD5-validated follow-up on 8 November 2026, we applied the identical month-conditional rules to the previously fixed Utah mule-deer–bighorn pair and source calendar, without altering the first comparative result.
 
 ## Results
 
@@ -57,7 +57,15 @@ Daylength associations contrasted with the q rank. In Wyoming, source-native mul
 
 Illinois three-native original tracking records on 169 dates showed q: coyote **+0.26852**, bobcat **+0.09339**, white-tailed deer **+0.00245**, with all three native-pair q ranks supported by conditional original-tag intervals. Their source-reference daylength slopes were **+0.03744/h** (coyote), **−0.02343/h** (bobcat) and unresolved near zero (deer). The goose source on 120 common dates had negative q in all three natives (*Branta leucopsis* **−0.18403**, *Anser albifrons* **−0.08391**, *Anser anser* **−0.06918**), yet the first and third taxa had supported opposing signed source-reference daylight trends (**−0.02171/h** vs **+0.02066/h**). Native source ranking and daylight slope were therefore demonstrably different observational outcomes in both mammal and avian field studies.
 
-In previous year–month-adjusted analyses, Illinois bobcat minus white-tailed deer had a nominal negative within-month calendar daylight contrast **−0.08466/h**; Wyoming mule deer minus bighorn had a nominal positive within-month original-fix contrast **+0.01027/h**; the goose source's *A. albifrons* minus *A. anser* had a nominal negative contrast **−0.03594/h**. These are not independent replicated effects and have only 5–9 month-level blocks per study. Utah did not undergo the same within-month check.
+### Completed four-source within-calendar-month daylight contrasts (post-result sensitivity)
+
+Previously, Illinois bobcat minus white-tailed deer had a nominal negative within-month calendar daylight contrast **−0.08466/h**; Wyoming mule deer minus bighorn had a nominal positive within-month original-fix contrast **+0.01027/h**; and the goose source's *A. albifrons* minus *A. anser* had a nominal negative contrast **−0.03594/h**. The older first four-study file explicitly listed the Utah monthly comparison as *NOT_TESTED*, not zero or nonsignificant.
+
+We have now completed this missing original source evaluation. After verifying the public Utah original GPS bitstream MD5, all four native source q and daylength first coefficients, the two taxa's prior three GPS observation schedules and **199 preselected coobserved calendar days**, **9 of the ten fixed year×month blocks** contributed **196 dates** to the month-centered regression. The original acquisition series yielded the mule-deer minus bighorn daylight contrast **−0.002646/h** with original-year×month bootstrap95 **[−0.056857, +0.040340]**. The even-UTC and odd-UTC two-hour schedules gave **+0.012797/h** [−0.028483,+0.052172] and **+0.014203/h** [−0.017862,+0.047144], respectively. **All three intervals span zero**, so the month-conditional Utah species-pair slope remains unresolved rather than showing a reproduced Wyoming-style positive trend.
+
+Across **four original published field-study DOI units** and **eight native species-pair comparisons**, year×month-conditioned nominal blocks gave one positive pair (Wyoming), two negative pairs (Illinois and geese), and five intervals including zero (including Utah). This was a purposive post-outcome sensitivity with only 5–10 source year×month blocks and unadjusted multiple comparisons. The goose study uses a different astronomical reference from 43°N, and **eight pair coefficients are not eight independent field-study replicates or a valid single global photoperiod coefficient**. The original recurrent mule-deer–bighorn *q position* remains positive in both Utah and Wyoming; the between-native *daylength trajectory* does not show the same degree of evidence across those contexts. No causal photoperiodic physiology or received shortwave exposure is identified.
+
+
 
 ## Discussion and inference ceiling
 
@@ -70,6 +78,13 @@ This four-source co-calendar frame is **not the same data population** as the se
 A prospective ecological generalization should preselect original multi-native field studies independent of q or daylight slope, require comparable GPS observation effort and same-site/day resource context, and then estimate source-clustered contrasts with explicit solar geometry, temperature, wind and geography.
 
 ## Reproducibility and source evidence
+
+- [Utah original GPS MD5 and four-native source q/daylength replay, 199 source-coobserved dates and 3 within-month comparisons](../research/RSDS_UTAH_COOOBSERVED_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json)
+- [Four original field-study DOIs / eight coobserved native-pair month-conditioned first result, with unresolved Utah bands](../research/RSDS_FOUR_ORIGINAL_SHARED_CALENDAR_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json)
+- [Utah exact original date/animal and prior-month-source SHA matching script](../scripts/run_rsds_utah_coobserved_within_month_daylength_v1.py)
+- [Four original study month source synthesis and interpretation in Japanese](../docs/RSDS_FOUR_COOOBSERVED_STUDY_WITHIN_MONTH_DAYLIGHT_20261108.md)
+
+
 
 - [Four independently published same-calendar original source study outcomes](../research/RSDS_FOUR_COOOBSERVED_CALENDAR_NICHE_V1_FIRST_RESULT_20261031.json)
 - [Frozen original source DOI, source-calendar/latitude and SHA contract](../research/RSDS_FOUR_COOOBSERVED_CALENDAR_NICHE_V1_CONTRACT.json)
