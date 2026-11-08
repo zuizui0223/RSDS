@@ -574,6 +574,48 @@ jobs:
           assert record['old_48_source_negative_radiation_direction_external_replication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
           print('Four original study shared-calendar diel q ranks and daylight slope divergence source-SHA fixed, old source HOLDS intact')
           PY
+      - name: Preserve Utah 199 original coobserved dates and four original field study month daylight conclusions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_rsds_utah_coobserved_within_month_daylength_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_four_study_month_daylength_completion_v1.py' -v
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          from scripts.summarize_rsds_four_original_shared_months_with_utah_v1 import run
+          known={
+              "research/RSDS_UTAH_COOOBSERVED_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json":
+                "4d49c376df9209f47ca99ae6c3fa5c37078d5774",
+              "research/RSDS_FOUR_ORIGINAL_SHARED_CALENDAR_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json":
+                "1071267425d23e609f8831a982f5cb334c66a2db",
+          }
+          for path,expect in known.items():
+              raw=Path(path).read_bytes()
+              sha=hashlib.sha1(("blob "+str(len(raw))+"\0").encode()+raw).hexdigest()
+              assert sha==expect, f'Frozen original source or four-study month result changed: {path}'
+          first=json.loads(Path(list(known)[0]).read_text(encoding="utf-8"))
+          atlas=json.loads(Path(list(known)[1]).read_text(encoding="utf-8"))
+          assert atlas==run(), "New four original coobserved field-study monthly source integration changed"
+          assert first["status"]=="UTAH_SOURCE_MONTH_CENTERED_ORIGINAL_EVALUATED"
+          assert first["provider_original_GPS_bitstream_MD5_verified"]
+          assert first["all_four_native_original_q_and_daylength_replayed_before_month_test"]
+          assert first["original_two_taxa_triple_source_GPS_replayed_before_month_test"]
+          assert first["strict_shared_source_date_support"]["source_shared_original_calendar_days"]==199
+          assert first["strict_shared_source_date_support"]["original_source_year_month_blocks"]==10
+          assert len(first["month_conditioned_original_pair_results"])==3
+          assert all(v["month_centered_source_daylength_response"]["eligible_source_month_blocks"]==9
+                     and v["month_centered_source_daylength_response"]["eligible_source_calendar_days"]==196
+                     and v["month_centered_source_daylength_response"]["nominal_interval_sign"]=="INCLUDES_ZERO"
+                     for v in first["month_conditioned_original_pair_results"])
+          assert atlas["original_field_studies"]==4 and atlas["original_study_native_pair_rows"]==8
+          assert atlas["source_month_nominal_bootstrap_sign_counts"]=={
+              "POSITIVE":1,"NEGATIVE":2,"INCLUDES_ZERO":5}
+          assert atlas["earlier_4_study_first_UTAH_UNTESTED_statement_UNCHANGED"]
+          assert atlas["previous_48_source_external_signed_radiation_NONREPLICATED_UNCHANGED"]=="NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
+          assert atlas["original_12_ERA5_raw_source_SHA_HOLDS_UNCHANGED"]
+          print("RSDS MD5-replayed Utah 199 shared-date month test and four original field-study eight-pair source ecology SHA-locked")
+          PY
       - name: Verify noncausal/negative result is not selectively removed
         shell: bash
         run: |
