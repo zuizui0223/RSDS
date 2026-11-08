@@ -1,0 +1,131 @@
+{
+  "all_four_native_original_q_and_daylength_replayed_before_month_test": true,
+  "all_original_native_study_taxa": [
+    "Antilocapra americana",
+    "Cervus elaphus",
+    "Odocoileus hemionus",
+    "Ovis canadensis"
+  ],
+  "date": "2026-11-08",
+  "earlier_four_study_Utah_within_month_not_tested_UNCHANGED": true,
+  "fixed_two_target_taxa": [
+    "Odocoileus hemionus",
+    "Ovis canadensis"
+  ],
+  "month_conditioned_original_pair_results": [
+    {
+      "all_months_original_shared_daylength_slope_per_hour": -5.497041601395459e-05,
+      "all_months_original_source_nominal_status": "INCLUDES_ZERO",
+      "all_months_prior_source_slope_replay": "ARCHIVED_UNADJUSTED_SLOPE_REPLAYED",
+      "interpretation_vs_archived_all_months": "WITHIN_MONTH_INTERVAL_INCLUDES_ZERO",
+      "month_centered_source_daylength_response": {
+        "bootstrap_finite_replicates": 2000,
+        "eligible_source_calendar_days": 196,
+        "eligible_source_month_blocks": 9,
+        "leave_one_month_block_out_range": [
+          -0.02399246670179322,
+          0.010837356667168022
+        ],
+        "month_cluster_bootstrap95": [
+          -0.056857052050926046,
+          0.04033968127483485
+        ],
+        "nominal_interval_sign": "INCLUDES_ZERO",
+        "not_causal_daylength": true,
+        "source_calendar_dates": 199,
+        "source_year_month_blocks": 10,
+        "status": "MONTH_CONDITIONAL_DESCRIPTIVE_ESTIMABLE",
+        "within_month_daylength_centered_sum_squares_hours2": 22.292825965430794,
+        "within_month_daylength_slope": -0.002646005173280591
+      },
+      "one_original_study_not_independent_taxon_replicates": true,
+      "original_study_doi": "10.5441/001/1.711",
+      "source_GPS_UTC_clock_schedule": "original",
+      "source_native_first": "Odocoileus hemionus",
+      "source_native_second": "Ovis canadensis"
+    },
+    {
+      "all_months_original_shared_daylength_slope_per_hour": -0.0007858332333541868,
+      "all_months_original_source_nominal_status": "INCLUDES_ZERO",
+      "all_months_prior_source_slope_replay": "ARCHIVED_UNADJUSTED_SLOPE_REPLAYED",
+      "interpretation_vs_archived_all_months": "WITHIN_MONTH_INTERVAL_INCLUDES_ZERO",
+      "month_centered_source_daylength_response": {
+        "bootstrap_finite_replicates": 2000,
+        "eligible_source_calendar_days": 196,
+        "eligible_source_month_blocks": 9,
+        "leave_one_month_block_out_range": [
+          -0.004457290962141654,
+          0.022431777703400685
+        ],
+        "month_cluster_bootstrap95": [
+          -0.028482677488088647,
+          0.052172223091693615
+        ],
+        "nominal_interval_sign": "INCLUDES_ZERO",
+        "not_causal_daylength": true,
+        "source_calendar_dates": 199,
+        "source_year_month_blocks": 10,
+        "status": "MONTH_CONDITIONAL_DESCRIPTIVE_ESTIMABLE",
+        "within_month_daylength_centered_sum_squares_hours2": 22.292825965430794,
+        "within_month_daylength_slope": 0.012797267884414739
+      },
+      "one_original_study_not_independent_taxon_replicates": true,
+      "original_study_doi": "10.5441/001/1.711",
+      "source_GPS_UTC_clock_schedule": "even",
+      "source_native_first": "Odocoileus hemionus",
+      "source_native_second": "Ovis canadensis"
+    },
+    {
+      "all_months_original_shared_daylength_slope_per_hour": -0.005625320379908634,
+      "all_months_original_source_nominal_status": "INCLUDES_ZERO",
+      "all_months_prior_source_slope_replay": "ARCHIVED_UNADJUSTED_SLOPE_REPLAYED",
+      "interpretation_vs_archived_all_months": "WITHIN_MONTH_INTERVAL_INCLUDES_ZERO",
+      "month_centered_source_daylength_response": {
+        "bootstrap_finite_replicates": 2000,
+        "eligible_source_calendar_days": 196,
+        "eligible_source_month_blocks": 9,
+        "leave_one_month_block_out_range": [
+          -6.98181318895677e-05,
+          0.024373244370783833
+        ],
+        "month_cluster_bootstrap95": [
+          -0.017861957519043424,
+          0.04714441105923243
+        ],
+        "nominal_interval_sign": "INCLUDES_ZERO",
+        "not_causal_daylength": true,
+        "source_calendar_dates": 199,
+        "source_year_month_blocks": 10,
+        "status": "MONTH_CONDITIONAL_DESCRIPTIVE_ESTIMABLE",
+        "within_month_daylength_centered_sum_squares_hours2": 22.292825965430794,
+        "within_month_daylength_slope": 0.014203156783367912
+      },
+      "one_original_study_not_independent_taxon_replicates": true,
+      "original_study_doi": "10.5441/001/1.711",
+      "source_GPS_UTC_clock_schedule": "odd",
+      "source_native_first": "Odocoileus hemionus",
+      "source_native_second": "Ovis canadensis"
+    }
+  ],
+  "old_ERA5_raw_JSON_12_source_HOLDS_UNCHANGED": true,
+  "old_external_48_source_negative_radiation_replication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "original_shared_month_limit": "POSTHOC_SEASONAL_MONTH_CONFOUNDING_NONCAUSAL",
+  "original_study_doi": "10.5441/001/1.711",
+  "original_two_taxa_triple_source_GPS_replayed_before_month_test": true,
+  "provider_original_GPS_bitstream_MD5_verified": true,
+  "status": "UTAH_SOURCE_MONTH_CENTERED_ORIGINAL_EVALUATED",
+  "strict_shared_source_date_support": {
+    "distinct_calendar_month_numbers": 5,
+    "fixed_original_daylight_reference_latitude_degrees": 43.0,
+    "original_calendar_year_count": 2,
+    "original_private_dates_or_tag_ids_exported": false,
+    "original_source_same_fixpoint_support_replayed": true,
+    "original_source_year_month_blocks": 10,
+    "source_qualified_tagged_animals": {
+      "Odocoileus hemionus": 10,
+      "Ovis canadensis": 42
+    },
+    "source_shared_original_calendar_days": 199
+  },
+  "version": "RSDS_UTAH_TWO_NATIVE_COOOBSERVED_MONTH_CENTERED_DAYLENGTH_V1_FIRST"
+}

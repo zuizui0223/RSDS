@@ -1,0 +1,221 @@
+{
+  "Utah_new_original_MD5_verified_source_result_git_blob_sha": "4d49c376df9209f47ca99ae6c3fa5c37078d5774",
+  "all_four_studies_native_pair_month_results": [
+    {
+      "month_block_bootstrap95": [
+        -0.026448235256805428,
+        0.22888668237039497
+      ],
+      "month_slope": 0.10683011569500576,
+      "new_Utah_3_observation_schedules_available": false,
+      "nominal_source_month_sign": "INCLUDES_ZERO",
+      "original_native_pair": [
+        "Canis latrans",
+        "Lynx rufus"
+      ],
+      "original_published_study_doi": "10.5441/001/1.649",
+      "original_source_field_study": "Illinois",
+      "source_calendar_days_used": null,
+      "source_months_used": 9,
+      "source_original_year_month_blocks": 9,
+      "unadjusted_prior_pair_daylength_slope": null
+    },
+    {
+      "month_block_bootstrap95": [
+        -0.10056154782018613,
+        0.16133439515419828
+      ],
+      "month_slope": 0.022172865295733046,
+      "new_Utah_3_observation_schedules_available": false,
+      "nominal_source_month_sign": "INCLUDES_ZERO",
+      "original_native_pair": [
+        "Canis latrans",
+        "Odocoileus virginianus"
+      ],
+      "original_published_study_doi": "10.5441/001/1.649",
+      "original_source_field_study": "Illinois",
+      "source_calendar_days_used": null,
+      "source_months_used": 9,
+      "source_original_year_month_blocks": 9,
+      "unadjusted_prior_pair_daylength_slope": null
+    },
+    {
+      "month_block_bootstrap95": [
+        -0.17655237817695874,
+        -0.0010839447089603027
+      ],
+      "month_slope": -0.0846572503992727,
+      "new_Utah_3_observation_schedules_available": false,
+      "nominal_source_month_sign": "NEGATIVE",
+      "original_native_pair": [
+        "Lynx rufus",
+        "Odocoileus virginianus"
+      ],
+      "original_published_study_doi": "10.5441/001/1.649",
+      "original_source_field_study": "Illinois",
+      "source_calendar_days_used": null,
+      "source_months_used": 9,
+      "source_original_year_month_blocks": 9,
+      "unadjusted_prior_pair_daylength_slope": null
+    },
+    {
+      "month_block_bootstrap95": [
+        8.148028565263067e-05,
+        0.022899771595626655
+      ],
+      "month_slope": 0.010266184385105494,
+      "new_Utah_3_observation_schedules_available": false,
+      "nominal_source_month_sign": "POSITIVE",
+      "original_native_pair": [
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "original_published_study_doi": "10.5441/001/1.703",
+      "original_source_field_study": "Wyoming",
+      "source_calendar_days_used": null,
+      "source_months_used": 8,
+      "source_original_year_month_blocks": 8,
+      "unadjusted_prior_pair_daylength_slope": null
+    },
+    {
+      "month_block_bootstrap95": [
+        -0.056857052050926046,
+        0.04033968127483485
+      ],
+      "month_slope": -0.002646005173280591,
+      "new_Utah_3_observation_schedules_available": true,
+      "nominal_source_month_sign": "INCLUDES_ZERO",
+      "original_native_pair": [
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "original_published_study_doi": "10.5441/001/1.711",
+      "original_source_field_study": "Utah",
+      "source_calendar_days_used": 196,
+      "source_months_used": 9,
+      "source_original_year_month_blocks": 10,
+      "unadjusted_prior_pair_daylength_slope": -5.497041601395459e-05
+    },
+    {
+      "month_block_bootstrap95": [
+        -0.03022741133340843,
+        0.041609946716889404
+      ],
+      "month_slope": 0.0008682272357895166,
+      "new_Utah_3_observation_schedules_available": false,
+      "nominal_source_month_sign": "INCLUDES_ZERO",
+      "original_native_pair": [
+        "Branta leucopsis",
+        "Anser albifrons"
+      ],
+      "original_published_study_doi": "10.5441/001/1.fk899541",
+      "original_source_field_study": "Geese",
+      "source_calendar_days_used": null,
+      "source_months_used": 5,
+      "source_original_year_month_blocks": 5,
+      "unadjusted_prior_pair_daylength_slope": null
+    },
+    {
+      "month_block_bootstrap95": [
+        -0.10660402275366235,
+        0.02093302057024266
+      ],
+      "month_slope": -0.035073359377631314,
+      "new_Utah_3_observation_schedules_available": false,
+      "nominal_source_month_sign": "INCLUDES_ZERO",
+      "original_native_pair": [
+        "Branta leucopsis",
+        "Anser anser"
+      ],
+      "original_published_study_doi": "10.5441/001/1.fk899541",
+      "original_source_field_study": "Geese",
+      "source_calendar_days_used": null,
+      "source_months_used": 5,
+      "source_original_year_month_blocks": 5,
+      "unadjusted_prior_pair_daylength_slope": null
+    },
+    {
+      "month_block_bootstrap95": [
+        -0.11045604429392274,
+        -0.003916419628667224
+      ],
+      "month_slope": -0.03594158661342082,
+      "new_Utah_3_observation_schedules_available": false,
+      "nominal_source_month_sign": "NEGATIVE",
+      "original_native_pair": [
+        "Anser albifrons",
+        "Anser anser"
+      ],
+      "original_published_study_doi": "10.5441/001/1.fk899541",
+      "original_source_field_study": "Geese",
+      "source_calendar_days_used": null,
+      "source_months_used": 5,
+      "source_original_year_month_blocks": 5,
+      "unadjusted_prior_pair_daylength_slope": null
+    }
+  ],
+  "date": "2026-11-08",
+  "earlier_4_study_first_UTAH_UNTESTED_statement_UNCHANGED": true,
+  "new_Utah_month_source_pair_rows": 1,
+  "new_Utah_source_status": "UTAH_SOURCE_MONTH_CENTERED_ORIGINAL_EVALUATED",
+  "old_original_three_studies_native_pair_rows": 7,
+  "original_12_ERA5_raw_source_SHA_HOLDS_UNCHANGED": true,
+  "original_field_studies": 4,
+  "original_old_four_study_git_blob_sha": "a15bdf0a6edf9e5d632ddd2b46983af7948355b0",
+  "original_study_equal_sign_support": {
+    "Geese": {
+      "native_pair_rows": 3,
+      "original_study_doi": "10.5441/001/1.fk899541",
+      "original_study_one_unit_not_native_pair_replicates": true,
+      "source_has_any_nominal_month_slope": true,
+      "source_signed_month_direction_set": [
+        "NEGATIVE"
+      ]
+    },
+    "Illinois": {
+      "native_pair_rows": 3,
+      "original_study_doi": "10.5441/001/1.649",
+      "original_study_one_unit_not_native_pair_replicates": true,
+      "source_has_any_nominal_month_slope": true,
+      "source_signed_month_direction_set": [
+        "NEGATIVE"
+      ]
+    },
+    "Utah": {
+      "native_pair_rows": 1,
+      "original_study_doi": "10.5441/001/1.711",
+      "original_study_one_unit_not_native_pair_replicates": true,
+      "source_has_any_nominal_month_slope": false,
+      "source_signed_month_direction_set": []
+    },
+    "Wyoming": {
+      "native_pair_rows": 1,
+      "original_study_doi": "10.5441/001/1.703",
+      "original_study_one_unit_not_native_pair_replicates": true,
+      "source_has_any_nominal_month_slope": true,
+      "source_signed_month_direction_set": [
+        "POSITIVE"
+      ]
+    }
+  },
+  "original_study_native_pair_rows": 8,
+  "previous_48_source_external_signed_radiation_NONREPLICATED_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "science_ceiling": [
+    "The original Utah month contrast is a separate post-result reanalysis; old four-study result remains originally NOT_TESTED. No previous first-effect values are rewritten.",
+    "Four DOIs represent four original field studies, not eight independently sampled native taxon pairs or independent daily GPS events.",
+    "Only original within-year×calendar-month species q differences and their month-block descriptive intervals are compared. No numerical mean across differing sources/latitude/time exposure is justified.",
+    "Month adjustment cannot separate photoperiod from temperature, forage, predators, migrating behavior or other within-month seasonal co-variation.",
+    "All bootstrap95 intervals are exploratory and unadjusted for paired taxa and three source UTC schedules; only original source schedule included in four-study cross-source comparison.",
+    "Source q is observed GPS minimum straight-line NIGHT−DAY displacement proxy, not animal true activity-duration or chronotype physiology.",
+    "Original source/tag date filters, rare original Utah mule tags, available month-year blocks and GPS recording phase bias limit generalization.",
+    "Old ERA5 source raw SHA version holds, external 48 original-source signed radiation nonreplication, and any non-estimable source month effects all remain unchanged.",
+    "Original animal tag IDs, exact GPS positions, UTC times, individual effects and actual source calendar dates are never shared."
+  ],
+  "source_month_nominal_bootstrap_sign_counts": {
+    "INCLUDES_ZERO": 5,
+    "NEGATIVE": 2,
+    "POSITIVE": 1
+  },
+  "study_design": "POST_FIRST_MONTHLY_SOURCE_RESULT_ORIGINAL_4_FIELD_STUDIES",
+  "version": "RSDS_FOUR_ORIGINAL_STUDY_MONTH_CENTERED_NATIVE_DAYLIGHT_CONTRAST_V1_FIRST"
+}

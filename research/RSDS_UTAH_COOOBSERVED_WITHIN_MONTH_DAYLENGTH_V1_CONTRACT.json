@@ -1,0 +1,58 @@
+{
+  "version": "RSDS_UTAH_TWO_NATIVE_SHARED_CALENDAR_WITHIN_MONTH_DAYLENGTH_V1",
+  "freeze_date": "2026-11-08",
+  "stage": "POST_WYOMING_AND_UTAH_OBSERVATIONS_EXPLORATORY_SEASONAL_CONFOUNDING_SENSITIVITY_NOT_NEW_EXTERNAL_REPLICATION",
+  "scientific_question": "Does the same-source Utah mule-deer minus bighorn observed GPS night/day displacement difference retain an association with fixed-43N astronomical daylight duration when slopes are centered within each already selected year×calendar-month block, rather than comparing across months?",
+  "preexisting_reference": [
+    {
+      "path": "research/RSDS_UTAH_COOCCURRENT_DATES_PHOTOPERIOD_V1_FIRST_RESULT_20261029.json",
+      "git_blob_sha": "87bfaf257d5c68676342118146db5141c76ae0a0"
+    },
+    {
+      "path": "research/RSDS_FOUR_COOOBSERVED_CALENDAR_NICHE_V1_FIRST_RESULT_20261031.json",
+      "git_blob_sha": "a15bdf0a6edf9e5d632ddd2b46983af7948355b0"
+    },
+    {
+      "path": "research/RSDS_SHARED_MONTH_PHOTOPERIOD_VALIDATED_ECOLOGY_20261029.json",
+      "git_blob_sha": "ce923c3a065dfd21eed66bff902c4049a7d0bcb8"
+    }
+  ],
+  "published_study": "Movebank Utah DOI 10.5441/001/1.711 (four native taxa, two explicitly fixed target taxa Odocoileus hemionus and Ovis canadensis)",
+  "predeclared_target_taxa": [
+    "Odocoileus hemionus",
+    "Ovis canadensis"
+  ],
+  "source_sample": "The EXACT 199 already qualified coobserved solar calendar days, 2 calendar years, 10 year×month blocks, fixed 43.0 degree-N astronomical reference, 10 original mule-deer tagged animals and 42 original bighorn tagged animals, and 2 fixed-point source eligibility iterations; no new year, taxon, schedule or date searching based on response sign.",
+  "source_provenance": "Before any new month-conditioned calculation, verify original Movebank public original bitstream UUID, provider file bytes and MD5; replay all four Utah native source q and q~daylength means and original supported animal counts and both target taxa's original three UTC schedule tag-date effects to 1e−12. The original common-date q differences and original unadjusted slopes for each of 3 schedules must match frozen first source values to 1e−12.",
+  "original_schedules": [
+    "original",
+    "even",
+    "odd"
+  ],
+  "same_calendar_design": "Use previously fixed same-tag×year×date eligibility across original hourbin, even UTC 2h and odd UTC 2h, then existing Utah two-taxon iterative source coobserved-day intersection. Daywise response is the equal source tag mean on each qualifying date of q_mule - q_bighorn; q=NIGHT−DAY log1p straight-line original GPS step displacement speed, NOT active-time duration.",
+  "astronomical_exposure": "Fixed 43.0 N computed daylight hours, exactly same as previous original Utah and Wyoming shared-calendar comparisons; not direct solar radiation, not actual animal local sun exposure.",
+  "month_conditioning": {
+    "method": "Preserve previous source code original per-year×calendar-month within-block centered OLS sxy/sxx from scripts/rsds_within_month_photoperiod_shared_calendar_v1.py, no variation of cutoffs.",
+    "min_block_days": 5,
+    "min_block_daylength_range_h": 0.05,
+    "min_blocks": 5,
+    "min_total_days": 40,
+    "min_centered_sxx_h2": 0.25,
+    "bootstrap": "2000 deterministic year×month-block bootstrap replicates, 2.5-97.5 percentile and leave-one-month-block-out range; descriptive nominal CI, no causal month-adjusted treatment effect."
+  },
+  "measurements": "For each ORIGINAL/EVEN/ODD schedule, report full archived all-month same-calendar pair slope and signed bootstrap status, strict numerical replay, eligible month blocks and days, pooled within-block daylength slope, month-block bootstrap95, leave-one-month-block-out range, and classification 'PERSISTS/NOT_RESOLVED' relative to original signed interval. Never impute zero for insufficiency.",
+  "original_4_study_macro_boundary": "Four coobserved original field-study comparisons (Illinois, Wyoming, Utah, Geese) are not four independent native taxa. Existing source-only Utah month result is NOT_TESTED_WITHIN_MONTH_DO_NOT_INFER_ZERO; publish this as separate first result and later merge into comparative synthesis without modifying original source first result.",
+  "unchanged_history": {
+    "original_external_radiation": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+    "original_ERA5_raw_SHA_12_HOLDS": true,
+    "original_GPS_first_results_immutable": true
+  },
+  "claim_ceiling": [
+    "Post-outcome fixed-sample seasonal confounding diagnostic: a null-spanning month bootstrap does not prove absence of species difference.",
+    "Calendar month adjustment only removes between-month seasonal mean; daylight remains a deterministic function of date and can proxy temperature, forage, predators, weather and other within-month changes.",
+    "Source days are not independent tagged animals; 10 year-month blocks and two calendar years limit uncertainty and autocorrelation estimation.",
+    "Even and odd UTC schedules share tags/dates but use different source GPS displacement chords; the study is not a controlled animal chronotype experiment.",
+    "Only original Utah public field-study DOI, all four native source taxa preflight and two fixed comparison taxa, no new source selection or rescue.",
+    "No original GPS tagged individual IDs, exact dates/UTC times, locations, source private gridyears or per-tagged-animal effects are published."
+  ]
+}

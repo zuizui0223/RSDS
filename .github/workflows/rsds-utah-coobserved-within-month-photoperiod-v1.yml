@@ -1,0 +1,86 @@
+name: RSDS Utah original shared-calendar within-month daylight contrast v1
+on:
+  push:
+    branches:
+      - science/utah-coobserved-within-month-photoperiod-v1
+    paths:
+      - 'research/RSDS_UTAH_COOOBSERVED_WITHIN_MONTH_DAYLENGTH_V1_CONTRACT.json'
+      - 'scripts/run_rsds_utah_coobserved_within_month_daylength_v1.py'
+      - 'tests/test_rsds_utah_coobserved_within_month_daylength_v1.py'
+      - '.github/workflows/rsds-utah-coobserved-within-month-photoperiod-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  source_original_MD5_and_within_month:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science/utah-coobserved-within-month-photoperiod-v1
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install existing GPS native source data science dependencies
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Confirm original ecosystem source and earlier nonreplication have not changed
+        run: python -m scripts.verify_rsds_migration
+      - name: Synthetic within-month response, source checksum locks and old 3-schedule slope exact replay tests
+        run: |
+          python -m unittest discover -s tests -p 'test_rsds_utah_coobserved_within_month_daylength_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_within_month_photoperiod_source_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_utah_coobserved_photoperiod_v1.py' -v
+      - name: Source provider MD5 and four Utah native q/daylength replay BEFORE month-conditioned cross-species original GPS analysis
+        run: |
+          python -m scripts.run_rsds_utah_coobserved_within_month_daylength_v1 --out outputs/rsds_utah_month
+          cp outputs/rsds_utah_month/utah_shared_calendar_month_centered_v1.json research/RSDS_UTAH_COOOBSERVED_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json
+          python -m json.tool research/RSDS_UTAH_COOOBSERVED_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json > /dev/null
+      - name: Original tagged individual GPS, source geographic position and exact dates must not be emitted
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_UTAH_COOOBSERVED_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['original_study_doi']=='10.5441/001/1.711'
+          assert d['fixed_two_target_taxa']==['Odocoileus hemionus','Ovis canadensis']
+          assert len(d['all_original_native_study_taxa'])==4
+          assert d['old_ERA5_raw_JSON_12_source_HOLDS_UNCHANGED'] is True
+          assert d['old_external_48_source_negative_radiation_replication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          s=json.dumps(d)
+          for text in ('"tag_id"', '"individual_id"', '"animal_id"', '"longitude"', '"latitude"',
+                       '"timestamp"', '"UTC_observation_time"', '"original_GPS_fixes"', '"raw_gps"',
+                       '"source_grid_year"', '"calendar_date"', '"original_tag_ID"'):
+              assert text not in s, text
+          if d['status']=='UTAH_SOURCE_MONTH_CENTERED_ORIGINAL_EVALUATED':
+              assert d['provider_original_GPS_bitstream_MD5_verified'] is True
+              assert d['all_four_native_original_q_and_daylength_replayed_before_month_test'] is True
+              assert d['original_two_taxa_triple_source_GPS_replayed_before_month_test'] is True
+              assert d['strict_shared_source_date_support']['source_shared_original_calendar_days']==199
+              assert d['strict_shared_source_date_support']['original_source_year_month_blocks']==10
+              assert len(d['month_conditioned_original_pair_results'])==3
+              assert all(x['all_months_prior_source_slope_replay']=='ARCHIVED_UNADJUSTED_SLOPE_REPLAYED'
+                         for x in d['month_conditioned_original_pair_results'])
+          print('Utah original provider MD5 and 199-day source month conditional effect or explicit source HOLD validated:', d['status'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-utah-coobserved-199-calendar-date-within-month-q-daylength-source
+          path: research/RSDS_UTAH_COOOBSERVED_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json
+          if-no-files-found: error
+      - name: Commit original source-only month effect/HOLD, never source GPS tracks
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_UTAH_COOOBSERVED_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: Utah original two-native coobserved 199-day month-conditioned photoperiod comparison"
+            git fetch origin science/utah-coobserved-within-month-photoperiod-v1
+            git rebase origin/science/utah-coobserved-within-month-photoperiod-v1
+            git push origin HEAD:science/utah-coobserved-within-month-photoperiod-v1
+          fi
