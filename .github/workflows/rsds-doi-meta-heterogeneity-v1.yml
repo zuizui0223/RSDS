@@ -1,0 +1,55 @@
+name: RSDS DOI meta heterogeneity and missing source audit v1
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/rsds_doi_meta_heterogeneity_missingness_v1.py'
+      - 'tests/test_rsds_doi_meta_heterogeneity_missingness_v1.py'
+      - 'docs/RSDS_DOI_META_HETEROGENEITY_MISSINGNESS_METHOD_V1_20261114.md'
+      - '.github/workflows/rsds-doi-meta-heterogeneity-v1.yml'
+  push:
+    branches:
+      - analysis/doi-meta-heterogeneity-missingness-20261114
+    paths:
+      - 'scripts/rsds_doi_meta_heterogeneity_missingness_v1.py'
+      - 'tests/test_rsds_doi_meta_heterogeneity_missingness_v1.py'
+      - 'docs/RSDS_DOI_META_HETEROGENEITY_MISSINGNESS_METHOD_V1_20261114.md'
+      - '.github/workflows/rsds-doi-meta-heterogeneity-v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source_unit_and_meta_checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test pinned evidence, study clustering, unknown covariance and HOLD invariants
+        run: python -m unittest discover -s tests -p 'test_rsds_doi_meta_heterogeneity_missingness_v1.py' -v
+      - name: Run source-pinned meta diagnostics without original GPS access
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_doi_meta_heterogeneity_missingness_v1 --out outputs/rsds_doi_meta_heterogeneity_missingness_v1.json
+          python -m json.tool outputs/rsds_doi_meta_heterogeneity_missingness_v1.json > /dev/null
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("outputs/rsds_doi_meta_heterogeneity_missingness_v1.json").read_text())
+          assert d["original_studies"] == 12 and d["original_native_rows"] == 22
+          for field in ("q", "daylength"):
+              e=d["endpoints"][field]
+              assert e["models"]["assumed_within_DOI_rho0"]["studies"] == 9
+              assert e["missingness"]["unsupported_native_rows"] == 7
+          print("Original source and old HOLDs preserved; new methods sensitivity is not prospective replication.")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-doi-meta-heterogeneity-missingness-v1
+          path: outputs/rsds_doi_meta_heterogeneity_missingness_v1.json
+          if-no-files-found: error
