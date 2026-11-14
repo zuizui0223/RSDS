@@ -50,7 +50,7 @@ class OriginalDOIMetaAudit(unittest.TestCase):
             m.analyze(corrupted)
         corrupted = copy.deepcopy(self.input)
         corrupted["external_48_source_negative_shortwave_direction_nonreplication_UNCHANGED"] = "REPLICATED"
-        with self.assertRaisesRegex(ValueError, "nonreplication"):
+        with self.assertRaisesRegex(ValueError, "negative replication or weather HOLD"):
             m.analyze(corrupted)
 
     def test_duplicate_pseudoreplication_is_blocked(self):
