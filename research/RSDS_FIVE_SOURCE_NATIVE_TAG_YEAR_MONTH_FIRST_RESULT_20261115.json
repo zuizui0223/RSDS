@@ -73,8 +73,38 @@
       "within_tag_year_month_local_vs_old_full_slope": "UNRESOLVED_OR_UNAVAILABLE"
     },
     {
-      "fixed_lat_month_robustness_vs_local": "UNRESOLVED_OR_UNAVAILABLE",
-      "month_native": null,
+      "fixed_lat_month_robustness_vs_local": "BOTH_NOMINAL_MATCHING",
+      "month_native": {
+        "fixed_source_reference_latitude_daylength": {
+          "mean_slope_per_hour": 0.0031214548053066483,
+          "nominal_interval_sign": "POSITIVE",
+          "original_tag_bootstrap95": [
+            0.0016959060974964728,
+            0.004503009804420747
+          ],
+          "status": "ESTIMABLE",
+          "tagged_animals_support": 1647
+        },
+        "local_original_solar_daylength": {
+          "mean_slope_per_hour": 0.003151813474043279,
+          "nominal_interval_sign": "POSITIVE",
+          "original_tag_bootstrap95": [
+            0.0017766152785337593,
+            0.004565200394373042
+          ],
+          "status": "ESTIMABLE",
+          "tagged_animals_support": 1647
+        },
+        "minimum_admitted_tag_year_centered_daylength_Sxx_hours2": 0.1919293098180027,
+        "original_animal_identifiers_and_daily_records_not_exported": true,
+        "original_same_1hour_selected_source_qualified_days": 249608,
+        "original_selected_fix_count": 3230579,
+        "original_tag_years_with_year_month_conditioned_slope": 2198,
+        "original_tagged_animals_with_year_month_conditions": 1647,
+        "source_accepted_tag_month_blocks": 10048,
+        "source_accepted_tag_solar_dates_count_not_independent": 247346,
+        "source_reference_latitude_not_exported": true
+      },
       "original_DOI": "10.5441/001/1.711",
       "original_registered_source_species": [
         "Antilocapra americana",
@@ -105,15 +135,15 @@
         ]
       },
       "previous_original_GPS_exposure_state": "PRIOR_ORIGINAL_GPS_READ",
-      "source_first_result_baseline_replayed": false,
-      "source_gps_status": "SOURCE_HOLD",
-      "source_hold_stage": "ORIGINAL_PRIVATE_NATIVE_GPS_AND_FULL_SOURCE_BASELINE_REPLAY",
-      "source_hold_type": "StrictSourceHold",
+      "source_first_result_baseline_replayed": true,
+      "source_gps_status": "MONTH_NATIVE_ESTIMABLE",
+      "source_hold_stage": null,
+      "source_hold_type": null,
       "source_index": 1,
       "source_key": "mule_old_utah",
       "source_native_species": "Odocoileus hemionus",
       "source_original_MD5_verified": true,
-      "within_tag_year_month_local_vs_old_full_slope": "UNRESOLVED_OR_UNAVAILABLE"
+      "within_tag_year_month_local_vs_old_full_slope": "SAME_NOMINAL_SOURCE_SIGN"
     },
     {
       "fixed_lat_month_robustness_vs_local": "BOTH_NOMINAL_MATCHING",
@@ -356,17 +386,17 @@
       "distinct_tagged_populations_confirmed": false,
       "month_native_nominal_includes_zero_source_count": 1,
       "month_native_nominal_negative_source_count": 0,
-      "month_native_nominal_positive_source_count": 1,
+      "month_native_nominal_positive_source_count": 2,
       "month_native_source_signs": {
         "mule_new_sublette": "INCLUDES_ZERO",
+        "mule_old_utah": "POSITIVE",
         "mule_old_wyoming": "POSITIVE"
       },
-      "months_estimated_source_studies": 2
+      "months_estimated_source_studies": 3
     }
   },
   "source_status_count": {
-    "MONTH_NATIVE_ESTIMABLE": 4,
-    "SOURCE_HOLD": 1
+    "MONTH_NATIVE_ESTIMABLE": 5
   },
   "source_tag_year_month_demeaning_not_a_season_treatment": true,
   "stage": "POSTHOC_FIVE_SOURCE_TAG_YEAR_MONTH_CONDITIONED_OBSERVATIONAL_SENSITIVITY",
