@@ -1,0 +1,78 @@
+name: RSDS freeze source-GPS observation funnel first original artifact
+on:
+  push:
+    branches:
+      - analysis/rsds-source-gps-observation-funnel-20261115
+    paths:
+      - '.github/workflows/rsds-35-freeze-observation-funnel-first-v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  preserve_first_original_35_source_filter_census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download original successful 35-source aggregate, no new GPS
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 43697404274
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          name: rsds-original-35-source-time-solar-speed-observation-gate-first-atlas-v1
+          path: outputs/first_original
+      - name: Verify JSON byte identity, original source sample, all q HOLDs and native support
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp outputs/first_original/rsds_35_original_gps_observation_gate_first_v1.json research/RSDS_35_ORIGINAL_SOURCE_GPS_OBSERVATION_GATE_FIRST_RESULT_20261115.json
+          echo "e7c923ad331c8b7c5a8cdfb1dc11d3f510961ce2d145d79c3c0b4c0d16ae8acf  research/RSDS_35_ORIGINAL_SOURCE_GPS_OBSERVATION_GATE_FIRST_RESULT_20261115.json" | sha256sum -c -
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('research/RSDS_35_ORIGINAL_SOURCE_GPS_OBSERVATION_GATE_FIRST_RESULT_20261115.json').read_text())
+          assert d['original_public_Movebank_source_frame']==[437,259,120,35]
+          assert d['original_source_funnel_replayed']==25
+          assert d['source_original_registered_native_rows']==50
+          assert d['original_source_diagnostic_status_counts']=={
+            'ARCHIVED_ORIGINAL_SOURCE_HOLD_UNCHANGED':9,
+            'HUMAN_LOCATION_PRIVACY_HOLD_NO_ACCESS':1,
+            'REPLAYED_ARCHIVED_NATIVE_GPS_WITH_OBSERVATION_FUNNEL':25
+          }
+          assert d['first_source_study_q_complete']==10
+          assert d['first_source_study_daylength_complete']==8
+          assert d['original_human_GPS_source_opened'] is False
+          assert d['original_48_solar_negative_external_NONREPLICATION_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          assert d['old_12_ERA5_raw_source_versions_HOLD_UNCHANGED']
+          a=d['original_per_fix_gate_census_NESTED_but_NOT_independent_samples']
+          assert a['original_adjacent_source_fix_intervals']==1502093
+          assert a['accepted_original_0p5_to_2h_time_intervals']==1218362
+          assert a['accepted_same_solar_date_and_daypart_intervals']==1068433
+          assert a['accepted_finite_speed_max60kmh_intervals']==1066632
+          print('ORIGINAL_35_SOURCE_GPS_TIME_SOLAR_SPEED_STAGE_RECEIPT_SHA_LOCKED')
+          PY
+      - name: Commit only source/native aggregate counts and original HOlDs, not telemetry
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_35_ORIGINAL_SOURCE_GPS_OBSERVATION_GATE_FIRST_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze original GPS 35-study time/solar/velocity eligibility census by artifact SHA"
+            git fetch origin analysis/rsds-source-gps-observation-funnel-20261115
+            git rebase origin/rsds-source-gps-observation-funnel-20261115 || {
+              git rebase --abort
+              git fetch origin analysis/rsds-source-gps-observation-funnel-20261115
+              git rebase origin/analysis/rsds-source-gps-observation-funnel-20261115
+            }
+            git push origin HEAD:analysis/rsds-source-gps-observation-funnel-20261115
+          fi
