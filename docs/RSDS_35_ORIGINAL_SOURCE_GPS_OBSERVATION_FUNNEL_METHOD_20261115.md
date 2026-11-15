@@ -172,6 +172,44 @@ was NOT REPLICATED**, and the older 12 source raw ERA5 checks remain
 **HOLD**. None of those original scientific classifications may be
 promoted by this source-technical diagnostic.
 
+## First individually replayed original-data examples (not new q endpoints)
+
+The following original source groups have already passed provider MD5/native
+q support numerical replay in this diagnostic's
+[original GPS Actions run](https://github.com/zuizui0223/RSDS/actions/runs/43697404274).
+The counts are **movement intervals nested inside source tags**, not
+independent biological study replicates.
+
+| Original native group | Adjacent selected-fix intervals | 0.5–2h accepted | Same solar date/daypart | <=60km/h accepted | >=10 paired-days supported original tags |
+|---|---:|---:|---:|---:|---:|
+| *Capra hircus* | 30,233 | 26,562 | 20,539 | 20,539 | **12 of 13** |
+| *Aquila nipalensis* | 137,934 | 123,888 | 113,631 | 112,847 | **2 of 21** |
+
+For *A. nipalensis* 112,847 intervals (81.8% of source adjacent
+pairs) pass all three interval-level gates, yet just two original
+independent tags satisfy the ≥10 paired DAY/NIGHT days in at
+least one year, below the prespecified five-tag native estimability
+threshold. Therefore its previously frozen q remains **UNAVAILABLE**,
+not positive, negative, or zero. The q for *C. hircus* remains
+estimable. This is a direct demonstration of why effective source
+**tag/year opportunity**, rather than total GPS fix volume or
+interval-level gate fraction, is the relevant inferential bottleneck.
+
+Similarly, in a co-registered two-turtle original source,
+*Eretmochelys imbricata* has 21 eligible original tags while
+*Chelonia mydas* has only two originally tracked tagged animals.
+The complete-original-study multi-native q remains unavailable.
+Dropping *C. mydas* and treating the other as an independent source
+would change the registered source comparison estimand.
+
+As a further caution, the admitted *Capra* hourly series has **100%
+of hour-selected fixes at even UTC hours**, whereas the unsupported
+*Aquila* series is roughly evenly divided (49.7% even). Hence simple
+even/odd UTC duty-cycle imbalance is **neither a necessary nor
+sufficient explanation of q measurability**. The staged tag/day
+support is what must be checked. These are post-outcome selected
+case illustrations; not controlled species/taxonomic contrasts.
+
 ## Next interpretable source model
 
 Only after the source-native technical funnel is externally verified
