@@ -1,0 +1,72 @@
+name: RSDS freeze first 35-source GPS observation-gate result by original SHA
+on:
+  push:
+    branches:
+      - analysis/rsds-source-gps-observation-funnel-20261115
+    paths:
+      - '.github/workflows/rsds-35-freeze-first-observation-funnel-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  pin_original_first_source_gate_atlas_without_reopening_GPS:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Retrieve first successful original GPS 35-source aggregate, not raw tracks
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 43697404274
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          name: rsds-original-35-source-time-solar-speed-observation-gate-first-atlas-v1
+          path: outputs/first_35_source_audit
+      - name: Lock original source result JSON exact SHA and prior HOLDs
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp outputs/first_35_source_audit/rsds_35_original_gps_observation_gate_first_v1.json research/RSDS_35_SOURCE_GPS_OBSERVATION_FUNNEL_FIRST_RESULT_20261115.json
+          echo "e7c923ad331c8b7c5a8cdfb1dc11d3f510961ce2d145d79c3c0b4c0d16ae8acf  research/RSDS_35_SOURCE_GPS_OBSERVATION_FUNNEL_FIRST_RESULT_20261115.json" | sha256sum -c -
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path("research/RSDS_35_SOURCE_GPS_OBSERVATION_FUNNEL_FIRST_RESULT_20261115.json").read_text())
+          assert x["original_public_Movebank_source_frame"]==[437,259,120,35]
+          assert x["source_original_registered_native_rows"]==50
+          assert len(x["individual_original_source_diagnostic_rows"])==35
+          assert len(x["original_native_aggregate_metric_rows"])==34
+          assert x["original_source_diagnostic_status_counts"]=={
+              "ARCHIVED_ORIGINAL_SOURCE_HOLD_UNCHANGED":9,
+              "HUMAN_LOCATION_PRIVACY_HOLD_NO_ACCESS":1,
+              "REPLAYED_ARCHIVED_NATIVE_GPS_WITH_OBSERVATION_FUNNEL":25}
+          assert x["first_source_study_q_complete"]==10
+          assert x["first_source_study_daylength_complete"]==8
+          assert not x["original_human_GPS_source_opened"]
+          assert x["original_48_solar_negative_external_NONREPLICATION_UNCHANGED"]=="NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
+          assert x["old_12_ERA5_raw_source_versions_HOLD_UNCHANGED"] is True
+          counts=x["original_per_fix_gate_census_NESTED_but_NOT_independent_samples"]
+          assert [counts[k] for k in ("original_adjacent_source_fix_intervals",
+                "accepted_original_0p5_to_2h_time_intervals",
+                "accepted_same_solar_date_and_daypart_intervals",
+                "accepted_finite_speed_max60kmh_intervals")]==[1502093,1218362,1068433,1066632]
+          print("ORIGINAL_FIRST_35_SOURCE_OBSERVATION_GATE_BLOB_SHA_VALIDATED")
+          PY
+      - name: Commit immutable first original source observation audit (no GPS records)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_35_SOURCE_GPS_OBSERVATION_FUNNEL_FIRST_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: pin 35 original GPS source observation-gate first atlas and all scientific HOLDS"
+            git fetch origin analysis/rsds-source-gps-observation-funnel-20261115
+            git rebase origin/analysis/rsds-source-gps-observation-funnel-20261115
+            git push origin HEAD:analysis/rsds-source-gps-observation-funnel-20261115
+          fi
