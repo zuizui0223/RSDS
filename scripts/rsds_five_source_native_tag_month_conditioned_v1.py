@@ -20,6 +20,7 @@ from scripts.movebank_native_ecology_20261019 import (
     original_files, checksum_and_download, daylength
 )
 from scripts.global_solar_azimuth_12_new_original_events_v1 import load_source_taxa
+from scripts.movebank_utah_four_taxa_solar_20261019 import extract_time_only_original_source
 from scripts.movebank_utah_diel_photoperiod_20261019 import one_taxon
 from scripts.run_rsds_eight_study_gps_cadence_v1 import per_tag_year_days
 from scripts.run_rsds_four_new_multinative_original_gps_temporal_v1 import source_reference_latitude
@@ -258,10 +259,22 @@ def process(index):
                 raise ValueError("Original provider file checksum failure")
             output["original_file_MD5_bytes_verified"]=True
             stage="ORIGINAL_PRIVATE_NATIVE_GPS_AND_FULL_SOURCE_BASELINE_REPLAY"
-            tracks,coverage,record=load_source_taxa(
-                fpath,md["filename"],s["registered_taxa"]
-            )
-            output["source_original_animal_GPS_rows_read_only_ephemerally"]=record["original_total_rows"]
+            if s["source_key"]=="mule_old_utah":
+                # Reuse the source-locked prior Utah ZIP/native CSV reader.
+                # This changes ONLY input decoding, never source MD5 or q gates.
+                tracks,counts,nonmatching=extract_time_only_original_source(
+                    fpath,s["registered_taxa"])
+                coverage={t:{"original_taxon_rows":counts[t]["rows"]}
+                          for t in s["registered_taxa"]}
+                original_rows=sum(x["rows"] for x in counts.values())+nonmatching
+                output["original_parser_used"]="PRIOR_UTAH_SOURCE_ZIP_NATIVE_READER"
+            else:
+                tracks,coverage,record=load_source_taxa(
+                    fpath,md["filename"],s["registered_taxa"]
+                )
+                original_rows=record["original_total_rows"]
+                output["original_parser_used"]="FROZEN_GENERAL_NATIVE_CSV_READER"
+            output["source_original_animal_GPS_rows_read_only_ephemerally"]=original_rows
             output["original_registered_native_taxa_found"]={
                 t:coverage[t]["original_taxon_rows"]>0 for t in s["registered_taxa"]
             }
