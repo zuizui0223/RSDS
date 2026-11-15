@@ -242,8 +242,9 @@ def main():
     p.add_argument("--out",type=Path,required=True)
     a=p.parse_args()
     rows=[
-        json.loads((a.directory/("wave1" if i<16 else "wave2")/
-           ("source_%02d.json"%(i if i<16 else i-16))).read_text(encoding="utf-8"))
+        json.loads((a.directory/("%s_source_%02d.json" % (
+           "wave1" if i<16 else "wave2",
+           i if i<16 else i-16))).read_text(encoding="utf-8"))
         for i in range(35)
     ]
     result=summarize(rows)
