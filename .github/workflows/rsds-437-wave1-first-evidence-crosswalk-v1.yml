@@ -1,0 +1,41 @@
+name: RSDS wave1 original 437-source scientific evidence crosswalk v1
+on:
+  push:
+    branches:
+      - analysis/rsds-437-source-frame-wave1-20261115
+    paths:
+      - 'research/RSDS_437_WAVE1_METHOD_EVIDENCE_CROSSWALK_V1.json'
+      - 'tests/test_rsds_437_wave1_first_evidence_v1.py'
+      - '.github/workflows/rsds-437-wave1-first-evidence-crosswalk-v1.yml'
+  pull_request:
+    paths:
+      - 'research/RSDS_437_WAVE1_METHOD_EVIDENCE_CROSSWALK_V1.json'
+      - 'tests/test_rsds_437_wave1_first_evidence_v1.py'
+      - '.github/workflows/rsds-437-wave1-first-evidence-crosswalk-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pin_first_original_results_and_HOLDS:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check original Git source blobs, source denominator 16 and all native outcomes 27 unchanged
+        run: python -m unittest discover -s tests -p 'test_rsds_437_wave1_first_evidence_v1.py' -v
+      - name: Verify old solar negative and original weather HOLDs unchanged
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('research/RSDS_437_WAVE1_METHOD_EVIDENCE_CROSSWALK_V1.json').read_text())
+          assert d["historical_external_48_signed_radiation_nonreplication"] == "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
+          assert d["historical_12_original_ERA5_raw_HOLD"] is True
+          assert d["exact_denominators"]["source_full_native_q_supported"] == 4
+          assert d["exact_denominators"]["joint_multi_native_month_covariance_supported"] == 0
+          print('Original 437->259->120->16 source accounting, native q HOLDS and previous scientific null boundaries preserved')
+          PY
