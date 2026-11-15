@@ -1,0 +1,62 @@
+name: RSDS six same-species follow-up original provider MD5 metadata preflight
+on:
+  push:
+    branches:
+      - analysis/rsds-six-followup-file-metadata-20261115
+    paths:
+      - 'scripts/rsds_six_followup_original_file_metadata_v1.py'
+      - 'tests/test_rsds_six_followup_original_file_metadata_v1.py'
+      - '.github/workflows/rsds-six-followup-original-file-metadata-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  six_original_source_file_inventory_without_new_GPS:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test frozen source identities, no old-source rescue and no GPS
+        run: |
+          python -m unittest discover -s tests -p 'test_rsds_six_followup_original_file_metadata_v1.py' -v
+      - name: Query only original provider file metadata for five non-HOLD source IDs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_six_followup_original_file_metadata_v1 --out research/RSDS_SIX_FOLLOWUP_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('research/RSDS_SIX_FOLLOWUP_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json').read_text())
+          assert d['original_followup_source_study_slots']==6
+          assert len(d['original_source_metadata_rows'])==6
+          assert sum(d['source_original_metadata_status_counts'].values())==6
+          assert d['prior_mallard_source_metadata_HOLD_preserved']
+          assert d['prior_fox_original_GPS_read_known']
+          assert d['all_new_original_animal_GPS_events_opened']==0
+          assert d['target_selected_after_63_archive_q_outcomes']
+          print('ORIGINAL_SIX_FILES_MD5_SOURCE_ONLY_NO_GPS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-six-followup-source-original-file-metadata-before-gps-v1
+          path: research/RSDS_SIX_FOLLOWUP_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json
+          if-no-files-found: error
+      - name: Commit immutable original file MD5/size and old HOLD before follow-up q
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_SIX_FOLLOWUP_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze six follow-up original file MD5/bytes and prior-source HOLD"
+            git fetch origin analysis/rsds-six-followup-file-metadata-20261115
+            git rebase origin/analysis/rsds-six-followup-file-metadata-20261115
+            git push origin HEAD:analysis/rsds-six-followup-file-metadata-20261115
+          fi

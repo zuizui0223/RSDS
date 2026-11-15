@@ -1,0 +1,167 @@
+{
+  "all_new_original_animal_GPS_events_opened": 0,
+  "frozen_prior_exposure_git_blob": "51c078c0fc9f1353de4042ec3befdb3aa7b97f35",
+  "frozen_six_source_only_identity_git_blob": "1315b435c40b59831a643e35e9b7f9063879673b",
+  "not_global_world_animal_population_sample": true,
+  "old_12_ERA5_raw_SHA_HOLD": true,
+  "old_48_source_solar_signed_direction_replicated": false,
+  "original_followup_source_study_slots": 6,
+  "original_source_metadata_rows": [
+    {
+      "original_GPS_events_opened": 0,
+      "original_file": {
+        "bitstream_uuid": "acbda7da-0a9c-4fbb-b2f4-28f0fb89c046",
+        "bytes": 26948795,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "d501fdc3d2815badf9a43e7788116b80"
+        },
+        "filename": "Pannonic population tracks of greater white-fronted geese 2013-2017 (data from Kölzsch et al. 2019).csv"
+      },
+      "original_public_package_uuid": "08b6b850-df1f-4740-b05e-acb1a654934b",
+      "original_repository_study_id": "657965212",
+      "original_source_DOI": "10.5441/001/1.46b0mq21",
+      "prior_original_source_exposure_status": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "provider_original_file_list_newly_queried": true,
+      "registered_original_native_labels": [
+        "Anser albifrons"
+      ],
+      "source_metadata_hold_reason": null,
+      "source_metadata_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "source_original_file_candidates_after_filename_rules": 1,
+      "source_original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "target_original_native_labels": [
+        "Anser albifrons"
+      ]
+    },
+    {
+      "original_GPS_events_opened": 0,
+      "original_file": {
+        "bitstream_uuid": "de7b956a-f5b6-4727-a2cc-a119a1217a68",
+        "bytes": 134497843,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "a8563f71fa6213919812dc0f2da30c26"
+        },
+        "filename": "Wyoming Sublette Mule Deer (2018-2020).csv"
+      },
+      "original_public_package_uuid": "0e3a4577-b063-47d9-9d6b-edec949aa5fa",
+      "original_repository_study_id": "2549043743",
+      "original_source_DOI": "10.5441/001/1.708",
+      "prior_original_source_exposure_status": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "provider_original_file_list_newly_queried": true,
+      "registered_original_native_labels": [
+        "Odocoileus hemionus"
+      ],
+      "source_metadata_hold_reason": null,
+      "source_metadata_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "source_original_file_candidates_after_filename_rules": 1,
+      "source_original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "target_original_native_labels": [
+        "Odocoileus hemionus"
+      ]
+    },
+    {
+      "original_GPS_events_opened": 0,
+      "original_file": {
+        "bitstream_uuid": "b0242300-1945-42fc-adb2-546a4099d17e",
+        "bytes": 16891048,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "a941da2dd375fbaf8d22db0734ee029b"
+        },
+        "filename": "Red Fox (Vulpes vulpes) - Scotia NSW Australia.csv"
+      },
+      "original_public_package_uuid": "28708a9c-5582-490e-9481-c094bdce74c2",
+      "original_repository_study_id": "444539014",
+      "original_source_DOI": "10.5441/001/1.72hh609t",
+      "prior_original_source_exposure_status": "KNOWN_PREVIOUS_ORIGINAL_GPS_DATA_ANALYZED_FOR_SOLAR_DIRECTION",
+      "provider_original_file_list_newly_queried": true,
+      "registered_original_native_labels": [
+        "Vulpes vulpes"
+      ],
+      "source_metadata_hold_reason": null,
+      "source_metadata_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "source_original_file_candidates_after_filename_rules": 1,
+      "source_original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "target_original_native_labels": [
+        "Vulpes vulpes"
+      ]
+    },
+    {
+      "original_GPS_events_opened": 0,
+      "original_file": null,
+      "original_public_package_uuid": "316cff40-b957-4ad6-9ca5-0f50253ab56a",
+      "original_repository_study_id": "11017705",
+      "original_source_DOI": "10.5441/001/1.8dc0v84m",
+      "prior_original_source_exposure_status": "KNOWN_PREVIOUS_SOURCE_METADATA_HOLD_NO_GPS_FROM_THAT_ROUTE",
+      "provider_original_file_list_newly_queried": false,
+      "registered_original_native_labels": [
+        "Anas platyrhynchos"
+      ],
+      "source_metadata_hold_reason": "PRIOR_ORIGINAL_SOLAR_SOURCE_FILE_AMBIGUITY_HOLD_NOT_REOPENED",
+      "source_metadata_status": "PREVIOUS_SOURCE_METADATA_HOLD_PRESERVED",
+      "target_original_native_labels": [
+        "Anas platyrhynchos"
+      ]
+    },
+    {
+      "original_GPS_events_opened": 0,
+      "original_file": null,
+      "original_public_package_uuid": "2e9dace9-88e3-4504-9b5a-08954861c5c2",
+      "original_repository_study_id": "1049685237",
+      "original_source_DOI": "10.5441/001/1.ms87s2m6",
+      "prior_original_source_exposure_status": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "provider_original_file_list_newly_queried": true,
+      "registered_original_native_labels": [
+        "Anser albifrons"
+      ],
+      "source_metadata_hold_reason": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_metadata_status": "SOURCE_METADATA_HOLD",
+      "source_original_file_candidates_after_filename_rules": 1,
+      "source_original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "target_original_native_labels": [
+        "Anser albifrons"
+      ]
+    },
+    {
+      "original_GPS_events_opened": 0,
+      "original_file": {
+        "bitstream_uuid": "deda6bce-db1e-4f0d-af1f-058dbfcaf83b",
+        "bytes": 6665068,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "c0d9d53e9fcfd0ff0559d4b1804ddf83"
+        },
+        "filename": "Migration timing in barnacle geese (Barents Sea) (data from Kölzsch et al. and Shariatinajafabadi et al. 2014).csv"
+      },
+      "original_public_package_uuid": "181634a2-46d3-4405-bba5-7813602ea965",
+      "original_repository_study_id": "29799425",
+      "original_source_DOI": "10.5441/001/1.ps244r11",
+      "prior_original_source_exposure_status": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "provider_original_file_list_newly_queried": true,
+      "registered_original_native_labels": [
+        "Branta leucopsis"
+      ],
+      "source_metadata_hold_reason": null,
+      "source_metadata_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "source_original_file_candidates_after_filename_rules": 1,
+      "source_original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "target_original_native_labels": [
+        "Branta leucopsis"
+      ]
+    }
+  ],
+  "previous_original_source_GPS_analysis_from_solar_48_unverified_nonexhaustive": true,
+  "prior_fox_original_GPS_read_known": true,
+  "prior_mallard_source_metadata_HOLD_preserved": true,
+  "prior_original_source_study_ID_exclusions": 63,
+  "source_original_metadata_status_counts": {
+    "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE": 4,
+    "PREVIOUS_SOURCE_METADATA_HOLD_PRESERVED": 1,
+    "SOURCE_METADATA_HOLD": 1
+  },
+  "stage": "AFTER_ALL_SIX_SOURCE_ID_EXPOSURE_FROZEN_BEFORE_TARGET_ORIGINAL_GPS_EVENTS",
+  "target_selected_after_63_archive_q_outcomes": true,
+  "version": "RSDS_SIX_FOLLOWUP_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1"
+}
