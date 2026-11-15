@@ -77,8 +77,9 @@ def meta_snapshot(first):
                 if (f["n_individuals"]<5
                     or not math.isfinite(f["mean"])
                     or len(f["animal_bootstrap_95_percentile"])!=2
-                    or not f["animal_bootstrap_95_percentile"][0] <=
-                           f["mean"] <= f["animal_bootstrap_95_percentile"][1]):
+                    or not all(math.isfinite(x) for x in f["animal_bootstrap_95_percentile"])
+                    or f["animal_bootstrap_95_percentile"][0]>
+                       f["animal_bootstrap_95_percentile"][1]):
                     raise ValueError("Invalid native original tagged animal group effect")
             if v["q"] is not None:
                 q.append(v["q"]["mean"])
