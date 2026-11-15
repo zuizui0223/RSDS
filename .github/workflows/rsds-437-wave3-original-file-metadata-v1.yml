@@ -1,0 +1,65 @@
+name: RSDS Wave3 original provider file MD5 metadata freeze before GPS
+on:
+  push:
+    branches:
+      - analysis/rsds-wave3-original-file-metadata-20261115
+    paths:
+      - 'scripts/rsds_437_wave3_original_file_metadata_v1.py'
+      - 'tests/test_rsds_437_wave3_original_file_metadata_v1.py'
+      - '.github/workflows/rsds-437-wave3-original-file-metadata-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_provider_file_list_md5_bytes_only_before_animal_events:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test frozen source identity, source-specific HOLD and no human-location access
+        run: |
+          python -m unittest discover -s tests -p 'test_rsds_437_wave3_metadata_only_rank_continuation_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_437_wave3_original_file_metadata_v1.py' -v
+      - name: Query ORIGINAL bundle file metadata for sixteen frozen studies, not animal GPS
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_437_wave3_original_file_metadata_v1 --out research/RSDS_437_WAVE3_16_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_437_WAVE3_16_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json')
+          d=json.loads(p.read_text())
+          assert d['source_study_slots']==16
+          assert len(d['source_rows'])==16
+          assert [r['original_single_native_source_rank_1_based'] for r in d['source_rows']]==list(range(25,41))
+          assert sum(d['source_status_counts'].values())==16
+          assert d['all_new_wave3_animal_GPS_events_opened']==0
+          assert d['human_GPS_or_position_data_retrieved'] is False
+          assert d['provider_file_metadata_only'] is True
+          assert d['original_48_source_radiation_negative_external_replication_UNCHANGED']=='NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE'
+          print('WAVE3_SOURCE_FILE_UUID_MD5_BYTES_ONLY_GPS_EVENTS_ZERO')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-wave3-sixteen-original-provider-file-metadata-before-gps-v1
+          path: research/RSDS_437_WAVE3_16_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json
+          if-no-files-found: error
+      - name: Commit original source-file metadata before permitting any future GPS source workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_437_WAVE3_16_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze wave3 original provider MD5/size and source HOLDs before GPS"
+            git fetch origin analysis/rsds-wave3-original-file-metadata-20261115
+            git rebase origin/analysis/rsds-wave3-original-file-metadata-20261115
+            git push origin HEAD:analysis/rsds-wave3-original-file-metadata-20261115
+          fi
