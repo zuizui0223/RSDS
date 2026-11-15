@@ -1,0 +1,646 @@
+{
+  "descriptive_only_no_biological_world_prevalence_or_causal_claim": true,
+  "first_artifact_digest_roster": [
+    {
+      "artifact_id": 14156893067,
+      "digest": "sha256:3156416f33060fc2f7df1758f44f4c27a16b5db5d96bac116dabc810b790914b",
+      "name": "rsds-wave3-original-gps-study-0-v1"
+    },
+    {
+      "artifact_id": 14156642743,
+      "digest": "sha256:7ff20edf39c268f7d9d2b8c4bbeee69d1e28ade172123629a5c2f440b52f50c4",
+      "name": "rsds-wave3-original-gps-study-1-v1"
+    },
+    {
+      "artifact_id": 14156908109,
+      "digest": "sha256:a51e24ddec335b7bd95f1403cc509df0a15477eef578211b0be1af1b65152799",
+      "name": "rsds-wave3-original-gps-study-2-v1"
+    },
+    {
+      "artifact_id": 14157237103,
+      "digest": "sha256:7f4207265b251bba70a6f1344ea86ed67e41849d416731903431a03f48ef8654",
+      "name": "rsds-wave3-original-gps-study-3-v1"
+    },
+    {
+      "artifact_id": 14156697528,
+      "digest": "sha256:b4fb75646228b25fa36723e9ec88d6a79b46796fa9ac194044aaa5c1d53e5776",
+      "name": "rsds-wave3-original-gps-study-4-v1"
+    },
+    {
+      "artifact_id": 14156478399,
+      "digest": "sha256:e1924d4106a58b082f8d9a08b89730361fb64650d6fd6c477278164ba1baca3e",
+      "name": "rsds-wave3-original-gps-study-5-v1"
+    },
+    {
+      "artifact_id": 14156977886,
+      "digest": "sha256:482fd7cba70c9d29f446ec7e8885ef2cd1f87fcbc58fa90b458e9e79c074d1dc",
+      "name": "rsds-wave3-original-gps-study-6-v1"
+    },
+    {
+      "artifact_id": 14157460183,
+      "digest": "sha256:695804415664d0107d7d56626b12ccf0273b14474d97254aaab3497aab7d561b",
+      "name": "rsds-wave3-original-gps-study-7-v1"
+    },
+    {
+      "artifact_id": 14156657822,
+      "digest": "sha256:f6bade9464f79e63e34136db7bb091535f5ffa45ccf4012c4333d0f846b9b8cc",
+      "name": "rsds-wave3-original-gps-study-8-v1"
+    },
+    {
+      "artifact_id": 14156239237,
+      "digest": "sha256:b796bf51a82353a49c6e3607f3ffa3ded90d2ca7bf7f236d0e2e46b70925b21f",
+      "name": "rsds-wave3-original-gps-study-9-v1"
+    },
+    {
+      "artifact_id": 14156977949,
+      "digest": "sha256:2eb73df6d67b7e88f61831801442f55a1b08f273a6c07a6f26559a510ec212e2",
+      "name": "rsds-wave3-original-gps-study-10-v1"
+    },
+    {
+      "artifact_id": 14157415891,
+      "digest": "sha256:fc1bedd9f4936586aa0557aeb1c47a0892ab8e4c74bcc8906940175edd9f46bf",
+      "name": "rsds-wave3-original-gps-study-11-v1"
+    },
+    {
+      "artifact_id": 14156778786,
+      "digest": "sha256:13cd9d243da84072e70f364a5ed181f0339c69800e243259f38b473e740a594c",
+      "name": "rsds-wave3-original-gps-study-12-v1"
+    },
+    {
+      "artifact_id": 14157162511,
+      "digest": "sha256:5630949278c4c53b17e56d63b7aca2bd1423bf45e30cccd071cc910c35727286",
+      "name": "rsds-wave3-original-gps-study-13-v1"
+    },
+    {
+      "artifact_id": 14156928173,
+      "digest": "sha256:0f03ccb5836e6f433c407b4534bca289bf9959c1656e5b005947cb30713d44e5",
+      "name": "rsds-wave3-original-gps-study-14-v1"
+    },
+    {
+      "artifact_id": 14156529992,
+      "digest": "sha256:dfd20dce66cd2307b73b1cb906182b7bb77432a81a4c4ed74779b5096c7d0c69",
+      "name": "rsds-wave3-original-gps-study-15-v1"
+    }
+  ],
+  "first_combined_meta_artifact_receipt": {
+    "artifact_id": 14157137676,
+    "digest": "sha256:1ecfffcea073728de7be51f0c5a265be6c0b1173d2b59335422f2cc743aa42c1",
+    "name": "rsds-wave3-plus-old-35-original-source-51-meta-first-v1"
+  },
+  "first_source_run_id": 43702456789,
+  "limitations": [
+    "Original animal bootstrap 95% intervals describe each source only and have no source-selection/missingness or multiple-testing correction.",
+    "Wave3 quota selected after observing Wave1 and Wave2 data; this is explicitly post-first-outcome exploratory analysis.",
+    "Observations are straight-line step displacements, not time spent active or causal sunlight avoidance.",
+    "Source 51 studies / 16 new selection is not a probability-sample world ecosystem, and managed/domestic source domains may remain."
+  ],
+  "native_original_daylength_respondents": 4,
+  "native_original_q_respondents": 6,
+  "new_16_source_original_native_ci_and_support_rows": [
+    {
+      "both_q_and_daylength_available": false,
+      "native_daylength": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "native_q": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "original_file_MD5_verified": true,
+      "original_registered_native_taxa": [
+        "Sus scrofa"
+      ],
+      "original_repository_study_id": "3006923937",
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "q_daylength_point_signs_differ": null,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.672"
+      ],
+      "wave3_index": 0
+    },
+    {
+      "both_q_and_daylength_available": false,
+      "native_daylength": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "native_q": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "original_file_MD5_verified": true,
+      "original_registered_native_taxa": [
+        "Creagrus furcatus"
+      ],
+      "original_repository_study_id": "2989306200",
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "q_daylength_point_signs_differ": null,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.605"
+      ],
+      "wave3_index": 1
+    },
+    {
+      "both_q_and_daylength_available": false,
+      "native_daylength": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "native_q": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "original_file_MD5_verified": false,
+      "original_registered_native_taxa": [
+        "Ciconia ciconia"
+      ],
+      "original_repository_study_id": "multiple",
+      "original_source_status": "SOURCE_FILE_METADATA_HOLD",
+      "q_daylength_point_signs_differ": null,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.137cn005"
+      ],
+      "wave3_index": 2
+    },
+    {
+      "both_q_and_daylength_available": false,
+      "native_daylength": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "native_q": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "original_file_MD5_verified": true,
+      "original_registered_native_taxa": [
+        "Milvus migrans"
+      ],
+      "original_repository_study_id": "1402467516",
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "q_daylength_point_signs_differ": null,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.23n2m412"
+      ],
+      "wave3_index": 3
+    },
+    {
+      "both_q_and_daylength_available": false,
+      "native_daylength": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "native_q": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "original_file_MD5_verified": false,
+      "original_registered_native_taxa": [
+        "Columba livia"
+      ],
+      "original_repository_study_id": "466196195",
+      "original_source_status": "SOURCE_FILE_METADATA_HOLD",
+      "q_daylength_point_signs_differ": null,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.pk8g6s2h"
+      ],
+      "wave3_index": 4
+    },
+    {
+      "both_q_and_daylength_available": false,
+      "native_daylength": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "native_q": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "original_file_MD5_verified": true,
+      "original_registered_native_taxa": [
+        "Papio anubis"
+      ],
+      "original_repository_study_id": "53460105",
+      "original_source_status": "SOURCE_GPS_HOLD",
+      "q_daylength_point_signs_differ": null,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.kn0816jn"
+      ],
+      "wave3_index": 5
+    },
+    {
+      "both_q_and_daylength_available": false,
+      "native_daylength": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "native_q": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "original_file_MD5_verified": false,
+      "original_registered_native_taxa": [
+        "Columba livia"
+      ],
+      "original_repository_study_id": "1115272968",
+      "original_source_status": "SOURCE_FILE_METADATA_HOLD",
+      "q_daylength_point_signs_differ": null,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.702j854s"
+      ],
+      "wave3_index": 6
+    },
+    {
+      "both_q_and_daylength_available": false,
+      "native_daylength": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "native_q": {
+        "available": true,
+        "bootstrap_95_percentile": [
+          -0.69092266962043,
+          -0.39621317413395735
+        ],
+        "mean": -0.5520851312066712,
+        "n_individuals": 17,
+        "nominal_bootstrap_sign": "NOMINAL_NEGATIVE",
+        "nominal_point_sign": "NEGATIVE"
+      },
+      "original_file_MD5_verified": true,
+      "original_registered_native_taxa": [
+        "Phoebastria irrorata"
+      ],
+      "original_repository_study_id": "2911040",
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "q_daylength_point_signs_differ": null,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.3hp3s250"
+      ],
+      "wave3_index": 7
+    },
+    {
+      "both_q_and_daylength_available": false,
+      "native_daylength": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "native_q": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "original_file_MD5_verified": false,
+      "original_registered_native_taxa": [
+        "Anser albifrons"
+      ],
+      "original_repository_study_id": "657674643",
+      "original_source_status": "SOURCE_FILE_METADATA_HOLD",
+      "q_daylength_point_signs_differ": null,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.ct72m82n"
+      ],
+      "wave3_index": 8
+    },
+    {
+      "both_q_and_daylength_available": true,
+      "native_daylength": {
+        "available": true,
+        "bootstrap_95_percentile": [
+          -0.07409301262383441,
+          -0.012510796852482194
+        ],
+        "mean": -0.04299748529042928,
+        "n_individuals": 14,
+        "nominal_bootstrap_sign": "NOMINAL_NEGATIVE",
+        "nominal_point_sign": "NEGATIVE"
+      },
+      "native_q": {
+        "available": true,
+        "bootstrap_95_percentile": [
+          -0.017488389546188043,
+          0.004864432926300746
+        ],
+        "mean": -0.006380833767727646,
+        "n_individuals": 15,
+        "nominal_bootstrap_sign": "INCLUDES_ZERO",
+        "nominal_point_sign": "NEGATIVE"
+      },
+      "original_file_MD5_verified": true,
+      "original_registered_native_taxa": [
+        "Odocoileus virginianus"
+      ],
+      "original_repository_study_id": "2976678046",
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "q_daylength_point_signs_differ": false,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.293"
+      ],
+      "wave3_index": 9
+    },
+    {
+      "both_q_and_daylength_available": true,
+      "native_daylength": {
+        "available": true,
+        "bootstrap_95_percentile": [
+          -0.0033251232871448996,
+          0.029392793734565586
+        ],
+        "mean": 0.012535096241887181,
+        "n_individuals": 39,
+        "nominal_bootstrap_sign": "INCLUDES_ZERO",
+        "nominal_point_sign": "POSITIVE"
+      },
+      "native_q": {
+        "available": true,
+        "bootstrap_95_percentile": [
+          0.03272520902016717,
+          0.05515835100513391
+        ],
+        "mean": 0.043404729184956546,
+        "n_individuals": 42,
+        "nominal_bootstrap_sign": "NOMINAL_POSITIVE",
+        "nominal_point_sign": "POSITIVE"
+      },
+      "original_file_MD5_verified": true,
+      "original_registered_native_taxa": [
+        "Tapirus terrestris"
+      ],
+      "original_repository_study_id": "1907973121",
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "q_daylength_point_signs_differ": false,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.03ck4s52"
+      ],
+      "wave3_index": 10
+    },
+    {
+      "both_q_and_daylength_available": false,
+      "native_daylength": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "native_q": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "original_file_MD5_verified": false,
+      "original_registered_native_taxa": [
+        "Ciconia ciconia"
+      ],
+      "original_repository_study_id": "76367850",
+      "original_source_status": "SOURCE_FILE_METADATA_HOLD",
+      "q_daylength_point_signs_differ": null,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.4192t2j4_2"
+      ],
+      "wave3_index": 11
+    },
+    {
+      "both_q_and_daylength_available": true,
+      "native_daylength": {
+        "available": true,
+        "bootstrap_95_percentile": [
+          -0.00944030695259402,
+          0.021854858581442732
+        ],
+        "mean": 0.005954969364474593,
+        "n_individuals": 21,
+        "nominal_bootstrap_sign": "INCLUDES_ZERO",
+        "nominal_point_sign": "POSITIVE"
+      },
+      "native_q": {
+        "available": true,
+        "bootstrap_95_percentile": [
+          -0.08882182892118055,
+          -0.010909044887862302
+        ],
+        "mean": -0.049797905957437015,
+        "n_individuals": 21,
+        "nominal_bootstrap_sign": "NOMINAL_NEGATIVE",
+        "nominal_point_sign": "NEGATIVE"
+      },
+      "original_file_MD5_verified": true,
+      "original_registered_native_taxa": [
+        "Numenius arquata"
+      ],
+      "original_repository_study_id": "1395952585",
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "q_daylength_point_signs_differ": true,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.715k46g2"
+      ],
+      "wave3_index": 12
+    },
+    {
+      "both_q_and_daylength_available": false,
+      "native_daylength": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "native_q": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "original_file_MD5_verified": true,
+      "original_registered_native_taxa": [
+        "Columba livia"
+      ],
+      "original_repository_study_id": "21897548",
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "q_daylength_point_signs_differ": null,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.fh860r2f"
+      ],
+      "wave3_index": 13
+    },
+    {
+      "both_q_and_daylength_available": true,
+      "native_daylength": {
+        "available": true,
+        "bootstrap_95_percentile": [
+          0.013905444119615161,
+          0.16332954586118642
+        ],
+        "mean": 0.07999874137983283,
+        "n_individuals": 6,
+        "nominal_bootstrap_sign": "NOMINAL_POSITIVE",
+        "nominal_point_sign": "POSITIVE"
+      },
+      "native_q": {
+        "available": true,
+        "bootstrap_95_percentile": [
+          -0.06659808520439836,
+          0.01469057674069917
+        ],
+        "mean": -0.02610800572644103,
+        "n_individuals": 6,
+        "nominal_bootstrap_sign": "INCLUDES_ZERO",
+        "nominal_point_sign": "NEGATIVE"
+      },
+      "original_file_MD5_verified": true,
+      "original_registered_native_taxa": [
+        "Branta leucopsis"
+      ],
+      "original_repository_study_id": "31888520",
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "q_daylength_point_signs_differ": true,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.5k6b1364"
+      ],
+      "wave3_index": 14
+    },
+    {
+      "both_q_and_daylength_available": false,
+      "native_daylength": {
+        "available": false,
+        "bootstrap_95_percentile": null,
+        "mean": null,
+        "n_individuals": 0,
+        "nominal_bootstrap_sign": "UNAVAILABLE",
+        "nominal_point_sign": "UNAVAILABLE"
+      },
+      "native_q": {
+        "available": true,
+        "bootstrap_95_percentile": [
+          -0.18627982836217996,
+          -0.11598800858735414
+        ],
+        "mean": -0.15084157631206144,
+        "n_individuals": 11,
+        "nominal_bootstrap_sign": "NOMINAL_NEGATIVE",
+        "nominal_point_sign": "NEGATIVE"
+      },
+      "original_file_MD5_verified": true,
+      "original_registered_native_taxa": [
+        "Tockus deckeni"
+      ],
+      "original_repository_study_id": "1087068449",
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "q_daylength_point_signs_differ": null,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.cp97k9j1"
+      ],
+      "wave3_index": 15
+    }
+  ],
+  "new_original_study_units": 16,
+  "new_respondent_leave_one_source_out_all_negative": true,
+  "new_respondent_leave_one_source_out_mean_range": [
+    -0.15704269059406767,
+    -0.03794471851574212
+  ],
+  "new_respondent_unweighted_mean_q": -0.12363478729756364,
+  "no_original_GPS_source_rows_animal_IDs_coordinates_or_exact_times_exported": true,
+  "older_12_ERA5_raw_SHA_hold_unchanged": true,
+  "original_48_source_external_sunlight_heading_direction_replicated": false,
+  "previous_51_meta_git_blob_unchanged": "4644b8ed38ae74dae345df8d90ea182f5dce4ee3",
+  "source_bootstrap_not_multisource_adjusted": true,
+  "source_daylength_bootstrap_nominal_signs": {
+    "INCLUDES_ZERO": 2,
+    "NOMINAL_NEGATIVE": 1,
+    "NOMINAL_POSITIVE": 1
+  },
+  "source_daylength_point_signs": {
+    "NEGATIVE": 1,
+    "POSITIVE": 3
+  },
+  "source_joint_q_daylength_pairs": 4,
+  "source_joint_q_daylength_point_sign_disagreement_count": 2,
+  "source_original_study_units": 51,
+  "source_q_bootstrap_nominal_signs": {
+    "INCLUDES_ZERO": 2,
+    "NOMINAL_NEGATIVE": 3,
+    "NOMINAL_POSITIVE": 1
+  },
+  "source_q_point_signs": {
+    "NEGATIVE": 5,
+    "POSITIVE": 1
+  },
+  "stage": "POST_FIRST_ORIGINAL_SOURCE_OUTCOMES_CI_SENSITIVITY_NO_NEW_GPS",
+  "version": "RSDS_WAVE3_ORIGINAL_SOURCE_Q_CI_POSTOUTCOME_AUDIT_V1"
+}
