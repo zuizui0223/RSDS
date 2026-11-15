@@ -1,0 +1,420 @@
+{
+  "all_new_wave3_animal_GPS_events_opened": 0,
+  "human_GPS_or_position_data_retrieved": false,
+  "new_wave3_multi_native": 0,
+  "new_wave3_single_native": 16,
+  "old_12_ERA5_original_raw_SHA_HOLD_UNCHANGED": true,
+  "old_selected_source_studies": 35,
+  "original_48_source_radiation_negative_external_replication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "original_wave3_selection_git_blob": "a5a11c75a08df99755d3f6d560d111ab4904375b",
+  "original_wave3_selection_source_study_slots": 16,
+  "provider_file_metadata_only": true,
+  "scientific_claim_ceiling": "Original provider file UUID/bytes/MD5/filename only. Source events, GPS schema, animal biology, response completeness, and population ecology have not been observed. Every source and technical/privacy HOLD retains its frozen rank.",
+  "source_rows": [
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "UNIQUE_GPS_OR_TRACKING_FILENAME_ONLY",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.672"
+      ],
+      "original_file": {
+        "bitstream_uuid": "6daf2bd5-00c9-4e61-995a-de7f815acfea",
+        "bytes": 8597658,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "966833ee6f8373cbee2c61210d4440a9"
+        },
+        "filename": "Wild Pig_Boar GPS Study on Rangeland-Sus scrofa-Oklahoma_part.csv"
+      },
+      "original_repository_study_id": "3006923937",
+      "original_single_native_source_rank_1_based": 25,
+      "package_uuid": "b7341994-42fa-4599-9858-086ffaa145f6",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Sus scrofa"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave3_index": 0
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.605"
+      ],
+      "original_file": {
+        "bitstream_uuid": "c4c49cfd-ce2d-4f86-8b81-01575aae3b29",
+        "bytes": 2810858,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "e738b1be22978c23c5b9df1e76f55a1a"
+        },
+        "filename": "Galapagos Swallow-tailed Gull.csv"
+      },
+      "original_repository_study_id": "2989306200",
+      "original_single_native_source_rank_1_based": 26,
+      "package_uuid": "9c8e9ffc-66ab-4874-b1ab-d7144761c652",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Creagrus furcatus"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave3_index": 1
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 9,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.137cn005"
+      ],
+      "original_file": null,
+      "original_repository_study_id": "multiple",
+      "original_single_native_source_rank_1_based": 27,
+      "package_uuid": "967b7813-220e-4f60-8415-166d118ac8fa",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Ciconia ciconia"
+      ],
+      "selection_stratum": "single_native",
+      "source_hold_reason": "AMBIGUOUS_OR_MISSING_PRIMARY_SOURCE_FILE",
+      "source_status": "SOURCE_METADATA_HOLD",
+      "wave3_index": 2
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.23n2m412"
+      ],
+      "original_file": {
+        "bitstream_uuid": "2f1a7f67-f28a-4885-bcf9-2ec40dae4b8c",
+        "bytes": 56970806,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "f3546afa5e6b019d0ae8bd4ceaf9ffbf"
+        },
+        "filename": "Black kites of different age and sex show similar avoidance responses to wind turbines during migration.csv"
+      },
+      "original_repository_study_id": "1402467516",
+      "original_single_native_source_rank_1_based": 28,
+      "package_uuid": "e19ad165-36bb-4c9c-b18f-610fc3eadafd",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Milvus migrans"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave3_index": 3
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.pk8g6s2h"
+      ],
+      "original_file": null,
+      "original_repository_study_id": "466196195",
+      "original_single_native_source_rank_1_based": 29,
+      "package_uuid": "8f4b56cd-cfb3-4fd5-9788-56417c6c8752",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Columba livia"
+      ],
+      "selection_stratum": "single_native",
+      "source_hold_reason": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_status": "SOURCE_METADATA_HOLD",
+      "wave3_index": 4
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.kn0816jn"
+      ],
+      "original_file": {
+        "bitstream_uuid": "67ae8dda-1ab2-4f32-8b4e-635c7c019fea",
+        "bytes": 80702799,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "91e9407c549ac3aa017302fddd75bc8b"
+        },
+        "filename": "Collective movement in wild baboons (data from Strandburg-Peshkin et al. 2015).csv.zip"
+      },
+      "original_repository_study_id": "53460105",
+      "original_single_native_source_rank_1_based": 30,
+      "package_uuid": "b1e834a9-be3b-4604-9bda-346de4e7c257",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Papio anubis"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave3_index": 5
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.702j854s"
+      ],
+      "original_file": null,
+      "original_repository_study_id": "1115272968",
+      "original_single_native_source_rank_1_based": 31,
+      "package_uuid": "ec6fcf58-5291-4d52-8024-87f07f15bbf7",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Columba livia"
+      ],
+      "selection_stratum": "single_native",
+      "source_hold_reason": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_status": "SOURCE_METADATA_HOLD",
+      "wave3_index": 6
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.3hp3s250"
+      ],
+      "original_file": {
+        "bitstream_uuid": "72f33630-876d-44a1-92c8-7ff15e252162",
+        "bytes": 4913156,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "58db522aad986876a4f66d70acc11c0e"
+        },
+        "filename": "Galapagos Albatrosses.csv"
+      },
+      "original_repository_study_id": "2911040",
+      "original_single_native_source_rank_1_based": 32,
+      "package_uuid": "b118f49f-6450-430d-b5f8-c455ff0292ae",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Phoebastria irrorata"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave3_index": 7
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.ct72m82n"
+      ],
+      "original_file": null,
+      "original_repository_study_id": "657674643",
+      "original_single_native_source_rank_1_based": 33,
+      "package_uuid": "22d42221-334b-4eb5-88b7-628c6492bacb",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Anser albifrons"
+      ],
+      "selection_stratum": "single_native",
+      "source_hold_reason": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_status": "SOURCE_METADATA_HOLD",
+      "wave3_index": 8
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.293"
+      ],
+      "original_file": {
+        "bitstream_uuid": "5e4c8652-4c29-4502-b837-b7a11c64ae0b",
+        "bytes": 6809097,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "68f281b1fb6734febe2c13e9f0696ec6"
+        },
+        "filename": "White-tailed Deer Movement Florida.csv"
+      },
+      "original_repository_study_id": "2976678046",
+      "original_single_native_source_rank_1_based": 34,
+      "package_uuid": "e7d1c177-cb56-4960-9c6f-e20986ff651a",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Odocoileus virginianus"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave3_index": 9
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "UNIQUE_GPS_OR_TRACKING_FILENAME_ONLY",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.03ck4s52"
+      ],
+      "original_file": {
+        "bitstream_uuid": "c4f2506f-1929-494f-b0c9-081eae80fc35",
+        "bytes": 52189597,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "8398444115bd242125225b4980089033"
+        },
+        "filename": "Lowland tapirs Tapirus terrestris in Southern Brazil-gps.csv"
+      },
+      "original_repository_study_id": "1907973121",
+      "original_single_native_source_rank_1_based": 35,
+      "package_uuid": "e2fe5582-a707-4954-8329-ba107736fed8",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Tapirus terrestris"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave3_index": 10
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 4,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.4192t2j4_2"
+      ],
+      "original_file": null,
+      "original_repository_study_id": "76367850",
+      "original_single_native_source_rank_1_based": 36,
+      "package_uuid": "520a64ae-2047-445d-af5f-7b961caeef79",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Ciconia ciconia"
+      ],
+      "selection_stratum": "single_native",
+      "source_hold_reason": "AMBIGUOUS_OR_MISSING_PRIMARY_SOURCE_FILE",
+      "source_status": "SOURCE_METADATA_HOLD",
+      "wave3_index": 11
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.715k46g2"
+      ],
+      "original_file": {
+        "bitstream_uuid": "fb34f30f-9cac-4b92-b901-7e4e099deab8",
+        "bytes": 159155287,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "b847a97e4ebaedd3e2fd46e920c4f08e"
+        },
+        "filename": "FTZ Migrating curlews (data from Schwemmer et al. 2021).csv"
+      },
+      "original_repository_study_id": "1395952585",
+      "original_single_native_source_rank_1_based": 37,
+      "package_uuid": "aa260e37-8ff6-4366-9918-91346785b8f9",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Numenius arquata"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave3_index": 12
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.fh860r2f"
+      ],
+      "original_file": {
+        "bitstream_uuid": "8bcc4ca5-e879-4fe2-9705-6556cac565b0",
+        "bytes": 10838751,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "15f1f7694feb00c25f47682326c7eedc"
+        },
+        "filename": "Navigation in homing pigeons (Columba livia) (data from Gagliardo et al. 2014).csv"
+      },
+      "original_repository_study_id": "21897548",
+      "original_single_native_source_rank_1_based": 38,
+      "package_uuid": "4316d2ab-8972-4af7-867f-562f40465113",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Columba livia"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave3_index": 13
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.5k6b1364"
+      ],
+      "original_file": {
+        "bitstream_uuid": "df28a80e-e0c4-49fb-aa87-76ceb2d2b76f",
+        "bytes": 7274402,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "41a0b82bd3d2bf362e9437c2e8222634"
+        },
+        "filename": "Migration timing in barnacle geese (Svalbard) (data from Kölzsch et al. and Shariatinajafabadi et al. 2014).csv"
+      },
+      "original_repository_study_id": "31888520",
+      "original_single_native_source_rank_1_based": 39,
+      "package_uuid": "644e46c6-0dd2-49d8-bcbc-c186ab9aecb4",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Branta leucopsis"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave3_index": 14
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.cp97k9j1"
+      ],
+      "original_file": {
+        "bitstream_uuid": "8f5335c6-4453-4e60-96a3-0f3fcde7f9fb",
+        "bytes": 30203173,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "458eb834feec682572a399a4634be9e5"
+        },
+        "filename": "Von der Decken's hornbill (Jetz Kenya).csv"
+      },
+      "original_repository_study_id": "1087068449",
+      "original_single_native_source_rank_1_based": 40,
+      "package_uuid": "a41015db-4632-46dc-abed-277b16daf97b",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Tockus deckeni"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave3_index": 15
+    }
+  ],
+  "source_status_counts": {
+    "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE": 11,
+    "SOURCE_METADATA_HOLD": 5
+  },
+  "source_study_slots": 16,
+  "stage": "AFTER_SHA_FROZEN_WAVE3_SOURCE_SELECTION_BEFORE_ORIGINAL_GPS_EVENTS",
+  "total_selected_original_source_studies_after_wave3": 51,
+  "version": "RSDS_437_WAVE3_16_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1"
+}
