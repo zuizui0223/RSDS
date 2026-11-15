@@ -1,0 +1,39 @@
+name: RSDS 35-source q observability and respondent-only sign-fragility sensitivity
+on:
+  push:
+    branches:
+      - analysis/rsds-437-wave2-original-gps-20261115
+    paths:
+      - 'scripts/rsds_437_source_measurability_q_sign_fragility_v1.py'
+      - 'tests/test_rsds_437_source_measurability_q_sign_fragility_v1.py'
+      - '.github/workflows/rsds-437-q-source-sign-fragility-v1.yml'
+  pull_request:
+    paths:
+      - 'scripts/rsds_437_source_measurability_q_sign_fragility_v1.py'
+      - 'tests/test_rsds_437_source_measurability_q_sign_fragility_v1.py'
+      - '.github/workflows/rsds-437-q-source-sign-fragility-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  real_frozen_source_group_and_missingness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Revalidate source level q-sign sensitivity, 35 original DOI and all HOLDs
+        run: python -m unittest discover -s tests -p 'test_rsds_437_source_measurability_q_sign_fragility_v1.py' -v
+      - name: Recalculate original study-wise LOO, leave-two and 120-metadata-frame measurability without GPS
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_437_source_measurability_q_sign_fragility_v1 --out outputs/rsds_437_q_source_measurability_and_sign_fragility_v1.json
+          python -m json.tool outputs/rsds_437_q_source_measurability_and_sign_fragility_v1.json > /dev/null
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-35-source-measurability-q-meta-sign-fragility-first-v1
+          path: outputs/rsds_437_q_source_measurability_and_sign_fragility_v1.json
+          if-no-files-found: error
