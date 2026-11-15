@@ -1,0 +1,28 @@
+name: RSDS frozen original 35-source GPS observation and meta method evidence v1
+on:
+  push:
+    branches:
+      - analysis/rsds-source-gps-observation-funnel-20261115
+    paths:
+      - 'research/RSDS_35_ORIGINAL_SOURCE_GPS_OBSERVATION_EVIDENCE_CROSSWALK_V1.json'
+      - 'tests/test_rsds_35_original_source_gps_observation_evidence_v1.py'
+      - '.github/workflows/rsds-35-original-source-observation-evidence-v1.yml'
+  pull_request:
+    paths:
+      - 'research/RSDS_35_ORIGINAL_SOURCE_GPS_OBSERVATION_EVIDENCE_CROSSWALK_V1.json'
+      - 'tests/test_rsds_35_original_source_gps_observation_evidence_v1.py'
+      - '.github/workflows/rsds-35-original-source-observation-evidence-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original_GPS_sources_and_Q_meta_first_evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test all first original 35-source, 34-native GPS observation and Q AUC Git blobs
+        run: python -m unittest discover -s tests -p 'test_rsds_35_original_source_gps_observation_evidence_v1.py' -v
