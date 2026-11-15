@@ -69,10 +69,6 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "results: freeze original GPS 35-study time/solar/velocity eligibility census by artifact SHA"
             git fetch origin analysis/rsds-source-gps-observation-funnel-20261115
-            git rebase origin/rsds-source-gps-observation-funnel-20261115 || {
-              git rebase --abort
-              git fetch origin analysis/rsds-source-gps-observation-funnel-20261115
-              git rebase origin/analysis/rsds-source-gps-observation-funnel-20261115
-            }
+            git rebase origin/analysis/rsds-source-gps-observation-funnel-20261115
             git push origin HEAD:analysis/rsds-source-gps-observation-funnel-20261115
           fi
