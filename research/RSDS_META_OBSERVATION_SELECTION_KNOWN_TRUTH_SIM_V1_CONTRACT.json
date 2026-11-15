@@ -1,0 +1,75 @@
+{
+  "version": "RSDS_META_OBSERVATION_SELECTION_KNOWN_TRUTH_SIMULATION_V1",
+  "freeze_date": "2026-11-15",
+  "status": "POST_WAVE1_WAVE2_OUTCOME_METHOD_SIMULATION_SETTINGS_FIXED_BEFORE_SYNTHETIC_OUTPUTS",
+  "parent_observation_result_path": "research/RSDS_35_ORIGINAL_SOURCE_GPS_OBSERVATION_GATE_FIRST_RESULT_20261115.json",
+  "parent_observation_result_git_blob": "49dcf5c798f8eee788c8001906a1fe0e2c195086",
+  "parent_source_35_meta_path": "research/RSDS_437_WAVE1_PLUS_WAVE2_35_ORIGINAL_GPS_FIRST_META_RESULT_20261115.json",
+  "parent_source_35_git_blob": "9b02774f7c31d29b2eec5039a80431a895dccb36",
+  "original_source_frame": {
+    "single_native": 109,
+    "multi_native": 11
+  },
+  "hypothetical_wave1_sample": {
+    "single_native": 8,
+    "multi_native": 8
+  },
+  "hypothetical_combined_sample": {
+    "single_native": 24,
+    "multi_native": 11
+  },
+  "repetitions_per_scenario": 1000,
+  "random_seed": 20261115,
+  "true_mean_log1p_night_minus_day_speed_q": 0.04,
+  "true_between_source_standard_deviation": 0.12,
+  "cadence_metadata_uniform_range": [
+    0.35,
+    0.95
+  ],
+  "cadence_center": 0.65,
+  "cadence_divisor": 0.2,
+  "logit_source_observation_intercept": {
+    "single_native": -0.7,
+    "multi_native": -1.55
+  },
+  "logit_cadence_beta": 0.9,
+  "source_q_response_dependence_scaled_betas": [
+    {
+      "label": "cadence_only_MAR_in_synthetic_world",
+      "beta_q": 0
+    },
+    {
+      "label": "outcome_linked_negative_MNAR_synthetic_world",
+      "beta_q": -1.5
+    },
+    {
+      "label": "outcome_linked_positive_MNAR_synthetic_world",
+      "beta_q": 1.5
+    }
+  ],
+  "source_response_generation": "Synthetic source-complete q gate R~Bernoulli(logistic(alpha_stratum + 0.9*(cadence-0.65)/0.2 + beta_q*(q_true-0.04)/0.12)); every source has one latent q and one cadence, multi-native lower source pass intercept. No GPS tracks generated.",
+  "ecological_true_q_generation": "For every simulated finite 109+11 source frame, q_source drawn iid Normal(mean=+0.04, SD=0.12), independent of cadence; positive truth is deliberately known, not inferred from public Movebank.",
+  "source_sampling": "Within each world independent uniform random ordering within single- and multi-native metadata strata. Wave1 first 8/8, combined first 24/11. These *counterfactual* quotas are predefined for the synthetic demonstration, unlike real Wave2 quota chosen after Wave1 outcomes; never label real PR26 selection randomized.",
+  "measured_source_q": "If R=1, observed q_source equals its synthetic latent q without added measurement error. This isolates source *availability* bias; real GPS observation can also bias measured q, which is not simulated here.",
+  "estimators": [
+    "full_120_source_true_mean (oracle, per world)",
+    "sample_35_all_q_stratum_poststratified_mean_if_every_selected_source_q_were_observed (oracle sample selection)",
+    "respondent_only_35_mean_by_109_11_source_stratum (undefined if any sampled stratum has no responders)",
+    "source_observation_Horvitz_Thompson_if_true_q_conditioned_probability_known (unimplementable oracle in real data, average over all worlds including zero responders)",
+    "source_observation_Horvitz_Thompson_if_only_cadence_and_stratum_probability_known_exactly_under_simulated_DGP (mechanistic negative control for MNAR, not an estimated propensity)"
+  ],
+  "synthetic_marginal_response_probability_integration": "Average sigmoid over 41 equally probability-spaced standard normal quantiles via Python statistics.NormalDist.inv_cdf; a synthetic oracle marginal P(R|cadence,stratum) that intentionally omits true source q.",
+  "reporting": [
+    "all_1000_simulated_worlds_retained_without_respondent_source_replacement",
+    "fraction_with_both_strata_response_reported_instead_of_zero_filling",
+    "mean_bias_and_monte_carlo_standard_error_per_estimator_relative_to_actual_finite_120_source_mean",
+    "root_mean_squared_error",
+    "respondent_only_sign_mismatch_rate_conditional_on_both_strata_present",
+    "wave1_to_combined_respondent_only_negative_to_positive_flips_conditional_on_both_estimates_defined",
+    "mean_original_source_q_resp_rate_by_stratum"
+  ],
+  "no_reclassification": "All real Wave1 and Wave2 original GPS q/covariance and source HOLDs, earlier 48-source shortwave external signed negative nonreplication, earlier ERA5 12 raw SHA source HOLD unchanged. Synthetic R is not true biology.",
+  "inferential_limits": "Known truth is in a new arbitrary synthetic DGP; none of three logit coefficients or distribution parameters are estimated from real 35 sources; synthetic bias/coverage is not an externally validated model of true animal ecology. Outcome-linked source measurability is a sensitivity mechanism, not established causation.",
+  "historical_48_shortwave_external": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "historical_12_ERA5_raw_source_HOLD": true
+}
