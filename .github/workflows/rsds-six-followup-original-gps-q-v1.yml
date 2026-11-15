@@ -1,0 +1,100 @@
+name: RSDS six targeted same-species original GPS q first source results
+on:
+  push:
+    branches:
+      - analysis/rsds-six-followup-original-gps-q-20261115
+    paths:
+      - 'research/RSDS_SIX_FOLLOWUP_ORIGINAL_GPS_Q_FIRST_V1_CONTRACT.json'
+      - 'scripts/run_rsds_six_same_species_followup_original_gps_q_v1.py'
+      - 'scripts/aggregate_rsds_six_followup_original_gps_q_v1.py'
+      - 'tests/test_rsds_six_followup_original_gps_q_v1.py'
+      - '.github/workflows/rsds-six-followup-original-gps-q-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original_first_q_known_truth_source_integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install same immutable original GPS q estimator dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Verify original source, MD5/HOLD and pre-outcome q-sign direction gates
+        run: |
+          python -m unittest discover -s tests -p 'test_rsds_six_followup_original_gps_q_v1.py' -v
+          python -m scripts.verify_rsds_migration
+
+  original_source_new_GPS_first_q:
+    needs: original_first_q_known_truth_source_integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      max-parallel: 3
+      fail-fast: false
+      matrix:
+        index: [0,1,2,3,4,5]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install historical original GPS astronomical q numerical dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Original provider UUID bytes MD5 verify before any original source-native GPS q
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.run_rsds_six_same_species_followup_original_gps_q_v1 --index ${{ matrix.index }} --out outputs/source_$(printf "%02d" ${{ matrix.index }}).json
+      - name: Upload only original source-native aggregate/CI/HOLD, never tracks
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-six-target-original-gps-source-${{ matrix.index }}-v1
+          path: outputs/source_*.json
+          if-no-files-found: error
+
+  all_six_original_source_same_species_q_meta:
+    needs: original_source_new_GPS_first_q
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Immutable original source-GPS meta from six including previous source-HOLD
+        uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-six-target-original-gps-source-*-v1
+          path: outputs/six_first_source
+          merge-multiple: true
+      - name: Compare source-native original q CI with four fixed directions without retuning
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.aggregate_rsds_six_followup_original_gps_q_v1 --directory outputs/six_first_source --out outputs/six_target_same_species_first_original_q.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('outputs/six_target_same_species_first_original_q.json').read_text())
+          assert d['original_previous_archive_source_DOIs']==63
+          assert d['original_followup_source_DOIs_all']==6
+          assert d['original_source_file_admissible_pre_event']==4
+          assert d['original_pre_event_metadata_HOLD']==2
+          assert len(d['all_six_original_source_taxon_results_including_HOLD'])==6
+          assert d['new_source_study_IDs_selected_after_previous_same_species_results']
+          assert d['source_taxon_same_original_tag_population_independence_unverified']
+          assert d['previous_original_48_solar_direction_signed_heldout_nonreplication']
+          assert d['previous_original_12_ERA5_raw_source_HOLD_unchanged']
+          assert d['no_original_animal_ID_GPS_coordinates_exact_dates_or_per_tag_coefficients_exported']
+          print('SIX_TARGET_FIRST_ORIGINAL_SOURCE_NATIVE_Q_NO_GLOBAL_CLAIM')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-six-followup-target-original-q-first-six-source-combined-v1
+          path: outputs/six_target_same_species_first_original_q.json
+          if-no-files-found: error
