@@ -1,0 +1,62 @@
+name: RSDS wave2 19 original-file metadata first freeze before GPS
+on:
+  push:
+    branches:
+      - analysis/rsds-437-wave2-original-gps-20261115
+    paths:
+      - 'scripts/rsds_437_wave2_original_file_metadata_v1.py'
+      - 'tests/test_rsds_437_wave2_original_file_metadata_v1.py'
+      - '.github/workflows/rsds-437-wave2-file-metadata-freeze-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  source_only_provider_metadata_before_GPS:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify SHA-committed 19 source identities and human-source no-access gate
+        run: python -m unittest discover -s tests -p 'test_rsds_437_wave2_original_file_metadata_v1.py' -v
+      - name: Inspect provider original file UUID, name, bytes and MD5; never open animal GPS
+        run: |
+          python -m scripts.rsds_437_wave2_original_file_metadata_v1 --out research/RSDS_437_WAVE2_19_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json
+      - name: Validate all 19 source slots, HOLD reasons, and exactly one human privacy exclusion
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("research/RSDS_437_WAVE2_19_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json")
+          d=json.loads(p.read_text())
+          assert d["source_study_slots"]==19
+          assert len(d["source_rows"])==19
+          assert d["source_status_counts"].get("HUMAN_LOCATION_PRIVACY_HOLD")==1
+          assert sum(d["source_status_counts"].values())==19
+          assert d["human_GPS_or_position_data_retrieved"] is False
+          assert d["all_new_wave2_animal_GPS_events_opened"]==0
+          print("WAVE2_HUMAN_PRIVACY_AND_ALL_SOURCE_HOLDS_PRESERVED")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-wave2-19-original-provider-file-md5-metadata-first-v1
+          path: research/RSDS_437_WAVE2_19_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json
+          if-no-files-found: error
+      - name: Commit first provider-file metadata source statuses before GPS event access
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_437_WAVE2_19_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: pin original wave2 file metadata, privacy HOLD and checksum roster before GPS"
+            git fetch origin analysis/rsds-437-wave2-original-gps-20261115
+            git rebase origin/analysis/rsds-437-wave2-original-gps-20261115
+            git push origin HEAD:analysis/rsds-437-wave2-original-gps-20261115
+          fi

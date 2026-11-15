@@ -1,0 +1,75 @@
+name: RSDS freeze first 35-source meta artifact by SHA without rerunning GPS
+on:
+  push:
+    branches:
+      - analysis/rsds-437-wave2-original-gps-20261115
+    paths:
+      - '.github/workflows/rsds-437-wave2-freeze-first-35-meta-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  first_35_source_meta_original_artifact_digest_freeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download first completed 35-source original-data aggregate, NOT source GPS
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 43692435152
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          name: rsds-wave1-plus-wave2-35-original-source-meta-first-v1
+          path: outputs/prior_first_successful
+      - name: Pin byte-exact first analysis JSON and original scientific HOLDs
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp outputs/prior_first_successful/rsds_437_wave1_plus_wave2_35_original_source_meta_v1.json research/RSDS_437_WAVE1_PLUS_WAVE2_35_ORIGINAL_GPS_FIRST_META_RESULT_20261115.json
+          echo "96a34f572ad8109e2dab5ac28202faceb6b7750724d33b96b9ab94dbdd16f48d  research/RSDS_437_WAVE1_PLUS_WAVE2_35_ORIGINAL_GPS_FIRST_META_RESULT_20261115.json" | sha256sum -c -
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("research/RSDS_437_WAVE1_PLUS_WAVE2_35_ORIGINAL_GPS_FIRST_META_RESULT_20261115.json")
+          j=json.loads(p.read_text(encoding="utf-8"))
+          assert j["original_registry_source_packages"]==437
+          assert j["original_GPS_GNSS_sensor_packages"]==259
+          assert j["original_metadata_candidate_frame"]==120
+          assert j["original_source_study_units"]==35
+          assert j["wave1_source_study_units"]==16 and j["wave2_source_study_units"]==19
+          assert j["combined_original_registered_native_rows"]==50
+          assert j["wave2_status_counts"]=={
+              "HUMAN_LOCATION_PRIVACY_HOLD":1,
+              "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE":7,
+              "SOURCE_FILE_METADATA_HOLD":3,
+              "SOURCE_GPS_HOLD":1,
+              "SOURCE_NO_NATIVE_Q_ESTIMABLE":7
+          }
+          q=j["finite_120_metadata_frame_source_measurability"]["q"]
+          assert q["by_source_stratum"]=={"single_native":8,"multi_native":2}
+          assert q["source_complete_within_sample_count"]==10
+          assert j["source_complete_effects_and_nonresponse_sensitivity"]["daylength"]["supported_complete_native_source_count"]==8
+          assert j["human_location_source_no_access"] is True
+          assert j["previous_48_source_sunlight_signed_external_not_replicated"]
+          assert j["previous_12_ERA5_raw_SHA_HOLD"]
+          print("FIRST_35_SOURCE_META_ORIGINAL_SHA_AND_4_HOLDS_PRESERVED")
+          PY
+      - name: Commit only the original aggregate, preserving raw telemetry and earlier wave SHA
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_437_WAVE1_PLUS_WAVE2_35_ORIGINAL_GPS_FIRST_META_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze first 35-source GPS meta admission and q selection bias by exact artifact digest"
+            git fetch origin analysis/rsds-437-wave2-original-gps-20261115
+            git rebase origin/analysis/rsds-437-wave2-original-gps-20261115
+            git push origin HEAD:analysis/rsds-437-wave2-original-gps-20261115
+          fi

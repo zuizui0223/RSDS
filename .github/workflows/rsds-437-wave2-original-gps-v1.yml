@@ -1,0 +1,108 @@
+name: RSDS wave2 nineteen original Movebank sources GPS first q and 35-source meta admission
+on:
+  push:
+    branches:
+      - analysis/rsds-437-wave2-original-gps-20261115
+    paths:
+      - 'research/RSDS_437_WAVE2_ORIGINAL_GPS_FIRST_EFFECTS_V1_CONTRACT.json'
+      - 'scripts/run_rsds_437_wave2_original_gps_first_effects_v1.py'
+      - 'scripts/aggregate_rsds_437_wave2_35_source_meta_v1.py'
+      - 'tests/test_rsds_437_wave2_original_gps_first_effects_v1.py'
+      - 'tests/test_rsds_437_wave2_35_source_meta_v1.py'
+      - '.github/workflows/rsds-437-wave2-original-gps-v1.yml'
+  pull_request:
+    paths:
+      - 'research/RSDS_437_WAVE2_ORIGINAL_GPS_FIRST_EFFECTS_V1_CONTRACT.json'
+      - 'scripts/run_rsds_437_wave2_original_gps_first_effects_v1.py'
+      - 'scripts/aggregate_rsds_437_wave2_35_source_meta_v1.py'
+      - 'tests/test_rsds_437_wave2_original_gps_first_effects_v1.py'
+      - 'tests/test_rsds_437_wave2_35_source_meta_v1.py'
+      - '.github/workflows/rsds-437-wave2-original-gps-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  known_truth_original_sources_and_privacy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Lightweight numerical GPS schema dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Verify exact wave1 legacy, source wave2 pre-event rank, original 15 MD5 files and four HOLD slots
+        run: |
+          python -m unittest discover -s tests -p 'test_rsds_437_wave2_original_gps_first_effects_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_437_wave2_35_source_meta_v1.py' -v
+      - name: Verify historic 390 original ODSP-to-RSDS scientific provenance blobs
+        run: python -m scripts.verify_rsds_migration
+
+  original_source_GPS_first_effect:
+    needs: known_truth_original_sources_and_privacy
+    runs-on: ubuntu-latest
+    timeout-minutes: 85
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        index: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install frozen original GPS q and astronomy numerical dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: MD5-verify original provider source and estimate all source-native q or preserve scientific/privacy HOLD
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.run_rsds_437_wave2_original_gps_first_effects_v1 --index ${{ matrix.index }} --out outputs/wave2_source_$(printf "%02d" ${{ matrix.index }}).json
+      - name: Retain source-only estimates/covariance/HOLD without GPS records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-wave2-original-gps-source-${{ matrix.index }}-v1
+          path: outputs/wave2_source_*.json
+          if-no-files-found: error
+
+  combined_35_source_meta:
+    needs: original_source_GPS_first_effect
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download all nineteen original wave2 source slots including three size and one human privacy HOLD
+        uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-wave2-original-gps-source-*-v1
+          path: outputs/wave2_sources
+          merge-multiple: true
+      - name: Reconstruct 16 original wave1 plus 19 new source results and finite 120-frame measurability/missingness
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.aggregate_rsds_437_wave2_35_source_meta_v1 --directory outputs/wave2_sources --out outputs/rsds_437_wave1_plus_wave2_35_original_source_meta_v1.json
+          python -m json.tool outputs/rsds_437_wave1_plus_wave2_35_original_source_meta_v1.json > /dev/null
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('outputs/rsds_437_wave1_plus_wave2_35_original_source_meta_v1.json').read_text())
+          assert d["original_source_study_units"]==35
+          assert d["wave1_source_study_units"]==16
+          assert d["wave2_source_study_units"]==19
+          assert len(d["new_wave2_source_study_summary_rows"])==19
+          assert d["human_location_source_no_access"] is True
+          assert d["previous_48_source_sunlight_signed_external_not_replicated"]
+          print("ALL_THIRTY_FIVE_ORIGINAL_SOURCE_UNITS_AND_NATIVE_HOLDS_PRESERVED")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-wave1-plus-wave2-35-original-source-meta-first-v1
+          path: outputs/rsds_437_wave1_plus_wave2_35_original_source_meta_v1.json
+          if-no-files-found: error

@@ -1,0 +1,518 @@
+{
+  "all_original_wave2_sources_in_rank_order": [
+    {
+      "metadata_reported_animals": 16,
+      "metadata_reported_locations": 13939,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.667"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "6456209836",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "dd56d8cf-8286-404b-afa7-ddbe38a64379",
+      "scientific_name_labels": [
+        "Sus scrofa"
+      ],
+      "second_wave_ordinal": 1,
+      "source_lottery_SHA256": "10a60400075801ae43ec6b9851b9d9b3e1bd729af3a33d44e5d2559e5f22249d",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 9,
+      "wave2_index": 0
+    },
+    {
+      "metadata_reported_animals": 54,
+      "metadata_reported_locations": 1264675,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.41c87nh1"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "444752703",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "3c656514-be01-4e6b-ad4a-11625dbb09fc",
+      "scientific_name_labels": [
+        "Columba livia"
+      ],
+      "second_wave_ordinal": 2,
+      "source_lottery_SHA256": "10f6ef780a89224874d63abb4dc85b0d3644560d2381217af1bdebccecc2895b",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 10,
+      "wave2_index": 1
+    },
+    {
+      "metadata_reported_animals": 69,
+      "metadata_reported_locations": 4419505,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.hg1v55ct"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "1575973021",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "e4070707-8471-45f2-8e15-7ca0cd8a9ada",
+      "scientific_name_labels": [
+        "Hydroprogne caspia"
+      ],
+      "second_wave_ordinal": 3,
+      "source_lottery_SHA256": "1879f86c1814ad2ccf4f7f2ab2f4bdd19518c355fdfd538efeadf37815b36af7",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 11,
+      "wave2_index": 2
+    },
+    {
+      "metadata_reported_animals": 27,
+      "metadata_reported_locations": 54560,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.c741t5b6"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "317481491",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "909126ab-cd8f-4c6f-98aa-99ea62f689de",
+      "scientific_name_labels": [
+        "Calonectris diomedea"
+      ],
+      "second_wave_ordinal": 4,
+      "source_lottery_SHA256": "2875550f7284be9dc257a1339d46dec267b19ac00c35fa74adca6d4d2a41b723",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 12,
+      "wave2_index": 3
+    },
+    {
+      "metadata_reported_animals": 209,
+      "metadata_reported_locations": 229857,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.477cd5fs"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "1338487915",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "b18ff4b6-6bc4-4970-9d80-52d50ea807b5",
+      "scientific_name_labels": [
+        "Columba livia"
+      ],
+      "second_wave_ordinal": 5,
+      "source_lottery_SHA256": "312db33714dba6d2e9410fd0efdd43d9d7aac6deecef913302cab4c4fa7b516c",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 13,
+      "wave2_index": 4
+    },
+    {
+      "metadata_reported_animals": 30,
+      "metadata_reported_locations": 54533,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.212g53s7"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "621703893",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "a398b445-fb68-47a5-9dd9-9ca259ea2c20",
+      "scientific_name_labels": [
+        "Pelecanus occidentalis"
+      ],
+      "second_wave_ordinal": 6,
+      "source_lottery_SHA256": "31cd7820495e67b555f80fc0cd2926ee3d7e929693ea033e38d68205067ee7f8",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 14,
+      "wave2_index": 5
+    },
+    {
+      "metadata_reported_animals": 21,
+      "metadata_reported_locations": 52648,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.714"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "2591181877",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "26a9d940-906d-490b-a87d-02be51e5e21f",
+      "scientific_name_labels": [
+        "Alces alces"
+      ],
+      "second_wave_ordinal": 7,
+      "source_lottery_SHA256": "33a3ee1e640898d69d2dc53bbf160293478414aa6e180def1dd1f177f4791d6c",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 15,
+      "wave2_index": 6
+    },
+    {
+      "metadata_reported_animals": 40,
+      "metadata_reported_locations": 47774,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.712"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "2561156373",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "80b3da4f-5e2d-4fb0-998f-121231d2ed71",
+      "scientific_name_labels": [
+        "Puma concolor"
+      ],
+      "second_wave_ordinal": 8,
+      "source_lottery_SHA256": "33cb5be8c61669d7fc019c17fbba4aee15c5297e123e83c869ac0e4840009a90",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 16,
+      "wave2_index": 7
+    },
+    {
+      "metadata_reported_animals": 109,
+      "metadata_reported_locations": 161451,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.p9c4nc97"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "132686329",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "64a804f1-3cb7-4d26-ba5e-3448b1a9a884",
+      "scientific_name_labels": [
+        "Anas platyrhynchos"
+      ],
+      "second_wave_ordinal": 9,
+      "source_lottery_SHA256": "37ee8f4b1b081c543c37f4be9040bd0528c91efad1532825747e012b8159f2ea",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 17,
+      "wave2_index": 8
+    },
+    {
+      "metadata_reported_animals": 442,
+      "metadata_reported_locations": 63427,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.289p5s77"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "64283289",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "0a9bcb2a-f031-42e7-8027-a87c09b30804",
+      "scientific_name_labels": [
+        "Felis catus"
+      ],
+      "second_wave_ordinal": 10,
+      "source_lottery_SHA256": "39d82a591ca26c62cec2f982d909f9c585857535e974edf9798f04311ed68102",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 18,
+      "wave2_index": 9
+    },
+    {
+      "metadata_reported_animals": 72,
+      "metadata_reported_locations": 27563,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.61896g63"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "399246220",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "d9267220-4c7d-4ecd-b994-fba92e425ce8",
+      "scientific_name_labels": [
+        "Homo sapiens"
+      ],
+      "second_wave_ordinal": 11,
+      "source_lottery_SHA256": "3bbb0c2ec09855a02e7a552b902aec4421c4d39226c40d3427b0dc194a38cec9",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 19,
+      "wave2_index": 10
+    },
+    {
+      "metadata_reported_animals": 27,
+      "metadata_reported_locations": 57476,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.317_2"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "1832666571",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "fd28aac2-b22f-4368-8638-59906e769ded",
+      "scientific_name_labels": [
+        "Caracal caracal"
+      ],
+      "second_wave_ordinal": 12,
+      "source_lottery_SHA256": "3bcd7bdc5acb2598533999776160393a58a384a09939cff33bb587ee802cd839",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 20,
+      "wave2_index": 11
+    },
+    {
+      "metadata_reported_animals": 12,
+      "metadata_reported_locations": 15159,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.7vr1k987"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "178979729",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "c0de801a-53ce-461b-8fd3-e9e3f9731a93",
+      "scientific_name_labels": [
+        "Canis lupus"
+      ],
+      "second_wave_ordinal": 13,
+      "source_lottery_SHA256": "43b5821b31a719a4cc7ac1ab06d9e72f39d97752898cae9c6293dd66ad33a95a",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 21,
+      "wave2_index": 12
+    },
+    {
+      "metadata_reported_animals": 130,
+      "metadata_reported_locations": 77228,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.q23p1t84"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "294524920",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "1ea09120-155c-4fc4-8a39-81df22784fac",
+      "scientific_name_labels": [
+        "Milvus migrans"
+      ],
+      "second_wave_ordinal": 14,
+      "source_lottery_SHA256": "444a6c1664b0e6fac18731c45b3a604d1e64afafdeb33f422c43d6fcf2878313",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 22,
+      "wave2_index": 13
+    },
+    {
+      "metadata_reported_animals": 32,
+      "metadata_reported_locations": 32318,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.278"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "2379775078",
+      "original_sensor_labels": [
+        "Acceleration",
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "a51b51e0-fbf2-43e2-86ae-bc41c9f53a98",
+      "scientific_name_labels": [
+        "Hypsignathus monstrosus"
+      ],
+      "second_wave_ordinal": 15,
+      "source_lottery_SHA256": "452d05d408aeb4504833f9a665646983a5bd54455e4339016735548179f5bb57",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 23,
+      "wave2_index": 14
+    },
+    {
+      "metadata_reported_animals": 52,
+      "metadata_reported_locations": 47467,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.dn1b937k"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "510147801",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "53c28da7-6201-490b-bfcf-ca1cf83718b8",
+      "scientific_name_labels": [
+        "Columba livia"
+      ],
+      "second_wave_ordinal": 16,
+      "source_lottery_SHA256": "45b6e0bb414e0bebf8efe6526b72201b0384f9396130619d15274787ab9a089e",
+      "stratum": "single_native",
+      "stratum_rank_1_based": 24,
+      "wave2_index": 15
+    },
+    {
+      "metadata_reported_animals": 65,
+      "metadata_reported_locations": 686382,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.37r2b884"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "217784323",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "21e96dfb-6323-4189-9039-557d6fbe34eb",
+      "scientific_name_labels": [
+        "Cathartes aura",
+        "Coragyps atratus"
+      ],
+      "second_wave_ordinal": 17,
+      "source_lottery_SHA256": "bc0225a8e60d80c6313ca3bfaba2e3ae787d89c1729fec8a0feb214e45b319ae",
+      "stratum": "multi_native",
+      "stratum_rank_1_based": 9,
+      "wave2_index": 16
+    },
+    {
+      "metadata_reported_animals": 57,
+      "metadata_reported_locations": 1311532,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.666"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "24797204",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "1777d9ed-d62e-480c-83d7-82476ba09c5c",
+      "scientific_name_labels": [
+        "Cathartes aura",
+        "Coragyps atratus"
+      ],
+      "second_wave_ordinal": 18,
+      "source_lottery_SHA256": "c763e45939c1c44ce098422e464386446806241e80ea37fd55644b9a1899dcfe",
+      "stratum": "multi_native",
+      "stratum_rank_1_based": 10,
+      "wave2_index": 17
+    },
+    {
+      "metadata_reported_animals": 96,
+      "metadata_reported_locations": 1841253,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.6gr485fk"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "2928116",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_file_metadata_opened": false,
+      "package_uuid": "9eaf99f2-9a3b-4b48-a680-aa74542e162a",
+      "scientific_name_labels": [
+        "Chelonoidis donfaustoi",
+        "Chelonoidis hoodensis",
+        "Chelonoidis porteri"
+      ],
+      "second_wave_ordinal": 19,
+      "source_lottery_SHA256": "d675fb348f16f7e2fa1caf2cddfd90b92c3fb35d323f1d07d5686e97d90fddd1",
+      "stratum": "multi_native",
+      "stratum_rank_1_based": 11,
+      "wave2_index": 18
+    }
+  ],
+  "all_previously_unselected_metadata_candidates_remaining": 85,
+  "old_48_signed_sunlight_external_replicated": false,
+  "old_ERA5_original_12_raw_SHA_HOLD": true,
+  "original_candidate_source_frame": {
+    "multi_native": 11,
+    "single_native": 109
+  },
+  "original_source_catalog_SHA": "9822ec80ed98cab1e3d17a853d0ce5e63e47298c",
+  "original_wave1_biological_first_result_git_blob": "57029f30b65991118325c7d0cec1d8b3a36f4427",
+  "original_wave1_source_selection_git_blob": "23d7489e4cf8347341cf67290499f278610651c6",
+  "original_wave2_GPS_events_opened": 0,
+  "original_wave2_provider_files_opened": 0,
+  "research_stage": "POST_WAVE1_OUTCOME_QUOTA_DECISION_PRE_WAVE2_FILE_METADATA_AND_GPS_EVENTS",
+  "sampling_method": "CONTINUE_IDENTICAL_METADATA_SHA_RANKS_SINGLE_9_TO_24_MULTI_9_TO_11",
+  "selection_boundaries": [
+    "Source SHA rank was locked before Wave1 GPS outcomes; Wave2 quotas were selected afterward.",
+    "SHA rank is metadata-pseudorandom conditional on the original frozen catalog, not a global wildlife probability sample.",
+    "Both source-file and GPS nonresponse remain source-specific and cannot be dropped or recoded to zero.",
+    "All three remaining multi-native source-study IDs are retained even if original records are unusable."
+  ],
+  "two_wave_combined_counts": {
+    "multi_native": 11,
+    "single_native": 24
+  },
+  "version": "RSDS_437_SHA_PRIORITY_WAVE2_19_SOURCE_SELECTION_V1",
+  "wave1_source_counts": {
+    "multi_native": 8,
+    "single_native": 8
+  },
+  "wave2_new_original_source_count": 19,
+  "wave2_new_source_counts": {
+    "multi_native": 3,
+    "single_native": 16
+  }
+}

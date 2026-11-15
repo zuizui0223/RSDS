@@ -1,0 +1,28 @@
+name: RSDS wave2 35-original-source crosswalk and meta-sensitivity provenance
+on:
+  push:
+    branches:
+      - analysis/rsds-437-wave2-original-gps-20261115
+    paths:
+      - 'research/RSDS_WAVE2_35_SOURCE_META_EVIDENCE_CROSSWALK_V1.json'
+      - 'tests/test_rsds_wave2_35_source_evidence_crosswalk_v1.py'
+      - '.github/workflows/rsds-wave2-35-source-evidence-crosswalk-v1.yml'
+  pull_request:
+    paths:
+      - 'research/RSDS_WAVE2_35_SOURCE_META_EVIDENCE_CROSSWALK_V1.json'
+      - 'tests/test_rsds_wave2_35_source_evidence_crosswalk_v1.py'
+      - '.github/workflows/rsds-wave2-35-source-evidence-crosswalk-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate_frozen_original_wave2_and_meta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify prior 16 and second 19 source identities + first original GPS and stagewise HOLD receipts
+        run: python -m unittest discover -s tests -p 'test_rsds_wave2_35_source_evidence_crosswalk_v1.py' -v

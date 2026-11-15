@@ -1,0 +1,489 @@
+{
+  "all_new_wave2_animal_GPS_events_opened": 0,
+  "human_GPS_or_position_data_retrieved": false,
+  "limits": "File names, UUIDs and MD5 hints only; original GPS file bytes/schema/animal cadence/species taxonomy not yet inspected. Preserve all provider, budget, and human-location HOLDS.",
+  "new_wave2_multi_native": 3,
+  "new_wave2_single_native": 16,
+  "old_12_ERA5_original_raw_SHA_HOLD_UNCHANGED": true,
+  "original_48_source_radiation_negative_external_replication_UNCHANGED": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "provider_file_metadata_only": true,
+  "source_rows": [
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.667"
+      ],
+      "original_file": {
+        "bitstream_uuid": "65c227e5-2315-4780-a7f6-74b194516818",
+        "bytes": 2505631,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "7c98fbcde03355622b6f9285c51c33b1"
+        },
+        "filename": "Wild pigs in Clemson Experimental Forest (South Carolina USA).csv"
+      },
+      "original_repository_study_id": "6456209836",
+      "package_uuid": "dd56d8cf-8286-404b-afa7-ddbe38a64379",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Sus scrofa"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave2_index": 0
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.41c87nh1"
+      ],
+      "original_file": null,
+      "original_repository_study_id": "444752703",
+      "package_uuid": "3c656514-be01-4e6b-ad4a-11625dbb09fc",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Columba livia"
+      ],
+      "selection_stratum": "single_native",
+      "source_hold_reason": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_status": "SOURCE_METADATA_HOLD",
+      "wave2_index": 1
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "UNIQUE_GPS_OR_TRACKING_FILENAME_ONLY",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.hg1v55ct"
+      ],
+      "original_file": {
+        "bitstream_uuid": "f003c305-15a7-4d96-ad48-674a7fe86cc1",
+        "bytes": 178418176,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "fd2424e45d37cacd7ad95c65868c5901"
+        },
+        "filename": "Tracking of Caspian Terns (Hydroprogne caspia) in the Swedish Baltic Sea 2017-2020.csv.zip"
+      },
+      "original_repository_study_id": "1575973021",
+      "package_uuid": "e4070707-8471-45f2-8e15-7ca0cd8a9ada",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Hydroprogne caspia"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave2_index": 2
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.c741t5b6"
+      ],
+      "original_file": {
+        "bitstream_uuid": "320ac450-35cc-4dff-8434-5cfc3abadd9e",
+        "bytes": 11485717,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "c3421e643f3b522cc42a22abf24b4216"
+        },
+        "filename": "Free-ranging anosmic, magnetic and control Scopoli's shearwaters.csv"
+      },
+      "original_repository_study_id": "317481491",
+      "package_uuid": "909126ab-cd8f-4c6f-98aa-99ea62f689de",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Calonectris diomedea"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave2_index": 3
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.477cd5fs"
+      ],
+      "original_file": {
+        "bitstream_uuid": "fa1cb17e-8459-49ea-8e2b-c04244bf5e08",
+        "bytes": 43080197,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "d45950f9531480f99b09e556471c52f9"
+        },
+        "filename": "Geographic barriers and pigeon homing (data from Gagliardo et al. 2021).csv"
+      },
+      "original_repository_study_id": "1338487915",
+      "package_uuid": "b18ff4b6-6bc4-4970-9d80-52d50ea807b5",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Columba livia"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave2_index": 4
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.212g53s7"
+      ],
+      "original_file": {
+        "bitstream_uuid": "154d2c96-a58e-43a7-abe8-467a95062132",
+        "bytes": 9694813,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "5e69b24bac5f6e10c6a390dd59159914"
+        },
+        "filename": "Brown pelicans in the Gulf of Mexico (data from Geary et al. 2018).csv"
+      },
+      "original_repository_study_id": "621703893",
+      "package_uuid": "a398b445-fb68-47a5-9dd9-9ca259ea2c20",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Pelecanus occidentalis"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave2_index": 5
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.714"
+      ],
+      "original_file": {
+        "bitstream_uuid": "0e310385-b9cd-46e7-9c8c-ca394ecb1ef6",
+        "bytes": 7967385,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "8ef1fd1d85d643c1033d6ee18f0ef0a4"
+        },
+        "filename": "Wyoming Bighorn Mountain Moose_part.csv"
+      },
+      "original_repository_study_id": "2591181877",
+      "package_uuid": "26a9d940-906d-490b-a87d-02be51e5e21f",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Alces alces"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave2_index": 6
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "UNIQUE_GPS_OR_TRACKING_FILENAME_ONLY",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.712"
+      ],
+      "original_file": {
+        "bitstream_uuid": "704656c2-04c9-4199-a6fe-1bdc318cf84d",
+        "bytes": 7776803,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "dc99ed5836b7c89e7889ad400ecac833"
+        },
+        "filename": "GPS tracking of cougars in Utah by UDWR (2019-2020).csv"
+      },
+      "original_repository_study_id": "2561156373",
+      "package_uuid": "80b3da4f-5e2d-4fb0-998f-121231d2ed71",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Puma concolor"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave2_index": 7
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.p9c4nc97"
+      ],
+      "original_file": {
+        "bitstream_uuid": "9bae3fd7-2fd4-4560-8265-520882f5e4e2",
+        "bytes": 27404258,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "3313530adaa05f3402d33aeeb598919d"
+        },
+        "filename": "Mallard movements in the Netherlands (data from Kleyheeg et al. 2017).csv"
+      },
+      "original_repository_study_id": "132686329",
+      "package_uuid": "64a804f1-3cb7-4d26-ba5e-3448b1a9a884",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Anas platyrhynchos"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave2_index": 8
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.289p5s77"
+      ],
+      "original_file": {
+        "bitstream_uuid": "7f4eddd5-d98c-4001-8487-ba3020c13c0d",
+        "bytes": 139910027,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "a2a5c89a07718378585a04a2a181df9e"
+        },
+        "filename": "Pet Cats Australia.csv"
+      },
+      "original_repository_study_id": "64283289",
+      "package_uuid": "0a9bcb2a-f031-42e7-8027-a87c09b30804",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Felis catus"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave2_index": 9
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.61896g63"
+      ],
+      "original_file": null,
+      "original_repository_study_id": "399246220",
+      "package_uuid": "d9267220-4c7d-4ecd-b994-fba92e425ce8",
+      "provider_original_file_list_obtained": false,
+      "registered_native_taxa": [
+        "Homo sapiens"
+      ],
+      "selection_stratum": "single_native",
+      "source_hold_reason": "NO_HUMAN_TRAJECTORY_SOURCE_ACCESS",
+      "source_status": "HUMAN_LOCATION_PRIVACY_HOLD",
+      "wave2_index": 10
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.317_2"
+      ],
+      "original_file": {
+        "bitstream_uuid": "eec8ce04-3309-4841-8b1b-b82354782319",
+        "bytes": 10385112,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "0ce501ea91bd84cb3c57cb8d5782161e"
+        },
+        "filename": "Caracal movement ecology study in Cape Town South Africa.csv"
+      },
+      "original_repository_study_id": "1832666571",
+      "package_uuid": "fd28aac2-b22f-4368-8638-59906e769ded",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Caracal caracal"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave2_index": 11
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.7vr1k987"
+      ],
+      "original_file": {
+        "bitstream_uuid": "485c621d-5177-4a88-a033-d81ed3a53d8c",
+        "bytes": 1922661,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "9a27a0c05d4282a5f9ebc65bee7bb238"
+        },
+        "filename": "Latham Alberta Wolves.csv"
+      },
+      "original_repository_study_id": "178979729",
+      "package_uuid": "c0de801a-53ce-461b-8fd3-e9e3f9731a93",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Canis lupus"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave2_index": 12
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.q23p1t84"
+      ],
+      "original_file": {
+        "bitstream_uuid": "cba24fc5-8e3f-427f-b7ea-e00c63a4dbf8",
+        "bytes": 13461718,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "8c14762b95f64ad22f0b54385ecf2ede"
+        },
+        "filename": "Black Kites at the Strait of Gibraltar (data from Marques et al. 2019).csv"
+      },
+      "original_repository_study_id": "294524920",
+      "package_uuid": "1ea09120-155c-4fc4-8a39-81df22784fac",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Milvus migrans"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave2_index": 13
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "UNIQUE_GPS_OR_TRACKING_FILENAME_ONLY",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.278"
+      ],
+      "original_file": {
+        "bitstream_uuid": "7cc2bd3f-a9d3-4529-bd6d-7fc1fc47e000",
+        "bytes": 9383514,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "e2fd92d7647c745b54191def19131570"
+        },
+        "filename": "Hammer-headed fruit bats (Hypsignathus monstrosus) in the Republic of Congo-gps.csv"
+      },
+      "original_repository_study_id": "2379775078",
+      "package_uuid": "a51b51e0-fbf2-43e2-86ae-bc41c9f53a98",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Hypsignathus monstrosus"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave2_index": 14
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.dn1b937k"
+      ],
+      "original_file": {
+        "bitstream_uuid": "b287b148-3079-44d6-add3-db0be66b16ad",
+        "bytes": 9604967,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "1ccc1a9d8797495b8f4d64f660cd8b41"
+        },
+        "filename": "Environmental vs artificial odours and pigeon homing (data from Gagliardo et al. 2018).csv"
+      },
+      "original_repository_study_id": "510147801",
+      "package_uuid": "53c28da7-6201-490b-bfcf-ca1cf83718b8",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Columba livia"
+      ],
+      "selection_stratum": "single_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave2_index": 15
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.37r2b884"
+      ],
+      "original_file": {
+        "bitstream_uuid": "a45cd4c2-afe7-45f2-ba91-06e2934d6727",
+        "bytes": 120221694,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "1be9de6d3051bc8c65b3ae28c67736e1"
+        },
+        "filename": "Vultures Acopian Center USA 2003-2016.csv"
+      },
+      "original_repository_study_id": "217784323",
+      "package_uuid": "21e96dfb-6323-4189-9039-557d6fbe34eb",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Cathartes aura",
+        "Coragyps atratus"
+      ],
+      "selection_stratum": "multi_native",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE",
+      "wave2_index": 16
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "UNIQUE_GPS_OR_TRACKING_FILENAME_ONLY",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.666"
+      ],
+      "original_file": null,
+      "original_repository_study_id": "24797204",
+      "package_uuid": "1777d9ed-d62e-480c-83d7-82476ba09c5c",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Cathartes aura",
+        "Coragyps atratus"
+      ],
+      "selection_stratum": "multi_native",
+      "source_hold_reason": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_status": "SOURCE_METADATA_HOLD",
+      "wave2_index": 17
+    },
+    {
+      "animal_GPS_events_opened": 0,
+      "candidate_file_count_after_filename_rules": 1,
+      "file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.6gr485fk"
+      ],
+      "original_file": null,
+      "original_repository_study_id": "2928116",
+      "package_uuid": "9eaf99f2-9a3b-4b48-a680-aa74542e162a",
+      "provider_original_file_list_obtained": true,
+      "registered_native_taxa": [
+        "Chelonoidis donfaustoi",
+        "Chelonoidis hoodensis",
+        "Chelonoidis porteri"
+      ],
+      "selection_stratum": "multi_native",
+      "source_hold_reason": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_status": "SOURCE_METADATA_HOLD",
+      "wave2_index": 18
+    }
+  ],
+  "source_status_counts": {
+    "HUMAN_LOCATION_PRIVACY_HOLD": 1,
+    "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE": 15,
+    "SOURCE_METADATA_HOLD": 3
+  },
+  "source_study_slots": 19,
+  "stage": "AFTER_SHA_SOURCE_SELECTION_BEFORE_ORIGINAL_ANIMAL_GPS_OUTCOMES",
+  "version": "RSDS_437_WAVE2_19_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1",
+  "wave2_source_selection_git_blob": "516fafc85ade5f953b9f8c697bdcc472d453fd0c"
+}
