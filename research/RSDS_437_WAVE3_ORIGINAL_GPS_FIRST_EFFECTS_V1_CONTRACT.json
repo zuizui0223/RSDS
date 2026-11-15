@@ -1,0 +1,33 @@
+{
+  "version": "RSDS_437_WAVE3_16_ORIGINAL_GPS_FIRST_EFFECTS_CONTRACT_V1",
+  "date": "2026-11-15",
+  "stage": "AFTER_WAVE3_SOURCE_ID_AND_FILE_MD5_SHA_FREEZE_BEFORE_NEW_WAVE3_GPS_EVENTS",
+  "original_437_catalog_snapshot_date": "2026-10-19",
+  "original_new_wave3_rank_range": [
+    25,
+    40
+  ],
+  "previously_selected_source_studies": 35,
+  "wave3_source_slots": 16,
+  "wave3_file_metadata_admissible": 11,
+  "wave3_source_file_metadata_HOLD": 5,
+  "source_only_selection_path": "research/RSDS_437_WAVE3_16_SOURCE_METADATA_ONLY_FIRST_RESULT_20261115.json",
+  "source_only_selection_git_blob": "a5a11c75a08df99755d3f6d560d111ab4904375b",
+  "source_provider_file_metadata_path": "research/RSDS_437_WAVE3_16_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json",
+  "source_provider_file_metadata_git_blob": "02253b1743500bc51fc166b249b7d3660ed9610a",
+  "original_previous_35_source_result_path": "research/RSDS_437_WAVE1_PLUS_WAVE2_35_ORIGINAL_GPS_FIRST_META_RESULT_20261115.json",
+  "original_previous_35_source_result_git_blob": "9b02774f7c31d29b2eec5039a80431a895dccb36",
+  "previous_35_source_measurability": "10/35 source-complete all-native q, 8/35 complete daylength, 7/10 positive and 3/10 negative among source-complete q respondents; nonresponse must stay missing not zero",
+  "original_file_max_bytes": 200000000,
+  "original_read_max_CSV_rows": 2000000,
+  "original_provider_MD5_check": "Require the identical original provider bitstream UUID, bytes and MD5 as original pre-event source-file metadata receipt. Verify downloaded original bytes with MD5 before any native GPS event parsing.",
+  "all_source_native_q": "One original registered native taxon per Wave3 source; no source substitution. From previous RSDS one_taxon: choose max one GPS fix per UTC-hour, adjacent 0.5–2h, same solar daypart/date and plausible <=60 km/h great-circle GPS speed; >=3 DAY and >=3 NIGHT steps per tag solar day, >=10 paired solar days per original tag-year, >=5 original independent tagged individuals for original q and daylength. Keep original equal-tag q estimand and original bootstrap confidence descriptions unchanged.",
+  "q_definition": "Source-native q is original animal-equal mean of NIGHT minus DAY log1p observed GPS straight-line step speed (not actual duration of nocturnality); q null is not imputed for missing sources.",
+  "daylength_definition": "Source-native within-original-animal-year q~astronomical-daylength slope; requires original source support; not causal sunlight or measured irradiance.",
+  "source_gps_privacy": "Any human-sourced identity is immutable no-access HOLD; never download original human files/GPS/animal IDs. Original animal GPS coordinates, original exact dates, tag IDs, tracks or individual effects may not leave ephemeral Actions runner; publish source-only aggregate effects/HOLD.",
+  "source_study_unit": "Source original repository study ID/DOI, not every GPS fix, original tag, or taxon, is the unit of independent source replication.",
+  "sample_inference": "Wave3 quota decided after Wave1 and Wave2 outcomes. New actual 16 source identities were fixed via original source-only SHA ranks and metadata before Wave3 first GPS events. Original Movebank metadata priority is not a global probability wildlife sample and includes managed/domestic cohorts unless independently screened blind to results.",
+  "previous_48_signed_irradiance_external": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "previous_12_ERA5_original_raw_SHA_HOLD": true,
+  "new_wave3_GPS_event_rows_opened_prior_to_contract": 0
+}
