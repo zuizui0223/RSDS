@@ -15,7 +15,41 @@ from pathlib import Path
 from statistics import mean,stdev
 
 from scripts.rsds_437_systematic_source_frame_v1 import HERE,pinned
-from scripts.run_rsds_437_wave2_original_gps_first_effects_v1 import freeze_original
+from scripts.rsds_437_wave2_original_file_metadata_v1 import freeze as frozen_wave2_sources
+
+# Aggregate-only validation reads pinned source manifests, NEVER GPS parsers.
+# This module intentionally has no numpy/source-event dependency.
+NEW_CONTRACT=("research/RSDS_437_WAVE2_ORIGINAL_GPS_FIRST_EFFECTS_V1_CONTRACT.json",
+              "89e9b39aa107b76aa280f3dd04674713e7dbb9b1")
+
+def freeze_original():
+    c=pinned(*NEW_CONTRACT)
+    if (c["version"]!="RSDS_437_WAVE2_19_ORIGINAL_GPS_FIRST_EFFECTS_CONTRACT_V1"
+        or c["wave2_source_slots"]!=19
+        or c["wave2_file_metadata_admissible"]!=15
+        or c["wave2_file_size_HOLD"]!=3
+        or c["wave2_human_privacy_HOLD"]!=1
+        or c["historical_48_signed_irradiance_external"]!=
+             "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
+        or c["historical_12_ERA5_original_raw_SHA_HOLD"] is not True):
+        raise ValueError("Original source-wave2 study meta contract changed")
+    roster=frozen_wave2_sources()
+    d=pinned(c["source_provider_file_metadata_path"],
+             c["source_provider_file_metadata_git_blob"])
+    if (len(roster)!=19 or len(d["source_rows"])!=19
+        or d["source_status_counts"]!={
+            "HUMAN_LOCATION_PRIVACY_HOLD":1,
+            "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE":15,
+            "SOURCE_METADATA_HOLD":3}
+        or d["all_new_wave2_animal_GPS_events_opened"]!=0):
+        raise ValueError("Original source identity/metadata HOLD changed")
+    for a,b in zip(roster,d["source_rows"]):
+        if (a["wave2_index"]!=b["wave2_index"] or
+            a["package_uuid"]!=b["package_uuid"] or
+            a["original_repository_study_id"]!=b["original_repository_study_id"] or
+            a["scientific_name_labels"]!=b["registered_native_taxa"]):
+            raise ValueError("Wave2 original source taxonomy/ID pre-event changed")
+    return c,d["source_rows"]
 
 N={"single_native":109,"multi_native":11}
 OLD_COUNT={"single_native":8,"multi_native":8}
