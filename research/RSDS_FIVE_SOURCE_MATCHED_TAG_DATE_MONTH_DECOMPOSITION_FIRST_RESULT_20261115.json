@@ -1,0 +1,509 @@
+{
+  "all_five_original_study_source_native_matched_month_results_including_HOLD": [
+    {
+      "all_contrasts_same_original_tag_and_date_support": true,
+      "first_full_source_native_slope": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 50,
+        "point_sign": "NEGATIVE",
+        "q": -0.026533756900550577,
+        "source_tag_bootstrap95": [
+          -0.04777688930352582,
+          -0.004772257106868325
+        ]
+      },
+      "first_month_FE_source_slope": {
+        "mean_slope_per_hour": -0.01816584520493334,
+        "nominal_interval_sign": "INCLUDES_ZERO",
+        "original_tag_bootstrap95": [
+          -0.06496341244610299,
+          0.025732155285725145
+        ],
+        "status": "ESTIMABLE",
+        "tagged_animals_support": 37
+      },
+      "original_DOI": "10.5441/001/1.fk899541",
+      "same_tag_date_fixed_reference_latitude_month_adjusted": {
+        "mean": -0.017330427564915665,
+        "nominal_sign": "INCLUDES_ZERO",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.06556956559709816,
+          0.028568709635190127
+        ],
+        "tag_n": 37
+      },
+      "same_tag_date_fixed_reference_latitude_month_minus_raw": {
+        "mean": 0.00023160968231914712,
+        "nominal_sign": "INCLUDES_ZERO",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.043655314993521294,
+          0.05071083265443669
+        ],
+        "tag_n": 37
+      },
+      "same_tag_date_fixed_reference_latitude_unadjusted": {
+        "mean": -0.01756203724723481,
+        "nominal_sign": "INCLUDES_ZERO",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.040828136409575354,
+          0.004806772871211548
+        ],
+        "tag_n": 37
+      },
+      "same_tag_date_month_adjusted": {
+        "mean": -0.01816584520493334,
+        "nominal_sign": "INCLUDES_ZERO",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.06567301548416449,
+          0.025879370109747276
+        ],
+        "tag_n": 37
+      },
+      "same_tag_date_month_minus_raw": {
+        "mean": -0.001120488754534462,
+        "nominal_sign": "INCLUDES_ZERO",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.0435761223318698,
+          0.04641501466036271
+        ],
+        "tag_n": 37
+      },
+      "same_tag_date_unadjusted": {
+        "mean": -0.017045356450398882,
+        "nominal_sign": "INCLUDES_ZERO",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.03959989424391769,
+          0.005378088112880999
+        ],
+        "tag_n": 37
+      },
+      "source_hold_stage": null,
+      "source_hold_type": null,
+      "source_index": 0,
+      "source_key": "goose_old_grazing",
+      "source_native_species": "Anser albifrons",
+      "source_qualified_distinct_original_tags": 37,
+      "source_status": "MATCHED_SUPPORT_PAIRED_SOURCE_ESTIMABLE"
+    },
+    {
+      "all_contrasts_same_original_tag_and_date_support": true,
+      "first_full_source_native_slope": {
+        "available": true,
+        "nominal_source_CI_sign": "POSITIVE",
+        "original_source_tagged_animals": 1683,
+        "point_sign": "POSITIVE",
+        "q": 0.005619415769068772,
+        "source_tag_bootstrap95": [
+          0.004388078182072968,
+          0.006920966097037151
+        ]
+      },
+      "first_month_FE_source_slope": {
+        "mean_slope_per_hour": 0.003151813474043279,
+        "nominal_interval_sign": "POSITIVE",
+        "original_tag_bootstrap95": [
+          0.0017766152785337593,
+          0.004565200394373042
+        ],
+        "status": "ESTIMABLE",
+        "tagged_animals_support": 1647
+      },
+      "original_DOI": "10.5441/001/1.711",
+      "same_tag_date_fixed_reference_latitude_month_adjusted": {
+        "mean": 0.0031214548053066483,
+        "nominal_sign": "POSITIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0017199638105191064,
+          0.004543854367396146
+        ],
+        "tag_n": 1647
+      },
+      "same_tag_date_fixed_reference_latitude_month_minus_raw": {
+        "mean": -0.0022585579800975,
+        "nominal_sign": "NEGATIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.0035537915947974306,
+          -0.000974057441227167
+        ],
+        "tag_n": 1647
+      },
+      "same_tag_date_fixed_reference_latitude_unadjusted": {
+        "mean": 0.005380012785404148,
+        "nominal_sign": "POSITIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.004636514743389689,
+          0.006085511110396865
+        ],
+        "tag_n": 1647
+      },
+      "same_tag_date_month_adjusted": {
+        "mean": 0.003151813474043279,
+        "nominal_sign": "POSITIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0017327210267006285,
+          0.004588153794034732
+        ],
+        "tag_n": 1647
+      },
+      "same_tag_date_month_minus_raw": {
+        "mean": -0.002385794895030732,
+        "nominal_sign": "NEGATIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.0036991831759105873,
+          -0.0010693845353666339
+        ],
+        "tag_n": 1647
+      },
+      "same_tag_date_unadjusted": {
+        "mean": 0.005537608369074011,
+        "nominal_sign": "POSITIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.004779156091040719,
+          0.006258154350010749
+        ],
+        "tag_n": 1647
+      },
+      "source_hold_stage": null,
+      "source_hold_type": null,
+      "source_index": 1,
+      "source_key": "mule_old_utah",
+      "source_native_species": "Odocoileus hemionus",
+      "source_qualified_distinct_original_tags": 1647,
+      "source_status": "MATCHED_SUPPORT_PAIRED_SOURCE_ESTIMABLE"
+    },
+    {
+      "all_contrasts_same_original_tag_and_date_support": true,
+      "first_full_source_native_slope": {
+        "available": true,
+        "nominal_source_CI_sign": "POSITIVE",
+        "original_source_tagged_animals": 118,
+        "point_sign": "POSITIVE",
+        "q": 0.005538249061142167,
+        "source_tag_bootstrap95": [
+          0.004101632821224659,
+          0.006972859886325625
+        ]
+      },
+      "first_month_FE_source_slope": {
+        "mean_slope_per_hour": 0.008806036416714685,
+        "nominal_interval_sign": "POSITIVE",
+        "original_tag_bootstrap95": [
+          0.005574531115317263,
+          0.012101802621646313
+        ],
+        "status": "ESTIMABLE",
+        "tagged_animals_support": 115
+      },
+      "original_DOI": "10.5441/001/1.703",
+      "same_tag_date_fixed_reference_latitude_month_adjusted": {
+        "mean": 0.008741354259359799,
+        "nominal_sign": "POSITIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0057163327213122,
+          0.012168029668664506
+        ],
+        "tag_n": 115
+      },
+      "same_tag_date_fixed_reference_latitude_month_minus_raw": {
+        "mean": 0.0033649397552716833,
+        "nominal_sign": "POSITIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0007086059747258468,
+          0.00621172535057477
+        ],
+        "tag_n": 115
+      },
+      "same_tag_date_fixed_reference_latitude_unadjusted": {
+        "mean": 0.005376414504088116,
+        "nominal_sign": "POSITIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.004155338112393576,
+          0.006740601288947299
+        ],
+        "tag_n": 115
+      },
+      "same_tag_date_month_adjusted": {
+        "mean": 0.008806036416714685,
+        "nominal_sign": "POSITIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.005763793428175309,
+          0.012240804113374694
+        ],
+        "tag_n": 115
+      },
+      "same_tag_date_month_minus_raw": {
+        "mean": 0.0034151749528906644,
+        "nominal_sign": "POSITIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.000749801090438698,
+          0.006287957630180928
+        ],
+        "tag_n": 115
+      },
+      "same_tag_date_unadjusted": {
+        "mean": 0.005390861463824019,
+        "nominal_sign": "POSITIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.004175840901979231,
+          0.006750082242743467
+        ],
+        "tag_n": 115
+      },
+      "source_hold_stage": null,
+      "source_hold_type": null,
+      "source_index": 2,
+      "source_key": "mule_old_wyoming",
+      "source_native_species": "Odocoileus hemionus",
+      "source_qualified_distinct_original_tags": 115,
+      "source_status": "MATCHED_SUPPORT_PAIRED_SOURCE_ESTIMABLE"
+    },
+    {
+      "all_contrasts_same_original_tag_and_date_support": true,
+      "first_full_source_native_slope": {
+        "available": true,
+        "nominal_source_CI_sign": "POSITIVE",
+        "original_source_tagged_animals": 5,
+        "point_sign": "POSITIVE",
+        "q": 0.023927670839973866,
+        "source_tag_bootstrap95": [
+          0.008714128881371252,
+          0.04019790340859443
+        ]
+      },
+      "first_month_FE_source_slope": {
+        "mean_slope_per_hour": 0.01159397937941888,
+        "nominal_interval_sign": "INCLUDES_ZERO",
+        "original_tag_bootstrap95": [
+          -0.041146457885169845,
+          0.04778047530980586
+        ],
+        "status": "ESTIMABLE",
+        "tagged_animals_support": 5
+      },
+      "original_DOI": "10.5441/001/1.46b0mq21",
+      "same_tag_date_fixed_reference_latitude_month_adjusted": {
+        "mean": 0.01421562552782356,
+        "nominal_sign": "INCLUDES_ZERO",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.02307168127851835,
+          0.05372174130520214
+        ],
+        "tag_n": 5
+      },
+      "same_tag_date_fixed_reference_latitude_month_minus_raw": {
+        "mean": -0.008670023685943492,
+        "nominal_sign": "INCLUDES_ZERO",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.054804036243315854,
+          0.034014009497089645
+        ],
+        "tag_n": 5
+      },
+      "same_tag_date_fixed_reference_latitude_unadjusted": {
+        "mean": 0.02288564921376705,
+        "nominal_sign": "POSITIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.006792937154341734,
+          0.039497422104554245
+        ],
+        "tag_n": 5
+      },
+      "same_tag_date_month_adjusted": {
+        "mean": 0.01159397937941888,
+        "nominal_sign": "INCLUDES_ZERO",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.041146457885169845,
+          0.04778047530980586
+        ],
+        "tag_n": 5
+      },
+      "same_tag_date_month_minus_raw": {
+        "mean": -0.012333691460554984,
+        "nominal_sign": "INCLUDES_ZERO",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.05829161323916465,
+          0.025141363481913908
+        ],
+        "tag_n": 5
+      },
+      "same_tag_date_unadjusted": {
+        "mean": 0.023927670839973866,
+        "nominal_sign": "POSITIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.00988220358447624,
+          0.03930241307524857
+        ],
+        "tag_n": 5
+      },
+      "source_hold_stage": null,
+      "source_hold_type": null,
+      "source_index": 3,
+      "source_key": "goose_new_pannonic",
+      "source_native_species": "Anser albifrons",
+      "source_qualified_distinct_original_tags": 5,
+      "source_status": "MATCHED_SUPPORT_PAIRED_SOURCE_ESTIMABLE"
+    },
+    {
+      "all_contrasts_same_original_tag_and_date_support": true,
+      "first_full_source_native_slope": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 133,
+        "point_sign": "NEGATIVE",
+        "q": -0.003919925827490663,
+        "source_tag_bootstrap95": [
+          -0.00894405015815926,
+          -0.0003309853677428535
+        ]
+      },
+      "first_month_FE_source_slope": {
+        "mean_slope_per_hour": -0.002149390748482319,
+        "nominal_interval_sign": "INCLUDES_ZERO",
+        "original_tag_bootstrap95": [
+          -0.00673730275308394,
+          0.0026462264370907236
+        ],
+        "status": "ESTIMABLE",
+        "tagged_animals_support": 131
+      },
+      "original_DOI": "10.5441/001/1.708",
+      "same_tag_date_fixed_reference_latitude_month_adjusted": {
+        "mean": -0.00282471908579785,
+        "nominal_sign": "INCLUDES_ZERO",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.007526314770979289,
+          0.001754149094880581
+        ],
+        "tag_n": 131
+      },
+      "same_tag_date_fixed_reference_latitude_month_minus_raw": {
+        "mean": 0.0013921168011871694,
+        "nominal_sign": "INCLUDES_ZERO",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.0030358469973239613,
+          0.0056493271595665475
+        ],
+        "tag_n": 131
+      },
+      "same_tag_date_fixed_reference_latitude_unadjusted": {
+        "mean": -0.004216835886985019,
+        "nominal_sign": "NEGATIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.008701764012777027,
+          -0.001148554733161404
+        ],
+        "tag_n": 131
+      },
+      "same_tag_date_month_adjusted": {
+        "mean": -0.002149390748482319,
+        "nominal_sign": "INCLUDES_ZERO",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.006784847167636152,
+          0.0024480022955761884
+        ],
+        "tag_n": 131
+      },
+      "same_tag_date_month_minus_raw": {
+        "mean": 0.0019482155291553822,
+        "nominal_sign": "INCLUDES_ZERO",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.0024653602008199234,
+          0.006218009393163616
+        ],
+        "tag_n": 131
+      },
+      "same_tag_date_unadjusted": {
+        "mean": -0.0040976062776377,
+        "nominal_sign": "NEGATIVE",
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.008620444636611185,
+          -0.0009945163470649837
+        ],
+        "tag_n": 131
+      },
+      "source_hold_stage": null,
+      "source_hold_type": null,
+      "source_index": 4,
+      "source_key": "mule_new_sublette",
+      "source_native_species": "Odocoileus hemionus",
+      "source_qualified_distinct_original_tags": 131,
+      "source_status": "MATCHED_SUPPORT_PAIRED_SOURCE_ESTIMABLE"
+    }
+  ],
+  "all_original_source_tags_and_dates_held_identical_within_paired_comparison": true,
+  "independent_populations_and_recruitment_not_verified": true,
+  "no_original_tag_IDs_coordinates_dates_individual_slopes_or_bootstrap_draws_exported": true,
+  "original_first_month_result_git_blob_unchanged": "27643d9c69ca6683edde5ee75945f6a4fb0eb413",
+  "original_same_species_matched_support_summary": {
+    "Anser albifrons": {
+      "original_source_studies": 2,
+      "paired_adjustment_nominal_signs_by_source": {
+        "goose_new_pannonic": "INCLUDES_ZERO",
+        "goose_old_grazing": "INCLUDES_ZERO"
+      },
+      "paired_month_support_estimable_studies": 2,
+      "tag_population_overlap_and_sampling_comparability_unresolved": true,
+      "within_month_source_nominal_signs_by_source": {
+        "goose_new_pannonic": "INCLUDES_ZERO",
+        "goose_old_grazing": "INCLUDES_ZERO"
+      }
+    },
+    "Odocoileus hemionus": {
+      "original_source_studies": 3,
+      "paired_adjustment_nominal_signs_by_source": {
+        "mule_new_sublette": "INCLUDES_ZERO",
+        "mule_old_utah": "NEGATIVE",
+        "mule_old_wyoming": "POSITIVE"
+      },
+      "paired_month_support_estimable_studies": 3,
+      "tag_population_overlap_and_sampling_comparability_unresolved": true,
+      "within_month_source_nominal_signs_by_source": {
+        "mule_new_sublette": "INCLUDES_ZERO",
+        "mule_old_utah": "POSITIVE",
+        "mule_old_wyoming": "POSITIVE"
+      }
+    }
+  },
+  "original_source_specific_tag_bootstrap_not_world_meta_CI": true,
+  "original_source_study_DOI_total": 5,
+  "original_species_target_count": 2,
+  "post_outcome_method_diagnostic_not_causal_daylength_effect": true,
+  "previous_12_source_ERA5_raw_SHA_HOLD_UNCHANGED": true,
+  "previous_48_source_signed_solar_heading_negative_replication_UNCHANGED": true,
+  "source_status_counts": {
+    "MATCHED_SUPPORT_PAIRED_SOURCE_ESTIMABLE": 5
+  },
+  "stage": "POSTHOC_SOURCE_NATIVE_MATCHED_ORIGINAL_TAG_DATE_SUPPORT_MONTH_DECOMPOSITION",
+  "version": "RSDS_FIVE_SOURCE_SAME_TAG_MONTH_MATCHED_META_FIRST_V1"
+}
