@@ -40,7 +40,8 @@ class SixFileMetadataBeforeGPS(unittest.TestCase):
             r=m.inspect(self.sources[i],self.prior[i])
         self.assertEqual(r["source_metadata_status"],"ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE")
         self.assertEqual(r["original_file"]["bytes"],15000000)
-        self.assertIn("PRIOR",r["prior_original_source_exposure_status"])
+        self.assertEqual(r["prior_original_source_exposure_status"],
+                         "KNOWN_PREVIOUS_ORIGINAL_GPS_DATA_ANALYZED_FOR_SOLAR_DIRECTION")
 
     def test_provider_overbudget_remains_source_HOLD(self):
         i=next(i for i,x in enumerate(self.prior) if x["prior_data_exposure_status"]==
