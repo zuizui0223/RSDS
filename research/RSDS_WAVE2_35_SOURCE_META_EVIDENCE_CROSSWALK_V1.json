@@ -1,0 +1,135 @@
+{
+  "version": "RSDS_WAVE2_35_SOURCE_ORIGINAL_META_METHOD_EVIDENCE_CROSSWALK_V1",
+  "date": "2026-11-15",
+  "stage": "POST_FIRST_SOURCE_OUTCOME_MANUSCRIPT_CROSSWALK_NO_NEW_GPS_OR_CONFIRMATORY_RECLASSIFICATION",
+  "source_blobs": {
+    "original_wave1_first_GPS": {
+      "path": "research/RSDS_437_WAVE1_16_SOURCE_GPS_FIRST_ALL_RESULTS_20261115.json",
+      "git_blob_sha": "57029f30b65991118325c7d0cec1d8b3a36f4427"
+    },
+    "wave2_pre_event_source_contract": {
+      "path": "research/RSDS_437_SOURCE_FRAME_WAVE2_PRE_EVENT_CONTRACT_V1.json",
+      "git_blob_sha": "ac06a1c9d6574aab8d6d7eb19de01ef799436d9f"
+    },
+    "wave2_19_SHA_source_selection": {
+      "path": "research/RSDS_437_WAVE2_19_SOURCE_SELECTION_PRE_EVENT_FIRST_V1.json",
+      "git_blob_sha": "516fafc85ade5f953b9f8c697bdcc472d453fd0c"
+    },
+    "wave2_19_original_file_first_metadata": {
+      "path": "research/RSDS_437_WAVE2_19_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json",
+      "git_blob_sha": "b36fb7050c72bc8797ce1abf19b8f0b58769b0d2"
+    },
+    "wave2_native_effects_contract": {
+      "path": "research/RSDS_437_WAVE2_ORIGINAL_GPS_FIRST_EFFECTS_V1_CONTRACT.json",
+      "git_blob_sha": "699ee988923a9c13b336df57d94290f2a102545b"
+    },
+    "original_first_35_source_meta": {
+      "path": "research/RSDS_437_WAVE1_PLUS_WAVE2_35_ORIGINAL_GPS_FIRST_META_RESULT_20261115.json",
+      "git_blob_sha": "9b02774f7c31d29b2eec5039a80431a895dccb36",
+      "source_raw_json_sha256": "96a34f572ad8109e2dab5ac28202faceb6b7750724d33b96b9ab94dbdd16f48d"
+    },
+    "study_source_sign_fragility_first": {
+      "path": "research/RSDS_437_35_SOURCE_Q_SIGN_FRAGILITY_FIRST_RESULT_20261115.json",
+      "git_blob_sha": "e603fe08a904e84d2e5bf9666536b1db66ff1a7b",
+      "source_raw_json_sha256": "6d36238a643fc5d1f7dc4add73c696e6cc44369b0351b60b2a2ebe5fcb386d32"
+    },
+    "manuscript_result_commentary": {
+      "path": "docs/RSDS_35_SOURCE_ORIGINAL_META_SELECTION_AND_SIGN_FRAGILITY_20261115.md",
+      "git_blob_sha": "6bb78bddfe3d5837256399db79e98aa2e918cb8a"
+    }
+  },
+  "original_ci_order": [
+    {
+      "stage": "source_selection",
+      "run_id": 43691550739
+    },
+    {
+      "stage": "original_provider_file_metadata",
+      "run_id": 43691736136
+    },
+    {
+      "stage": "first_original_19_GPS_and_35_meta",
+      "run_id": 43692435152,
+      "artifact_id": 14153355182
+    },
+    {
+      "stage": "first_35_meta_sha_freeze",
+      "run_id": 43693018390
+    },
+    {
+      "stage": "source_group_sign_fragility",
+      "run_id": 43693286399,
+      "artifact_id": 14152894635
+    },
+    {
+      "stage": "first_sign_sensitivity_sha_freeze",
+      "run_id": 43693427256
+    }
+  ],
+  "exact_denominators": {
+    "original_catalog_packages": 437,
+    "GPS_GNSS_candidates": 259,
+    "metadata_priority_packages": 120,
+    "wave1_source_studies": 16,
+    "wave2_source_studies": 19,
+    "total_source_studies": 35,
+    "total_registered_native_study_rows": 50,
+    "wave2_original_provider_files_MD5_under_cap": 15,
+    "wave2_source_file_budget_HOLD": 3,
+    "wave2_human_location_privacy_HOLD": 1,
+    "wave2_original_source_wide_GPS_HOLD": 1,
+    "wave2_GPS_parsed_but_no_native_q": 7,
+    "wave2_any_native_q_supported": 7,
+    "wave2_source_complete_q_supported": 6,
+    "wave2_multi_native_month_covariance_supported": 0,
+    "cumulative_source_complete_q": 10,
+    "cumulative_source_complete_daylength": 8,
+    "cumulative_at_least_one_native_q": 13,
+    "cumulative_multi_native_joint_month_covariance": 0,
+    "source_metadata_unselected_remaining": 85
+  },
+  "results": {
+    "first_wave_respondent_only_stratum_adjusted_q": -0.0477935014187846,
+    "combined_35_respondent_only_stratum_adjusted_q": 0.0756846129419663,
+    "whole_source_q_signs": {
+      "positive": 7,
+      "negative": 3,
+      "zero": 0
+    },
+    "single_DOI_leave_out_respondent_mean_range": [
+      0.021550332593264866,
+      0.1070515422845755
+    ],
+    "two_DOI_leave_out_respondent_mean_range": [
+      -0.004395193192772982,
+      0.13299706807061334
+    ],
+    "source_q_missing_effect_conditional_observed_range": [
+      -0.09501132019904394,
+      0.35688378182026836
+    ],
+    "cumulative_single_native_complete_q": 8,
+    "cumulative_single_native_observed": 24,
+    "cumulative_multi_native_complete_q": 2,
+    "cumulative_multi_native_metadata_census": 11,
+    "pseudo_SHA_frame_weighted_measurability": 0.3194444444444445,
+    "strict_finite_120_metadata_frame_measurability_bounds": [
+      0.08333333333333333,
+      0.7916666666666666
+    ]
+  },
+  "claim_guards": [
+    "The 120 source packages come from one fixed public repository snapshot, not a random population sample of global wildlife.",
+    "The wave2 quota was determined after prior wave1 first outcomes although within-stratum source identities use an older SHA rank; no assertion of fully prospective whole two-wave experiment.",
+    "Homo sapiens source is source-identity privacy HOLD without event/location access; do not impute it as animal behavior.",
+    "HOLD and partially supported native taxa are counted in original 35 source denominator, never zeroed or replaced.",
+    "Finite-frame measurability proportions are descriptive SHA-hash design analogues, not formally randomized design-based population guarantees.",
+    "Source-level respondent q and its sign reversal are conditioned on measurement support; source measurement dropout likely informative.",
+    "Full-source original GPS q and source shared-calendar month q differ; do not pool original PR23 and PR24 effects without a common estimand.",
+    "Source q measures observed night minus day GPS straight-line displacement, not true animal activity fraction, solar compass or causality.",
+    "Leave-two DOI negative case was selected after effects were opened, purely a sensitivity diagnostic.",
+    "Original 48-source held-out negative sunlight-direction effect remains NOT REPLICATED and prior 12 ERA5 original raw-SHA HOLD remains HOLD."
+  ],
+  "historic_external_48_signed_shortwave": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "historic_ERA5_original_raw_SHA_12_HOLD": true
+}
