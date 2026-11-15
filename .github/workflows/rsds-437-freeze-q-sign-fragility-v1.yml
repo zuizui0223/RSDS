@@ -1,0 +1,62 @@
+name: RSDS freeze 35-source sign-fragility evidence without reopening GPS
+on:
+  push:
+    branches:
+      - analysis/rsds-437-wave2-original-gps-20261115
+    paths:
+      - '.github/workflows/rsds-437-freeze-q-sign-fragility-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  commit_first_35_source_sensitivity_by_digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download successful frozen-parent sensitivity artifact only, no GPS
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 43693286399
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          name: rsds-35-source-measurability-q-meta-sign-fragility-first-v1
+          path: outputs/first_method_result
+      - name: Verify exact first source-fragility JSON bytes and original null endpoints
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp outputs/first_method_result/rsds_437_q_source_measurability_and_sign_fragility_v1.json research/RSDS_437_35_SOURCE_Q_SIGN_FRAGILITY_FIRST_RESULT_20261115.json
+          echo "6d36238a643fc5d1f7dc4add73c696e6cc44369b0351b60b2a2ebe5fcb386d32  research/RSDS_437_35_SOURCE_Q_SIGN_FRAGILITY_FIRST_RESULT_20261115.json" | sha256sum -c -
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('research/RSDS_437_35_SOURCE_Q_SIGN_FRAGILITY_FIRST_RESULT_20261115.json').read_text())
+          assert d['source_study_attrition']['selected_original_source_studies']==35
+          assert d['source_study_attrition']['source_complete_all_registered_native_q']==10
+          assert d['source_study_attrition']['source_complete_all_native_daylength']==8
+          assert d['source_study_attrition']['multi_native_same_calendar_month_covariance_estimated']==0
+          assert d['response_only_poststratified_q']['sign_reversal_after_wave2_sources'] is True
+          assert d['response_only_poststratified_q']['leave_two_sensitivity_count']==44
+          assert d['old_48_source_external_solar_direction_negative_nonreplicated'] is True
+          assert d['old_12_ERA5_raw_json_source_hold'] is True
+          print('FIRST_SOURCE_GROUP_META_SENSITIVITY_SHA_LOCKED')
+          PY
+      - name: Commit only the frozen meta-source sensitivity JSON
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_437_35_SOURCE_Q_SIGN_FRAGILITY_FIRST_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze 35-source q-selection sign reversal and DOI-level LOO sensitivity"
+            git fetch origin analysis/rsds-437-wave2-original-gps-20261115
+            git rebase origin/analysis/rsds-437-wave2-original-gps-20261115
+            git push origin HEAD:analysis/rsds-437-wave2-original-gps-20261115
+          fi
