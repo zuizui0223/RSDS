@@ -1,0 +1,39 @@
+{
+  "version": "RSDS_SIX_SAME_SPECIES_TARGETED_FOLLOWUP_ORIGINAL_GPS_Q_V1_CONTRACT",
+  "date": "2026-11-15",
+  "stage": "BEFORE_NEW_TARGET_SOURCE_Q_ORIGINAL_GPS_EVENT_ACCESS_AFTER_SIX_SOURCE_IDS_MD5_FILE_RECEIPT",
+  "selection_receipt_path": "research/RSDS_SIX_SAME_SPECIES_FOLLOWUP_ORIGINAL_SOURCE_ONLY_FIRST_RESULT_20261115.json",
+  "selection_receipt_git_blob": "1315b435c40b59831a643e35e9b7f9063879673b",
+  "prior_source_exposure_receipt_path": "research/RSDS_SIX_FOLLOWUP_PRIOR_ORIGINAL_SOURCE_EXPOSURE_FIRST_RESULT_20261115.json",
+  "prior_source_exposure_receipt_git_blob": "51c078c0fc9f1353de4042ec3befdb3aa7b97f35",
+  "original_provider_file_receipt_path": "research/RSDS_SIX_FOLLOWUP_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json",
+  "original_provider_file_receipt_git_blob": "4ec2f3654a65adbc2c580b5f5e0733b3d2ffa036",
+  "original_previous_63_source_native_atlas_path": "research/RSDS_ORIGINAL_SOURCE_NATIVE_SAME_SPECIES_CROSS_STUDY_FIRST_RESULT_20261115.json",
+  "original_previous_63_source_native_atlas_git_blob": "0cb517ae48d80e503cd2ed5acf150abc047a4352",
+  "source_candidates_original": 6,
+  "source_original_file_MD5_admissible": 4,
+  "source_original_file_HOLD": 1,
+  "prior_original_source_metadata_HOLD_preserved": 1,
+  "source_q_primary_prediction_sign_by_DOI": {
+    "10.5441/001/1.46b0mq21": "NEGATIVE",
+    "10.5441/001/1.708": "NEGATIVE",
+    "10.5441/001/1.72hh609t": "POSITIVE",
+    "10.5441/001/1.ps244r11": "NEGATIVE"
+  },
+  "previous_original_GPS_source_already_analyzed_for_solar_azimuth": [
+    "10.5441/001/1.72hh609t"
+  ],
+  "original_source_file_max_bytes": 200000000,
+  "original_read_max_CSV_rows": 2000000,
+  "original_q_method": "Exact same original tag-level one_taxon: at most one original GPS location per original UTC hour per tagged individual, adjacent 0.5–2 h, same astronomical solar date/daypart across start/mid/end, great-circle finite speed <=60km/h, >=3 original DAY and NIGHT intervals on each original tag solar date, >=10 paired dates per original tag-year, >=5 independently tracked original tagged animals; q = mean tagged NIGHT−DAY log1p median original step speed; untouched original individual-bootstrap 95% rule.",
+  "source_original_Md5_policy": "An original provider file is accessed only if its original pre-q bitstream UUID, exact byte count and MD5 exactly match the frozen provider metadata; MD5 of downloaded original bytes must be verified before any native GPS parse.",
+  "source_holds_cannot_be_replaced_or_modified": true,
+  "source_original_one_native_per_source": true,
+  "first_target_species_selected_after_original_63_source_outcomes": true,
+  "source_study_independence_not_proven": true,
+  "no_raw_animal_ID_coordinates_exact_dates_tracks_or_per_tag_coefficients_exported": true,
+  "source_gps_location_data_currently_opened_for_four_q_targets": 0,
+  "original_48_signed_irradiance_heading_external_nonreplicated": true,
+  "original_12_ERA5_source_SHA_HOLD": true,
+  "scientific_scope": "After-outcome, targeted fixed-DOI source-first estimate. This cannot establish global species repeatability or fully untouched original-GPS external validation. Fox already had GPS analyzed under the solar-direction endpoint, and absence from eight checked prior outputs for other source DOIs does not prove no earlier use. One original DOI/study ID is not necessarily an independent tagged population. Retain every missing q as UNAVAILABLE, not zero."
+}
