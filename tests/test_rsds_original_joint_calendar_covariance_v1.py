@@ -86,7 +86,7 @@ class PairedMonthOriginalCovariance(unittest.TestCase):
             i,j=TAXA.index(a),TAXA.index(b)
             expected.append({"original_native_pair":[a,b],
                              "month_slope":self.point[3+i]-self.point[3+j]})
-        output=m.summarize_joint("Synthetic","source-known-truth",self.pool,
+        output=m.summarize_joint("Illinois","source-known-truth",self.pool,
                                  self.dates,TAXA,43.0,{},expected,nboot=140,seed=3)
         self.assertEqual(output["eligible_common_month_days"],50)
         self.assertEqual(output["eligible_common_year_month_blocks"],5)
@@ -112,9 +112,9 @@ class PairedMonthOriginalCovariance(unittest.TestCase):
     def test_calendar_month_resampling_and_positive_animal_weights_are_distinct(self):
         expected=[{"original_native_pair":[TAXA[0],TAXA[1]],
                   "month_slope":self.point[3]-self.point[4]}]
-        a=m.summarize_joint("Synthetic","source-known-truth",self.pool,
+        a=m.summarize_joint("Illinois","source-known-truth",self.pool,
                             self.dates,TAXA,43,{},expected,nboot=110,seed=17)
-        b=m.summarize_joint("Synthetic","source-known-truth",self.pool,
+        b=m.summarize_joint("Illinois","source-known-truth",self.pool,
                             self.dates,TAXA,43,{},expected,nboot=110,seed=17)
         self.assertEqual(a,b)
         block=a["covariance_sensitivity"]["paired_month_only"][
