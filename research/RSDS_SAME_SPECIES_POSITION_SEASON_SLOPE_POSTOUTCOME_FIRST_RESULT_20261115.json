@@ -1,0 +1,257 @@
+{
+  "earlier_source_DOI": 63,
+  "limits": "These counts are descriptive of selected archived DOI/tag-bootstrap intervals, not rates over world populations. A same-sign q interval and an opposite slope interval in two source studies are not a calibrated study-difference CI or causal seasonal response. Source-level tag overlap and telemetry/calendar domain may differ.",
+  "new_original_source_daylength_respondents": 3,
+  "new_original_source_q_respondents": 3,
+  "new_original_source_study_IDs": 6,
+  "new_q_HOLD_or_incomplete": 3,
+  "new_q_opposite_to_prior_supported_direction": 0,
+  "new_q_same_all_prior_supported_direction": 3,
+  "new_supported_daylength_opposite_to_any_prior_supported_source": 2,
+  "new_supported_daylength_same_as_any_prior_supported_source": 0,
+  "old_12_source_ERA5_raw_SHA_HOLD": true,
+  "old_48_source_external_solar_direction_not_replicated": true,
+  "original_new_source_axis_rows_including_HOLD": [
+    {
+      "is_genuinely_untouched_original_GPS_external_replication": false,
+      "new_native_daylength_slope": {
+        "available": true,
+        "nominal_source_CI_sign": "POSITIVE",
+        "original_source_tagged_animals": 5,
+        "point_sign": "POSITIVE",
+        "q": 0.023927670839973866,
+        "source_tag_bootstrap95": [
+          0.008714128881371252,
+          0.04019790340859443
+        ]
+      },
+      "new_native_q": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 5,
+        "point_sign": "NEGATIVE",
+        "q": -0.24516468238493802,
+        "source_tag_bootstrap95": [
+          -0.2978894464193578,
+          -0.1901817094450917
+        ]
+      },
+      "new_original_source_status": "SOURCE_Q_ESTIMABLE",
+      "new_slope_supported_opposite_to_at_least_one_old_source": true,
+      "new_slope_supported_same_as_at_least_one_old_source": false,
+      "old_daylength_supported_CI_signs": [
+        "NEGATIVE"
+      ],
+      "old_q_supported_CI_signs": [
+        "NEGATIVE",
+        "NEGATIVE"
+      ],
+      "old_source_native_q_available": 2,
+      "original_source_DOI": "10.5441/001/1.46b0mq21",
+      "prior_original_GPS_exposure": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "prior_same_source_tag_population_independence_proven": false,
+      "scientific_name": "Anser albifrons",
+      "source_niche_position_same_nominal_supported_direction": true
+    },
+    {
+      "is_genuinely_untouched_original_GPS_external_replication": false,
+      "new_native_daylength_slope": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 133,
+        "point_sign": "NEGATIVE",
+        "q": -0.003919925827490663,
+        "source_tag_bootstrap95": [
+          -0.00894405015815926,
+          -0.0003309853677428535
+        ]
+      },
+      "new_native_q": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 133,
+        "point_sign": "NEGATIVE",
+        "q": -0.028819071216292565,
+        "source_tag_bootstrap95": [
+          -0.03347940119026919,
+          -0.024224179018510292
+        ]
+      },
+      "new_original_source_status": "SOURCE_Q_ESTIMABLE",
+      "new_slope_supported_opposite_to_at_least_one_old_source": true,
+      "new_slope_supported_same_as_at_least_one_old_source": false,
+      "old_daylength_supported_CI_signs": [
+        "POSITIVE",
+        "POSITIVE"
+      ],
+      "old_q_supported_CI_signs": [
+        "NEGATIVE",
+        "NEGATIVE"
+      ],
+      "old_source_native_q_available": 2,
+      "original_source_DOI": "10.5441/001/1.708",
+      "prior_original_GPS_exposure": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "prior_same_source_tag_population_independence_proven": false,
+      "scientific_name": "Odocoileus hemionus",
+      "source_niche_position_same_nominal_supported_direction": true
+    },
+    {
+      "is_genuinely_untouched_original_GPS_external_replication": false,
+      "new_native_daylength_slope": {
+        "available": true,
+        "nominal_source_CI_sign": "INCLUDES_ZERO",
+        "original_source_tagged_animals": 21,
+        "point_sign": "POSITIVE",
+        "q": 0.054173924132331,
+        "source_tag_bootstrap95": [
+          -0.025039834400484507,
+          0.1362522344397252
+        ]
+      },
+      "new_native_q": {
+        "available": true,
+        "nominal_source_CI_sign": "POSITIVE",
+        "original_source_tagged_animals": 22,
+        "point_sign": "POSITIVE",
+        "q": 0.2418151100589279,
+        "source_tag_bootstrap95": [
+          0.1762789406643523,
+          0.31417427405197595
+        ]
+      },
+      "new_original_source_status": "SOURCE_Q_ESTIMABLE",
+      "new_slope_supported_opposite_to_at_least_one_old_source": false,
+      "new_slope_supported_same_as_at_least_one_old_source": false,
+      "old_daylength_supported_CI_signs": [
+        null,
+        "POSITIVE"
+      ],
+      "old_q_supported_CI_signs": [
+        "POSITIVE",
+        "POSITIVE"
+      ],
+      "old_source_native_q_available": 2,
+      "original_source_DOI": "10.5441/001/1.72hh609t",
+      "prior_original_GPS_exposure": "KNOWN_PREVIOUS_ORIGINAL_GPS_DATA_ANALYZED_FOR_SOLAR_DIRECTION",
+      "prior_same_source_tag_population_independence_proven": false,
+      "scientific_name": "Vulpes vulpes",
+      "source_niche_position_same_nominal_supported_direction": true
+    },
+    {
+      "is_genuinely_untouched_original_GPS_external_replication": false,
+      "new_native_daylength_slope": {
+        "available": false,
+        "nominal_source_CI_sign": "UNAVAILABLE",
+        "original_source_tagged_animals": null,
+        "point_sign": "UNAVAILABLE",
+        "q": null,
+        "source_tag_bootstrap95": null
+      },
+      "new_native_q": {
+        "available": false,
+        "nominal_source_CI_sign": "UNAVAILABLE",
+        "original_source_tagged_animals": null,
+        "point_sign": "UNAVAILABLE",
+        "q": null,
+        "source_tag_bootstrap95": null
+      },
+      "new_original_source_status": "SOURCE_FILE_METADATA_HOLD",
+      "new_slope_supported_opposite_to_at_least_one_old_source": false,
+      "new_slope_supported_same_as_at_least_one_old_source": false,
+      "old_daylength_supported_CI_signs": [
+        null,
+        null
+      ],
+      "old_q_supported_CI_signs": [
+        "NEGATIVE",
+        null
+      ],
+      "old_source_native_q_available": 2,
+      "original_source_DOI": "10.5441/001/1.8dc0v84m",
+      "prior_original_GPS_exposure": "KNOWN_PREVIOUS_SOURCE_METADATA_HOLD_NO_GPS_FROM_THAT_ROUTE",
+      "prior_same_source_tag_population_independence_proven": false,
+      "scientific_name": "Anas platyrhynchos",
+      "source_niche_position_same_nominal_supported_direction": false
+    },
+    {
+      "is_genuinely_untouched_original_GPS_external_replication": false,
+      "new_native_daylength_slope": {
+        "available": false,
+        "nominal_source_CI_sign": "UNAVAILABLE",
+        "original_source_tagged_animals": null,
+        "point_sign": "UNAVAILABLE",
+        "q": null,
+        "source_tag_bootstrap95": null
+      },
+      "new_native_q": {
+        "available": false,
+        "nominal_source_CI_sign": "UNAVAILABLE",
+        "original_source_tagged_animals": null,
+        "point_sign": "UNAVAILABLE",
+        "q": null,
+        "source_tag_bootstrap95": null
+      },
+      "new_original_source_status": "SOURCE_FILE_METADATA_HOLD",
+      "new_slope_supported_opposite_to_at_least_one_old_source": false,
+      "new_slope_supported_same_as_at_least_one_old_source": false,
+      "old_daylength_supported_CI_signs": [
+        "NEGATIVE"
+      ],
+      "old_q_supported_CI_signs": [
+        "NEGATIVE",
+        "NEGATIVE"
+      ],
+      "old_source_native_q_available": 2,
+      "original_source_DOI": "10.5441/001/1.ms87s2m6",
+      "prior_original_GPS_exposure": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "prior_same_source_tag_population_independence_proven": false,
+      "scientific_name": "Anser albifrons",
+      "source_niche_position_same_nominal_supported_direction": false
+    },
+    {
+      "is_genuinely_untouched_original_GPS_external_replication": false,
+      "new_native_daylength_slope": {
+        "available": false,
+        "nominal_source_CI_sign": "UNAVAILABLE",
+        "original_source_tagged_animals": null,
+        "point_sign": "UNAVAILABLE",
+        "q": null,
+        "source_tag_bootstrap95": null
+      },
+      "new_native_q": {
+        "available": false,
+        "nominal_source_CI_sign": "UNAVAILABLE",
+        "original_source_tagged_animals": null,
+        "point_sign": "UNAVAILABLE",
+        "q": null,
+        "source_tag_bootstrap95": null
+      },
+      "new_original_source_status": "SOURCE_Q_UNAVAILABLE_NOT_ZERO",
+      "new_slope_supported_opposite_to_at_least_one_old_source": false,
+      "new_slope_supported_same_as_at_least_one_old_source": false,
+      "old_daylength_supported_CI_signs": [
+        null,
+        null,
+        "POSITIVE"
+      ],
+      "old_q_supported_CI_signs": [
+        "NEGATIVE",
+        "NEGATIVE",
+        null
+      ],
+      "old_source_native_q_available": 3,
+      "original_source_DOI": "10.5441/001/1.ps244r11",
+      "prior_original_GPS_exposure": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "prior_same_source_tag_population_independence_proven": false,
+      "scientific_name": "Branta leucopsis",
+      "source_niche_position_same_nominal_supported_direction": false
+    }
+  ],
+  "original_raw_GPS_reopened": false,
+  "original_tagged_animal_nominal95_intervals_not_crosssource_tests": true,
+  "post_outcome_and_species_target_adaptive": true,
+  "previous_source_native_taxon_rows": 88,
+  "prior_GPS_source_independence_not_verified": true,
+  "stage": "POST_FIRST_FOLLOWUP_SOURCE_OUTCOME_ECOLOGICAL_AXIS_DIAGNOSTIC",
+  "version": "RSDS_SAME_SPECIES_TIME_NICHE_POSITION_VS_SEASONAL_SLOPE_POSTOUTCOME_V1"
+}
