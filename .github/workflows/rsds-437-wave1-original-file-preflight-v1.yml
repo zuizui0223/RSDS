@@ -1,0 +1,51 @@
+name: RSDS pre-event 16-source original file MD5 metadata preflight v1
+on:
+  push:
+    branches:
+      - analysis/rsds-437-source-frame-wave1-20261115
+    paths:
+      - 'scripts/rsds_437_wave1_original_file_metadata_v1.py'
+      - 'tests/test_rsds_437_wave1_original_file_metadata_v1.py'
+      - 'research/RSDS_437_SOURCE_FRAME_WAVE1_PRE_EVENT_SELECTION_20261115.json'
+      - '.github/workflows/rsds-437-wave1-original-file-preflight-v1.yml'
+  pull_request:
+    paths:
+      - 'scripts/rsds_437_wave1_original_file_metadata_v1.py'
+      - 'tests/test_rsds_437_wave1_original_file_metadata_v1.py'
+      - 'research/RSDS_437_SOURCE_FRAME_WAVE1_PRE_EVENT_SELECTION_20261115.json'
+      - '.github/workflows/rsds-437-wave1-original-file-preflight-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  metadata_only_original_provider_preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify 16 source IDs committed before original file metadata and reproduce complete 437 source frame SHA
+        run: python -m unittest discover -s tests -p 'test_rsds_437_wave1_original_file_metadata_v1.py' -v
+      - name: Request original provider file name, UUID, bytes and MD5 only, no GPS events
+        run: python -m scripts.rsds_437_wave1_original_file_metadata_v1 --out outputs/rsds_437_wave1_source_file_metadata_v1.json
+      - name: Validate all 16 slots including provider HOLD and no event records
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("outputs/rsds_437_wave1_source_file_metadata_v1.json").read_text())
+          assert d["original_package_slots"] == 16
+          assert len(d["provider_original_source_rows"]) == 16
+          assert d["original_GPS_event_records_opened"] == 0
+          assert sum(d["source_status_counts"].values()) == 16
+          assert all(r["animal_event_records_opened"]==0 for r in d["provider_original_source_rows"])
+          print("All sixteen wave1 source slots retained, provider metadata only.")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-437-source-wave1-original-provider-file-meta-v1
+          path: outputs/rsds_437_wave1_source_file_metadata_v1.json
+          if-no-files-found: error
