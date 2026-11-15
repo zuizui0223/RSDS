@@ -1,0 +1,113 @@
+name: RSDS five source native matched same-tag-day seasonal month decomposition
+on:
+  push:
+    branches:
+      - analysis/rsds-five-source-matched-month-support-20261115
+    paths:
+      - 'research/RSDS_FIVE_SOURCE_MATCHED_DATE_MONTH_DECOMPOSITION_CONTRACT_20261115.json'
+      - 'scripts/rsds_five_source_same_tag_date_month_decomposition_v1.py'
+      - 'scripts/aggregate_rsds_five_source_matched_month_v1.py'
+      - 'tests/test_rsds_five_source_matched_month_v1.py'
+      - '.github/workflows/rsds-five-source-matched-month-decomposition-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_five_source_first_result_integrity_and_known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original source GPS and astronomy dependencies
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Synthetic paired month FE versus same-support original unadjusted sign tests
+        run: python -m unittest discover -s tests -p 'test_rsds_five_source_matched_month_v1.py' -v
+      - name: Confirm historical ODSP to RSDS source verification
+        run: python -m scripts.verify_rsds_migration
+  five_independent_original_source_native_tag_date_match:
+    needs: original_five_source_first_result_integrity_and_known_truth
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        index: [0,1,2,3,4]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original source numeric dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Verify original provider MD5, old q and source month first result before matched-tag-date contrast
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_five_source_same_tag_date_month_decomposition_v1 --index ${{ matrix.index }} --out outputs/source_$(printf "%02d" ${{ matrix.index }}).json
+      - name: Upload study-level only, including original source HOLD without animal data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-tag-date-month-matched-source-${{ matrix.index }}-v1
+          path: outputs/source_*.json
+          if-no-files-found: error
+  all_five_source_native_matched_month_synthesis:
+    needs: five_independent_original_source_native_tag_date_match
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source helper numeric dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Download exactly 5 independent source-level aggregate artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-original-tag-date-month-matched-source-*-v1
+          path: outputs/five
+          merge-multiple: true
+      - name: Retain every original source, month support/HOLD and previous ecological endpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.aggregate_rsds_five_source_matched_month_v1 --directory outputs/five --out research/RSDS_FIVE_SOURCE_MATCHED_TAG_DATE_MONTH_DECOMPOSITION_FIRST_RESULT_20261115.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          j=json.loads(Path('research/RSDS_FIVE_SOURCE_MATCHED_TAG_DATE_MONTH_DECOMPOSITION_FIRST_RESULT_20261115.json').read_text())
+          assert j['original_source_study_DOI_total']==5
+          assert j['original_species_target_count']==2
+          assert len(j['all_five_original_study_source_native_matched_month_results_including_HOLD'])==5
+          assert sum(j['source_status_counts'].values())==5
+          assert j['original_first_month_result_git_blob_unchanged']=='27643d9c69ca6683edde5ee75945f6a4fb0eb413'
+          assert j['previous_48_source_signed_solar_heading_negative_replication_UNCHANGED']
+          assert j['previous_12_source_ERA5_raw_SHA_HOLD_UNCHANGED']
+          assert j['no_original_tag_IDs_coordinates_dates_individual_slopes_or_bootstrap_draws_exported']
+          print('FIVE_SOURCE_TAG_DATE_MATCHED_SUPPORT_WITH_PRIOR_SCIENCE_PINNED')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-five-source-original-same-tag-date-month-matched-meta-first-v1
+          path: research/RSDS_FIVE_SOURCE_MATCHED_TAG_DATE_MONTH_DECOMPOSITION_FIRST_RESULT_20261115.json
+          if-no-files-found: error
+      - name: Commit only frozen original source-level matched-support first result
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_FIVE_SOURCE_MATCHED_TAG_DATE_MONTH_DECOMPOSITION_FIRST_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze source-native paired same-tag-date month-vs-unadjusted GPS slope"
+            git fetch origin analysis/rsds-five-source-matched-month-support-20261115
+            git rebase origin/analysis/rsds-five-source-matched-month-support-20261115
+            git push origin HEAD:analysis/rsds-five-source-matched-month-support-20261115
+          fi
