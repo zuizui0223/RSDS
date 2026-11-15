@@ -105,7 +105,7 @@ class Total35SourceMeta(unittest.TestCase):
     def test_human_privacy_reclassified_or_source_replaced_fails(self):
         rows=copy.deepcopy(self.rows)
         rows[10]["source_science_status"]="SOURCE_NO_NATIVE_Q_ESTIMABLE"
-        with self.assertRaisesRegex(ValueError,"Human GPS private source"):
+        with self.assertRaisesRegex(ValueError,"Homo sapiens source no-access gate removed"):
             m.summarize(rows)
         rows=copy.deepcopy(self.rows)
         rows[0]["source_package_uuid"]="post-result substitute"
