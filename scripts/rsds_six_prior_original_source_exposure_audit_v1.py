@@ -120,7 +120,7 @@ def main():
         "not_found_among_eight":result["no_match_in_eight_checked_previous_outputs_sources"],
         "source_DOI_status":[{"doi":x["original_DOI"],
                              "status":x["prior_data_exposure_status"]}
-                            for x in result],
+                            for x in result["original_followup_source_exposure_rows"]],
     },sort_keys=True))
 if __name__=="__main__":
     main()
