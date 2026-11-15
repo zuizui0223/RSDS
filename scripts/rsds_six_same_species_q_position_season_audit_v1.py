@@ -174,7 +174,7 @@ def audit():
         raise ValueError("Missing one of six original source IDs")
     status=Counter(z["first_new_source_nominal_q_verdict"] for z in out)
     q_supported=[z for z in out if z["new_q"]["available"]]
-    seasonal=[z for z in q_supported if z["new_daylength"]["available"]]
+    seasonal=[z for z in q_supported if z["new_q_daylength"]["available"]]
     opposed=[z for z in seasonal if z["new_daylength_opposite_prior_nominal_sign"]]
     no_prior_fox=[z for z in q_supported if "KNOWN_PREVIOUS_ORIGINAL_GPS" not in z["prior_original_solar_GPS_exposure_status"]]
     if (len(q_supported)!=3 or len(seasonal)!=3 or len(opposed)!=2 or
