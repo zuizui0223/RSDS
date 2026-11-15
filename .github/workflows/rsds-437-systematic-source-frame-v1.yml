@@ -1,0 +1,51 @@
+name: RSDS full Movebank 437-package fixed metadata source frame v1
+on:
+  push:
+    branches:
+      - analysis/rsds-437-source-frame-wave1-20261115
+    paths:
+      - 'research/RSDS_437_SOURCE_FRAME_WAVE1_V1_CONTRACT.json'
+      - 'scripts/rsds_437_systematic_source_frame_v1.py'
+      - 'tests/test_rsds_437_systematic_source_frame_v1.py'
+      - '.github/workflows/rsds-437-systematic-source-frame-v1.yml'
+  pull_request:
+    paths:
+      - 'research/RSDS_437_SOURCE_FRAME_WAVE1_V1_CONTRACT.json'
+      - 'scripts/rsds_437_systematic_source_frame_v1.py'
+      - 'tests/test_rsds_437_systematic_source_frame_v1.py'
+      - '.github/workflows/rsds-437-systematic-source-frame-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  metadata_source_frame_without_new_animal_events:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source frame test (437 census, 259 GPS candidates, prior source alias exclusion, deterministic wave)
+        run: python -m unittest discover -s tests -p 'test_rsds_437_systematic_source_frame_v1.py' -v
+      - name: Generate 16 fixed source-only wave slots from pinned full public catalog
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_437_systematic_source_frame_v1 --out outputs/rsds_437_source_frame_wave1_v1.json
+          python -m json.tool outputs/rsds_437_source_frame_wave1_v1.json > /dev/null
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('outputs/rsds_437_source_frame_wave1_v1.json').read_text())
+          assert d['summary']['all_original_packages']==437
+          assert d['summary']['gps_gnss_packages']==259
+          assert len(d['wave1_selected_in_rank_order'])==16
+          assert d['summary']['new_animal_GPS_events_or_effects_read']==0
+          print('Original 437 source packages preserved; no new telemetry accessed')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-fixed-437-source-frame-wave1-pre-event-v1
+          path: outputs/rsds_437_source_frame_wave1_v1.json
+          if-no-files-found: error
