@@ -3,7 +3,7 @@
   "date": "2026-11-15",
   "stage": "POST_FIVE_SOURCE_MONTH_FIRST_RESULTS_BEFORE_MATCHED_SUPPORT_REANALYSIS",
   "prior_five_source_original_month_contract_path": "research/RSDS_FIVE_SOURCE_NATIVE_YEAR_MONTH_ADJUSTMENT_CONTRACT_20261115.json",
-  "prior_five_source_original_month_contract_git_blob": "c7f118ed9488259f97f03ae33291bee5ae0cbddb",
+  "prior_five_source_original_month_contract_git_blob": "7a25beccbb097b266d171edfaec8945e7f7d524f",
   "prior_five_source_month_first_result_path": "research/RSDS_FIVE_SOURCE_NATIVE_TAG_YEAR_MONTH_FIRST_RESULT_20261115.json",
   "prior_five_source_month_first_result_git_blob": "27643d9c69ca6683edde5ee75945f6a4fb0eb413",
   "prior_five_source_month_script_path": "scripts/rsds_five_source_native_tag_month_conditioned_v1.py",
