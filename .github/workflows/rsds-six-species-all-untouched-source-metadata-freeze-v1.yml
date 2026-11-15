@@ -1,0 +1,64 @@
+name: RSDS six repeated taxa all untouched original-source metadata IDs freeze
+on:
+  push:
+    branches:
+      - analysis/rsds-six-taxon-untouched-source-freeze-20261115
+    paths:
+      - 'research/RSDS_SIX_TAXON_UNTOUCHED_SOURCE_SELECTION_CONTRACT_20261115.json'
+      - 'scripts/rsds_six_species_untouched_original_source_selection_v1.py'
+      - 'tests/test_rsds_six_species_untouched_original_source_selection_v1.py'
+      - '.github/workflows/rsds-six-species-all-untouched-source-metadata-freeze-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  source_only_prior_species_all_new_original_study_IDs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test historical 63 source names and same-source exclusion rules before any NEW provider file access
+        run: python -m unittest discover -s tests -p 'test_rsds_six_species_untouched_original_source_selection_v1.py' -v
+      - name: Freeze all six original untouched source identities, no source-file/GPS data
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_six_species_untouched_original_source_selection_v1 --out research/RSDS_SIX_TAXON_UNTOUCHED_ORIGINAL_SOURCE_IDS_FIRST_20261115.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('research/RSDS_SIX_TAXON_UNTOUCHED_ORIGINAL_SOURCE_IDS_FIRST_20261115.json').read_text())
+          assert d['catalog_original_packages']==437
+          assert d['previous_study_DOI_count']==63
+          assert len(d['fixed_six_previous_native_q_repeat_species'])==6
+          assert d['new_original_metadata_qualified_source_studies']==6
+          assert d['new_source_candidates_with_same_taxa_even_if_metadata_ineligible']==16
+          assert d['remaining_metadata_unqualified_or_inapplicable_candidates']==10
+          assert d['new_GPS_rows_opened']==0
+          assert d['new_provider_file_metadata_opened'] is False
+          assert d['old_48_source_sunlight_direction_heldout_not_replicated']
+          print('SIX_NEW_SOURCE_IDENTITIES_SELECTION_BEFORE_PROVIDER_OR_GPS_ACCESS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-six-species-six-untouched-source-first-metadata-only-v1
+          path: research/RSDS_SIX_TAXON_UNTOUCHED_ORIGINAL_SOURCE_IDS_FIRST_20261115.json
+          if-no-files-found: error
+      - name: Commit original new source IDs in fully outcome-blind source metadata order
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_SIX_TAXON_UNTOUCHED_ORIGINAL_SOURCE_IDS_FIRST_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze all six previously untouched source IDs for prior native taxa"
+            git fetch origin analysis/rsds-six-taxon-untouched-source-freeze-20261115
+            git rebase origin/analysis/rsds-six-taxon-untouched-source-freeze-20261115
+            git push origin HEAD:analysis/rsds-six-taxon-untouched-source-freeze-20261115
+          fi
