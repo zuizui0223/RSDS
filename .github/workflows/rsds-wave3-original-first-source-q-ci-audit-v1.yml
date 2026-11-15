@@ -1,0 +1,102 @@
+name: RSDS Wave3 first GPS original source CI support audit, no GPS rerun
+on:
+  push:
+    branches:
+      - analysis/rsds-wave3-source-level-ci-audit-20261115
+    paths:
+      - 'research/RSDS_WAVE3_FIRST_ORIGINAL_SOURCE_Q_CI_AUDIT_V1_CONTRACT.json'
+      - 'scripts/rsds_wave3_first_source_q_ci_audit_v1.py'
+      - 'tests/test_rsds_wave3_first_source_q_ci_audit_v1.py'
+      - '.github/workflows/rsds-wave3-original-first-source-q-ci-audit-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  first_source_original_bootstrap_CI_sign_audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test bootstrap sign versus point estimate and fail-closed native sample
+        run: python -m unittest discover -s tests -p 'test_rsds_wave3_first_source_q_ci_audit_v1.py' -v
+      - name: Verify all sixteen first source artifact IDs and ZIP digests from original run
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,os,urllib.request
+          from pathlib import Path
+          c=json.loads(Path('research/RSDS_WAVE3_FIRST_ORIGINAL_SOURCE_Q_CI_AUDIT_V1_CONTRACT.json').read_text())
+          url='https://api.github.com/repos/zuizui0223/RSDS/actions/runs/43702456789/artifacts?per_page=100'
+          req=urllib.request.Request(url,headers={
+            'Authorization':'Bearer '+os.environ['GH_TOKEN'],
+            'Accept':'application/vnd.github+json',
+            'X-GitHub-Api-Version':'2022-11-28',
+          })
+          with urllib.request.urlopen(req,timeout=30) as f:
+            data=json.load(f)
+          actual={x['name']:x for x in data['artifacts']}
+          original=[c['original_51_meta_first_artifact']]+c['original_16_source_artifacts']
+          assert len(original)==17
+          assert len({x['artifact_id'] for x in original})==17
+          for x in original:
+            a=actual[x['name']]
+            assert not a['expired']
+            assert a['id']==x['artifact_id']
+            assert a['digest']==x['digest']
+          print('ORIGINAL_FIRST_RUN_SIXTEEN_SOURCE_AND_META_ARTIFACT_DIGESTS_PINNED')
+          PY
+      - name: Download original first 16 source aggregate artifacts only
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 43702456789
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pattern: rsds-wave3-original-gps-study-*-v1
+          path: outputs/wave3_first_16
+          merge-multiple: true
+      - name: Audit native tagged-animal q bootstrap 95 interval and daylength
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_wave3_first_source_q_ci_audit_v1 --directory outputs/wave3_first_16 --out research/RSDS_WAVE3_FIRST_ORIGINAL_SOURCE_Q_CI_POSTOUTCOME_RESULT_20261115.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_WAVE3_FIRST_ORIGINAL_SOURCE_Q_CI_POSTOUTCOME_RESULT_20261115.json')
+          j=json.loads(p.read_text())
+          assert j['native_original_q_respondents']==6
+          assert j['native_original_daylength_respondents']==4
+          assert j['source_joint_q_daylength_pairs']==4
+          assert len(j['new_16_source_original_native_ci_and_support_rows'])==16
+          assert j['previous_51_meta_git_blob_unchanged']=='4644b8ed38ae74dae345df8d90ea182f5dce4ee3'
+          assert j['no_original_GPS_source_rows_animal_IDs_coordinates_or_exact_times_exported']
+          assert j['descriptive_only_no_biological_world_prevalence_or_causal_claim']
+          assert j['original_48_source_external_sunlight_heading_direction_replicated'] is False
+          print('WAVE3_ORIGINAL_ANIMAL_BOOTSTRAP_SIGN_SUPPORT_DESCRIPTIVE_ONLY')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-wave3-native-source-boostrap-ci-first-original-postoutcome-audit-v1
+          path: research/RSDS_WAVE3_FIRST_ORIGINAL_SOURCE_Q_CI_POSTOUTCOME_RESULT_20261115.json
+          if-no-files-found: error
+      - name: Commit derivative-only source CI audit without new animal GPS reads
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_WAVE3_FIRST_ORIGINAL_SOURCE_Q_CI_POSTOUTCOME_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: pin first source animal-bootstrap CI sign audit with zero GPS reruns"
+            git fetch origin analysis/rsds-wave3-source-level-ci-audit-20261115
+            git rebase origin/analysis/rsds-wave3-source-level-ci-audit-20261115
+            git push origin HEAD:analysis/rsds-wave3-source-level-ci-audit-20261115
+          fi
