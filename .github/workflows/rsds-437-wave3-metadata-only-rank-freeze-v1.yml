@@ -1,0 +1,62 @@
+name: RSDS Wave3 frozen 16 original source IDs by metadata-only SHA rank
+on:
+  push:
+    branches:
+      - analysis/rsds-wave3-frozen-source-ranks25to40-20261115
+    paths:
+      - 'research/RSDS_437_WAVE3_METADATA_ONLY_SOURCE_RANKS25_40_CONTRACT_V1.json'
+      - 'scripts/rsds_437_wave3_metadata_only_rank_continuation_v1.py'
+      - 'tests/test_rsds_437_wave3_metadata_only_rank_continuation_v1.py'
+      - '.github/workflows/rsds-437-wave3-metadata-only-rank-freeze-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  freeze_original_source_only_identity_before_any_new_provider_GPS:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify old 437 catalog, Wave1/2 SHA-rank prefixes, 35-source science pin and privacy
+        run: python -m unittest discover -s tests -p 'test_rsds_437_wave3_metadata_only_rank_continuation_v1.py' -v
+      - name: Produce ONLY next 16 original source identities in untouched metadata rank
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_437_wave3_metadata_only_rank_continuation_v1 --out research/RSDS_437_WAVE3_16_SOURCE_METADATA_ONLY_FIRST_RESULT_20261115.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("research/RSDS_437_WAVE3_16_SOURCE_METADATA_ONLY_FIRST_RESULT_20261115.json").read_text())
+          assert d["wave3_new_original_source_studies"] == 16
+          assert d["selected_original_source_studies_after_wave3"] == 51
+          assert d["wave3_selected_single_native_rank_range_inclusive"] == [25, 40]
+          assert d["remaining_metadata_priority_single_native_sources"] == 69
+          assert d["wave3_new_original_animal_GPS_events_opened"] == 0
+          assert d["wave3_new_original_provider_file_metadata_opened"] is False
+          assert d["previous_48_source_solar_direction_external_nonreplication_UNCHANGED"]
+          print("SIXTEEN_NEW_METADATA_SOURCE_IDS_READY_TO_FREEZE_NO_GPS_OR_PROVIDER_FILES")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-wave3-16-source-metadata-only-original-sha-ranked-first-v1
+          path: research/RSDS_437_WAVE3_16_SOURCE_METADATA_ONLY_FIRST_RESULT_20261115.json
+          if-no-files-found: error
+      - name: Commit first source IDs before any provider-file or original GPS access
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_437_WAVE3_16_SOURCE_METADATA_ONLY_FIRST_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze Wave3 16 original source IDs before provider or GPS access"
+            git fetch origin analysis/rsds-wave3-frozen-source-ranks25to40-20261115
+            git rebase origin/analysis/rsds-wave3-frozen-source-ranks25to40-20261115
+            git push origin HEAD:analysis/rsds-wave3-frozen-source-ranks25to40-20261115
+          fi

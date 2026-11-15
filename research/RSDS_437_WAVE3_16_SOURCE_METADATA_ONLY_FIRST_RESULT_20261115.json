@@ -1,0 +1,417 @@
+{
+  "all_wave3_selected_source_metadata_in_SHA_rank_order": [
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.672"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "3006923937",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "package_uuid": "b7341994-42fa-4599-9858-086ffaa145f6",
+      "reported_animal_count_metadata_only": 18,
+      "reported_location_count_metadata_only": 45078,
+      "scientific_name_labels": [
+        "Sus scrofa"
+      ],
+      "source_lottery_SHA256": "461a1fceb4ddf7b6dbe6808fa75e522136478d92ba7a1d0cac14cc02ba52dd6f",
+      "source_rank_1_based": 25,
+      "wave3_index": 0
+    },
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.605"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "2989306200",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "package_uuid": "9c8e9ffc-66ab-4874-b1ab-d7144761c652",
+      "reported_animal_count_metadata_only": 129,
+      "reported_location_count_metadata_only": 20767,
+      "scientific_name_labels": [
+        "Creagrus furcatus"
+      ],
+      "source_lottery_SHA256": "4911715f6e7f4a91300f5dfc7470f12d1ff12b1326573b8a6e8dd1754a5ded74",
+      "source_rank_1_based": 26,
+      "wave3_index": 1
+    },
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.137cn005"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "multiple",
+      "original_sensor_labels": [
+        "Acceleration",
+        "GPS",
+        "Barometer"
+      ],
+      "package_uuid": "967b7813-220e-4f60-8415-166d118ac8fa",
+      "reported_animal_count_metadata_only": 69,
+      "reported_location_count_metadata_only": 1667881,
+      "scientific_name_labels": [
+        "Ciconia ciconia"
+      ],
+      "source_lottery_SHA256": "4a1a6dff3cd8e5ff4f11dd35dc82b7eda42c36c2e390753f15b1d4f20a36fe9e",
+      "source_rank_1_based": 27,
+      "wave3_index": 2
+    },
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.23n2m412"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "1402467516",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "package_uuid": "e19ad165-36bb-4c9c-b18f-610fc3eadafd",
+      "reported_animal_count_metadata_only": 139,
+      "reported_location_count_metadata_only": 231193,
+      "scientific_name_labels": [
+        "Milvus migrans"
+      ],
+      "source_lottery_SHA256": "4c091ab9eef22bf36dc321c8f61023534133db8c2be69114cd0b2731618336e1",
+      "source_rank_1_based": 28,
+      "wave3_index": 3
+    },
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.pk8g6s2h"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "466196195",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "package_uuid": "8f4b56cd-cfb3-4fd5-9788-56417c6c8752",
+      "reported_animal_count_metadata_only": 176,
+      "reported_location_count_metadata_only": 8728433,
+      "scientific_name_labels": [
+        "Columba livia"
+      ],
+      "source_lottery_SHA256": "4cdb2505ad7a5af383ac3c995cfbceff050e4c628373a5d5a0894d04417d4cf4",
+      "source_rank_1_based": 29,
+      "wave3_index": 4
+    },
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.kn0816jn"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "53460105",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "package_uuid": "b1e834a9-be3b-4604-9bda-346de4e7c257",
+      "reported_animal_count_metadata_only": 26,
+      "reported_location_count_metadata_only": 10430200,
+      "scientific_name_labels": [
+        "Papio anubis"
+      ],
+      "source_lottery_SHA256": "53779d87bb977c39ce9879f8eeff406a32134c164b3c9901a8b75a2b7d2c35b7",
+      "source_rank_1_based": 30,
+      "wave3_index": 5
+    },
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.702j854s"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "1115272968",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "package_uuid": "ec6fcf58-5291-4d52-8024-87f07f15bbf7",
+      "reported_animal_count_metadata_only": 27,
+      "reported_location_count_metadata_only": 2530856,
+      "scientific_name_labels": [
+        "Columba livia"
+      ],
+      "source_lottery_SHA256": "55f61a35142b8bfb83f02b9e4e92e9308d77d5aeff995023e868d01dc4b50989",
+      "source_rank_1_based": 31,
+      "wave3_index": 6
+    },
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.3hp3s250"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "2911040",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "package_uuid": "b118f49f-6450-430d-b5f8-c455ff0292ae",
+      "reported_animal_count_metadata_only": 28,
+      "reported_location_count_metadata_only": 16414,
+      "scientific_name_labels": [
+        "Phoebastria irrorata"
+      ],
+      "source_lottery_SHA256": "5bc552779c2389faa7fac9c20bcfd9ca6425fb2f0acc83b1bc1e75ba2ff03270",
+      "source_rank_1_based": 32,
+      "wave3_index": 7
+    },
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.ct72m82n"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "657674643",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "package_uuid": "22d42221-334b-4eb5-88b7-628c6492bacb",
+      "reported_animal_count_metadata_only": 81,
+      "reported_location_count_metadata_only": 1086662,
+      "scientific_name_labels": [
+        "Anser albifrons"
+      ],
+      "source_lottery_SHA256": "5bda37b90455b6fcc43c7e475fc7a483aed8e29037a73b3aefcfea263618d4ad",
+      "source_rank_1_based": 33,
+      "wave3_index": 8
+    },
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.293"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "2976678046",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "package_uuid": "e7d1c177-cb56-4960-9c6f-e20986ff651a",
+      "reported_animal_count_metadata_only": 15,
+      "reported_location_count_metadata_only": 40811,
+      "scientific_name_labels": [
+        "Odocoileus virginianus"
+      ],
+      "source_lottery_SHA256": "62f4115736f01e6d88e501dd6a5c8c13ee6372801286f05c1cbe869e21345ad2",
+      "source_rank_1_based": 34,
+      "wave3_index": 9
+    },
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.03ck4s52"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "1907973121",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "package_uuid": "e2fe5582-a707-4954-8329-ba107736fed8",
+      "reported_animal_count_metadata_only": 82,
+      "reported_location_count_metadata_only": 233550,
+      "scientific_name_labels": [
+        "Tapirus terrestris"
+      ],
+      "source_lottery_SHA256": "63c62481c266813bc6d26c58f1e871275ae055cf0a8572d9df25caaa03db7ab1",
+      "source_rank_1_based": 35,
+      "wave3_index": 10
+    },
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.4192t2j4_2"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "76367850",
+      "original_sensor_labels": [
+        "Orientation",
+        "Magnetometer",
+        "Acceleration",
+        "GPS"
+      ],
+      "package_uuid": "520a64ae-2047-445d-af5f-7b961caeef79",
+      "reported_animal_count_metadata_only": 108,
+      "reported_location_count_metadata_only": 12789862,
+      "scientific_name_labels": [
+        "Ciconia ciconia"
+      ],
+      "source_lottery_SHA256": "6473efdb16c6f9549a322955c678b1a9d861bbc275f388382accd38835665406",
+      "source_rank_1_based": 36,
+      "wave3_index": 11
+    },
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.715k46g2"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "1395952585",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "package_uuid": "aa260e37-8ff6-4366-9918-91346785b8f9",
+      "reported_animal_count_metadata_only": 23,
+      "reported_location_count_metadata_only": 801488,
+      "scientific_name_labels": [
+        "Numenius arquata"
+      ],
+      "source_lottery_SHA256": "68237c922336fe8771994df0e06b2c838131a86e40a99ac36ca9d11dfd2bd837",
+      "source_rank_1_based": 37,
+      "wave3_index": 12
+    },
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.fh860r2f"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "21897548",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "package_uuid": "4316d2ab-8972-4af7-867f-562f40465113",
+      "reported_animal_count_metadata_only": 19,
+      "reported_location_count_metadata_only": 26996,
+      "scientific_name_labels": [
+        "Columba livia"
+      ],
+      "source_lottery_SHA256": "68580de547d3302a35ab664f7ba9f7d28bccff4429ded8abd6b6d13481de8c35",
+      "source_rank_1_based": 38,
+      "wave3_index": 13
+    },
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.5k6b1364"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "31888520",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "package_uuid": "644e46c6-0dd2-49d8-bcbc-c186ab9aecb4",
+      "reported_animal_count_metadata_only": 22,
+      "reported_location_count_metadata_only": 24488,
+      "scientific_name_labels": [
+        "Branta leucopsis"
+      ],
+      "source_lottery_SHA256": "6af7a49af686700601bea55b04dc6733240642faaf5364606a9a01ab8710be8d",
+      "source_rank_1_based": 39,
+      "wave3_index": 14
+    },
+    {
+      "human_privacy_file_and_GPS_HOLD": false,
+      "new_GPS_animal_events_opened": 0,
+      "new_provider_file_metadata_opened": false,
+      "original_DOI_labels": [
+        "doi:10.5441/001/1.cp97k9j1"
+      ],
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_repository_study_id": "1087068449",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "package_uuid": "a41015db-4632-46dc-abed-277b16daf97b",
+      "reported_animal_count_metadata_only": 18,
+      "reported_location_count_metadata_only": 189700,
+      "scientific_name_labels": [
+        "Tockus deckeni"
+      ],
+      "source_lottery_SHA256": "6eeeb5b9e89715016b145c9bc61834f98d797cb6d4e7a816f0d359fb1305352c",
+      "source_rank_1_based": 40,
+      "wave3_index": 15
+    }
+  ],
+  "global_biological_probability_sample": false,
+  "old_wave1_plus_wave2_35_source_science_git_blob": "9b02774f7c31d29b2eec5039a80431a895dccb36",
+  "old_wave1_selection_git_blob": "23d7489e4cf8347341cf67290499f278610651c6",
+  "old_wave2_selection_git_blob": "516fafc85ade5f953b9f8c697bdcc472d453fd0c",
+  "original_fixed_2026_10_19_catalog_git_blob": "9822ec80ed98cab1e3d17a853d0ce5e63e47298c",
+  "previous_12_source_ERA5_raw_SHA_HOLD_UNCHANGED": true,
+  "previous_48_source_solar_direction_external_nonreplication_UNCHANGED": true,
+  "prior_selected_source_studies": 35,
+  "quota_selected_after_two_prior_waves": true,
+  "remaining_metadata_priority_single_native_sources": 69,
+  "scientific_boundary": "Metadata-priority source study ID sampling; not global wildlife probability sampling or new biological replication, not source-effect confirmation. Human privacy and managed/domestic source domain require independent source-only adjudication before any later GPS analysis.",
+  "selected_original_source_studies_after_wave3": 51,
+  "source_frame_GPS_packages": 259,
+  "source_frame_metadata_priority_candidates": 120,
+  "source_frame_packages": 437,
+  "stage": "SOURCE_ONLY_WAVE3_IDENTITIES_FROZEN_NO_NEW_PROVIDER_OR_GPS_ACCESS",
+  "version": "RSDS_437_WAVE3_METADATA_ONLY_RANK_CONTINUATION_V1",
+  "wave3_new_original_animal_GPS_events_opened": 0,
+  "wave3_new_original_provider_file_metadata_opened": false,
+  "wave3_new_original_source_studies": 16,
+  "wave3_selected_single_native_rank_range_inclusive": [
+    25,
+    40
+  ]
+}
