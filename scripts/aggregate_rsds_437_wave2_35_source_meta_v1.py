@@ -20,7 +20,7 @@ from scripts.rsds_437_wave2_original_file_metadata_v1 import freeze as frozen_wa
 # Aggregate-only validation reads pinned source manifests, NEVER GPS parsers.
 # This module intentionally has no numpy/source-event dependency.
 NEW_CONTRACT=("research/RSDS_437_WAVE2_ORIGINAL_GPS_FIRST_EFFECTS_V1_CONTRACT.json",
-              "89e9b39aa107b76aa280f3dd04674713e7dbb9b1")
+              "699ee988923a9c13b336df57d94290f2a102545b")
 
 def freeze_original():
     c=pinned(*NEW_CONTRACT)
