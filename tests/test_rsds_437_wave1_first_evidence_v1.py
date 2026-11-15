@@ -92,7 +92,7 @@ class FirstSourceEvidence(unittest.TestCase):
             self.cross["historical_external_48_signed_radiation_nonreplication"],
             "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE")
         self.assertTrue(self.cross["historical_12_original_ERA5_raw_HOLD"])
-        self.assertTrue(self.data["wave_selected_sources"]["old_12_original_source_ERA5_raw_JSON_HOLD"])
+        self.assertTrue(self.data["wave_selected_sources"]["old_ERA5_raw_SHA_HOLD"])
 
     def test_modified_original_first_result_fails_closed(self):
         previous=self.cross["source_blobs"]["wave_first_native_GPS_effects"]["git_blob"]
