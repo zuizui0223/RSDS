@@ -1,0 +1,598 @@
+{
+  "all_original_new_source_and_prior_q_source_daylength_rows": [
+    {
+      "first_new_source_nominal_q_verdict": "NOMINAL_SUPPORTED_SAME_SIGN",
+      "frozen_expected_q_point_sign": "NEGATIVE",
+      "new_daylength_opposite_prior_nominal_sign": true,
+      "new_q": {
+        "available": true,
+        "ci": [
+          -0.2978894464193578,
+          -0.1901817094450917
+        ],
+        "mean": -0.24516468238493802,
+        "n": 5,
+        "point": "NEGATIVE",
+        "supported": "NEGATIVE"
+      },
+      "new_q_daylength": {
+        "available": true,
+        "ci": [
+          0.008714128881371252,
+          0.04019790340859443
+        ],
+        "mean": 0.023927670839973866,
+        "n": 5,
+        "point": "POSITIVE",
+        "supported": "POSITIVE"
+      },
+      "original_animal_tags_or_population_independent_verified": false,
+      "original_new_DOI": "10.5441/001/1.46b0mq21",
+      "original_new_source_status": "SOURCE_Q_ESTIMABLE",
+      "original_source_index": 0,
+      "prior_daylength_nominal_supported_count": 1,
+      "prior_original_solar_GPS_exposure_status": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "prior_q_supported_archive_count": 2,
+      "prior_q_supported_archives": [
+        {
+          "DOI": "10.5441/001/1.fk899541",
+          "native_daylength": {
+            "available": true,
+            "ci": [
+              -0.04777688930352582,
+              -0.004772257106868325
+            ],
+            "mean": -0.026533756900550577,
+            "n": 50,
+            "point": "NEGATIVE",
+            "supported": "NEGATIVE"
+          },
+          "native_q": {
+            "available": true,
+            "ci": [
+              -0.13671935338156951,
+              -0.10642737466618964
+            ],
+            "mean": -0.12098595255170014,
+            "n": 50,
+            "point": "NEGATIVE",
+            "supported": "NEGATIVE"
+          },
+          "original_archive_title": "Data from: More grazing, more damage? Assessed yield loss on agricultural grassland relates non-linearly to goose grazing pressure"
+        },
+        {
+          "DOI": "10.5441/001/1.g51fs0jv",
+          "native_daylength": {
+            "available": false,
+            "ci": null,
+            "mean": null,
+            "n": null,
+            "point": "UNAVAILABLE",
+            "supported": "UNAVAILABLE"
+          },
+          "native_q": {
+            "available": true,
+            "ci": [
+              -0.16148876092636238,
+              -0.09468160615605008
+            ],
+            "mean": -0.12729631629698168,
+            "n": 22,
+            "point": "NEGATIVE",
+            "supported": "NEGATIVE"
+          },
+          "original_archive_title": "Data from: Wild goose chase: geese flee high and far, and with aftereffects from New Year’s fireworks"
+        }
+      ],
+      "prior_season_opposite_new_sign_supported_source_DOIs": [
+        "10.5441/001/1.fk899541"
+      ],
+      "prior_season_same_new_sign_supported_source_DOIs": [],
+      "provider_MD5_original_source_verified": true,
+      "species": "Anser albifrons"
+    },
+    {
+      "first_new_source_nominal_q_verdict": "NOMINAL_SUPPORTED_SAME_SIGN",
+      "frozen_expected_q_point_sign": "NEGATIVE",
+      "new_daylength_opposite_prior_nominal_sign": true,
+      "new_q": {
+        "available": true,
+        "ci": [
+          -0.03347940119026919,
+          -0.024224179018510292
+        ],
+        "mean": -0.028819071216292565,
+        "n": 133,
+        "point": "NEGATIVE",
+        "supported": "NEGATIVE"
+      },
+      "new_q_daylength": {
+        "available": true,
+        "ci": [
+          -0.00894405015815926,
+          -0.0003309853677428535
+        ],
+        "mean": -0.003919925827490663,
+        "n": 133,
+        "point": "NEGATIVE",
+        "supported": "NEGATIVE"
+      },
+      "original_animal_tags_or_population_independent_verified": false,
+      "original_new_DOI": "10.5441/001/1.708",
+      "original_new_source_status": "SOURCE_Q_ESTIMABLE",
+      "original_source_index": 1,
+      "prior_daylength_nominal_supported_count": 2,
+      "prior_original_solar_GPS_exposure_status": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "prior_q_supported_archive_count": 2,
+      "prior_q_supported_archives": [
+        {
+          "DOI": "10.5441/001/1.711",
+          "native_daylength": {
+            "available": true,
+            "ci": [
+              0.004388078182072968,
+              0.006920966097037151
+            ],
+            "mean": 0.005619415769068772,
+            "n": 1683,
+            "point": "POSITIVE",
+            "supported": "POSITIVE"
+          },
+          "native_q": {
+            "available": true,
+            "ci": [
+              -0.02321004124388584,
+              -0.02046763062163855
+            ],
+            "mean": -0.02184895488685285,
+            "n": 1723,
+            "point": "NEGATIVE",
+            "supported": "NEGATIVE"
+          },
+          "original_archive_title": "Data from: Study \"GPS tracking of ungulates in Utah by UDWR (2019-2020)\""
+        },
+        {
+          "DOI": "10.5441/001/1.703",
+          "native_daylength": {
+            "available": true,
+            "ci": [
+              0.004101632821224659,
+              0.006972859886325625
+            ],
+            "mean": 0.005538249061142167,
+            "n": 118,
+            "point": "POSITIVE",
+            "supported": "POSITIVE"
+          },
+          "native_q": {
+            "available": true,
+            "ci": [
+              -0.005777731444226381,
+              -0.003089662007489691
+            ],
+            "mean": -0.0044624294869207584,
+            "n": 119,
+            "point": "NEGATIVE",
+            "supported": "NEGATIVE"
+          },
+          "original_archive_title": "Data from: Study \"Bighorn sheep and mule deer in Wyoming (2019-2020)\""
+        }
+      ],
+      "prior_season_opposite_new_sign_supported_source_DOIs": [
+        "10.5441/001/1.711",
+        "10.5441/001/1.703"
+      ],
+      "prior_season_same_new_sign_supported_source_DOIs": [],
+      "provider_MD5_original_source_verified": true,
+      "species": "Odocoileus hemionus"
+    },
+    {
+      "first_new_source_nominal_q_verdict": "NOMINAL_SUPPORTED_SAME_SIGN",
+      "frozen_expected_q_point_sign": "POSITIVE",
+      "new_daylength_opposite_prior_nominal_sign": false,
+      "new_q": {
+        "available": true,
+        "ci": [
+          0.1762789406643523,
+          0.31417427405197595
+        ],
+        "mean": 0.2418151100589279,
+        "n": 22,
+        "point": "POSITIVE",
+        "supported": "POSITIVE"
+      },
+      "new_q_daylength": {
+        "available": true,
+        "ci": [
+          -0.025039834400484507,
+          0.1362522344397252
+        ],
+        "mean": 0.054173924132331,
+        "n": 21,
+        "point": "POSITIVE",
+        "supported": "INCLUDES_ZERO"
+      },
+      "original_animal_tags_or_population_independent_verified": false,
+      "original_new_DOI": "10.5441/001/1.72hh609t",
+      "original_new_source_status": "SOURCE_Q_ESTIMABLE",
+      "original_source_index": 2,
+      "prior_daylength_nominal_supported_count": 1,
+      "prior_original_solar_GPS_exposure_status": "KNOWN_PREVIOUS_ORIGINAL_GPS_DATA_ANALYZED_FOR_SOLAR_DIRECTION",
+      "prior_q_supported_archive_count": 2,
+      "prior_q_supported_archives": [
+        {
+          "DOI": "10.5441/001/1.304",
+          "native_daylength": {
+            "available": true,
+            "ci": [
+              -0.03373129401476338,
+              0.027853192180006973
+            ],
+            "mean": 0.0009782924299143007,
+            "n": 30,
+            "point": "POSITIVE",
+            "supported": "INCLUDES_ZERO"
+          },
+          "native_q": {
+            "available": true,
+            "ci": [
+              0.15580729672412016,
+              0.2216704016945587
+            ],
+            "mean": 0.18975378246072777,
+            "n": 30,
+            "point": "POSITIVE",
+            "supported": "POSITIVE"
+          },
+          "original_archive_title": "Data from: Study \"Red Fox (Vulpes vulpes) in UK wet grasslands\""
+        },
+        {
+          "DOI": "10.5441/001/1.291",
+          "native_daylength": {
+            "available": true,
+            "ci": [
+              0.047476371824256784,
+              0.1398001115389674
+            ],
+            "mean": 0.09339261189778658,
+            "n": 5,
+            "point": "POSITIVE",
+            "supported": "POSITIVE"
+          },
+          "native_q": {
+            "available": true,
+            "ci": [
+              0.147875464232418,
+              0.46264582239858904
+            ],
+            "mean": 0.29043003695011577,
+            "n": 5,
+            "point": "POSITIVE",
+            "supported": "POSITIVE"
+          },
+          "original_archive_title": "Data from: Coexistence of two sympatric predators in a transitional ecosystem under constraining environmental conditions: a perspective from space and habitat use"
+        }
+      ],
+      "prior_season_opposite_new_sign_supported_source_DOIs": [],
+      "prior_season_same_new_sign_supported_source_DOIs": [],
+      "provider_MD5_original_source_verified": true,
+      "species": "Vulpes vulpes"
+    },
+    {
+      "first_new_source_nominal_q_verdict": "UNAVAILABLE_OR_ORIGINAL_SOURCE_HOLD",
+      "frozen_expected_q_point_sign": null,
+      "new_daylength_opposite_prior_nominal_sign": false,
+      "new_q": {
+        "available": false,
+        "ci": null,
+        "mean": null,
+        "n": null,
+        "point": "UNAVAILABLE",
+        "supported": "UNAVAILABLE"
+      },
+      "new_q_daylength": {
+        "available": false,
+        "ci": null,
+        "mean": null,
+        "n": null,
+        "point": "UNAVAILABLE",
+        "supported": "UNAVAILABLE"
+      },
+      "original_animal_tags_or_population_independent_verified": false,
+      "original_new_DOI": "10.5441/001/1.8dc0v84m",
+      "original_new_source_status": "SOURCE_FILE_METADATA_HOLD",
+      "original_source_index": 3,
+      "prior_daylength_nominal_supported_count": 0,
+      "prior_original_solar_GPS_exposure_status": "KNOWN_PREVIOUS_SOURCE_METADATA_HOLD_NO_GPS_FROM_THAT_ROUTE",
+      "prior_q_supported_archive_count": 2,
+      "prior_q_supported_archives": [
+        {
+          "DOI": "10.5441/001/1.3fv21n7m",
+          "native_daylength": {
+            "available": true,
+            "ci": [
+              -0.06608137989087286,
+              0.05823406253172753
+            ],
+            "mean": -0.0005950119432492525,
+            "n": 20,
+            "point": "NEGATIVE",
+            "supported": "INCLUDES_ZERO"
+          },
+          "native_q": {
+            "available": true,
+            "ci": [
+              -0.04417099959261305,
+              -0.015521108310727528
+            ],
+            "mean": -0.029977175175700362,
+            "n": 21,
+            "point": "NEGATIVE",
+            "supported": "NEGATIVE"
+          },
+          "original_archive_title": "Data from: As the duck flies: estimating the dispersal of low-pathogenic avian influenza viruses by migrating mallards"
+        },
+        {
+          "DOI": "10.5441/001/1.p9c4nc97",
+          "native_daylength": {
+            "available": true,
+            "ci": [
+              -0.00971780693177878,
+              0.011795143412191957
+            ],
+            "mean": 0.0007542646420148555,
+            "n": 76,
+            "point": "POSITIVE",
+            "supported": "INCLUDES_ZERO"
+          },
+          "native_q": {
+            "available": true,
+            "ci": [
+              -0.0002529064520681523,
+              0.0069510019246736745
+            ],
+            "mean": 0.003396234583647424,
+            "n": 100,
+            "point": "POSITIVE",
+            "supported": "INCLUDES_ZERO"
+          },
+          "original_archive_title": "Data from: Movement patterns of a keystone waterbird species are highly predictable from landscape configuration"
+        }
+      ],
+      "prior_season_opposite_new_sign_supported_source_DOIs": [],
+      "prior_season_same_new_sign_supported_source_DOIs": [],
+      "provider_MD5_original_source_verified": false,
+      "species": "Anas platyrhynchos"
+    },
+    {
+      "first_new_source_nominal_q_verdict": "UNAVAILABLE_OR_ORIGINAL_SOURCE_HOLD",
+      "frozen_expected_q_point_sign": null,
+      "new_daylength_opposite_prior_nominal_sign": false,
+      "new_q": {
+        "available": false,
+        "ci": null,
+        "mean": null,
+        "n": null,
+        "point": "UNAVAILABLE",
+        "supported": "UNAVAILABLE"
+      },
+      "new_q_daylength": {
+        "available": false,
+        "ci": null,
+        "mean": null,
+        "n": null,
+        "point": "UNAVAILABLE",
+        "supported": "UNAVAILABLE"
+      },
+      "original_animal_tags_or_population_independent_verified": false,
+      "original_new_DOI": "10.5441/001/1.ms87s2m6",
+      "original_new_source_status": "SOURCE_FILE_METADATA_HOLD",
+      "original_source_index": 4,
+      "prior_daylength_nominal_supported_count": 1,
+      "prior_original_solar_GPS_exposure_status": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "prior_q_supported_archive_count": 2,
+      "prior_q_supported_archives": [
+        {
+          "DOI": "10.5441/001/1.fk899541",
+          "native_daylength": {
+            "available": true,
+            "ci": [
+              -0.04777688930352582,
+              -0.004772257106868325
+            ],
+            "mean": -0.026533756900550577,
+            "n": 50,
+            "point": "NEGATIVE",
+            "supported": "NEGATIVE"
+          },
+          "native_q": {
+            "available": true,
+            "ci": [
+              -0.13671935338156951,
+              -0.10642737466618964
+            ],
+            "mean": -0.12098595255170014,
+            "n": 50,
+            "point": "NEGATIVE",
+            "supported": "NEGATIVE"
+          },
+          "original_archive_title": "Data from: More grazing, more damage? Assessed yield loss on agricultural grassland relates non-linearly to goose grazing pressure"
+        },
+        {
+          "DOI": "10.5441/001/1.g51fs0jv",
+          "native_daylength": {
+            "available": false,
+            "ci": null,
+            "mean": null,
+            "n": null,
+            "point": "UNAVAILABLE",
+            "supported": "UNAVAILABLE"
+          },
+          "native_q": {
+            "available": true,
+            "ci": [
+              -0.16148876092636238,
+              -0.09468160615605008
+            ],
+            "mean": -0.12729631629698168,
+            "n": 22,
+            "point": "NEGATIVE",
+            "supported": "NEGATIVE"
+          },
+          "original_archive_title": "Data from: Wild goose chase: geese flee high and far, and with aftereffects from New Year’s fireworks"
+        }
+      ],
+      "prior_season_opposite_new_sign_supported_source_DOIs": [],
+      "prior_season_same_new_sign_supported_source_DOIs": [],
+      "provider_MD5_original_source_verified": false,
+      "species": "Anser albifrons"
+    },
+    {
+      "first_new_source_nominal_q_verdict": "UNAVAILABLE_OR_ORIGINAL_SOURCE_HOLD",
+      "frozen_expected_q_point_sign": "NEGATIVE",
+      "new_daylength_opposite_prior_nominal_sign": false,
+      "new_q": {
+        "available": false,
+        "ci": null,
+        "mean": null,
+        "n": null,
+        "point": "UNAVAILABLE",
+        "supported": "UNAVAILABLE"
+      },
+      "new_q_daylength": {
+        "available": false,
+        "ci": null,
+        "mean": null,
+        "n": null,
+        "point": "UNAVAILABLE",
+        "supported": "UNAVAILABLE"
+      },
+      "original_animal_tags_or_population_independent_verified": false,
+      "original_new_DOI": "10.5441/001/1.ps244r11",
+      "original_new_source_status": "SOURCE_Q_UNAVAILABLE_NOT_ZERO",
+      "original_source_index": 5,
+      "prior_daylength_nominal_supported_count": 1,
+      "prior_original_solar_GPS_exposure_status": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "prior_q_supported_archive_count": 3,
+      "prior_q_supported_archives": [
+        {
+          "DOI": "10.5441/001/1.fk899541",
+          "native_daylength": {
+            "available": true,
+            "ci": [
+              -0.016178350032399952,
+              0.006565938639276819
+            ],
+            "mean": -0.004376129442388242,
+            "n": 64,
+            "point": "NEGATIVE",
+            "supported": "INCLUDES_ZERO"
+          },
+          "native_q": {
+            "available": true,
+            "ci": [
+              -0.17960867344971498,
+              -0.15215913857702817
+            ],
+            "mean": -0.1654734745042472,
+            "n": 64,
+            "point": "NEGATIVE",
+            "supported": "NEGATIVE"
+          },
+          "original_archive_title": "Data from: More grazing, more damage? Assessed yield loss on agricultural grassland relates non-linearly to goose grazing pressure"
+        },
+        {
+          "DOI": "10.5441/001/1.g51fs0jv",
+          "native_daylength": {
+            "available": true,
+            "ci": [
+              -0.356777843798878,
+              0.14740173333670945
+            ],
+            "mean": -0.09144855176194797,
+            "n": 6,
+            "point": "NEGATIVE",
+            "supported": "INCLUDES_ZERO"
+          },
+          "native_q": {
+            "available": true,
+            "ci": [
+              -0.1931413122664927,
+              -0.1585179847248555
+            ],
+            "mean": -0.1746417173093334,
+            "n": 65,
+            "point": "NEGATIVE",
+            "supported": "NEGATIVE"
+          },
+          "original_archive_title": "Data from: Wild goose chase: geese flee high and far, and with aftereffects from New Year’s fireworks"
+        },
+        {
+          "DOI": "10.5441/001/1.5k6b1364",
+          "native_daylength": {
+            "available": true,
+            "ci": [
+              0.013905444119615161,
+              0.16332954586118642
+            ],
+            "mean": 0.07999874137983283,
+            "n": 6,
+            "point": "POSITIVE",
+            "supported": "POSITIVE"
+          },
+          "native_q": {
+            "available": true,
+            "ci": [
+              -0.06659808520439836,
+              0.01469057674069917
+            ],
+            "mean": -0.02610800572644103,
+            "n": 6,
+            "point": "NEGATIVE",
+            "supported": "INCLUDES_ZERO"
+          },
+          "original_archive_title": "Data from: Forecasting spring from afar? Timing of migration and predictability of phenology along different migration routes of an avian herbivore [Svalbard data]"
+        }
+      ],
+      "prior_season_opposite_new_sign_supported_source_DOIs": [],
+      "prior_season_same_new_sign_supported_source_DOIs": [],
+      "provider_MD5_original_source_verified": true,
+      "species": "Branta leucopsis"
+    }
+  ],
+  "interpretation_limit": "Distinct original DOI and study IDs do not establish disjoint original tags, populations, source climate windows or observation cadence. Fox source previously read for solar-heading analysis. No global old-source exposure audit.",
+  "new_q_and_daylength_supported_source_studies": 3,
+  "new_same_q_sign_with_known_prior_GPS_exposure_count": 1,
+  "new_same_q_sign_with_prior_GPS_exposure_unresolved_count": 2,
+  "new_source_bootstrap_primary_q_sign_verdicts": {
+    "NOMINAL_SUPPORTED_SAME_SIGN": 3,
+    "UNAVAILABLE_OR_ORIGINAL_SOURCE_HOLD": 3
+  },
+  "no_common_seasonal_calendar_control": true,
+  "no_global_random_wildlife_species_estimate": true,
+  "no_new_GPS_or_original_provider_metadata_access": true,
+  "old_12_ERA5_provider_raw_SHA_HOLD": true,
+  "old_48_source_signed_solar_direction_heldout_NOT_REPLICATED": true,
+  "opposite_nominal_daylength_slope_support_species_count": 2,
+  "original_daylength_supported_new": 3,
+  "original_new_source_study_slots": 6,
+  "original_previous_source_studies": 63,
+  "original_q_supported_new": 3,
+  "original_source_file_HOLD": 2,
+  "original_source_file_admissible": 4,
+  "post_outcome_comparison_not_a_registered_daylength_reversal_test": true,
+  "previous_q_supported_native_rows": 38,
+  "q_same_sign_supported_new_species": [
+    "Anser albifrons",
+    "Odocoileus hemionus",
+    "Vulpes vulpes"
+  ],
+  "source_to_source_slope_difference_interval_not_estimated": true,
+  "source_to_source_tag_and_population_independence_unverified": true,
+  "species_with_opposite_nominal_daylength_slope_support_across_archived_sources": [
+    "Anser albifrons",
+    "Odocoileus hemionus"
+  ],
+  "stage": "POST_FIRST_Q_RESULTS_SOURCE_NATIVE_POSITION_VS_DAYLENGTH_SLOPE_CONTRAST",
+  "version": "RSDS_SAME_SPECIES_Q_POSITION_VS_DAYLENGTH_SLOPE_POSTOUTCOME_V1"
+}
