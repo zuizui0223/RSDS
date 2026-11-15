@@ -50,7 +50,7 @@ def frozen():
         or len(rows)!=35
         or len(wave1["all_first_wave_registered_native_group_effects"])!=27
         or sum(z["registered_native_count"] for z in rows)!=50
-        or sum(z["source_MD5_confirmed"] for z in rows)!=25
+        or sum(z["source_MD5_confirmed"] for z in rows)!=28
         or sum(z["complete_source_native_q"] for z in rows)!=10
         or all35["human_location_source_no_access"] is not True):
         raise ValueError("Prior 35-source q or recorded source eligibility changed")
