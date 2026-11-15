@@ -1,0 +1,23 @@
+{
+  "version": "RSDS_SAME_SPECIES_TIME_NICHE_POSITION_VS_SEASONAL_SLOPE_POSTOUTCOME_V1",
+  "date": "2026-11-15",
+  "stage": "AFTER_FIRST_TARGET_FOLLOWUP_Q_RESULTS_POST_OUTCOME_ECOLOGICAL_COMPARISON_NO_NEW_GPS",
+  "prior_63_species_source_atlas": "research/RSDS_ORIGINAL_SOURCE_NATIVE_SAME_SPECIES_CROSS_STUDY_FIRST_RESULT_20261115.json",
+  "prior_63_species_source_atlas_git_blob": "0cb517ae48d80e503cd2ed5acf150abc047a4352",
+  "frozen_six_target_first_q": "research/RSDS_SIX_FOLLOWUP_ORIGINAL_GPS_Q_FIRST_COMBINED_RESULT_20261115.json",
+  "frozen_six_target_first_q_git_blob": "8b254ea8a155098adeac30e70f990575d3b624c2",
+  "first_source_original_q_Action_id": 43708512175,
+  "first_source_original_q_aggregate_zip_artifact_id": 14160165298,
+  "first_source_original_q_aggregate_zip_sha256": "399a4bcfa765bea4ddca59c348c338f7cefdd9b87c79c655d5174dfc5137f622",
+  "first_source_original_q_freeze_Action_id": 43709239579,
+  "original_followup_study_IDs": 6,
+  "first_q_supported_sources": 3,
+  "first_daylength_supported_sources": 3,
+  "classification": "Compare the six frozen new source-native q and q-daylength nominal tagged-animal 95% intervals against the previous archival source-native intervals of exactly the same scientific_name. 'Position conserved' requires all prior supported native q source intervals and the new native q interval exclude zero in the same direction. 'Seasonal slope opposite' requires a supported new source q-daylength interval exclude zero in the sign opposite at least one prior same-species source daylength interval excluding zero. Unavailable/CI crossing zero cannot be assigned a direction. Distinct source DOI is not proven disjoint tagged animal populations.",
+  "historical_48_source_solar_direction_external_nonreplication": true,
+  "historical_12_ERA5_raw_SHA_source_HOLD": true,
+  "target_species_selected_after_prior_results": true,
+  "no_raw_GPS_access_or_reinterpretation": true,
+  "confirmatory_inference": false,
+  "causal_environment_selection_inference": false
+}
