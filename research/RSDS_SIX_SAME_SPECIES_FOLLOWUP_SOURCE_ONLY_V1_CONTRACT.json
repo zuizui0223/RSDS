@@ -1,0 +1,81 @@
+{
+  "version": "RSDS_SAME_SPECIES_SIX_FOLLOWUP_ORIGINAL_SOURCE_METADATA_SELECTION_V1",
+  "date": "2026-11-15",
+  "stage": "POST_63_SOURCE_OUTCOME_DISCOVERY_PRE_FOLLOWUP_PROVIDER_FILE_OR_ORIGINAL_GPS_ACCESS",
+  "catalog_path": "research/seasonal_database_catalog/2026-10-19/movebank/catalog.json",
+  "catalog_git_blob": "9822ec80ed98cab1e3d17a853d0ce5e63e47298c",
+  "original_63_source_native_atlas_path": "research/RSDS_ORIGINAL_SOURCE_NATIVE_SAME_SPECIES_CROSS_STUDY_FIRST_RESULT_20261115.json",
+  "original_63_source_native_atlas_git_blob": "0cb517ae48d80e503cd2ed5acf150abc047a4352",
+  "original_prior_12_path": "research/RSDS_12_STUDY_22_NATIVE_TEMPORAL_MACRO_FIRST_RESULT_20261031.json",
+  "original_prior_12_git_blob": "af0574c6bb6383402a97b5bebadb8cf0408e9740",
+  "original_wave1_path": "research/RSDS_437_SOURCE_FRAME_WAVE1_PRE_EVENT_SELECTION_20261115.json",
+  "original_wave1_git_blob": "23d7489e4cf8347341cf67290499f278610651c6",
+  "original_wave2_path": "research/RSDS_437_WAVE2_19_SOURCE_SELECTION_PRE_EVENT_FIRST_V1.json",
+  "original_wave2_git_blob": "516fafc85ade5f953b9f8c697bdcc472d453fd0c",
+  "original_wave3_path": "research/RSDS_437_WAVE3_16_SOURCE_METADATA_ONLY_FIRST_RESULT_20261115.json",
+  "original_wave3_git_blob": "a5a11c75a08df99755d3f6d560d111ab4904375b",
+  "original_public_catalog_packages": 437,
+  "original_63_source_studies": 63,
+  "target_scientific_names_from_prior_post_outcome_repeatability": [
+    "Anas platyrhynchos",
+    "Anser albifrons",
+    "Branta leucopsis",
+    "Odocoileus hemionus",
+    "Ovis canadensis",
+    "Vulpes vulpes"
+  ],
+  "source_only_eligibility": {
+    "require_GPS_or_GNSS_exact_sensor": true,
+    "license": [
+      "CC0 1.0 Universal"
+    ],
+    "min_reported_animals": 10,
+    "min_reported_locations": 10000,
+    "one_original_DOI_and_repository_study_ID": true,
+    "allow_managed_population": true,
+    "source_rank": "sort source study DOI lexically for audit; no q-based rank"
+  },
+  "fixed_new_six_original_candidates": [
+    {
+      "doi": "10.5441/001/1.8dc0v84m",
+      "native": "Anas platyrhynchos",
+      "source_study_id": "11017705"
+    },
+    {
+      "doi": "10.5441/001/1.ms87s2m6",
+      "native": "Anser albifrons",
+      "source_study_id": "1049685237"
+    },
+    {
+      "doi": "10.5441/001/1.46b0mq21",
+      "native": "Anser albifrons",
+      "source_study_id": "657965212"
+    },
+    {
+      "doi": "10.5441/001/1.ps244r11",
+      "native": "Branta leucopsis",
+      "source_study_id": "29799425"
+    },
+    {
+      "doi": "10.5441/001/1.708",
+      "native": "Odocoileus hemionus",
+      "source_study_id": "2549043743"
+    },
+    {
+      "doi": "10.5441/001/1.72hh609t",
+      "native": "Vulpes vulpes",
+      "source_study_id": "444539014"
+    }
+  ],
+  "expected_new_six": 6,
+  "expected_target_names_with_candidate": 5,
+  "expected_target_names_without_candidate": [
+    "Ovis canadensis"
+  ],
+  "no_original_provider_file_list_queried": true,
+  "no_original_GPS_event_or_tag_data_read": true,
+  "no_outcome_based_replacement": true,
+  "old_solar_48_source_external_signed_direction": "NOT_REPLICATED",
+  "old_12_ERA5_raw_SHA_HOLD": true,
+  "inference_boundary": "Species were selected AFTER viewing the 63 source repeatability outcomes. Even if new source q remains unopened, this is targeted prospective follow-up (not a preregistered, random global species replication). Distinct DOI and source title are not enough to prove animal-tag, population or prior GPS analysis independence. Audit source identities, provenance and observation support before promoting any ecological claim."
+}
