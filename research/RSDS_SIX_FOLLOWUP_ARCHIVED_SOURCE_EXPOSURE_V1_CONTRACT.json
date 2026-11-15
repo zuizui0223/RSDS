@@ -1,0 +1,58 @@
+{
+  "version": "RSDS_SIX_FOLLOWUP_ARCHIVED_SOURCE_EXPOSURE_AUDIT_V1",
+  "date": "2026-11-15",
+  "stage": "POST_SOURCE_ID_FROZEN_SOURCE_ONLY_PRIOR_ARCHIVE_EXPOSURE_DIAGNOSTIC",
+  "frozen_six_source_manifest_path": "research/RSDS_SIX_SAME_SPECIES_FOLLOWUP_ORIGINAL_SOURCE_ONLY_FIRST_RESULT_20261115.json",
+  "frozen_six_source_manifest_git_blob": "1315b435c40b59831a643e35e9b7f9063879673b",
+  "eight_preexisting_solar_and_temporal_original_output_receipts": [
+    {
+      "path": "research/GLOBAL_SOLAR_AZIMUTH_V0_FIRST_ORIGINAL_GPS_RESULT_20261025.json",
+      "git_blob": "2360699e7b26649edfb9d89daa660f510233e103"
+    },
+    {
+      "path": "research/GLOBAL_SOLAR_AZIMUTH_12_NEW_SOURCE_FIRST_ORIGINAL_GPS_RESULT_20261025.json",
+      "git_blob": "d3a05ac1324fa8fc6cf738e1866704841f0b6d88"
+    },
+    {
+      "path": "research/GLOBAL_SOLAR_AZIMUTH_NEW24_ORIGINAL_GPS_FIRST_V2_RESULT_20261025.json",
+      "git_blob": "eae522571b5902ee0ab901d6bbebbb46ece55d48"
+    },
+    {
+      "path": "research/GLOBAL_SOLAR_AZIMUTH_COMBINED_V2_MACRO_SUMMARY_20261025.json",
+      "git_blob": "7d71eec3a29bff6c64053b1728d18377bf6596f7"
+    },
+    {
+      "path": "research/SOLAR_RADIATION_EXTERNAL_24_SOURCE_FIRST_ALL_RESULTS_20261025.json",
+      "git_blob": "fe48a1c6fb39f894236ae43764400995fb1348a4"
+    },
+    {
+      "path": "research/SOLAR_RADIATION_EXTERNAL_24_STUDY_SIGNED_TEST_FIRST_RESULT_20261025.json",
+      "git_blob": "d76018c809c1725bf8b4d0df5c3ea2416bf38523"
+    },
+    {
+      "path": "research/SOLAR_RADIATION_TWO_24_SOURCE_NONREPLICATION_DIAGNOSTIC_FIRST_RESULT_20261025.json",
+      "git_blob": "0523b3dd8581fe6b5f9ee3f08bdcbb28ce57fd69"
+    },
+    {
+      "path": "research/RSDS_8_STUDY_TIME_SOLAR_HEADING_MACRO_ATLAS_V1_20261026.json",
+      "git_blob": "2c4670b54fa5b52737993ebf6babc3a7a58b166a"
+    }
+  ],
+  "prior_48_solar_direction_signed_external_nonreplicated": true,
+  "prior_12_ERA5_raw_SHA_HOLD": true,
+  "expected_prior_source_footprints": [
+    {
+      "doi": "10.5441/001/1.8dc0v84m",
+      "result_status": "SOURCE_HOLD",
+      "source": "GLOBAL_SOLAR_AZIMUTH_12_NEW_SOURCE_FIRST_ORIGINAL_GPS_RESULT_20261025.json"
+    },
+    {
+      "doi": "10.5441/001/1.72hh609t",
+      "result_status": "original_MD5_verified_source_analyzed",
+      "source": "GLOBAL_SOLAR_AZIMUTH_NEW24_ORIGINAL_GPS_FIRST_V2_RESULT_20261025.json"
+    }
+  ],
+  "no_provider_file_listing_or_GPS_reopen": true,
+  "audit_scope": "Only eight pinned prior original solar/temporal JSON result surfaces; cannot prove absence of earlier analysis elsewhere in repositories or absence of repeated tags across different study archives. A known previous GPS SOURCE read precludes a fully untouched-GPS claim even if this specific night/day q endpoint was not previously computed.",
+  "inference_boundary": "Source-only prior-exposure check; no ecological q endpoint evaluated. Preserve old SOURCE_HOLD and separately record already GPS-observed fox source."
+}
