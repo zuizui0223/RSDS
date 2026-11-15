@@ -1,0 +1,68 @@
+name: RSDS source-native species niche position versus seasonal slope ecological audit
+on:
+  push:
+    branches:
+      - analysis/rsds-species-time-position-season-slope-20261115
+    paths:
+      - 'research/RSDS_SAME_SPECIES_POSITION_SEASON_SLOPE_V1_CONTRACT.json'
+      - 'scripts/rsds_same_species_position_season_slope_v1.py'
+      - 'tests/test_rsds_same_species_position_season_slope_v1.py'
+      - '.github/workflows/rsds-original-source-position-season-slope-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_native_temporal_position_vs_daylength_slope_without_GPS:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify immutable original source-science SHA and original tagged-animal bootstrap sign
+        run: python -m unittest discover -s tests -p 'test_rsds_same_species_position_season_slope_v1.py' -v
+      - name: Reproduce after-outcome six selected source q position vs seasonal slope atlas
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_same_species_position_season_slope_v1 --out research/RSDS_SAME_SPECIES_POSITION_SEASON_SLOPE_POSTOUTCOME_FIRST_RESULT_20261115.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('research/RSDS_SAME_SPECIES_POSITION_SEASON_SLOPE_POSTOUTCOME_FIRST_RESULT_20261115.json').read_text())
+          assert d["earlier_source_DOI"]==63
+          assert d["previous_source_native_taxon_rows"]==88
+          assert d["new_original_source_study_IDs"]==6
+          assert d["new_q_same_all_prior_supported_direction"]==3
+          assert d["new_q_HOLD_or_incomplete"]==3
+          assert d["new_supported_daylength_opposite_to_any_prior_supported_source"]==2
+          assert len(d["original_new_source_axis_rows_including_HOLD"])==6
+          assert d["prior_GPS_source_independence_not_verified"]
+          assert d["original_tagged_animal_nominal95_intervals_not_crosssource_tests"]
+          assert d["post_outcome_and_species_target_adaptive"]
+          assert d["original_raw_GPS_reopened"] is False
+          assert d["old_48_source_external_solar_direction_not_replicated"]
+          assert d["old_12_source_ERA5_raw_SHA_HOLD"]
+          print("SAME_SPECIES_POSITION_CONSERVED_SEASON_SLOPE_HETEROGENEITY_DESCRIPTIVE_NOT_CAUSAL")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-six-followup-position-season-slope-original-postoutcome-v1
+          path: research/RSDS_SAME_SPECIES_POSITION_SEASON_SLOPE_POSTOUTCOME_FIRST_RESULT_20261115.json
+          if-no-files-found: error
+      - name: Commit source-only ecological axis result without new original animal GPS reads
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_SAME_SPECIES_POSITION_SEASON_SLOPE_POSTOUTCOME_FIRST_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze source-native repeated-species position vs daylight slope contrast"
+            git fetch origin analysis/rsds-species-time-position-season-slope-20261115
+            git rebase origin/analysis/rsds-species-time-position-season-slope-20261115
+            git push origin HEAD:analysis/rsds-species-time-position-season-slope-20261115
+          fi
