@@ -1,0 +1,60 @@
+name: RSDS Wave2 source rank freeze before original provider or GPS access
+on:
+  push:
+    branches:
+      - analysis/rsds-437-wave2-original-gps-20261115
+    paths:
+      - 'research/RSDS_437_SOURCE_FRAME_WAVE2_PRE_EVENT_CONTRACT_V1.json'
+      - 'scripts/rsds_437_wave2_priority_source_selection_v1.py'
+      - 'tests/test_rsds_437_wave2_priority_source_selection_v1.py'
+      - '.github/workflows/rsds-437-wave2-source-selection-freeze-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  source_wave2_pre_event_rank_freeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify original first wave immutable SHA and 19 next source identities
+        run: python -m unittest discover -s tests -p 'test_rsds_437_wave2_priority_source_selection_v1.py' -v
+      - name: Emit 19 previously unselected source-only identities, not GPS outcomes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_437_wave2_priority_source_selection_v1 --out research/RSDS_437_WAVE2_19_SOURCE_SELECTION_PRE_EVENT_FIRST_V1.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("research/RSDS_437_WAVE2_19_SOURCE_SELECTION_PRE_EVENT_FIRST_V1.json")
+          j=json.loads(p.read_text())
+          assert len(j["all_original_wave2_sources_in_rank_order"])==19
+          assert j["wave2_new_source_counts"]=={"single_native":16,"multi_native":3}
+          assert j["original_wave2_GPS_events_opened"]==0
+          assert j["original_wave2_provider_files_opened"]==0
+          print("SOURCE_SELECTION_WAVE2_READY_FOR_PRE_EVENT_SHA_FREEZE")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-wave2-19-source-only-original-rank-first-v1
+          path: research/RSDS_437_WAVE2_19_SOURCE_SELECTION_PRE_EVENT_FIRST_V1.json
+          if-no-files-found: error
+      - name: Commit source identities before any provider file metadata is obtained
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_437_WAVE2_19_SOURCE_SELECTION_PRE_EVENT_FIRST_V1.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze new wave2 source IDs in original SHA rank before file or GPS access"
+            git fetch origin analysis/rsds-437-wave2-original-gps-20261115
+            git rebase origin/analysis/rsds-437-wave2-original-gps-20261115
+            git push origin HEAD:analysis/rsds-437-wave2-original-gps-20261115
+          fi
