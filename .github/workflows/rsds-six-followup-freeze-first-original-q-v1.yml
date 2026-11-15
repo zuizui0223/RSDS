@@ -1,0 +1,95 @@
+name: RSDS freeze first six-target original GPS q outcome SHA without rereading GPS
+on:
+  push:
+    branches:
+      - analysis/rsds-six-followup-original-gps-q-20261115
+    paths:
+      - '.github/workflows/rsds-six-followup-freeze-first-original-q-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  freeze_successful_original_six_source_first_q:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify first successful original source result and signed ZIP digest
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api repos/zuizui0223/RSDS/actions/runs/43708512175 --jq .conclusion | grep -Fx success
+          gh api repos/zuizui0223/RSDS/actions/artifacts/14160165298 --jq .digest | grep -Fx 'sha256:399a4bcfa765bea4ddca59c348c338f7cefdd9b87c79c655d5174dfc5137f622'
+      - name: Download only first six original-source aggregate from pinned first successful run
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 43708512175
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          name: rsds-six-followup-target-original-q-first-six-source-combined-v1
+          path: outputs/first_frozen
+      - name: Copy byte-exact original aggregate and protect old HOLD+prior exposure
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC=outputs/first_frozen/six_target_same_species_first_original_q.json
+          DST=research/RSDS_SIX_FOLLOWUP_ORIGINAL_GPS_Q_FIRST_COMBINED_RESULT_20261115.json
+          if [ -f "$DST" ]; then
+            cmp "$SRC" "$DST"
+          else
+            cp "$SRC" "$DST"
+          fi
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_SIX_FOLLOWUP_ORIGINAL_GPS_Q_FIRST_COMBINED_RESULT_20261115.json')
+          d=json.loads(p.read_text())
+          assert d["version"]=="RSDS_SIX_SAME_SPECIES_FOLLOWUP_ORIGINAL_GPS_Q_FIRST_META_V1"
+          assert d["original_previous_archive_source_DOIs"]==63
+          assert d["original_followup_source_DOIs_all"]==6
+          assert d["original_source_file_admissible_pre_event"]==4
+          assert d["original_pre_event_metadata_HOLD"]==2
+          rows=d["all_six_original_source_taxon_results_including_HOLD"]
+          assert len(rows)==6
+          assert [x["source_index"] for x in rows]==list(range(6))
+          assert len({x["original_source_DOI"] for x in rows})==6
+          assert sum(x["original_new_source_q"]["available"] for x in rows)==d["new_original_source_q_supported"]
+          assert sum(d["new_source_effect_repeatability_nominal_verdict_counts"].values())==6
+          assert d["known_prior_solar_heading_GPS_source_used"]==1
+          assert d["previous_mallard_metadata_source_HOLD_unchanged"]
+          assert d["new_source_study_IDs_selected_after_previous_same_species_results"]
+          assert d["source_taxon_same_original_tag_population_independence_unverified"]
+          assert d["no_original_animal_ID_GPS_coordinates_exact_dates_or_per_tag_coefficients_exported"]
+          assert d["previous_original_48_solar_direction_signed_heldout_nonreplication"]
+          assert d["previous_original_12_ERA5_raw_source_HOLD_unchanged"]
+          print('SIX_FIRST_ORIGINAL_GPS_SOURCE_OUTCOMES_FROZEN_HOLDS_RETAINED')
+          print('SOURCE_SUPPORT',d["new_original_source_q_supported"])
+          print('SIGN_TEST',d["new_source_effect_repeatability_nominal_verdict_counts"])
+          PY
+          sha256sum "$DST"
+      - name: Publish immutable first combined JSON to artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-six-target-original-q-first-combined-git-blob-freeze-v1
+          path: research/RSDS_SIX_FOLLOWUP_ORIGINAL_GPS_Q_FIRST_COMBINED_RESULT_20261115.json
+          if-no-files-found: error
+      - name: Commit only original first combined source result, never GPS
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_SIX_FOLLOWUP_ORIGINAL_GPS_Q_FIRST_COMBINED_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze six follow-up first source q/HOLD output from pinned original artifact"
+            git fetch origin analysis/rsds-six-followup-original-gps-q-20261115
+            git rebase origin/analysis/rsds-six-followup-original-gps-q-20261115
+            git push origin HEAD:analysis/rsds-six-followup-original-gps-q-20261115
+          fi
