@@ -1,0 +1,406 @@
+{
+  "all_five_frozen_original_source_native_analyses_including_HOLD": [
+    {
+      "fixed_lat_month_robustness_vs_local": "UNRESOLVED_OR_UNAVAILABLE",
+      "month_native": {
+        "fixed_source_reference_latitude_daylength": {
+          "mean_slope_per_hour": -0.017330427564915665,
+          "nominal_interval_sign": "INCLUDES_ZERO",
+          "original_tag_bootstrap95": [
+            -0.06508465753278857,
+            0.026968795588076067
+          ],
+          "status": "ESTIMABLE",
+          "tagged_animals_support": 37
+        },
+        "local_original_solar_daylength": {
+          "mean_slope_per_hour": -0.01816584520493334,
+          "nominal_interval_sign": "INCLUDES_ZERO",
+          "original_tag_bootstrap95": [
+            -0.06496341244610299,
+            0.025732155285725145
+          ],
+          "status": "ESTIMABLE",
+          "tagged_animals_support": 37
+        },
+        "minimum_admitted_tag_year_centered_daylength_Sxx_hours2": 0.09256819643924216,
+        "original_animal_identifiers_and_daily_records_not_exported": true,
+        "original_same_1hour_selected_source_qualified_days": 2929,
+        "original_selected_fix_count": 74280,
+        "original_tag_years_with_year_month_conditioned_slope": 56,
+        "original_tagged_animals_with_year_month_conditions": 37,
+        "source_accepted_tag_month_blocks": 146,
+        "source_accepted_tag_solar_dates_count_not_independent": 2385,
+        "source_reference_latitude_not_exported": true
+      },
+      "original_DOI": "10.5441/001/1.fk899541",
+      "original_registered_source_species": [
+        "Branta leucopsis",
+        "Anser albifrons",
+        "Anser anser"
+      ],
+      "previous_full_source_native_daylength": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 50,
+        "point_sign": "NEGATIVE",
+        "q": -0.026533756900550577,
+        "source_tag_bootstrap95": [
+          -0.04777688930352582,
+          -0.004772257106868325
+        ]
+      },
+      "previous_full_source_native_q": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 50,
+        "point_sign": "NEGATIVE",
+        "q": -0.12098595255170014,
+        "source_tag_bootstrap95": [
+          -0.13671935338156951,
+          -0.10642737466618964
+        ]
+      },
+      "previous_original_GPS_exposure_state": "PRIOR_ORIGINAL_GPS_READ",
+      "source_first_result_baseline_replayed": true,
+      "source_gps_status": "MONTH_NATIVE_ESTIMABLE",
+      "source_hold_stage": null,
+      "source_hold_type": null,
+      "source_index": 0,
+      "source_key": "goose_old_grazing",
+      "source_native_species": "Anser albifrons",
+      "source_original_MD5_verified": true,
+      "within_tag_year_month_local_vs_old_full_slope": "UNRESOLVED_OR_UNAVAILABLE"
+    },
+    {
+      "fixed_lat_month_robustness_vs_local": "BOTH_NOMINAL_MATCHING",
+      "month_native": {
+        "fixed_source_reference_latitude_daylength": {
+          "mean_slope_per_hour": 0.0031214548053066483,
+          "nominal_interval_sign": "POSITIVE",
+          "original_tag_bootstrap95": [
+            0.0016959060974964728,
+            0.004503009804420747
+          ],
+          "status": "ESTIMABLE",
+          "tagged_animals_support": 1647
+        },
+        "local_original_solar_daylength": {
+          "mean_slope_per_hour": 0.003151813474043279,
+          "nominal_interval_sign": "POSITIVE",
+          "original_tag_bootstrap95": [
+            0.0017766152785337593,
+            0.004565200394373042
+          ],
+          "status": "ESTIMABLE",
+          "tagged_animals_support": 1647
+        },
+        "minimum_admitted_tag_year_centered_daylength_Sxx_hours2": 0.1919293098180027,
+        "original_animal_identifiers_and_daily_records_not_exported": true,
+        "original_same_1hour_selected_source_qualified_days": 249608,
+        "original_selected_fix_count": 3230579,
+        "original_tag_years_with_year_month_conditioned_slope": 2198,
+        "original_tagged_animals_with_year_month_conditions": 1647,
+        "source_accepted_tag_month_blocks": 10048,
+        "source_accepted_tag_solar_dates_count_not_independent": 247346,
+        "source_reference_latitude_not_exported": true
+      },
+      "original_DOI": "10.5441/001/1.711",
+      "original_registered_source_species": [
+        "Antilocapra americana",
+        "Cervus elaphus",
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "previous_full_source_native_daylength": {
+        "available": true,
+        "nominal_source_CI_sign": "POSITIVE",
+        "original_source_tagged_animals": 1683,
+        "point_sign": "POSITIVE",
+        "q": 0.005619415769068772,
+        "source_tag_bootstrap95": [
+          0.004388078182072968,
+          0.006920966097037151
+        ]
+      },
+      "previous_full_source_native_q": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 1723,
+        "point_sign": "NEGATIVE",
+        "q": -0.02184895488685285,
+        "source_tag_bootstrap95": [
+          -0.02321004124388584,
+          -0.02046763062163855
+        ]
+      },
+      "previous_original_GPS_exposure_state": "PRIOR_ORIGINAL_GPS_READ",
+      "source_first_result_baseline_replayed": true,
+      "source_gps_status": "MONTH_NATIVE_ESTIMABLE",
+      "source_hold_stage": null,
+      "source_hold_type": null,
+      "source_index": 1,
+      "source_key": "mule_old_utah",
+      "source_native_species": "Odocoileus hemionus",
+      "source_original_MD5_verified": true,
+      "within_tag_year_month_local_vs_old_full_slope": "SAME_NOMINAL_SOURCE_SIGN"
+    },
+    {
+      "fixed_lat_month_robustness_vs_local": "BOTH_NOMINAL_MATCHING",
+      "month_native": {
+        "fixed_source_reference_latitude_daylength": {
+          "mean_slope_per_hour": 0.008741354259359799,
+          "nominal_interval_sign": "POSITIVE",
+          "original_tag_bootstrap95": [
+            0.005491791804247545,
+            0.011822613097734703
+          ],
+          "status": "ESTIMABLE",
+          "tagged_animals_support": 115
+        },
+        "local_original_solar_daylength": {
+          "mean_slope_per_hour": 0.008806036416714685,
+          "nominal_interval_sign": "POSITIVE",
+          "original_tag_bootstrap95": [
+            0.005574531115317263,
+            0.012101802621646313
+          ],
+          "status": "ESTIMABLE",
+          "tagged_animals_support": 115
+        },
+        "minimum_admitted_tag_year_centered_daylength_Sxx_hours2": 1.7591279287856283,
+        "original_animal_identifiers_and_daily_records_not_exported": true,
+        "original_same_1hour_selected_source_qualified_days": 17402,
+        "original_selected_fix_count": 396444,
+        "original_tag_years_with_year_month_conditioned_slope": 162,
+        "original_tagged_animals_with_year_month_conditions": 115,
+        "source_accepted_tag_month_blocks": 685,
+        "source_accepted_tag_solar_dates_count_not_independent": 17314,
+        "source_reference_latitude_not_exported": true
+      },
+      "original_DOI": "10.5441/001/1.703",
+      "original_registered_source_species": [
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "previous_full_source_native_daylength": {
+        "available": true,
+        "nominal_source_CI_sign": "POSITIVE",
+        "original_source_tagged_animals": 118,
+        "point_sign": "POSITIVE",
+        "q": 0.005538249061142167,
+        "source_tag_bootstrap95": [
+          0.004101632821224659,
+          0.006972859886325625
+        ]
+      },
+      "previous_full_source_native_q": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 119,
+        "point_sign": "NEGATIVE",
+        "q": -0.0044624294869207584,
+        "source_tag_bootstrap95": [
+          -0.005777731444226381,
+          -0.003089662007489691
+        ]
+      },
+      "previous_original_GPS_exposure_state": "PRIOR_ORIGINAL_GPS_READ",
+      "source_first_result_baseline_replayed": true,
+      "source_gps_status": "MONTH_NATIVE_ESTIMABLE",
+      "source_hold_stage": null,
+      "source_hold_type": null,
+      "source_index": 2,
+      "source_key": "mule_old_wyoming",
+      "source_native_species": "Odocoileus hemionus",
+      "source_original_MD5_verified": true,
+      "within_tag_year_month_local_vs_old_full_slope": "SAME_NOMINAL_SOURCE_SIGN"
+    },
+    {
+      "fixed_lat_month_robustness_vs_local": "UNRESOLVED_OR_UNAVAILABLE",
+      "month_native": {
+        "fixed_source_reference_latitude_daylength": {
+          "mean_slope_per_hour": 0.01421562552782356,
+          "nominal_interval_sign": "INCLUDES_ZERO",
+          "original_tag_bootstrap95": [
+            -0.02529049024955502,
+            0.05238005395943246
+          ],
+          "status": "ESTIMABLE",
+          "tagged_animals_support": 5
+        },
+        "local_original_solar_daylength": {
+          "mean_slope_per_hour": 0.01159397937941888,
+          "nominal_interval_sign": "INCLUDES_ZERO",
+          "original_tag_bootstrap95": [
+            -0.041146457885169845,
+            0.04778047530980586
+          ],
+          "status": "ESTIMABLE",
+          "tagged_animals_support": 5
+        },
+        "minimum_admitted_tag_year_centered_daylength_Sxx_hours2": 44.27937275020859,
+        "original_animal_identifiers_and_daily_records_not_exported": true,
+        "original_same_1hour_selected_source_qualified_days": 855,
+        "original_selected_fix_count": 36572,
+        "original_tag_years_with_year_month_conditioned_slope": 6,
+        "original_tagged_animals_with_year_month_conditions": 5,
+        "source_accepted_tag_month_blocks": 41,
+        "source_accepted_tag_solar_dates_count_not_independent": 855,
+        "source_reference_latitude_not_exported": true
+      },
+      "original_DOI": "10.5441/001/1.46b0mq21",
+      "original_registered_source_species": [
+        "Anser albifrons"
+      ],
+      "previous_full_source_native_daylength": {
+        "available": true,
+        "nominal_source_CI_sign": "POSITIVE",
+        "original_source_tagged_animals": 5,
+        "point_sign": "POSITIVE",
+        "q": 0.023927670839973866,
+        "source_tag_bootstrap95": [
+          0.008714128881371252,
+          0.04019790340859443
+        ]
+      },
+      "previous_full_source_native_q": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 5,
+        "point_sign": "NEGATIVE",
+        "q": -0.24516468238493802,
+        "source_tag_bootstrap95": [
+          -0.2978894464193578,
+          -0.1901817094450917
+        ]
+      },
+      "previous_original_GPS_exposure_state": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "source_first_result_baseline_replayed": true,
+      "source_gps_status": "MONTH_NATIVE_ESTIMABLE",
+      "source_hold_stage": null,
+      "source_hold_type": null,
+      "source_index": 3,
+      "source_key": "goose_new_pannonic",
+      "source_native_species": "Anser albifrons",
+      "source_original_MD5_verified": true,
+      "within_tag_year_month_local_vs_old_full_slope": "UNRESOLVED_OR_UNAVAILABLE"
+    },
+    {
+      "fixed_lat_month_robustness_vs_local": "UNRESOLVED_OR_UNAVAILABLE",
+      "month_native": {
+        "fixed_source_reference_latitude_daylength": {
+          "mean_slope_per_hour": -0.00282471908579785,
+          "nominal_interval_sign": "INCLUDES_ZERO",
+          "original_tag_bootstrap95": [
+            -0.007363529586602698,
+            0.0019705782447056244
+          ],
+          "status": "ESTIMABLE",
+          "tagged_animals_support": 131
+        },
+        "local_original_solar_daylength": {
+          "mean_slope_per_hour": -0.002149390748482319,
+          "nominal_interval_sign": "INCLUDES_ZERO",
+          "original_tag_bootstrap95": [
+            -0.00673730275308394,
+            0.0026462264370907236
+          ],
+          "status": "ESTIMABLE",
+          "tagged_animals_support": 131
+        },
+        "minimum_admitted_tag_year_centered_daylength_Sxx_hours2": 1.5441918967561912,
+        "original_animal_identifiers_and_daily_records_not_exported": true,
+        "original_same_1hour_selected_source_qualified_days": 59909,
+        "original_selected_fix_count": 948632,
+        "original_tag_years_with_year_month_conditioned_slope": 281,
+        "original_tagged_animals_with_year_month_conditions": 131,
+        "source_accepted_tag_month_blocks": 2319,
+        "source_accepted_tag_solar_dates_count_not_independent": 59013,
+        "source_reference_latitude_not_exported": true
+      },
+      "original_DOI": "10.5441/001/1.708",
+      "original_registered_source_species": [
+        "Odocoileus hemionus"
+      ],
+      "previous_full_source_native_daylength": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 133,
+        "point_sign": "NEGATIVE",
+        "q": -0.003919925827490663,
+        "source_tag_bootstrap95": [
+          -0.00894405015815926,
+          -0.0003309853677428535
+        ]
+      },
+      "previous_full_source_native_q": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 133,
+        "point_sign": "NEGATIVE",
+        "q": -0.028819071216292565,
+        "source_tag_bootstrap95": [
+          -0.03347940119026919,
+          -0.024224179018510292
+        ]
+      },
+      "previous_original_GPS_exposure_state": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "source_first_result_baseline_replayed": true,
+      "source_gps_status": "MONTH_NATIVE_ESTIMABLE",
+      "source_hold_stage": null,
+      "source_hold_type": null,
+      "source_index": 4,
+      "source_key": "mule_new_sublette",
+      "source_native_species": "Odocoileus hemionus",
+      "source_original_MD5_verified": true,
+      "within_tag_year_month_local_vs_old_full_slope": "UNRESOLVED_OR_UNAVAILABLE"
+    }
+  ],
+  "between_source_population_and_tag_disjointness_unverified": true,
+  "five_frozen_original_field_source_DOI": 5,
+  "no_source_to_source_causal_daylength_comparison": true,
+  "not_prospective_global_macroecology": true,
+  "old_12_ERA5_raw_SHA_HOLD_UNCHANGED": true,
+  "old_48_solar_direction_external_nonreplication_UNCHANGED": true,
+  "original_GPS_positions_dates_IDs_and_individual_month_slopes_not_exported": true,
+  "per_species_original_source_native_month_sign_descriptions": {
+    "Anser albifrons": {
+      "all_source_studies": 2,
+      "both_month_source_CI_signs_supported_and_opposite": false,
+      "cross_source_interaction_difference_bootstrap_estimated": false,
+      "distinct_tagged_populations_confirmed": false,
+      "month_native_nominal_includes_zero_source_count": 2,
+      "month_native_nominal_negative_source_count": 0,
+      "month_native_nominal_positive_source_count": 0,
+      "month_native_source_signs": {
+        "goose_new_pannonic": "INCLUDES_ZERO",
+        "goose_old_grazing": "INCLUDES_ZERO"
+      },
+      "months_estimated_source_studies": 2
+    },
+    "Odocoileus hemionus": {
+      "all_source_studies": 3,
+      "both_month_source_CI_signs_supported_and_opposite": false,
+      "cross_source_interaction_difference_bootstrap_estimated": false,
+      "distinct_tagged_populations_confirmed": false,
+      "month_native_nominal_includes_zero_source_count": 1,
+      "month_native_nominal_negative_source_count": 0,
+      "month_native_nominal_positive_source_count": 2,
+      "month_native_source_signs": {
+        "mule_new_sublette": "INCLUDES_ZERO",
+        "mule_old_utah": "POSITIVE",
+        "mule_old_wyoming": "POSITIVE"
+      },
+      "months_estimated_source_studies": 3
+    }
+  },
+  "source_status_count": {
+    "MONTH_NATIVE_ESTIMABLE": 5
+  },
+  "source_tag_year_month_demeaning_not_a_season_treatment": true,
+  "stage": "POSTHOC_FIVE_SOURCE_TAG_YEAR_MONTH_CONDITIONED_OBSERVATIONAL_SENSITIVITY",
+  "two_previously_targeted_species": 2,
+  "two_species_and_month_tests_selected_post_previous_outcomes": true,
+  "version": "RSDS_FIVE_ORIGINAL_SOURCE_NATIVE_TAG_YEAR_MONTH_META_V1"
+}

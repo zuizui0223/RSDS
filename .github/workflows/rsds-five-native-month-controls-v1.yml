@@ -1,0 +1,112 @@
+name: RSDS five original source-native month-controlled q daylength ecology
+on:
+  push:
+    branches:
+      - analysis/rsds-five-native-month-controls-20261115
+    paths:
+      - 'research/RSDS_FIVE_SOURCE_NATIVE_YEAR_MONTH_ADJUSTMENT_CONTRACT_20261115.json'
+      - 'scripts/rsds_five_source_native_tag_month_conditioned_v1.py'
+      - 'scripts/aggregate_rsds_five_source_native_month_v1.py'
+      - 'tests/test_rsds_five_source_native_month_v1.py'
+      - '.github/workflows/rsds-five-native-month-controls-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  source_contract_and_known_truth_before_month:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original MD5/GPS astronomy numpy numeric dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Test frozen 5 sources and synthetic known-truth month fixed effects
+        run: python -m unittest discover -s tests -p 'test_rsds_five_source_native_month_v1.py' -v
+      - name: Verify archived 390 file transfer science provenance
+        run: python -m scripts.verify_rsds_migration
+  five_original_source_private_month_analysis:
+    needs: source_contract_and_known_truth_before_month
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        index: [0,1,2,3,4]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Exact original source numerical dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Original provider MD5 and old q native first-result REPLAY before month effect
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_five_source_native_tag_month_conditioned_v1 --index ${{ matrix.index }} --out outputs/source_$(printf "%02d" ${{ matrix.index }}).json
+      - name: Upload original source-only q/month aggregate without tag/coordinates/dates
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-native-month-source-${{ matrix.index }}-v1
+          path: outputs/source_*.json
+          if-no-files-found: error
+  source_equal_all_five_month_synthesis:
+    needs: five_original_source_private_month_analysis
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install source contract helper dependencies
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Download ALL five studies including source-private HOLD
+        uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-native-month-source-*-v1
+          path: outputs/first_five
+          merge-multiple: true
+      - name: Aggregate study-native outputs without pretending GPS points are independent
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.aggregate_rsds_five_source_native_month_v1 --directory outputs/first_five --out research/RSDS_FIVE_SOURCE_NATIVE_TAG_YEAR_MONTH_FIRST_RESULT_20261115.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          j=json.loads(Path('research/RSDS_FIVE_SOURCE_NATIVE_TAG_YEAR_MONTH_FIRST_RESULT_20261115.json').read_text())
+          assert j['five_frozen_original_field_source_DOI']==5
+          assert j['two_previously_targeted_species']==2
+          assert len(j['all_five_frozen_original_source_native_analyses_including_HOLD'])==5
+          assert sum(j['source_status_count'].values())==5
+          assert j['old_48_solar_direction_external_nonreplication_UNCHANGED'] is True
+          assert j['old_12_ERA5_raw_SHA_HOLD_UNCHANGED'] is True
+          assert j['original_GPS_positions_dates_IDs_and_individual_month_slopes_not_exported'] is True
+          print('FIVE_FROZEN_ORIGINAL_STUDIES_NO_SOURCE_DROPPING')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-five-original-source-native-month-first-meta-v1
+          path: research/RSDS_FIVE_SOURCE_NATIVE_TAG_YEAR_MONTH_FIRST_RESULT_20261115.json
+          if-no-files-found: error
+      - name: Commit source-only original first month results without re-running study selection
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_FIVE_SOURCE_NATIVE_TAG_YEAR_MONTH_FIRST_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze five original source-native within-tag-month GPS photoperiod sensitivities"
+            git fetch origin analysis/rsds-five-native-month-controls-20261115
+            git rebase origin/analysis/rsds-five-native-month-controls-20261115
+            git push origin HEAD:analysis/rsds-five-native-month-controls-20261115
+          fi

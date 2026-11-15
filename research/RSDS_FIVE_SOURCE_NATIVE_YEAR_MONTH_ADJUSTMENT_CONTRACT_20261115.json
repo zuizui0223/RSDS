@@ -1,0 +1,276 @@
+{
+  "version": "RSDS_FIVE_SOURCE_NATIVE_WITHIN_TAG_YEAR_MONTH_FIRST_V1",
+  "date": "2026-11-15",
+  "stage": "POST_EXISTING_FIVE_SOURCE_FULL_YEAR_Q_AND_DAYLENGTH_RESULTS_BEFORE_NEW_MONTH_CONDITIONED_GPS_ANALYSIS",
+  "evidence_blob_pins": [
+    {
+      "path": "research/RSDS_FOUR_NEW_MULTINATIVE_SOURCE_METADATA_FIRST_V1_20261029.json",
+      "git_blob_sha": "d476c8500f99030c864c382fcf32694e0450a48e"
+    },
+    {
+      "path": "research/MOVEBANK_UTAH_FOUR_TAXA_SOLAR_V0_20261019.json",
+      "git_blob_sha": "8aacca02f01bf2a675a95184d25ff9af49a6b374"
+    },
+    {
+      "path": "research/MOVEBANK_WYOMING_TWO_UNGULATES_SOURCE_V0_20261022.json",
+      "git_blob_sha": "713dca2d8321fc0efbe46f36d87f6749d02b4228"
+    },
+    {
+      "path": "research/RSDS_SIX_FOLLOWUP_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json",
+      "git_blob_sha": "4ec2f3654a65adbc2c580b5f5e0733b3d2ffa036"
+    },
+    {
+      "path": "research/RSDS_ORIGINAL_SOURCE_NATIVE_SAME_SPECIES_CROSS_STUDY_FIRST_RESULT_20261115.json",
+      "git_blob_sha": "0cb517ae48d80e503cd2ed5acf150abc047a4352"
+    },
+    {
+      "path": "research/RSDS_SIX_FOLLOWUP_ORIGINAL_GPS_Q_FIRST_COMBINED_RESULT_20261115.json",
+      "git_blob_sha": "8b254ea8a155098adeac30e70f990575d3b624c2"
+    }
+  ],
+  "original_movebank_catalog": {
+    "path": "research/seasonal_database_catalog/2026-10-19/movebank/catalog.json",
+    "git_blob_sha": "9822ec80ed98cab1e3d17a853d0ce5e63e47298c",
+    "package_count": 437
+  },
+  "source_manifest": [
+    {
+      "source_key": "goose_old_grazing",
+      "doi": "10.5441/001/1.fk899541",
+      "study_id": "1904388965",
+      "package_uuid": "8318572a-a9d8-4d9e-b685-7db8a73bdf86",
+      "taxon": "Anser albifrons",
+      "registered_taxa": [
+        "Branta leucopsis",
+        "Anser albifrons",
+        "Anser anser"
+      ],
+      "original_file": {
+        "filename": "GPS data from More grazing, more damage Assessed yield loss on agricultural grassland relates non-linearly to goose grazing pressure.csv",
+        "uuid": "7496bc82-dbb2-469f-ab32-27690f188089",
+        "bytes": 117340876,
+        "md5": "1597af159115bd206aaa9e042f44fcc7"
+      },
+      "baseline": {
+        "q": {
+          "available": true,
+          "nominal_source_CI_sign": "NEGATIVE",
+          "original_source_tagged_animals": 50,
+          "point_sign": "NEGATIVE",
+          "q": -0.12098595255170014,
+          "source_tag_bootstrap95": [
+            -0.13671935338156951,
+            -0.10642737466618964
+          ]
+        },
+        "daylength": {
+          "available": true,
+          "nominal_source_CI_sign": "NEGATIVE",
+          "original_source_tagged_animals": 50,
+          "point_sign": "NEGATIVE",
+          "q": -0.026533756900550577,
+          "source_tag_bootstrap95": [
+            -0.04777688930352582,
+            -0.004772257106868325
+          ]
+        }
+      },
+      "source_file_provenance": "RSDS_FOUR_NEW_MULTINATIVE_SOURCE_METADATA_FIRST_V1_20261029.json",
+      "source_file_prior_access": "PRIOR_ORIGINAL_GPS_READ",
+      "prior_sampling": "LEGACY12"
+    },
+    {
+      "source_key": "mule_old_utah",
+      "doi": "10.5441/001/1.711",
+      "study_id": "7364502758",
+      "package_uuid": "0043246e-e68c-4b76-84cc-31e7558d08e0",
+      "taxon": "Odocoileus hemionus",
+      "registered_taxa": [
+        "Antilocapra americana",
+        "Cervus elaphus",
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "original_file": {
+        "filename": "GPS tracking of ungulates in Utah by UDWR (2019-2020).csv.zip",
+        "uuid": "9c4aaf76-7476-4305-8b14-9a6d8886e39a",
+        "bytes": 63369773,
+        "md5": "08200c9dbdf7989fb5a35467213b7e5a"
+      },
+      "baseline": {
+        "q": {
+          "available": true,
+          "nominal_source_CI_sign": "NEGATIVE",
+          "original_source_tagged_animals": 1723,
+          "point_sign": "NEGATIVE",
+          "q": -0.02184895488685285,
+          "source_tag_bootstrap95": [
+            -0.02321004124388584,
+            -0.02046763062163855
+          ]
+        },
+        "daylength": {
+          "available": true,
+          "nominal_source_CI_sign": "POSITIVE",
+          "original_source_tagged_animals": 1683,
+          "point_sign": "POSITIVE",
+          "q": 0.005619415769068772,
+          "source_tag_bootstrap95": [
+            0.004388078182072968,
+            0.006920966097037151
+          ]
+        }
+      },
+      "source_file_provenance": "MOVEBANK_UTAH_FOUR_TAXA_SOLAR_V0_20261019.json",
+      "source_file_prior_access": "PRIOR_ORIGINAL_GPS_READ",
+      "prior_sampling": "LEGACY12"
+    },
+    {
+      "source_key": "mule_old_wyoming",
+      "doi": "10.5441/001/1.703",
+      "study_id": "7266109545",
+      "package_uuid": "9c588e12-a0e6-40bf-8dd7-d7ad57dfbf22",
+      "taxon": "Odocoileus hemionus",
+      "registered_taxa": [
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "original_file": {
+        "filename": "Bighorn sheep and mule deer in Wyoming (2019-2020).csv",
+        "uuid": "fed70edc-1319-4633-be6f-0a9abff53a1d",
+        "bytes": 98724772,
+        "md5": "bd1c02734b6de3ddc9207fc1251edd66"
+      },
+      "baseline": {
+        "q": {
+          "available": true,
+          "nominal_source_CI_sign": "NEGATIVE",
+          "original_source_tagged_animals": 119,
+          "point_sign": "NEGATIVE",
+          "q": -0.0044624294869207584,
+          "source_tag_bootstrap95": [
+            -0.005777731444226381,
+            -0.003089662007489691
+          ]
+        },
+        "daylength": {
+          "available": true,
+          "nominal_source_CI_sign": "POSITIVE",
+          "original_source_tagged_animals": 118,
+          "point_sign": "POSITIVE",
+          "q": 0.005538249061142167,
+          "source_tag_bootstrap95": [
+            0.004101632821224659,
+            0.006972859886325625
+          ]
+        }
+      },
+      "source_file_provenance": "MOVEBANK_WYOMING_TWO_UNGULATES_SOURCE_V0_20261022.json",
+      "source_file_prior_access": "PRIOR_ORIGINAL_GPS_READ",
+      "prior_sampling": "LEGACY12"
+    },
+    {
+      "source_key": "goose_new_pannonic",
+      "doi": "10.5441/001/1.46b0mq21",
+      "study_id": "657965212",
+      "package_uuid": "08b6b850-df1f-4740-b05e-acb1a654934b",
+      "taxon": "Anser albifrons",
+      "registered_taxa": [
+        "Anser albifrons"
+      ],
+      "original_file": {
+        "filename": "Pannonic population tracks of greater white-fronted geese 2013-2017 (data from Kölzsch et al. 2019).csv",
+        "uuid": "acbda7da-0a9c-4fbb-b2f4-28f0fb89c046",
+        "bytes": 26948795,
+        "md5": "d501fdc3d2815badf9a43e7788116b80"
+      },
+      "baseline": {
+        "q": {
+          "available": true,
+          "nominal_source_CI_sign": "NEGATIVE",
+          "original_source_tagged_animals": 5,
+          "point_sign": "NEGATIVE",
+          "q": -0.24516468238493802,
+          "source_tag_bootstrap95": [
+            -0.2978894464193578,
+            -0.1901817094450917
+          ]
+        },
+        "daylength": {
+          "available": true,
+          "nominal_source_CI_sign": "POSITIVE",
+          "original_source_tagged_animals": 5,
+          "point_sign": "POSITIVE",
+          "q": 0.023927670839973866,
+          "source_tag_bootstrap95": [
+            0.008714128881371252,
+            0.04019790340859443
+          ]
+        }
+      },
+      "source_file_provenance": "RSDS_SIX_FOLLOWUP_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json",
+      "source_file_prior_access": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "prior_sampling": "TARGETED_AFTER_OLD_Q"
+    },
+    {
+      "source_key": "mule_new_sublette",
+      "doi": "10.5441/001/1.708",
+      "study_id": "2549043743",
+      "package_uuid": "0e3a4577-b063-47d9-9d6b-edec949aa5fa",
+      "taxon": "Odocoileus hemionus",
+      "registered_taxa": [
+        "Odocoileus hemionus"
+      ],
+      "original_file": {
+        "filename": "Wyoming Sublette Mule Deer (2018-2020).csv",
+        "uuid": "de7b956a-f5b6-4727-a2cc-a119a1217a68",
+        "bytes": 134497843,
+        "md5": "a8563f71fa6213919812dc0f2da30c26"
+      },
+      "baseline": {
+        "q": {
+          "available": true,
+          "nominal_source_CI_sign": "NEGATIVE",
+          "original_source_tagged_animals": 133,
+          "point_sign": "NEGATIVE",
+          "q": -0.028819071216292565,
+          "source_tag_bootstrap95": [
+            -0.03347940119026919,
+            -0.024224179018510292
+          ]
+        },
+        "daylength": {
+          "available": true,
+          "nominal_source_CI_sign": "NEGATIVE",
+          "original_source_tagged_animals": 133,
+          "point_sign": "NEGATIVE",
+          "q": -0.003919925827490663,
+          "source_tag_bootstrap95": [
+            -0.00894405015815926,
+            -0.0003309853677428535
+          ]
+        }
+      },
+      "source_file_provenance": "RSDS_SIX_FOLLOWUP_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json",
+      "source_file_prior_access": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "prior_sampling": "TARGETED_AFTER_OLD_Q"
+    }
+  ],
+  "registered_sources": 5,
+  "registered_species": [
+    "Anser albifrons",
+    "Odocoileus hemionus"
+  ],
+  "file_max_bytes": 200000000,
+  "max_gps_rows_per_source": 2000000,
+  "source_MD5_rule": "Before raw source events, recheck ORIGINAL provider UUID, byte count, MD5 and exact source taxon registration from pre-existing SHA-frozen source-only metadata. Verify downloaded original bytes MD5, then replay old one_taxon q and daylength mean/n before doing month model. No source substitution. Any mismatch is SOURCE_HOLD.",
+  "baseline_replay_tolerance": 1e-10,
+  "original_q": "Original one exact timestamp-nearest UTC hourly GPS fix per tag, successive 0.5-2h valid great-circle displacement <=60kmh, same solar date/daypart at start/midpoint/end, >=3 qualified day and night segments per original tagged date, >=10 original qualified dates per tagged year, original tag-equal q and within-tag/year q~local daylength, bootstrap only if >=5 original tags. These effects must replay unchanged.",
+  "new_primary": "For each ORIGINAL tag-year with >=10 q-qualified solar dates, calculate q/date and local astronomical daylength from the same source GPS and define group=original tag x calendar year x calendar month. A qualifying group has >=5 distinct q-qualified dates AND within-group daylength range >=0.05h. Tag-year month-FE slope = sum within-group centered (L-meanL)(q-meanq) / sum within-group centered (L-meanL)^2 across qualified groups, only if >=2 qualified months, >=10 qualified dates, and >=0.05 h² sum of centered daylength squares. Tag's slope = equal mean over its qualifying original years. Source native effect is equal mean across qualifying original tags, only if >=5 independent qualified tags; 2000 resamples of original TAG IDs, bootstrap percentile 95 interval. No raw individual effects exported.",
+  "new_reference_lat_sensitivity": "On SAME q-qualified dates and qualified month groups as primary, replace local daylength with source-median tagged-mean latitude fixed over dates. This removes within-month changes in geodetic latitude from the astronomical daylength covariate, without removing nonastronomical seasonal factors. Source reference latitude and date never exported.",
+  "comparability_constraints": "All 5 source original registered taxa retained; no species or source selected by new conditioned q sign. Baseline original full-year effect sample NOT equal to month-qualified sample; compare observational direction and support only, not a formal test of difference or cause. Distinct published DOI not proof of distinct tags or populations. Study seasons and GPS duty cycles may differ.",
+  "reporting": "Only per original source and registered target native taxon: q/daylength baseline replay yes/no, source quality counts and months, count qualified independent original tags, month-adjusted tag-equal slope/nominal 95 interval, optional fixed-lat sensitivity, and explicit HOLD. No original GPS rows/individual IDs/coordinates/precise dates/individual effects or bootstrap draws leave the ephemeral Action runner.",
+  "inference_limit": "Postoutcome seasonal method sensitivity on two prior target species; both the source targets and method were selected after viewing full-year positive q/daylength results. This is NOT a preregistered test of photoperiod, latitudinal adaptation, or general global temporal niche. Year-month FE alone cannot control day-of-month changing weather, migration timing, breeding or sampling schedule.",
+  "legacy_48_sunlight_heading_external_replicated": false,
+  "legacy_12_ERA5_raw_SHA_HOLD": true
+}
