@@ -21,6 +21,10 @@ CONTRACT=HERE/"research/RSDS_35_SOURCE_GPS_OBSERVATION_FUNNEL_V1_CONTRACT.json"
 EARLIER=("research/RSDS_437_WAVE1_PLUS_WAVE2_35_ORIGINAL_GPS_FIRST_META_RESULT_20261115.json",
          "9b02774f7c31d29b2eec5039a80431a895dccb36")
 NEG="NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
+WAVE1_METADATA=("research/RSDS_437_WAVE1_ORIGINAL_FILE_METADATA_FIRST_RESULT_20261115.json",
+                "3f849233969a397a86ab201343846301461cebcb")
+WAVE2_METADATA=("research/RSDS_437_WAVE2_19_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json",
+                "b36fb7050c72bc8797ce1abf19b8f0b58769b0d2")
 METRICS=(
     "original_time_0p5_to_2h_over_adjacent",
     "same_solar_date_daypart_over_time_eligible",
@@ -71,6 +75,10 @@ def summarize(rows):
         raise ValueError("All original 35 source groups required")
     previous=pinned(*EARLIER)
     old=previous["combined_source_study_summary_rows"]
+    wave1_metadata=pinned(*WAVE1_METADATA)["provider_original_source_rows"]
+    wave2_metadata=pinned(*WAVE2_METADATA)["source_rows"]
+    if len(wave1_metadata)!=16 or len(wave2_metadata)!=19:
+        raise ValueError("Pre-outcome original registered native source metadata changed")
     c=json.loads(CONTRACT.read_text(encoding="utf-8"))
     if (len(old)!=35 or previous["combined_original_registered_native_rows"]!=50
         or c["original_35_source_study_ids"]!=35
@@ -81,7 +89,11 @@ def summarize(rows):
     frame=[];status=Counter();all_native=[]
     for i,(current,expected) in enumerate(zip(rows,old)):
         wave,index=("wave1",i) if i<16 else ("wave2",i-16)
+        source_meta=(wave1_metadata[index] if wave=="wave1" else wave2_metadata[index])
+        registered_taxa=(source_meta["registered_native_labels"] if wave=="wave1"
+                         else source_meta["registered_native_taxa"])
         if (current["wave"]!=wave or current["index"]!=index
+            or current["original_registered_native_taxa"]!=registered_taxa
             or current["source_original_DOI"]!=expected["source_DOI_labels"][0]
             or current["source_repository_study_id"]!=expected["source_original_repository_study_id"]
             or len(current["original_registered_native_taxa"])!=expected["registered_native_count"]
@@ -125,6 +137,33 @@ def summarize(rows):
                     +counts["UTC_odd_hour_selected_fix_count"]!=
                     counts["original_selected_UTC_hour_fix_count"]):
                     raise ValueError("Original UTC even/odd monitoring phases do not partition")
+                ratios=p["original_observation_gate_ratios"]
+                calculated={
+                    "original_time_0p5_to_2h_over_adjacent":
+                        (vals[1]/vals[0] if vals[0] else None),
+                    "same_solar_date_daypart_over_time_eligible":
+                        (vals[2]/vals[1] if vals[1] else None),
+                    "plausible_speed_over_solar_eligible":
+                        (vals[3]/vals[2] if vals[2] else None),
+                    "total_accepted_over_adjacent":
+                        (vals[3]/vals[0] if vals[0] else None),
+                    "UTC_even_hour_fraction":
+                        (counts["UTC_even_hour_selected_fix_count"]/
+                         counts["original_selected_UTC_hour_fix_count"] if
+                         counts["original_selected_UTC_hour_fix_count"] else None)
+                }
+                if any((ratios[k] is None)!=(calculated[k] is None) or
+                       (calculated[k] is not None and not math.isclose(
+                           ratios[k],calculated[k],abs_tol=1e-12,rel_tol=0))
+                       for k in METRICS):
+                    raise ValueError("Original private observation stage denominator and ratio disagree")
+                qtag=p["replayed_archived_native_q_support"]
+                if (qtag["n_tag_q"]!=counts["accepted_native_tags_with_ge10_daypart_dates"]
+                    or qtag["n_tag_daylength"]!=
+                       counts["accepted_native_tags_with_within_year_daylength_slope"]
+                    or qtag["q_estimable"]!=(qtag["n_tag_q"]>=5)
+                    or qtag["daylength_estimable"]!=(qtag["n_tag_daylength"]>=5)):
+                    raise ValueError("Original native tagged animal q or daylight gate changed")
                 all_native.append(p)
         else:
             if (profiles or current["original_MD5_replayed"] or
