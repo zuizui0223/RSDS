@@ -1,0 +1,66 @@
+name: RSDS six original same-species q position vs daylength slope audit no GPS reads
+on:
+  push:
+    branches:
+      - analysis/rsds-same-species-q-vs-seasonal-slope-audit-20261115
+    paths:
+      - 'research/RSDS_SAME_SPECIES_Q_POSITION_SEASONAL_SLOPE_AUDIT_CONTRACT_20261115.json'
+      - 'scripts/rsds_six_same_species_q_position_season_audit_v1.py'
+      - 'tests/test_rsds_six_same_species_q_position_season_audit_v1.py'
+      - '.github/workflows/rsds-six-same-species-q-seasonal-slope-audit-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  same_species_original_source_q_position_vs_daylength_slope:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify old original 63 source and six pre-event source study science and known truth
+        run: python -m unittest discover -s tests -p 'test_rsds_six_same_species_q_position_season_audit_v1.py' -v
+      - name: Derive post-outcome q position vs seasonal daylength contrast from source-native original aggregate only
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_six_same_species_q_position_season_audit_v1 --out research/RSDS_SIX_SAME_SPECIES_Q_POSITION_VS_DAYLENGTH_SLOPE_POSTOUTCOME_FIRST_20261115.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_SIX_SAME_SPECIES_Q_POSITION_VS_DAYLENGTH_SLOPE_POSTOUTCOME_FIRST_20261115.json')
+          d=json.loads(p.read_text())
+          assert d['original_previous_source_studies']==63
+          assert d['original_new_source_study_slots']==6
+          assert d['original_q_supported_new']==3
+          assert d['original_daylength_supported_new']==3
+          assert set(d['species_with_opposite_nominal_daylength_slope_support_across_archived_sources'])=={'Anser albifrons','Odocoileus hemionus'}
+          assert d['post_outcome_comparison_not_a_registered_daylength_reversal_test']
+          assert d['source_to_source_tag_and_population_independence_unverified']
+          assert d['old_48_source_signed_solar_direction_heldout_NOT_REPLICATED'] is True
+          assert d['old_12_ERA5_provider_raw_SHA_HOLD'] is True
+          assert d['no_new_GPS_or_original_provider_metadata_access'] is True
+          print('SAME_SPECIES_Q_POSITION_PERSISTS_WHILE_SEASONAL_SLOPE_SIGNS_CONTRAST_DESCRIPTIVE_ONLY')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-six-same-species-original-source-q-season-contrast-derivative-first-v1
+          path: research/RSDS_SIX_SAME_SPECIES_Q_POSITION_VS_DAYLENGTH_SLOPE_POSTOUTCOME_FIRST_20261115.json
+          if-no-files-found: error
+      - name: Commit frozen derivative-only comparison with all source HOLDS
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_SIX_SAME_SPECIES_Q_POSITION_VS_DAYLENGTH_SLOPE_POSTOUTCOME_FIRST_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze same species q-position vs seasonal slope contrast from first archived sources"
+            git fetch origin analysis/rsds-same-species-q-vs-seasonal-slope-audit-20261115
+            git rebase origin/analysis/rsds-same-species-q-vs-seasonal-slope-audit-20261115
+            git push origin HEAD:analysis/rsds-same-species-q-vs-seasonal-slope-audit-20261115
+          fi
