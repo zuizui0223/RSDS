@@ -100,7 +100,7 @@ class Stage3SourceMeta(unittest.TestCase):
     def test_no_best_species_or_source_substitution_and_old_science(self):
         data=copy.deepcopy(self.data)
         del data[8]["native_effects"][-1]
-        with self.assertRaisesRegex(ValueError,"native"):
+        with self.assertRaisesRegex(ValueError,"Source selection"):
             meta_snapshot(data)
         data=copy.deepcopy(self.data)
         data[2]["source_package_uuid"]="a-postoutcome-replacement"
