@@ -1,0 +1,137 @@
+name: RSDS 35 original GPS sources observation-cadence time solar speed filter v1
+on:
+  push:
+    branches:
+      - analysis/rsds-source-gps-observation-funnel-20261115
+    paths:
+      - 'research/RSDS_35_SOURCE_GPS_OBSERVATION_FUNNEL_V1_CONTRACT.json'
+      - 'scripts/rsds_35_original_gps_observation_funnel_v1.py'
+      - 'scripts/run_rsds_35_original_gps_observation_funnel_v1.py'
+      - 'scripts/aggregate_rsds_35_original_gps_observation_funnel_v1.py'
+      - 'tests/test_rsds_35_original_gps_observation_funnel_v1.py'
+      - 'tests/test_rsds_35_original_gps_observation_funnel_aggregate_v1.py'
+      - '.github/workflows/rsds-35-original-gps-observation-funnel-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  historical_frozen_method_unit_tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install legacy GPS numerical dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Validate exact 35-source original ID and 50 registered taxa preservation
+        run: |
+          python -m unittest discover -s tests -p 'test_rsds_35_original_gps_observation_funnel_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_35_original_gps_observation_funnel_aggregate_v1.py' -v
+      - name: Verify original ODSP-to-RSDS migration source SHA invariants
+        run: python -m scripts.verify_rsds_migration
+
+  original_source_gps_technical_funnel:
+    needs: historical_frozen_method_unit_tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        include:
+          - { wave: wave1, index: 0 }
+          - { wave: wave1, index: 1 }
+          - { wave: wave1, index: 2 }
+          - { wave: wave1, index: 3 }
+          - { wave: wave1, index: 4 }
+          - { wave: wave1, index: 5 }
+          - { wave: wave1, index: 6 }
+          - { wave: wave1, index: 7 }
+          - { wave: wave1, index: 8 }
+          - { wave: wave1, index: 9 }
+          - { wave: wave1, index: 10 }
+          - { wave: wave1, index: 11 }
+          - { wave: wave1, index: 12 }
+          - { wave: wave1, index: 13 }
+          - { wave: wave1, index: 14 }
+          - { wave: wave1, index: 15 }
+          - { wave: wave2, index: 0 }
+          - { wave: wave2, index: 1 }
+          - { wave: wave2, index: 2 }
+          - { wave: wave2, index: 3 }
+          - { wave: wave2, index: 4 }
+          - { wave: wave2, index: 5 }
+          - { wave: wave2, index: 6 }
+          - { wave: wave2, index: 7 }
+          - { wave: wave2, index: 8 }
+          - { wave: wave2, index: 9 }
+          - { wave: wave2, index: 10 }
+          - { wave: wave2, index: 11 }
+          - { wave: wave2, index: 12 }
+          - { wave: wave2, index: 13 }
+          - { wave: wave2, index: 14 }
+          - { wave: wave2, index: 15 }
+          - { wave: wave2, index: 16 }
+          - { wave: wave2, index: 17 }
+          - { wave: wave2, index: 18 }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original Movebank GPS observation astronomy runtime
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Original provider MD5 replay and source-native time/solar/geometry filter accounting
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.run_rsds_35_original_gps_observation_funnel_v1 --wave ${{ matrix.wave }} --index ${{ matrix.index }} --out outputs/diagnostics/${{ matrix.wave }}_source_$(printf "%02d" ${{ matrix.index }}).json
+      - name: Archive only source/native aggregate filter counts, never telemetry
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-observation-funnel-${{ matrix.wave }}-${{ matrix.index }}-v1
+          path: outputs/diagnostics/*.json
+          if-no-files-found: error
+
+  original_35_source_equal_observation_gate_atlas:
+    needs: original_source_gps_technical_funnel
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download all 35 source metadata/technical HOLDS and individual-movement-free aggregates
+        uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-original-observation-funnel-*-v1
+          path: outputs/diagnostics
+          merge-multiple: true
+      - name: Preserve 35 unique study-ID, 50 native rows, first q and daylight output and nested time-to-solar filtering
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.aggregate_rsds_35_original_gps_observation_funnel_v1 --directory outputs/diagnostics --out outputs/rsds_35_original_gps_observation_gate_first_v1.json
+          python -m json.tool outputs/rsds_35_original_gps_observation_gate_first_v1.json > /dev/null
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('outputs/rsds_35_original_gps_observation_gate_first_v1.json').read_text())
+          assert d["original_source_funnel_replayed"]==25
+          assert d["original_preaccess_file_or_privacy_HOLDS"]==7
+          assert d["original_sourcewide_GPS_HOLDS"]==3
+          assert d["source_original_registered_native_rows"]==50
+          assert d["first_source_study_q_complete"]==10
+          assert d["original_human_GPS_source_opened"] is False
+          assert d["original_48_solar_negative_external_NONREPLICATION_UNCHANGED"]=="NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE"
+          print('FROZEN_ORIGINAL_35_SOURCE_OBSERVATION_CADENCE_DECOMPOSITION_SUCCESS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-35-source-time-solar-speed-observation-gate-first-atlas-v1
+          path: outputs/rsds_35_original_gps_observation_gate_first_v1.json
+          if-no-files-found: error

@@ -1,0 +1,492 @@
+{
+  "GPS_native_source_q_complete": 10,
+  "GPS_parsed_original_sources": 25,
+  "important_negative_control": "qualified_q_tags_definition_aware is an algebraically close component of the endpoint and is NOT an independent predictor; do not promote its AUC into mechanistic predictive transfer",
+  "original_12_ERA5_raw_JSON_HOLD_UNCHANGED": true,
+  "original_35_source_frame": 35,
+  "original_48_sunlight_external_negative_nonreplication_UNCHANGED": true,
+  "original_measurement_scores": {
+    "UTC_even_hour_fraction": {
+      "all_parsed_sources": {
+        "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.65,
+        "median_score_q_complete": 0.5039704236583118,
+        "median_score_q_incomplete": 0.499871032470383,
+        "pairwise_source_comparisons": 140,
+        "q_complete_sources": 10,
+        "q_incomplete_sources": 14,
+        "score_range_q_complete": [
+          0.24139735432016074,
+          1.0
+        ],
+        "score_range_q_incomplete": [
+          0.12287256122872561,
+          0.5908271813055862
+        ],
+        "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+      },
+      "not_validated_out_of_source_prediction_or_selection_correction": true,
+      "original_source_technical_count_score_key": "source_native_equal_UTC_even_hour_fraction",
+      "source_study_N_with_defined_score": 24,
+      "source_unique_study_IDs": 24,
+      "within_original_wave_descriptive": {
+        "wave1": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.7142857142857143,
+          "median_score_q_complete": 0.5461212883510187,
+          "median_score_q_incomplete": 0.5078438623399005,
+          "pairwise_source_comparisons": 28,
+          "q_complete_sources": 4,
+          "q_incomplete_sources": 7,
+          "score_range_q_complete": [
+            0.5000918123763083,
+            1.0
+          ],
+          "score_range_q_incomplete": [
+            0.4920212765957447,
+            0.5908271813055862
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        },
+        "wave2": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.7142857142857143,
+          "median_score_q_complete": 0.5001090681016167,
+          "median_score_q_incomplete": 0.49793388429752067,
+          "pairwise_source_comparisons": 42,
+          "q_complete_sources": 6,
+          "q_incomplete_sources": 7,
+          "score_range_q_complete": [
+            0.24139735432016074,
+            0.5118899733806566
+          ],
+          "score_range_q_incomplete": [
+            0.12287256122872561,
+            0.5007874015748032
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        }
+      }
+    },
+    "accepted_speed_intervals": {
+      "all_parsed_sources": {
+        "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.68,
+        "median_score_q_complete": 26645.0,
+        "median_score_q_incomplete": 5212.0,
+        "pairwise_source_comparisons": 150,
+        "q_complete_sources": 10,
+        "q_incomplete_sources": 15,
+        "score_range_q_complete": [
+          9124.0,
+          120555.0
+        ],
+        "score_range_q_incomplete": [
+          0.0,
+          411422.0
+        ],
+        "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+      },
+      "not_validated_out_of_source_prediction_or_selection_correction": true,
+      "original_source_technical_count_score_key": "source_total_accepted_finite_speed_max60kmh_intervals",
+      "source_study_N_with_defined_score": 25,
+      "source_unique_study_IDs": 25,
+      "within_original_wave_descriptive": {
+        "wave1": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.5,
+          "median_score_q_complete": 29450.5,
+          "median_score_q_incomplete": 38473.0,
+          "pairwise_source_comparisons": 28,
+          "q_complete_sources": 4,
+          "q_incomplete_sources": 7,
+          "score_range_q_complete": [
+            9145.0,
+            120555.0
+          ],
+          "score_range_q_incomplete": [
+            2186.0,
+            112847.0
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        },
+        "wave2": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.875,
+          "median_score_q_complete": 25974.0,
+          "median_score_q_incomplete": 3240.0,
+          "pairwise_source_comparisons": 48,
+          "q_complete_sources": 6,
+          "q_incomplete_sources": 8,
+          "score_range_q_complete": [
+            9124.0,
+            60182.0
+          ],
+          "score_range_q_incomplete": [
+            0.0,
+            411422.0
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        }
+      }
+    },
+    "full_original_segment_acceptance_fraction": {
+      "all_parsed_sources": {
+        "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.5428571428571428,
+        "median_score_q_complete": 0.708111810119529,
+        "median_score_q_incomplete": 0.7077159415602918,
+        "pairwise_source_comparisons": 140,
+        "q_complete_sources": 10,
+        "q_incomplete_sources": 14,
+        "score_range_q_complete": [
+          0.2838369865928921,
+          0.8634194957484256
+        ],
+        "score_range_q_incomplete": [
+          0.360891843235009,
+          0.866652116979485
+        ],
+        "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+      },
+      "not_validated_out_of_source_prediction_or_selection_correction": true,
+      "original_source_technical_count_score_key": "source_native_equal_total_accepted_over_adjacent",
+      "source_study_N_with_defined_score": 24,
+      "source_unique_study_IDs": 24,
+      "within_original_wave_descriptive": {
+        "wave1": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.5,
+          "median_score_q_complete": 0.708111810119529,
+          "median_score_q_incomplete": 0.7066013341945695,
+          "pairwise_source_comparisons": 28,
+          "q_complete_sources": 4,
+          "q_incomplete_sources": 7,
+          "score_range_q_complete": [
+            0.6793569940131644,
+            0.7829299155067554
+          ],
+          "score_range_q_incomplete": [
+            0.4233972496610498,
+            0.846685450002658
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        },
+        "wave2": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.5238095238095238,
+          "median_score_q_complete": 0.7682973674315576,
+          "median_score_q_incomplete": 0.7088305489260143,
+          "pairwise_source_comparisons": 42,
+          "q_complete_sources": 6,
+          "q_incomplete_sources": 7,
+          "score_range_q_complete": [
+            0.2838369865928921,
+            0.8634194957484256
+          ],
+          "score_range_q_incomplete": [
+            0.360891843235009,
+            0.866652116979485
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        }
+      }
+    },
+    "original_adjacent_intervals": {
+      "all_parsed_sources": {
+        "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.68,
+        "median_score_q_complete": 42375.5,
+        "median_score_q_incomplete": 14442.0,
+        "pairwise_source_comparisons": 150,
+        "q_complete_sources": 10,
+        "q_incomplete_sources": 15,
+        "score_range_q_complete": [
+          12823.0,
+          172750.0
+        ],
+        "score_range_q_incomplete": [
+          0.0,
+          600098.0
+        ],
+        "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+      },
+      "not_validated_out_of_source_prediction_or_selection_correction": true,
+      "original_source_technical_count_score_key": "source_total_original_adjacent_source_fix_intervals",
+      "source_study_N_with_defined_score": 25,
+      "source_unique_study_IDs": 25,
+      "within_original_wave_descriptive": {
+        "wave1": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.5357142857142857,
+          "median_score_q_complete": 39615.5,
+          "median_score_q_incomplete": 47717.0,
+          "pairwise_source_comparisons": 28,
+          "q_complete_sources": 4,
+          "q_incomplete_sources": 7,
+          "score_range_q_complete": [
+            12823.0,
+            172750.0
+          ],
+          "score_range_q_incomplete": [
+            5163.0,
+            137934.0
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        },
+        "wave2": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.8541666666666666,
+          "median_score_q_complete": 42375.5,
+          "median_score_q_incomplete": 4372.0,
+          "pairwise_source_comparisons": 48,
+          "q_complete_sources": 6,
+          "q_incomplete_sources": 8,
+          "score_range_q_complete": [
+            13923.0,
+            70760.0
+          ],
+          "score_range_q_incomplete": [
+            0.0,
+            600098.0
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        }
+      }
+    },
+    "original_tagged_animals": {
+      "all_parsed_sources": {
+        "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.58,
+        "median_score_q_complete": 28.5,
+        "median_score_q_incomplete": 24.0,
+        "pairwise_source_comparisons": 150,
+        "q_complete_sources": 10,
+        "q_incomplete_sources": 15,
+        "score_range_q_complete": [
+          13.0,
+          442.0
+        ],
+        "score_range_q_incomplete": [
+          0.0,
+          209.0
+        ],
+        "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+      },
+      "not_validated_out_of_source_prediction_or_selection_correction": true,
+      "original_source_technical_count_score_key": "source_total_original_tags",
+      "source_study_N_with_defined_score": 25,
+      "source_unique_study_IDs": 25,
+      "within_original_wave_descriptive": {
+        "wave1": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.48214285714285715,
+          "median_score_q_complete": 16.0,
+          "median_score_q_incomplete": 21.0,
+          "pairwise_source_comparisons": 28,
+          "q_complete_sources": 4,
+          "q_incomplete_sources": 7,
+          "score_range_q_complete": [
+            13.0,
+            345.0
+          ],
+          "score_range_q_incomplete": [
+            8.0,
+            101.0
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        },
+        "wave2": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.53125,
+          "median_score_q_complete": 35.0,
+          "median_score_q_incomplete": 42.0,
+          "pairwise_source_comparisons": 48,
+          "q_complete_sources": 6,
+          "q_incomplete_sources": 8,
+          "score_range_q_complete": [
+            16.0,
+            442.0
+          ],
+          "score_range_q_incomplete": [
+            0.0,
+            209.0
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        }
+      }
+    },
+    "qualified_q_tags_definition_aware": {
+      "all_parsed_sources": {
+        "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.9133333333333333,
+        "median_score_q_complete": 25.0,
+        "median_score_q_incomplete": 2.0,
+        "pairwise_source_comparisons": 150,
+        "q_complete_sources": 10,
+        "q_incomplete_sources": 15,
+        "score_range_q_complete": [
+          9.0,
+          134.0
+        ],
+        "score_range_q_incomplete": [
+          0.0,
+          43.0
+        ],
+        "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+      },
+      "not_validated_out_of_source_prediction_or_selection_correction": true,
+      "original_source_technical_count_score_key": "source_total_tags_q_eligible",
+      "source_study_N_with_defined_score": 25,
+      "source_unique_study_IDs": 25,
+      "within_original_wave_descriptive": {
+        "wave1": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.8928571428571429,
+          "median_score_q_complete": 13.5,
+          "median_score_q_incomplete": 2.0,
+          "pairwise_source_comparisons": 28,
+          "q_complete_sources": 4,
+          "q_incomplete_sources": 7,
+          "score_range_q_complete": [
+            12.0,
+            134.0
+          ],
+          "score_range_q_incomplete": [
+            0.0,
+            23.0
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        },
+        "wave2": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.8958333333333334,
+          "median_score_q_complete": 33.5,
+          "median_score_q_incomplete": 0.0,
+          "pairwise_source_comparisons": 48,
+          "q_complete_sources": 6,
+          "q_incomplete_sources": 8,
+          "score_range_q_complete": [
+            9.0,
+            100.0
+          ],
+          "score_range_q_incomplete": [
+            0.0,
+            43.0
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        }
+      }
+    },
+    "same_solar_date_daypart_given_time_fraction": {
+      "all_parsed_sources": {
+        "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.3,
+        "median_score_q_complete": 0.8686337913620493,
+        "median_score_q_incomplete": 0.8868786123892223,
+        "pairwise_source_comparisons": 140,
+        "q_complete_sources": 10,
+        "q_incomplete_sources": 14,
+        "score_range_q_complete": [
+          0.7481496710526315,
+          0.9175947612446824
+        ],
+        "score_range_q_incomplete": [
+          0.7738331678252235,
+          0.99
+        ],
+        "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+      },
+      "not_validated_out_of_source_prediction_or_selection_correction": true,
+      "original_source_technical_count_score_key": "source_native_equal_same_solar_date_daypart_over_time_eligible",
+      "source_study_N_with_defined_score": 24,
+      "source_unique_study_IDs": 24,
+      "within_original_wave_descriptive": {
+        "wave1": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.21428571428571427,
+          "median_score_q_complete": 0.8229328068247614,
+          "median_score_q_incomplete": 0.8930520488707301,
+          "pairwise_source_comparisons": 28,
+          "q_complete_sources": 4,
+          "q_incomplete_sources": 7,
+          "score_range_q_complete": [
+            0.7732474964234621,
+            0.8705439197621911
+          ],
+          "score_range_q_incomplete": [
+            0.833396873808616,
+            0.9408723841350596
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        },
+        "wave2": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.30952380952380953,
+          "median_score_q_complete": 0.8742597890157999,
+          "median_score_q_incomplete": 0.8807051759077144,
+          "pairwise_source_comparisons": 42,
+          "q_complete_sources": 6,
+          "q_incomplete_sources": 7,
+          "score_range_q_complete": [
+            0.7481496710526315,
+            0.9175947612446824
+          ],
+          "score_range_q_incomplete": [
+            0.7738331678252235,
+            0.99
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        }
+      }
+    },
+    "time_0p5_to_2h_fraction": {
+      "all_parsed_sources": {
+        "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.7071428571428572,
+        "median_score_q_complete": 0.9048870056408518,
+        "median_score_q_incomplete": 0.8120863571892056,
+        "pairwise_source_comparisons": 140,
+        "q_complete_sources": 10,
+        "q_incomplete_sources": 14,
+        "score_range_q_complete": [
+          0.3233134709512662,
+          0.9882525074747132
+        ],
+        "score_range_q_incomplete": [
+          0.45977011494252873,
+          0.986905281536447
+        ],
+        "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+      },
+      "not_validated_out_of_source_prediction_or_selection_correction": true,
+      "original_source_technical_count_score_key": "source_native_equal_original_time_0p5_to_2h_over_adjacent",
+      "source_study_N_with_defined_score": 24,
+      "source_unique_study_IDs": 24,
+      "within_original_wave_descriptive": {
+        "wave1": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.75,
+          "median_score_q_complete": 0.888990223672919,
+          "median_score_q_incomplete": 0.780459435882524,
+          "pairwise_source_comparisons": 28,
+          "q_complete_sources": 4,
+          "q_incomplete_sources": 7,
+          "score_range_q_complete": [
+            0.8152210827829808,
+            0.9103699539732419
+          ],
+          "score_range_q_incomplete": [
+            0.5080379624249467,
+            0.902822816437191
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        },
+        "wave2": {
+          "AUC_HIGHSCORE_PREDICTS_MEASURABLE": 0.6666666666666666,
+          "median_score_q_complete": 0.9232264460306898,
+          "median_score_q_incomplete": 0.8437132784958872,
+          "pairwise_source_comparisons": 42,
+          "q_complete_sources": 6,
+          "q_incomplete_sources": 7,
+          "score_range_q_complete": [
+            0.3233134709512662,
+            0.9882525074747132
+          ],
+          "score_range_q_incomplete": [
+            0.45977011494252873,
+            0.986905281536447
+          ],
+          "status": "SOURCE_LEVEL_POST_OUTCOME_DESCRIPTIVE"
+        }
+      }
+    }
+  },
+  "original_replayed_source_native_rows": 34,
+  "scientific_claim_ceiling": [
+    "AUC is descriptive within 25 previously source-selected GPS-parsed DOIs; its pairwise comparisons do not represent 10 x 15 independent population replications.",
+    "The q completeness outcome is defined by original tag/year sampling; tag eligibility itself is tautologically predictive.",
+    "Original UTC time gate ratio and total accepted interval ratio are source measurements, with geography, habitat, schedule and biological geometry still intertwined.",
+    "No observational category is randomly assigned, no out-of-study validation performed, and one human original source remains unaccessed.",
+    "Earlier 48-source shortwave direction external negative result NOT REPLICATED and 12 original ERA5 raw-source HOLDS unchanged."
+  ],
+  "stage": "POST_GPS_FIRST_OUTCOME_SOURCE_LEVEL_SENSITIVITY_ONLY",
+  "version": "RSDS_GPS_SOURCE_Q_MEASURABILITY_RANK_DISCRIMINATION_V1"
+}

@@ -1,0 +1,83 @@
+{
+  "version": "RSDS_35_ORIGINAL_SOURCE_GPS_OBSERVATION_EVIDENCE_CROSSWALK_V1",
+  "frozen_date": "2026-11-15",
+  "stage": "POST_WAVE2_FIRST_OUTCOME_METHOD_DIAGNOSTIC_NO_NEW_ECOLOGICAL_ENDPOINT",
+  "original_sources": {
+    "original_35_first_q": {
+      "path": "research/RSDS_437_WAVE1_PLUS_WAVE2_35_ORIGINAL_GPS_FIRST_META_RESULT_20261115.json",
+      "git_blob_sha": "9b02774f7c31d29b2eec5039a80431a895dccb36"
+    },
+    "original_gps_funnel_contract": {
+      "path": "research/RSDS_35_SOURCE_GPS_OBSERVATION_FUNNEL_V1_CONTRACT.json",
+      "git_blob_sha": "b96cbd2dac2857f4b54c92c294a69a38c4521792"
+    },
+    "original_GPS_funnel_first_result": {
+      "path": "research/RSDS_35_SOURCE_GPS_OBSERVATION_FUNNEL_FIRST_RESULT_20261115.json",
+      "git_blob_sha": "49dcf5c798f8eee788c8001906a1fe0e2c195086",
+      "original_first_json_sha256": "e7c923ad331c8b7c5a8cdfb1dc11d3f510961ce2d145d79c3c0b4c0d16ae8acf"
+    },
+    "original_q_measurability_first_rank_result": {
+      "path": "research/RSDS_35_SOURCE_Q_MEASURABILITY_RANK_DIAGNOSTIC_FIRST_RESULT_20261115.json",
+      "git_blob_sha": "a8caba562159ae9677b8143c33e6cfb239a8a794",
+      "original_first_json_sha256": "517dbc8d62d2a554c3a925c1ffb444de91ca4d5d15b39ab7e5ca9a9d62ddea2f"
+    },
+    "method_document": {
+      "path": "docs/RSDS_35_ORIGINAL_SOURCE_GPS_OBSERVATION_FUNNEL_METHOD_20261115.md",
+      "git_blob_sha": "7f3520d0142b79452fb5acaee436d7fee820c58d"
+    },
+    "result_document": {
+      "path": "docs/RSDS_35_SOURCE_GPS_OBSERVATION_FIRST_FINDINGS_20261115.md",
+      "git_blob_sha": "62b53895f483e61f93544647bd28ca3143a86616"
+    }
+  },
+  "first_CI": {
+    "original_GPS_source_funnel_all_37_success_run": 43697404274,
+    "original_first_funnel_sha_freeze_run": 43698599854,
+    "source_q_post_outcome_AUC_success_run": 43698864972,
+    "first_AUC_sha_freeze_run": 43699078419,
+    "original_funnel_artifact_id": 14155700723,
+    "source_AUC_artifact_id": 14155078368
+  },
+  "verified": {
+    "original_repository_packages": 437,
+    "GPS_GNSS_sensor_candidates": 259,
+    "metadata_priority_packages": 120,
+    "original_source_studies": 35,
+    "registered_native_study_rows": 50,
+    "source_provider_MD5_files": 28,
+    "parsed_source_studies": 25,
+    "parsed_native_source_rows": 34,
+    "original_file_or_human_privacy_HOLD": 7,
+    "original_GPS_source_wide_HOLD": 3,
+    "first_original_q_complete_source_studies": 10,
+    "first_original_daylength_complete_source_studies": 8,
+    "original_native_q_any_source_studies": 13,
+    "first_GPS_interval_gate_counts": {
+      "adjacent": 1502093,
+      "elapsed0p5to2": 1218362,
+      "same_solar_daypart": 1068433,
+      "speed_max60": 1066632
+    },
+    "original_q_complete_10_source_time_gate_median": 0.9048870056408518,
+    "original_q_incomplete_15_parsed_source_time_gate_median_for_14_defined": 0.8120863571892056,
+    "original_q_complete_10_source_overall_gate_median": 0.708111810119529,
+    "original_q_incomplete_15_parsed_source_overall_gate_median_for_14_defined": 0.7077159415602918,
+    "source_equal_ranks": {
+      "time_gate_auc_on_24": 0.7071428571428572,
+      "all_intervals_gate_auc_on_24": 0.5428571428571428,
+      "q_tag_count_auc_circular_on_25": 0.9133333333333333
+    }
+  },
+  "claim_limits": [
+    "The first q ecological endpoint remains immutable and the observation funnel cannot establish animal solar or photoperiod causal response.",
+    "Nested GPS intervals are autocorrelated observations, not 1,066,632 independent source studies.",
+    "The 35 selected original source IDs are not a probability sample of global wildlife; wave2 quota chosen after wave1 outcomes.",
+    "Source q completeness requires >=5 qualified original independently tagged animals for every registered native; accepted interval fraction alone cannot identify support.",
+    "The AUC is purely post-outcome source-rank descriptiveness on 25 GPS-parsed source studies, not independent validation or extrapolated predictive coverage.",
+    "q-qualified tag count is a component of the outcome-definition and must not be claimed as an independent predictive factor.",
+    "Human movement source always no-access and earlier 7 preaccess HOLDs and 3 original sourcewide HOLDS remain protected.",
+    "Negative 48-source original irradiance-direction heldout sign is NOT REPLICATED; 12 old ERA5 original raw-source HOLDS remain."
+  ],
+  "old_48_external_solar_negative": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "old_ERA5_source_raw_SHA_12_HOLD": true
+}
