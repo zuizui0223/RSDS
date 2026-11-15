@@ -1,0 +1,64 @@
+name: RSDS freeze first 35-source q-measurability ranking sensitivity by SHA
+on:
+  push:
+    branches:
+      - analysis/rsds-source-gps-observation-funnel-20261115
+    paths:
+      - '.github/workflows/rsds-35-freeze-source-q-rank-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  first_rank_sensitivity_digest_freeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Obtain original source-only q-measurability AUC first artifact without GPS reaccess
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 43698864972
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          name: rsds-35-original-source-q-observability-rank-diagnostic-v1
+          path: outputs/first_source_rank
+      - name: Pin original first source AUC and all scientific HOLDs by byte-exact SHA
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp outputs/first_source_rank/rsds_35_source_q_observability_source_AUC_v1.json research/RSDS_35_SOURCE_Q_MEASURABILITY_RANK_DIAGNOSTIC_FIRST_RESULT_20261115.json
+          echo "517dbc8d62d2a554c3a925c1ffb444de91ca4d5d15b39ab7e5ca9a9d62ddea2f  research/RSDS_35_SOURCE_Q_MEASURABILITY_RANK_DIAGNOSTIC_FIRST_RESULT_20261115.json" | sha256sum -c -
+          python - <<'PY'
+          import json,math
+          from pathlib import Path
+          r=json.loads(Path("research/RSDS_35_SOURCE_Q_MEASURABILITY_RANK_DIAGNOSTIC_FIRST_RESULT_20261115.json").read_text())
+          assert r["original_35_source_frame"]==35
+          assert r["GPS_parsed_original_sources"]==25
+          assert r["GPS_native_source_q_complete"]==10
+          assert r["original_replayed_source_native_rows"]==34
+          d=r["original_measurement_scores"]
+          assert d["full_original_segment_acceptance_fraction"]["source_study_N_with_defined_score"]==24
+          assert math.isclose(d["full_original_segment_acceptance_fraction"]["all_parsed_sources"]["AUC_HIGHSCORE_PREDICTS_MEASURABLE"],0.5428571428571428,abs_tol=1e-12)
+          assert math.isclose(d["time_0p5_to_2h_fraction"]["all_parsed_sources"]["AUC_HIGHSCORE_PREDICTS_MEASURABLE"],0.7071428571428572,abs_tol=1e-12)
+          assert r["original_48_sunlight_external_negative_nonreplication_UNCHANGED"] is True
+          assert r["original_12_ERA5_raw_JSON_HOLD_UNCHANGED"] is True
+          print("FIRST_SOURCE_ONLY_Q_MEASURABILITY_RANK_BLOB_SHA_VALIDATED")
+          PY
+      - name: Commit the immutable original source-level diagnostic aggregate
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_35_SOURCE_Q_MEASURABILITY_RANK_DIAGNOSTIC_FIRST_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze source-level q measurability ranks from original 35-source GPS audit"
+            git fetch origin analysis/rsds-source-gps-observation-funnel-20261115
+            git rebase origin/analysis/rsds-source-gps-observation-funnel-20261115
+            git push origin HEAD:analysis/rsds-source-gps-observation-funnel-20261115
+          fi
