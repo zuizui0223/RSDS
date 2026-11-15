@@ -62,6 +62,10 @@ def run():
             "response_only_stratum_poststratified_point_DESCRIPTIVE_NOT_DESIGN_UNBIASED"
             ],-.0477935014187846,abs_tol=1e-12,rel_tol=0)):
         raise ValueError("Wave1/wave2 source weight calculation was altered")
+    previous_response_only=earlier_q[
+        "response_only_stratum_poststratified_point_DESCRIPTIVE_NOT_DESIGN_UNBIASED"]
+    if not previous_response_only < 0 < source_actual:
+        raise ValueError("Original source-weighted respondent-only q sign reversal no longer holds")
     leave_one=[]
     for r in qualified:
         subgroup=[s for s in qualified if s is not r]
