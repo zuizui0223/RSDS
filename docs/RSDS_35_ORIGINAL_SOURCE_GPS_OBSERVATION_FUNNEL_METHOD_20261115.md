@@ -86,6 +86,38 @@ steps, date counts, q-tag counts, daylight-tag counts and native q
 mean. If any differ, the route fails closed; do not silently
 reinterpret the original endpoint.
 
+## Exact accounting identity and the non-collapsible animal denominator
+
+For any source-native taxon with positive interval counts, define
+`N0` adjacent original selected-fix pairs, `N1` elapsed-time-eligible
+pairs, `N2` pairs additionally continuous in solar date/daypart, and
+`N3` pairs additionally passing the fixed speed gate. They are
+**nested integer counts**:
+
+```text
+N3 / N0 = (N1 / N0) × (N2 / N1) × (N3 / N2)
+```
+
+The right side is an exact **decomposition of observation admission**,
+not a fitted model, probability estimate, or causal path analysis.
+The denominators are original GPS intervals **within** an animal,
+and thus cannot serve as independent ecological replication units.
+
+Crucially, the subsequent source-native group indicator
+
+```text
+R_source,native(q) = 1{ >= 5 distinct tagged animals each supplying
+                          >= 10 paired DAY/NIGHT-qualified solar days
+                          within at least one original calendar year }
+```
+
+**cannot** be determined by multiplying source-wide interval
+acceptance fractions. Two original sources with similar `N3/N0`
+can have radically different counts of eligible *independent tags*.
+This is the key distinction the diagnostic quantifies and verifies.
+No independence, equal duty cycle, or Missing At Random assumption
+is created by large `N3`.
+
 ## What the diagnostic can and cannot identify
 
 - The first *time-interval gate* isolates an observation-cadence constraint
