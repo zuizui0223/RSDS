@@ -1,0 +1,56 @@
+name: RSDS known-truth source-measurability meta selection MAR MNAR simulation v1
+on:
+  push:
+    branches:
+      - methods/rsds-informative-source-measurement-simulation-20261115
+    paths:
+      - 'research/RSDS_META_OBSERVATION_SELECTION_KNOWN_TRUTH_SIM_V1_CONTRACT.json'
+      - 'scripts/rsds_meta_informative_source_selection_simulation_v1.py'
+      - 'tests/test_rsds_meta_informative_source_selection_simulation_v1.py'
+      - '.github/workflows/rsds-meta-observation-selection-known-truth-v1.yml'
+  pull_request:
+    paths:
+      - 'research/RSDS_META_OBSERVATION_SELECTION_KNOWN_TRUTH_SIM_V1_CONTRACT.json'
+      - 'scripts/rsds_meta_informative_source_selection_simulation_v1.py'
+      - 'tests/test_rsds_meta_informative_source_selection_simulation_v1.py'
+      - '.github/workflows/rsds-meta-observation-selection-known-truth-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  independent_source_worlds_known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify exactly original frozen GPS observation source blobs and known truth tests
+        run: python -m unittest discover -s tests -p 'test_rsds_meta_informative_source_selection_simulation_v1.py' -v
+      - name: Simulate 1000 independent finite 120-source worlds per fixed MAR/MNAR scenario
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_meta_informative_source_selection_simulation_v1 --out outputs/rsds_meta_observation_selection_known_truth_1000_worlds_v1.json
+          python -m json.tool outputs/rsds_meta_observation_selection_known_truth_1000_worlds_v1.json > /dev/null
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          j=json.loads(Path('outputs/rsds_meta_observation_selection_known_truth_1000_worlds_v1.json').read_text())
+          assert j["worlds_per_scenario"]==1000
+          assert len(j["synthetic_scenarios"])==3
+          assert j["source_metadata_frame"]=={"single_native":109,"multi_native":11}
+          assert j["counterfactual_predeclared_sample"]=={"single_native":24,"multi_native":11}
+          assert j["source_file_MD5_ORIGINAL_35_GPS_NOT_ACCESSED_BY_THIS_SIMULATION"]
+          assert j["old_48_source_shortwave_direction_external_NOT_REPLICATED"]
+          assert j["old_12_raw_ERA5_source_HOLD_UNCHANGED"]
+          for case in j["synthetic_scenarios"].values():
+              assert case["estimators"]["true_source_q_response_probability_oracle_HT"]["worlds_with_defined_estimator"]==1000
+          print("ALL_3000_SYNTHETIC_WORLDS_SUCCESS; original 35 GPS observation effects and historical HOLDS unchanged")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-source-selection-known-truth-3000-worlds-v1
+          path: outputs/rsds_meta_observation_selection_known_truth_1000_worlds_v1.json
+          if-no-files-found: error
