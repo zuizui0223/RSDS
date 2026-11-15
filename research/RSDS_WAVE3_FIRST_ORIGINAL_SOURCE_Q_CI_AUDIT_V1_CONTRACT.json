@@ -1,0 +1,119 @@
+{
+  "version": "RSDS_WAVE3_ORIGINAL_SOURCE_Q_CI_POSTOUTCOME_AUDIT_V1",
+  "date": "2026-11-15",
+  "stage": "POST_WAVE3_ORIGINAL_FIRST_GPS_SOURCE_RESULTS_NO_NEW_GPS_EVENTS",
+  "first_successful_wave3_GPS_action_run_id": 43702456789,
+  "original_wave3_first_51_meta_path": "research/RSDS_437_WAVE3_PLUS_PREVIOUS_35_ORIGINAL_GPS_51_SOURCE_META_FIRST_RESULT_20261115.json",
+  "original_wave3_first_51_meta_git_blob": "4644b8ed38ae74dae345df8d90ea182f5dce4ee3",
+  "original_35_result_git_blob": "9b02774f7c31d29b2eec5039a80431a895dccb36",
+  "original_51_meta_first_artifact": {
+    "name": "rsds-wave3-plus-old-35-original-source-51-meta-first-v1",
+    "artifact_id": 14157137676,
+    "digest": "sha256:1ecfffcea073728de7be51f0c5a265be6c0b1173d2b59335422f2cc743aa42c1"
+  },
+  "original_16_source_artifacts": [
+    {
+      "name": "rsds-wave3-original-gps-study-0-v1",
+      "artifact_id": 14156893067,
+      "digest": "sha256:3156416f33060fc2f7df1758f44f4c27a16b5db5d96bac116dabc810b790914b"
+    },
+    {
+      "name": "rsds-wave3-original-gps-study-1-v1",
+      "artifact_id": 14156642743,
+      "digest": "sha256:7ff20edf39c268f7d9d2b8c4bbeee69d1e28ade172123629a5c2f440b52f50c4"
+    },
+    {
+      "name": "rsds-wave3-original-gps-study-2-v1",
+      "artifact_id": 14156908109,
+      "digest": "sha256:a51e24ddec335b7bd95f1403cc509df0a15477eef578211b0be1af1b65152799"
+    },
+    {
+      "name": "rsds-wave3-original-gps-study-3-v1",
+      "artifact_id": 14157237103,
+      "digest": "sha256:7f4207265b251bba70a6f1344ea86ed67e41849d416731903431a03f48ef8654"
+    },
+    {
+      "name": "rsds-wave3-original-gps-study-4-v1",
+      "artifact_id": 14156697528,
+      "digest": "sha256:b4fb75646228b25fa36723e9ec88d6a79b46796fa9ac194044aaa5c1d53e5776"
+    },
+    {
+      "name": "rsds-wave3-original-gps-study-5-v1",
+      "artifact_id": 14156478399,
+      "digest": "sha256:e1924d4106a58b082f8d9a08b89730361fb64650d6fd6c477278164ba1baca3e"
+    },
+    {
+      "name": "rsds-wave3-original-gps-study-6-v1",
+      "artifact_id": 14156977886,
+      "digest": "sha256:482fd7cba70c9d29f446ec7e8885ef2cd1f87fcbc58fa90b458e9e79c074d1dc"
+    },
+    {
+      "name": "rsds-wave3-original-gps-study-7-v1",
+      "artifact_id": 14157460183,
+      "digest": "sha256:695804415664d0107d7d56626b12ccf0273b14474d97254aaab3497aab7d561b"
+    },
+    {
+      "name": "rsds-wave3-original-gps-study-8-v1",
+      "artifact_id": 14156657822,
+      "digest": "sha256:f6bade9464f79e63e34136db7bb091535f5ffa45ccf4012c4333d0f846b9b8cc"
+    },
+    {
+      "name": "rsds-wave3-original-gps-study-9-v1",
+      "artifact_id": 14156239237,
+      "digest": "sha256:b796bf51a82353a49c6e3607f3ffa3ded90d2ca7bf7f236d0e2e46b70925b21f"
+    },
+    {
+      "name": "rsds-wave3-original-gps-study-10-v1",
+      "artifact_id": 14156977949,
+      "digest": "sha256:2eb73df6d67b7e88f61831801442f55a1b08f273a6c07a6f26559a510ec212e2"
+    },
+    {
+      "name": "rsds-wave3-original-gps-study-11-v1",
+      "artifact_id": 14157415891,
+      "digest": "sha256:fc1bedd9f4936586aa0557aeb1c47a0892ab8e4c74bcc8906940175edd9f46bf"
+    },
+    {
+      "name": "rsds-wave3-original-gps-study-12-v1",
+      "artifact_id": 14156778786,
+      "digest": "sha256:13cd9d243da84072e70f364a5ed181f0339c69800e243259f38b473e740a594c"
+    },
+    {
+      "name": "rsds-wave3-original-gps-study-13-v1",
+      "artifact_id": 14157162511,
+      "digest": "sha256:5630949278c4c53b17e56d63b7aca2bd1423bf45e30cccd071cc910c35727286"
+    },
+    {
+      "name": "rsds-wave3-original-gps-study-14-v1",
+      "artifact_id": 14156928173,
+      "digest": "sha256:0f03ccb5836e6f433c407b4534bca289bf9959c1656e5b005947cb30713d44e5"
+    },
+    {
+      "name": "rsds-wave3-original-gps-study-15-v1",
+      "artifact_id": 14156529992,
+      "digest": "sha256:dfd20dce66cd2307b73b1cb906182b7bb77432a81a4c4ed74779b5096c7d0c69"
+    }
+  ],
+  "original_51_source_studies": 51,
+  "new_16_source_studies": 16,
+  "original_source_native_q_supported_total": 16,
+  "new_source_native_q_supported": 6,
+  "new_source_missing_source_q": 10,
+  "source_level_q_signs_original_35_respondents": {
+    "positive": 7,
+    "negative": 3
+  },
+  "new_source_level_q_signs_six_respondents": {
+    "positive": 1,
+    "negative": 5
+  },
+  "all_source_level_q_signs_sixteen_respondents": {
+    "positive": 8,
+    "negative": 8
+  },
+  "post_outcome_analysis": "Descriptive: per-source original tagged-animal bootstrap percentile 95 CI sign-support counts for new Wave3 original 16 sources, and comparison of q versus within-source astronomical daylength slope. This is NOT confirmatory or a global prevalence estimate.",
+  "independence": "Use one original source study ID/DOI as descriptive source unit; never independently count GPS fixes or tags. Signed CIs are native original tagged-animal bootstrap (not adjusted across sources or for source missingness).",
+  "no_GPS_source_event_rerun_or_download": true,
+  "original_human_location_privacy_no_access": true,
+  "historical_external_48_sunlight_heading_direction": "NOT_REPLICATED",
+  "historical_12_ERA5_raw_SHA": "HOLD"
+}
