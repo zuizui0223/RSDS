@@ -1,0 +1,150 @@
+{
+  "version": "RSDS_ORIGINAL_SOURCE_NATIVE_CROSS_STUDY_REPEATABILITY_AUDIT_V1",
+  "date": "2026-11-15",
+  "stage": "POST_51_STUDY_FIRST_OUTCOMES_ARCHIVED_SOURCE_ONLY_NO_NEW_GPS",
+  "question": "Which identical scientific name labels have original source-native q effects in at least two distinct DOI/study-ID archives? Do the original within-source bootstrap intervals support matching signs, and are there counterexamples?",
+  "original_2026_10_19_movebank_catalog_path": "research/seasonal_database_catalog/2026-10-19/movebank/catalog.json",
+  "original_2026_10_19_movebank_catalog_git_blob": "9822ec80ed98cab1e3d17a853d0ce5e63e47298c",
+  "original_wave1_all_native_effects_path": "research/RSDS_437_WAVE1_16_SOURCE_GPS_FIRST_ALL_RESULTS_20261115.json",
+  "original_wave1_all_native_effects_git_blob": "57029f30b65991118325c7d0cec1d8b3a36f4427",
+  "original_wave1_selection_path": "research/RSDS_437_SOURCE_FRAME_WAVE1_PRE_EVENT_SELECTION_20261115.json",
+  "original_wave1_selection_git_blob": "23d7489e4cf8347341cf67290499f278610651c6",
+  "original_wave2_selection_path": "research/RSDS_437_WAVE2_19_SOURCE_SELECTION_PRE_EVENT_FIRST_V1.json",
+  "original_wave2_selection_git_blob": "516fafc85ade5f953b9f8c697bdcc472d453fd0c",
+  "original_wave2_first_GPS_action_run_id": 43692435152,
+  "original_wave2_19_source_aggregates_first_artifact_digests": [
+    {
+      "index": 0,
+      "name": "rsds-wave2-original-gps-source-0-v1",
+      "artifact_id": 14152564266,
+      "digest": "sha256:51b6d5f9937923ba3cbb55f3f25885a4842b2eea2679fc93e478ba15da5f0d07"
+    },
+    {
+      "index": 1,
+      "name": "rsds-wave2-original-gps-source-1-v1",
+      "artifact_id": 14153140439,
+      "digest": "sha256:f7dc5285f1b7e7a8f1a3e2d323ba991f45c6a6c582851712253a170a68dacd94"
+    },
+    {
+      "index": 2,
+      "name": "rsds-wave2-original-gps-source-2-v1",
+      "artifact_id": 14153325266,
+      "digest": "sha256:590aaaaadb1ff861d7540d3c9d036d550acdec05656b3e8a20c2a1bfa6720a8c"
+    },
+    {
+      "index": 3,
+      "name": "rsds-wave2-original-gps-source-3-v1",
+      "artifact_id": 14153340166,
+      "digest": "sha256:91ddbcea4acaaded7bbcc642b91b80067fe532eb05d4520942831b384da8157b"
+    },
+    {
+      "index": 4,
+      "name": "rsds-wave2-original-gps-source-4-v1",
+      "artifact_id": 14152873298,
+      "digest": "sha256:4a7212d264c61538a4a98a1306f8f710c7c74ca1353ad73e8978ab4b9fe61bf1"
+    },
+    {
+      "index": 5,
+      "name": "rsds-wave2-original-gps-source-5-v1",
+      "artifact_id": 14152494528,
+      "digest": "sha256:e07d6153490bbf06d276d31fce5139208cfc9d622dd801a6c3b6d55368fde809"
+    },
+    {
+      "index": 6,
+      "name": "rsds-wave2-original-gps-source-6-v1",
+      "artifact_id": 14153012915,
+      "digest": "sha256:3c88db7569114b38753b3f522c2dc7e83ee8e33a9d311d21f7f094ddb4e27849"
+    },
+    {
+      "index": 7,
+      "name": "rsds-wave2-original-gps-source-7-v1",
+      "artifact_id": 14152868299,
+      "digest": "sha256:326ef84a4b359bdcc1746fbf2d7747ebefc47fa582c13103fba90473d30733db"
+    },
+    {
+      "index": 8,
+      "name": "rsds-wave2-original-gps-source-8-v1",
+      "artifact_id": 14153106423,
+      "digest": "sha256:fffcf29d27cb265e45a49bf363d0e3ebaba6f7c09c8cc8b735a44dc3b675e511"
+    },
+    {
+      "index": 9,
+      "name": "rsds-wave2-original-gps-source-9-v1",
+      "artifact_id": 14153136175,
+      "digest": "sha256:ecda55c834ae89cd6d4eaf0082856ad7afa94d747b861ff4f024940803542555"
+    },
+    {
+      "index": 10,
+      "name": "rsds-wave2-original-gps-source-10-v1",
+      "artifact_id": 14152793782,
+      "digest": "sha256:b2be72c8415f099169d693af970377e9e1c67bec56f67714c02586f4f1444a0e"
+    },
+    {
+      "index": 11,
+      "name": "rsds-wave2-original-gps-source-11-v1",
+      "artifact_id": 14152748782,
+      "digest": "sha256:085e60c47ff6b8b59a9ba7afebd58eaf0203ece23aa393817eb81a3815e33dab"
+    },
+    {
+      "index": 12,
+      "name": "rsds-wave2-original-gps-source-12-v1",
+      "artifact_id": 14152494678,
+      "digest": "sha256:0a37d46c60a3bc4818a516651d0c963309035fc7d53b63e8849ac1c9a34dc5e8"
+    },
+    {
+      "index": 13,
+      "name": "rsds-wave2-original-gps-source-13-v1",
+      "artifact_id": 14152973019,
+      "digest": "sha256:2af250b7ea52360dbb213ee7d3074371cb5aa39e9dcb6030cd94eef71ce7c4e5"
+    },
+    {
+      "index": 14,
+      "name": "rsds-wave2-original-gps-source-14-v1",
+      "artifact_id": 14152363579,
+      "digest": "sha256:f6e6ce530472741a6327cda618d8e76e0f56ccec9c8e906fe75e2aa02aa2ea19"
+    },
+    {
+      "index": 15,
+      "name": "rsds-wave2-original-gps-source-15-v1",
+      "artifact_id": 14152619357,
+      "digest": "sha256:59a00b96e37302466c0bac40fede5896c88ed24b10f6655d7d415096d7a9f4a0"
+    },
+    {
+      "index": 16,
+      "name": "rsds-wave2-original-gps-source-16-v1",
+      "artifact_id": 14152279265,
+      "digest": "sha256:0be301c73802e0f3326104b6e9d90f214d8c258bbfc60a4d6ad4d042d49fb1b7"
+    },
+    {
+      "index": 17,
+      "name": "rsds-wave2-original-gps-source-17-v1",
+      "artifact_id": 14152868601,
+      "digest": "sha256:c55bdab37b835cb7f17ecb1d21c53a960edc40c42c9ef9be103b69fcb88d690e"
+    },
+    {
+      "index": 18,
+      "name": "rsds-wave2-original-gps-source-18-v1",
+      "artifact_id": 14153345539,
+      "digest": "sha256:a4fc86ecaac497a0b6c215b62b423cc78c171381e9415ab6125cc4df747f5384"
+    }
+  ],
+  "original_wave3_first_CI_audit_path": "research/RSDS_WAVE3_FIRST_ORIGINAL_SOURCE_Q_CI_POSTOUTCOME_RESULT_20261115.json",
+  "original_wave3_first_CI_audit_git_blob": "57d8acf1f573e7573527b7cac9d21a76958a666c",
+  "original_wave3_selection_path": "research/RSDS_437_WAVE3_16_SOURCE_METADATA_ONLY_FIRST_RESULT_20261115.json",
+  "original_wave3_selection_git_blob": "a5a11c75a08df99755d3f6d560d111ab4904375b",
+  "original_first_51_study_meta_path": "research/RSDS_437_WAVE3_PLUS_PREVIOUS_35_ORIGINAL_GPS_51_SOURCE_META_FIRST_RESULT_20261115.json",
+  "original_first_51_study_meta_git_blob": "4644b8ed38ae74dae345df8d90ea182f5dce4ee3",
+  "prior_12_original_source_native_studies_path": "research/RSDS_12_STUDY_22_NATIVE_TEMPORAL_MACRO_FIRST_RESULT_20261031.json",
+  "prior_12_original_source_native_studies_git_blob": "af0574c6bb6383402a97b5bebadb8cf0408e9740",
+  "wave1_original_source_studies": 16,
+  "wave2_original_source_studies": 19,
+  "wave3_original_source_studies": 16,
+  "prior_original_source_studies": 12,
+  "new_selected_source_studies": 51,
+  "population_independence_ceiling": "Distinct DOI/study-ID does not establish distinct original tagged individuals, independent collection populations, sites or original GPS cadence, and data selection is not randomized world sampling. Repeat source identities are first-level descriptive source replication only.",
+  "original_q_estimand": "Full-source, original independently tagged animal equal NIGHT minus DAY log1p GPS speed at original same-daypart 0.5–2h intervals; do not substitute original SOURCE-AVERAGED multi-native q for source-native q.",
+  "original_bootstrap_CI_description": "Native source tag bootstrap nominal 95 percentile intervals, post-outcome unadjusted, no validated study-level joint covariance or meta-analysis CI.",
+  "old_48_source_solar_irradiance_direction_replicated": false,
+  "old_12_ERA5_provider_raw_SHA_HOLD_unchanged": true,
+  "no_new_animal_GPS_or_provider_file_reads": true
+}
