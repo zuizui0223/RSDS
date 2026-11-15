@@ -1,0 +1,288 @@
+{
+  "version": "RSDS_FIXED_WAVE1_437_SNAPSHOT_SOURCE_ONLY_RESULT_V1",
+  "stage": "FIRST_SELECTION_COMMITTED_BEFORE_ORIGINAL_FILE_METADATA_AND_GPS_EVENT_ACCESS",
+  "original_catalog_git_blob_sha": "9822ec80ed98cab1e3d17a853d0ce5e63e47298c",
+  "original_full_437_row_first_result_SHA256": "927e7bbd78d3cf7a5e0a6cfe144da6f47b173d4e543e08950b241a7fd1d34960",
+  "original_selected_16_normalized_row_SHA256": "28c1eaa93c5ee903a65079bf20a6b362aa3784c04f0152575e41712bc77710e5",
+  "original_stage1_GitHub_Action_run": 43689117908,
+  "original_stage1_artifact_id": 14151487675,
+  "snapshot_calendar_date": "2026-10-19",
+  "selection_date": "2026-11-15",
+  "original_registry_package_count": 437,
+  "original_GPS_GNSS_candidate_count": 259,
+  "original_prior_outcome_DOI_count": 13,
+  "meta_stage1_candidate_count": 120,
+  "meta_stage1_single_candidate_count": 109,
+  "meta_stage1_multi_candidate_count": 11,
+  "selected_waves": {
+    "single_native": 8,
+    "multi_native": 8
+  },
+  "original_registry_status_counts": {
+    "DUPLICATE_STUDY_ID_NONCANONICAL_VERSION": 2,
+    "FIRST_WAVE_METADATA_CANDIDATE": 120,
+    "INSUFFICIENT_REPORTED_METADATA_PRIORITY_ONLY": 66,
+    "MISSING_OR_AMBIGUOUS_TAXON_LABELS": 3,
+    "NON_CC0_LICENSE_MANUAL_REVIEW": 52,
+    "NOT_GPS_GNSS_SENSOR": 178,
+    "PREVIOUSLY_OUTCOME_EXAMINED_SOURCE_OR_ALIAS": 14,
+    "SOURCE_ID_OR_DOI_METADATA_HOLD": 2
+  },
+  "pre_event_selected_sources_in_rank_order": [
+    {
+      "ordinal": 1,
+      "package_uuid": "dce434f5-0cae-45be-8847-e45b61833bf0",
+      "source_DOI_label": "doi:10.5441/001/1.5g4h5t6c",
+      "original_repository_study_id": "897981076",
+      "scientific_names": [
+        "Cervus elaphus"
+      ],
+      "selection_stratum": "single_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 175,
+      "reported_locations": 1585456
+    },
+    {
+      "ordinal": 2,
+      "package_uuid": "39364640-e673-428e-8d6f-aa728f4f9cba",
+      "source_DOI_label": "https://doi.org/10.5441/001/1.664",
+      "original_repository_study_id": "1233933180",
+      "scientific_names": [
+        "Buteo plagiatus"
+      ],
+      "selection_stratum": "single_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 62,
+      "reported_locations": 717045
+    },
+    {
+      "ordinal": 3,
+      "package_uuid": "161b478c-47a0-43e5-b8a2-3f7d79926df6",
+      "source_DOI_label": "doi:10.5441/001/1.86v62sd5",
+      "original_repository_study_id": "50850228",
+      "scientific_names": [
+        "Capra hircus"
+      ],
+      "selection_stratum": "single_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 13,
+      "reported_locations": 30246
+    },
+    {
+      "ordinal": 4,
+      "package_uuid": "9d8e2a5a-3c17-4898-8231-511beb8c044c",
+      "source_DOI_label": "doi:10.5441/001/1.695",
+      "original_repository_study_id": "6793037828",
+      "scientific_names": [
+        "Aquila nipalensis"
+      ],
+      "selection_stratum": "single_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 21,
+      "reported_locations": 517997
+    },
+    {
+      "ordinal": 5,
+      "package_uuid": "1a65b7b8-0773-4165-9d3a-93f35f98230e",
+      "source_DOI_label": "doi:10.5441/001/1.910p0c20",
+      "original_repository_study_id": "66507017",
+      "scientific_names": [
+        "Halichoerus grypus"
+      ],
+      "selection_stratum": "single_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 16,
+      "reported_locations": 124360
+    },
+    {
+      "ordinal": 6,
+      "package_uuid": "4ef43458-a0c0-4ff0-aed4-64b07cedf11c",
+      "source_DOI_label": "doi:10.5441/001/1.pf315732",
+      "original_repository_study_id": "300222057",
+      "scientific_names": [
+        "Felis catus"
+      ],
+      "selection_stratum": "single_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 101,
+      "reported_locations": 17866
+    },
+    {
+      "ordinal": 7,
+      "package_uuid": "86008da5-779d-4d96-ac83-66652b552402",
+      "source_DOI_label": "doi:10.5441/001/1.c42j3js7_2",
+      "original_repository_study_id": "212096177",
+      "scientific_names": [
+        "Ciconia ciconia"
+      ],
+      "selection_stratum": "single_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 18,
+      "reported_locations": 2494711
+    },
+    {
+      "ordinal": 8,
+      "package_uuid": "fb9f260b-b3fa-4c3b-a059-847341c43998",
+      "source_DOI_label": "doi:10.5441/001/1.6p427t2f",
+      "original_repository_study_id": "164144882",
+      "scientific_names": [
+        "Buteo swainsoni"
+      ],
+      "selection_stratum": "single_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 17,
+      "reported_locations": 18828
+    },
+    {
+      "ordinal": 9,
+      "package_uuid": "bd9f2614-11b3-48c3-8251-1aee62c8e650",
+      "source_DOI_label": "doi:10.5441/001/1.r72ph75f",
+      "original_repository_study_id": "1606812667",
+      "scientific_names": [
+        "Chelonia mydas",
+        "Eretmochelys imbricata"
+      ],
+      "selection_stratum": "multi_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 23,
+      "reported_locations": 88727
+    },
+    {
+      "ordinal": 10,
+      "package_uuid": "a61cb8c5-7a04-4a4a-8e85-8c7a9a51ce0c",
+      "source_DOI_label": "doi:10.5441/001/1.g51fs0jv",
+      "original_repository_study_id": "2290252202",
+      "scientific_names": [
+        "Anser albifrons",
+        "Anser brachyrhynchus",
+        "Anser fabalis",
+        "Branta leucopsis"
+      ],
+      "selection_stratum": "multi_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 246,
+      "reported_locations": 280312
+    },
+    {
+      "ordinal": 11,
+      "package_uuid": "c92d9814-0950-4b78-885c-ae76b6383c75",
+      "source_DOI_label": "doi:10.5441/001/1.c6q8353q",
+      "original_repository_study_id": "34551859",
+      "scientific_names": [
+        "Buteo rufinus",
+        "Circaetus gallicus"
+      ],
+      "selection_stratum": "multi_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 24,
+      "reported_locations": 371685
+    },
+    {
+      "ordinal": 12,
+      "package_uuid": "5a280544-06db-4c85-9713-842547972edd",
+      "source_DOI_label": "doi:10.5441/001/1.291",
+      "original_repository_study_id": "2930370782",
+      "scientific_names": [
+        "Vulpes vulpes",
+        "Vulpes lagopus"
+      ],
+      "selection_stratum": "multi_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 17,
+      "reported_locations": 12840
+    },
+    {
+      "ordinal": 13,
+      "package_uuid": "12f99da9-00c2-4227-94c9-e896d995c742",
+      "source_DOI_label": "doi:10.5441/001/1.356nb5mf",
+      "original_repository_study_id": "190490326",
+      "scientific_names": [
+        "Chelonoidis donfaustoi",
+        "Chelonoidis hoodensis",
+        "Chelonoidis porteri"
+      ],
+      "selection_stratum": "multi_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 86,
+      "reported_locations": 1198233
+    },
+    {
+      "ordinal": 14,
+      "package_uuid": "c32173e9-8381-4938-927b-08387261866a",
+      "source_DOI_label": "doi:10.5441/001/1.67f77j31",
+      "original_repository_study_id": "288396691",
+      "scientific_names": [
+        "Cathartes aura",
+        "Coragyps atratus"
+      ],
+      "selection_stratum": "multi_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 18,
+      "reported_locations": 2605997
+    },
+    {
+      "ordinal": 15,
+      "package_uuid": "eda74cd3-d35b-4fb5-9981-2d72b3e641d5",
+      "source_DOI_label": "doi:10.5441/001/1.pv048q7v",
+      "original_repository_study_id": "25750273",
+      "scientific_names": [
+        "Ovis aries",
+        "Canis familiaris"
+      ],
+      "selection_stratum": "multi_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 22,
+      "reported_locations": 162342
+    },
+    {
+      "ordinal": 16,
+      "package_uuid": "cd4e676d-424f-4b40-8e4e-3681a0f26530",
+      "source_DOI_label": "doi:10.5441/001/1.320",
+      "original_repository_study_id": "1573471517",
+      "scientific_names": [
+        "Cathartes melambrotus",
+        "Sarcoramphus papa"
+      ],
+      "selection_stratum": "multi_native",
+      "license": [
+        "CC0 1.0 Universal"
+      ],
+      "reported_animals": 10,
+      "reported_locations": 156960
+    }
+  ],
+  "animal_event_records_accessed": 0,
+  "old_48_signed_radiation_external_nonreplication": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "old_ERA5_raw_SHA_HOLD": true,
+  "claim_boundary": "Source metadata and SHA-ranked slots only; no individual movement, cadence, source-file schema, biological suitability, independence or unbiased global sampling"
+}

@@ -1,0 +1,394 @@
+{
+  "full_437_source_frame_sha256": "927e7bbd78d3cf7a5e0a6cfe144da6f47b173d4e543e08950b241a7fd1d34960",
+  "original_GPS_event_records_opened": 0,
+  "original_package_slots": 16,
+  "prior_48_shortwave_direction_external_not_replicated": true,
+  "prior_original_ERA5_12_source_HOLD": true,
+  "provider_original_source_rows": [
+    {
+      "animal_event_records_opened": 0,
+      "hold_reason": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 1,
+      "original_file": null,
+      "original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "package_uuid": "dce434f5-0cae-45be-8847-e45b61833bf0",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Cervus elaphus"
+      ],
+      "repository_study_id": "897981076",
+      "selection_stratum": "single_native",
+      "source_DOI_label": "doi:10.5441/001/1.5g4h5t6c",
+      "source_status": "SOURCE_METADATA_HOLD"
+    },
+    {
+      "animal_event_records_opened": 0,
+      "hold_reason": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 2,
+      "original_file": null,
+      "original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "package_uuid": "39364640-e673-428e-8d6f-aa728f4f9cba",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Buteo plagiatus"
+      ],
+      "repository_study_id": "1233933180",
+      "selection_stratum": "single_native",
+      "source_DOI_label": "https://doi.org/10.5441/001/1.664",
+      "source_status": "SOURCE_METADATA_HOLD"
+    },
+    {
+      "animal_event_records_opened": 0,
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 3,
+      "original_file": {
+        "bitstream_uuid": "7cca318f-c51b-4949-bf0f-feb1e595f15a",
+        "bytes": 7544264,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "fddd2f608392145832a8c8b2d33d33d2"
+        },
+        "filename": "non-native feral goats, Chynoweth, Hawaii Island.csv"
+      },
+      "original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "package_uuid": "161b478c-47a0-43e5-b8a2-3f7d79926df6",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Capra hircus"
+      ],
+      "repository_study_id": "50850228",
+      "selection_stratum": "single_native",
+      "source_DOI_label": "doi:10.5441/001/1.86v62sd5",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE"
+    },
+    {
+      "animal_event_records_opened": 0,
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 4,
+      "original_file": {
+        "bitstream_uuid": "3eda5fa0-7266-4d03-91d1-a1f67129775b",
+        "bytes": 111170648,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "eb3d377503c9d7fada00b07c9ff95675"
+        },
+        "filename": "Age-dependent response to anthropogenic habitat during migration of an endangered raptor.csv"
+      },
+      "original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "package_uuid": "9d8e2a5a-3c17-4898-8231-511beb8c044c",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Aquila nipalensis"
+      ],
+      "repository_study_id": "6793037828",
+      "selection_stratum": "single_native",
+      "source_DOI_label": "doi:10.5441/001/1.695",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE"
+    },
+    {
+      "animal_event_records_opened": 0,
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 5,
+      "original_file": {
+        "bitstream_uuid": "53183515-d3f3-4a9b-acb4-a90f8b02bcc6",
+        "bytes": 23558422,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "3ddb3ee075af6b273a464a7dcb20339e"
+        },
+        "filename": "Grey seals (Halichoerus grypus) at Sable Island (data from Baker et al. 2015).csv"
+      },
+      "original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "package_uuid": "1a65b7b8-0773-4165-9d3a-93f35f98230e",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Halichoerus grypus"
+      ],
+      "repository_study_id": "66507017",
+      "selection_stratum": "single_native",
+      "source_DOI_label": "doi:10.5441/001/1.910p0c20",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE"
+    },
+    {
+      "animal_event_records_opened": 0,
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 6,
+      "original_file": {
+        "bitstream_uuid": "d9fd0734-901f-4d68-8e05-7f00b6427d5e",
+        "bytes": 2598840,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "0c484593c6b85b348ef37c5a21bd8fba"
+        },
+        "filename": "Pet Cats United Kingdom.csv"
+      },
+      "original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "package_uuid": "4ef43458-a0c0-4ff0-aed4-64b07cedf11c",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Felis catus"
+      ],
+      "repository_study_id": "300222057",
+      "selection_stratum": "single_native",
+      "source_DOI_label": "doi:10.5441/001/1.pf315732",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE"
+    },
+    {
+      "animal_event_records_opened": 0,
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 7,
+      "original_file": {
+        "bitstream_uuid": "5993caae-5745-49d9-875f-90cfa861f34f",
+        "bytes": 92979383,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "a6fecd5bb495695f384bf5f2ea537589"
+        },
+        "filename": "LifeTrack White Stork Oberschwaben_2014-2023-gps.csv.zip"
+      },
+      "original_file_selection_rule": "UNIQUE_GPS_OR_TRACKING_FILENAME_ONLY",
+      "package_uuid": "86008da5-779d-4d96-ac83-66652b552402",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Ciconia ciconia"
+      ],
+      "repository_study_id": "212096177",
+      "selection_stratum": "single_native",
+      "source_DOI_label": "doi:10.5441/001/1.c42j3js7_2",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE"
+    },
+    {
+      "animal_event_records_opened": 0,
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 8,
+      "original_file": {
+        "bitstream_uuid": "e87708d3-95d0-4ae3-b653-2faa86389c47",
+        "bytes": 4386915,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "8dacaaa08769f0b8e156f3448ce4da77"
+        },
+        "filename": "Space use by Swainson's Hawk (Buteo swainsoni) in the Natomas Basin, California.csv"
+      },
+      "original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "package_uuid": "fb9f260b-b3fa-4c3b-a059-847341c43998",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Buteo swainsoni"
+      ],
+      "repository_study_id": "164144882",
+      "selection_stratum": "single_native",
+      "source_DOI_label": "doi:10.5441/001/1.6p427t2f",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE"
+    },
+    {
+      "animal_event_records_opened": 0,
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 9,
+      "original_file": {
+        "bitstream_uuid": "4154fa53-8cdd-4b9c-8453-478fd5388ef6",
+        "bytes": 22677899,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "ee4c3b8567d5226678ebac7ccfdfda24"
+        },
+        "filename": "Hawksbill_green turtles Chagos Archipelago Western Indian Ocean.csv"
+      },
+      "original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "package_uuid": "bd9f2614-11b3-48c3-8251-1aee62c8e650",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Chelonia mydas",
+        "Eretmochelys imbricata"
+      ],
+      "repository_study_id": "1606812667",
+      "selection_stratum": "multi_native",
+      "source_DOI_label": "doi:10.5441/001/1.r72ph75f",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE"
+    },
+    {
+      "animal_event_records_opened": 0,
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 10,
+      "original_file": {
+        "bitstream_uuid": "df3f0e84-f00c-4a8c-b0b3-faccf57882db",
+        "bytes": 52522893,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "8e60b56b3b3329dc9525a79d236ea952"
+        },
+        "filename": "Goose flight around New Year in W-Europe 2014-2021.csv"
+      },
+      "original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "package_uuid": "a61cb8c5-7a04-4a4a-8e85-8c7a9a51ce0c",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Anser albifrons",
+        "Anser brachyrhynchus",
+        "Anser fabalis",
+        "Branta leucopsis"
+      ],
+      "repository_study_id": "2290252202",
+      "selection_stratum": "multi_native",
+      "source_DOI_label": "doi:10.5441/001/1.g51fs0jv",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE"
+    },
+    {
+      "animal_event_records_opened": 0,
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 11,
+      "original_file": {
+        "bitstream_uuid": "7c2992cf-6d70-4087-ba70-3dfdf46463d1",
+        "bytes": 73024526,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "66cccaecbfb300db3a550806c26da58c"
+        },
+        "filename": "Movements of long-legged buzzards and short-toed eagles.csv"
+      },
+      "original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "package_uuid": "c92d9814-0950-4b78-885c-ae76b6383c75",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Buteo rufinus",
+        "Circaetus gallicus"
+      ],
+      "repository_study_id": "34551859",
+      "selection_stratum": "multi_native",
+      "source_DOI_label": "doi:10.5441/001/1.c6q8353q",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE"
+    },
+    {
+      "animal_event_records_opened": 0,
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 12,
+      "original_file": {
+        "bitstream_uuid": "25506888-6e23-4459-b2ff-c8695a068055",
+        "bytes": 2292049,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "7eeab1871c97daaff54f071a0fa3b660"
+        },
+        "filename": "Arctic and red fox coexistence at the edge of Arctic.csv"
+      },
+      "original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "package_uuid": "5a280544-06db-4c85-9713-842547972edd",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Vulpes vulpes",
+        "Vulpes lagopus"
+      ],
+      "repository_study_id": "2930370782",
+      "selection_stratum": "multi_native",
+      "source_DOI_label": "doi:10.5441/001/1.291",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE"
+    },
+    {
+      "animal_event_records_opened": 0,
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 13,
+      "original_file": {
+        "bitstream_uuid": "fa2a94b0-7bc7-45ac-a322-156661a7029d",
+        "bytes": 1764252,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "4b6fd1c9b1633dec1b60446fbcb7951f"
+        },
+        "filename": "GPS_map_clustering.csv"
+      },
+      "original_file_selection_rule": "UNIQUE_GPS_OR_TRACKING_FILENAME_ONLY",
+      "package_uuid": "12f99da9-00c2-4227-94c9-e896d995c742",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Chelonoidis donfaustoi",
+        "Chelonoidis hoodensis",
+        "Chelonoidis porteri"
+      ],
+      "repository_study_id": "190490326",
+      "selection_stratum": "multi_native",
+      "source_DOI_label": "doi:10.5441/001/1.356nb5mf",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE"
+    },
+    {
+      "animal_event_records_opened": 0,
+      "hold_reason": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 14,
+      "original_file": null,
+      "original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "package_uuid": "c32173e9-8381-4938-927b-08387261866a",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Cathartes aura",
+        "Coragyps atratus"
+      ],
+      "repository_study_id": "288396691",
+      "selection_stratum": "multi_native",
+      "source_DOI_label": "doi:10.5441/001/1.67f77j31",
+      "source_status": "SOURCE_METADATA_HOLD"
+    },
+    {
+      "animal_event_records_opened": 0,
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 15,
+      "original_file": {
+        "bitstream_uuid": "f1e0b167-199a-42fe-9076-dacb1198739b",
+        "bytes": 46869221,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "55bb664f30f6617cfe0e96f95f29835c"
+        },
+        "filename": "Movements of free-ranging Maremma sheepdogs (data from van Bommel and Johnson 2014).csv"
+      },
+      "original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "package_uuid": "eda74cd3-d35b-4fb5-9981-2d72b3e641d5",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Ovis aries",
+        "Canis familiaris"
+      ],
+      "repository_study_id": "25750273",
+      "selection_stratum": "multi_native",
+      "source_DOI_label": "doi:10.5441/001/1.pv048q7v",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE"
+    },
+    {
+      "animal_event_records_opened": 0,
+      "metadata_candidate_count_after_name_rules": 1,
+      "ordinal": 16,
+      "original_file": {
+        "bitstream_uuid": "0b7d400a-41d0-4213-87b4-d64e760e5dfa",
+        "bytes": 35458203,
+        "checksum": {
+          "algorithm": "MD5",
+          "value": "e40751fb43c3a43b2add7e4cf5e1fab0"
+        },
+        "filename": "OC Vultures_part.csv"
+      },
+      "original_file_selection_rule": "ONE_ONLY_PRIMARY_SOURCE_FILE",
+      "package_uuid": "cd4e676d-424f-4b40-8e4e-3681a0f26530",
+      "provider_original_metadata_listed": true,
+      "registered_native_labels": [
+        "Cathartes melambrotus",
+        "Sarcoramphus papa"
+      ],
+      "repository_study_id": "1573471517",
+      "selection_stratum": "multi_native",
+      "source_DOI_label": "doi:10.5441/001/1.320",
+      "source_status": "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE"
+    }
+  ],
+  "scientific_claim_ceiling": "Source MD5/UUID/bytes hint only. Not a GPS schema, valid native taxonomy, temporal cadence, independent biological population, admissible ecology or global probability sample.",
+  "selected_multi_native_slots": 8,
+  "selected_single_native_slots": 8,
+  "selection_manifest_git_blob": "23d7489e4cf8347341cf67290499f278610651c6",
+  "source_snapshot_date": "2026-10-19",
+  "source_status_counts": {
+    "ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE": 13,
+    "SOURCE_METADATA_HOLD": 3
+  },
+  "stage": "POST_PRE_EVENT_SELECTION_BLOB_FROZEN_NO_GPS_EVENTS",
+  "version": "RSDS_WAVE1_16_ORIGINAL_FILE_METADATA_PREFLIGHT_V1"
+}

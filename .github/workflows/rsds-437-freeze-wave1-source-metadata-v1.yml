@@ -1,0 +1,54 @@
+name: RSDS freeze 16 original-file metadata first result before any original GPS
+on:
+  push:
+    branches:
+      - analysis/rsds-437-source-frame-wave1-20261115
+    paths:
+      - '.github/workflows/rsds-437-freeze-wave1-source-metadata-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  immutable_first_source_file_receipt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Audit original pre-selection hash and all 16 provider-file metadata slots
+        run: python -m unittest discover -s tests -p 'test_rsds_437_wave1_original_file_metadata_v1.py' -v
+      - name: Reproduce earlier first provider-only source metadata, byte-for-byte
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_437_wave1_original_file_metadata_v1 --out research/RSDS_437_WAVE1_ORIGINAL_FILE_METADATA_FIRST_RESULT_20261115.json
+          echo "a0f30a3318a2e52597201c4d0698efe3211401669178669ab3248a1fb3c0a826  research/RSDS_437_WAVE1_ORIGINAL_FILE_METADATA_FIRST_RESULT_20261115.json" | sha256sum -c -
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("research/RSDS_437_WAVE1_ORIGINAL_FILE_METADATA_FIRST_RESULT_20261115.json")
+          d=json.loads(p.read_text())
+          assert d["original_package_slots"]==16
+          assert d["source_status_counts"]=={"ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE":13,"SOURCE_METADATA_HOLD":3}
+          assert d["original_GPS_event_records_opened"]==0
+          assert len(d["provider_original_source_rows"])==16
+          assert all(r["animal_event_records_opened"]==0 for r in d["provider_original_source_rows"])
+          print("First-run original provider metadata digest verified. No GPS opened.")
+          PY
+      - name: Commit only the immutable first provider metadata manifest to the source wave branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_437_WAVE1_ORIGINAL_FILE_METADATA_FIRST_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: preserve first metadata-only 16-source file roster (13 admissible, 3 HOLD)"
+            git fetch origin analysis/rsds-437-source-frame-wave1-20261115
+            git rebase origin/analysis/rsds-437-source-frame-wave1-20261115
+            git push origin HEAD:analysis/rsds-437-source-frame-wave1-20261115
+          fi

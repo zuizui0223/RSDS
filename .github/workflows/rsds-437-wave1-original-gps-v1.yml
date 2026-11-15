@@ -1,0 +1,94 @@
+name: RSDS new 16 frozen-source original GPS first q, daylight and covariance v1
+on:
+  push:
+    branches:
+      - analysis/rsds-437-source-frame-wave1-20261115
+    paths:
+      - 'research/RSDS_437_WAVE1_ORIGINAL_GPS_FIRST_EFFECTS_V1_CONTRACT.json'
+      - 'scripts/run_rsds_437_wave1_original_gps_first_effects_v1.py'
+      - 'scripts/rsds_437_wave1_joint_source_covariance_v1.py'
+      - 'scripts/aggregate_rsds_437_wave1_original_gps_v1.py'
+      - 'tests/test_rsds_437_wave1_original_first_effects_v1.py'
+      - 'tests/test_rsds_437_wave1_original_gps_meta_v1.py'
+      - '.github/workflows/rsds-437-wave1-original-gps-v1.yml'
+  pull_request:
+    paths:
+      - 'research/RSDS_437_WAVE1_ORIGINAL_GPS_FIRST_EFFECTS_V1_CONTRACT.json'
+      - 'scripts/run_rsds_437_wave1_original_gps_first_effects_v1.py'
+      - 'scripts/rsds_437_wave1_joint_source_covariance_v1.py'
+      - 'scripts/aggregate_rsds_437_wave1_original_gps_v1.py'
+      - 'tests/test_rsds_437_wave1_original_first_effects_v1.py'
+      - 'tests/test_rsds_437_wave1_original_gps_meta_v1.py'
+      - '.github/workflows/rsds-437-wave1-original-gps-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fixed_source_known_truth_and_provider_hashes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original GPS/UTC/astronomy numerical dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Verify pre-event source selection, exact first metadata and legacy null outcomes
+        run: |
+          python -m unittest discover -s tests -p 'test_rsds_437_wave1_original_first_effects_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_437_wave1_original_gps_meta_v1.py' -v
+      - name: Verify existing original ODSP-to-RSDS 390 blob identities
+        run: python -m scripts.verify_rsds_migration
+
+  new_original_GPS_effects_by_frozen_source:
+    needs: fixed_source_known_truth_and_provider_hashes
+    runs-on: ubuntu-latest
+    timeout-minutes: 80
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        index: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original GPS native q runtime
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Replay original provider bytes MD5, then process EVERY registered native source or preserve HOLD
+        run: |
+          python -m scripts.run_rsds_437_wave1_original_gps_first_effects_v1 --index ${{ matrix.index }} --out outputs/wave1_source_$(printf "%02d" ${{ matrix.index }}).json
+      - name: Preserve source-level group effects/covariance/HOLD only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-437-wave1-original-native-source-${{ matrix.index }}-v1
+          path: outputs/wave1_source_*.json
+          if-no-files-found: error
+
+  source_frame_meta_aggregate:
+    needs: new_original_GPS_effects_by_frozen_source
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download all sixteen source slots including original file and GPS HOLDS
+        uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-437-wave1-original-native-source-*-v1
+          path: outputs/wave1_native_sources
+          merge-multiple: true
+      - name: Estimate study-first native q, photoperiod and fixed-frame missingness, without false world claims
+        run: |
+          python -m scripts.aggregate_rsds_437_wave1_original_gps_v1 --directory outputs/wave1_native_sources --out outputs/rsds_437_wave1_original_gps_first_all_results_v1.json
+          python -m json.tool outputs/rsds_437_wave1_original_gps_first_all_results_v1.json > /dev/null
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-437-wave1-native-q-multi-source-meta-atlas-v1
+          path: outputs/rsds_437_wave1_original_gps_first_all_results_v1.json
+          if-no-files-found: error
