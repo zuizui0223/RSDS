@@ -1,0 +1,2187 @@
+{
+  "all_original_source_native_daylength_supported_rows": 33,
+  "all_original_source_native_q_supported_rows": 38,
+  "all_registered_original_source_native_rows": 88,
+  "all_repeated_source_native_species_including_original_HOLD": [
+    {
+      "all_supported_source_CI_same_sign": false,
+      "q_original_source_CI_signs": {
+        "INCLUDES_ZERO": 1,
+        "NEGATIVE": 2
+      },
+      "q_point_signs": {
+        "NEGATIVE": 3
+      },
+      "registered_distinct_source_DOI": 3,
+      "same_q_point_sign_within_supported_archives": true,
+      "scientific_name": "Branta leucopsis",
+      "source_native_q_estimable_DOI": 3,
+      "source_native_q_nominal_source_CI_excludes_zero": 2,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.fk899541",
+          "original_catalog_title": "Data from: More grazing, more damage? Assessed yield loss on agricultural grassland relates non-linearly to goose grazing pressure",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 64,
+            "point_sign": "NEGATIVE",
+            "q": -0.004376129442388242,
+            "source_tag_bootstrap95": [
+              -0.016178350032399952,
+              0.006565938639276819
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 64,
+            "point_sign": "NEGATIVE",
+            "q": -0.1654734745042472,
+            "source_tag_bootstrap95": [
+              -0.17960867344971498,
+              -0.15215913857702817
+            ]
+          },
+          "original_repository_study_id": "1904388965",
+          "registered_native_count": 3,
+          "scientific_name_original_label": "Branta leucopsis",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.g51fs0jv",
+          "original_catalog_title": "Data from: Wild goose chase: geese flee high and far, and with aftereffects from New Year’s fireworks",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 6,
+            "point_sign": "NEGATIVE",
+            "q": -0.09144855176194797,
+            "source_tag_bootstrap95": [
+              -0.356777843798878,
+              0.14740173333670945
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 65,
+            "point_sign": "NEGATIVE",
+            "q": -0.1746417173093334,
+            "source_tag_bootstrap95": [
+              -0.1931413122664927,
+              -0.1585179847248555
+            ]
+          },
+          "original_repository_study_id": "2290252202",
+          "registered_native_count": 4,
+          "scientific_name_original_label": "Branta leucopsis",
+          "source_complete_all_native_q": true,
+          "source_wave": "wave1"
+        },
+        {
+          "original_DOI": "10.5441/001/1.5k6b1364",
+          "original_catalog_title": "Data from: Forecasting spring from afar? Timing of migration and predictability of phenology along different migration routes of an avian herbivore [Svalbard data]",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "POSITIVE",
+            "original_source_tagged_animals": 6,
+            "point_sign": "POSITIVE",
+            "q": 0.07999874137983283,
+            "source_tag_bootstrap95": [
+              0.013905444119615161,
+              0.16332954586118642
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 6,
+            "point_sign": "NEGATIVE",
+            "q": -0.02610800572644103,
+            "source_tag_bootstrap95": [
+              -0.06659808520439836,
+              0.01469057674069917
+            ]
+          },
+          "original_repository_study_id": "31888520",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Branta leucopsis",
+          "source_complete_all_native_q": true,
+          "source_wave": "wave3"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": true,
+      "q_original_source_CI_signs": {
+        "NEGATIVE": 2
+      },
+      "q_point_signs": {
+        "NEGATIVE": 2
+      },
+      "registered_distinct_source_DOI": 3,
+      "same_q_point_sign_within_supported_archives": true,
+      "scientific_name": "Anser albifrons",
+      "source_native_q_estimable_DOI": 2,
+      "source_native_q_nominal_source_CI_excludes_zero": 2,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.fk899541",
+          "original_catalog_title": "Data from: More grazing, more damage? Assessed yield loss on agricultural grassland relates non-linearly to goose grazing pressure",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 50,
+            "point_sign": "NEGATIVE",
+            "q": -0.026533756900550577,
+            "source_tag_bootstrap95": [
+              -0.04777688930352582,
+              -0.004772257106868325
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 50,
+            "point_sign": "NEGATIVE",
+            "q": -0.12098595255170014,
+            "source_tag_bootstrap95": [
+              -0.13671935338156951,
+              -0.10642737466618964
+            ]
+          },
+          "original_repository_study_id": "1904388965",
+          "registered_native_count": 3,
+          "scientific_name_original_label": "Anser albifrons",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.g51fs0jv",
+          "original_catalog_title": "Data from: Wild goose chase: geese flee high and far, and with aftereffects from New Year’s fireworks",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 22,
+            "point_sign": "NEGATIVE",
+            "q": -0.12729631629698168,
+            "source_tag_bootstrap95": [
+              -0.16148876092636238,
+              -0.09468160615605008
+            ]
+          },
+          "original_repository_study_id": "2290252202",
+          "registered_native_count": 4,
+          "scientific_name_original_label": "Anser albifrons",
+          "source_complete_all_native_q": true,
+          "source_wave": "wave1"
+        },
+        {
+          "original_DOI": "10.5441/001/1.ct72m82n",
+          "original_catalog_title": "Data from: Flyway connectivity and exchange primarily driven by moult migration in geese [North Sea population]",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "657674643",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Anser albifrons",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave3"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": false,
+      "q_original_source_CI_signs": {
+        "INCLUDES_ZERO": 1,
+        "NEGATIVE": 1
+      },
+      "q_point_signs": {
+        "NEGATIVE": 1,
+        "POSITIVE": 1
+      },
+      "registered_distinct_source_DOI": 2,
+      "same_q_point_sign_within_supported_archives": false,
+      "scientific_name": "Anas platyrhynchos",
+      "source_native_q_estimable_DOI": 2,
+      "source_native_q_nominal_source_CI_excludes_zero": 1,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.3fv21n7m",
+          "original_catalog_title": "Data from: As the duck flies: estimating the dispersal of low-pathogenic avian influenza viruses by migrating mallards",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 20,
+            "point_sign": "NEGATIVE",
+            "q": -0.0005950119432492525,
+            "source_tag_bootstrap95": [
+              -0.06608137989087286,
+              0.05823406253172753
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 21,
+            "point_sign": "NEGATIVE",
+            "q": -0.029977175175700362,
+            "source_tag_bootstrap95": [
+              -0.04417099959261305,
+              -0.015521108310727528
+            ]
+          },
+          "original_repository_study_id": "350174730",
+          "registered_native_count": 2,
+          "scientific_name_original_label": "Anas platyrhynchos",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.p9c4nc97",
+          "original_catalog_title": "Data from: Movement patterns of a keystone waterbird species are highly predictable from landscape configuration",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 76,
+            "point_sign": "POSITIVE",
+            "q": 0.0007542646420148555,
+            "source_tag_bootstrap95": [
+              -0.00971780693177878,
+              0.011795143412191957
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 100,
+            "point_sign": "POSITIVE",
+            "q": 0.003396234583647424,
+            "source_tag_bootstrap95": [
+              -0.0002529064520681523,
+              0.0069510019246736745
+            ]
+          },
+          "original_repository_study_id": "132686329",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Anas platyrhynchos",
+          "source_complete_all_native_q": true,
+          "source_wave": "wave2"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": true,
+      "q_original_source_CI_signs": {
+        "NEGATIVE": 2
+      },
+      "q_point_signs": {
+        "NEGATIVE": 2
+      },
+      "registered_distinct_source_DOI": 2,
+      "same_q_point_sign_within_supported_archives": true,
+      "scientific_name": "Odocoileus hemionus",
+      "source_native_q_estimable_DOI": 2,
+      "source_native_q_nominal_source_CI_excludes_zero": 2,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.711",
+          "original_catalog_title": "Data from: Study \"GPS tracking of ungulates in Utah by UDWR (2019-2020)\"",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "POSITIVE",
+            "original_source_tagged_animals": 1683,
+            "point_sign": "POSITIVE",
+            "q": 0.005619415769068772,
+            "source_tag_bootstrap95": [
+              0.004388078182072968,
+              0.006920966097037151
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 1723,
+            "point_sign": "NEGATIVE",
+            "q": -0.02184895488685285,
+            "source_tag_bootstrap95": [
+              -0.02321004124388584,
+              -0.02046763062163855
+            ]
+          },
+          "original_repository_study_id": "7364502758",
+          "registered_native_count": 4,
+          "scientific_name_original_label": "Odocoileus hemionus",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.703",
+          "original_catalog_title": "Data from: Study \"Bighorn sheep and mule deer in Wyoming (2019-2020)\"",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "POSITIVE",
+            "original_source_tagged_animals": 118,
+            "point_sign": "POSITIVE",
+            "q": 0.005538249061142167,
+            "source_tag_bootstrap95": [
+              0.004101632821224659,
+              0.006972859886325625
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 119,
+            "point_sign": "NEGATIVE",
+            "q": -0.0044624294869207584,
+            "source_tag_bootstrap95": [
+              -0.005777731444226381,
+              -0.003089662007489691
+            ]
+          },
+          "original_repository_study_id": "7266109545",
+          "registered_native_count": 2,
+          "scientific_name_original_label": "Odocoileus hemionus",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": true,
+      "q_original_source_CI_signs": {
+        "NEGATIVE": 2
+      },
+      "q_point_signs": {
+        "NEGATIVE": 2
+      },
+      "registered_distinct_source_DOI": 2,
+      "same_q_point_sign_within_supported_archives": true,
+      "scientific_name": "Ovis canadensis",
+      "source_native_q_estimable_DOI": 2,
+      "source_native_q_nominal_source_CI_excludes_zero": 2,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.711",
+          "original_catalog_title": "Data from: Study \"GPS tracking of ungulates in Utah by UDWR (2019-2020)\"",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 339,
+            "point_sign": "NEGATIVE",
+            "q": -0.003411758739636626,
+            "source_tag_bootstrap95": [
+              -0.006502919223183204,
+              0.0006123921190547578
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 343,
+            "point_sign": "NEGATIVE",
+            "q": -0.06576087192631512,
+            "source_tag_bootstrap95": [
+              -0.06902186763881439,
+              -0.06272814999976593
+            ]
+          },
+          "original_repository_study_id": "7364502758",
+          "registered_native_count": 4,
+          "scientific_name_original_label": "Ovis canadensis",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.703",
+          "original_catalog_title": "Data from: Study \"Bighorn sheep and mule deer in Wyoming (2019-2020)\"",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 41,
+            "point_sign": "POSITIVE",
+            "q": 0.00021733399923758685,
+            "source_tag_bootstrap95": [
+              -0.005847345967794438,
+              0.010985829877007601
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 41,
+            "point_sign": "NEGATIVE",
+            "q": -0.01997499965861462,
+            "source_tag_bootstrap95": [
+              -0.022469942801247658,
+              -0.017531021856795847
+            ]
+          },
+          "original_repository_study_id": "7266109545",
+          "registered_native_count": 2,
+          "scientific_name_original_label": "Ovis canadensis",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": true,
+      "q_original_source_CI_signs": {
+        "POSITIVE": 2
+      },
+      "q_point_signs": {
+        "POSITIVE": 2
+      },
+      "registered_distinct_source_DOI": 2,
+      "same_q_point_sign_within_supported_archives": true,
+      "scientific_name": "Vulpes vulpes",
+      "source_native_q_estimable_DOI": 2,
+      "source_native_q_nominal_source_CI_excludes_zero": 2,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.304",
+          "original_catalog_title": "Data from: Study \"Red Fox (Vulpes vulpes) in UK wet grasslands\"",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 30,
+            "point_sign": "POSITIVE",
+            "q": 0.0009782924299143007,
+            "source_tag_bootstrap95": [
+              -0.03373129401476338,
+              0.027853192180006973
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "POSITIVE",
+            "original_source_tagged_animals": 30,
+            "point_sign": "POSITIVE",
+            "q": 0.18975378246072777,
+            "source_tag_bootstrap95": [
+              0.15580729672412016,
+              0.2216704016945587
+            ]
+          },
+          "original_repository_study_id": "3179890710",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Vulpes vulpes",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.291",
+          "original_catalog_title": "Data from: Coexistence of two sympatric predators in a transitional ecosystem under constraining environmental conditions: a perspective from space and habitat use",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "POSITIVE",
+            "original_source_tagged_animals": 5,
+            "point_sign": "POSITIVE",
+            "q": 0.09339261189778658,
+            "source_tag_bootstrap95": [
+              0.047476371824256784,
+              0.1398001115389674
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "POSITIVE",
+            "original_source_tagged_animals": 5,
+            "point_sign": "POSITIVE",
+            "q": 0.29043003695011577,
+            "source_tag_bootstrap95": [
+              0.147875464232418,
+              0.46264582239858904
+            ]
+          },
+          "original_repository_study_id": "2930370782",
+          "registered_native_count": 2,
+          "scientific_name_original_label": "Vulpes vulpes",
+          "source_complete_all_native_q": true,
+          "source_wave": "wave1"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": null,
+      "q_original_source_CI_signs": {
+        "NEGATIVE": 1
+      },
+      "q_point_signs": {
+        "NEGATIVE": 1
+      },
+      "registered_distinct_source_DOI": 3,
+      "same_q_point_sign_within_supported_archives": null,
+      "scientific_name": "Cathartes aura",
+      "source_native_q_estimable_DOI": 1,
+      "source_native_q_nominal_source_CI_excludes_zero": 1,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.67f77j31",
+          "original_catalog_title": "Data from: Fine-scale assessment of home ranges and activity patterns for resident black vultures (Coragyps atratus) and turkey vultures (Cathartes aura)",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "288396691",
+          "registered_native_count": 2,
+          "scientific_name_original_label": "Cathartes aura",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave1"
+        },
+        {
+          "original_DOI": "10.5441/001/1.37r2b884",
+          "original_catalog_title": "Data from: Wing size but not wing shape is related to migratory behavior in a soaring bird",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 39,
+            "point_sign": "POSITIVE",
+            "q": 0.07636710812901829,
+            "source_tag_bootstrap95": [
+              -0.04086819697275745,
+              0.2045602308149651
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 39,
+            "point_sign": "NEGATIVE",
+            "q": -0.9808129921414007,
+            "source_tag_bootstrap95": [
+              -1.089968793710344,
+              -0.8748786592994893
+            ]
+          },
+          "original_repository_study_id": "217784323",
+          "registered_native_count": 2,
+          "scientific_name_original_label": "Cathartes aura",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave2"
+        },
+        {
+          "original_DOI": "10.5441/001/1.666",
+          "original_catalog_title": "Data from: Study \"Vultures tagged in the southeastern United States\" [part]",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "24797204",
+          "registered_native_count": 2,
+          "scientific_name_original_label": "Cathartes aura",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave2"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": null,
+      "q_original_source_CI_signs": {
+        "NEGATIVE": 1
+      },
+      "q_point_signs": {
+        "NEGATIVE": 1
+      },
+      "registered_distinct_source_DOI": 2,
+      "same_q_point_sign_within_supported_archives": null,
+      "scientific_name": "Cervus elaphus",
+      "source_native_q_estimable_DOI": 1,
+      "source_native_q_nominal_source_CI_excludes_zero": 1,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.711",
+          "original_catalog_title": "Data from: Study \"GPS tracking of ungulates in Utah by UDWR (2019-2020)\"",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "POSITIVE",
+            "original_source_tagged_animals": 332,
+            "point_sign": "POSITIVE",
+            "q": 0.009598574984599324,
+            "source_tag_bootstrap95": [
+              0.007155956289142913,
+              0.011945928671224418
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 337,
+            "point_sign": "NEGATIVE",
+            "q": -0.031888720397475416,
+            "source_tag_bootstrap95": [
+              -0.03576520611434819,
+              -0.02763130251964814
+            ]
+          },
+          "original_repository_study_id": "7364502758",
+          "registered_native_count": 4,
+          "scientific_name_original_label": "Cervus elaphus",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.5g4h5t6c",
+          "original_catalog_title": "Data from: Study \"Ya Ha Tinda elk project, Banff National Park, 2001-2020 (females)\"",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "897981076",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Cervus elaphus",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave1"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": null,
+      "q_original_source_CI_signs": {
+        "NEGATIVE": 1
+      },
+      "q_point_signs": {
+        "NEGATIVE": 1
+      },
+      "registered_distinct_source_DOI": 2,
+      "same_q_point_sign_within_supported_archives": null,
+      "scientific_name": "Felis catus",
+      "source_native_q_estimable_DOI": 1,
+      "source_native_q_nominal_source_CI_excludes_zero": 1,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.pf315732",
+          "original_catalog_title": "Data from: The small home ranges and large local ecological impacts of pet cats [United Kingdom]",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "300222057",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Felis catus",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave1"
+        },
+        {
+          "original_DOI": "10.5441/001/1.289p5s77",
+          "original_catalog_title": "Data from: The small home ranges and large local ecological impacts of pet cats [Australia]",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 40,
+            "point_sign": "NEGATIVE",
+            "q": -0.002932072044604448,
+            "source_tag_bootstrap95": [
+              -0.0058216343409401095,
+              -0.000628250448694157
+            ]
+          },
+          "original_repository_study_id": "64283289",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Felis catus",
+          "source_complete_all_native_q": true,
+          "source_wave": "wave2"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": null,
+      "q_original_source_CI_signs": {
+        "POSITIVE": 1
+      },
+      "q_point_signs": {
+        "POSITIVE": 1
+      },
+      "registered_distinct_source_DOI": 2,
+      "same_q_point_sign_within_supported_archives": null,
+      "scientific_name": "Sus scrofa",
+      "source_native_q_estimable_DOI": 1,
+      "source_native_q_nominal_source_CI_excludes_zero": 1,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.667",
+          "original_catalog_title": "Data from: Invasive wild pig movement and space use in a mixed-use forest landscape, South Carolina",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 7,
+            "point_sign": "NEGATIVE",
+            "q": -0.0035108995853531146,
+            "source_tag_bootstrap95": [
+              -0.0454761860759307,
+              0.02417408694299734
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "POSITIVE",
+            "original_source_tagged_animals": 9,
+            "point_sign": "POSITIVE",
+            "q": 0.06593504025512927,
+            "source_tag_bootstrap95": [
+              0.04411998488369067,
+              0.08706603234037197
+            ]
+          },
+          "original_repository_study_id": "6456209836",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Sus scrofa",
+          "source_complete_all_native_q": true,
+          "source_wave": "wave2"
+        },
+        {
+          "original_DOI": "10.5441/001/1.672",
+          "original_catalog_title": "Data from: Study \"Wild Pig/Boar GPS Study on Rangeland-Sus scrofa-Oklahoma\" [part]",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "3006923937",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Sus scrofa",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave3"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": null,
+      "q_original_source_CI_signs": {},
+      "q_point_signs": {},
+      "registered_distinct_source_DOI": 6,
+      "same_q_point_sign_within_supported_archives": null,
+      "scientific_name": "Columba livia",
+      "source_native_q_estimable_DOI": 0,
+      "source_native_q_nominal_source_CI_excludes_zero": 0,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.41c87nh1",
+          "original_catalog_title": "Data from: Development of the navigational system in homing pigeons: increase in complexity of the navigational map",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "444752703",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Columba livia",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave2"
+        },
+        {
+          "original_DOI": "10.5441/001/1.477cd5fs",
+          "original_catalog_title": "Data from: The homing pigeons’ olfactory map is affected by geographical barriers",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "1338487915",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Columba livia",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave2"
+        },
+        {
+          "original_DOI": "10.5441/001/1.dn1b937k",
+          "original_catalog_title": "Data from: Only natural local odours allow homeward orientation in homing pigeons released at unfamiliar sites",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "510147801",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Columba livia",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave2"
+        },
+        {
+          "original_DOI": "10.5441/001/1.pk8g6s2h",
+          "original_catalog_title": "Data from: Behavioural traits of individual homing pigeons, Columba livia f. domestica, in their homing flights",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "466196195",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Columba livia",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave3"
+        },
+        {
+          "original_DOI": "10.5441/001/1.702j854s",
+          "original_catalog_title": "Data from: Pigeons remember visual landmarks after one release and rely upon them more if they are anosmic",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "1115272968",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Columba livia",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave3"
+        },
+        {
+          "original_DOI": "10.5441/001/1.fh860r2f",
+          "original_catalog_title": "Data from: Evidence for pre-mnemonic, perceptual neglect of environmental features in hippocampal lesioned pigeons during homing",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "21897548",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Columba livia",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave3"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": null,
+      "q_original_source_CI_signs": {},
+      "q_point_signs": {},
+      "registered_distinct_source_DOI": 3,
+      "same_q_point_sign_within_supported_archives": null,
+      "scientific_name": "Chelonoidis donfaustoi",
+      "source_native_q_estimable_DOI": 0,
+      "source_native_q_nominal_source_CI_excludes_zero": 0,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.2cp86266",
+          "original_catalog_title": "Data from: Allometric and temporal scaling of movement characteristics in Galapagos tortoises",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "174165487",
+          "registered_native_count": 3,
+          "scientific_name_original_label": "Chelonoidis donfaustoi",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.356nb5mf",
+          "original_catalog_title": "Data from: Flexible characterization of animal movement pattern using net squared displacement and a latent state model",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "190490326",
+          "registered_native_count": 3,
+          "scientific_name_original_label": "Chelonoidis donfaustoi",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave1"
+        },
+        {
+          "original_DOI": "10.5441/001/1.6gr485fk",
+          "original_catalog_title": "Data from: Migration triggers in a large herbivore: Galápagos giant tortoises navigating resource gradients on volcanoes",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "2928116",
+          "registered_native_count": 3,
+          "scientific_name_original_label": "Chelonoidis donfaustoi",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave2"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": null,
+      "q_original_source_CI_signs": {},
+      "q_point_signs": {},
+      "registered_distinct_source_DOI": 3,
+      "same_q_point_sign_within_supported_archives": null,
+      "scientific_name": "Chelonoidis hoodensis",
+      "source_native_q_estimable_DOI": 0,
+      "source_native_q_nominal_source_CI_excludes_zero": 0,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.2cp86266",
+          "original_catalog_title": "Data from: Allometric and temporal scaling of movement characteristics in Galapagos tortoises",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "174165487",
+          "registered_native_count": 3,
+          "scientific_name_original_label": "Chelonoidis hoodensis",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.356nb5mf",
+          "original_catalog_title": "Data from: Flexible characterization of animal movement pattern using net squared displacement and a latent state model",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "190490326",
+          "registered_native_count": 3,
+          "scientific_name_original_label": "Chelonoidis hoodensis",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave1"
+        },
+        {
+          "original_DOI": "10.5441/001/1.6gr485fk",
+          "original_catalog_title": "Data from: Migration triggers in a large herbivore: Galápagos giant tortoises navigating resource gradients on volcanoes",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "2928116",
+          "registered_native_count": 3,
+          "scientific_name_original_label": "Chelonoidis hoodensis",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave2"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": null,
+      "q_original_source_CI_signs": {},
+      "q_point_signs": {},
+      "registered_distinct_source_DOI": 3,
+      "same_q_point_sign_within_supported_archives": null,
+      "scientific_name": "Chelonoidis porteri",
+      "source_native_q_estimable_DOI": 0,
+      "source_native_q_nominal_source_CI_excludes_zero": 0,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.2cp86266",
+          "original_catalog_title": "Data from: Allometric and temporal scaling of movement characteristics in Galapagos tortoises",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "174165487",
+          "registered_native_count": 3,
+          "scientific_name_original_label": "Chelonoidis porteri",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.356nb5mf",
+          "original_catalog_title": "Data from: Flexible characterization of animal movement pattern using net squared displacement and a latent state model",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "190490326",
+          "registered_native_count": 3,
+          "scientific_name_original_label": "Chelonoidis porteri",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave1"
+        },
+        {
+          "original_DOI": "10.5441/001/1.6gr485fk",
+          "original_catalog_title": "Data from: Migration triggers in a large herbivore: Galápagos giant tortoises navigating resource gradients on volcanoes",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "2928116",
+          "registered_native_count": 3,
+          "scientific_name_original_label": "Chelonoidis porteri",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave2"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": null,
+      "q_original_source_CI_signs": {},
+      "q_point_signs": {},
+      "registered_distinct_source_DOI": 3,
+      "same_q_point_sign_within_supported_archives": null,
+      "scientific_name": "Ciconia ciconia",
+      "source_native_q_estimable_DOI": 0,
+      "source_native_q_nominal_source_CI_excludes_zero": 0,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.c42j3js7_2",
+          "original_catalog_title": "Data from: Study \"LifeTrack White Stork Oberschwaben\" (2014-2023)",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "212096177",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Ciconia ciconia",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave1"
+        },
+        {
+          "original_DOI": "10.5441/001/1.137cn005",
+          "original_catalog_title": "Data from: Timing is critical: consequences of asynchronous migration for the performance and destination of a long-distance migrant",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "multiple",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Ciconia ciconia",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave3"
+        },
+        {
+          "original_DOI": "10.5441/001/1.4192t2j4_2",
+          "original_catalog_title": "Data from: Study \"LifeTrack White Stork Rheinland-Pfalz\" (2015-2023)",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "76367850",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Ciconia ciconia",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave3"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": null,
+      "q_original_source_CI_signs": {},
+      "q_point_signs": {},
+      "registered_distinct_source_DOI": 3,
+      "same_q_point_sign_within_supported_archives": null,
+      "scientific_name": "Coragyps atratus",
+      "source_native_q_estimable_DOI": 0,
+      "source_native_q_nominal_source_CI_excludes_zero": 0,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.67f77j31",
+          "original_catalog_title": "Data from: Fine-scale assessment of home ranges and activity patterns for resident black vultures (Coragyps atratus) and turkey vultures (Cathartes aura)",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "288396691",
+          "registered_native_count": 2,
+          "scientific_name_original_label": "Coragyps atratus",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave1"
+        },
+        {
+          "original_DOI": "10.5441/001/1.37r2b884",
+          "original_catalog_title": "Data from: Wing size but not wing shape is related to migratory behavior in a soaring bird",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "217784323",
+          "registered_native_count": 2,
+          "scientific_name_original_label": "Coragyps atratus",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave2"
+        },
+        {
+          "original_DOI": "10.5441/001/1.666",
+          "original_catalog_title": "Data from: Study \"Vultures tagged in the southeastern United States\" [part]",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "24797204",
+          "registered_native_count": 2,
+          "scientific_name_original_label": "Coragyps atratus",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave2"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": null,
+      "q_original_source_CI_signs": {},
+      "q_point_signs": {},
+      "registered_distinct_source_DOI": 2,
+      "same_q_point_sign_within_supported_archives": null,
+      "scientific_name": "Milvus migrans",
+      "source_native_q_estimable_DOI": 0,
+      "source_native_q_nominal_source_CI_excludes_zero": 0,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.q23p1t84",
+          "original_catalog_title": "Data from: Wind farm turbines cause functional habitat loss for migratory soaring birds",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "294524920",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Milvus migrans",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave2"
+        },
+        {
+          "original_DOI": "10.5441/001/1.23n2m412",
+          "original_catalog_title": "Data from: Black kites of different age and sex show similar avoidance responses to wind turbines during migration",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "1402467516",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Milvus migrans",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave3"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    }
+  ],
+  "distinct_original_archived_source_DOIs_and_study_IDs": 63,
+  "ecological_claim_ceiling": "Distinct DOI/study-ID does not establish distinct original tagged individuals, independent collection populations, sites or original GPS cadence, and data selection is not randomized world sampling. Repeat source identities are first-level descriptive source replication only.",
+  "individual_tag_ID_geographic_overlap_verified": false,
+  "original_12_ERA5_raw_SHA_HOLD": true,
+  "original_GPS_events_reopened": 0,
+  "original_public_archive_2026_10_19_packages": 437,
+  "original_source_nominal_CI_not_multistudy_inference": true,
+  "previous_48_source_solar_irradiance_direction_replicated": false,
+  "repeated_species_labels_with_two_or_more_distinct_DOIs": 17,
+  "repeated_species_labels_with_two_or_more_estimable_source_native_q": 6,
+  "same_source_population_independence_verified": false,
+  "same_species_source_study_q_comparison_candidates": [
+    {
+      "all_supported_source_CI_same_sign": false,
+      "q_original_source_CI_signs": {
+        "INCLUDES_ZERO": 1,
+        "NEGATIVE": 2
+      },
+      "q_point_signs": {
+        "NEGATIVE": 3
+      },
+      "registered_distinct_source_DOI": 3,
+      "same_q_point_sign_within_supported_archives": true,
+      "scientific_name": "Branta leucopsis",
+      "source_native_q_estimable_DOI": 3,
+      "source_native_q_nominal_source_CI_excludes_zero": 2,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.fk899541",
+          "original_catalog_title": "Data from: More grazing, more damage? Assessed yield loss on agricultural grassland relates non-linearly to goose grazing pressure",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 64,
+            "point_sign": "NEGATIVE",
+            "q": -0.004376129442388242,
+            "source_tag_bootstrap95": [
+              -0.016178350032399952,
+              0.006565938639276819
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 64,
+            "point_sign": "NEGATIVE",
+            "q": -0.1654734745042472,
+            "source_tag_bootstrap95": [
+              -0.17960867344971498,
+              -0.15215913857702817
+            ]
+          },
+          "original_repository_study_id": "1904388965",
+          "registered_native_count": 3,
+          "scientific_name_original_label": "Branta leucopsis",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.g51fs0jv",
+          "original_catalog_title": "Data from: Wild goose chase: geese flee high and far, and with aftereffects from New Year’s fireworks",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 6,
+            "point_sign": "NEGATIVE",
+            "q": -0.09144855176194797,
+            "source_tag_bootstrap95": [
+              -0.356777843798878,
+              0.14740173333670945
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 65,
+            "point_sign": "NEGATIVE",
+            "q": -0.1746417173093334,
+            "source_tag_bootstrap95": [
+              -0.1931413122664927,
+              -0.1585179847248555
+            ]
+          },
+          "original_repository_study_id": "2290252202",
+          "registered_native_count": 4,
+          "scientific_name_original_label": "Branta leucopsis",
+          "source_complete_all_native_q": true,
+          "source_wave": "wave1"
+        },
+        {
+          "original_DOI": "10.5441/001/1.5k6b1364",
+          "original_catalog_title": "Data from: Forecasting spring from afar? Timing of migration and predictability of phenology along different migration routes of an avian herbivore [Svalbard data]",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "POSITIVE",
+            "original_source_tagged_animals": 6,
+            "point_sign": "POSITIVE",
+            "q": 0.07999874137983283,
+            "source_tag_bootstrap95": [
+              0.013905444119615161,
+              0.16332954586118642
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 6,
+            "point_sign": "NEGATIVE",
+            "q": -0.02610800572644103,
+            "source_tag_bootstrap95": [
+              -0.06659808520439836,
+              0.01469057674069917
+            ]
+          },
+          "original_repository_study_id": "31888520",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Branta leucopsis",
+          "source_complete_all_native_q": true,
+          "source_wave": "wave3"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": true,
+      "q_original_source_CI_signs": {
+        "NEGATIVE": 2
+      },
+      "q_point_signs": {
+        "NEGATIVE": 2
+      },
+      "registered_distinct_source_DOI": 3,
+      "same_q_point_sign_within_supported_archives": true,
+      "scientific_name": "Anser albifrons",
+      "source_native_q_estimable_DOI": 2,
+      "source_native_q_nominal_source_CI_excludes_zero": 2,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.fk899541",
+          "original_catalog_title": "Data from: More grazing, more damage? Assessed yield loss on agricultural grassland relates non-linearly to goose grazing pressure",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 50,
+            "point_sign": "NEGATIVE",
+            "q": -0.026533756900550577,
+            "source_tag_bootstrap95": [
+              -0.04777688930352582,
+              -0.004772257106868325
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 50,
+            "point_sign": "NEGATIVE",
+            "q": -0.12098595255170014,
+            "source_tag_bootstrap95": [
+              -0.13671935338156951,
+              -0.10642737466618964
+            ]
+          },
+          "original_repository_study_id": "1904388965",
+          "registered_native_count": 3,
+          "scientific_name_original_label": "Anser albifrons",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.g51fs0jv",
+          "original_catalog_title": "Data from: Wild goose chase: geese flee high and far, and with aftereffects from New Year’s fireworks",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 22,
+            "point_sign": "NEGATIVE",
+            "q": -0.12729631629698168,
+            "source_tag_bootstrap95": [
+              -0.16148876092636238,
+              -0.09468160615605008
+            ]
+          },
+          "original_repository_study_id": "2290252202",
+          "registered_native_count": 4,
+          "scientific_name_original_label": "Anser albifrons",
+          "source_complete_all_native_q": true,
+          "source_wave": "wave1"
+        },
+        {
+          "original_DOI": "10.5441/001/1.ct72m82n",
+          "original_catalog_title": "Data from: Flyway connectivity and exchange primarily driven by moult migration in geese [North Sea population]",
+          "original_native_daylength": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_native_q": {
+            "available": false,
+            "nominal_source_CI_sign": "UNAVAILABLE",
+            "original_source_tagged_animals": null,
+            "point_sign": "UNAVAILABLE",
+            "q": null,
+            "source_tag_bootstrap95": null
+          },
+          "original_repository_study_id": "657674643",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Anser albifrons",
+          "source_complete_all_native_q": false,
+          "source_wave": "wave3"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": false,
+      "q_original_source_CI_signs": {
+        "INCLUDES_ZERO": 1,
+        "NEGATIVE": 1
+      },
+      "q_point_signs": {
+        "NEGATIVE": 1,
+        "POSITIVE": 1
+      },
+      "registered_distinct_source_DOI": 2,
+      "same_q_point_sign_within_supported_archives": false,
+      "scientific_name": "Anas platyrhynchos",
+      "source_native_q_estimable_DOI": 2,
+      "source_native_q_nominal_source_CI_excludes_zero": 1,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.3fv21n7m",
+          "original_catalog_title": "Data from: As the duck flies: estimating the dispersal of low-pathogenic avian influenza viruses by migrating mallards",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 20,
+            "point_sign": "NEGATIVE",
+            "q": -0.0005950119432492525,
+            "source_tag_bootstrap95": [
+              -0.06608137989087286,
+              0.05823406253172753
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 21,
+            "point_sign": "NEGATIVE",
+            "q": -0.029977175175700362,
+            "source_tag_bootstrap95": [
+              -0.04417099959261305,
+              -0.015521108310727528
+            ]
+          },
+          "original_repository_study_id": "350174730",
+          "registered_native_count": 2,
+          "scientific_name_original_label": "Anas platyrhynchos",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.p9c4nc97",
+          "original_catalog_title": "Data from: Movement patterns of a keystone waterbird species are highly predictable from landscape configuration",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 76,
+            "point_sign": "POSITIVE",
+            "q": 0.0007542646420148555,
+            "source_tag_bootstrap95": [
+              -0.00971780693177878,
+              0.011795143412191957
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 100,
+            "point_sign": "POSITIVE",
+            "q": 0.003396234583647424,
+            "source_tag_bootstrap95": [
+              -0.0002529064520681523,
+              0.0069510019246736745
+            ]
+          },
+          "original_repository_study_id": "132686329",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Anas platyrhynchos",
+          "source_complete_all_native_q": true,
+          "source_wave": "wave2"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": true,
+      "q_original_source_CI_signs": {
+        "NEGATIVE": 2
+      },
+      "q_point_signs": {
+        "NEGATIVE": 2
+      },
+      "registered_distinct_source_DOI": 2,
+      "same_q_point_sign_within_supported_archives": true,
+      "scientific_name": "Odocoileus hemionus",
+      "source_native_q_estimable_DOI": 2,
+      "source_native_q_nominal_source_CI_excludes_zero": 2,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.711",
+          "original_catalog_title": "Data from: Study \"GPS tracking of ungulates in Utah by UDWR (2019-2020)\"",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "POSITIVE",
+            "original_source_tagged_animals": 1683,
+            "point_sign": "POSITIVE",
+            "q": 0.005619415769068772,
+            "source_tag_bootstrap95": [
+              0.004388078182072968,
+              0.006920966097037151
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 1723,
+            "point_sign": "NEGATIVE",
+            "q": -0.02184895488685285,
+            "source_tag_bootstrap95": [
+              -0.02321004124388584,
+              -0.02046763062163855
+            ]
+          },
+          "original_repository_study_id": "7364502758",
+          "registered_native_count": 4,
+          "scientific_name_original_label": "Odocoileus hemionus",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.703",
+          "original_catalog_title": "Data from: Study \"Bighorn sheep and mule deer in Wyoming (2019-2020)\"",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "POSITIVE",
+            "original_source_tagged_animals": 118,
+            "point_sign": "POSITIVE",
+            "q": 0.005538249061142167,
+            "source_tag_bootstrap95": [
+              0.004101632821224659,
+              0.006972859886325625
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 119,
+            "point_sign": "NEGATIVE",
+            "q": -0.0044624294869207584,
+            "source_tag_bootstrap95": [
+              -0.005777731444226381,
+              -0.003089662007489691
+            ]
+          },
+          "original_repository_study_id": "7266109545",
+          "registered_native_count": 2,
+          "scientific_name_original_label": "Odocoileus hemionus",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": true,
+      "q_original_source_CI_signs": {
+        "NEGATIVE": 2
+      },
+      "q_point_signs": {
+        "NEGATIVE": 2
+      },
+      "registered_distinct_source_DOI": 2,
+      "same_q_point_sign_within_supported_archives": true,
+      "scientific_name": "Ovis canadensis",
+      "source_native_q_estimable_DOI": 2,
+      "source_native_q_nominal_source_CI_excludes_zero": 2,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.711",
+          "original_catalog_title": "Data from: Study \"GPS tracking of ungulates in Utah by UDWR (2019-2020)\"",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 339,
+            "point_sign": "NEGATIVE",
+            "q": -0.003411758739636626,
+            "source_tag_bootstrap95": [
+              -0.006502919223183204,
+              0.0006123921190547578
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 343,
+            "point_sign": "NEGATIVE",
+            "q": -0.06576087192631512,
+            "source_tag_bootstrap95": [
+              -0.06902186763881439,
+              -0.06272814999976593
+            ]
+          },
+          "original_repository_study_id": "7364502758",
+          "registered_native_count": 4,
+          "scientific_name_original_label": "Ovis canadensis",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.703",
+          "original_catalog_title": "Data from: Study \"Bighorn sheep and mule deer in Wyoming (2019-2020)\"",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 41,
+            "point_sign": "POSITIVE",
+            "q": 0.00021733399923758685,
+            "source_tag_bootstrap95": [
+              -0.005847345967794438,
+              0.010985829877007601
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "NEGATIVE",
+            "original_source_tagged_animals": 41,
+            "point_sign": "NEGATIVE",
+            "q": -0.01997499965861462,
+            "source_tag_bootstrap95": [
+              -0.022469942801247658,
+              -0.017531021856795847
+            ]
+          },
+          "original_repository_study_id": "7266109545",
+          "registered_native_count": 2,
+          "scientific_name_original_label": "Ovis canadensis",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    },
+    {
+      "all_supported_source_CI_same_sign": true,
+      "q_original_source_CI_signs": {
+        "POSITIVE": 2
+      },
+      "q_point_signs": {
+        "POSITIVE": 2
+      },
+      "registered_distinct_source_DOI": 2,
+      "same_q_point_sign_within_supported_archives": true,
+      "scientific_name": "Vulpes vulpes",
+      "source_native_q_estimable_DOI": 2,
+      "source_native_q_nominal_source_CI_excludes_zero": 2,
+      "source_native_rows": [
+        {
+          "original_DOI": "10.5441/001/1.304",
+          "original_catalog_title": "Data from: Study \"Red Fox (Vulpes vulpes) in UK wet grasslands\"",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "INCLUDES_ZERO",
+            "original_source_tagged_animals": 30,
+            "point_sign": "POSITIVE",
+            "q": 0.0009782924299143007,
+            "source_tag_bootstrap95": [
+              -0.03373129401476338,
+              0.027853192180006973
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "POSITIVE",
+            "original_source_tagged_animals": 30,
+            "point_sign": "POSITIVE",
+            "q": 0.18975378246072777,
+            "source_tag_bootstrap95": [
+              0.15580729672412016,
+              0.2216704016945587
+            ]
+          },
+          "original_repository_study_id": "3179890710",
+          "registered_native_count": 1,
+          "scientific_name_original_label": "Vulpes vulpes",
+          "source_complete_all_native_q": null,
+          "source_wave": "legacy12"
+        },
+        {
+          "original_DOI": "10.5441/001/1.291",
+          "original_catalog_title": "Data from: Coexistence of two sympatric predators in a transitional ecosystem under constraining environmental conditions: a perspective from space and habitat use",
+          "original_native_daylength": {
+            "available": true,
+            "nominal_source_CI_sign": "POSITIVE",
+            "original_source_tagged_animals": 5,
+            "point_sign": "POSITIVE",
+            "q": 0.09339261189778658,
+            "source_tag_bootstrap95": [
+              0.047476371824256784,
+              0.1398001115389674
+            ]
+          },
+          "original_native_q": {
+            "available": true,
+            "nominal_source_CI_sign": "POSITIVE",
+            "original_source_tagged_animals": 5,
+            "point_sign": "POSITIVE",
+            "q": 0.29043003695011577,
+            "source_tag_bootstrap95": [
+              0.147875464232418,
+              0.46264582239858904
+            ]
+          },
+          "original_repository_study_id": "2930370782",
+          "registered_native_count": 2,
+          "scientific_name_original_label": "Vulpes vulpes",
+          "source_complete_all_native_q": true,
+          "source_wave": "wave1"
+        }
+      ],
+      "study_id_unique_but_original_tag_or_population_independence_verified": false
+    }
+  ],
+  "source_native_first_wave2_original_artifact_digest_roster": [
+    {
+      "artifact_id": 14152564266,
+      "digest": "sha256:51b6d5f9937923ba3cbb55f3f25885a4842b2eea2679fc93e478ba15da5f0d07",
+      "index": 0,
+      "name": "rsds-wave2-original-gps-source-0-v1"
+    },
+    {
+      "artifact_id": 14153140439,
+      "digest": "sha256:f7dc5285f1b7e7a8f1a3e2d323ba991f45c6a6c582851712253a170a68dacd94",
+      "index": 1,
+      "name": "rsds-wave2-original-gps-source-1-v1"
+    },
+    {
+      "artifact_id": 14153325266,
+      "digest": "sha256:590aaaaadb1ff861d7540d3c9d036d550acdec05656b3e8a20c2a1bfa6720a8c",
+      "index": 2,
+      "name": "rsds-wave2-original-gps-source-2-v1"
+    },
+    {
+      "artifact_id": 14153340166,
+      "digest": "sha256:91ddbcea4acaaded7bbcc642b91b80067fe532eb05d4520942831b384da8157b",
+      "index": 3,
+      "name": "rsds-wave2-original-gps-source-3-v1"
+    },
+    {
+      "artifact_id": 14152873298,
+      "digest": "sha256:4a7212d264c61538a4a98a1306f8f710c7c74ca1353ad73e8978ab4b9fe61bf1",
+      "index": 4,
+      "name": "rsds-wave2-original-gps-source-4-v1"
+    },
+    {
+      "artifact_id": 14152494528,
+      "digest": "sha256:e07d6153490bbf06d276d31fce5139208cfc9d622dd801a6c3b6d55368fde809",
+      "index": 5,
+      "name": "rsds-wave2-original-gps-source-5-v1"
+    },
+    {
+      "artifact_id": 14153012915,
+      "digest": "sha256:3c88db7569114b38753b3f522c2dc7e83ee8e33a9d311d21f7f094ddb4e27849",
+      "index": 6,
+      "name": "rsds-wave2-original-gps-source-6-v1"
+    },
+    {
+      "artifact_id": 14152868299,
+      "digest": "sha256:326ef84a4b359bdcc1746fbf2d7747ebefc47fa582c13103fba90473d30733db",
+      "index": 7,
+      "name": "rsds-wave2-original-gps-source-7-v1"
+    },
+    {
+      "artifact_id": 14153106423,
+      "digest": "sha256:fffcf29d27cb265e45a49bf363d0e3ebaba6f7c09c8cc8b735a44dc3b675e511",
+      "index": 8,
+      "name": "rsds-wave2-original-gps-source-8-v1"
+    },
+    {
+      "artifact_id": 14153136175,
+      "digest": "sha256:ecda55c834ae89cd6d4eaf0082856ad7afa94d747b861ff4f024940803542555",
+      "index": 9,
+      "name": "rsds-wave2-original-gps-source-9-v1"
+    },
+    {
+      "artifact_id": 14152793782,
+      "digest": "sha256:b2be72c8415f099169d693af970377e9e1c67bec56f67714c02586f4f1444a0e",
+      "index": 10,
+      "name": "rsds-wave2-original-gps-source-10-v1"
+    },
+    {
+      "artifact_id": 14152748782,
+      "digest": "sha256:085e60c47ff6b8b59a9ba7afebd58eaf0203ece23aa393817eb81a3815e33dab",
+      "index": 11,
+      "name": "rsds-wave2-original-gps-source-11-v1"
+    },
+    {
+      "artifact_id": 14152494678,
+      "digest": "sha256:0a37d46c60a3bc4818a516651d0c963309035fc7d53b63e8849ac1c9a34dc5e8",
+      "index": 12,
+      "name": "rsds-wave2-original-gps-source-12-v1"
+    },
+    {
+      "artifact_id": 14152973019,
+      "digest": "sha256:2af250b7ea52360dbb213ee7d3074371cb5aa39e9dcb6030cd94eef71ce7c4e5",
+      "index": 13,
+      "name": "rsds-wave2-original-gps-source-13-v1"
+    },
+    {
+      "artifact_id": 14152363579,
+      "digest": "sha256:f6e6ce530472741a6327cda618d8e76e0f56ccec9c8e906fe75e2aa02aa2ea19",
+      "index": 14,
+      "name": "rsds-wave2-original-gps-source-14-v1"
+    },
+    {
+      "artifact_id": 14152619357,
+      "digest": "sha256:59a00b96e37302466c0bac40fede5896c88ed24b10f6655d7d415096d7a9f4a0",
+      "index": 15,
+      "name": "rsds-wave2-original-gps-source-15-v1"
+    },
+    {
+      "artifact_id": 14152279265,
+      "digest": "sha256:0be301c73802e0f3326104b6e9d90f214d8c258bbfc60a4d6ad4d042d49fb1b7",
+      "index": 16,
+      "name": "rsds-wave2-original-gps-source-16-v1"
+    },
+    {
+      "artifact_id": 14152868601,
+      "digest": "sha256:c55bdab37b835cb7f17ecb1d21c53a960edc40c42c9ef9be103b69fcb88d690e",
+      "index": 17,
+      "name": "rsds-wave2-original-gps-source-17-v1"
+    },
+    {
+      "artifact_id": 14153345539,
+      "digest": "sha256:a4fc86ecaac497a0b6c215b62b423cc78c171381e9415ab6125cc4df747f5384",
+      "index": 18,
+      "name": "rsds-wave2-original-gps-source-18-v1"
+    }
+  ],
+  "source_native_original_51_meta_git_blob": "4644b8ed38ae74dae345df8d90ea182f5dce4ee3",
+  "source_pair_tag_reuse_possible": true,
+  "source_studies_by_wave": {
+    "legacy12": 12,
+    "wave1": 16,
+    "wave2": 19,
+    "wave3": 16
+  },
+  "stage": "POST_OUTCOME_SOURCE_NATIVE_SAME_SPECIES_ORIGINAL_ARCHIVE_SYNTHESIS",
+  "study_population_sampling": "12 previously selected original source DOIs plus 51 metadata-priority Wave1–3 selected; outcome-adaptive quotas and nonrandom source completeness; do not count duplicate taxa within source as independent studies.",
+  "version": "RSDS_ORIGINAL_SOURCE_NATIVE_CROSS_STUDY_REPEATABILITY_AUDIT_V1"
+}
