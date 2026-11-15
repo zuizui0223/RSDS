@@ -16,7 +16,7 @@ import random
 from statistics import mean
 import tempfile
 
-from scripts.rsds_437_systematic_source_frame_v1 import HERE,pinned
+from scripts.rsds_437_systematic_source_frame_v1 import HERE,pinned,git_blob
 from scripts.movebank_native_ecology_20261019 import (
     original_files, checksum_and_download, daylength
 )
@@ -58,7 +58,9 @@ def fixed():
     if (c.get("prior_five_source_month_script_git_blob") !=
         "82259963739e95d39f0f4b5f9ddc677b4a041586"):
         raise ValueError("Earlier source month method algorithm version changed")
-    pinned(c["prior_five_source_month_script_path"],c["prior_five_source_month_script_git_blob"])
+    raw=(HERE/c["prior_five_source_month_script_path"]).read_bytes()
+    if git_blob(raw)!=c["prior_five_source_month_script_git_blob"]:
+        raise ValueError("Previous original five-source month analysis code changed")
     pinned(c["prior_five_source_original_month_contract_path"],
            c["prior_five_source_original_month_contract_git_blob"])
     previous=pinned(c["prior_five_source_month_first_result_path"],
