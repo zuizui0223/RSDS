@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/rsds_original_joint_calendar_covariance_v1.py'
       - 'scripts/run_rsds_original_joint_covariance_v1.py'
+      - 'scripts/aggregate_rsds_original_joint_covariance_v1.py'
       - 'tests/test_rsds_original_joint_calendar_covariance_v1.py'
       - 'docs/RSDS_ORIGINAL_GPS_JOINT_MONTH_COVARIANCE_V1_20261115.md'
       - '.github/workflows/rsds-original-gps-joint-covariance-v1.yml'
@@ -13,6 +14,7 @@ on:
     paths:
       - 'scripts/rsds_original_joint_calendar_covariance_v1.py'
       - 'scripts/run_rsds_original_joint_covariance_v1.py'
+      - 'scripts/aggregate_rsds_original_joint_covariance_v1.py'
       - 'tests/test_rsds_original_joint_calendar_covariance_v1.py'
       - 'docs/RSDS_ORIGINAL_GPS_JOINT_MONTH_COVARIANCE_V1_20261115.md'
       - '.github/workflows/rsds-original-gps-joint-covariance-v1.yml'
@@ -62,3 +64,27 @@ jobs:
           name: rsds-original-gps-source-joint-covariance-${{ matrix.study }}-v1
           path: outputs/joint_covariance_${{ matrix.study }}.json
           if-no-files-found: warn
+
+  four_source_joint_covariance_atlas:
+    needs: original_source_joint_covariance
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-original-gps-source-joint-covariance-*-v1
+          path: outputs/covariance_sources
+          merge-multiple: true
+      - name: Enforce four original DOI, distinct native taxa, PSD covariance and two-source matched ungulate contrast
+        run: |
+          python -m scripts.aggregate_rsds_original_joint_covariance_v1 --directory outputs/covariance_sources --out outputs/rsds_original_four_source_joint_covariance_atlas_v1.json
+          python -m json.tool outputs/rsds_original_four_source_joint_covariance_atlas_v1.json > /dev/null
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-four-original-study-native-joint-covariance-atlas-v1
+          path: outputs/rsds_original_four_source_joint_covariance_atlas_v1.json
+          if-no-files-found: error
