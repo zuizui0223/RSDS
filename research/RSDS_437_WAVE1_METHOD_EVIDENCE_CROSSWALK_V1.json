@@ -1,0 +1,101 @@
+{
+  "version": "RSDS_437_WAVE1_EVIDENCE_CROSSWALK_V1",
+  "date": "2026-11-15",
+  "claim_scope": "POST_HISTORICAL_OUTCOME; SHA_RANKED_NEW_ORIGINAL_SOURCE_WAVE; DESCRIPTIVE_METHOD_MEASURABILITY",
+  "source_blobs": {
+    "original_437_catalog": {
+      "path": "research/seasonal_database_catalog/2026-10-19/movebank/catalog.json",
+      "git_blob": "9822ec80ed98cab1e3d17a853d0ce5e63e47298c"
+    },
+    "original_12_study": {
+      "path": "research/RSDS_12_STUDY_22_NATIVE_TEMPORAL_MACRO_FIRST_RESULT_20261031.json",
+      "git_blob": "af0574c6bb6383402a97b5bebadb8cf0408e9740"
+    },
+    "original_illinois": {
+      "path": "research/RSDS_ILLINOIS_THREE_NATIVE_SHARED_DATE_V1_FIRST_RESULT_20261029.json",
+      "git_blob": "924156e8f98d0bb9fda2f9d23aabc03060af2a31"
+    },
+    "wave_source_contract": {
+      "path": "research/RSDS_437_SOURCE_FRAME_WAVE1_V1_CONTRACT.json",
+      "git_blob": "babd9b8949eba053d48463dbef5ea7a5348aa981"
+    },
+    "wave_selected_sources": {
+      "path": "research/RSDS_437_SOURCE_FRAME_WAVE1_PRE_EVENT_SELECTION_20261115.json",
+      "git_blob": "23d7489e4cf8347341cf67290499f278610651c6",
+      "original_first_full_437_artifact_sha256": "927e7bbd78d3cf7a5e0a6cfe144da6f47b173d4e543e08950b241a7fd1d34960"
+    },
+    "wave_original_file_metadata": {
+      "path": "research/RSDS_437_WAVE1_ORIGINAL_FILE_METADATA_FIRST_RESULT_20261115.json",
+      "git_blob": "3f849233969a397a86ab201343846301461cebcb",
+      "first_event_free_sha256": "a0f30a3318a2e52597201c4d0698efe3211401669178669ab3248a1fb3c0a826"
+    },
+    "wave_original_GPS_contract": {
+      "path": "research/RSDS_437_WAVE1_ORIGINAL_GPS_FIRST_EFFECTS_V1_CONTRACT.json",
+      "git_blob": "24a260246f4b0ae69fffc0cd84d2e02d565e586d"
+    },
+    "wave_first_native_GPS_effects": {
+      "path": "research/RSDS_437_WAVE1_16_SOURCE_GPS_FIRST_ALL_RESULTS_20261115.json",
+      "git_blob": "57029f30b65991118325c7d0cec1d8b3a36f4427",
+      "first_successful_artifact_sha256": "8e023272683b2f46ab30c35ec62632eab17b5e0aef89c49f774d03d98f114c6c"
+    },
+    "method_report": {
+      "path": "docs/RSDS_WAVE1_ORIGINAL_GPS_FIRST_FINDINGS_AND_META_SELECTION_20261115.md",
+      "git_blob": "0666d59c1bbf918f20bfe9a6ffaf844ee6efd13c"
+    }
+  },
+  "ordered_execution_receipts": {
+    "frame_first_successful_workflow": 43689117908,
+    "provider_file_metadata_first_successful_workflow": 43689426660,
+    "provider_first_file_result_sha_commit_workflow": 43689588544,
+    "native_GPS_all_16_source_first_successful_workflow": 43690283579,
+    "native_GPS_16_first_result_sha_commit_workflow": 43690694067,
+    "original_GPS_first_aggregate_artifact_id": 14151799059
+  },
+  "exact_denominators": {
+    "catalog_packages": 437,
+    "gps_sensor_packages": 259,
+    "stage1_eligible_metadata": 120,
+    "single_native_frame": 109,
+    "multi_native_frame": 11,
+    "single_native_sampled": 8,
+    "multi_native_sampled": 8,
+    "wave_total": 16,
+    "original_file_MD5_qualified": 13,
+    "original_file_metadata_HOLD": 3,
+    "source_wide_original_GPS_HOLD": 2,
+    "original_GPS_parsed_with_native_0_q": 5,
+    "source_any_native_q_supported": 6,
+    "source_full_native_q_supported": 4,
+    "source_full_native_daylength_supported": 3,
+    "joint_multi_native_month_covariance_supported": 0,
+    "original_registered_native_taxa_rows": 27
+  },
+  "descriptive_observational_results": {
+    "source_full_q_examples": {
+      "Capra hircus": -0.1693618518264255,
+      "Halichoerus grypus": 0.04221332110020992,
+      "Four geese study": -0.17446257636363138,
+      "Vulpes vulpes + Vulpes lagopus study": 0.39162162260446715
+    },
+    "respondent_only_source_stratum_q_mean_single": -0.06357426536310778,
+    "respondent_only_source_stratum_q_mean_multi": 0.10857952312041788,
+    "respondent_only_source_response_weighted_q": -0.0477935014187846,
+    "hypothetical_missing_q_range_under_observed_complete_source_range": [
+      -0.14279530762741968,
+      0.2817678415986542
+    ]
+  },
+  "claim_guardrails": [
+    "Neither full 437 catalog nor 120 metadata candidates form a probability sample of world animal populations",
+    "Known source metadata inclusion fractions do not repair source-specific effect/nonresponse selection",
+    "Four observed complete-source q effects do not identify one universal positive or negative daytime/nightside displacement effect",
+    "Zero newly admitted multi-native month covariance matrices cannot be replaced by 8 falsely independent species pairs",
+    "Nominal percentile original tagged bootstrap intervals do not warrant causal sunlight or behavioral activity inferences",
+    "Three original provider file size holds, two source-wide original GPS holds and all native partial effects must remain unmodified",
+    "Earlier 48-source externally held-out negative shortwave-direction effect remains NOT REPLICATED",
+    "Earlier 12 ERA5 original raw JSON versions stay HOLD",
+    "Do not combine the new selected effects with PR #23 or PR #24 until target/observation conditioning matches"
+  ],
+  "historical_external_48_signed_radiation_nonreplication": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "historical_12_original_ERA5_raw_HOLD": true
+}
