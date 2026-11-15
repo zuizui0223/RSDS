@@ -1,0 +1,102 @@
+name: RSDS Wave3 sixteen frozen original Movebank studies GPS q and 51-source meta
+on:
+  push:
+    branches:
+      - analysis/rsds-wave3-original-gps-first-effects-20261115
+    paths:
+      - 'research/RSDS_437_WAVE3_ORIGINAL_GPS_FIRST_EFFECTS_V1_CONTRACT.json'
+      - 'scripts/run_rsds_437_wave3_original_gps_first_effects_v1.py'
+      - 'scripts/aggregate_rsds_437_wave3_51_source_meta_v1.py'
+      - 'tests/test_rsds_437_wave3_original_gps_first_effects_v1.py'
+      - 'tests/test_rsds_437_wave3_51_source_meta_v1.py'
+      - '.github/workflows/rsds-437-wave3-original-gps-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pre_outcome_integrity_and_privacy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Numerical dependency for old immutable GPS original estimator
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Unit tests before opening any new original Wave3 GPS outcomes
+        run: |
+          python -m unittest discover -s tests -p 'test_rsds_437_wave3_original_gps_first_effects_v1.py' -v
+          python -m unittest discover -s tests -p 'test_rsds_437_wave3_51_source_meta_v1.py' -v
+      - name: Verify archived ODSP to RSDS data-provenance contract
+        run: python -m scripts.verify_rsds_migration
+
+  original_wave3_source_GPS_first_effect:
+    needs: pre_outcome_integrity_and_privacy
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        index: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original source native q/daylength numerical dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Verify frozen original provider file MD5 before original GPS, preserve HOLD
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.run_rsds_437_wave3_original_gps_first_effects_v1 --index ${{ matrix.index }} --out outputs/wave3_source_$(printf "%02d" ${{ matrix.index }}).json
+      - name: Upload only original-source aggregate effects or explicit HOLD
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-wave3-original-gps-study-${{ matrix.index }}-v1
+          path: outputs/wave3_source_*.json
+          if-no-files-found: error
+
+  full_51_original_source_study_meta:
+    needs: original_wave3_source_GPS_first_effect
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download ALL sixteen source slots, including original provider holds
+        uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-wave3-original-gps-study-*-v1
+          path: outputs/wave3_sources
+          merge-multiple: true
+      - name: Strict 35+16 original source meta source unit synthesis
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.aggregate_rsds_437_wave3_51_source_meta_v1 --directory outputs/wave3_sources --out outputs/rsds_437_wave3_original_51_source_meta_first_v1.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('outputs/rsds_437_wave3_original_51_source_meta_first_v1.json').read_text())
+          assert d['original_source_study_units']==51
+          assert d['original_previous_source_study_units']==35
+          assert d['new_wave3_source_study_units']==16
+          assert d['original_source_study_unit_all_registered_native_rows']==66
+          assert d['source_complete_all_native_q']>=10
+          assert len(d['all_51_source_study_rows'])==51
+          assert d['previous_48_source_sunlight_signed_external_not_replicated']
+          assert d['previous_12_ERA5_raw_SHA_HOLD_unchanged']
+          assert d['no_original_GPS_tracks_IDs_exact_dates_coordinates_or_individual_effects_exported']
+          print('ALL_51_ORIGINAL_SOURCE_STUDY_SLOTS_AND_HOLDS_RETAINED')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-wave3-plus-old-35-original-source-51-meta-first-v1
+          path: outputs/rsds_437_wave3_original_51_source_meta_first_v1.json
+          if-no-files-found: error
