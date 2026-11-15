@@ -1,0 +1,1272 @@
+{
+  "combined_original_registered_native_rows": 50,
+  "combined_source_study_summary_rows": [
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_EVALUATED",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 0,
+      "original_source_status": "PRE_EVENT_ORIGINAL_FILE_METADATA_HOLD",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.5g4h5t6c"
+      ],
+      "source_MD5_confirmed": false,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_hold_stage": "SOURCE_ONLY_ORIGINAL_FILE_METADATA",
+      "source_original_repository_study_id": "897981076",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_EVALUATED",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 0,
+      "original_source_status": "PRE_EVENT_ORIGINAL_FILE_METADATA_HOLD",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "https://doi.org/10.5441/001/1.664"
+      ],
+      "source_MD5_confirmed": false,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_hold_stage": "SOURCE_ONLY_ORIGINAL_FILE_METADATA",
+      "source_original_repository_study_id": "1233933180",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": true,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_REGISTERED_NATIVE",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 30246,
+      "original_source_status": "ORIGINAL_SOURCE_GPS_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.86v62sd5"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": 0.0033955168470359183,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "50850228",
+      "source_q_mean_equal_registered_native": -0.1693618518264255,
+      "source_stratum": "single_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_REGISTERED_NATIVE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 517997,
+      "original_source_status": "ORIGINAL_SOURCE_GPS_Q_UNAVAILABLE_NOT_ZERO",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.695"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "6793037828",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": true,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_REGISTERED_NATIVE",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 124435,
+      "original_source_status": "ORIGINAL_SOURCE_GPS_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.910p0c20"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": 0.022462103484798657,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "66507017",
+      "source_q_mean_equal_registered_native": 0.04221332110020992,
+      "source_stratum": "single_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_REGISTERED_NATIVE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 18215,
+      "original_source_status": "ORIGINAL_SOURCE_GPS_Q_UNAVAILABLE_NOT_ZERO",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.pf315732"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "300222057",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "SOURCE_WIDE_HOLD",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 0,
+      "original_source_status": "ORIGINAL_SOURCE_GPS_HOLD",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.c42j3js7_2"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": "StrictSourceHold",
+      "source_hold_stage": "ORIGINAL_GPS_SOURCE_SCHEMA_NATIVE_AND_Q",
+      "source_original_repository_study_id": "212096177",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_REGISTERED_NATIVE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 18828,
+      "original_source_status": "ORIGINAL_SOURCE_GPS_Q_UNAVAILABLE_NOT_ZERO",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.6p427t2f"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "164144882",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "ORIGINAL_NATIVE_COMMON_CALENDAR_COVARIANCE_HOLD",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 124962,
+      "original_source_status": "ORIGINAL_SOURCE_GPS_Q_ESTIMABLE",
+      "registered_native_count": 2,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.r72ph75f"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "1606812667",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "multi_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "ORIGINAL_NATIVE_COMMON_CALENDAR_COVARIANCE_HOLD",
+      "native_daylength_supported": 2,
+      "native_q_supported": 4,
+      "original_source_event_row_count": 280312,
+      "original_source_status": "ORIGINAL_SOURCE_GPS_Q_ESTIMABLE",
+      "registered_native_count": 4,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.g51fs0jv"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "2290252202",
+      "source_q_mean_equal_registered_native": -0.17446257636363138,
+      "source_stratum": "multi_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "ORIGINAL_NATIVE_COMMON_CALENDAR_COVARIANCE_HOLD",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 371685,
+      "original_source_status": "ORIGINAL_SOURCE_GPS_Q_UNAVAILABLE_NOT_ZERO",
+      "registered_native_count": 2,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.c6q8353q"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "34551859",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "multi_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": true,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "ORIGINAL_NATIVE_COMMON_CALENDAR_COVARIANCE_HOLD",
+      "native_daylength_supported": 2,
+      "native_q_supported": 2,
+      "original_source_event_row_count": 12840,
+      "original_source_status": "ORIGINAL_SOURCE_GPS_Q_ESTIMABLE",
+      "registered_native_count": 2,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.291"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": 0.060117446622204626,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "2930370782",
+      "source_q_mean_equal_registered_native": 0.39162162260446715,
+      "source_stratum": "multi_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "SOURCE_WIDE_HOLD",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 0,
+      "original_source_status": "ORIGINAL_SOURCE_GPS_HOLD",
+      "registered_native_count": 3,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.356nb5mf"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": "StrictSourceHold",
+      "source_hold_stage": "ORIGINAL_GPS_SOURCE_SCHEMA_NATIVE_AND_Q",
+      "source_original_repository_study_id": "190490326",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "multi_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_EVALUATED",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 0,
+      "original_source_status": "PRE_EVENT_ORIGINAL_FILE_METADATA_HOLD",
+      "registered_native_count": 2,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.67f77j31"
+      ],
+      "source_MD5_confirmed": false,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_hold_stage": "SOURCE_ONLY_ORIGINAL_FILE_METADATA",
+      "source_original_repository_study_id": "288396691",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "multi_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "ORIGINAL_NATIVE_COMMON_CALENDAR_COVARIANCE_HOLD",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 162342,
+      "original_source_status": "ORIGINAL_SOURCE_GPS_Q_ESTIMABLE",
+      "registered_native_count": 2,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.pv048q7v"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "25750273",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "multi_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "ORIGINAL_NATIVE_COMMON_CALENDAR_COVARIANCE_HOLD",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 160364,
+      "original_source_status": "ORIGINAL_SOURCE_GPS_Q_UNAVAILABLE_NOT_ZERO",
+      "registered_native_count": 2,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.320"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "1573471517",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "multi_native",
+      "wave": "wave1"
+    },
+    {
+      "complete_source_daylength": true,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 13939,
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.667"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": -0.0035108995853531146,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "6456209836",
+      "source_q_mean_equal_registered_native": 0.06593504025512927,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_EVALUATED",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 0,
+      "original_source_status": "SOURCE_FILE_METADATA_HOLD",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.41c87nh1"
+      ],
+      "source_MD5_confirmed": false,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_hold_stage": "SOURCE_ONLY_ORIGINAL_FILE_METADATA",
+      "source_original_repository_study_id": "444752703",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "SOURCE_WIDE_HOLD",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 0,
+      "original_source_status": "SOURCE_GPS_HOLD",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.hg1v55ct"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": "StrictSourceHold",
+      "source_hold_stage": "ORIGINAL_NATIVE_GPS_Q_AND_DAYLENGTH",
+      "source_original_repository_study_id": "1575973021",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 54560,
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.c741t5b6"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "317481491",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 229857,
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.477cd5fs"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "1338487915",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": true,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 54533,
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.212g53s7"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": 0.9295126903267416,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "621703893",
+      "source_q_mean_equal_registered_native": 0.48954655313413364,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 52649,
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.714"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "2591181877",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": true,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 47777,
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.712"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": 0.03774140831367161,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "2561156373",
+      "source_q_mean_equal_registered_native": 0.09235894015970957,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": true,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 161451,
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.p9c4nc97"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": 0.0007542646420148555,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "132686329",
+      "source_q_mean_equal_registered_native": 0.003396234583647424,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 1057320,
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.289p5s77"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "64283289",
+      "source_q_mean_equal_registered_native": -0.002932072044604448,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_EVALUATED",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 0,
+      "original_source_status": "HUMAN_LOCATION_PRIVACY_HOLD",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.61896g63"
+      ],
+      "source_MD5_confirmed": false,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": "NO_HUMAN_TRAJECTORY_SOURCE_ACCESS",
+      "source_hold_stage": "HUMAN_SOURCE_PRIVACY_NO_ACCESS",
+      "source_original_repository_study_id": "399246220",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": true,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 57477,
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.317_2"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": 0.019974321133221642,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "1832666571",
+      "source_q_mean_equal_registered_native": 0.057763379497749436,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 15159,
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.7vr1k987"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "178979729",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 77228,
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.q23p1t84"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "294524920",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 32698,
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.278"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "2379775078",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 47467,
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.dn1b937k"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "510147801",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "ALL_NATIVE_COMMON_CALENDAR_COVARIANCE_HOLD",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 686382,
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 2,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.37r2b884"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "217784323",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "multi_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_EVALUATED",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 0,
+      "original_source_status": "SOURCE_FILE_METADATA_HOLD",
+      "registered_native_count": 2,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.666"
+      ],
+      "source_MD5_confirmed": false,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_hold_stage": "SOURCE_ONLY_ORIGINAL_FILE_METADATA",
+      "source_original_repository_study_id": "24797204",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "multi_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_EVALUATED",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 0,
+      "original_source_status": "SOURCE_FILE_METADATA_HOLD",
+      "registered_native_count": 3,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.6gr485fk"
+      ],
+      "source_MD5_confirmed": false,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_hold_stage": "SOURCE_ONLY_ORIGINAL_FILE_METADATA",
+      "source_original_repository_study_id": "2928116",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "multi_native",
+      "wave": "wave2"
+    }
+  ],
+  "combined_wave_source_status_counts": {
+    "wave1": {
+      "ORIGINAL_SOURCE_GPS_HOLD": 2,
+      "ORIGINAL_SOURCE_GPS_Q_ESTIMABLE": 6,
+      "ORIGINAL_SOURCE_GPS_Q_UNAVAILABLE_NOT_ZERO": 5,
+      "PRE_EVENT_ORIGINAL_FILE_METADATA_HOLD": 3
+    },
+    "wave2": {
+      "HUMAN_LOCATION_PRIVACY_HOLD": 1,
+      "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE": 7,
+      "SOURCE_FILE_METADATA_HOLD": 3,
+      "SOURCE_GPS_HOLD": 1,
+      "SOURCE_NO_NATIVE_Q_ESTIMABLE": 7
+    }
+  },
+  "finite_120_metadata_frame_source_measurability": {
+    "daylength": {
+      "SHA_hash_sampling_and_post_Wave1_quota_caveat": true,
+      "by_source_stratum": {
+        "multi_native": 1,
+        "single_native": 7
+      },
+      "census_complete_rate_multi": 0.09090909090909091,
+      "not_a_world_prevalence_or_estimate_of_causal_measurement": true,
+      "observed_complete_rate_single": 0.2916666666666667,
+      "pseudo_random_SHA_frame_weighted_measurability": 0.2732638888888889,
+      "sampled_fraction_multi": 1.0,
+      "sampled_fraction_single": 0.22018348623853212,
+      "source_complete_within_sample_count": 8,
+      "strict_finite_frame_identified_measurability_bounds": [
+        0.06666666666666667,
+        0.775
+      ]
+    },
+    "q": {
+      "SHA_hash_sampling_and_post_Wave1_quota_caveat": true,
+      "by_source_stratum": {
+        "multi_native": 2,
+        "single_native": 8
+      },
+      "census_complete_rate_multi": 0.18181818181818182,
+      "not_a_world_prevalence_or_estimate_of_causal_measurement": true,
+      "observed_complete_rate_single": 0.3333333333333333,
+      "pseudo_random_SHA_frame_weighted_measurability": 0.3194444444444445,
+      "sampled_fraction_multi": 1.0,
+      "sampled_fraction_single": 0.22018348623853212,
+      "source_complete_within_sample_count": 10,
+      "strict_finite_frame_identified_measurability_bounds": [
+        0.08333333333333333,
+        0.7916666666666666
+      ]
+    }
+  },
+  "human_location_source_no_access": true,
+  "new_wave2_source_study_summary_rows": [
+    {
+      "complete_source_daylength": true,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 13939,
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.667"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": -0.0035108995853531146,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "6456209836",
+      "source_q_mean_equal_registered_native": 0.06593504025512927,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_EVALUATED",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 0,
+      "original_source_status": "SOURCE_FILE_METADATA_HOLD",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.41c87nh1"
+      ],
+      "source_MD5_confirmed": false,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_hold_stage": "SOURCE_ONLY_ORIGINAL_FILE_METADATA",
+      "source_original_repository_study_id": "444752703",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "SOURCE_WIDE_HOLD",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 0,
+      "original_source_status": "SOURCE_GPS_HOLD",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.hg1v55ct"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": "StrictSourceHold",
+      "source_hold_stage": "ORIGINAL_NATIVE_GPS_Q_AND_DAYLENGTH",
+      "source_original_repository_study_id": "1575973021",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 54560,
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.c741t5b6"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "317481491",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 229857,
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.477cd5fs"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "1338487915",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": true,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 54533,
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.212g53s7"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": 0.9295126903267416,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "621703893",
+      "source_q_mean_equal_registered_native": 0.48954655313413364,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 52649,
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.714"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "2591181877",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": true,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 47777,
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.712"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": 0.03774140831367161,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "2561156373",
+      "source_q_mean_equal_registered_native": 0.09235894015970957,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": true,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 161451,
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.p9c4nc97"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": 0.0007542646420148555,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "132686329",
+      "source_q_mean_equal_registered_native": 0.003396234583647424,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 1057320,
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.289p5s77"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "64283289",
+      "source_q_mean_equal_registered_native": -0.002932072044604448,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_EVALUATED",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 0,
+      "original_source_status": "HUMAN_LOCATION_PRIVACY_HOLD",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.61896g63"
+      ],
+      "source_MD5_confirmed": false,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": "NO_HUMAN_TRAJECTORY_SOURCE_ACCESS",
+      "source_hold_stage": "HUMAN_SOURCE_PRIVACY_NO_ACCESS",
+      "source_original_repository_study_id": "399246220",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": true,
+      "complete_source_native_q": true,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 57477,
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.317_2"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": 0.019974321133221642,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "1832666571",
+      "source_q_mean_equal_registered_native": 0.057763379497749436,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 15159,
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.7vr1k987"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "178979729",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 77228,
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.q23p1t84"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "294524920",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 32698,
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.278"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "2379775078",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_APPLICABLE_SINGLE_NATIVE_SOURCE",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 47467,
+      "original_source_status": "SOURCE_NO_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 1,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.dn1b937k"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "510147801",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "single_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "ALL_NATIVE_COMMON_CALENDAR_COVARIANCE_HOLD",
+      "native_daylength_supported": 1,
+      "native_q_supported": 1,
+      "original_source_event_row_count": 686382,
+      "original_source_status": "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE",
+      "registered_native_count": 2,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.37r2b884"
+      ],
+      "source_MD5_confirmed": true,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": null,
+      "source_hold_stage": null,
+      "source_original_repository_study_id": "217784323",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "multi_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_EVALUATED",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 0,
+      "original_source_status": "SOURCE_FILE_METADATA_HOLD",
+      "registered_native_count": 2,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.666"
+      ],
+      "source_MD5_confirmed": false,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_hold_stage": "SOURCE_ONLY_ORIGINAL_FILE_METADATA",
+      "source_original_repository_study_id": "24797204",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "multi_native",
+      "wave": "wave2"
+    },
+    {
+      "complete_source_daylength": false,
+      "complete_source_native_q": false,
+      "joint_native_month_covariance_status": "NOT_EVALUATED",
+      "native_daylength_supported": 0,
+      "native_q_supported": 0,
+      "original_source_event_row_count": 0,
+      "original_source_status": "SOURCE_FILE_METADATA_HOLD",
+      "registered_native_count": 3,
+      "source_DOI_labels": [
+        "doi:10.5441/001/1.6gr485fk"
+      ],
+      "source_MD5_confirmed": false,
+      "source_daylength_mean_equal_registered_native": null,
+      "source_hold_error_type": "FROZEN_200MB_SOURCE_FILE_BUDGET_OR_UNKNOWN_BYTES",
+      "source_hold_stage": "SOURCE_ONLY_ORIGINAL_FILE_METADATA",
+      "source_original_repository_study_id": "2928116",
+      "source_q_mean_equal_registered_native": null,
+      "source_stratum": "multi_native",
+      "wave": "wave2"
+    }
+  ],
+  "no_original_GPS_tracks_IDs_exact_dates_coordinates_or_bootstrap_draws_exported": true,
+  "original_GPS_GNSS_sensor_packages": 259,
+  "original_metadata_candidate_frame": 120,
+  "original_registry_source_packages": 437,
+  "original_source_study_units": 35,
+  "previous_12_ERA5_raw_SHA_HOLD": true,
+  "previous_48_source_sunlight_signed_external_not_replicated": true,
+  "research_stage": "POST_OLD_WAVE1_OUTCOME_WAVE2_SOURCE_SHA_SELECTED_BEFORE_NEW_EVENT_ACCESS",
+  "scientific_interpretation": "Exploratory, partially nonresponding source-meta analysis, distinct from population-level animal activity or causality; wave2 quota chosen after wave1 outcomes although original within-stratum SHA rank precedes them.",
+  "source_complete_effects_and_nonresponse_sensitivity": {
+    "daylength": {
+      "complete_original_source_by_stratum": {
+        "multi_native": 1,
+        "single_native": 7
+      },
+      "hypothetical_fill_missing_among_selected_35_with_observed_source_range": [
+        0.03618764272550734,
+        0.7142495780331511
+      ],
+      "missing_complete_native_source_count": 27,
+      "no_design_unbiased_mean_because_native_source_nonresponse": true,
+      "no_qualified_global_animal_population_estimate": true,
+      "observed_complete_source_effect_range": [
+        -0.0035108995853531146,
+        0.9295126903267416
+      ],
+      "original_source_frame_multi_native": 11,
+      "original_source_frame_single_native": 109,
+      "respondent_only_poststratified_mean_EXPLORATORY": 0.13661303399116909,
+      "respondent_only_stratum_means": {
+        "multi_native": 0.060117446622204626,
+        "single_native": 0.14433277216601872
+      },
+      "sampled_original_multi_native": 11,
+      "sampled_original_single_native": 24,
+      "sampled_original_study_source_count": 35,
+      "supported_complete_native_source_count": 8
+    },
+    "q": {
+      "complete_original_source_by_stratum": {
+        "multi_native": 2,
+        "single_native": 8
+      },
+      "hypothetical_fill_missing_among_selected_35_with_observed_source_range": [
+        -0.09501132019904394,
+        0.35688378182026836
+      ],
+      "missing_complete_native_source_count": 25,
+      "no_design_unbiased_mean_because_native_source_nonresponse": true,
+      "no_qualified_global_animal_population_estimate": true,
+      "observed_complete_source_effect_range": [
+        -0.17446257636363138,
+        0.48954655313413364
+      ],
+      "original_source_frame_multi_native": 11,
+      "original_source_frame_single_native": 109,
+      "respondent_only_poststratified_mean_EXPLORATORY": 0.0756846129419663,
+      "respondent_only_stratum_means": {
+        "multi_native": 0.10857952312041788,
+        "single_native": 0.07236494310744367
+      },
+      "sampled_original_multi_native": 11,
+      "sampled_original_single_native": 24,
+      "sampled_original_study_source_count": 35,
+      "supported_complete_native_source_count": 10
+    }
+  },
+  "version": "RSDS_WAVE1_PLUS_WAVE2_35_ORIGINAL_SOURCE_STUDY_META_ADMISSION_V1",
+  "wave1_source_study_units": 16,
+  "wave2_source_study_units": 19,
+  "wave2_status_counts": {
+    "HUMAN_LOCATION_PRIVACY_HOLD": 1,
+    "SOURCE_AT_LEAST_ONE_NATIVE_Q_ESTIMABLE": 7,
+    "SOURCE_FILE_METADATA_HOLD": 3,
+    "SOURCE_GPS_HOLD": 1,
+    "SOURCE_NO_NATIVE_Q_ESTIMABLE": 7
+  }
+}
