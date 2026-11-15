@@ -1,0 +1,103 @@
+name: RSDS original source-native same-species across archived DOI repeatability
+on:
+  push:
+    branches:
+      - analysis/rsds-source-native-within-species-crossstudy-20261115
+    paths:
+      - 'research/RSDS_ORIGINAL_SOURCE_NATIVE_CROSS_STUDY_REPEATABILITY_AUDIT_V1_CONTRACT.json'
+      - 'scripts/rsds_original_source_native_same_species_repeatability_v1.py'
+      - 'tests/test_rsds_original_source_native_same_species_repeatability_v1.py'
+      - '.github/workflows/rsds-source-native-same-species-archived-crossstudy-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  original_source_native_repeated_species_with_19_SHA_pinned_wave2_artifacts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check source-native versus source-wide mean and missing-value rules
+        run: |
+          python -m unittest discover -s tests -p 'test_rsds_original_source_native_same_species_repeatability_v1.py' -v
+      - name: Verify 19 original Wave2 first SOURCE artifact identities and ZIP digests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,os,urllib.request
+          from pathlib import Path
+          c=json.loads(Path('research/RSDS_ORIGINAL_SOURCE_NATIVE_CROSS_STUDY_REPEATABILITY_AUDIT_V1_CONTRACT.json').read_text())
+          url='https://api.github.com/repos/zuizui0223/RSDS/actions/runs/43692435152/artifacts?per_page=100'
+          req=urllib.request.Request(url,headers={
+            'Authorization':'Bearer '+os.environ['GH_TOKEN'],
+            'Accept':'application/vnd.github+json',
+            'X-GitHub-Api-Version':'2022-11-28'})
+          with urllib.request.urlopen(req,timeout=30) as r:
+            d=json.load(r)
+          artifacts={a['name']:a for a in d['artifacts']}
+          wanted=c['original_wave2_19_source_aggregates_first_artifact_digests']
+          assert len(wanted)==19
+          assert [x['index'] for x in wanted]==list(range(19))
+          for x in wanted:
+            a=artifacts[x['name']]
+            assert a['id']==x['artifact_id']
+            assert a['digest']==x['digest']
+            assert not a['expired']
+          print('NINETEEN_WAVE2_ORIGINAL_SOURCE_NATIVE_ARTIFACTS_SHA_FIXED_NO_GPS_RERUN')
+          PY
+      - name: Download 19 previously first-run source-level original GPS aggregate artifacts only
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 43692435152
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pattern: rsds-wave2-original-gps-source-*-v1
+          path: outputs/original_wave2_first_sources
+          merge-multiple: true
+      - name: Reconcile 12 prior and 51 new original archived sources at species-native grain
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_original_source_native_same_species_repeatability_v1 --directory outputs/original_wave2_first_sources --out research/RSDS_ORIGINAL_SOURCE_NATIVE_SAME_SPECIES_CROSS_STUDY_FIRST_RESULT_20261115.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path=Path('research/RSDS_ORIGINAL_SOURCE_NATIVE_SAME_SPECIES_CROSS_STUDY_FIRST_RESULT_20261115.json')
+          d=json.loads(path.read_text())
+          assert d['distinct_original_archived_source_DOIs_and_study_IDs']==63
+          assert d['all_registered_original_source_native_rows']==88
+          assert d['source_studies_by_wave']=={'legacy12':12,'wave1':16,'wave2':19,'wave3':16}
+          assert d['original_GPS_events_reopened']==0
+          assert d['previous_48_source_solar_irradiance_direction_replicated'] is False
+          assert d['original_12_ERA5_raw_SHA_HOLD'] is True
+          assert not d['same_source_population_independence_verified']
+          assert not d['individual_tag_ID_geographic_overlap_verified']
+          assert d['original_source_nominal_CI_not_multistudy_inference']
+          print('EXACT_ORIGINAL_SOURCE_NATIVE_REPEATABILITY_DESCRIPTIVE_WITH_ALL_HOLD')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-63-original-studies-88-native-source-repeatability-first-v1
+          path: research/RSDS_ORIGINAL_SOURCE_NATIVE_SAME_SPECIES_CROSS_STUDY_FIRST_RESULT_20261115.json
+          if-no-files-found: error
+      - name: Commit deterministic archive-only repeatability atlas and HOLDs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_ORIGINAL_SOURCE_NATIVE_SAME_SPECIES_CROSS_STUDY_FIRST_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze same-species original-native DOI crosswalk from 63 first archived source studies"
+            git fetch origin analysis/rsds-source-native-within-species-crossstudy-20261115
+            git rebase origin/analysis/rsds-source-native-within-species-crossstudy-20261115
+            git push origin HEAD:analysis/rsds-source-native-within-species-crossstudy-20261115
+          fi
