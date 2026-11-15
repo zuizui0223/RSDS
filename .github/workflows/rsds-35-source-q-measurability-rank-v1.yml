@@ -1,0 +1,39 @@
+name: RSDS source-level GPS q measurability discrimination post-outcome diagnostic v1
+on:
+  push:
+    branches:
+      - analysis/rsds-source-gps-observation-funnel-20261115
+    paths:
+      - 'scripts/rsds_35_source_q_measurability_rank_diagnostic_v1.py'
+      - 'tests/test_rsds_35_source_q_measurability_rank_diagnostic_v1.py'
+      - '.github/workflows/rsds-35-source-q-measurability-rank-v1.yml'
+  pull_request:
+    paths:
+      - 'scripts/rsds_35_source_q_measurability_rank_diagnostic_v1.py'
+      - 'tests/test_rsds_35_source_q_measurability_rank_diagnostic_v1.py'
+      - '.github/workflows/rsds-35-source-q-measurability-rank-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  archived_GPS_source_only_AUC_no_original_events:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test frozen 25 parsed DOI source-unit rank and avoid circular inference
+        run: python -m unittest discover -s tests -p 'test_rsds_35_source_q_measurability_rank_diagnostic_v1.py' -v
+      - name: Reproduce original source-conditional technical AUC without any GPS reaccess
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_35_source_q_measurability_rank_diagnostic_v1 --out outputs/rsds_35_source_q_observability_source_AUC_v1.json
+          python -m json.tool outputs/rsds_35_source_q_observability_source_AUC_v1.json > /dev/null
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-35-original-source-q-observability-rank-diagnostic-v1
+          path: outputs/rsds_35_source_q_observability_source_AUC_v1.json
+          if-no-files-found: error
