@@ -1,0 +1,95 @@
+name: RSDS freeze first 51-source original GPS meta artifact by SHA, no GPS rerun
+on:
+  push:
+    branches:
+      - analysis/rsds-wave3-original-gps-first-effects-20261115
+    paths:
+      - '.github/workflows/rsds-437-wave3-freeze-original-51-source-meta-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  freeze_original_51_source_first_artifact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify original first-run artifact digest before copying data
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api repos/zuizui0223/RSDS/actions/artifacts/14157137676 --jq .digest | grep -Fx 'sha256:1ecfffcea073728de7be51f0c5a265be6c0b1173d2b59335422f2cc743aa42c1'
+      - name: Download FIRST successful Wave3 complete 51-source meta, never original GPS
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 43702456789
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          name: rsds-wave3-plus-old-35-original-source-51-meta-first-v1
+          path: outputs/first_verified
+      - name: Freeze original 35 rows and all new 16 q/HOLD study units without retuning
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC=outputs/first_verified/rsds_437_wave3_original_51_source_meta_first_v1.json
+          DST=research/RSDS_437_WAVE3_PLUS_PREVIOUS_35_ORIGINAL_GPS_51_SOURCE_META_FIRST_RESULT_20261115.json
+          if [ -f "$DST" ]; then
+            cmp "$SRC" "$DST"
+          else
+            cp "$SRC" "$DST"
+          fi
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_437_WAVE3_PLUS_PREVIOUS_35_ORIGINAL_GPS_51_SOURCE_META_FIRST_RESULT_20261115.json')
+          d=json.loads(p.read_text())
+          old=json.loads(Path('research/RSDS_437_WAVE1_PLUS_WAVE2_35_ORIGINAL_GPS_FIRST_META_RESULT_20261115.json').read_text())
+          assert d['version']=='RSDS_437_51_SOURCE_WAVE3_ORIGINAL_GPS_FIRST_META_V1'
+          assert d['original_source_study_units']==51
+          assert d['original_previous_source_study_units']==35
+          assert d['new_wave3_source_study_units']==16
+          assert d['original_source_study_unit_all_registered_native_rows']==66
+          assert d['source_complete_all_native_q']>=10
+          assert d['source_complete_all_native_daylength']>=8
+          assert d['original_35_source_study_rows_unmodified']==old['combined_source_study_summary_rows']
+          assert len(d['new_wave3_original_source_study_rows'])==16
+          assert [r['source_original_repository_study_id'] for r in d['all_51_source_study_rows']][:35]==[r['source_original_repository_study_id'] for r in old['combined_source_study_summary_rows']]
+          assert len({r['source_original_repository_study_id'] for r in d['all_51_source_study_rows']})==51
+          assert sum(d['new_wave3_study_status_counts'].values())==16
+          assert d['original_35_source_science_git_blob_unchanged']=='9b02774f7c31d29b2eec5039a80431a895dccb36'
+          assert d['wave3_original_file_metadata_git_blob_unchanged']=='02253b1743500bc51fc166b249b7d3660ed9610a'
+          assert d['previous_48_source_sunlight_signed_external_not_replicated'] is True
+          assert d['previous_12_ERA5_raw_SHA_HOLD_unchanged'] is True
+          assert d['no_original_GPS_tracks_IDs_exact_dates_coordinates_or_individual_effects_exported']
+          print('FIRST_51_SOURCE_GPS_META_AND_HISTORICAL_35_STUDY_SCIENCE_LOCKED')
+          print('Q_SUPPORT',d['source_complete_all_native_q'],'DAYLENGTH_SUPPORT',d['source_complete_all_native_daylength'])
+          print('NEW_WAVE3_STATUS',d['new_wave3_study_status_counts'])
+          print('NEW_WAVE3_SIGN',d['source_respondent_only_q_descriptive']['new_wave3_source_sign_counts'])
+          PY
+          sha256sum "$DST"
+      - name: Upload original first result and source-only provenance receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-wave3-51-source-first-json-blob-freeze-v1
+          path: research/RSDS_437_WAVE3_PLUS_PREVIOUS_35_ORIGINAL_GPS_51_SOURCE_META_FIRST_RESULT_20261115.json
+          if-no-files-found: error
+      - name: Commit byte-exact first 51-source result without GPS rerun
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_437_WAVE3_PLUS_PREVIOUS_35_ORIGINAL_GPS_51_SOURCE_META_FIRST_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze first 51-source original GPS q meta result from SHA-pinned CI artifact"
+            git fetch origin analysis/rsds-wave3-original-gps-first-effects-20261115
+            git rebase origin/analysis/rsds-wave3-original-gps-first-effects-20261115
+            git push origin HEAD:analysis/rsds-wave3-original-gps-first-effects-20261115
+          fi
