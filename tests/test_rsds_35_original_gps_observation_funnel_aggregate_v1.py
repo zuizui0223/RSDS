@@ -7,6 +7,8 @@ import unittest
 from scripts import aggregate_rsds_35_original_gps_observation_funnel_v1 as a
 
 FIRST=a.pinned(*a.EARLIER)["combined_source_study_summary_rows"]
+REG1=a.pinned(*a.WAVE1_METADATA)["provider_original_source_rows"]
+REG2=a.pinned(*a.WAVE2_METADATA)["source_rows"]
 
 def synthetic_funnel():
     result=[]
@@ -17,13 +19,14 @@ def synthetic_funnel():
         held=prior in (
             "PRE_EVENT_ORIGINAL_FILE_METADATA_HOLD","SOURCE_FILE_METADATA_HOLD",
             "HUMAN_LOCATION_PRIVACY_HOLD","ORIGINAL_SOURCE_GPS_HOLD","SOURCE_GPS_HOLD")
+        native_labels=(REG1[i]["registered_native_labels"] if i<16 else
+                       REG2[i-16]["registered_native_taxa"])
         x={
           "version":"RSDS_35_ORIGINAL_GPS_SOURCE_OBSERVATION_FUNNEL_V1",
           "wave":wave,"index":index,
           "source_original_DOI":record["source_DOI_labels"][0],
           "source_repository_study_id":record["source_original_repository_study_id"],
-          "original_registered_native_taxa":["Synthetic_species_"+str(j)
-                                             for j in range(record["registered_native_count"])],
+          "original_registered_native_taxa":native_labels,
           "prior_first_source_q_status":prior,
           "original_first_q_study_complete":record["complete_source_native_q"],
           "original_first_daylength_study_complete":record["complete_source_daylength"],
@@ -47,7 +50,7 @@ def synthetic_funnel():
                 elig=n<record["native_q_supported"]
                 elig_day=n<record["native_daylength_supported"]
                 x["original_native_funnel"].append({
-                  "native_taxon":"Synthetic_species_"+str(n),
+                  "native_taxon":native_labels[n],
                   "source_original_support_counts":{
                     "source_original_tagged_animals_in_hourly_parsed_track":10,
                     "original_selected_UTC_hour_fix_count":2400,
