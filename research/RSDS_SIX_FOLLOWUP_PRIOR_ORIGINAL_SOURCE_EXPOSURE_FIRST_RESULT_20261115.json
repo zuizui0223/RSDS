@@ -1,0 +1,108 @@
+{
+  "global_prior_GPS_exposure_audit_completed": false,
+  "known_previous_GPS_analysis_sources": 1,
+  "known_previous_original_provider_metadata_HOLD_sources": 1,
+  "limited_scope_warning": "Only eight pinned prior original solar/temporal JSON result surfaces; cannot prove absence of earlier analysis elsewhere in repositories or absence of repeated tags across different study archives. A known previous GPS SOURCE read precludes a fully untouched-GPS claim even if this specific night/day q endpoint was not previously computed.",
+  "no_match_in_eight_checked_previous_outputs_sources": 4,
+  "no_original_source_GPS_animal_events_reopened": true,
+  "number_of_original_prior_archive_surfaces_inspected": 8,
+  "original_followup_source_exposure_rows": [
+    {
+      "new_original_GPS_rows_reopened": 0,
+      "original_DOI": "10.5441/001/1.46b0mq21",
+      "original_public_package_uuid": "08b6b850-df1f-4740-b05e-acb1a654934b",
+      "original_repository_study_id": "657965212",
+      "original_scientific_names": [
+        "Anser albifrons"
+      ],
+      "prior_data_exposure_status": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "prior_eight_output_matches": [],
+      "prior_other_uninspected_outputs_and_tag_overlap_unresolved": true
+    },
+    {
+      "new_original_GPS_rows_reopened": 0,
+      "original_DOI": "10.5441/001/1.708",
+      "original_public_package_uuid": "0e3a4577-b063-47d9-9d6b-edec949aa5fa",
+      "original_repository_study_id": "2549043743",
+      "original_scientific_names": [
+        "Odocoileus hemionus"
+      ],
+      "prior_data_exposure_status": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "prior_eight_output_matches": [],
+      "prior_other_uninspected_outputs_and_tag_overlap_unresolved": true
+    },
+    {
+      "new_original_GPS_rows_reopened": 0,
+      "original_DOI": "10.5441/001/1.72hh609t",
+      "original_public_package_uuid": "28708a9c-5582-490e-9481-c094bdce74c2",
+      "original_repository_study_id": "444539014",
+      "original_scientific_names": [
+        "Vulpes vulpes"
+      ],
+      "prior_data_exposure_status": "KNOWN_PREVIOUS_ORIGINAL_GPS_DATA_ANALYZED_FOR_SOLAR_DIRECTION",
+      "prior_eight_output_matches": [
+        {
+          "archive_hold_reason": null,
+          "original_source_coverage_rows_reported": 95413,
+          "original_source_state": "original_MD5_verified_source_analyzed",
+          "prior_original_result_file": "research/GLOBAL_SOLAR_AZIMUTH_NEW24_ORIGINAL_GPS_FIRST_V2_RESULT_20261025.json",
+          "provider_original_checksum_verified": true,
+          "source_path": "root.all_preselected_source_originals[3]"
+        }
+      ],
+      "prior_other_uninspected_outputs_and_tag_overlap_unresolved": true
+    },
+    {
+      "new_original_GPS_rows_reopened": 0,
+      "original_DOI": "10.5441/001/1.8dc0v84m",
+      "original_public_package_uuid": "316cff40-b957-4ad6-9ca5-0f50253ab56a",
+      "original_repository_study_id": "11017705",
+      "original_scientific_names": [
+        "Anas platyrhynchos"
+      ],
+      "prior_data_exposure_status": "KNOWN_PREVIOUS_SOURCE_METADATA_HOLD_NO_GPS_FROM_THAT_ROUTE",
+      "prior_eight_output_matches": [
+        {
+          "archive_hold_reason": "FROZEN_SOURCE_METADATA_HOLD: expected exactly one filename-qualified original data container",
+          "original_source_coverage_rows_reported": null,
+          "original_source_state": "SOURCE_HOLD",
+          "prior_original_result_file": "research/GLOBAL_SOLAR_AZIMUTH_12_NEW_SOURCE_FIRST_ORIGINAL_GPS_RESULT_20261025.json",
+          "provider_original_checksum_verified": false,
+          "source_path": "root.all_registered_source_rows[7]"
+        }
+      ],
+      "prior_other_uninspected_outputs_and_tag_overlap_unresolved": true
+    },
+    {
+      "new_original_GPS_rows_reopened": 0,
+      "original_DOI": "10.5441/001/1.ms87s2m6",
+      "original_public_package_uuid": "2e9dace9-88e3-4504-9b5a-08954861c5c2",
+      "original_repository_study_id": "1049685237",
+      "original_scientific_names": [
+        "Anser albifrons"
+      ],
+      "prior_data_exposure_status": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "prior_eight_output_matches": [],
+      "prior_other_uninspected_outputs_and_tag_overlap_unresolved": true
+    },
+    {
+      "new_original_GPS_rows_reopened": 0,
+      "original_DOI": "10.5441/001/1.ps244r11",
+      "original_public_package_uuid": "181634a2-46d3-4405-bba5-7813602ea965",
+      "original_repository_study_id": "29799425",
+      "original_scientific_names": [
+        "Branta leucopsis"
+      ],
+      "prior_data_exposure_status": "NO_MATCH_IN_EIGHT_PINNED_PRIOR_RESULT_SURFACES_NOT_EXHAUSTIVE",
+      "prior_eight_output_matches": [],
+      "prior_other_uninspected_outputs_and_tag_overlap_unresolved": true
+    }
+  ],
+  "original_six_study_IDs_retained": 6,
+  "previous_fixed_six_source_only_selection_git_blob": "1315b435c40b59831a643e35e9b7f9063879673b",
+  "prior_12_ERA5_raw_SHA_HOLD": true,
+  "prior_original_48_source_solar_direction_replicated": false,
+  "same_animal_independence_verified": false,
+  "stage": "SOURCE_ONLY_EIGHT_ARCHIVE_PREVIOUS_EXPOSURE_DIAGNOSTIC",
+  "version": "RSDS_SIX_FOLLOWUP_ARCHIVED_SOURCE_EXPOSURE_AUDIT_V1"
+}

@@ -1,0 +1,62 @@
+name: RSDS six follow-up sources archived solar GPS exposure audit
+on:
+  push:
+    branches:
+      - analysis/rsds-six-followup-source-only-freeze-20261115
+    paths:
+      - 'research/RSDS_SIX_FOLLOWUP_ARCHIVED_SOURCE_EXPOSURE_V1_CONTRACT.json'
+      - 'scripts/rsds_six_prior_original_source_exposure_audit_v1.py'
+      - 'tests/test_rsds_six_prior_original_source_exposure_audit_v1.py'
+      - '.github/workflows/rsds-six-prior-original-source-exposure-audit-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  prior_original_8_archive_source_exposure_no_GPS_read:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify old 8 result SHA pins, original fox GPS exposure and mallard SOURCE HOLD
+        run: python -m unittest discover -s tests -p 'test_rsds_six_prior_original_source_exposure_audit_v1.py' -v
+      - name: Write only known prior-source exposure from eight archived original outcome JSONs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_six_prior_original_source_exposure_audit_v1 --out research/RSDS_SIX_FOLLOWUP_PRIOR_ORIGINAL_SOURCE_EXPOSURE_FIRST_RESULT_20261115.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          j=json.loads(Path('research/RSDS_SIX_FOLLOWUP_PRIOR_ORIGINAL_SOURCE_EXPOSURE_FIRST_RESULT_20261115.json').read_text())
+          assert j['original_six_study_IDs_retained']==6
+          assert j['known_previous_GPS_analysis_sources']==1
+          assert j['known_previous_original_provider_metadata_HOLD_sources']==1
+          assert j['no_match_in_eight_checked_previous_outputs_sources']==4
+          assert j['global_prior_GPS_exposure_audit_completed'] is False
+          assert j['same_animal_independence_verified'] is False
+          assert j['no_original_source_GPS_animal_events_reopened']
+          print('NO_EXTERNAL_UNTOUCHED_CLAIM_FROM_SOURCE_ID_ALONE')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-six-prior-eight-source-solar-exposure-audit-v1
+          path: research/RSDS_SIX_FOLLOWUP_PRIOR_ORIGINAL_SOURCE_EXPOSURE_FIRST_RESULT_20261115.json
+          if-no-files-found: error
+      - name: Commit source-exposure classification without GPS or provider access
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_SIX_FOLLOWUP_PRIOR_ORIGINAL_SOURCE_EXPOSURE_FIRST_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze known earlier fox GPS exposure and mallard original metadata HOLD"
+            git fetch origin analysis/rsds-six-followup-source-only-freeze-20261115
+            git rebase origin/analysis/rsds-six-followup-source-only-freeze-20261115
+            git push origin HEAD:analysis/rsds-six-followup-source-only-freeze-20261115
+          fi

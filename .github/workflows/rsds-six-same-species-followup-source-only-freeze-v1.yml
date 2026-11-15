@@ -1,0 +1,63 @@
+name: RSDS same-species six follow-up original source ID freeze (no GPS)
+on:
+  push:
+    branches:
+      - analysis/rsds-six-followup-source-only-freeze-20261115
+    paths:
+      - 'research/RSDS_SIX_SAME_SPECIES_FOLLOWUP_SOURCE_ONLY_V1_CONTRACT.json'
+      - 'scripts/rsds_six_same_species_followup_source_only_v1.py'
+      - 'tests/test_rsds_six_same_species_followup_source_only_v1.py'
+      - '.github/workflows/rsds-six-same-species-followup-source-only-freeze-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  freeze_exact_six_postdiscovery_source_ids_before_any_provider_or_GPS:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify all six follow-up original source identities and exclusions
+        run: python -m unittest discover -s tests -p 'test_rsds_six_same_species_followup_source_only_v1.py' -v
+      - name: Build only immutable catalog source identities, zero GPS/provider access
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_six_same_species_followup_source_only_v1 --out research/RSDS_SIX_SAME_SPECIES_FOLLOWUP_ORIGINAL_SOURCE_ONLY_FIRST_RESULT_20261115.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_SIX_SAME_SPECIES_FOLLOWUP_ORIGINAL_SOURCE_ONLY_FIRST_RESULT_20261115.json')
+          x=json.loads(p.read_text())
+          assert x['original_source_metadata_eligible_six']==6
+          assert x['original_previous_q_source_studies_EXCLUDED']==63
+          assert len(x['original_target_metadata_candidates_eligible'])==6
+          assert x['no_original_provider_file_metadata_or_GPS_opened']
+          assert x['source_eligibility_targeted_after_original_q_outcomes']
+          assert not x['individual_population_independence_verified']
+          assert not x['other_RSDS_ODSP_prior_original_GPS_source_overlap_verified']
+          print('SOURCE_IDENTITY_FROZEN_POSTDISCOVERY_NOT_PROSPECTIVE_WORLD_REPLICATION')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-six-followup-original-source-only-pre-provider-first-v1
+          path: research/RSDS_SIX_SAME_SPECIES_FOLLOWUP_ORIGINAL_SOURCE_ONLY_FIRST_RESULT_20261115.json
+          if-no-files-found: error
+      - name: Commit original six source IDs BEFORE any file listing or GPS event read
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_SIX_SAME_SPECIES_FOLLOWUP_ORIGINAL_SOURCE_ONLY_FIRST_RESULT_20261115.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze six exact post-discovery source IDs before provider metadata or GPS"
+            git fetch origin analysis/rsds-six-followup-source-only-freeze-20261115
+            git rebase origin/analysis/rsds-six-followup-source-only-freeze-20261115
+            git push origin HEAD:analysis/rsds-six-followup-source-only-freeze-20261115
+          fi
