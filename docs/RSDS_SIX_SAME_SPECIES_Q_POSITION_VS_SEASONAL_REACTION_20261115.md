@@ -45,6 +45,12 @@ Earlier UK wet-grassland source q **+0.18975** and coexistence source **+0.29043
 - *Ovis canadensis* has zero eligible NEW study in the original fixed catalog, not a negative replication; *Anas platyrhynchos* has new original source-file HOLD, not a q sign.
 - The old 48-original-source held-out sunlight/radiation→direction sign verdict remains **NOT REPLICATED**, and old 12 ERA5 provider raw-SHA source cases remain **HOLD**.
 
+## Cross-check with existing within-month analyses — different estimands
+
+Archived [four-study within-month results](../research/RSDS_FOUR_ORIGINAL_SHARED_CALENDAR_WITHIN_MONTH_DAYLENGTH_V1_FIRST_RESULT_20261108.json) provide a useful warning, not a direct replication of this result: they estimate the **slope of a same-study species-pair q difference** on study-shared dates, rather than the **individual species' original full-year equal-tag q–daylength slope**. In Wyoming, the *O. hemionus − O. canadensis* within-month pair slope was +0.01027/h (month-block bootstrap 95% [+0.0000815,+0.02290]); the analogous Utah pair estimate was −0.00265/h [−0.05686,+0.04034], including zero. The original goose study also had a nominal negative *A. albifrons − A. anser* pair slope (−0.03594/h [−0.11046,−0.00392]). **None of these paired-species results can be used to claim that the source-native single-species seasonal slopes reported here persist after month control.**
+
+This changes the evidential ceiling: the present signed inversions are well-supported descriptions of **full-source within-tag/year observational associations**, but may reflect different study-month composition, daylength range, or actual environment. A fair ecological test requires a separately frozen **source-native, within-year-month, original-tag** analysis for the SAME specific species across old and new original files, with identical time-state observation rules. If source-month/daylength support is insufficient, it must return an explicit HOLD rather than borrowing an interspecific pair result.
+
 ## Scientific interpretation and ceiling
 
 **Provisional ecological hypothesis**: A species' night/day movement niche **position** can be relatively persistent in sign across source contexts, while its **seasonal modulation** is more contingent on local conditions and source-specific ecology. Ecological interpretation should ask which species maintain a relative day/night position and which environmental/seasonal contexts modulate its response.
