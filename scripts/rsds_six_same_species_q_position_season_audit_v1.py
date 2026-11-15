@@ -71,7 +71,7 @@ def read_inputs():
         or metadata["source_original_metadata_status_counts"]!={"ORIGINAL_SOURCE_FILE_METADATA_ADMISSIBLE":4,"PREVIOUS_SOURCE_METADATA_HOLD_PRESERVED":1,"SOURCE_METADATA_HOLD":1}
         or prior_contract["source_candidates_original"]!=6
         or prior_contract["source_original_file_MD5_admissible"]!=4
-        or prior_contract["original_source_file_HOLD"]!=1
+        or prior_contract["source_original_file_HOLD"]!=1
         or prior_contract["prior_original_source_metadata_HOLD_preserved"]!=1
         or prior_contract["original_48_signed_irradiance_heading_external_nonreplicated"] is not True
         or new["previous_original_48_solar_direction_signed_heldout_nonreplication"] is not True
