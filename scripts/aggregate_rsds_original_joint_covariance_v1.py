@@ -12,7 +12,14 @@ import json
 import math
 from pathlib import Path
 
-from scripts.run_rsds_original_joint_covariance_v1 import EXPECTED
+# The aggregator never loads original-GPS parsing modules or NumPy.
+# Keep this source roster explicit, separate from private source IO.
+EXPECTED = {
+    "Illinois":{"doi":"10.5441/001/1.649","days":169,"months":9,"taxa":3},
+    "Wyoming":{"doi":"10.5441/001/1.703","days":193,"months":8,"taxa":2},
+    "Utah":{"doi":"10.5441/001/1.711","days":199,"months":10,"taxa":2},
+    "Geese":{"doi":"10.5441/001/1.fk899541","days":120,"months":5,"taxa":3},
+}
 from scripts.rsds_original_joint_calendar_covariance_v1 import (
     B,NEGATIVE,SOURCE_SHA,PARENT_MONTH,quadratic
 )
