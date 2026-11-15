@@ -48,9 +48,8 @@ class FrozenWaveFirstOutcome(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"sixteen"):
             run.source_effects(-1)
         with patch.object(run,"NEGATIVE","REPLICATED"):
-            r=run.source_effects(0)
-        self.assertEqual(r["old_48_signed_solar_shortwave_external_NONREPLICATED_UNCHANGED"],
-                         "REPLICATED")  # Detect why constant must remain pinned via contract
+            with self.assertRaisesRegex(ValueError,"contract modified"):
+                run.source_effects(0)
         self.assertEqual(self.contract["old_48_radiation_external_nonreplication"],
                          "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE")
 
