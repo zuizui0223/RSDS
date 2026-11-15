@@ -86,7 +86,7 @@ def audit():
     if sorted(target)!=sorted(c["target_species_names"]):
         raise ValueError("Prior six target source-native species changed")
     registered=selection["original_source_metadata_eligible_six"]
-    if len(registered)!=6:
+    if registered!=6:
         raise ValueError("Original six provider source identities changed")
     s_metadata={x["original_source_DOI"]:x for x in files["original_source_metadata_rows"]}
     s_exposure={x["original_DOI"]:x for x in exposure["original_followup_source_exposure_rows"]}
