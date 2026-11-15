@@ -35,10 +35,10 @@ class SourcePositionVsSeason(unittest.TestCase):
             self.assertEqual(z[sp]["new_q"]["supported"],"NEGATIVE")
             self.assertGreaterEqual(len(z[sp]["prior_season_opposite_new_sign_supported_source_DOIs"]),1)
             self.assertTrue(z[sp]["new_daylength_opposite_prior_nominal_sign"])
-        self.assertEqual(z["Anser albifrons"]["new_daylength"]["supported"],"POSITIVE")
-        self.assertEqual(z["Odocoileus hemionus"]["new_daylength"]["supported"],"NEGATIVE")
+        self.assertEqual(z["Anser albifrons"]["new_q_daylength"]["supported"],"POSITIVE")
+        self.assertEqual(z["Odocoileus hemionus"]["new_q_daylength"]["supported"],"NEGATIVE")
         self.assertEqual(z["Vulpes vulpes"]["new_q"]["supported"],"POSITIVE")
-        self.assertEqual(z["Vulpes vulpes"]["new_daylength"]["supported"],"INCLUDES_ZERO")
+        self.assertEqual(z["Vulpes vulpes"]["new_q_daylength"]["supported"],"INCLUDES_ZERO")
         self.assertFalse(z["Vulpes vulpes"]["new_daylength_opposite_prior_nominal_sign"])
         self.assertEqual(self.r["species_with_opposite_nominal_daylength_slope_support_across_archived_sources"],["Anser albifrons","Odocoileus hemionus"])
 
