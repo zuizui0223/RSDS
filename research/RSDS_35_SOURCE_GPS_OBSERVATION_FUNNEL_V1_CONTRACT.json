@@ -1,0 +1,48 @@
+{
+  "version": "RSDS_35_ORIGINAL_SOURCE_GPS_OBSERVATION_FUNNEL_V1",
+  "freeze_date": "2026-11-15",
+  "science_stage": "POST_WAVE1_AND_WAVE2_BIOLOGICAL_OUTCOMES_METHOD_DIAGNOSTIC_NOT_A_PRE_OUTCOME_REPLICATION",
+  "base_branch": "analysis/rsds-437-wave2-original-gps-20261115",
+  "original_16_wave_source_result": {
+    "path": "research/RSDS_437_WAVE1_16_SOURCE_GPS_FIRST_ALL_RESULTS_20261115.json",
+    "git_blob_sha": "57029f30b65991118325c7d0cec1d8b3a36f4427"
+  },
+  "original_35_wave_source_result": {
+    "path": "research/RSDS_437_WAVE1_PLUS_WAVE2_35_ORIGINAL_GPS_FIRST_META_RESULT_20261115.json",
+    "git_blob_sha": "9b02774f7c31d29b2eec5039a80431a895dccb36"
+  },
+  "original_wave1_file_metadata": {
+    "path": "research/RSDS_437_WAVE1_ORIGINAL_FILE_METADATA_FIRST_RESULT_20261115.json",
+    "git_blob_sha": "3f849233969a397a86ab201343846301461cebcb"
+  },
+  "original_wave2_file_metadata": {
+    "path": "research/RSDS_437_WAVE2_19_ORIGINAL_PROVIDER_FILE_METADATA_FIRST_V1.json",
+    "git_blob_sha": "b36fb7050c72bc8797ce1abf19b8f0b58769b0d2"
+  },
+  "original_35_source_study_ids": 35,
+  "original_registered_native_source_rows": 50,
+  "source_MD5_original_qualified": 28,
+  "original_file_or_human_privacy_HOLD": 7,
+  "original_GPS_source_wide_HOLD": 3,
+  "first_result_GPS_parsed_sources": 25,
+  "source_any_native_q_supported": 13,
+  "source_complete_native_q_supported": 10,
+  "source_complete_native_daylight_supported": 8,
+  "source_month_joint_covariance_supported": 0,
+  "method_target": "Distinguish original UTC timestamp cadence eligibility (0.5-2.0 h), astronomical same local solar date/daypart continuity, and speed <=60 km/h from daily 3 DAY + 3 NIGHT steps and tag-year 10-day support. This is a source-admission *measurement* diagnostic, not new biological effect.",
+  "original_source_processing": "Reuse frozen original one-fix-per-UTC-hour source file parser and one_taxon estimator, verify original provider MD5 and all source/native q and daylength support counts/means to source-frozen first results before publishing funnel metrics. Source-wide failure remains HOLD.",
+  "sample_unit": "One distinct original source repository study-ID / DOI; native taxa and GPS fixes only clustered subobservations. Native source time/date/velocity funnel conditional on the source sample. Report each source/native counts, not individual dates/tags/coordinates/events.",
+  "rule_stage1": "Original frozen source first-result recorded original UTC-hour-selected GPS positions. Consecutive original GPS fixes per tag produce adjacent intervals; original timestep must lie in [0.5,2.0] hours.",
+  "rule_stage2": "Among original timestep-eligible adjacent fixes, solar_period(start) == solar_period(midpoint) == solar_period(end), SAME astronomy day/night and solar date as historical RSDS. This is location and timestamp information, NOT an actual direct sunlight observation.",
+  "rule_stage3": "Among astronomy-eligible original steps, great_circle_km / elapsed_hours finite and <=60 km/h, matching source valid_interval exactly. This is an effect-relevant *geometry* constraint, NOT pure observation cadence.",
+  "rule_stage4": "At least 3 valid DAY and 3 valid NIGHT GPS displacement steps within the same original tagged animal and solar date, then >=10 such original days within animal-year -> supported tag q, >=5 such tags for source-native q.",
+  "daylength_rule": "For tag-year with >=10 eligible dates, astronomical daylength span >=0.5h produces locally identifiable within-year daylight slope; require >=5 tags within each native taxon as in archived one_taxon.",
+  "technical_cadence_summary": "Preserve source/native counts of post-UTC-hour fixes, adjacent pairs, 0.5-2h time pairs, same astronomy daypart/time pairs, <=60km/h valid pairs, days with >=3 DAY/NIGHT accepted pairs, tag-years and animals meeting >=10 days; additionally even/odd UTC hour original source scheduling distribution. No original times, dates, animal IDs or GPS positions disclosed.",
+  "estimation": "At most descriptive source-weighted median, range, and single-native vs multi-native q-measurability stratified results, with source-level exact deterministic permutation comparison only if predeclared; do not claim 25 parsed sources are globally representative.",
+  "privacy": "One Homo sapiens original source must never be requested, downloaded or parsed; three original-file size HOLDS and three original GPS source-wide HOLDS retained (including if a subsequent retry behaves differently, no promotion from archival HOLD). Do not publish raw telemetry, tags, exact timestamps/dates, GPS positions, animal-level effects or per-segment trajectories.",
+  "previous_48_signed_sunlight_external": "NEGATIVE_DIRECTION_NOT_REPLICATED_IN_HELDOUT_SOURCE_SAMPLE",
+  "previous_ERA5_raw_SHA_12_HOLD": true,
+  "cutoff_rule": "No threshold tuning from outcome. Source original one_taxon and valid_interval acceptance are unchanged. This route only decomposes failure stages; does not modify old 35-source q effect endpoints.",
+  "source_budget_original_max_bytes": 200000000,
+  "no_new_response_evidence_discovery_claim": true
+}
