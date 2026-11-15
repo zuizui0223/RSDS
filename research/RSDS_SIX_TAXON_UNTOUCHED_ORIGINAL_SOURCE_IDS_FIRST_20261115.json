@@ -1,0 +1,610 @@
+{
+  "all_new_source_selection_based_only_on_public_catalog_metadata": true,
+  "all_six_taxa_unexamined_metadata_candidate_decisions_including_exclusions": [
+    {
+      "matched_prior_six_taxa": [
+        "Anser albifrons"
+      ],
+      "metadata_exclusion_reasons": [
+        "NOT_ORIGINAL_GPS_GNSS_SENSOR"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Anser albifrons"
+      ],
+      "original_package_UUID": "b6b299ed-f770-48b2-b18a-4bad44d4c5a4",
+      "original_public_title": "Data from: Longer days enable higher diurnal activity for migratory birds [greater white-fronted geese]",
+      "original_sensor_labels": [
+        "Acceleration"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.254rd102",
+      "original_source_study_id": "9589196",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 20,
+      "reported_location_count_metadata_only": 3588731,
+      "source_status": "METADATA_EXCLUDED_NO_SOURCE_ACCESS"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Anser albifrons"
+      ],
+      "metadata_exclusion_reasons": [
+        "NOT_ORIGINAL_GPS_GNSS_SENSOR"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Anser albifrons"
+      ],
+      "original_package_UUID": "bec9d50d-69af-4d8b-8b01-f1146eebf5a7",
+      "original_public_title": "Data from: Towards a new understanding of migration timing: slower spring than autumn migration in geese reflects different decision rules for stopover use and departure",
+      "original_sensor_labels": [
+        "Argos Doppler Shift"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.31c2v92f",
+      "original_source_study_id": "133992043",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 65,
+      "reported_location_count_metadata_only": 81401,
+      "source_status": "METADATA_EXCLUDED_NO_SOURCE_ACCESS"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Anas platyrhynchos"
+      ],
+      "metadata_exclusion_reasons": [
+        "INSUFFICIENT_METADATA_FIX_COUNT"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Anas platyrhynchos",
+        "Cairina moschata"
+      ],
+      "original_package_UUID": "5cfc9802-fcb4-41f3-ab10-e785a3777f3c",
+      "original_public_title": "Data from: Tracking domestic ducks: a novel approach for documenting poultry market chains in the context of avian influenza transmission",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.38f467s7",
+      "original_source_study_id": "49520609",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 40,
+      "reported_location_count_metadata_only": 1329,
+      "source_status": "METADATA_EXCLUDED_NO_SOURCE_ACCESS"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Anser albifrons"
+      ],
+      "metadata_exclusion_reasons": [],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Anser albifrons"
+      ],
+      "original_package_UUID": "08b6b850-df1f-4740-b05e-acb1a654934b",
+      "original_public_title": "Data from: Flyway connectivity and exchange primarily driven by moult migration in geese [Pannonic population]",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.46b0mq21",
+      "original_source_study_id": "657965212",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 10,
+      "reported_location_count_metadata_only": 118744,
+      "source_index": 0,
+      "source_status": "FROZEN_NEW_SOURCE_ID_FOR_FILE_PREFLIGHT"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Vulpes vulpes"
+      ],
+      "metadata_exclusion_reasons": [
+        "NOT_ORIGINAL_GPS_GNSS_SENSOR",
+        "INSUFFICIENT_METADATA_ANIMAL_COUNT",
+        "INSUFFICIENT_METADATA_FIX_COUNT"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Vulpes vulpes"
+      ],
+      "original_package_UUID": "975fdba1-c7dd-4ecd-b3ce-de1fffba4658",
+      "original_public_title": "Data from: Study \"Red fox Herschel - Argos tracking\"",
+      "original_sensor_labels": [
+        "Argos Doppler Shift"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.51h30m06",
+      "original_source_study_id": "1371529289",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 2,
+      "reported_location_count_metadata_only": 223,
+      "source_status": "METADATA_EXCLUDED_NO_SOURCE_ACCESS"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Vulpes vulpes"
+      ],
+      "metadata_exclusion_reasons": [
+        "NOT_ORIGINAL_GPS_GNSS_SENSOR",
+        "INSUFFICIENT_METADATA_FIX_COUNT"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Canis latrans",
+        "Procyon lotor",
+        "Urocyon cinereoargenteus",
+        "Vulpes vulpes"
+      ],
+      "original_package_UUID": "48d88da8-426e-462b-8c06-5e7a03e1c1df",
+      "original_public_title": "Data from: Eastern coyote home range, habitat selection and survival in the Albany pine bush landscape",
+      "original_sensor_labels": [
+        "Radio Transmitter"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.56pf8220",
+      "original_source_study_id": "5376563",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 32,
+      "reported_location_count_metadata_only": 2258,
+      "source_status": "METADATA_EXCLUDED_NO_SOURCE_ACCESS"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Branta leucopsis"
+      ],
+      "metadata_exclusion_reasons": [
+        "INSUFFICIENT_METADATA_ANIMAL_COUNT",
+        "INSUFFICIENT_METADATA_FIX_COUNT"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Branta leucopsis"
+      ],
+      "original_package_UUID": "2769c15e-55f0-4f93-a651-2c5b5dd423e8",
+      "original_public_title": "Data from: Forecasting spring from afar? Timing of migration and predictability of phenology along different migration routes of an avian herbivore [Greenland data]",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.5d3f0664",
+      "original_source_study_id": "31987083",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 7,
+      "reported_location_count_metadata_only": 6853,
+      "source_status": "METADATA_EXCLUDED_NO_SOURCE_ACCESS"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Odocoileus hemionus"
+      ],
+      "metadata_exclusion_reasons": [],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Odocoileus hemionus"
+      ],
+      "original_package_UUID": "0e3a4577-b063-47d9-9d6b-edec949aa5fa",
+      "original_public_title": "Data from: Study \"Wyoming Sublette Mule Deer (2018-2020)\"",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.708",
+      "original_source_study_id": "2549043743",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 135,
+      "reported_location_count_metadata_only": 948632,
+      "source_index": 1,
+      "source_status": "FROZEN_NEW_SOURCE_ID_FOR_FILE_PREFLIGHT"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Vulpes vulpes"
+      ],
+      "metadata_exclusion_reasons": [],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Vulpes vulpes"
+      ],
+      "original_package_UUID": "28708a9c-5582-490e-9481-c094bdce74c2",
+      "original_public_title": "Data from: Toward reliable population density estimates of partially marked populations using spatially explicit mark-resight methods",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.72hh609t",
+      "original_source_study_id": "444539014",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 22,
+      "reported_location_count_metadata_only": 94187,
+      "source_index": 2,
+      "source_status": "FROZEN_NEW_SOURCE_ID_FOR_FILE_PREFLIGHT"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Anser albifrons"
+      ],
+      "metadata_exclusion_reasons": [
+        "NOT_ORIGINAL_GPS_GNSS_SENSOR",
+        "INSUFFICIENT_METADATA_ANIMAL_COUNT",
+        "INSUFFICIENT_METADATA_FIX_COUNT"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Anser albifrons"
+      ],
+      "original_package_UUID": "64299d46-38aa-4124-8350-e9b3565dd374",
+      "original_public_title": "Data from: Scaring waterfowl as a management tool: how much more do geese forage after disturbance?",
+      "original_sensor_labels": [
+        "Acceleration"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.7tp81b7b",
+      "original_source_study_id": "163020445",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 9,
+      "reported_location_count_metadata_only": 2919,
+      "source_status": "METADATA_EXCLUDED_NO_SOURCE_ACCESS"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Anas platyrhynchos"
+      ],
+      "metadata_exclusion_reasons": [],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Anas platyrhynchos"
+      ],
+      "original_package_UUID": "316cff40-b957-4ad6-9ca5-0f50253ab56a",
+      "original_public_title": "Data from: Flexibility of continental navigation and migration in European mallards",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.8dc0v84m",
+      "original_source_study_id": "11017705",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 79,
+      "reported_location_count_metadata_only": 13797,
+      "source_index": 3,
+      "source_status": "FROZEN_NEW_SOURCE_ID_FOR_FILE_PREFLIGHT"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Vulpes vulpes"
+      ],
+      "metadata_exclusion_reasons": [
+        "NOT_ORIGINAL_GPS_GNSS_SENSOR",
+        "INSUFFICIENT_METADATA_ANIMAL_COUNT",
+        "INSUFFICIENT_METADATA_FIX_COUNT"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Vulpes vulpes"
+      ],
+      "original_package_UUID": "028c80d4-e13d-4013-a037-6741be6d2463",
+      "original_public_title": "Data from: Study \"Red fox Bylot - Argos tracking\"",
+      "original_sensor_labels": [
+        "Argos Doppler Shift"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.8qf0ct89",
+      "original_source_study_id": "1371322147",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 2,
+      "reported_location_count_metadata_only": 2086,
+      "source_status": "METADATA_EXCLUDED_NO_SOURCE_ACCESS"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Anser albifrons"
+      ],
+      "metadata_exclusion_reasons": [
+        "NOT_ORIGINAL_GPS_GNSS_SENSOR",
+        "INSUFFICIENT_METADATA_ANIMAL_COUNT"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Anser albifrons"
+      ],
+      "original_package_UUID": "9daa9707-6b70-4419-8693-108af8e0a1eb",
+      "original_public_title": "Data from: A periodic Markov model to formalise animal migration on a network [white-fronted goose data]",
+      "original_sensor_labels": [
+        "Argos Doppler Shift"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.kk38017f",
+      "original_source_study_id": "467107447",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 7,
+      "reported_location_count_metadata_only": 11806,
+      "source_status": "METADATA_EXCLUDED_NO_SOURCE_ACCESS"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Anser albifrons"
+      ],
+      "metadata_exclusion_reasons": [],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Anser albifrons"
+      ],
+      "original_package_UUID": "2e9dace9-88e3-4504-9b5a-08954861c5c2",
+      "original_public_title": "Data from: Goose parents lead migration V",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.ms87s2m6",
+      "original_source_study_id": "1049685237",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 13,
+      "reported_location_count_metadata_only": 955487,
+      "source_index": 4,
+      "source_status": "FROZEN_NEW_SOURCE_ID_FOR_FILE_PREFLIGHT"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Branta leucopsis"
+      ],
+      "metadata_exclusion_reasons": [],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Branta leucopsis"
+      ],
+      "original_package_UUID": "181634a2-46d3-4405-bba5-7813602ea965",
+      "original_public_title": "Data from: Forecasting spring from afar? Timing of migration and predictability of phenology along different migration routes of an avian herbivore [Barents Sea data]",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.ps244r11",
+      "original_source_study_id": "29799425",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 15,
+      "reported_location_count_metadata_only": 21102,
+      "source_index": 5,
+      "source_status": "FROZEN_NEW_SOURCE_ID_FOR_FILE_PREFLIGHT"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Branta leucopsis"
+      ],
+      "metadata_exclusion_reasons": [
+        "NOT_ORIGINAL_GPS_GNSS_SENSOR"
+      ],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Branta leucopsis"
+      ],
+      "original_package_UUID": "8c837e1d-0319-41ff-ab1b-7645a161c65d",
+      "original_public_title": "Data from: Effects of multiple targeted repelling measures on the behaviour of individually tracked birds in an area of increasing human-wildlife conflict",
+      "original_sensor_labels": [],
+      "original_source_DOI": "doi:10.5441/001/1.vd7jb526",
+      "original_source_study_id": "2296102400",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 70,
+      "reported_location_count_metadata_only": 193957,
+      "source_status": "METADATA_EXCLUDED_NO_SOURCE_ACCESS"
+    }
+  ],
+  "catalog_original_packages": 437,
+  "catalog_snapshot_date": "2026-10-19",
+  "claim_ceiling": "Passing metadata selection is NOT sufficient for independent field population, wild/non-managed status, original GPS cadence, q measurability or statistically independent source replication.",
+  "fixed_six_previous_native_q_repeat_species": [
+    "Anas platyrhynchos",
+    "Anser albifrons",
+    "Branta leucopsis",
+    "Odocoileus hemionus",
+    "Ovis canadensis",
+    "Vulpes vulpes"
+  ],
+  "new_GPS_rows_opened": 0,
+  "new_original_metadata_qualified_source_studies": 6,
+  "new_original_source_metadata_selection_rows": [
+    {
+      "matched_prior_six_taxa": [
+        "Anser albifrons"
+      ],
+      "metadata_exclusion_reasons": [],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Anser albifrons"
+      ],
+      "original_package_UUID": "08b6b850-df1f-4740-b05e-acb1a654934b",
+      "original_public_title": "Data from: Flyway connectivity and exchange primarily driven by moult migration in geese [Pannonic population]",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.46b0mq21",
+      "original_source_study_id": "657965212",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 10,
+      "reported_location_count_metadata_only": 118744,
+      "source_index": 0,
+      "source_status": "FROZEN_NEW_SOURCE_ID_FOR_FILE_PREFLIGHT"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Odocoileus hemionus"
+      ],
+      "metadata_exclusion_reasons": [],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Odocoileus hemionus"
+      ],
+      "original_package_UUID": "0e3a4577-b063-47d9-9d6b-edec949aa5fa",
+      "original_public_title": "Data from: Study \"Wyoming Sublette Mule Deer (2018-2020)\"",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.708",
+      "original_source_study_id": "2549043743",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 135,
+      "reported_location_count_metadata_only": 948632,
+      "source_index": 1,
+      "source_status": "FROZEN_NEW_SOURCE_ID_FOR_FILE_PREFLIGHT"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Vulpes vulpes"
+      ],
+      "metadata_exclusion_reasons": [],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Vulpes vulpes"
+      ],
+      "original_package_UUID": "28708a9c-5582-490e-9481-c094bdce74c2",
+      "original_public_title": "Data from: Toward reliable population density estimates of partially marked populations using spatially explicit mark-resight methods",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.72hh609t",
+      "original_source_study_id": "444539014",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 22,
+      "reported_location_count_metadata_only": 94187,
+      "source_index": 2,
+      "source_status": "FROZEN_NEW_SOURCE_ID_FOR_FILE_PREFLIGHT"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Anas platyrhynchos"
+      ],
+      "metadata_exclusion_reasons": [],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Anas platyrhynchos"
+      ],
+      "original_package_UUID": "316cff40-b957-4ad6-9ca5-0f50253ab56a",
+      "original_public_title": "Data from: Flexibility of continental navigation and migration in European mallards",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.8dc0v84m",
+      "original_source_study_id": "11017705",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 79,
+      "reported_location_count_metadata_only": 13797,
+      "source_index": 3,
+      "source_status": "FROZEN_NEW_SOURCE_ID_FOR_FILE_PREFLIGHT"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Anser albifrons"
+      ],
+      "metadata_exclusion_reasons": [],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Anser albifrons"
+      ],
+      "original_package_UUID": "2e9dace9-88e3-4504-9b5a-08954861c5c2",
+      "original_public_title": "Data from: Goose parents lead migration V",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.ms87s2m6",
+      "original_source_study_id": "1049685237",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 13,
+      "reported_location_count_metadata_only": 955487,
+      "source_index": 4,
+      "source_status": "FROZEN_NEW_SOURCE_ID_FOR_FILE_PREFLIGHT"
+    },
+    {
+      "matched_prior_six_taxa": [
+        "Branta leucopsis"
+      ],
+      "metadata_exclusion_reasons": [],
+      "original_GPS_animal_events_opened": 0,
+      "original_license_labels": [
+        "CC0 1.0 Universal"
+      ],
+      "original_native_taxa": [
+        "Branta leucopsis"
+      ],
+      "original_package_UUID": "181634a2-46d3-4405-bba5-7813602ea965",
+      "original_public_title": "Data from: Forecasting spring from afar? Timing of migration and predictability of phenology along different migration routes of an avian herbivore [Barents Sea data]",
+      "original_sensor_labels": [
+        "GPS"
+      ],
+      "original_source_DOI": "doi:10.5441/001/1.ps244r11",
+      "original_source_study_id": "29799425",
+      "provider_original_file_metadata_queried": false,
+      "reported_animal_count_metadata_only": 15,
+      "reported_location_count_metadata_only": 21102,
+      "source_index": 5,
+      "source_status": "FROZEN_NEW_SOURCE_ID_FOR_FILE_PREFLIGHT"
+    }
+  ],
+  "new_provider_file_metadata_opened": false,
+  "new_qualified_source_counts_by_six_species": {
+    "Anas platyrhynchos": 1,
+    "Anser albifrons": 2,
+    "Branta leucopsis": 1,
+    "Odocoileus hemionus": 1,
+    "Ovis canadensis": 0,
+    "Vulpes vulpes": 1
+  },
+  "new_source_candidates_with_same_taxa_even_if_metadata_ineligible": 16,
+  "no_source_was_selected_based_on_new_animal_GPS_or_q_sign": true,
+  "old_12_ERA5_raw_SHA_hold": true,
+  "old_48_source_sunlight_direction_heldout_not_replicated": true,
+  "previous_study_DOI_count": 63,
+  "remaining_metadata_unqualified_or_inapplicable_candidates": 10,
+  "source_population_independence_not_verified": true,
+  "stage": "FIRST_SOURCE_ONLY_SIX_TAXON_ORIGINAL_GPS_STUDY_IDENTITIES_BEFORE_NEW_FILE_ACCESS",
+  "taxon_selection_was_after_prior_biological_outcomes": true,
+  "version": "RSDS_SIX_PREVIOUS_NATIVE_REPEATS_ALL_UNTOUCHED_SOURCE_METADATA_V1"
+}
