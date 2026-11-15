@@ -1,0 +1,64 @@
+name: RSDS original GPS joint within-study covariance v1
+on:
+  push:
+    branches:
+      - analysis/original-joint-gps-covariance-20261115
+    paths:
+      - 'scripts/rsds_original_joint_calendar_covariance_v1.py'
+      - 'scripts/run_rsds_original_joint_covariance_v1.py'
+      - 'tests/test_rsds_original_joint_calendar_covariance_v1.py'
+      - 'docs/RSDS_ORIGINAL_GPS_JOINT_MONTH_COVARIANCE_V1_20261115.md'
+      - '.github/workflows/rsds-original-gps-joint-covariance-v1.yml'
+  pull_request:
+    paths:
+      - 'scripts/rsds_original_joint_calendar_covariance_v1.py'
+      - 'scripts/run_rsds_original_joint_covariance_v1.py'
+      - 'tests/test_rsds_original_joint_calendar_covariance_v1.py'
+      - 'docs/RSDS_ORIGINAL_GPS_JOINT_MONTH_COVARIANCE_V1_20261115.md'
+      - '.github/workflows/rsds-original-gps-joint-covariance-v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  known_truth_and_archive_integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original Python GPS parsing dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Prove original transfer verification unchanged
+        run: python -m scripts.verify_rsds_migration
+      - name: Joint block covariance known-truth, source pin and privacy tests
+        run: python -m unittest discover -s tests -p 'test_rsds_original_joint_calendar_covariance_v1.py' -v
+
+  original_source_joint_covariance:
+    needs: known_truth_and_archive_integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        study: [Illinois, Wyoming, Utah, Geese]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install original Movebank astronomy GPS parsing runtime
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Replay source UUID + original MD5, native historical endpoints, fixed source dates, then infer joint covariance
+        run: |
+          python -m scripts.run_rsds_original_joint_covariance_v1 --study ${{ matrix.study }} --out outputs/joint_covariance_${{ matrix.study }}.json
+      - name: Save only group-level covariance or explicit HOLD — never raw GPS
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-gps-source-joint-covariance-${{ matrix.study }}-v1
+          path: outputs/joint_covariance_${{ matrix.study }}.json
+          if-no-files-found: warn
