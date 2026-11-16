@@ -1,0 +1,113 @@
+name: RSDS original Utah four and Wyoming two native ungulate same-month thermal GPS
+on:
+  push:
+    branches:
+      - analysis/rsds-two-source-six-ungulate-within-month-heat-20261117
+    paths:
+      - 'research/RSDS_TWO_SOURCE_SIX_UNGULATE_NATIVE_MONTH_HEAT_CONTRACT_20261117.json'
+      - 'scripts/rsds_two_source_all_native_ungulate_month_heat_v1.py'
+      - 'scripts/aggregate_rsds_two_source_six_native_month_heat_v1.py'
+      - 'tests/test_rsds_two_source_six_native_month_heat_v1.py'
+      - '.github/workflows/rsds-two-source-six-ungulate-native-month-heat-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_two_study_six_native_contract_and_known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original ecological GPS astronomy mathematical prerequisite
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Verify both original study MD5/native q control, six source species and synthetic known-effect month q day/night
+        run: python -m unittest discover -s tests -p 'test_rsds_two_source_six_native_month_heat_v1.py' -v
+      - name: Upstream ODSP source migration verification
+        run: python -m scripts.verify_rsds_migration
+  private_original_source_four_or_two_native_thermal:
+    needs: original_two_study_six_native_contract_and_known_truth
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        index: [0,1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original source model numerical dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Original source native 4/2 full GPS n/q replay and same 2026 source ERA5 provider snapshot month effects
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_two_source_all_native_ungulate_month_heat_v1 --index ${{ matrix.index }} --out outputs/source_$(printf "%02d" ${{ matrix.index }}).json
+      - name: Publish only original DOI/native group q and temperature components, including source HOLD
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-source-all-registered-native-month-Tmax-${{ matrix.index }}-v1
+          path: outputs/source_*.json
+          if-no-files-found: error
+  original_two_study_six_native_meta_and_claim_ceiling:
+    needs: private_original_source_four_or_two_native_thermal
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original astronomy and model source dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Download both original source-native group outputs, keeping all registered native/HOLD slots
+        uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-source-all-registered-native-month-Tmax-*-v1
+          path: outputs/original_two_studies
+          merge-multiple: true
+      - name: Create source-gated native q DAY NIGHT month q~temperature result
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.aggregate_rsds_two_source_six_native_month_heat_v1 --directory outputs/original_two_studies --out research/RSDS_TWO_SOURCE_SIX_NATIVE_WITHIN_MONTH_HEAT_FIRST_RESULT_20261117.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('research/RSDS_TWO_SOURCE_SIX_NATIVE_WITHIN_MONTH_HEAT_FIRST_RESULT_20261117.json').read_text())
+          assert d['original_source_studies']==2
+          assert d['original_native_taxon_study_rows']==6
+          assert len(d['all_original_six_source_native_rows_including_HOLD'])==6
+          assert sum(d['source_native_q_Tmax_sign_counts'].values())==6
+          assert d['new_20261117_ERA5_snapshot_not_old_20261023_or_20261116_raw_physical_equivalence']
+          assert d['prior_48_solar_irradiance_heading_direction_not_replicated'] is True
+          assert d['prior_12_ERA5_original_raw_SHA_HOLD'] is True
+          assert d['no_raw_GPS_weather_animal_ID_individual_effects_or_precise_dates_exported'] is True
+          print('TWO_ORIGINAL_STUDIES_SIX_NATIVE_THERMAL_RESPONSES_WITH_ALL_HOLDS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-two-study-six-native-within-month-original-thermal-meta-v1
+          path: research/RSDS_TWO_SOURCE_SIX_NATIVE_WITHIN_MONTH_HEAT_FIRST_RESULT_20261117.json
+          if-no-files-found: error
+      - name: Commit only first source-native effects without animal event content
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_TWO_SOURCE_SIX_NATIVE_WITHIN_MONTH_HEAT_FIRST_RESULT_20261117.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze 2 original studies x 6 native ungulate year-month heat source results"
+            git fetch origin analysis/rsds-two-source-six-ungulate-within-month-heat-20261117
+            git rebase origin/analysis/rsds-two-source-six-ungulate-within-month-heat-20261117
+            git push origin HEAD:analysis/rsds-two-source-six-ungulate-within-month-heat-20261117
+          fi
