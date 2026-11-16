@@ -1,0 +1,58 @@
+{
+  "version": "RSDS_THREE_MULE_ORIGINAL_DAILY_HYDROTHERMAL_V1",
+  "date": "2026-11-16",
+  "stage": "POST_Q_AND_MONTH_RESULTS_BEFORE_NEW_DAILY_WEATHER_GPS_LINK",
+  "hypothesis": "Do three originally selected independent DOI source studies of the same mule deer species maintain an apparent q~astronomical daylength association after daily regional Tmax and preceding 30-day P-ET0 are included? If environmental adjustment reduces the signal differently, which direction and which source is robust?",
+  "original_source_selection": "Exactly all three Odocoileus hemionus entries in the SHA-frozen five-source manifest, no replacement or selection after new daily weather outcome.",
+  "prior_original_five_source_manifest_path": "research/RSDS_FIVE_SOURCE_NATIVE_YEAR_MONTH_ADJUSTMENT_CONTRACT_20261115.json",
+  "prior_original_five_source_manifest_blob": "7a25beccbb097b266d171edfaec8945e7f7d524f",
+  "prior_original_month_result_path": "research/RSDS_FIVE_SOURCE_NATIVE_TAG_YEAR_MONTH_FIRST_RESULT_20261115.json",
+  "prior_original_month_result_blob": "27643d9c69ca6683edde5ee75945f6a4fb0eb413",
+  "prior_original_matched_month_result_path": "research/RSDS_FIVE_SOURCE_MATCHED_TAG_DATE_MONTH_DECOMPOSITION_FIRST_RESULT_20261115.json",
+  "prior_original_matched_month_result_blob": "1a3b57bb928ecc6169e3563f83b777d2980d63ef",
+  "prior_2023_wyoming_daily_era5_source_result_path": "research/wyoming_two_ungulates_20261022/wyoming_daily_era5_original_result.json",
+  "prior_2023_wyoming_daily_era5_source_result_blob": "104b2d62e6aacf7ccfc41d5a6d866832caaadab6",
+  "prior_wyoming_diel_climate_code_path": "scripts/movebank_wyoming_daily_climate_20261023.py",
+  "prior_wyoming_diel_climate_code_blob": "d9d886cb469fe8f69cb61ec7df7f4d00b03b08c0",
+  "prior_source_admission_code_path": "scripts/movebank_wyoming_individual_era5_20261023.py",
+  "prior_source_admission_code_blob": "d98b7c8aed8dd8cc603dd6516e44efc671008556",
+  "three_source_keys": [
+    "mule_old_utah",
+    "mule_old_wyoming",
+    "mule_new_sublette"
+  ],
+  "three_source_dois": [
+    "10.5441/001/1.711",
+    "10.5441/001/1.703",
+    "10.5441/001/1.708"
+  ],
+  "target_native": "Odocoileus hemionus",
+  "new_weather_provider": "Open-Meteo historical archive model=era5",
+  "new_weather_fields_daily": [
+    "temperature_2m_mean",
+    "temperature_2m_max",
+    "precipitation_sum",
+    "et0_fao_evapotranspiration"
+  ],
+  "weather_cell_definition": "For each original GPS-qualified source tag/day, modelled 1 degree cell floor(lat),floor(lon), cell center +0.5. No interpolation. Query all source q-eligible cell/year months full range and prior 29 days; no favorable climate-date/grid selection.",
+  "max_original_GPS_bytes": 200000000,
+  "max_new_source_weather_cells": 160,
+  "maximum_source_weather_request_days": 3653,
+  "weather_data_sanity": "daily field units exact °C,°C,mm,mm; missing allowed as source-weather HOLD; complete 30 daily calendar days preceding and including original q date before calculating P-ET0; avoid future climate. Require zero weather grid errors for FULL_SOURCE_WEATHER_COVERAGE, otherwise label partial descriptive or HOLD.",
+  "q_observation": "same exact prior UTC-hour selected original GPS and original one_taxon n/mean, 0.5-2 h q-qualified nighttime/daytime individual solar-day; per original individual year >=10 days with at least .5h local astronomical daylength range, no time or position interpolation.",
+  "model_endpoints": {
+    "daylength_unadjusted": "q~L (old same-date within individual-year)",
+    "daylength_given_tmax": "q~L + Tmax",
+    "daylength_given_water": "q~L + P-ET0/100mm (past 30 days)",
+    "daylength_joint": "q~L+Tmax+P-ET0/100mm",
+    "Tmax_given_L_water": "q~Tmax+L+P-ET0/100mm",
+    "water_given_L_Tmax": "q~P-ET0+L+Tmax"
+  },
+  "estimation": "Reuse exact existing adjusted_daily_effects and partial_slope old Wyoming code with >=10/15 original days, >=0.5h L range and residual variance checks, equal years per tagged animal and equal animal weight; nominal 2000 original-animal bootstrap 95 intervals, source DOI is one study. Strong inferential claims require common sample across source and weather axes, not automatically given by different source-qualified cohorts.",
+  "evidence_update_rule": "Old Wyoming source DOI 1.703 day-level climate result is historical descriptive context, not a numeric replay target if provider weather physical version changed. All original GPS first q/daylength n and means must replay exactly before new weather retrieval. Do not reclassify 12 previous raw-JSON ERA5 SHA HOLDs or 48-source external sunlight/heading nonreplication.",
+  "weather_provenance_new_version": "Fresh provider weather response in new analysis does NOT establish equivalence to historic old ERA5 raw/physical arrays; record source-level ordered daily SHA256 fingerprint and grid hold counts only, never actual GPS coordinates, grid IDs, individual weather joined data or exact dates.",
+  "scientific_limits": "Target species and three DOIs selected AFTER inspecting old q/month slopes, not prospective test. Weather data at 1deg is coarse environmental context; no direct body heat, plant phenology or forage biomass, no causality. Distinct source DOIs not verified disjoint tagged populations (two Wyoming cohorts could overlap). Solar daylength and yearly heat/precipitation are coupled, and sources have different GPS schedules.",
+  "no_original_trajectory_tag_coordinates_dates_or_individual_slopes_exported": true,
+  "historical_48_source_signed_sun_azimuth_irradiance_replication": "NOT_REPLICATED",
+  "historical_12_ERA5_source_raw_SHA": "HOLD"
+}

@@ -1,0 +1,352 @@
+{
+  "Tmax_given_daylength_water_nominal_CI_signs_by_fully_covered_source": {
+    "mule_new_sublette": "POSITIVE",
+    "mule_old_utah": "POSITIVE",
+    "mule_old_wyoming": "POSITIVE"
+  },
+  "all_three_original_source_rows_including_HOLD": [
+    {
+      "current_provider_daily_physical_fingerprint": "2520de49e73fc6a22d5ed133b474cb2b18ee8d56932d65cc15aee07f5138d53a",
+      "first_original_source_full_year_daylength": {
+        "available": true,
+        "nominal_source_CI_sign": "POSITIVE",
+        "original_source_tagged_animals": 1683,
+        "point_sign": "POSITIVE",
+        "q": 0.005619415769068772,
+        "source_tag_bootstrap95": [
+          0.004388078182072968,
+          0.006920966097037151
+        ]
+      },
+      "first_original_source_q": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 1723,
+        "point_sign": "NEGATIVE",
+        "q": -0.02184895488685285,
+        "source_tag_bootstrap95": [
+          -0.02321004124388584,
+          -0.02046763062163855
+        ]
+      },
+      "model_eligible_qualified_tag_years": 2241,
+      "native_GPS_source_MD5_replayed": true,
+      "new_weather_source_grid_HOLD_count": 0,
+      "new_weather_source_grid_count": 23,
+      "original_native_q_first_result_replayed": true,
+      "original_qualified_tag_year_count_before_weather": 2285,
+      "original_source_key": "mule_old_utah",
+      "original_study_DOI": "10.5441/001/1.711",
+      "source_gps_status": "ORIGINAL_SOURCE_ERA5_FULL_GRID_COVERAGE_EVALUATED",
+      "source_hold_stage": null,
+      "source_hold_type": null,
+      "source_native_taxon": "Odocoileus hemionus",
+      "source_weather_adjusted_endpoints": {
+        "daylight_given_antecedent_water": {
+          "mean": 0.000994334567396261,
+          "nominal_sign": "INCLUDES_ZERO",
+          "original_source_tagged_animals": 1657,
+          "original_tag_bootstrap95": [
+            -0.0003148213902927222,
+            0.002240629238277588
+          ],
+          "source_original_animal_years": 2208,
+          "status": "descriptive_within_original_animal_year"
+        },
+        "daylight_given_tmax": {
+          "mean": 0.0013113312833644244,
+          "nominal_sign": "INCLUDES_ZERO",
+          "original_source_tagged_animals": 1681,
+          "original_tag_bootstrap95": [
+            -2.9005689154448176e-05,
+            0.0026285418461632877
+          ],
+          "source_original_animal_years": 2239,
+          "status": "descriptive_within_original_animal_year"
+        },
+        "daylight_given_tmax_and_water": {
+          "mean": -0.001512543796980752,
+          "nominal_sign": "NEGATIVE",
+          "original_source_tagged_animals": 1653,
+          "original_tag_bootstrap95": [
+            -0.0027240490855629375,
+            -0.00022197787473087193
+          ],
+          "source_original_animal_years": 2197,
+          "status": "descriptive_within_original_animal_year"
+        },
+        "tmax_given_daylight_and_water": {
+          "mean": 0.0010874383408601663,
+          "nominal_sign": "POSITIVE",
+          "original_source_tagged_animals": 1665,
+          "original_tag_bootstrap95": [
+            0.0009715393439713175,
+            0.0012056717896385114
+          ],
+          "source_original_animal_years": 2213,
+          "status": "descriptive_within_original_animal_year"
+        },
+        "unadjusted_daylight_on_climate_days": {
+          "mean": 0.005619415769068772,
+          "nominal_sign": "POSITIVE",
+          "original_source_tagged_animals": 1683,
+          "original_tag_bootstrap95": [
+            0.004388078182072968,
+            0.006920966097037151
+          ],
+          "source_original_animal_years": 2241,
+          "status": "descriptive_within_original_animal_year"
+        },
+        "water_given_daylight_and_tmax": {
+          "mean": -0.000554915747917809,
+          "nominal_sign": "INCLUDES_ZERO",
+          "original_source_tagged_animals": 1424,
+          "original_tag_bootstrap95": [
+            -0.0038946480537065528,
+            0.0027780059852363062
+          ],
+          "source_original_animal_years": 1874,
+          "status": "descriptive_within_original_animal_year"
+        }
+      },
+      "weather_complete_qualified_animal_days": 249366,
+      "weather_model_years_new_version_not_historically_equivalent": true
+    },
+    {
+      "current_provider_daily_physical_fingerprint": "43a2c8e63ffea5944d4270d3b231f0e35dc6c003161034485aa2bb732a343b1c",
+      "first_original_source_full_year_daylength": {
+        "available": true,
+        "nominal_source_CI_sign": "POSITIVE",
+        "original_source_tagged_animals": 118,
+        "point_sign": "POSITIVE",
+        "q": 0.005538249061142167,
+        "source_tag_bootstrap95": [
+          0.004101632821224659,
+          0.006972859886325625
+        ]
+      },
+      "first_original_source_q": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 119,
+        "point_sign": "NEGATIVE",
+        "q": -0.0044624294869207584,
+        "source_tag_bootstrap95": [
+          -0.005777731444226381,
+          -0.003089662007489691
+        ]
+      },
+      "model_eligible_qualified_tag_years": 165,
+      "native_GPS_source_MD5_replayed": true,
+      "new_weather_source_grid_HOLD_count": 0,
+      "new_weather_source_grid_count": 4,
+      "original_native_q_first_result_replayed": true,
+      "original_qualified_tag_year_count_before_weather": 166,
+      "original_source_key": "mule_old_wyoming",
+      "original_study_DOI": "10.5441/001/1.703",
+      "source_gps_status": "ORIGINAL_SOURCE_ERA5_FULL_GRID_COVERAGE_EVALUATED",
+      "source_hold_stage": null,
+      "source_hold_type": null,
+      "source_native_taxon": "Odocoileus hemionus",
+      "source_weather_adjusted_endpoints": {
+        "daylight_given_antecedent_water": {
+          "mean": 0.005797936500571233,
+          "nominal_sign": "POSITIVE",
+          "original_source_tagged_animals": 117,
+          "original_tag_bootstrap95": [
+            0.004277425299588437,
+            0.007267780736843112
+          ],
+          "source_original_animal_years": 164,
+          "status": "descriptive_within_original_animal_year"
+        },
+        "daylight_given_tmax": {
+          "mean": 0.004263879978816612,
+          "nominal_sign": "POSITIVE",
+          "original_source_tagged_animals": 118,
+          "original_tag_bootstrap95": [
+            0.002574446783835074,
+            0.00621168136647784
+          ],
+          "source_original_animal_years": 165,
+          "status": "descriptive_within_original_animal_year"
+        },
+        "daylight_given_tmax_and_water": {
+          "mean": 0.0043043051616359455,
+          "nominal_sign": "POSITIVE",
+          "original_source_tagged_animals": 117,
+          "original_tag_bootstrap95": [
+            0.0029125125854527786,
+            0.005739750492638002
+          ],
+          "source_original_animal_years": 164,
+          "status": "descriptive_within_original_animal_year"
+        },
+        "tmax_given_daylight_and_water": {
+          "mean": 0.0005549261472208612,
+          "nominal_sign": "POSITIVE",
+          "original_source_tagged_animals": 118,
+          "original_tag_bootstrap95": [
+            0.00018573237176226903,
+            0.0009024650214143654
+          ],
+          "source_original_animal_years": 165,
+          "status": "descriptive_within_original_animal_year"
+        },
+        "unadjusted_daylight_on_climate_days": {
+          "mean": 0.005538249061142167,
+          "nominal_sign": "POSITIVE",
+          "original_source_tagged_animals": 118,
+          "original_tag_bootstrap95": [
+            0.004101632821224659,
+            0.006972859886325625
+          ],
+          "source_original_animal_years": 165,
+          "status": "descriptive_within_original_animal_year"
+        },
+        "water_given_daylight_and_tmax": {
+          "mean": 0.007148048930309145,
+          "nominal_sign": "INCLUDES_ZERO",
+          "original_source_tagged_animals": 95,
+          "original_tag_bootstrap95": [
+            -0.0021937380577737946,
+            0.016271222351814656
+          ],
+          "source_original_animal_years": 126,
+          "status": "descriptive_within_original_animal_year"
+        }
+      },
+      "weather_complete_qualified_animal_days": 17402,
+      "weather_model_years_new_version_not_historically_equivalent": true
+    },
+    {
+      "current_provider_daily_physical_fingerprint": "1a0a348da5c55604feab9cf102e36da432def2c999e724420c4db8e62c818ebf",
+      "first_original_source_full_year_daylength": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 133,
+        "point_sign": "NEGATIVE",
+        "q": -0.003919925827490663,
+        "source_tag_bootstrap95": [
+          -0.00894405015815926,
+          -0.0003309853677428535
+        ]
+      },
+      "first_original_source_q": {
+        "available": true,
+        "nominal_source_CI_sign": "NEGATIVE",
+        "original_source_tagged_animals": 133,
+        "point_sign": "NEGATIVE",
+        "q": -0.028819071216292565,
+        "source_tag_bootstrap95": [
+          -0.03347940119026919,
+          -0.024224179018510292
+        ]
+      },
+      "model_eligible_qualified_tag_years": 286,
+      "native_GPS_source_MD5_replayed": true,
+      "new_weather_source_grid_HOLD_count": 0,
+      "new_weather_source_grid_count": 9,
+      "original_native_q_first_result_replayed": true,
+      "original_qualified_tag_year_count_before_weather": 296,
+      "original_source_key": "mule_new_sublette",
+      "original_study_DOI": "10.5441/001/1.708",
+      "source_gps_status": "ORIGINAL_SOURCE_ERA5_FULL_GRID_COVERAGE_EVALUATED",
+      "source_hold_stage": null,
+      "source_hold_type": null,
+      "source_native_taxon": "Odocoileus hemionus",
+      "source_weather_adjusted_endpoints": {
+        "daylight_given_antecedent_water": {
+          "mean": -0.012534454974484658,
+          "nominal_sign": "NEGATIVE",
+          "original_source_tagged_animals": 133,
+          "original_tag_bootstrap95": [
+            -0.017288099474252982,
+            -0.008950648977342813
+          ],
+          "source_original_animal_years": 284,
+          "status": "descriptive_within_original_animal_year"
+        },
+        "daylight_given_tmax": {
+          "mean": -0.014218037348039458,
+          "nominal_sign": "NEGATIVE",
+          "original_source_tagged_animals": 133,
+          "original_tag_bootstrap95": [
+            -0.01856754189299604,
+            -0.010913778923954034
+          ],
+          "source_original_animal_years": 286,
+          "status": "descriptive_within_original_animal_year"
+        },
+        "daylight_given_tmax_and_water": {
+          "mean": -0.017056936669265797,
+          "nominal_sign": "NEGATIVE",
+          "original_source_tagged_animals": 132,
+          "original_tag_bootstrap95": [
+            -0.021385120628905397,
+            -0.01358773416917546
+          ],
+          "source_original_animal_years": 282,
+          "status": "descriptive_within_original_animal_year"
+        },
+        "tmax_given_daylight_and_water": {
+          "mean": 0.0015891631837123207,
+          "nominal_sign": "POSITIVE",
+          "original_source_tagged_animals": 132,
+          "original_tag_bootstrap95": [
+            0.0011113808046575263,
+            0.0020064926132907024
+          ],
+          "source_original_animal_years": 283,
+          "status": "descriptive_within_original_animal_year"
+        },
+        "unadjusted_daylight_on_climate_days": {
+          "mean": -0.003919925827490663,
+          "nominal_sign": "NEGATIVE",
+          "original_source_tagged_animals": 133,
+          "original_tag_bootstrap95": [
+            -0.008936640424665741,
+            -0.00033094606419934304
+          ],
+          "source_original_animal_years": 286,
+          "status": "descriptive_within_original_animal_year"
+        },
+        "water_given_daylight_and_tmax": {
+          "mean": -0.02808521184238587,
+          "nominal_sign": "NEGATIVE",
+          "original_source_tagged_animals": 127,
+          "original_tag_bootstrap95": [
+            -0.03702644382387614,
+            -0.018117939051190073
+          ],
+          "source_original_animal_years": 246,
+          "status": "descriptive_within_original_animal_year"
+        }
+      },
+      "weather_complete_qualified_animal_days": 59887,
+      "weather_model_years_new_version_not_historically_equivalent": true
+    }
+  ],
+  "external_48_source_sunlight_heading_direction_NOT_REPLICATED_UNCHANGED": true,
+  "full_weather_coverage_source_studies": 3,
+  "historical_12_ERA5_raw_SHA_source_HOLD_UNCHANGED": true,
+  "missing_weather_grids_held_not_imputed": true,
+  "no_meteorological_causality_or_vegetation_migration_state_measured": true,
+  "no_source_to_source_tagged_population_overlap_test": true,
+  "not_independent_sample_of_world_mule_deer_populations": true,
+  "one_target_species": "Odocoileus hemionus",
+  "original_source_status_counts": {
+    "ORIGINAL_SOURCE_ERA5_FULL_GRID_COVERAGE_EVALUATED": 3
+  },
+  "original_source_weather_version_new_not_equivalent_to_historic_ERA5_v0": true,
+  "postoutcome_species_and_weather_model_selection": true,
+  "primary_daylength_joint_adjusted_nominal_CI_signs_by_fully_covered_source": {
+    "mule_new_sublette": "NEGATIVE",
+    "mule_old_utah": "NEGATIVE",
+    "mule_old_wyoming": "POSITIVE"
+  },
+  "source_group_only_no_original_tag_GPS_weather_or_dates_exported": true,
+  "source_study_DOI_denominator": 3,
+  "stage": "FIRST_POSTDISCOVERY_ORIGINAL_SOURCE_Q_WATER_TMAX_EXTERNAL_DESCRIPTIVE",
+  "version": "RSDS_THREE_MULE_ORIGINAL_DAILY_HYDROTHERMAL_SOURCE_FIRST_META_V1"
+}
