@@ -1,0 +1,45 @@
+{
+  "version": "RSDS_THREE_MULE_SAME_TAG_DATE_EQUAL_GPS_DAY_NIGHT_OPPORTUNITY_V1",
+  "date": "2026-11-16",
+  "stage": "POST_SOURCE_NATIVE_THREE_COMPONENT_FIRST_RESULTS_BEFORE_NEW_EQUAL_STEP_BALANCE_FIRST_GPS",
+  "biological_question": "Is the three-source positive Tmax association with observed night relative GPS step speed retained if every previously q-qualified tag/solar-date DAY and NIGHT observation uses exactly three GPS intervals selected independently of step speed?",
+  "prior_three_source_day_night_first_result_path": "research/RSDS_THREE_MULE_DAY_NIGHT_HEAT_COMPONENTS_FIRST_RESULT_20261116.json",
+  "prior_three_source_day_night_first_result_blob": "804bcbfcb3ab4ddf8fc1ea2e3d932ee00dba96fd",
+  "prior_three_source_day_night_contract_path": "research/RSDS_THREE_MULE_DAY_NIGHT_HEAT_COMPONENTS_CONTRACT_20261116.json",
+  "prior_three_source_day_night_contract_blob": "a604bcac05e64b14647a7568b73764f2a923db32",
+  "prior_three_source_day_night_code_path": "scripts/rsds_three_mule_day_night_heat_components_v1.py",
+  "prior_three_source_day_night_code_blob": "1d64c213302ed2914ab374f2b8cd31eedfd95882",
+  "prior_three_source_month_joint_code_path": "scripts/rsds_three_mule_within_month_joint_weather_v1.py",
+  "prior_three_source_month_joint_code_blob": "42cfb74f8a6542b46c4e3158908fa207d884ef3b",
+  "original_DOIs": [
+    "10.5441/001/1.711",
+    "10.5441/001/1.703",
+    "10.5441/001/1.708"
+  ],
+  "original_species": "Odocoileus hemionus",
+  "previous_original_month_cohort_tags": [
+    1596,
+    109,
+    129
+  ],
+  "previous_month_Tmax_nominal_signs": [
+    "POSITIVE",
+    "POSITIVE",
+    "POSITIVE"
+  ],
+  "q_formula": "log1p(median NIGHT accepted GPS original source step km/h) - log1p(median DAY accepted GPS original source step km/h)",
+  "selected_day_night_step_count_per_tag_date": 3,
+  "balanced_step_algorithm": "Sort ORIGINAL valid 0.5-2h same-source timestamp/part intervals in original hour order, in each original tag/solar-day DAY and NIGHT independently keep deterministic chronological first, central (index floor((n-1)/2)) and last accepted original speed; n>=3 by previous native q quality. Select on original GPS interval rank alone, never on speed values/q, temperature, daylength or weather. All originally qualifying q tag/year/solar date remains eligible; original DAY/NIGHT medians and original source q must replay exactly before applying the diagnostic.",
+  "same_tag_date_model": "Use exactly the PRIOR source weather/tag/year/month/day cohort admitted for original 3-predictor joint q~Tmax+daylength+prior30d P-ET0 within calendar tag-year-month. No extra YEAR/DAY/SOURCE screening, and require original model q coefficients+full tag bootstrap confidence interval replay exactly. Both balanced DAY and NIGHT and balanced Q=NIGHT-DAY coefficients fitted on exactly SAME prior year/month/date/partial design; q_bal_coef == night_bal_coef - day_bal_coef for every tag-year, source mean, all matched bootstrap draws.",
+  "require_same_climate_physical_SHA_and_all_first_source_effects": true,
+  "sampling_balance_is_not_causal_intervention": true,
+  "original_source_persistence": "3 original source IDs only. All original source UUID/size/MD5 and original full-source q/daylength original tag means replay; all provider original daily ERA5 physical SHA and historic source q/weather coefficients identical. Any source data drift is SOURCE_HOLD, never accepted as a changed sampling robustness effect.",
+  "max_source_individual_tag_bootstrap_draws": 2000,
+  "bootstrap_original_tag_unit": "Resample ORIGINAL independent tagged animals with exact same 2000 draw index stream in day/night/q on the same cohort, no GPS event p values.",
+  "no_cross_source_animal_independence_verified": true,
+  "observed_behavior_not_true_activity_time": true,
+  "species_sources_selected_after_seeing_previous_positive_Tmax": true,
+  "source_rights_and_privacy": "Keep raw original GPS animal IDs, exact tracking location/date, individual slopes, raw interval counts and sampled GPS records inside ephemeral CI. Public outputs only DOI source aggregated means/tag counts, nominal 95 tag-bootstrap interval, fraction of source original qualifying dates with unequal DAY vs NIGHT GPS valid segment counts, and explicit HOLD.",
+  "old_48_source_irradiance_heading_external_direction_signed_result": "NOT_REPLICATED",
+  "old_12_ERA5_raw_SHA_hold": "HOLD"
+}
