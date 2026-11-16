@@ -1,0 +1,83 @@
+{
+  "version": "RSDS_TWO_ORIGINAL_UNGULATE_STUDIES_ALL_SIX_NATIVE_WITHIN_MONTH_TMAX_V1",
+  "date": "2026-11-17",
+  "stage": "POST_OLD_SIX_NATIVE_AND_THREE_MULE_THERMAL_OUTCOMES_BEFORE_NEW_SIX_SOURCE_NATIVE_YEAR_MONTH_GPS_WEATHER",
+  "ecological_question": "Do the Utah original four native ungulate taxa and Wyoming original two native ungulate taxa differ in within-tag×year×month temperature-linked relative night/day displacement and in DAY/NIGHT contributions when analyzed with one exact original GPS and contemporaneous ERA5 method? The repeated mule-deer vs bighorn source pair is a natural focus but all registered native taxa and source HOLDS stay in the denominator.",
+  "source_selection": "ALL native species from two previously source-pinned multi-ungulate original Movebank studies; the taxa and source records are NOT randomly selected or fully blinded. Do not replace sources if failure, do not cherry pick taxa by new q signs.",
+  "immutable_prior_files": [
+    {
+      "path": "research/RSDS_12_STUDY_22_NATIVE_TEMPORAL_MACRO_FIRST_RESULT_20261031.json",
+      "blob": "af0574c6bb6383402a97b5bebadb8cf0408e9740"
+    },
+    {
+      "path": "research/MOVEBANK_UTAH_FOUR_TAXA_SOLAR_V0_20261019.json",
+      "blob": "8aacca02f01bf2a675a95184d25ff9af49a6b374"
+    },
+    {
+      "path": "research/MOVEBANK_WYOMING_TWO_UNGULATES_SOURCE_V0_20261022.json",
+      "blob": "713dca2d8321fc0efbe46f36d87f6749d02b4228"
+    },
+    {
+      "path": "research/RSDS_UTAH_WYOMING_SIX_UNGULATE_NATIVE_HEAT_Q_REFERENCE_20261116.json",
+      "blob": "4288e713594f8d4213560a70e31a19741d6304d5"
+    },
+    {
+      "path": "scripts/rsds_three_mule_day_night_heat_components_v1.py",
+      "blob": "1d64c213302ed2914ab374f2b8cd31eedfd95882"
+    },
+    {
+      "path": "scripts/rsds_three_mule_within_month_joint_weather_v1.py",
+      "blob": "42cfb74f8a6542b46c4e3158908fa207d884ef3b"
+    },
+    {
+      "path": "scripts/movebank_wyoming_daily_climate_20261023.py",
+      "blob": "d9d886cb469fe8f69cb61ec7df7f4d00b03b08c0"
+    }
+  ],
+  "source_0": {
+    "doi": "10.5441/001/1.711",
+    "study_id": "7364502758",
+    "package_uuid": "0043246e-e68c-4b76-84cc-31e7558d08e0",
+    "provider_file_uuid": "9c4aaf76-7476-4305-8b14-9a6d8886e39a",
+    "provider_MD5": "08200c9dbdf7989fb5a35467213b7e5a",
+    "provider_original_bytes": 63369773,
+    "original_filename": "GPS tracking of ungulates in Utah by UDWR (2019-2020).csv.zip",
+    "native_taxa": [
+      "Antilocapra americana",
+      "Cervus elaphus",
+      "Odocoileus hemionus",
+      "Ovis canadensis"
+    ],
+    "source_license": "CC0 1.0 Universal"
+  },
+  "source_1": {
+    "doi": "10.5441/001/1.703",
+    "study_id": "7266109545",
+    "package_uuid": "9c588e12-a0e6-40bf-8dd7-d7ad57dfbf22",
+    "provider_file_uuid": "fed70edc-1319-4633-be6f-0a9abff53a1d",
+    "provider_MD5": "bd1c02734b6de3ddc9207fc1251edd66",
+    "provider_original_bytes": 98724772,
+    "original_filename": "Bighorn sheep and mule deer in Wyoming (2019-2020).csv",
+    "native_taxa": [
+      "Odocoileus hemionus",
+      "Ovis canadensis"
+    ],
+    "source_license": "CC BY-NC 4.0; aggregate noncommercial source analysis only"
+  },
+  "original_native_taxon_source_rows": 6,
+  "source_studies": 2,
+  "original_GPS_rule": "Original UTC-hour-nearest-time selected fix per animal, 0.5–2 h valid original GPS straight-line segment <=60 km/h, same solar DAY/NIGHT part at start/middle/end, >=3 DAY and >=3 NIGHT accepted original movement steps on each admitted original tag/solar date; >=10 q-qualified original days/tag/year. Source-native original q and q~daylength n+mean must replay to 1e-10 relative tolerance 0 against historical first 12 DOI results, before NEW climate endpoints.",
+  "new_source_weather_version": "Open Meteo archive ERA5 modeled daily Tmax / P–ET0, fetched fresh on fixed original GPS-observed 1-degree cell/solar date and preceding 29 days; same source weather snapshot is used for ALL native taxa within one original study; record new fingerprint and zero grid holds or SOURCE_HOLD. This new provider snapshot is NOT assumed identical to the original 2026-10-23 or 2026-11-16 earlier source ERA5 versions.",
+  "source_weather_max_grids": 160,
+  "source_weather_request_max_days": 3653,
+  "source_original_max_bytes": 200000000,
+  "source_weather_date_completeness": "Require complete original daily Tmax, current and preceding 29 calendar days P−ET0/100mm for every accepted tag/day; partial grids are SOURCE_HOLD, never replace or interpolate missing original weather.",
+  "new_primary_source_native_endpoints": "Same tag/year/month/date original accepted q-solar-day sample for 3 predictors Tmax, astronomical daylength, lagged P−ET0/100mm. On each original tag-year retain >=2 months, month>=5 original valid source q+ERA5 solar dates, within-month L range>=0.05h, >=15 source dates/year, local daylength within-month Sxx>=0.05h². Require FWL original residual SD of Tmax>=0.25°C, L>=0.05h, water>=0.05 per 100mm, two other controls determinant ratio>=0.01. Compute q, DAY and NIGHT Tmax slopes under tag-year-month centering on exactly same original dates; equal valid years per animal and equal animals per source native taxon. 2000 paired original tagged animal resamples with source-specific seed. Minimum 5 qualifying independent original tagged animals per source/taxon; insufficient stays UNAVAILABLE.",
+  "enforce_q_identity": "For every accepted original tag/year/day q=log1p(median NIGHT speed kmh)−log1p(median DAY speed kmh); source DAY/NIGHT q and Tmax coefficients, independent tag means and every joint bootstrap draw must satisfy Q=NIGHT−DAY; original Q/daylength source-native effect must replay first.",
+  "secondary_source_overlap": "For focal repeated pair *O. hemionus* and *O. canadensis*, report count of original source 1-degree cell×year×month shared by their ORIGINAL q-admitted tags, and count with >=3 distinct original tags per species, using only totals. No per-cell locations nor dates. The overlap shows feasibility, NOT a formal temperature-by-species interaction test.",
+  "biological_exposure_limit": "Modeled regional Tmax on original GPS 1° grid is not direct animal heat, forage biomass, behavioral thermoregulation or causal daylight. Original GPS straight-line steps are not true activity duration. Animals within two source studies may have different tagging effort, sites, seasons and study populations; their original species labels alone do not create identical environment. Earlier matched Utah mule-bighorn temperature difference adjusted for water/daylight was nominally INCLUDES_ZERO.",
+  "source_inference": "Two source DOI studies, not six independent ecosystems. Use nominal within-native/source original-tag bootstrap intervals only; no global meta or source-independent species×temperature p-value. Same-species studies were originally chosen after observing positive results; current six native source model also post-outcome exploratory.",
+  "raw_identity_privacy": "All source GPS animal identifiers, coordinates, precise dates, source climate grid IDs, individual coefficients and bootstrap draws remain private in ephemeral GitHub Actions runners. Public result only per native source DOI means, 95 nominal tag-bootstrap, support counts, source SHA digest, aggregate paired-grid opportunity counts, and HOLD.",
+  "previous_48_solar_heading_signed_external": "NOT_REPLICATED",
+  "previous_12_old_ERA5_raw_SHA": "HOLD"
+}
