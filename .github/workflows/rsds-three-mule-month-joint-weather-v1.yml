@@ -1,0 +1,113 @@
+name: RSDS 3 mule sources within original tag-month joint heat daylight water
+on:
+  push:
+    branches:
+      - analysis/rsds-three-mule-month-within-weather-20261116
+    paths:
+      - 'research/RSDS_THREE_MULE_WITHIN_MONTH_HEAT_CONTRACT_20261116.json'
+      - 'scripts/rsds_three_mule_within_month_joint_weather_v1.py'
+      - 'scripts/aggregate_rsds_three_mule_within_month_weather_v1.py'
+      - 'tests/test_rsds_three_mule_within_month_weather_v1.py'
+      - '.github/workflows/rsds-three-mule-month-joint-weather-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_three_study_weather_sha_and_known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install source original GPS numerical dependencies
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Tests with known heat effect, within-month controls and original 2026 model fingerprints
+        run: python -m unittest discover -s tests -p 'test_rsds_three_mule_within_month_weather_v1.py' -v
+      - name: Preserve ODSP-to-RSDS upstream source migration
+        run: python -m scripts.verify_rsds_migration
+  three_original_mule_native_month_heat_jobs:
+    needs: original_three_study_weather_sha_and_known_truth
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        index: [0,1,2]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original numerical dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Original MD5, old native q/weather and exact canonical daily ERA5 SHA verified BEFORE within-month fits
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_three_mule_within_month_joint_weather_v1 --index ${{ matrix.index }} --out outputs/source_$(printf "%02d" ${{ matrix.index }}).json
+      - name: Upload original source-only group status/HOLD without animal IDs/locations/month-dates
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-mule-three-source-native-month-weather-source-${{ matrix.index }}-v1
+          path: outputs/source_*.json
+          if-no-files-found: error
+  source_equal_three_original_mule_month_heat_meta:
+    needs: three_original_mule_native_month_heat_jobs
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source calculation dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Download exactly three first source native month weather summaries including original HOLD
+        uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-mule-three-source-native-month-weather-source-*-v1
+          merge-multiple: true
+          path: outputs/three
+      - name: Compile source-native three original studies with all source HOLD, no pseudo replication
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.aggregate_rsds_three_mule_within_month_weather_v1 --directory outputs/three --out research/RSDS_THREE_MULE_WITHIN_TAG_MONTH_HEAT_FIRST_RESULT_20261116.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_THREE_MULE_WITHIN_TAG_MONTH_HEAT_FIRST_RESULT_20261116.json')
+          r=json.loads(p.read_text())
+          assert r['original_source_study_DOI_denominator']==3
+          assert len(r['all_original_three_native_source_studies_including_HOLD'])==3
+          assert sum(r['source_status_counts'].values())==3
+          assert r['first_three_source_weather_results_git_blob_unchanged']=='25db513c9e6804a282bcc8110565e033273f03b6'
+          assert r['old_ERA5_12_original_raw_SHA_HOLD']
+          assert r['old_solar_48_source_signed_direction_external_NOT_REPLICATED']
+          assert r['original_source_GPS_tracks_dates_tags_weather_grids_and_individual_estimates_not_exported']
+          print('THREE_NATIVE_Q_HEAT_WITHIN_MONTH_SOURCE_FIRST_WITH_VERSION_LOCK_AND_HOLDS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-three-source-native-heat-month-first-meta-v1
+          path: research/RSDS_THREE_MULE_WITHIN_TAG_MONTH_HEAT_FIRST_RESULT_20261116.json
+          if-no-files-found: error
+      - name: Commit only original source-native group first results
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_THREE_MULE_WITHIN_TAG_MONTH_HEAT_FIRST_RESULT_20261116.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze three source original mule heat within-tag-month ecological associations"
+            git fetch origin analysis/rsds-three-mule-month-within-weather-20261116
+            git rebase origin/analysis/rsds-three-mule-month-within-weather-20261116
+            git push origin HEAD:analysis/rsds-three-mule-month-within-weather-20261116
+          fi
