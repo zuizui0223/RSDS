@@ -1,0 +1,212 @@
+{
+  "all_original_three_study_source_rows_including_HOLD": [
+    {
+      "balanced_three_DAY_speed_temperature": {
+        "mean": -1.3784449655266642e-05,
+        "nominal_sign": "INCLUDES_ZERO",
+        "source_tag_n": 1596,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.00012897239816880152,
+          0.00010056569544658474
+        ]
+      },
+      "balanced_three_NIGHT_speed_temperature": {
+        "mean": 0.0005741449487870717,
+        "nominal_sign": "POSITIVE",
+        "source_tag_n": 1596,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.00048614625100561356,
+          0.0006654819084027282
+        ]
+      },
+      "balanced_three_solar_q_speed_temperature": {
+        "mean": 0.0005879293984423383,
+        "nominal_sign": "POSITIVE",
+        "source_tag_n": 1596,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.00045380521126921577,
+          0.0007151845893154426
+        ]
+      },
+      "equal_three_minus_original_q_temperature": {
+        "mean": -0.0004991567283410175,
+        "nominal_sign": "NEGATIVE",
+        "source_tag_n": 1596,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.0005783353969642486,
+          -0.00042371168560202617
+        ]
+      },
+      "hold_stage": null,
+      "hold_type": null,
+      "original_native_taxon": "Odocoileus hemionus",
+      "original_solar_q_speed_temperature": {
+        "mean": 0.0010870861267833559,
+        "nominal_sign": "POSITIVE",
+        "source_tag_n": 1596,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0009743831491874705,
+          0.0011989399731576582
+        ]
+      },
+      "original_source_DOI": "10.5441/001/1.711",
+      "original_source_fraction_solar_tag_dates_unequal_day_night_step_count": 0.8944251608007067,
+      "original_source_independent_tag_count": 1596,
+      "original_source_tag_solar_days_in_model_not_independent": 241137,
+      "source_key": "mule_old_utah",
+      "source_status": "SOURCE_BALANCED_3_EACH_COMPONENT_ESTIMABLE",
+      "source_verified_original_MD5_and_physical_ERA5_q_source": true
+    },
+    {
+      "balanced_three_DAY_speed_temperature": {
+        "mean": 0.00015074382851381756,
+        "nominal_sign": "INCLUDES_ZERO",
+        "source_tag_n": 109,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.0001978485761840792,
+          0.00048733057813105877
+        ]
+      },
+      "balanced_three_NIGHT_speed_temperature": {
+        "mean": 0.0007570427699369694,
+        "nominal_sign": "POSITIVE",
+        "source_tag_n": 109,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0002864594070891635,
+          0.0012303975464622338
+        ]
+      },
+      "balanced_three_solar_q_speed_temperature": {
+        "mean": 0.000606298941423152,
+        "nominal_sign": "POSITIVE",
+        "source_tag_n": 109,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          5.938466510521609e-05,
+          0.0011361697491752154
+        ]
+      },
+      "equal_three_minus_original_q_temperature": {
+        "mean": 3.549069930015817e-05,
+        "nominal_sign": "INCLUDES_ZERO",
+        "source_tag_n": 109,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.00043079480177008367,
+          0.00043870363786711777
+        ]
+      },
+      "hold_stage": null,
+      "hold_type": null,
+      "original_native_taxon": "Odocoileus hemionus",
+      "original_solar_q_speed_temperature": {
+        "mean": 0.0005708082421229938,
+        "nominal_sign": "POSITIVE",
+        "source_tag_n": 109,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.00023982711215001924,
+          0.000914417073313663
+        ]
+      },
+      "original_source_DOI": "10.5441/001/1.703",
+      "original_source_fraction_solar_tag_dates_unequal_day_night_step_count": 0.9853074004937676,
+      "original_source_independent_tag_count": 109,
+      "original_source_tag_solar_days_in_model_not_independent": 16607,
+      "source_key": "mule_old_wyoming",
+      "source_status": "SOURCE_BALANCED_3_EACH_COMPONENT_ESTIMABLE",
+      "source_verified_original_MD5_and_physical_ERA5_q_source": true
+    },
+    {
+      "balanced_three_DAY_speed_temperature": {
+        "mean": -0.0009354578300978441,
+        "nominal_sign": "NEGATIVE",
+        "source_tag_n": 129,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.0012967084155169801,
+          -0.000591477764922704
+        ]
+      },
+      "balanced_three_NIGHT_speed_temperature": {
+        "mean": 0.0010169026868165917,
+        "nominal_sign": "POSITIVE",
+        "source_tag_n": 129,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.000784077235652583,
+          0.0012660282127012262
+        ]
+      },
+      "balanced_three_solar_q_speed_temperature": {
+        "mean": 0.001952360516914436,
+        "nominal_sign": "POSITIVE",
+        "source_tag_n": 129,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.001581834322884373,
+          0.0023529563405404724
+        ]
+      },
+      "equal_three_minus_original_q_temperature": {
+        "mean": -9.353387453332931e-05,
+        "nominal_sign": "INCLUDES_ZERO",
+        "source_tag_n": 129,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.0002797566494942786,
+          9.634723952673679e-05
+        ]
+      },
+      "hold_stage": null,
+      "hold_type": null,
+      "original_native_taxon": "Odocoileus hemionus",
+      "original_solar_q_speed_temperature": {
+        "mean": 0.002045894391447765,
+        "nominal_sign": "POSITIVE",
+        "source_tag_n": 129,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.001700096767321379,
+          0.0023984288027900525
+        ]
+      },
+      "original_source_DOI": "10.5441/001/1.708",
+      "original_source_fraction_solar_tag_dates_unequal_day_night_step_count": 0.959806019605136,
+      "original_source_independent_tag_count": 129,
+      "original_source_tag_solar_days_in_model_not_independent": 57944,
+      "source_key": "mule_new_sublette",
+      "source_status": "SOURCE_BALANCED_3_EACH_COMPONENT_ESTIMABLE",
+      "source_verified_original_MD5_and_physical_ERA5_q_source": true
+    }
+  ],
+  "equal_three_DAY_Tmax_nominal_negative_sources": 1,
+  "equal_three_NIGHT_Tmax_nominal_positive_sources": 3,
+  "equal_three_q_Tmax_nominal_positive_sources": 3,
+  "equal_three_vs_full_q_change_source_95_sign": {
+    "mule_new_sublette": "INCLUDES_ZERO",
+    "mule_old_utah": "NEGATIVE",
+    "mule_old_wyoming": "INCLUDES_ZERO"
+  },
+  "no_original_GPS_animal_ID_source_exact_date_grid_or_individual_result_exported": true,
+  "observed_GPS_sampling_robustness_not_causal_temperature_effect": true,
+  "original_source_studies_with_equal_step_model": 3,
+  "original_source_study_DOI_count": 3,
+  "prior_original_day_night_source_git_blob_preserved": "804bcbfcb3ab4ddf8fc1ea2e3d932ee00dba96fd",
+  "source_data_selected_after_prior_positive_heat": true,
+  "source_previous_12_ERA5_raw_SHA_HOLD": true,
+  "source_previous_48_irradiance_heading_signed_external_result_NOT_REPLICATED": true,
+  "source_status_counts": {
+    "SOURCE_BALANCED_3_EACH_COMPONENT_ESTIMABLE": 3
+  },
+  "stage": "POST_PRIOR_THREE_SOURCE_GPS_DAY_NIGHT_THERMAL_FIRST_BALANCED_INTERVAL_SENSITIVITY",
+  "three_original_source_DOIs_not_verified_independent_populations": true,
+  "version": "RSDS_THREE_MULE_SOURCE_EQUAL_GPS_INTERVAL_DAY_NIGHT_FIRST_META_V1"
+}
