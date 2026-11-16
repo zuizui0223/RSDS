@@ -1,0 +1,472 @@
+{
+  "all_original_three_native_source_studies_including_HOLD": [
+    {
+      "current_weather_grid_HOLDS": 0,
+      "current_weather_grid_count": 23,
+      "exact_original_weather_physical_snapshot_replayed": true,
+      "month_vs_raw_Tmax_paired_nominal_CI": "INCLUDES_ZERO",
+      "new_month_same_tag_model": {
+        "all_nine_estimands_share_identical_original_tag_year_month_date_support": true,
+        "bootstrap_tags_resampled_jointly_all_nine": true,
+        "eligible_original_tagged_animals_joint_all_three": 1596,
+        "month_partial_joint_estimands": {
+          "delta_month_minus_raw_L": {
+            "estimate": -0.00034130084091510215,
+            "nominal_CI_sign": "INCLUDES_ZERO",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.0017449161326967009,
+              0.0011224367509441444
+            ]
+          },
+          "delta_month_minus_raw_Tmax": {
+            "estimate": -1.663532645712549e-05,
+            "nominal_CI_sign": "INCLUDES_ZERO",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -4.7762057389958774e-05,
+              1.580082058154084e-05
+            ]
+          },
+          "delta_month_minus_raw_water": {
+            "estimate": 0.009329111966545943,
+            "nominal_CI_sign": "POSITIVE",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.006494653356620344,
+              0.01230427152217234
+            ]
+          },
+          "month_L_given_Tmax_water": {
+            "estimate": -0.0009511472670139658,
+            "nominal_CI_sign": "INCLUDES_ZERO",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.0026717018514013802,
+              0.0008120117900812725
+            ]
+          },
+          "month_Tmax_given_L_water": {
+            "estimate": 0.0010870861267833559,
+            "nominal_CI_sign": "POSITIVE",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.0009743831491874705,
+              0.0011989399731576582
+            ]
+          },
+          "month_water_given_Tmax_L": {
+            "estimate": 0.008928117103368013,
+            "nominal_CI_sign": "POSITIVE",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.0043510830509190775,
+              0.013852411912260684
+            ]
+          },
+          "raw_L_given_Tmax_water": {
+            "estimate": -0.0006098464260988636,
+            "nominal_CI_sign": "INCLUDES_ZERO",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.0018351267765696869,
+              0.0006144420184147496
+            ]
+          },
+          "raw_Tmax_given_L_water": {
+            "estimate": 0.0011037214532404812,
+            "nominal_CI_sign": "POSITIVE",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.0009935831616739426,
+              0.0012176564476943082
+            ]
+          },
+          "raw_water_given_Tmax_L": {
+            "estimate": -0.0004009948631779313,
+            "nominal_CI_sign": "INCLUDES_ZERO",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.004316318751397094,
+              0.003439329102326226
+            ]
+          }
+        },
+        "original_joint_date_count_not_independent": 241137,
+        "original_joint_tag_month_blocks": 9765,
+        "original_tag_qualified_month_joint_years": 2112
+      },
+      "old_weather_source_grid_count": 23,
+      "original_native": "Odocoileus hemionus",
+      "prior_first_Tmax_joint_source": {
+        "mean": 0.0010874383408601663,
+        "nominal_sign": "POSITIVE",
+        "original_source_tagged_animals": 1665,
+        "original_tag_bootstrap95": [
+          0.0009715393439713175,
+          0.0012056717896385114
+        ],
+        "source_original_animal_years": 2213,
+        "status": "descriptive_within_original_animal_year"
+      },
+      "prior_first_daylength_joint_source": {
+        "mean": -0.001512543796980752,
+        "nominal_sign": "NEGATIVE",
+        "original_source_tagged_animals": 1653,
+        "original_tag_bootstrap95": [
+          -0.0027240490855629375,
+          -0.00022197787473087193
+        ],
+        "source_original_animal_years": 2197,
+        "status": "descriptive_within_original_animal_year"
+      },
+      "prior_first_water_joint_source": {
+        "mean": -0.000554915747917809,
+        "nominal_sign": "INCLUDES_ZERO",
+        "original_source_tagged_animals": 1424,
+        "original_tag_bootstrap95": [
+          -0.0038946480537065528,
+          0.0027780059852363062
+        ],
+        "source_original_animal_years": 1874,
+        "status": "descriptive_within_original_animal_year"
+      },
+      "source_HOLD_stage": null,
+      "source_HOLD_type": null,
+      "source_key": "mule_old_utah",
+      "source_month_L_nominal_CI": "INCLUDES_ZERO",
+      "source_month_Tmax_nominal_CI": "POSITIVE",
+      "source_month_water_nominal_CI": "POSITIVE",
+      "source_original_DOI": "10.5441/001/1.711",
+      "source_q_and_old_climate_means_replayed": true,
+      "source_status": "SOURCE_MONTH_JOINT_ESTIMABLE"
+    },
+    {
+      "current_weather_grid_HOLDS": 0,
+      "current_weather_grid_count": 4,
+      "exact_original_weather_physical_snapshot_replayed": true,
+      "month_vs_raw_Tmax_paired_nominal_CI": "INCLUDES_ZERO",
+      "new_month_same_tag_model": {
+        "all_nine_estimands_share_identical_original_tag_year_month_date_support": true,
+        "bootstrap_tags_resampled_jointly_all_nine": true,
+        "eligible_original_tagged_animals_joint_all_three": 109,
+        "month_partial_joint_estimands": {
+          "delta_month_minus_raw_L": {
+            "estimate": 0.0032990532270529907,
+            "nominal_CI_sign": "INCLUDES_ZERO",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -4.1860468061447845e-05,
+              0.006549907570726256
+            ]
+          },
+          "delta_month_minus_raw_Tmax": {
+            "estimate": -1.643226643754115e-05,
+            "nominal_CI_sign": "INCLUDES_ZERO",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -9.870128245430542e-05,
+              6.537056731481102e-05
+            ]
+          },
+          "delta_month_minus_raw_water": {
+            "estimate": 0.0035288647622319846,
+            "nominal_CI_sign": "INCLUDES_ZERO",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.006235354063659507,
+              0.012077146235531879
+            ]
+          },
+          "month_L_given_Tmax_water": {
+            "estimate": 0.008662733557829884,
+            "nominal_CI_sign": "POSITIVE",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.005044709456382208,
+              0.012251180951190595
+            ]
+          },
+          "month_Tmax_given_L_water": {
+            "estimate": 0.0005708082421229938,
+            "nominal_CI_sign": "POSITIVE",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.00023982711215001924,
+              0.000914417073313663
+            ]
+          },
+          "month_water_given_Tmax_L": {
+            "estimate": 0.009565564485386877,
+            "nominal_CI_sign": "INCLUDES_ZERO",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.0031666013787495866,
+              0.020904271951466675
+            ]
+          },
+          "raw_L_given_Tmax_water": {
+            "estimate": 0.005363680330776893,
+            "nominal_CI_sign": "POSITIVE",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.003988772503950109,
+              0.006708533896724327
+            ]
+          },
+          "raw_Tmax_given_L_water": {
+            "estimate": 0.000587240508560535,
+            "nominal_CI_sign": "POSITIVE",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.0002573718946713123,
+              0.0009244569543157089
+            ]
+          },
+          "raw_water_given_Tmax_L": {
+            "estimate": 0.006036699723154893,
+            "nominal_CI_sign": "INCLUDES_ZERO",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.0027942767844506425,
+              0.015436109083838275
+            ]
+          }
+        },
+        "original_joint_date_count_not_independent": 16607,
+        "original_joint_tag_month_blocks": 656,
+        "original_tag_qualified_month_joint_years": 153
+      },
+      "old_weather_source_grid_count": 4,
+      "original_native": "Odocoileus hemionus",
+      "prior_first_Tmax_joint_source": {
+        "mean": 0.0005549261472208612,
+        "nominal_sign": "POSITIVE",
+        "original_source_tagged_animals": 118,
+        "original_tag_bootstrap95": [
+          0.00018573237176226903,
+          0.0009024650214143654
+        ],
+        "source_original_animal_years": 165,
+        "status": "descriptive_within_original_animal_year"
+      },
+      "prior_first_daylength_joint_source": {
+        "mean": 0.0043043051616359455,
+        "nominal_sign": "POSITIVE",
+        "original_source_tagged_animals": 117,
+        "original_tag_bootstrap95": [
+          0.0029125125854527786,
+          0.005739750492638002
+        ],
+        "source_original_animal_years": 164,
+        "status": "descriptive_within_original_animal_year"
+      },
+      "prior_first_water_joint_source": {
+        "mean": 0.007148048930309145,
+        "nominal_sign": "INCLUDES_ZERO",
+        "original_source_tagged_animals": 95,
+        "original_tag_bootstrap95": [
+          -0.0021937380577737946,
+          0.016271222351814656
+        ],
+        "source_original_animal_years": 126,
+        "status": "descriptive_within_original_animal_year"
+      },
+      "source_HOLD_stage": null,
+      "source_HOLD_type": null,
+      "source_key": "mule_old_wyoming",
+      "source_month_L_nominal_CI": "POSITIVE",
+      "source_month_Tmax_nominal_CI": "POSITIVE",
+      "source_month_water_nominal_CI": "INCLUDES_ZERO",
+      "source_original_DOI": "10.5441/001/1.703",
+      "source_q_and_old_climate_means_replayed": true,
+      "source_status": "SOURCE_MONTH_JOINT_ESTIMABLE"
+    },
+    {
+      "current_weather_grid_HOLDS": 0,
+      "current_weather_grid_count": 9,
+      "exact_original_weather_physical_snapshot_replayed": true,
+      "month_vs_raw_Tmax_paired_nominal_CI": "POSITIVE",
+      "new_month_same_tag_model": {
+        "all_nine_estimands_share_identical_original_tag_year_month_date_support": true,
+        "bootstrap_tags_resampled_jointly_all_nine": true,
+        "eligible_original_tagged_animals_joint_all_three": 129,
+        "month_partial_joint_estimands": {
+          "delta_month_minus_raw_L": {
+            "estimate": -0.004954882913656431,
+            "nominal_CI_sign": "INCLUDES_ZERO",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.010582601178951106,
+              0.0009155625068374383
+            ]
+          },
+          "delta_month_minus_raw_Tmax": {
+            "estimate": 0.0003356096838877788,
+            "nominal_CI_sign": "POSITIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.00016295077247878212,
+              0.0005058826262610074
+            ]
+          },
+          "delta_month_minus_raw_water": {
+            "estimate": -0.010100682939534545,
+            "nominal_CI_sign": "INCLUDES_ZERO",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.0242999693047476,
+              0.005125346351252138
+            ]
+          },
+          "month_L_given_Tmax_water": {
+            "estimate": -0.020726157464471612,
+            "nominal_CI_sign": "NEGATIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.02671577215769304,
+              -0.014469524706013247
+            ]
+          },
+          "month_Tmax_given_L_water": {
+            "estimate": 0.002045894391447765,
+            "nominal_CI_sign": "POSITIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.001700096767321379,
+              0.0023984288027900525
+            ]
+          },
+          "month_water_given_Tmax_L": {
+            "estimate": -0.03914272375168191,
+            "nominal_CI_sign": "NEGATIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.05725018320563125,
+              -0.021673083276020716
+            ]
+          },
+          "raw_L_given_Tmax_water": {
+            "estimate": -0.01577127455081518,
+            "nominal_CI_sign": "NEGATIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.01863283239296078,
+              -0.013162402202913034
+            ]
+          },
+          "raw_Tmax_given_L_water": {
+            "estimate": 0.0017102847075599866,
+            "nominal_CI_sign": "POSITIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.0014020162359374398,
+              0.0020169210610205554
+            ]
+          },
+          "raw_water_given_Tmax_L": {
+            "estimate": -0.029042040812147365,
+            "nominal_CI_sign": "NEGATIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.039365804770306406,
+              -0.018617194656401166
+            ]
+          }
+        },
+        "original_joint_date_count_not_independent": 57944,
+        "original_joint_tag_month_blocks": 2273,
+        "original_tag_qualified_month_joint_years": 268
+      },
+      "old_weather_source_grid_count": 9,
+      "original_native": "Odocoileus hemionus",
+      "prior_first_Tmax_joint_source": {
+        "mean": 0.0015891631837123207,
+        "nominal_sign": "POSITIVE",
+        "original_source_tagged_animals": 132,
+        "original_tag_bootstrap95": [
+          0.0011113808046575263,
+          0.0020064926132907024
+        ],
+        "source_original_animal_years": 283,
+        "status": "descriptive_within_original_animal_year"
+      },
+      "prior_first_daylength_joint_source": {
+        "mean": -0.017056936669265797,
+        "nominal_sign": "NEGATIVE",
+        "original_source_tagged_animals": 132,
+        "original_tag_bootstrap95": [
+          -0.021385120628905397,
+          -0.01358773416917546
+        ],
+        "source_original_animal_years": 282,
+        "status": "descriptive_within_original_animal_year"
+      },
+      "prior_first_water_joint_source": {
+        "mean": -0.02808521184238587,
+        "nominal_sign": "NEGATIVE",
+        "original_source_tagged_animals": 127,
+        "original_tag_bootstrap95": [
+          -0.03702644382387614,
+          -0.018117939051190073
+        ],
+        "source_original_animal_years": 246,
+        "status": "descriptive_within_original_animal_year"
+      },
+      "source_HOLD_stage": null,
+      "source_HOLD_type": null,
+      "source_key": "mule_new_sublette",
+      "source_month_L_nominal_CI": "NEGATIVE",
+      "source_month_Tmax_nominal_CI": "POSITIVE",
+      "source_month_water_nominal_CI": "NEGATIVE",
+      "source_original_DOI": "10.5441/001/1.708",
+      "source_q_and_old_climate_means_replayed": true,
+      "source_status": "SOURCE_MONTH_JOINT_ESTIMABLE"
+    }
+  ],
+  "eligible_month_joint_source_studies": 3,
+  "first_three_source_weather_results_git_blob_unchanged": "25db513c9e6804a282bcc8110565e033273f03b6",
+  "no_inference_of_direct_temperature_thermal_avoidance_or_evolution": true,
+  "nominal_within_month_Tmax_negative_source_count": 0,
+  "nominal_within_month_Tmax_positive_source_count": 3,
+  "old_ERA5_12_original_raw_SHA_HOLD": true,
+  "old_solar_48_source_signed_direction_external_NOT_REPLICATED": true,
+  "original_source_GPS_tracks_dates_tags_weather_grids_and_individual_estimates_not_exported": true,
+  "original_source_study_DOI_denominator": 3,
+  "original_tag_month_bootstrap_nominal_not_population_random_effects_CI": true,
+  "source_native_nonindependent_study_populations": true,
+  "source_status_counts": {
+    "SOURCE_MONTH_JOINT_ESTIMABLE": 3
+  },
+  "source_weather_all_grid_same_physical_sha_required_for_inference": true,
+  "species_model_context_chosen_after_prior_outcomes": true,
+  "stage": "POST_PRIOR_HEAT_POSITIVE_THREE_SOURCE_WITHIN_ORIGINAL_TAG_YEAR_MONTH_NEW_JOINT",
+  "version": "RSDS_THREE_MULE_SOURCE_NATIVE_MONTH_JOINT_CLIMATE_FIRST_META_V1"
+}
