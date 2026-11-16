@@ -1,0 +1,112 @@
+name: RSDS 3 original mule equal DAY NIGHT observed GPS interval sampling robustness
+on:
+  push:
+    branches:
+      - analysis/rsds-three-mule-balanced-day-night-gps-opportunity-20261116
+    paths:
+      - 'research/RSDS_THREE_MULE_BALANCED_DAY_NIGHT_OPPORTUNITY_CONTRACT_20261116.json'
+      - 'scripts/rsds_three_mule_equal_gps_day_night_opportunity_v1.py'
+      - 'scripts/aggregate_rsds_three_mule_equal_gps_day_night_opportunity_v1.py'
+      - 'tests/test_rsds_three_mule_equal_gps_day_night_opportunity_v1.py'
+      - '.github/workflows/rsds-three-mule-equal-day-night-gps-opportunity-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_q_exact_replay_three_gps_step_opportunity_known_truth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original tagged animal data numerical dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Verify original source q identity, source DOI, fixed 3-step selection and synthetic known true slope
+        run: python -m unittest discover -s tests -p 'test_rsds_three_mule_equal_gps_day_night_opportunity_v1.py' -v
+      - name: Original ODSP to RSDS science source receipts
+        run: python -m scripts.verify_rsds_migration
+  original_three_source_equal_step_opportunity:
+    needs: original_q_exact_replay_three_gps_step_opportunity_known_truth
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        index: [0,1,2]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Math and astronomy dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Verify original MD5, GPS tag/day q and existing ERA5 source SHA before matched 3 step/daypart balance
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_three_mule_equal_gps_day_night_opportunity_v1 --index ${{ matrix.index }} --out outputs/source_$(printf "%02d" ${{ matrix.index }}).json
+      - name: Upload original study-only aggregate without original source GPS/animal IDs/date cells
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-mule-equal-day-night-three-source-${{ matrix.index }}-v1
+          path: outputs/source_*.json
+          if-no-files-found: error
+  original_three_source_equal_gps_day_night_meta:
+    needs: original_three_source_equal_step_opportunity
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source model helpers numerical dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Download exactly all 3 original study results including SOURCE HOLD
+        uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-original-mule-equal-day-night-three-source-*-v1
+          path: outputs/all
+          merge-multiple: true
+      - name: Commit scientific source-DOI equal-interval robustness outcome without source dropping
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.aggregate_rsds_three_mule_equal_gps_day_night_opportunity_v1 --directory outputs/all --out research/RSDS_THREE_MULE_EQUAL_GPS_DAY_NIGHT_FIRST_RESULT_20261116.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path('research/RSDS_THREE_MULE_EQUAL_GPS_DAY_NIGHT_FIRST_RESULT_20261116.json').read_text())
+          assert x['original_source_study_DOI_count']==3
+          assert len(x['all_original_three_study_source_rows_including_HOLD'])==3
+          assert sum(x['source_status_counts'].values())==3
+          assert x['prior_original_day_night_source_git_blob_preserved']=='804bcbfcb3ab4ddf8fc1ea2e3d932ee00dba96fd'
+          assert x['source_previous_48_irradiance_heading_signed_external_result_NOT_REPLICATED'] is True
+          assert x['source_previous_12_ERA5_raw_SHA_HOLD'] is True
+          assert x['no_original_GPS_animal_ID_source_exact_date_grid_or_individual_result_exported'] is True
+          print('RSDS_THREE_SOURCE_EQUAL_THREE_GPS_INTERVAL_DAYPART_FIRST_RESULT_OR_HOLD')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-three-original-mule-equal-day-night-step-meta-first-v1
+          path: research/RSDS_THREE_MULE_EQUAL_GPS_DAY_NIGHT_FIRST_RESULT_20261116.json
+          if-no-files-found: error
+      - name: Commit immutable original study unit first result
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_THREE_MULE_EQUAL_GPS_DAY_NIGHT_FIRST_RESULT_20261116.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: same tagged GPS dates and equal daytime nighttime accepted interval opportunities"
+            git fetch origin analysis/rsds-three-mule-balanced-day-night-gps-opportunity-20261116
+            git rebase origin/analysis/rsds-three-mule-balanced-day-night-gps-opportunity-20261116
+            git push origin HEAD:analysis/rsds-three-mule-balanced-day-night-gps-opportunity-20261116
+          fi
