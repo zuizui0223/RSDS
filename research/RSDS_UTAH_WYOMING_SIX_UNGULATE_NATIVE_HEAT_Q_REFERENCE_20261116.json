@@ -1,0 +1,144 @@
+{
+  "version": "RSDS_UTAH_WYOMING_SIX_SOURCE_NATIVE_UNGULATE_Q_TMAX_ARCHIVED_FIRST_V1",
+  "date": "2026-11-16",
+  "stage": "POST_PRIOR_POSITIVE_MULE_HEAT_OUTCOMES_SOURCE_ARCHIVED_NATIVE_COMPARISON_ONLY_NO_NEW_GPS",
+  "question": "Within two original multi-taxon field source archives and exact original daily climate controls, do all native ungulate species have the same q~Tmax | daylength+prior30day-PminusET0 sign? A source archive is NOT a shared site/month experimental block.",
+  "source_provenance": {
+    "utah": {
+      "doi": "10.5441/001/1.711",
+      "original_run_id": 39878716871,
+      "original_job_id": 120170619463,
+      "original_signed_artifact_id": 12469413417,
+      "original_artifact_digest": "sha256:ab29be110408b8f028b2f1fc925741f6c7935c95c10a265e6fa9587a146493f0",
+      "original_source_contract_path": "research/UTAH_FOUR_TAXON_DAILY_CLIMATE_DAYLIGHT_V1_20261023.json",
+      "contract_git_blob": "b62ffc022c416390282a16120c6a6234560ff211",
+      "original_source_taxa": [
+        "Antilocapra americana",
+        "Cervus elaphus",
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "original_daily_ERA5_grid_count": 28,
+      "original_source_weather_grid_hold_count": 0,
+      "original_q_and_daylength_results_replayed": true
+    },
+    "wyoming": {
+      "doi": "10.5441/001/1.703",
+      "first_original_source_run_id": 39878174016,
+      "original_source_result_path": "research/wyoming_two_ungulates_20261022/wyoming_daily_era5_original_result.json",
+      "result_git_blob": "104b2d62e6aacf7ccfc41d5a6d866832caaadab6",
+      "original_source_taxa": [
+        "Odocoileus hemionus",
+        "Ovis canadensis"
+      ],
+      "original_daily_ERA5_grid_count": 6,
+      "original_source_weather_grid_hold_count": 0,
+      "original_q_and_daylength_results_replayed": true
+    }
+  },
+  "source_count": 2,
+  "source_native_rows": 6,
+  "source_study_native_q_Tmax_original_animal_bootstrap_sign_counts": {
+    "INCLUDES_ZERO": 2,
+    "POSITIVE": 3,
+    "NEGATIVE": 1
+  },
+  "original_tmax_q_native_rows": [
+    {
+      "source": "utah_2019_2020",
+      "study_doi": "10.5441/001/1.711",
+      "native_taxon": "Antilocapra americana",
+      "tag_n": 212,
+      "animal_years": 276,
+      "tmax_q_per_degree_C": -0.00003709549191774018,
+      "original_tag_bootstrap_95": [
+        -0.00054028943239106,
+        0.0005021062835367739
+      ],
+      "nominal_sign": "INCLUDES_ZERO",
+      "original_q_replayed": -0.1171668232141959,
+      "original_source_daylevel_ERA5_complete_q_days": 30478
+    },
+    {
+      "source": "utah_2019_2020",
+      "study_doi": "10.5441/001/1.711",
+      "native_taxon": "Cervus elaphus",
+      "tag_n": 331,
+      "animal_years": 474,
+      "tmax_q_per_degree_C": 0.001379585062859775,
+      "original_tag_bootstrap_95": [
+        0.001005753487275287,
+        0.0017548621542779119
+      ],
+      "nominal_sign": "POSITIVE",
+      "original_q_replayed": -0.031888720397475416,
+      "original_source_daylevel_ERA5_complete_q_days": 45132
+    },
+    {
+      "source": "utah_2019_2020",
+      "study_doi": "10.5441/001/1.711",
+      "native_taxon": "Odocoileus hemionus",
+      "tag_n": 1665,
+      "animal_years": 2213,
+      "tmax_q_per_degree_C": 0.0010871325737108555,
+      "original_tag_bootstrap_95": [
+        0.0009710517784968601,
+        0.0012051658568592526
+      ],
+      "nominal_sign": "POSITIVE",
+      "original_q_replayed": -0.02184895488685285,
+      "original_source_daylevel_ERA5_complete_q_days": 249366
+    },
+    {
+      "source": "utah_2019_2020",
+      "study_doi": "10.5441/001/1.711",
+      "native_taxon": "Ovis canadensis",
+      "tag_n": 337,
+      "animal_years": 459,
+      "tmax_q_per_degree_C": -0.0009459477606676513,
+      "original_tag_bootstrap_95": [
+        -0.0012637510584227794,
+        -0.000627189630108885
+      ],
+      "nominal_sign": "NEGATIVE",
+      "original_q_replayed": -0.06576087192631512,
+      "original_source_daylevel_ERA5_complete_q_days": 44660
+    },
+    {
+      "source": "wyoming_2019_2020",
+      "study_doi": "10.5441/001/1.703",
+      "native_taxon": "Odocoileus hemionus",
+      "tag_n": 118,
+      "animal_years": 165,
+      "tmax_q_per_degree_C": 0.0005482351534262151,
+      "original_tag_bootstrap_95": [
+        0.00017695613304777105,
+        0.0008962389219461711
+      ],
+      "nominal_sign": "POSITIVE",
+      "original_q_replayed": true,
+      "original_source_daylevel_ERA5_complete_q_days": 17402
+    },
+    {
+      "source": "wyoming_2019_2020",
+      "study_doi": "10.5441/001/1.703",
+      "native_taxon": "Ovis canadensis",
+      "tag_n": 41,
+      "animal_years": 79,
+      "tmax_q_per_degree_C": 0.00011276498257463868,
+      "original_tag_bootstrap_95": [
+        -0.00013945493824262005,
+        0.00035775994269029955
+      ],
+      "nominal_sign": "INCLUDES_ZERO",
+      "original_q_replayed": true,
+      "original_source_daylevel_ERA5_complete_q_days": 7675
+    }
+  ],
+  "source_weighting": "Do not pool six taxon rows as six independent field-study populations; four share one Utah source and two share a Wyoming source. Original telemetry months, area and tagging opportunity differ even within one source study. Source specific original animal bootstrap 95 percentile intervals are nominal, no multiple testing correction.",
+  "source_original_weather_ERA5_version": "2026-10-23 historical source modelled 1-degree daily ERA5 arrays; NOT the newly fetched 2026-11-16 all-three-mule canonical physical SHA. Do not infer interstudy provider physical-array equality.",
+  "limitation": "This source-only archived-data comparison evaluates an observational pattern already discovered in other data; it is neither a controlled species x heat interaction nor independent same-cell-and-month q comparison, and does not establish causality, animal thermoregulatory behavior or generic nocturnal activity.",
+  "old_48_irradiance_solar_heading_signed_external_test": "NOT_REPLICATED",
+  "old_12_ERA5_raw_SHA_source_cases": "HOLD",
+  "raw_animal_GPS_tags_coordinates_exact_dates_weather_grid_not_exported": true
+}
