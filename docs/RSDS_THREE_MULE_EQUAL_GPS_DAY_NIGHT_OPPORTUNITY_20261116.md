@@ -22,12 +22,26 @@
 
 **解釈：** 少なくとも旧Wyomingの元GPS研究では、昼夜の区間**数**を同じ3に制限しても、気温と夜間GPS変位速度、および気温と夜間相対変位速度 `q` の正の関連は残る。昼夜で記録本数が違うだけでこの結果が生じた、という説明は弱まる。
 
+## 第2原研究Subletteでも同様の観測回数感度検証に成功
+
+[初回Action #43889333839](https://github.com/zuizui0223/RSDS/actions/runs/43889333839) で Sublette source index 2 は **SUCCESS**。元 `q` 適格標識個体129頭・元個体/日/気象サンプルを変えず、元の `q` および先行日中・夜間の温度係数と元タグbootstrapが再現された後、DAY/NIGHTそれぞれ元GPS時刻順最初・中央・最後の**3区間**で中央値を再計算した。
+
+| Sublette同一元タグ日付で区間数を3本に固定 | Tmax1℃当たりの係数 | 元標識個体bootstrap名目95% |
+|---|---:|---|
+| **DAY** | **−0.0009355** | **[−0.0012967,−0.0005915]** |
+| **NIGHT** | **+0.0010169** | **[+0.0007841,+0.0012660]** |
+| **q=NIGHT−DAY** | **+0.0019524** | **[+0.0015818,+0.0023530]** |
+
+元のSublette個体・日付における DAY と NIGHT の有効GPS区間数は **95.98%**で一致しなかったが、同じ3区間にした後もDAY負、NIGHT正、`q`正という**両側の温熱関連**が元個体の名目95%区間で残った。
+
+これで **Wyoming（109頭）・Sublette（129頭）の2/2処理済み研究は、昼夜観測本数を等しくした後でも夜間成分および夜間相対差の正方向が残る**。ただし2研究はともにWyoming周辺で、元標識個体群・生息地の独立性は未確認。**Utah source index0 はまだ解析中**であり、3/3の結果とは書かない。
+
 ## 再現ルートと結論の上限
 
 - [研究前に固定した3原研究の等区間設計](../research/RSDS_THREE_MULE_BALANCED_DAY_NIGHT_OPPORTUNITY_CONTRACT_20261116.json)
 - [元GPSから元の `q` と等3区間 `q` の両方を再計算するコード](../scripts/rsds_three_mule_equal_gps_day_night_opportunity_v1.py)
 - [元研究単位の欠測・HOLDを保持する集約](../scripts/aggregate_rsds_three_mule_equal_gps_day_night_opportunity_v1.py)
-- [実行ログ：Wyoming 研究別初回成功、Utah・Subletteは実行中](https://github.com/zuizui0223/RSDS/actions/runs/43889333839)
+- [実行ログ：Wyoming 研究別初回成功、Utahは実行中、Subletteは成功](https://github.com/zuizui0223/RSDS/actions/runs/43889333839)
 - [Review用PR #43](https://github.com/zuizui0223/RSDS/pull/43)
 
 この感度分析自体は以前の肯定結果を見て選択した**事後探索**。区間数をそろえても GPS 衛星捕捉・移動環境・センサー勤務スケジュール・ソーラー時刻内での測定位置の違いがなくなるわけではない。速度は実活動時間、体温や熱回避の直接観測でもない。3元研究間の個体群・標識個体の独立性は未確認であり、これを独立したグローバル研究のメタ効果とは数えない。
