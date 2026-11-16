@@ -1,0 +1,113 @@
+name: RSDS three original mule deer day/night temperature component decomposition
+on:
+  push:
+    branches:
+      - analysis/rsds-three-mule-day-night-heat-components-20261116
+    paths:
+      - 'research/RSDS_THREE_MULE_DAY_NIGHT_HEAT_COMPONENTS_CONTRACT_20261116.json'
+      - 'scripts/rsds_three_mule_day_night_heat_components_v1.py'
+      - 'scripts/aggregate_rsds_three_mule_day_night_heat_components_v1.py'
+      - 'tests/test_rsds_three_mule_day_night_heat_components_v1.py'
+      - '.github/workflows/rsds-three-mule-day-night-heat-components-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  known_truth_original_q_equals_night_minus_day:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install model original numerical prerequisite
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Test source q/daypart math, q heat bootstrap, three original DOI and HOLD before any new GPS download
+        run: python -m unittest discover -s tests -p 'test_rsds_three_mule_day_night_heat_components_v1.py' -v
+      - name: Recheck earlier source migration snapshot
+        run: python -m scripts.verify_rsds_migration
+  three_source_private_day_night_component_jobs:
+    needs: known_truth_original_q_equals_night_minus_day
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        index: [0,1,2]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Numerical source dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Replay original DAY and NIGHT GPS q identity, original ERA5 physical SHA and first source q heat bootstrap before component estimation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_three_mule_day_night_heat_components_v1 --index ${{ matrix.index }} --out outputs/source_$(printf "%02d" ${{ matrix.index }}).json
+      - name: Upload only per study source-group DAY/NIGHT coefficients/HOLDS
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-mule-day-night-temperature-source-${{ matrix.index }}-first-v1
+          path: outputs/source_*.json
+          if-no-files-found: error
+  original_three_source_native_day_night_temperature_synthesis:
+    needs: three_source_private_day_night_component_jobs
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Calculation/source numerical dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Download exactly three frozen original source summaries including source HOLD
+        uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-original-mule-day-night-temperature-source-*-first-v1
+          path: outputs/three
+          merge-multiple: true
+      - name: Require all three original DOIs and q=night-day source-level algebra
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.aggregate_rsds_three_mule_day_night_heat_components_v1 --directory outputs/three --out research/RSDS_THREE_MULE_DAY_NIGHT_HEAT_COMPONENTS_FIRST_RESULT_20261116.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('research/RSDS_THREE_MULE_DAY_NIGHT_HEAT_COMPONENTS_FIRST_RESULT_20261116.json')
+          d=json.loads(p.read_text())
+          assert d['registered_original_source_DOI_studies']==3
+          assert len(d['all_three_original_source_studies_including_SOURCE_HOLD'])==3
+          assert sum(d['original_source_status_counts'].values())==3
+          assert d['previous_first_month_q_heat_source_blob_unchanged']=='3ea7481049cc01e6601e6f2d76e482124e503a2a'
+          assert d['prior_48_original_source_irradiance_heading_signed_result_NOT_REPLICATED']
+          assert d['prior_12_ERA5_old_raw_SHA_cases_HOLD']
+          assert d['original_GPS_day_night_tag_positions_dates_individual_effects_not_exported']
+          print('RSDS_THREE_ORIGINAL_GPS_SOURCES_DAY_NIGHT_Q_ALGEBRA_SOURCE_STUDY_FIRST')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-three-mule-original-day-night-heat-components-first-v1
+          path: research/RSDS_THREE_MULE_DAY_NIGHT_HEAT_COMPONENTS_FIRST_RESULT_20261116.json
+          if-no-files-found: error
+      - name: Commit only source level original DAY/NIGHT science first result/HOLDS
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_THREE_MULE_DAY_NIGHT_HEAT_COMPONENTS_FIRST_RESULT_20261116.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: original three source GPS NIGHT vs DAY Tmax component contributions to q"
+            git fetch origin analysis/rsds-three-mule-day-night-heat-components-20261116
+            git rebase origin/analysis/rsds-three-mule-day-night-heat-components-20261116
+            git push origin HEAD:analysis/rsds-three-mule-day-night-heat-components-20261116
+          fi
