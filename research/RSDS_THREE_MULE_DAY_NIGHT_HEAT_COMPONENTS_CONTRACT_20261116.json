@@ -1,0 +1,58 @@
+{
+  "version": "RSDS_THREE_MULE_SOURCE_NATIVE_DAY_NIGHT_HEAT_COMPONENTS_V1",
+  "date": "2026-11-16",
+  "stage": "POST_SUCCESS_3_SOURCE_HEAT_ASSOCIATIONS_BEFORE_NEW_DAY_NIGHT_SEPARATE_COMPONENTS_FIRST_GPS_READ",
+  "question": "On exactly the same original mule-deer GPS source-tag/year/date and same year-month, daily Tmax, astronomical daylength, prior 30-day P-ET0, does the positive observed q=NIGHT-DAY association arise from a negative DAY component, positive NIGHT component, or both?",
+  "original_old_three_source_month_climate_contract_path": "research/RSDS_THREE_MULE_WITHIN_MONTH_HEAT_CONTRACT_20261116.json",
+  "original_old_three_source_month_climate_contract_blob": "4e5d31d06b157db329b50018dc87754f0bd7f311",
+  "original_old_three_source_month_climate_first_result_path": "research/RSDS_THREE_MULE_WITHIN_TAG_MONTH_HEAT_FIRST_RESULT_20261116.json",
+  "original_old_three_source_month_climate_first_result_blob": "3ea7481049cc01e6601e6f2d76e482124e503a2a",
+  "original_old_three_source_month_climate_script_path": "scripts/rsds_three_mule_within_month_joint_weather_v1.py",
+  "original_old_three_source_month_climate_script_blob": "42cfb74f8a6542b46c4e3158908fa207d884ef3b",
+  "original_daily_source_admission_script_path": "scripts/movebank_wyoming_individual_era5_20261023.py",
+  "original_daily_source_admission_script_blob": "d98b7c8aed8dd8cc603dd6516e44efc671008556",
+  "original_original_GPS_step_interval_script_path": "scripts/movebank_solar_movement_20261019.py",
+  "original_original_GPS_step_interval_script_blob": "7e02edd1e806a9adcdbc60b6a3943bca721d4145",
+  "target_species": "Odocoileus hemionus",
+  "original_source_IDs": [
+    "10.5441/001/1.711",
+    "10.5441/001/1.703",
+    "10.5441/001/1.708"
+  ],
+  "original_first_month_source_individual_count_by_source": [
+    1596,
+    109,
+    129
+  ],
+  "original_month_Tmax_joint_nominal_direction_by_source": [
+    "POSITIVE",
+    "POSITIVE",
+    "POSITIVE"
+  ],
+  "original_month_Tmax_joint_means_by_source": [
+    0.0010870861267833559,
+    0.0005708082421229938,
+    0.002045894391447765
+  ],
+  "original_provider_identity_policy": "Re-fetch only frozen same 3 original GPS files with original provider UUID/size/MD5. All original full-source native GPS q/daylength mean+tag counts must replay before weather. Fresh ERA5 same source GPS-observed cell/date physical arrays MUST match previous original SHA256 fingerprints exactly. All six prior daily source weather model means+counts and nine previous source native year-month joint coefficients/tag counts must replay; if mismatch/HOLD, no new biological effect.",
+  "source_datetime_and_q_rule": "Preserve the existing original one selected UTC-hourly fix per tag, 0.5–2h accepted GPS interval at <=60 km/h, endpoints and midpoint identical solar date and DAY/NIGHT part, at least three original steps per original tagged solar date in both DAY and NIGHT, at least ten q-qualified original dates per original tagged calendar year.",
+  "component_definition": "For each SAME accepted source GPS tag/solar date, yDAY=log1p(median accepted DAY speed km/h), yNIGHT=log1p(median accepted NIGHT speed km/h), q=yNIGHT-yDAY. Reconstruct ALL original source tag/year/date q, local solar-daylength and cell from original source intervals and fail closed unless exact 1e-10 match to existing source_admitted_daily. No tag/date screening on movement values beyond original preexisting q observation eligibility.",
+  "exact_same_month_cohort": "Use the old year-month joint q~Tmax+astronomical-daylength+prior30day P−ET0 eligibility, all three predictor rank/variance thresholds, >=5 original qualified days per month, >=0.05h daylight span/month, >=2 months/year, >=15 original qualified days/year, >=0.05 hours² within-month daylength centered Sxx, >=5 independent source tags. Qualify on previous q and weather support only; DAY and NIGHT contributions can NEVER be admitted independently or on their coefficient/sign.",
+  "primary_estimand": "On SAME prior admitted original tag/year/month/weather dates, fit joint q~Tmax+L+W and separately DAY~Tmax+L+W and NIGHT~Tmax+L+W using within-tag-year-month centering. Equal eligible original tag-years per original tag and equal tags per source; 2000 paired source-tag bootstrap resamples used for all three, verifying b_q == b_NIGHT-b_DAY for each tag/year, tag and source, and bootstrap draws.",
+  "component_endpoint_keys": [
+    "q_Tmax_given_L_water",
+    "day_Tmax_given_L_water",
+    "night_Tmax_given_L_water",
+    "night_minus_day_Tmax_reconstructed"
+  ],
+  "secondary_estimands": "On exactly the same original tags/months/dates, fit the three component coefficients with no month demeaning but same L and W controls and test paired month-minus-raw changes, including source day and night components. Report all missing/null/finite CIs unselected.",
+  "component_classification_rule": "Only if CI of DAY coefficient is nominal negative and NIGHT CI includes zero, describe 'daytime-decline-consistent'; only if NIGHT CI nominal positive and DAY CI includes zero, 'nighttime-increase-consistent'; if both components nominally directional, describe both; never claim a mechanistic distinction merely from different statistical significance, and do not claim any direct behavioral thermoregulation. If neither source component excludes zero, mark component uncertainty although q CI may exclude zero.",
+  "inferential_unit": "Independent original tagged animals within each original SOURCE study, not GPS intervals, days, months or 3 necessarily independent populations. No pooled global meta p-value.",
+  "source_independence_verified": false,
+  "thermal_causality_verified": false,
+  "study_species_selection_made_after_prior_heat_findings": true,
+  "same_source_weather_sha_required": true,
+  "no_raw_GPS_trajectory_source_tag_ID_exact_dates_private_ERA5_cell_or_individual_component_results_exported": true,
+  "previous_48_irradiance_heading_external_signed_result": "NOT_REPLICATED",
+  "previous_12_ERA5_raw_SHA_source_status": "HOLD"
+}
