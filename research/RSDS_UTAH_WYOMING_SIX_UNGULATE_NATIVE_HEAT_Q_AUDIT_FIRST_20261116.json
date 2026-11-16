@@ -1,0 +1,32 @@
+{
+  "distinct_original_field_study_DOIs": 2,
+  "historical_ERA5_physical_version_not_equal_to_new_three_mule_20261116": true,
+  "original_12_ERA5_raw_SHA_HOLD": true,
+  "original_48_source_sunlight_heading_external_NOT_REPLICATED": true,
+  "original_DIL_gps_q_is_not_true_activity_duration": true,
+  "original_GPS_and_weather_event_rows_reopened": 0,
+  "original_source_native_taxon_study_rows": 6,
+  "same_source_does_not_establish_same_grid_month_animal_cohort": true,
+  "same_taxon_twice_tested_species": [
+    "Odocoileus hemionus",
+    "Ovis canadensis"
+  ],
+  "source_archived_four_native_original_utah_signed_artifact_digest": "sha256:ab29be110408b8f028b2f1fc925741f6c7935c95c10a265e6fa9587a146493f0",
+  "source_bootstrap_not_interaction_CI_or_world_meta_test": true,
+  "source_native_q_Tmax_nominal95_CI_sign_counts": {
+    "INCLUDES_ZERO": 2,
+    "NEGATIVE": 1,
+    "POSITIVE": 3
+  },
+  "version": "RSDS_SIX_ARCHIVED_UNGULATE_NATIVE_SOURCE_TMAX_AUDIT_V1",
+  "within_Utah_negative_species": [
+    "Ovis canadensis"
+  ],
+  "within_Utah_positive_species": [
+    "Cervus elaphus",
+    "Odocoileus hemionus"
+  ],
+  "within_Utah_undetermined_species": [
+    "Antilocapra americana"
+  ]
+}
