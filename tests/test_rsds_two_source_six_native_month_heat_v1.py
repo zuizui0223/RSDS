@@ -72,8 +72,8 @@ class TwoOriginalSourceSixNative(unittest.TestCase):
             for i in range(16):
                 d=date(2020,mo,3)+timedelta(days=i)
                 L=daylength(42,d)
-                Tmax=12+i*.61+mo/10
-                W=.6+((i*7)%9)*.08+mo/100
+                Tmax=12+2.1*__import__("math").sin(i*1.17)+.22*i+mo/10
+                W=.6+.22*__import__("math").cos(i*.91)+.035*i+mo/100
                 DAY=.3-.004*Tmax+.015*L-.03*W+mo*.03
                 NIGHT=.6+.007*Tmax-.021*L+.02*W-mo*.03
                 rows.append((d,L,NIGHT-DAY,(40,-100),(2020,mo),DAY,NIGHT))
