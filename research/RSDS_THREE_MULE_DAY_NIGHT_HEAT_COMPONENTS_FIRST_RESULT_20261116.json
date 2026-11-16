@@ -1,0 +1,513 @@
+{
+  "all_three_original_source_studies_including_SOURCE_HOLD": [
+    {
+      "first_2026_11_16_ERA5_physical_fingerprint_replayed": true,
+      "original_q_month_bootstrap_mean_CI_replayed": true,
+      "original_six_source_q_weather_model_means_replayed": true,
+      "original_source_weather_grid_HOLD_count": 0,
+      "original_source_weather_grid_count": 23,
+      "same_original_individual_tag_day_month_DAY_Tmax": {
+        "estimate": -0.00039971478873251817,
+        "nominal_sign": "NEGATIVE",
+        "original_tag_n": 1596,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.0004949108478283978,
+          -0.00030738901226995093
+        ]
+      },
+      "same_original_individual_tag_day_month_NIGHT_Tmax": {
+        "estimate": 0.0006873713380508376,
+        "nominal_sign": "POSITIVE",
+        "original_tag_n": 1596,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0006072632341014736,
+          0.0007695354705163332
+        ]
+      },
+      "same_original_individual_tag_day_month_Q_Tmax": {
+        "estimate": 0.0010870861267833559,
+        "nominal_sign": "POSITIVE",
+        "original_tag_n": 1596,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0009743831491874705,
+          0.0011989399731576582
+        ]
+      },
+      "same_original_individual_tag_day_month_component_regression_means_and_paired_95": {
+        "all_three_endpoints_identical_tag_date_weather_support": true,
+        "components": {
+          "delta_day_month_minus_raw": {
+            "estimate": -4.6102819927846e-05,
+            "nominal_sign": "NEGATIVE",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -7.612070970873077e-05,
+              -1.6269940908993625e-05
+            ]
+          },
+          "delta_night_month_minus_raw": {
+            "estimate": -6.273814638497151e-05,
+            "nominal_sign": "NEGATIVE",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -8.64180968886978e-05,
+              -3.8463305438040685e-05
+            ]
+          },
+          "delta_q_month_minus_raw": {
+            "estimate": -1.663532645712549e-05,
+            "nominal_sign": "INCLUDES_ZERO",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -4.7762057389958774e-05,
+              1.580082058154084e-05
+            ]
+          },
+          "month_day_tmax": {
+            "estimate": -0.00039971478873251817,
+            "nominal_sign": "NEGATIVE",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.0004949108478283978,
+              -0.00030738901226995093
+            ]
+          },
+          "month_night_tmax": {
+            "estimate": 0.0006873713380508376,
+            "nominal_sign": "POSITIVE",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.0006072632341014736,
+              0.0007695354705163332
+            ]
+          },
+          "month_q_tmax": {
+            "estimate": 0.0010870861267833559,
+            "nominal_sign": "POSITIVE",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.0009743831491874705,
+              0.0011989399731576582
+            ]
+          },
+          "raw_day_tmax": {
+            "estimate": -0.00035361196880467216,
+            "nominal_sign": "NEGATIVE",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.0004489723035851374,
+              -0.0002606841363473351
+            ]
+          },
+          "raw_night_tmax": {
+            "estimate": 0.0007501094844358092,
+            "nominal_sign": "POSITIVE",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.000674372319389951,
+              0.0008292861933841002
+            ]
+          },
+          "raw_q_tmax": {
+            "estimate": 0.0011037214532404812,
+            "nominal_sign": "POSITIVE",
+            "original_tag_n": 1596,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.0009935831616739426,
+              0.0012176564476943082
+            ]
+          }
+        },
+        "eligible_original_tagged_animals": 1596,
+        "original_component_tag_dates_not_independent": 241404,
+        "original_component_tag_years": 2112,
+        "original_tag_bootstrap_draws_joint": 2000,
+        "original_weather_qualified_candidate_dates": 249366,
+        "q_night_minus_day_algebra_exact_in_all_tag_years_and_bootstrap": true,
+        "source_q_temperature_exact_mean_and_95_CI_replayed": true,
+        "source_status": "SOURCE_COMPONENTS_ESTIMABLE"
+      },
+      "source_HOLD_stage": null,
+      "source_HOLD_type": null,
+      "source_index": 0,
+      "source_key": "mule_old_utah",
+      "source_native_taxon": "Odocoileus hemionus",
+      "source_original_DOI": "10.5441/001/1.711",
+      "source_original_individual_tag_n": 1596,
+      "source_original_month_replayed_q_Tmax": {
+        "estimate": 0.0010870861267833559,
+        "nominal_CI_sign": "POSITIVE",
+        "original_tag_n": 1596,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0009743831491874705,
+          0.0011989399731576582
+        ]
+      },
+      "source_original_q_DAY_NIGHT_algebra_reconstructed": true,
+      "source_original_q_daylength_model_replayed": true,
+      "source_original_temperature_components_pattern": "NEGATIVE_DAY_AND_POSITIVE_NIGHT_COEFFICIENTS",
+      "source_status": "SOURCE_COMPONENTS_ESTIMABLE"
+    },
+    {
+      "first_2026_11_16_ERA5_physical_fingerprint_replayed": true,
+      "original_q_month_bootstrap_mean_CI_replayed": true,
+      "original_six_source_q_weather_model_means_replayed": true,
+      "original_source_weather_grid_HOLD_count": 0,
+      "original_source_weather_grid_count": 4,
+      "same_original_individual_tag_day_month_DAY_Tmax": {
+        "estimate": 0.00016491746390100717,
+        "nominal_sign": "INCLUDES_ZERO",
+        "original_tag_n": 109,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -5.845278203181231e-05,
+          0.000390475530544402
+        ]
+      },
+      "same_original_individual_tag_day_month_NIGHT_Tmax": {
+        "estimate": 0.0007357257060240011,
+        "nominal_sign": "POSITIVE",
+        "original_tag_n": 109,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0004207214644422609,
+          0.0010711390884964546
+        ]
+      },
+      "same_original_individual_tag_day_month_Q_Tmax": {
+        "estimate": 0.0005708082421229938,
+        "nominal_sign": "POSITIVE",
+        "original_tag_n": 109,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.00023982711215001924,
+          0.000914417073313663
+        ]
+      },
+      "same_original_individual_tag_day_month_component_regression_means_and_paired_95": {
+        "all_three_endpoints_identical_tag_date_weather_support": true,
+        "components": {
+          "delta_day_month_minus_raw": {
+            "estimate": -0.00014389080085782313,
+            "nominal_sign": "NEGATIVE",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.00020064904786939037,
+              -9.019587063196588e-05
+            ]
+          },
+          "delta_night_month_minus_raw": {
+            "estimate": -0.00016032306729536422,
+            "nominal_sign": "NEGATIVE",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.00024420823169753447,
+              -7.55842237878783e-05
+            ]
+          },
+          "delta_q_month_minus_raw": {
+            "estimate": -1.643226643754115e-05,
+            "nominal_sign": "INCLUDES_ZERO",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -9.870128245430542e-05,
+              6.537056731481102e-05
+            ]
+          },
+          "month_day_tmax": {
+            "estimate": 0.00016491746390100717,
+            "nominal_sign": "INCLUDES_ZERO",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -5.845278203181231e-05,
+              0.000390475530544402
+            ]
+          },
+          "month_night_tmax": {
+            "estimate": 0.0007357257060240011,
+            "nominal_sign": "POSITIVE",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.0004207214644422609,
+              0.0010711390884964546
+            ]
+          },
+          "month_q_tmax": {
+            "estimate": 0.0005708082421229938,
+            "nominal_sign": "POSITIVE",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.00023982711215001924,
+              0.000914417073313663
+            ]
+          },
+          "raw_day_tmax": {
+            "estimate": 0.0003088082647588303,
+            "nominal_sign": "POSITIVE",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              8.393000925724511e-05,
+              0.0005329656795387357
+            ]
+          },
+          "raw_night_tmax": {
+            "estimate": 0.0008960487733193652,
+            "nominal_sign": "POSITIVE",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.0005746635707377368,
+              0.0012309478630370542
+            ]
+          },
+          "raw_q_tmax": {
+            "estimate": 0.000587240508560535,
+            "nominal_sign": "POSITIVE",
+            "original_tag_n": 109,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.0002573718946713123,
+              0.0009244569543157089
+            ]
+          }
+        },
+        "eligible_original_tagged_animals": 109,
+        "original_component_tag_dates_not_independent": 16623,
+        "original_component_tag_years": 153,
+        "original_tag_bootstrap_draws_joint": 2000,
+        "original_weather_qualified_candidate_dates": 17402,
+        "q_night_minus_day_algebra_exact_in_all_tag_years_and_bootstrap": true,
+        "source_q_temperature_exact_mean_and_95_CI_replayed": true,
+        "source_status": "SOURCE_COMPONENTS_ESTIMABLE"
+      },
+      "source_HOLD_stage": null,
+      "source_HOLD_type": null,
+      "source_index": 1,
+      "source_key": "mule_old_wyoming",
+      "source_native_taxon": "Odocoileus hemionus",
+      "source_original_DOI": "10.5441/001/1.703",
+      "source_original_individual_tag_n": 109,
+      "source_original_month_replayed_q_Tmax": {
+        "estimate": 0.0005708082421229938,
+        "nominal_CI_sign": "POSITIVE",
+        "original_tag_n": 109,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.00023982711215001924,
+          0.000914417073313663
+        ]
+      },
+      "source_original_q_DAY_NIGHT_algebra_reconstructed": true,
+      "source_original_q_daylength_model_replayed": true,
+      "source_original_temperature_components_pattern": "POSITIVE_NIGHT_COEFFICIENT_DAY_UNRESOLVED",
+      "source_status": "SOURCE_COMPONENTS_ESTIMABLE"
+    },
+    {
+      "first_2026_11_16_ERA5_physical_fingerprint_replayed": true,
+      "original_q_month_bootstrap_mean_CI_replayed": true,
+      "original_six_source_q_weather_model_means_replayed": true,
+      "original_source_weather_grid_HOLD_count": 0,
+      "original_source_weather_grid_count": 9,
+      "same_original_individual_tag_day_month_DAY_Tmax": {
+        "estimate": -0.0011074967412971098,
+        "nominal_sign": "NEGATIVE",
+        "original_tag_n": 129,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.001480731818181838,
+          -0.0007489217257159981
+        ]
+      },
+      "same_original_individual_tag_day_month_NIGHT_Tmax": {
+        "estimate": 0.0009383976501506555,
+        "nominal_sign": "POSITIVE",
+        "original_tag_n": 129,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0007249359178715228,
+          0.0011588096761876324
+        ]
+      },
+      "same_original_individual_tag_day_month_Q_Tmax": {
+        "estimate": 0.002045894391447765,
+        "nominal_sign": "POSITIVE",
+        "original_tag_n": 129,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.001700096767321379,
+          0.0023984288027900525
+        ]
+      },
+      "same_original_individual_tag_day_month_component_regression_means_and_paired_95": {
+        "all_three_endpoints_identical_tag_date_weather_support": true,
+        "components": {
+          "delta_day_month_minus_raw": {
+            "estimate": -0.0005073259755349707,
+            "nominal_sign": "NEGATIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.0006997213076701874,
+              -0.00031199012869051197
+            ]
+          },
+          "delta_night_month_minus_raw": {
+            "estimate": -0.00017171629164719178,
+            "nominal_sign": "NEGATIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.00026655397588113187,
+              -8.328528006764136e-05
+            ]
+          },
+          "delta_q_month_minus_raw": {
+            "estimate": 0.0003356096838877788,
+            "nominal_sign": "POSITIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.00016295077247878212,
+              0.0005058826262610074
+            ]
+          },
+          "month_day_tmax": {
+            "estimate": -0.0011074967412971098,
+            "nominal_sign": "NEGATIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.001480731818181838,
+              -0.0007489217257159981
+            ]
+          },
+          "month_night_tmax": {
+            "estimate": 0.0009383976501506555,
+            "nominal_sign": "POSITIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.0007249359178715228,
+              0.0011588096761876324
+            ]
+          },
+          "month_q_tmax": {
+            "estimate": 0.002045894391447765,
+            "nominal_sign": "POSITIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.001700096767321379,
+              0.0023984288027900525
+            ]
+          },
+          "raw_day_tmax": {
+            "estimate": -0.000600170765762139,
+            "nominal_sign": "NEGATIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              -0.0009616842008404322,
+              -0.0002599661781606594
+            ]
+          },
+          "raw_night_tmax": {
+            "estimate": 0.0011101139417978474,
+            "nominal_sign": "POSITIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.0008865613621704456,
+              0.0013282939265659255
+            ]
+          },
+          "raw_q_tmax": {
+            "estimate": 0.0017102847075599866,
+            "nominal_sign": "POSITIVE",
+            "original_tag_n": 129,
+            "status": "ESTIMABLE",
+            "tag_bootstrap95": [
+              0.0014020162359374398,
+              0.0020169210610205554
+            ]
+          }
+        },
+        "eligible_original_tagged_animals": 129,
+        "original_component_tag_dates_not_independent": 58536,
+        "original_component_tag_years": 268,
+        "original_tag_bootstrap_draws_joint": 2000,
+        "original_weather_qualified_candidate_dates": 59887,
+        "q_night_minus_day_algebra_exact_in_all_tag_years_and_bootstrap": true,
+        "source_q_temperature_exact_mean_and_95_CI_replayed": true,
+        "source_status": "SOURCE_COMPONENTS_ESTIMABLE"
+      },
+      "source_HOLD_stage": null,
+      "source_HOLD_type": null,
+      "source_index": 2,
+      "source_key": "mule_new_sublette",
+      "source_native_taxon": "Odocoileus hemionus",
+      "source_original_DOI": "10.5441/001/1.708",
+      "source_original_individual_tag_n": 129,
+      "source_original_month_replayed_q_Tmax": {
+        "estimate": 0.002045894391447765,
+        "nominal_CI_sign": "POSITIVE",
+        "original_tag_n": 129,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.001700096767321379,
+          0.0023984288027900525
+        ]
+      },
+      "source_original_q_DAY_NIGHT_algebra_reconstructed": true,
+      "source_original_q_daylength_model_replayed": true,
+      "source_original_temperature_components_pattern": "NEGATIVE_DAY_AND_POSITIVE_NIGHT_COEFFICIENTS",
+      "source_status": "SOURCE_COMPONENTS_ESTIMABLE"
+    }
+  ],
+  "by_source_component_interpretation": {
+    "mule_new_sublette": "NEGATIVE_DAY_AND_POSITIVE_NIGHT_COEFFICIENTS",
+    "mule_old_utah": "NEGATIVE_DAY_AND_POSITIVE_NIGHT_COEFFICIENTS",
+    "mule_old_wyoming": "POSITIVE_NIGHT_COEFFICIENT_DAY_UNRESOLVED"
+  },
+  "not_a_prospective_or_world_random_wildlife_test": true,
+  "not_causal_temperature_behavioral_heat_avoidance": true,
+  "original_GPS_day_night_tag_positions_dates_individual_effects_not_exported": true,
+  "original_source_status_counts": {
+    "SOURCE_COMPONENTS_ESTIMABLE": 3
+  },
+  "original_tag_source_component_nominal_CI_sign_counts": {
+    "source_DAY_Tmax_nominal_negative": 2,
+    "source_DAY_Tmax_nominal_positive": 0,
+    "source_NIGHT_Tmax_nominal_negative": 0,
+    "source_NIGHT_Tmax_nominal_positive": 3,
+    "source_Q_Tmax_nominal_positive": 3
+  },
+  "previous_first_month_q_heat_source_blob_unchanged": "3ea7481049cc01e6601e6f2d76e482124e503a2a",
+  "prior_12_ERA5_old_raw_SHA_cases_HOLD": true,
+  "prior_48_original_source_irradiance_heading_signed_result_NOT_REPLICATED": true,
+  "registered_original_source_DOI_studies": 3,
+  "same_source_original_tag_date_weather_algebra_eligible_studies": 3,
+  "source_populations_independence_unverified": true,
+  "stage": "POST_PRIOR_POSITIVE_Q_HEAT_SOURCE_NATIVE_DAY_NIGHT_EXACT_SAME_TAG_DAY_DECOMPOSITION",
+  "version": "RSDS_THREE_MULE_ORIGINAL_SOURCE_DAY_NIGHT_HEAT_COMPONENT_META_V1"
+}
