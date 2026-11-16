@@ -29,7 +29,7 @@ class ThreeMuleOriginalEqualGPSSampling(unittest.TestCase):
         self.assertEqual(m.choose_three_by_original_interval_order([9,2,8]),[9,2,8])
         self.assertEqual(m.choose_three_by_original_interval_order([9,2,8,3]),[9,2,3])
         self.assertEqual(m.choose_three_by_original_interval_order([10,4,20,3,8,1,6]),[10,3,6])
-        with self.assertRaisesRegex(ValueError,"original"):
+        with self.assertRaisesRegex(ValueError,"DAY/NIGHT"):
             m.choose_three_by_original_interval_order([1,2])
 
     def test_original_q_date_speed_components_exact_reproduction(self):
@@ -38,7 +38,7 @@ class ThreeMuleOriginalEqualGPSSampling(unittest.TestCase):
             d=date(2020,3,1)+timedelta(days=k)
             for partstart,step in ((0,.002),(9,.001)):
                 for hour in range(partstart,partstart+5):
-                    t=datetime(d.year,d.month,d.day,h)
+                    t=datetime(d.year,d.month,d.day,hour)
                     obs[t]=(t,20+(.002*k)+(hour-partstart)*step,0.)
         prior,_=original.source_days({"T0":obs})
         balanced=m.original_balanced_date_rows({"T0":obs})
