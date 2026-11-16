@@ -1,0 +1,62 @@
+name: RSDS 2 original sources six ungulate native heat response archival audit
+on:
+  push:
+    branches:
+      - analysis/rsds-ungulate-six-native-temperature-comparison-20261116
+    paths:
+      - 'research/RSDS_UTAH_WYOMING_SIX_UNGULATE_NATIVE_HEAT_Q_REFERENCE_20261116.json'
+      - 'scripts/rsds_ungulate_native_Tmax_archived_six_audit_v1.py'
+      - 'tests/test_rsds_ungulate_native_Tmax_archived_six_audit_v1.py'
+      - '.github/workflows/rsds-six-ungulate-native-original-temperature-source-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original_archived_four_utah_and_two_wyoming_native_biological_temperature:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test six source-native archive records, source identity and provider HOLD boundaries
+        run: python -m unittest discover -s tests -p 'test_rsds_ungulate_native_Tmax_archived_six_audit_v1.py' -v
+      - name: Revalidate the original source-only six taxon result from archived public signed receipts
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_ungulate_native_Tmax_archived_six_audit_v1 --out research/RSDS_UTAH_WYOMING_SIX_UNGULATE_NATIVE_HEAT_Q_AUDIT_FIRST_20261116.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("research/RSDS_UTAH_WYOMING_SIX_UNGULATE_NATIVE_HEAT_Q_AUDIT_FIRST_20261116.json")
+          x=json.loads(p.read_text())
+          assert x["distinct_original_field_study_DOIs"]==2
+          assert x["original_source_native_taxon_study_rows"]==6
+          assert x["source_native_q_Tmax_nominal95_CI_sign_counts"]=={"POSITIVE":3,"NEGATIVE":1,"INCLUDES_ZERO":2}
+          assert x["original_48_source_sunlight_heading_external_NOT_REPLICATED"]
+          assert x["original_12_ERA5_raw_SHA_HOLD"]
+          assert x["original_GPS_and_weather_event_rows_reopened"]==0
+          print("ORIGINAL_SIX_SOURCE_NATIVE_SAME_SOURCE_IS_NOT_SAME_CONTEXT")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-two-study-six-ungulate-original-native-Tmax-q-audit-v1
+          path: research/RSDS_UTAH_WYOMING_SIX_UNGULATE_NATIVE_HEAT_Q_AUDIT_FIRST_20261116.json
+          if-no-files-found: error
+      - name: Commit immutable original archive-only signed source validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_UTAH_WYOMING_SIX_UNGULATE_NATIVE_HEAT_Q_AUDIT_FIRST_20261116.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: verify all four Utah and two Wyoming original native q Tmax signs without re-opening GPS"
+            git fetch origin analysis/rsds-ungulate-six-native-temperature-comparison-20261116
+            git rebase origin/analysis/rsds-ungulate-six-native-temperature-comparison-20261116
+            git push origin HEAD:analysis/rsds-ungulate-six-native-temperature-comparison-20261116
+          fi
