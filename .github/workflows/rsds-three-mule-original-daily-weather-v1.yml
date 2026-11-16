@@ -1,0 +1,111 @@
+name: RSDS three original mule deer source-native daily temperature water and daylight
+on:
+  push:
+    branches:
+      - analysis/rsds-three-mule-original-daily-hydrothermal-20261116
+    paths:
+      - 'research/RSDS_THREE_MULE_ORIGINAL_DAILY_HYDROTHERMAL_CONTRACT_20261116.json'
+      - 'scripts/rsds_three_mule_original_daily_hydrothermal_v1.py'
+      - 'scripts/aggregate_rsds_three_mule_original_daily_hydrothermal_v1.py'
+      - 'tests/test_rsds_three_mule_original_daily_hydrothermal_v1.py'
+      - '.github/workflows/rsds-three-mule-original-daily-weather-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  prespecified_source_weather_and_synthetic_unit_checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install math/GPS astronomy prerequisites
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Verify three pinned original source IDs/weather scope before ANY new source read
+        run: python -m unittest discover -s tests -p 'test_rsds_three_mule_original_daily_hydrothermal_v1.py' -v
+      - name: Revalidate prior ODSP→RSDS source provenance
+        run: python -m scripts.verify_rsds_migration
+  original_three_mule_sources_daily_weather:
+    needs: prespecified_source_weather_and_synthetic_unit_checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        index: [0,1,2]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original source numeric dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Validate provider original file MD5/source q before new daily weather
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_three_mule_original_daily_hydrothermal_v1 --index ${{ matrix.index }} --out outputs/source_$(printf "%02d" ${{ matrix.index }}).json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rsds-three-mule-original-daily-source-${{ matrix.index }}-v1
+          path: outputs/source_*.json
+          if-no-files-found: error
+  original_three_mule_study_id_source_meta:
+    needs: original_three_mule_sources_daily_weather
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source helper numeric dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Download all 3 source-level q/weather models including HOLD and missing
+        uses: actions/download-artifact@v4
+        with:
+          pattern: rsds-three-mule-original-daily-source-*-v1
+          path: outputs/studies
+          merge-multiple: true
+      - name: Aggregate three study identities without pseudo independent GPS events
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.aggregate_rsds_three_mule_original_daily_hydrothermal_v1 --directory outputs/studies --out research/RSDS_THREE_MULE_ORIGINAL_DAILY_HYDROTHERMAL_FIRST_RESULT_20261116.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('research/RSDS_THREE_MULE_ORIGINAL_DAILY_HYDROTHERMAL_FIRST_RESULT_20261116.json').read_text())
+          assert d['source_study_DOI_denominator']==3
+          assert len(d['all_three_original_source_rows_including_HOLD'])==3
+          assert sum(d['original_source_status_counts'].values())==3
+          assert d['one_target_species']=='Odocoileus hemionus'
+          assert d['historical_12_ERA5_raw_SHA_source_HOLD_UNCHANGED']
+          assert d['external_48_source_sunlight_heading_direction_NOT_REPLICATED_UNCHANGED']
+          assert d['source_group_only_no_original_tag_GPS_weather_or_dates_exported']
+          print('THREE_ORIGINAL_STUDY_UNIT_WEATHER_SOURCES_AND_HOLDS_FROZEN')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-three-original-mule-daily-hydrothermal-meta-first-v1
+          path: research/RSDS_THREE_MULE_ORIGINAL_DAILY_HYDROTHERMAL_FIRST_RESULT_20261116.json
+          if-no-files-found: error
+      - name: Commit only first source-level result and observed weather holds
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_THREE_MULE_ORIGINAL_DAILY_HYDROTHERMAL_FIRST_RESULT_20261116.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: freeze original three source mule q versus daily ERA5 environmental conditions"
+            git fetch origin analysis/rsds-three-mule-original-daily-hydrothermal-20261116
+            git rebase origin/analysis/rsds-three-mule-original-daily-hydrothermal-20261116
+            git push origin HEAD:analysis/rsds-three-mule-original-daily-hydrothermal-20261116
+          fi
