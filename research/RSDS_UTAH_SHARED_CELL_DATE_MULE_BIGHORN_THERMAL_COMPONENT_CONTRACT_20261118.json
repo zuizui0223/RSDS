@@ -66,5 +66,10 @@
   "selected_after_prior_source_positive_temperature_outcomes": true,
   "not_a_world_random_species_meta_or_species_trait_adaptation": true,
   "previous_48_signed_solar_heading_external_verdict": "NOT_REPLICATED",
-  "previous_12_ERA5_raw_SHA_source_status": "HOLD"
+  "previous_12_ERA5_raw_SHA_source_status": "HOLD",
+  "original_source_GPS_native_q_first_code_blob": "95500d57e74d1ab463f0fec9b98b0daa26bdc371",
+  "original_utah_source_zip_reader_code_path": "scripts/movebank_utah_four_taxa_solar_20261019.py",
+  "original_utah_source_zip_reader_code_blob": "230227b47a2d105309c6a1c23d5daed6cafeb018",
+  "original_source_gps_cell_ERA5_code_path": "scripts/rsds_three_mule_original_daily_hydrothermal_v1.py",
+  "original_source_gps_cell_ERA5_code_blob": "c1afa02d63129a256f2a2307dab1093ba59ac2d8"
 }
