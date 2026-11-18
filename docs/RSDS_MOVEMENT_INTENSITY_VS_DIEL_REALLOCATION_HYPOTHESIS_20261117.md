@@ -47,7 +47,7 @@ PR #45で最初に成功した Wyoming の2ネイティブ種別原GPS（[Action
 
 ## 3. 今回の元Utah全4種の結果で検証すること
 
-Utahの *Antilocapra americana*, *Cervus elaphus*, *Odocoileus hemionus*, *Ovis canadensis*、Wyomingのミュールジカとビッグホーンを**一種も省かず6行**として解析する。気温の観測上の関連は、ソース内同一年・同月の DAY と NIGHT の二成分それぞれとその差で記録する。元のqおよび天文日長係数、原公開ファイルMD5、同一研究におけるERA5物理版の整合性を先に監査する。Utahの旧日別気象解析で見えた「ミュールジカ正・ビッグホーン負」は、年月内・同じERA5提供時点で残るかまだ未確定。
+Utahの *Antilocapra americana*, *Cervus elaphus*, *Odocoileus hemionus*, *Ovis canadensis*、Wyomingのミュールジカとビッグホーンは、**原GPSと同年月内の気温・日長・先行水収支モデルを一種も省かず6行完遂**した。元GPSのq/日長、登録種、原本MD5、新気象版の取得・種間の単一版共有を検証。Utahのミュールジカ q正・ビッグホーン q負の名目区間差は**同年月内の各種別回帰でも残った**が、これは同じ気温・位置・日付における種×Tmax交互作用を証明しない。原単独種のDAY/NIGHTではNIGHT正5/6、q正3・負1・不確定2。各元研究の元成果物ZIP署名を固定した[PR #46](https://github.com/zuizui0223/RSDS/pull/46)の[6行初回確定データ](../research/RSDS_TWO_SOURCE_SIX_NATIVE_WITHIN_MONTH_HEAT_FIRST_RESULT_20261117.json)を参照。
 
 Utah原研究内の**共通1°格子×年月の機会数**も先に算出し、将来の真の種×温度差の検定に必要な共有環境条件が存在するか確認する。元の旧Utah共通格子×年月解析では、気温＋日長＋水収支を同時に調整したミュールジカ−ビッグホーンの温度係数は名目区間がゼロを含んだ。前後で統計モデルやERA5物理版が異なるため、この結果と新6行の係数を無批判に合算しない。
 
