@@ -1,0 +1,61 @@
+{
+  "version": "RSDS_SIX_NATIVE_ORIGINAL_MONTH_HEAT_ARCHIVE_ONLY_RECOVERY_V1",
+  "date": "2026-11-18",
+  "stage": "POST_FIRST_ORIGINAL_TWO_SOURCE_GPS_SUCCESS_AFTER_AGGREGATOR_FIELD_ERROR__DERIVATIVE_REPLAY_ONLY",
+  "original_first_action_run_id": 43901281254,
+  "original_first_action_url": "https://github.com/zuizui0223/RSDS/actions/runs/43901281254",
+  "original_first_action_source_jobs": {
+    "utah": 133418438044,
+    "wyoming": 133418437301
+  },
+  "original_first_source_signed_artifacts": [
+    {
+      "source_index": 0,
+      "artifact_name": "rsds-source-all-registered-native-month-Tmax-0-v1",
+      "artifact_id": 14248330780,
+      "digest": "sha256:8bc834438ef55a1def13313ac3499fcae2ba025eb0ff5956eb617a6d3fba86e6",
+      "expected_source_DOI": "10.5441/001/1.711",
+      "registered_native_count": 4
+    },
+    {
+      "source_index": 1,
+      "artifact_name": "rsds-source-all-registered-native-month-Tmax-1-v1",
+      "artifact_id": 14240888908,
+      "digest": "sha256:6f72a1cd01c191679e614f7c44f3ac17a94298693baa394271db93f176b0d84d",
+      "expected_source_DOI": "10.5441/001/1.703",
+      "registered_native_count": 2
+    }
+  ],
+  "original_source_contract_path": "research/RSDS_TWO_SOURCE_SIX_UNGULATE_NATIVE_MONTH_HEAT_CONTRACT_20261117.json",
+  "original_source_contract_blob": "0d18e3fb3f4fad4d073afeb8cc755b60f7598e9d",
+  "original_source_computation_script_path": "scripts/rsds_two_source_all_native_ungulate_month_heat_v1.py",
+  "original_source_computation_script_blob": "d8ade9b797b092fd921e14239df36e35e54e422e",
+  "original_failed_aggregator_script_path": "scripts/aggregate_rsds_two_source_six_native_month_heat_v1.py",
+  "original_failed_aggregator_script_blob": "10ed7049fcd4dbd385e8fa4a32d31ea587fa0782",
+  "original_failure": "The original q source-native confidence record provides nominal_CI_sign, DAY/NIGHT source-native confidence records provide nominal_sign. The original source GPS, previous full q/daylength and climate response jobs were independently SUCCESS; only source group aggregation failed on the incompatible key, KeyError nominal_CI_sign.",
+  "original_source_DOIs": [
+    "10.5441/001/1.711",
+    "10.5441/001/1.703"
+  ],
+  "registered_source_studies": 2,
+  "registered_source_native_taxon_rows": 6,
+  "source_native_taxa_in_order": [
+    "Antilocapra americana",
+    "Cervus elaphus",
+    "Odocoileus hemionus",
+    "Ovis canadensis",
+    "Odocoileus hemionus",
+    "Ovis canadensis"
+  ],
+  "new_data_inputs": "NONE. Read exactly two original first Actions source-AGGREGATE JSON artifacts from run 43901281254. No new original Movebank, ERA5 or GPS source calls.",
+  "allowed_repair": "Resolve native q original CI sign key as nominal_CI_sign and native DAY/NIGHT original CI sign key as nominal_sign. Require exact known schema, reject missing/multiple conflicting fields. No change to source results, numbers, thresholds, or eligibility.",
+  "required_checks": "Original source index, DOI, registered native taxa, source published original GPS MD5, q/night/day algebra from original per source, n and original first q/daylength mean rel_tol zero, bootstrap nominal CI signs, and original all-six source status must match before final result.",
+  "first_utah_source_native_response_count": 4,
+  "first_wyoming_source_native_response_count": 2,
+  "original_first_source_status_all_complete": true,
+  "old_48_source_solar_heading_direction_signed_result": "NOT_REPLICATED",
+  "old_12_original_ERA5_raw_SHA_status": "HOLD",
+  "no_raw_GPS_coordinates_tag_ids_precise_dates_individual_coefficients_exported": true,
+  "source_taxon_study_count_not_independent_ecosystems": true,
+  "interpretation": "A source-native original tagged-animal bootstrap interval is nominal, not source-independent species-by-temperature interaction CI. Fresh source-wise ERA5 physical versions are not necessarily identical to October 2026. No causal thermoregulation, nocturnality or GPS capture-process invariance."
+}
