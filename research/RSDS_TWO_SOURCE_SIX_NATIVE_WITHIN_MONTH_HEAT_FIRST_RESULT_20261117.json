@@ -1,0 +1,313 @@
+{
+  "all_original_six_source_native_rows_including_HOLD": [
+    {
+      "day_Tmax_source_CI_sign": "POSITIVE",
+      "native_taxon": "Antilocapra americana",
+      "night_Tmax_source_CI_sign": "POSITIVE",
+      "original_day_Tmax_month": {
+        "estimate": 0.0007525729872275093,
+        "nominal_sign": "POSITIVE",
+        "original_tag_n": 204,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0003663561886771744,
+          0.0011699340058564987
+        ]
+      },
+      "original_full_source_daylength_slope_baseline": 0.004899934756973461,
+      "original_full_source_q_baseline": -0.1171668232141959,
+      "original_full_source_q_tag_count": 215,
+      "original_night_Tmax_month": {
+        "estimate": 0.0008552408475531246,
+        "nominal_sign": "POSITIVE",
+        "original_tag_n": 204,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0006204371913316572,
+          0.0010859482612967715
+        ]
+      },
+      "original_q_Tmax_month": {
+        "estimate": 0.00010266786032561535,
+        "nominal_CI_sign": "INCLUDES_ZERO",
+        "original_tag_n": 204,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.0003267384911183728,
+          0.0005145684931113515
+        ]
+      },
+      "original_tag_n": 204,
+      "q_Tmax_source_CI_sign": "INCLUDES_ZERO",
+      "source_original_DOI": "10.5441/001/1.711",
+      "status": "SOURCE_NATIVE_MONTH_COMPONENTS_ESTIMABLE"
+    },
+    {
+      "day_Tmax_source_CI_sign": "INCLUDES_ZERO",
+      "native_taxon": "Cervus elaphus",
+      "night_Tmax_source_CI_sign": "POSITIVE",
+      "original_day_Tmax_month": {
+        "estimate": -2.4025426565771642e-05,
+        "nominal_sign": "INCLUDES_ZERO",
+        "original_tag_n": 314,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.0003355875099461232,
+          0.0002955654390861948
+        ]
+      },
+      "original_full_source_daylength_slope_baseline": 0.009598574984599324,
+      "original_full_source_q_baseline": -0.031888720397475416,
+      "original_full_source_q_tag_count": 337,
+      "original_night_Tmax_month": {
+        "estimate": 0.0011863616041604963,
+        "nominal_sign": "POSITIVE",
+        "original_tag_n": 314,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.000881475507047902,
+          0.0014960225851818828
+        ]
+      },
+      "original_q_Tmax_month": {
+        "estimate": 0.0012103870307262682,
+        "nominal_CI_sign": "POSITIVE",
+        "original_tag_n": 314,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0008355844325782396,
+          0.0016024316896515887
+        ]
+      },
+      "original_tag_n": 314,
+      "q_Tmax_source_CI_sign": "POSITIVE",
+      "source_original_DOI": "10.5441/001/1.711",
+      "status": "SOURCE_NATIVE_MONTH_COMPONENTS_ESTIMABLE"
+    },
+    {
+      "day_Tmax_source_CI_sign": "NEGATIVE",
+      "native_taxon": "Odocoileus hemionus",
+      "night_Tmax_source_CI_sign": "POSITIVE",
+      "original_day_Tmax_month": {
+        "estimate": -0.00039971478873251817,
+        "nominal_sign": "NEGATIVE",
+        "original_tag_n": 1596,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.0004981476697161412,
+          -0.00030678661555547115
+        ]
+      },
+      "original_full_source_daylength_slope_baseline": 0.005619415769068772,
+      "original_full_source_q_baseline": -0.02184895488685285,
+      "original_full_source_q_tag_count": 1723,
+      "original_night_Tmax_month": {
+        "estimate": 0.0006873713380508376,
+        "nominal_sign": "POSITIVE",
+        "original_tag_n": 1596,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0006079029425649483,
+          0.0007700434350317436
+        ]
+      },
+      "original_q_Tmax_month": {
+        "estimate": 0.0010870861267833559,
+        "nominal_CI_sign": "POSITIVE",
+        "original_tag_n": 1596,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0009676284176501926,
+          0.0012048404407135826
+        ]
+      },
+      "original_tag_n": 1596,
+      "q_Tmax_source_CI_sign": "POSITIVE",
+      "source_original_DOI": "10.5441/001/1.711",
+      "status": "SOURCE_NATIVE_MONTH_COMPONENTS_ESTIMABLE"
+    },
+    {
+      "day_Tmax_source_CI_sign": "POSITIVE",
+      "native_taxon": "Ovis canadensis",
+      "night_Tmax_source_CI_sign": "INCLUDES_ZERO",
+      "original_day_Tmax_month": {
+        "estimate": 0.000630216002518412,
+        "nominal_sign": "POSITIVE",
+        "original_tag_n": 313,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0003328032881140938,
+          0.0009184476203636856
+        ]
+      },
+      "original_full_source_daylength_slope_baseline": -0.003411758739636626,
+      "original_full_source_q_baseline": -0.06576087192631512,
+      "original_full_source_q_tag_count": 343,
+      "original_night_Tmax_month": {
+        "estimate": -3.823635178160644e-05,
+        "nominal_sign": "INCLUDES_ZERO",
+        "original_tag_n": 313,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.00021803484780138656,
+          0.00013845645810867444
+        ]
+      },
+      "original_q_Tmax_month": {
+        "estimate": -0.0006684523543000184,
+        "nominal_CI_sign": "NEGATIVE",
+        "original_tag_n": 313,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.0009878561400596703,
+          -0.0003463882466252534
+        ]
+      },
+      "original_tag_n": 313,
+      "q_Tmax_source_CI_sign": "NEGATIVE",
+      "source_original_DOI": "10.5441/001/1.711",
+      "status": "SOURCE_NATIVE_MONTH_COMPONENTS_ESTIMABLE"
+    },
+    {
+      "day_Tmax_source_CI_sign": "INCLUDES_ZERO",
+      "native_taxon": "Odocoileus hemionus",
+      "night_Tmax_source_CI_sign": "POSITIVE",
+      "original_day_Tmax_month": {
+        "estimate": 0.00016491746390100717,
+        "nominal_sign": "INCLUDES_ZERO",
+        "original_tag_n": 109,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -5.8775955993829596e-05,
+          0.00037773075098700333
+        ]
+      },
+      "original_full_source_daylength_slope_baseline": 0.005538249061142167,
+      "original_full_source_q_baseline": -0.0044624294869207584,
+      "original_full_source_q_tag_count": 119,
+      "original_night_Tmax_month": {
+        "estimate": 0.0007357257060240011,
+        "nominal_sign": "POSITIVE",
+        "original_tag_n": 109,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.0004204863718957281,
+          0.001042346519547747
+        ]
+      },
+      "original_q_Tmax_month": {
+        "estimate": 0.0005708082421229938,
+        "nominal_CI_sign": "POSITIVE",
+        "original_tag_n": 109,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.00024708210804647794,
+          0.0009095038817896417
+        ]
+      },
+      "original_tag_n": 109,
+      "q_Tmax_source_CI_sign": "POSITIVE",
+      "source_original_DOI": "10.5441/001/1.703",
+      "status": "SOURCE_NATIVE_MONTH_COMPONENTS_ESTIMABLE"
+    },
+    {
+      "day_Tmax_source_CI_sign": "POSITIVE",
+      "native_taxon": "Ovis canadensis",
+      "night_Tmax_source_CI_sign": "POSITIVE",
+      "original_day_Tmax_month": {
+        "estimate": 0.00047575880000605284,
+        "nominal_sign": "POSITIVE",
+        "original_tag_n": 41,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.00019571968964448287,
+          0.0007615230391783675
+        ]
+      },
+      "original_full_source_daylength_slope_baseline": 0.00021733399923758685,
+      "original_full_source_q_baseline": -0.01997499965861462,
+      "original_full_source_q_tag_count": 41,
+      "original_night_Tmax_month": {
+        "estimate": 0.0005005931177809498,
+        "nominal_sign": "POSITIVE",
+        "original_tag_n": 41,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          0.00032972874409844735,
+          0.0006518567655715819
+        ]
+      },
+      "original_q_Tmax_month": {
+        "estimate": 2.483431777489696e-05,
+        "nominal_CI_sign": "INCLUDES_ZERO",
+        "original_tag_n": 41,
+        "status": "ESTIMABLE",
+        "tag_bootstrap95": [
+          -0.00023124655328251784,
+          0.00027923790984978595
+        ]
+      },
+      "original_tag_n": 41,
+      "q_Tmax_source_CI_sign": "INCLUDES_ZERO",
+      "source_original_DOI": "10.5441/001/1.703",
+      "status": "SOURCE_NATIVE_MONTH_COMPONENTS_ESTIMABLE"
+    }
+  ],
+  "new_20261117_ERA5_snapshot_not_old_20261023_or_20261116_raw_physical_equivalence": true,
+  "no_formal_species_by_temperature_interaction_test": true,
+  "no_raw_GPS_weather_animal_ID_individual_effects_or_precise_dates_exported": true,
+  "original_native_taxon_study_rows": 6,
+  "original_source_complete_tag_month_native_rows": 6,
+  "original_source_statuses": [
+    {
+      "native_count": 4,
+      "new_source_ERA5_fingerprint": "0d1992f19c79aacaaf3535182dd0b7ea6ca805a88e2b67caf6721955e6fa4f69",
+      "original_source_weather_grids": 28,
+      "source": "10.5441/001/1.711",
+      "status": "SOURCE_ALL_NATIVE_ERA5_MONTH_MODELS_EVALUATED",
+      "weather_HOLDs": 0
+    },
+    {
+      "native_count": 2,
+      "new_source_ERA5_fingerprint": "f5655df92426e965790dec0c60adf5a70cafcf2f811c7c4b4b6cef72a394a581",
+      "original_source_weather_grids": 6,
+      "source": "10.5441/001/1.703",
+      "status": "SOURCE_ALL_NATIVE_ERA5_MONTH_MODELS_EVALUATED",
+      "weather_HOLDs": 0
+    }
+  ],
+  "original_source_studies": 2,
+  "original_sources_and_native_taxa_selected_after_old_q_outcomes": true,
+  "prior_12_ERA5_original_raw_SHA_HOLD": true,
+  "prior_48_solar_irradiance_heading_direction_not_replicated": true,
+  "source_native_day_Tmax_sign_counts": {
+    "INCLUDES_ZERO": 2,
+    "NEGATIVE": 1,
+    "POSITIVE": 3
+  },
+  "source_native_night_Tmax_sign_counts": {
+    "INCLUDES_ZERO": 1,
+    "POSITIVE": 5
+  },
+  "source_native_q_Tmax_sign_counts": {
+    "INCLUDES_ZERO": 2,
+    "NEGATIVE": 1,
+    "POSITIVE": 3
+  },
+  "source_original_mule_vs_bighorn_shared_grid_yearmonth_opportunity_without_coordinates": [
+    {
+      "mule_and_bighorn_original_shared_grid_yearmonth_count": 118,
+      "original_source_DOI": "10.5441/001/1.711",
+      "shared_grid_yearmonth_both_taxa_at_least_three_original_tagged_animals": 95
+    },
+    {
+      "mule_and_bighorn_original_shared_grid_yearmonth_count": 0,
+      "original_source_DOI": "10.5441/001/1.703",
+      "shared_grid_yearmonth_both_taxa_at_least_three_original_tagged_animals": 0
+    }
+  ],
+  "stage": "POSTDISCOVERY_TWO_ORIGINAL_SOURCES_SIX_NATIVE_TAXA_SAME_TAG_YEAR_MONTH_DAY_NIGHT_TMAX",
+  "study_DOI_not_equal_taxon_replication_or_same_cell_month_experiment": true,
+  "two_studies_not_six_independent_ecosystems": true,
+  "version": "RSDS_TWO_STUDY_SIX_UG_NATIVE_WITHIN_MONTH_HEAT_FIRST_SOURCE_META_V1"
+}
