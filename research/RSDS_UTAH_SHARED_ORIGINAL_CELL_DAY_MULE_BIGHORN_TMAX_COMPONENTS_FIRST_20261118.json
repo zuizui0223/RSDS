@@ -1,0 +1,84 @@
+{
+  "Wyoming_source_original_same_grid_month_candidate_count": 0,
+  "no_original_GPS_tags_precise_dates_coordinates_original_grid_or_individual_day_values_exported": true,
+  "old_12_ERA5_raw_SHA_HOLD": true,
+  "old_48_source_irradiance_heading_external_NOT_REPLICATED": true,
+  "original_20261022_common_cellmonth_Tmax_species_contrast_nominally_includes_zero": true,
+  "original_20261117_all_native_ERA5_physical_SHA_verified": true,
+  "original_four_native_full_q_daylight_baseline_replayed": true,
+  "original_published_source_GPS_MD5_verified": true,
+  "original_q_equals_original_NIGHT_minus_DAY_daily_replayed": true,
+  "original_source_shared_cell_day_block_model": {
+    "original_common_cellmonth_blocks_in_final_cell_level_regression": 95,
+    "original_common_solar_dates_in_final_regressions_not_independent": 2440,
+    "original_effect_study_unit_geographic_cells_not_animals_or_days": true,
+    "original_geographic_cells_with_any_shared_month_and_enough_daily_records": 13,
+    "original_geographic_cells_with_identifiable_joint_Tmax_L_water": 13,
+    "same_geographic_cell_bootstrap_draws_for_q_DAY_NIGHT": true,
+    "source_shared_cell_day_species_components_estimates": {
+      "day": {
+        "mean": -0.0003871814040657239,
+        "negative_cell_count": 10,
+        "nominal_sign": "INCLUDES_ZERO",
+        "original_one_degree_cell_cluster_bootstrap95": [
+          -0.001129309797110494,
+          0.0005546602336332422
+        ],
+        "positive_cell_count": 3,
+        "source_cell_n": 13,
+        "status": "ESTIMABLE"
+      },
+      "night": {
+        "mean": 0.0015159692751979625,
+        "negative_cell_count": 1,
+        "nominal_sign": "POSITIVE",
+        "original_one_degree_cell_cluster_bootstrap95": [
+          0.00037341681875439274,
+          0.003361465341248237
+        ],
+        "positive_cell_count": 12,
+        "source_cell_n": 13,
+        "status": "ESTIMABLE"
+      },
+      "q": {
+        "mean": 0.0019031506792636863,
+        "negative_cell_count": 2,
+        "nominal_sign": "POSITIVE",
+        "original_one_degree_cell_cluster_bootstrap95": [
+          0.0009780549413162434,
+          0.0029946172585243033
+        ],
+        "positive_cell_count": 11,
+        "source_cell_n": 13,
+        "status": "ESTIMABLE"
+      }
+    },
+    "source_status": "SHARED_ORIGINAL_CELL_DAY_MULE_BIGHORN_EFFECT_ESTIMABLE"
+  },
+  "original_source_shared_cell_day_support": {
+    "original_exact_shared_dates_with_at_least_three_tags_each_species": 2160,
+    "original_exact_shared_tag_calendar_dates_across_all_candidate_cell_months": 2440,
+    "source_both_native_original_at_least_three_tags_each_shared_cell_yearmonth": 95,
+    "source_both_native_original_shared_cell_yearmonth_total": 118,
+    "source_cell_yearmonth_with_min_same_original_GPS_dates": 95,
+    "source_exact_shared_date_weather_missing": 0
+  },
+  "source_all_registered_native_taxa": [
+    "Antilocapra americana",
+    "Cervus elaphus",
+    "Odocoileus hemionus",
+    "Ovis canadensis"
+  ],
+  "source_hold_stage": null,
+  "source_hold_type": null,
+  "source_native_pair": [
+    "Odocoileus hemionus",
+    "Ovis canadensis"
+  ],
+  "source_old_full_weather_grids": 28,
+  "source_original_DOI": "10.5441/001/1.711",
+  "source_study_selected_POSTOUTCOME": true,
+  "source_weather_missing_grids": 0,
+  "status": "SHARED_ORIGINAL_CELL_DAY_MULE_BIGHORN_EFFECT_ESTIMABLE",
+  "version": "RSDS_UTAH_FIRST_ORIGINAL_SAME_CELL_SAME_DAY_MULE_BIGHORN_DAY_NIGHT_HEAT_V1"
+}
