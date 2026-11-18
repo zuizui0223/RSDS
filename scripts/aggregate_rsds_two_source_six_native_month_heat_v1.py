@@ -26,7 +26,7 @@ def validated(x, endpoint):
     sign_key = "nominal_CI_sign" if endpoint == "q" else "nominal_sign"
     other_key = "nominal_sign" if endpoint == "q" else "nominal_CI_sign"
     if sign_key not in x or other_key in x:
-        raise ValueError("Original source-native q vs DAY/NIGHT frozen sign field mismatch")
+        raise ValueError("Original source-native q vs DAY/NIGHT frozen sign schema mismatch")
     if x["status"] != "ESTIMABLE":
         if (x.get("estimate") is not None or x.get("tag_bootstrap95") is not None
             or x.get(sign_key) != "UNAVAILABLE"):
