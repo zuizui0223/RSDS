@@ -1,0 +1,73 @@
+name: RSDS Utah original same GPS cell AND same date two species thermal DAY NIGHT
+on:
+  push:
+    branches:
+      - analysis/rsds-utah-shared-cell-day-species-components-20261118
+    paths:
+      - 'research/RSDS_UTAH_SHARED_CELL_DATE_MULE_BIGHORN_THERMAL_COMPONENT_CONTRACT_20261118.json'
+      - 'scripts/rsds_utah_shared_cell_same_day_mule_bighorn_components_v1.py'
+      - 'tests/test_rsds_utah_shared_cell_day_species_components_v1.py'
+      - '.github/workflows/rsds-utah-shared-cell-day-species-heat-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  exact_same_original_cell_date_native_species_gap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source original calendar astronomy and original climate dependency
+        run: python -m pip install 'numpy>=1.24,<3'
+      - name: Pre-outcome source contract tests, synthetic known-truth GPS cell/month temperature q and whole-cell bootstrap
+        run: python -m unittest discover -s tests -p 'test_rsds_utah_shared_cell_day_species_components_v1.py' -v
+      - name: Preserve original ODSP/RSDS migration source contracts
+        run: python -m scripts.verify_rsds_migration
+      - name: Original Movebank Utah four native source GPS q and first ERA5 physical SHAs BEFORE same cell/date species test
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.rsds_utah_shared_cell_same_day_mule_bighorn_components_v1 --out research/RSDS_UTAH_SHARED_ORIGINAL_CELL_DAY_MULE_BIGHORN_TMAX_COMPONENTS_FIRST_20261118.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('research/RSDS_UTAH_SHARED_ORIGINAL_CELL_DAY_MULE_BIGHORN_TMAX_COMPONENTS_FIRST_20261118.json').read_text())
+          assert d['source_original_DOI']=='10.5441/001/1.711'
+          assert d['source_all_registered_native_taxa']==['Antilocapra americana','Cervus elaphus','Odocoileus hemionus','Ovis canadensis']
+          assert d['status'] in ('SHARED_ORIGINAL_CELL_DAY_MULE_BIGHORN_EFFECT_ESTIMABLE','INSUFFICIENT_SHARED_CELL_MONTH_GEOSPATIAL_SUPPORT','SOURCE_HOLD')
+          assert d['old_48_source_irradiance_heading_external_NOT_REPLICATED']
+          assert d['old_12_ERA5_raw_SHA_HOLD']
+          assert d['no_original_GPS_tags_precise_dates_coordinates_original_grid_or_individual_day_values_exported']
+          if d['status'] != 'SOURCE_HOLD':
+              assert d['original_published_source_GPS_MD5_verified']
+              assert d['original_four_native_full_q_daylight_baseline_replayed']
+              assert d['original_q_equals_original_NIGHT_minus_DAY_daily_replayed']
+              assert d['original_20261117_all_native_ERA5_physical_SHA_verified']
+              count=d['original_source_shared_cell_day_support']
+              assert count['source_both_native_original_shared_cell_yearmonth_total']==118
+              assert count['source_both_native_original_at_least_three_tags_each_shared_cell_yearmonth']==95
+          print('ORIGINAL_UTAH_SAME_ONE_DEG_CELL_SAME_DATE_SPECIES_SLOPE_OR_EXPLICIT_HOLD')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rsds-original-utah-shared-gps-cell-day-native-q-day-night-temperature-v1
+          path: research/RSDS_UTAH_SHARED_ORIGINAL_CELL_DAY_MULE_BIGHORN_TMAX_COMPONENTS_FIRST_20261118.json
+          if-no-files-found: error
+      - name: Commit source-only original biological result or explicit HOLD with no private GPS
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/RSDS_UTAH_SHARED_ORIGINAL_CELL_DAY_MULE_BIGHORN_TMAX_COMPONENTS_FIRST_20261118.json
+          if ! git diff --cached --quiet; then
+            git commit -m "results: original Utah paired ungulate GPS cell and same date heat responses or honest HOLD"
+            git fetch origin analysis/rsds-utah-shared-cell-day-species-components-20261118
+            git rebase origin/analysis/rsds-utah-shared-cell-day-species-components-20261118
+            git push origin HEAD:analysis/rsds-utah-shared-cell-day-species-components-20261118
+          fi
