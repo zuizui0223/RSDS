@@ -10,12 +10,26 @@ from scripts.rsds_two_source_all_native_ungulate_month_heat_v1 import (
 )
 VERSION="RSDS_TWO_STUDY_SIX_UG_NATIVE_WITHIN_MONTH_HEAT_FIRST_SOURCE_META_V1"
 
-def validated(x):
-    if x is None:return "UNAVAILABLE"
-    if x.get("status") not in ("ESTIMABLE","INSUFFICIENT_ORIGINAL_TAGS"):
+def validated(x, endpoint):
+    """Use exact frozen original producer sign schemas, not a loose field alias.
+
+    q comes from month q model: nominal_CI_sign;
+    DAY/NIGHT come from original movement component model: nominal_sign.
+    Never reinterpret a missing sign as positive, negative or a numeric zero.
+    """
+    if endpoint not in ("q", "day", "night"):
+        raise ValueError("Unknown original source native endpoint")
+    if x is None:
+        return "UNAVAILABLE"
+    if x.get("status") not in ("ESTIMABLE", "INSUFFICIENT_ORIGINAL_TAGS"):
         raise ValueError("Nonfrozen original source native tagged-animal bootstrap status")
-    if x["status"]!="ESTIMABLE":
-        if x.get("estimate") is not None or x.get("tag_bootstrap95") is not None:
+    sign_key = "nominal_CI_sign" if endpoint == "q" else "nominal_sign"
+    other_key = "nominal_sign" if endpoint == "q" else "nominal_CI_sign"
+    if sign_key not in x or other_key in x:
+        raise ValueError("Original source-native q vs DAY/NIGHT frozen sign schema mismatch")
+    if x["status"] != "ESTIMABLE":
+        if (x.get("estimate") is not None or x.get("tag_bootstrap95") is not None
+            or x.get(sign_key) != "UNAVAILABLE"):
             raise ValueError("Unavailable original native source q must not become a zero response")
         return "UNAVAILABLE"
     ci=x["tag_bootstrap95"]
@@ -26,7 +40,7 @@ def validated(x):
         not math.isfinite(x["estimate"])):
         raise ValueError("Native original source q/DAY/NIGHT bootstrap invalid")
     sign="POSITIVE" if ci[0]>0 else "NEGATIVE" if ci[1]<0 else "INCLUDES_ZERO"
-    if x["nominal_CI_sign"]!=sign:
+    if x[sign_key] != sign:
         raise ValueError("Altered original tagged-animal nominal CI class")
     return sign
 
@@ -98,7 +112,7 @@ def aggregate(source):
             q=z["month_native_q_Tmax_given_daylength_antecedent_water"]
             day=z["month_native_DAY_Tmax_given_daylength_antecedent_water"]
             night=z["month_native_NIGHT_Tmax_given_daylength_antecedent_water"]
-            qsign=validated(q);dsign=validated(day);nsign=validated(night)
+            qsign=validated(q, "q");dsign=validated(day, "day");nsign=validated(night, "night")
             n=z["month_joint_original_tag_n"]
             if z["source_native_status"]=="SOURCE_NATIVE_MONTH_COMPONENTS_ESTIMABLE":
                 if (day is None or night is None or
